@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.2.17)  17 FEB 2025 01:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.2.17)  18 FEB 2025 19:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -265,15 +265,29 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 85.
 )
 \Hy@SectionHShift=\skip53
-) (C:\Users\mr\AppData\Local\MiKTeX\tex/latex/geometry\geometry.sty
+) (C:\Users\mr\AppData\Local\MiKTeX\tex/latex/local/physics\physics.sty
+Package: physics 
+
+(C:\Users\mr\AppData\Local\MiKTeX\tex/latex/l3packages/xparse\xparse.sty
+(C:\Users\mr\AppData\Local\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2024-01-04 L3 programming layer (loader) 
+
+(C:\Users\mr\AppData\Local\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count285
+\l__pdf_internal_box=\box53
+))
+Package: xparse 2023-10-10 L3 Experimental document command parser
+))
+(C:\Users\mr\AppData\Local\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
 (C:\Users\mr\AppData\Local\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count285
-\Gm@cntv=\count286
-\c@Gm@tempcnt=\count287
+\Gm@cnth=\count286
+\Gm@cntv=\count287
+\c@Gm@tempcnt=\count288
 \Gm@bindingoffset=\dimen156
 \Gm@wd@mp=\dimen157
 \Gm@odd@mp=\dimen158
@@ -288,12 +302,12 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 (C:\Users\mr\AppData\Local\MiKTeX\tex/latex/tools\array.sty
 Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
 \col@sep=\dimen164
-\ar@mcellbox=\box53
+\ar@mcellbox=\box54
 \extrarowheight=\dimen165
 \NC@list=\toks24
 \extratabsurround=\skip54
 \backup@length=\skip55
-\ar@cellbox=\box54
+\ar@cellbox=\box55
 )
 (C:\Users\mr\AppData\Local\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
@@ -307,29 +321,15 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen173
 \cmidrulekern=\dimen174
 \defaultaddspace=\dimen175
-\@cmidla=\count288
-\@cmidlb=\count289
+\@cmidla=\count289
+\@cmidlb=\count290
 \@aboverulesep=\dimen176
 \@belowrulesep=\dimen177
-\@thisruleclass=\count290
-\@lastruleclass=\count291
+\@thisruleclass=\count291
+\@lastruleclass=\count292
 \@thisrulewidth=\dimen178
 )
-(C:\Users\mr\AppData\Local\MiKTeX\tex/latex/local/physics\physics.sty
-Package: physics 
-
-(C:\Users\mr\AppData\Local\MiKTeX\tex/latex/l3packages/xparse\xparse.sty
-(C:\Users\mr\AppData\Local\MiKTeX\tex/latex/l3kernel\expl3.sty
-Package: expl3 2024-01-04 L3 programming layer (loader) 
-
-(C:\Users\mr\AppData\Local\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
-File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count292
-\l__pdf_internal_box=\box55
-))
-Package: xparse 2023-10-10 L3 Experimental document command parser
-))
-(C:/Users\mr\IdeaProjects\Vortex-Æther-Model\auxil\main.aux
+(C:/Users\mr\IdeaProjects\VAM\auxil\main.aux
 
 LaTeX Warning: Label `eq:equation5' multiply defined.
 
@@ -372,24 +372,24 @@ LaTeX Warning: Label `eq:equation17' multiply defined.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
  (C:\Users\mr\AppData\Local\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count293
@@ -411,10 +411,10 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 (C:\Users\mr\AppData\Local\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 18.
+Package hyperref Info: Link coloring OFF on input line 15.
 
-(C:/Users\mr\IdeaProjects\Vortex-Æther-Model\auxil\main.out)
-(C:/Users\mr\IdeaProjects\Vortex-Æther-Model\auxil\main.out)
+(C:/Users\mr\IdeaProjects\VAM\auxil\main.out)
+(C:/Users\mr\IdeaProjects\VAM\auxil\main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
@@ -453,70 +453,81 @@ Package hyperref Info: Link coloring OFF on input line 18.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 20.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 17.
 
 (C:\Users\mr\AppData\Local\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 20.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 17.
 
 
 (C:\Users\mr\AppData\Local\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-(C:/Users\mr\IdeaProjects\Vortex-Æther-Model\auxil\main.toc)
-\tf@toc=\write4
-\openout4 = `main.toc'.
 
- [1
+LaTeX Warning: Citation `maxwell1861' on page 1 undefined on input line 25.
+
+
+LaTeX Warning: Citation `helmholtz1858' on page 1 undefined on input line 25.
+
+
+LaTeX Warning: Citation `kelvin1867' on page 1 undefined on input line 25.
+
+
+LaTeX Warning: Citation `clausius1865' on page 1 undefined on input line 25.
+
+
+LaTeX Warning: Citation `kleckner2013' on page 1 undefined on input line 27.
+
+
+LaTeX Warning: Citation `vinen2002' on page 1 undefined on input line 29.
+
+[1
 
 {C:/Users/mr/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 
-LaTeX Warning: Citation `maxwell1861' on page 2 undefined on input line 88.
+LaTeX Warning: Citation `cahill2005' on page 2 undefined on input line 31.
 
 
-LaTeX Warning: Citation `clausius1865' on page 2 undefined on input line 88.
-
-
-LaTeX Warning: Citation `helmholtz1858' on page 2 undefined on input line 88.
-
-
-LaTeX Warning: Citation `kelvin1867' on page 2 undefined on input line 88.
-
-
-LaTeX Warning: Citation `verlinde2010' on page 2 undefined on input line 88.
-
-
-LaTeX Warning: Citation `scalo2017' on page 2 undefined on input line 88.
+LaTeX Warning: Citation `belik2023' on page 2 undefined on input line 33.
 
 [2]
-<vortex_diagram.png, id=118, 1011.78pt x 433.62pt>
+
+LaTeX Warning: Citation `keller2024' on page 3 undefined on input line 68.
+
+
+LaTeX Warning: Citation `kleckner2016' on page 3 undefined on input line 68.
+
+[3] [4]
+<vortex_diagram.png, id=116, 1011.78pt x 433.62pt>
 File: vortex_diagram.png Graphic file (type png)
 <use vortex_diagram.png>
-Package pdftex.def Info: vortex_diagram.png  used on input line 116.
+Package pdftex.def Info: vortex_diagram.png  used on input line 176.
 (pdftex.def)             Requested size: 317.07614pt x 135.88966pt.
 
 
-LaTeX Warning: Citation `kleckner2013' on page 3 undefined on input line 131.
+LaTeX Warning: Citation `kleckner2013' on page 5 undefined on input line 191.
 
 
-LaTeX Warning: Citation `kleckner2013' on page 3 undefined on input line 134.
+LaTeX Warning: Citation `kleckner2013' on page 5 undefined on input line 194.
 
 
-LaTeX Warning: Citation `vinen2024' on page 3 undefined on input line 134.
+LaTeX Warning: Citation `vinen2024' on page 5 undefined on input line 194.
 
 
-LaTeX Warning: Citation `podkletnov2007' on page 3 undefined on input line 134.
+LaTeX Warning: Citation `podkletnov2007' on page 5 undefined on input line 194.
 
 
 
-LaTeX Warning: Citation `orlandi2021' on page 3 undefined on input line 134.
+LaTeX Warning: Citation `orlandi2021' on page 5 undefined on input line 194.
 
-[3 <./vortex_diagram.png>]
-main.tex:234: Missing } inserted.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+main.tex:294: Missing } inserted.
 <inserted text> 
                 }
-l.234     \end{align}
+l.294     \end{align}
                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -525,31 +536,31 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-main.tex:234: LaTeX Error: Bad math environment delimiter.
+main.tex:294: LaTeX Error: Bad math environment delimiter.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.234     \end{align}
+l.294     \end{align}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-main.tex:234: Missing { inserted.
+main.tex:294: Missing { inserted.
 <inserted text> 
                 {
-l.234     \end{align}
+l.294     \end{align}
                      
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
 
-main.tex:234: Missing \endgroup inserted.
+main.tex:294: Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
-l.234     \end{align}
+l.294     \end{align}
                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -558,32 +569,32 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-main.tex:234: LaTeX Error: Bad math environment delimiter.
+main.tex:294: LaTeX Error: Bad math environment delimiter.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.234     \end{align}
+l.294     \end{align}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-main.tex:234: You can't use `\eqno' in math mode.
+main.tex:294: You can't use `\eqno' in math mode.
 \veqno ->\@kernel@eqno 
                        \aftergroup \ignorespaces 
-l.234     \end{align}
+l.294     \end{align}
                      
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
 If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
-main.tex:234: Missing } inserted.
+main.tex:294: Missing } inserted.
 <inserted text> 
                 }
-l.234     \end{align}
+l.294     \end{align}
                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -592,23 +603,23 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-main.tex:234: LaTeX Error: \begin{align} on input line 191 ended by \end{equati
+main.tex:294: LaTeX Error: \begin{align} on input line 251 ended by \end{equati
 on}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.234     \end{align}
+l.294     \end{align}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-main.tex:234: Missing $ inserted.
+main.tex:294: Missing $ inserted.
 <inserted text> 
                 $
-l.234     \end{align}
+l.294     \end{align}
                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -616,10 +627,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-main.tex:234: Missing } inserted.
+main.tex:294: Missing } inserted.
 <inserted text> 
                 }
-l.234     \end{align}
+l.294     \end{align}
                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -627,10 +638,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-main.tex:234: Missing } inserted.
+main.tex:294: Missing } inserted.
 <inserted text> 
                 }
-l.234     \end{align}
+l.294     \end{align}
                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -638,35 +649,35 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-main.tex:234: Missing \cr inserted.
+main.tex:294: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.234     \end{align}
+l.294     \end{align}
                      
 I'm guessing that you meant to end an alignment here.
 
-main.tex:234: Missing { inserted.
+main.tex:294: Missing { inserted.
 <inserted text> 
                 {
-l.234     \end{align}
+l.294     \end{align}
                      
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
 
-main.tex:234: Missing { inserted.
+main.tex:294: Missing { inserted.
 <inserted text> 
                 {
-l.234     \end{align}
+l.294     \end{align}
                      
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
 
-main.tex:234: Extra }, or forgotten $.
+main.tex:294: Extra }, or forgotten $.
 <recently read> }
                  
-l.234     \end{align}
+l.294     \end{align}
                      
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -674,18 +685,18 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-main.tex:234: Missing $ inserted.
+main.tex:294: Missing $ inserted.
 <inserted text> 
                 $
-l.234     \end{align}
+l.294     \end{align}
                      
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-main.tex:234: Missing } inserted.
+main.tex:294: Missing } inserted.
 <inserted text> 
                 }
-l.234     \end{align}
+l.294     \end{align}
                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -693,10 +704,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-main.tex:234: Missing } inserted.
+main.tex:294: Missing } inserted.
 <inserted text> 
                 }
-l.234     \end{align}
+l.294     \end{align}
                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -705,22 +716,22 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-main.tex:234: LaTeX Error: Bad math environment delimiter.
+main.tex:294: LaTeX Error: Bad math environment delimiter.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.234     \end{align}
+l.294     \end{align}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-main.tex:234: Misplaced alignment tab character &.
+main.tex:294: Misplaced alignment tab character &.
 <argument> ...d {equation} \begin {equation} R_e &
                                                   = \frac {e^2}{4 \pi \varep...
-l.234     \end{align}
+l.294     \end{align}
                      
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -729,10 +740,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-main.tex:234: Misplaced alignment tab character &.
+main.tex:294: Misplaced alignment tab character &.
 \@tempa ->\endgroup &
                      &
-l.234     \end{align}
+l.294     \end{align}
                      
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -741,10 +752,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-main.tex:234: Misplaced alignment tab character &.
+main.tex:294: Misplaced alignment tab character &.
 \@tempa ->\endgroup &&
                       
-l.234     \end{align}
+l.294     \end{align}
                      
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -753,18 +764,18 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-main.tex:234: Misplaced \omit.
+main.tex:294: Misplaced \omit.
 \math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
                                                   \kern -\alignsep@ \iftag@ ...
-l.234     \end{align}
+l.294     \end{align}
                      
 I expect to see \omit only after tab marks or the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
-main.tex:234: Misplaced \cr.
+main.tex:294: Misplaced \cr.
 \math@cr@@@ ...wtrue \fi \global \lineht@ \z@ \cr 
                                                   
-l.234     \end{align}
+l.294     \end{align}
                      
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -772,26 +783,26 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-main.tex:234: Misplaced \noalign.
+main.tex:294: Misplaced \noalign.
 \math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
                                                   {\vskip #1\relax }
-l.234     \end{align}
+l.294     \end{align}
                      
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
-main.tex:234: Missing $ inserted.
+main.tex:294: Missing $ inserted.
 <inserted text> 
                 $
-l.234     \end{align}
+l.294     \end{align}
                      
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-main.tex:234: Missing } inserted.
+main.tex:294: Missing } inserted.
 <inserted text> 
                 }
-l.234     \end{align}
+l.294     \end{align}
                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -799,10 +810,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-main.tex:234: Missing \endgroup inserted.
+main.tex:294: Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
-l.234     \end{align}
+l.294     \end{align}
                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -810,18 +821,18 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-main.tex:234: Display math should end with $$.
+main.tex:294: Display math should end with $$.
 <to be read again> 
                    \vskip 
-l.234     \end{align}
+l.294     \end{align}
                      
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
-main.tex:234: Extra }, or forgotten \endgroup.
+main.tex:294: Extra }, or forgotten \endgroup.
 \math@cr@@ ...th@cr@@@ \noalign {\vskip #1\relax }
                                                   
-l.234     \end{align}
+l.294     \end{align}
                      
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -830,46 +841,47 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-main.tex:234: LaTeX Error: Bad math environment delimiter.
+main.tex:294: LaTeX Error: Bad math environment delimiter.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.234     \end{align}
+l.294     \end{align}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-main.tex:234: You can't use `\eqno' in vertical mode.
+main.tex:294: You can't use `\eqno' in vertical mode.
 \veqno ->\@kernel@eqno 
                        \aftergroup \ignorespaces 
-l.234     \end{align}
+l.294     \end{align}
                      
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
 If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
+[5 <./vortex_diagram.png>]
 
-main.tex:234: LaTeX Error: \begin{align} on input line 191 ended by \end{equati
+main.tex:294: LaTeX Error: \begin{align} on input line 251 ended by \end{equati
 on}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.234     \end{align}
+l.294     \end{align}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-main.tex:234: Missing $ inserted.
+main.tex:294: Missing $ inserted.
 <inserted text> 
                 $
-l.234     \end{align}
+l.294     \end{align}
                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -877,19 +889,18 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-main.tex:234: Display math should end with $$.
+main.tex:294: Display math should end with $$.
 <to be read again> 
                    \endgroup 
-l.234     \end{align}
+l.294     \end{align}
                      
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
-[4]
-main.tex:234: Misplaced alignment tab character &.
+main.tex:294: Misplaced alignment tab character &.
 <argument> ...d {equation} \begin {equation} R_e &
                                                   = 2 r_c \\\label {eq:equat...
-l.234     \end{align}
+l.294     \end{align}
                      
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -898,10 +909,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-main.tex:234: Misplaced alignment tab character &.
+main.tex:294: Misplaced alignment tab character &.
 <argument> ...d {equation} \begin {equation} R_e &
                                                   = \alpha ^2 a_0 \\\label {...
-l.234     \end{align}
+l.294     \end{align}
                      
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -910,10 +921,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-main.tex:234: Misplaced alignment tab character &.
+main.tex:294: Misplaced alignment tab character &.
 <argument> ...d {equation} \begin {equation} R_e &
                                                   = \frac {e^2}{4 \pi \varep...
-l.234     \end{align}
+l.294     \end{align}
                      
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -922,10 +933,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-main.tex:234: Misplaced alignment tab character &.
+main.tex:294: Misplaced alignment tab character &.
 <argument> ...d {equation} \begin {equation} R_e &
                                                   = \frac {e^2}{8 \pi \varep...
-l.234     \end{align}
+l.294     \end{align}
                      
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -934,10 +945,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-main.tex:234: Misplaced alignment tab character &.
+main.tex:294: Misplaced alignment tab character &.
 <argument> ...d {equation} \begin {equation} R_x &
                                                   = N \frac {F_{\max } r_c^2...
-l.234     \end{align}
+l.294     \end{align}
                      
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -946,10 +957,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-main.tex:234: Misplaced alignment tab character &.
+main.tex:294: Misplaced alignment tab character &.
 <argument> ...end {equation} \begin {equation} e &
                                                   =\frac {\sqrt {16 \pi F_{\...
-l.234     \end{align}
+l.294     \end{align}
                      
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -958,10 +969,11 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-main.tex:234: Misplaced alignment tab character &.
+[6]
+main.tex:294: Misplaced alignment tab character &.
 <argument> ...d {equation} \begin {equation} e^2 &
                                                   =16 \pi F_{\max } \xi _0 R...
-l.234     \end{align}
+l.294     \end{align}
                      
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -970,10 +982,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-main.tex:234: Misplaced alignment tab character &.
+main.tex:294: Misplaced alignment tab character &.
 <argument> ...end {equation} \begin {equation} e &
                                                   =\frac {\sqrt {2 \alpha h}...
-l.234     \end{align}
+l.294     \end{align}
                      
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -982,10 +994,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-main.tex:234: Misplaced alignment tab character &.
+main.tex:294: Misplaced alignment tab character &.
 <argument> ...end {equation} \begin {equation} e &
                                                   = \frac {\sqrt {4 C_e h}}{...
-l.234     \end{align}
+l.294     \end{align}
                      
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -994,10 +1006,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-main.tex:234: Misplaced alignment tab character &.
+main.tex:294: Misplaced alignment tab character &.
 <argument> ...d {equation} \begin {equation} R^2 &
                                                   = \frac {N F_{\text {max }...
-l.234     \end{align}
+l.294     \end{align}
                      
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1006,10 +1018,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-main.tex:234: Misplaced alignment tab character &.
+main.tex:294: Misplaced alignment tab character &.
 <argument> ...d {equation} \begin {equation} R^2 &
                                                   = \frac {4 \pi F_{\text {m...
-l.234     \end{align}
+l.294     \end{align}
                      
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1018,10 +1030,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-main.tex:234: Misplaced alignment tab character &.
+main.tex:294: Misplaced alignment tab character &.
 <argument> ...} \begin {equation} \frac {1}{r_c} &
                                                   = \frac {c^2}{a_0 2 C_e^2}...
-l.234     \end{align}
+l.294     \end{align}
                      
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1030,10 +1042,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-main.tex:234: Misplaced \cr.
+main.tex:294: Misplaced \cr.
 \math@cr@@@ ->\cr 
                   
-l.234     \end{align}
+l.294     \end{align}
                      
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1041,10 +1053,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-main.tex:234: Misplaced alignment tab character &.
+main.tex:294: Misplaced alignment tab character &.
 \@tempa ->\endgroup &
                      &
-l.234     \end{align}
+l.294     \end{align}
                      
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1053,10 +1065,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-main.tex:234: Misplaced alignment tab character &.
+main.tex:294: Misplaced alignment tab character &.
 \@tempa ->\endgroup &&
                       
-l.234     \end{align}
+l.294     \end{align}
                      
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1065,10 +1077,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-main.tex:234: Misplaced \cr.
+main.tex:294: Misplaced \cr.
 \measure@ ...olumn@ \z@ \add@amps \maxfields@ \cr 
                                                   }}\restorecounters@ \ifodd...
-l.234     \end{align}
+l.294     \end{align}
                      
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1076,10 +1088,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-main.tex:234: Extra }, or forgotten $.
+main.tex:294: Extra }, or forgotten $.
 \measure@ ...lumn@ \z@ \add@amps \maxfields@ \cr }
                                                   }\restorecounters@ \ifodd ...
-l.234     \end{align}
+l.294     \end{align}
                      
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1087,10 +1099,10 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-main.tex:234: Extra }, or forgotten $.
+main.tex:294: Extra }, or forgotten $.
 \measure@ ...umn@ \z@ \add@amps \maxfields@ \cr }}
                                                   \restorecounters@ \ifodd \...
-l.234     \end{align}
+l.294     \end{align}
                      
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1098,37 +1110,37 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-main.tex:234: Missing number, treated as zero.
+main.tex:294: Missing number, treated as zero.
 <to be read again> 
                    =
-l.234     \end{align}
+l.294     \end{align}
                      
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-main.tex:234: Missing number, treated as zero.
+main.tex:294: Missing number, treated as zero.
 <to be read again> 
                    \global 
-l.234     \end{align}
+l.294     \end{align}
                      
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-main.tex:234: Missing number, treated as zero.
+main.tex:294: Missing number, treated as zero.
 <to be read again> 
                    >
-l.234     \end{align}
+l.294     \end{align}
                      
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-main.tex:234: Illegal unit of measure (pt inserted).
+main.tex:294: Illegal unit of measure (pt inserted).
 <to be read again> 
                    >
-l.234     \end{align}
+l.294     \end{align}
                      
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1137,19 +1149,19 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-main.tex:234: Missing number, treated as zero.
+main.tex:294: Missing number, treated as zero.
 <to be read again> 
                    \relax 
-l.234     \end{align}
+l.294     \end{align}
                      
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-main.tex:234: Illegal unit of measure (pt inserted).
+main.tex:294: Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.234     \end{align}
+l.294     \end{align}
                      
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1158,19 +1170,19 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-main.tex:234: Missing number, treated as zero.
+main.tex:294: Missing number, treated as zero.
 <to be read again> 
                    =
-l.234     \end{align}
+l.294     \end{align}
                      
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-main.tex:234: Missing $ inserted.
+main.tex:294: Missing $ inserted.
 <inserted text> 
                 $
-l.234     \end{align}
+l.294     \end{align}
                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1178,25 +1190,25 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-main.tex:234: Display math should end with $$.
+main.tex:294: Display math should end with $$.
 <to be read again> 
                    \endgroup 
-l.234     \end{align}
+l.294     \end{align}
                      
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
-main.tex:234: Extra \endgroup.
+main.tex:294: Extra \endgroup.
 <recently read> \endgroup 
                           
-l.234     \end{align}
+l.294     \end{align}
                      
 Things are pretty mixed up, but I think the worst is over.
 
-main.tex:234: Missing } inserted.
+main.tex:294: Missing } inserted.
 <inserted text> 
                 }
-l.234     \end{align}
+l.294     \end{align}
                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1205,31 +1217,31 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-main.tex:234: LaTeX Error: Bad math environment delimiter.
+main.tex:294: LaTeX Error: Bad math environment delimiter.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.234     \end{align}
+l.294     \end{align}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-main.tex:234: Missing { inserted.
+main.tex:294: Missing { inserted.
 <inserted text> 
                 {
-l.234     \end{align}
+l.294     \end{align}
                      
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
 
-main.tex:234: Missing \endgroup inserted.
+main.tex:294: Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
-l.234     \end{align}
+l.294     \end{align}
                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1237,20 +1249,20 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-main.tex:234: You can't use `\eqno' in math mode.
+main.tex:294: You can't use `\eqno' in math mode.
 \veqno ->\@kernel@eqno 
                        \aftergroup \ignorespaces 
-l.234     \end{align}
+l.294     \end{align}
                      
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
 If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
-main.tex:234: Missing } inserted.
+main.tex:294: Missing } inserted.
 <inserted text> 
                 }
-l.234     \end{align}
+l.294     \end{align}
                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1259,22 +1271,22 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-main.tex:234: LaTeX Error: \begin{document} ended by \end{equation}.
+main.tex:294: LaTeX Error: \begin{document} ended by \end{equation}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.234     \end{align}
+l.294     \end{align}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-main.tex:234: Missing $ inserted.
+main.tex:294: Missing $ inserted.
 <inserted text> 
                 $
-l.234     \end{align}
+l.294     \end{align}
                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1282,10 +1294,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-main.tex:234: Missing } inserted.
+main.tex:294: Missing } inserted.
 <inserted text> 
                 }
-l.234     \end{align}
+l.294     \end{align}
                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1293,10 +1305,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-main.tex:234: Missing } inserted.
+main.tex:294: Missing } inserted.
 <inserted text> 
                 }
-l.234     \end{align}
+l.294     \end{align}
                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1304,35 +1316,35 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-main.tex:234: Missing \cr inserted.
+main.tex:294: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.234     \end{align}
+l.294     \end{align}
                      
 I'm guessing that you meant to end an alignment here.
 
-main.tex:234: Missing { inserted.
+main.tex:294: Missing { inserted.
 <inserted text> 
                 {
-l.234     \end{align}
+l.294     \end{align}
                      
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
 
-main.tex:234: Missing { inserted.
+main.tex:294: Missing { inserted.
 <inserted text> 
                 {
-l.234     \end{align}
+l.294     \end{align}
                      
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
 
-main.tex:234: Extra }, or forgotten $.
+main.tex:294: Extra }, or forgotten $.
 <recently read> }
                  
-l.234     \end{align}
+l.294     \end{align}
                      
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1340,18 +1352,18 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-main.tex:234: Missing $ inserted.
+main.tex:294: Missing $ inserted.
 <inserted text> 
                 $
-l.234     \end{align}
+l.294     \end{align}
                      
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-main.tex:234: Missing } inserted.
+main.tex:294: Missing } inserted.
 <inserted text> 
                 }
-l.234     \end{align}
+l.294     \end{align}
                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1359,17 +1371,17 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-main.tex:234: Extra \endgroup.
+main.tex:294: Extra \endgroup.
 <recently read> \endgroup 
                           
-l.234     \end{align}
+l.294     \end{align}
                      
 Things are pretty mixed up, but I think the worst is over.
 
-main.tex:234: Misplaced alignment tab character &.
+main.tex:294: Misplaced alignment tab character &.
 <argument> ...d {equation} \begin {equation} R_e &
                                                   = \frac {e^2}{4 \pi \varep...
-l.234     \end{align}
+l.294     \end{align}
                      
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1378,10 +1390,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-main.tex:234: Misplaced alignment tab character &.
+main.tex:294: Misplaced alignment tab character &.
 <argument> ...d {equation} \begin {equation} R_e &
                                                   = 2 r_c \\\label {eq:equat...
-l.234     \end{align}
+l.294     \end{align}
                      
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1390,10 +1402,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-main.tex:234: Misplaced alignment tab character &.
+main.tex:294: Misplaced alignment tab character &.
 <argument> ...d {equation} \begin {equation} R_e &
                                                   = \alpha ^2 a_0 \\\label {...
-l.234     \end{align}
+l.294     \end{align}
                      
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1402,10 +1414,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-main.tex:234: Misplaced alignment tab character &.
+main.tex:294: Misplaced alignment tab character &.
 <argument> ...d {equation} \begin {equation} R_e &
                                                   = \frac {e^2}{4 \pi \varep...
-l.234     \end{align}
+l.294     \end{align}
                      
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1414,10 +1426,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-main.tex:234: Misplaced alignment tab character &.
+main.tex:294: Misplaced alignment tab character &.
 <argument> ...d {equation} \begin {equation} R_e &
                                                   = \frac {e^2}{8 \pi \varep...
-l.234     \end{align}
+l.294     \end{align}
                      
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1426,10 +1438,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-main.tex:234: Misplaced alignment tab character &.
+main.tex:294: Misplaced alignment tab character &.
 <argument> ...d {equation} \begin {equation} R_x &
                                                   = N \frac {F_{\max } r_c^2...
-l.234     \end{align}
+l.294     \end{align}
                      
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1438,10 +1450,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-main.tex:234: Misplaced alignment tab character &.
+main.tex:294: Misplaced alignment tab character &.
 <argument> ...end {equation} \begin {equation} e &
                                                   =\frac {\sqrt {16 \pi F_{\...
-l.234     \end{align}
+l.294     \end{align}
                      
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1450,10 +1462,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-main.tex:234: Misplaced alignment tab character &.
+main.tex:294: Misplaced alignment tab character &.
 <argument> ...d {equation} \begin {equation} e^2 &
                                                   =16 \pi F_{\max } \xi _0 R...
-l.234     \end{align}
+l.294     \end{align}
                      
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1462,10 +1474,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-main.tex:234: Misplaced alignment tab character &.
+main.tex:294: Misplaced alignment tab character &.
 <argument> ...end {equation} \begin {equation} e &
                                                   =\frac {\sqrt {2 \alpha h}...
-l.234     \end{align}
+l.294     \end{align}
                      
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1474,10 +1486,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-main.tex:234: Misplaced alignment tab character &.
+main.tex:294: Misplaced alignment tab character &.
 <argument> ...end {equation} \begin {equation} e &
                                                   = \frac {\sqrt {4 C_e h}}{...
-l.234     \end{align}
+l.294     \end{align}
                      
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1486,10 +1498,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-main.tex:234: Misplaced alignment tab character &.
+main.tex:294: Misplaced alignment tab character &.
 <argument> ...d {equation} \begin {equation} R^2 &
                                                   = \frac {N F_{\text {max }...
-l.234     \end{align}
+l.294     \end{align}
                      
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1498,10 +1510,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-main.tex:234: Misplaced alignment tab character &.
+main.tex:294: Misplaced alignment tab character &.
 <argument> ...d {equation} \begin {equation} R^2 &
                                                   = \frac {4 \pi F_{\text {m...
-l.234     \end{align}
+l.294     \end{align}
                      
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1510,10 +1522,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-main.tex:234: Misplaced alignment tab character &.
+main.tex:294: Misplaced alignment tab character &.
 <argument> ...} \begin {equation} \frac {1}{r_c} &
                                                   = \frac {c^2}{a_0 2 C_e^2}...
-l.234     \end{align}
+l.294     \end{align}
                      
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1522,10 +1534,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-main.tex:234: Misplaced \cr.
+main.tex:294: Misplaced \cr.
 \math@cr@@@ ->\cr 
                   
-l.234     \end{align}
+l.294     \end{align}
                      
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1533,26 +1545,26 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-main.tex:234: Misplaced \noalign.
+main.tex:294: Misplaced \noalign.
 \math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
                                                   {\vskip #1\relax }
-l.234     \end{align}
+l.294     \end{align}
                      
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
-main.tex:234: Missing $ inserted.
+main.tex:294: Missing $ inserted.
 <inserted text> 
                 $
-l.234     \end{align}
+l.294     \end{align}
                      
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-main.tex:234: Missing } inserted.
+main.tex:294: Missing } inserted.
 <inserted text> 
                 }
-l.234     \end{align}
+l.294     \end{align}
                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1560,60 +1572,60 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-main.tex:234: Display math should end with $$.
+main.tex:294: Display math should end with $$.
 <to be read again> 
                    \vskip 
-l.234     \end{align}
+l.294     \end{align}
                      
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
-main.tex:234: Too many }'s.
+main.tex:294: Too many }'s.
 \math@cr@@ ...th@cr@@@ \noalign {\vskip #1\relax }
                                                   
-l.234     \end{align}
+l.294     \end{align}
                      
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
 
-main.tex:234: Misplaced \noalign.
+main.tex:294: Misplaced \noalign.
 \black@ #1->\noalign 
                      {\ifdim #1>\displaywidth \dimen@ \prevdepth \nointerlin...
-l.234     \end{align}
+l.294     \end{align}
                      
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
 
-Overfull \hbox (46.00414pt too wide) detected at line 234
+Overfull \hbox (46.00414pt too wide) detected at line 294
 []
  []
 
-main.tex:234: Too many }'s.
+main.tex:294: Too many }'s.
 \endalign ->\math@cr \black@ \totwidth@ \egroup 
                                                 \ifingather@ \restorealignst...
-l.234     \end{align}
+l.294     \end{align}
                      
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
 
 
-main.tex:234: LaTeX Error: \begin{document} ended by \end{align}.
+main.tex:294: LaTeX Error: \begin{document} ended by \end{align}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.234     \end{align}
+l.294     \end{align}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-main.tex:234: Missing $ inserted.
+main.tex:294: Missing $ inserted.
 <inserted text> 
                 $
-l.234     \end{align}
+l.294     \end{align}
                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1621,40 +1633,40 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-main.tex:234: Display math should end with $$.
+main.tex:294: Display math should end with $$.
 <to be read again> 
                    \endgroup 
-l.234     \end{align}
+l.294     \end{align}
                      
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
-[5]
-main.tex:234: Extra \endgroup.
+main.tex:294: Extra \endgroup.
 <recently read> \endgroup 
                           
-l.234     \end{align}
+l.294     \end{align}
                      
 Things are pretty mixed up, but I think the worst is over.
 
+[7]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 258.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\rho' on input line 258.
+(hyperref)                removing `math shift' on input line 318.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 258.
+(hyperref)                removing `\rho' on input line 318.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 258.
+(hyperref)                removing `subscript' on input line 318.
 
-[6] (C:/Users\mr\IdeaProjects\Vortex-Æther-Model\auxil\main.bbl) [7]
-(C:/Users\mr\IdeaProjects\Vortex-Æther-Model\auxil\main.aux)
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 318.
+
+[8] (C:/Users\mr\IdeaProjects\VAM\auxil\main.bbl) [9]
+(C:/Users\mr\IdeaProjects\VAM\auxil\main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -1667,39 +1679,39 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 0FF312276D58928E008C3107611538D3;3914.
+(rerunfilecheck)             Checksum: F606D752BCC75AE4373A1DF74866D2D1;4345.
  ) 
 Here is how much of TeX's memory you used:
- 11039 strings out of 474486
- 166183 string characters out of 5749392
+ 11044 strings out of 474486
+ 165919 string characters out of 5749392
  1946542 words of memory out of 5000000
- 33113 multiletter control sequences out of 15000+600000
- 570235 words of font info for 82 fonts, out of 8000000 for 9000
+ 33117 multiletter control sequences out of 15000+600000
+ 570570 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 79i,13n,93p,384b,457s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/mr/AppData/Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
-C:/Users/mr/AppData/Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/
-Users/mr/AppData/Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/User
-s/mr/AppData/Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/mr
-/AppData/Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/mr/Ap
-pData/Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/mr/AppDa
-ta/Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/mr/AppData/
-Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/mr/AppData/Loca
-l/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/mr/AppData/Local/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/mr/AppData/Local/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mr/AppData/Local/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/mr/AppData/Local/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/mr/AppData/Local/MiKTeX/fonts/typ
-e1/public/amsfonts/cm/cmr5.pfb><C:/Users/mr/AppData/Local/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmr7.pfb><C:/Users/mr/AppData/Local/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmr9.pfb><C:/Users/mr/AppData/Local/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmsy10.pfb><C:/Users/mr/AppData/Local/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmsy7.pfb><C:/Users/mr/AppData/Local/MiKTeX/fonts/type1/public/amsfonts/sym
-bols/msbm10.pfb>
-Output written on C:/Users\mr\IdeaProjects\Vortex-Æther-Model\out\main.pdf (7 
-pages, 515724 bytes).
+ 79i,13n,93p,2318b,503s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\mr\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm100
+0.pk><C:/Users/mr/AppData/Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pf
+b><C:/Users/mr/AppData/Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
+C:/Users/mr/AppData/Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/U
+sers/mr/AppData/Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/User
+s/mr/AppData/Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/m
+r/AppData/Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/mr/A
+ppData/Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/mr/AppDa
+ta/Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/mr/AppData/L
+ocal/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/mr/AppData/Loc
+al/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mr/AppData/Local/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/mr/AppData/Local/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/mr/AppData/Local/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/mr/AppData/Local/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmr7.pfb><C:/Users/mr/AppData/Local/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmr9.pfb><C:/Users/mr/AppData/Local/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmsy10.pfb><C:/Users/mr/AppData/Local/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmsy7.pfb><C:/Users/mr/AppData/Local/MiKTeX/fonts/type1/public/amsfo
+nts/symbols/msbm10.pfb>
+Output written on C:/Users\mr\IdeaProjects\VAM\out\main.pdf (9 pages, 513152 by
+tes).
 PDF statistics:
- 276 PDF objects out of 1000 (max. 8388607)
- 62 named destinations out of 1000 (max. 500000)
- 150 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 271 PDF objects out of 1000 (max. 8388607)
+ 65 named destinations out of 1000 (max. 500000)
+ 158 words of extra memory for PDF output out of 10000 (max. 10000000)
 
