@@ -1,85 +1,69 @@
-\subsection{Relation to the Bohr Model Velocity}\label{subsec:Relation-to-the-Bohr-Model-Velocity}
-\paragraph{Vorticity in a Simplified ``Rigid-Body'' Model:}
+
+\subsection{Vorticity in a Simplified ``Rigid-Body'' Model: Relation to the Bohr Model Velocity}\label{subsec:Relation-to-the-Bohr-Model-Velocity}
 
 In fluid mechanics, the vorticity $\boldsymbol{\omega}$ is defined as:
 
-\begin{equation}
-    \boldsymbol{\omega} = \nabla \times \mathbf{v}\label{eq:vorticity}
-\end{equation}
+\begin{equation*}
+\boldsymbol{\omega} = \nabla \times \mathbf{v}\label{eq:vorticity}
+\end{equation*}
 
-where $\mathbf{v}$ is the velocity field of the fluid.
-For an idealized rigid-body rotation about the $z$-axis with constant angular velocity $\Omega$, the velocity field at radius $r$ in cylindrical coordinates is
+where $\mathbf{v}$ is the velocity field of the fluid. To illustrate its role in rotational motion, we consider an idealized rigid-body rotation about the $z$-axis with constant angular velocity $\Omega$. The velocity field at radius $r$ in cylindrical coordinates is:
 
-\begin{equation}
-    \mathbf{v}(r) = \Omega \hat{z} \times \mathbf{r} = \Omega(-y\hat{x} + x\hat{y}) \quad \Rightarrow \quad |
-    \mathbf{v}(r)| = \Omega r.\label{eq:cylindrical-velocity}
-\end{equation}
+\begin{equation*}
+\mathbf{v}(r) = \Omega \hat{z} \times \mathbf{r} = \Omega(-y\hat{x} + x\hat{y}) \quad \Rightarrow \quad |
+\mathbf{v}(r)| = \Omega r.\label{eq:cylindrical-velocity}
+\end{equation*}
 
-A standard result is that the corresponding vorticity magnitude is
-\begin{equation}
-    |\boldsymbol{\omega}| = \left| \nabla \times \mathbf{v} \right| = 2\Omega.\label{eq:vortcity-magnitude}
-\end{equation}
-
-Hence, if the tangential (orbital) velocity at radius $r$ is $v_\text{tangential} = \Omega r$, the local vorticity is:
+A standard result is that the corresponding vorticity magnitude is:
 
 \begin{equation}
-    \omega = 2\Omega = \frac{2v_\text{tangential}}{r}.\label{eq:2velocity}
+|\boldsymbol{\omega}| = \left| \nabla \times \mathbf{v} \right| = 2\Omega.\label{eq:vorticity-magnitude}
 \end{equation}
 
-Therefore, one sometimes says ``the vorticity is twice the angular velocity'' or equivalently ``the vorticity (multiplied by $r$) is twice the tangential velocity.''
+Hence, if the tangential (orbital) velocity at radius $r$ is $v_{\text{tangential}} = \Omega r$, the local vorticity is:
+
+\begin{equation*}
+\omega = 2\Omega = \frac{2v_{\text{tangential}}}{r}.\label{eq:2velocity}
+\end{equation*}
+
+Thus, one can state that the vorticity is twice the angular velocity'' or equivalently, the vorticity (multiplied by $r$) is twice the tangential velocity.''
 
 \subsubsection*{Standard Bohr Orbit (Classical Picture)}
-In the simplified (pre-Schr\"odinger) Bohr model of the hydrogen atom, the electron in the ground state ($n=1$) is classically pictured as moving on a circle of radius $a_0$ (the Bohr radius) with speed $v_1$.
-One derives:
+In the simplified (pre-Schr"odinger) Bohr model of the hydrogen atom, the electron in the ground state ($n=1$) is classically pictured as moving on a circle of radius $a_0$ (the Bohr radius) with speed $v_1$. This is given by:
 
-\begin{equation}
-    v_1 = \alpha c \approx 2.1877 \times 10^6 \text{ m/s},\label{eq:tangetial-velocity}
-\end{equation}
+\begin{equation*}
+v_1 = \alpha c \approx 2.1877 \times 10^6 \text{ m/s},\label{eq:tangential-velocity}
+\end{equation*}
 
 where $\alpha \approx 1/137.036$ is the fine-structure constant, and $c \approx 3 \times 10^8 \text{ m/s}$ is the speed of light.
 
-\subsubsection*{Identifying This ``Speed'' as Part of a Vortex Flow}
-From a fluid-mechanical or vortex standpoint (rather than a literal ``point mass in orbit''), one could regard:
+\subsubsection*{Identifying This Speed'' as Part of a Vortex Flow}
+From a fluid-mechanical or vortex standpoint (rather than a literal point mass in orbit''), one could regard $v_1$ as the local tangential speed of a circulating flow at a ``radius'' $r = a_0$ and $\omega$ as the local vorticity (i.e., twice the angular velocity) of that circulating flow.
 
-\begin{itemize}
-    \item $v_1$ as the local tangential speed of a circulating flow at a ``radius'' $r = a_0$.
-    \item $\omega$ as the local vorticity (i.e., twice the angular velocity) of that circulating flow.
-\end{itemize}
+Hence, if the flow near radius $r$ is seen as a rigid rotation with angular velocity $\omega$, then:
 
-Hence, if the flow near radius $r$ is seen as a rigid rotation with angular velocity $\omega$, then
-\begin{equation}
-    v_1 = \Omega r, \quad \omega = 2\Omega = \frac{2v_1}{r}.\label{eq:angular-velocity}
-\end{equation}
-In that sense, the electron’s ``orbital speed'' in the Bohr picture is no longer just a ``translational velocity'' along a circle but rather the tangential velocity of a vortex flow, whose local vorticity is $2 v_1 / r$.
+\begin{equation*}
+v_1 = \Omega r, \quad \omega = 2\Omega = \frac{2v_1}{r}.\label{eq:angular-velocity}
+\end{equation*}
 
-\subsubsection*{Caveats from Quantum Mechanics}
-\begin{itemize}
-    \item \textbf{Wavefunction over Orbits:} Modern quantum mechanics replaces the simplistic Bohr ``orbiting electron'' with a wavefunction, typically the hydrogenic ground state $\psi_{1s}(r)$.
-    This does not literally revolve in a circle with speed $v_1$.
-    \item \textbf{Vortex Interpretations:} Vortex-based approaches to quantum phenomena (e.g., ``Madelung fluid'' pictures, pilot-wave hydrodynamics analogies, or various vortex theories) can sometimes interpret quantum states in terms of fluid-like velocity fields.
-    But these remain analogies unless the fluid equations can be shown to match quantum mechanical predictions.
-    \item \textbf{Bohr Model as a Teaching Tool:} Despite its historical importance, the Bohr model is mainly a stepping stone to deeper quantum theory.
-    Nonetheless, it yields correct orders of magnitude for ground-state energies and ``speeds,'' which can be reinterpreted in fluid-like language if one chooses.
-\end{itemize}
+In this interpretation, the electron’s orbital speed'' in the Bohr picture is not merely a translational velocity'' along a circle but rather the tangential velocity of a vortex flow, whose local vorticity is $2 v_1 / r$.
 
-\paragraph{Summary:}
-The classical Bohr velocity $v_1$ for the ground-state electron in hydrogen (about $2.18 \times 10^6 \text{ m/s}$) can be reinterpreted as the tangential speed at some radius in a fluid vortex.
+This suggests that the electron's structure and energy distribution are not fully captured by classical electrostatics and general relativity alone. Therefore, we transition to an alternative perspective: interpreting electron motion using fluid-mechanical vorticity principles.
 
-\begin{itemize}
-    \item In a rigidly rotating vortex, the vorticity is $2\Omega$, and at any radius $r$, the tangential velocity is $\Omega r$.
-    Thus, vorticity $\omega$ is ``2 times the angular velocity,'' or $\omega r$ is ``2 times the tangential velocity.'' It is this tangential velocity that we define as one of our new constants.
-    Because of the similarity between the speed of light and the tangential velocity of an electron we will identify it with $C_e$.
-    This identifier is not just arbitrary, but can be explained by a constant based on the electron.
-    It will now also become clear that this tangential velocity is not just a speed, but a fundamental property of the \AE ther connected to the speed of light by the fine-structure constant $\alpha = \frac{2 C_e}{c}$.
-    \item Consequently, one might say ``the electron’s speed in the Bohr model is not purely a translational speed but rather the tangential speed associated with the local vorticity.''
-\end{itemize}
+\subsubsection*{Negative Energy in a Charged-Sphere Model of the Electron}
 
-Mathematically:
-\begin{equation}
-    \boxed{ \omega = \nabla \times \mathbf{v} = 2\Omega,\quad v_{\text{tangential}} = \Omega r, \quad \omega r = 2 v_{\text{tangential}}. }\label{eq:2-times-tangential}
-\end{equation}
+\paragraph{Einstein--Maxwell theory} has long been used to model a small charged sphere with radius on the order of $10^{-16},\mathrm{cm}$. Cooperstock, Rosen, and Bonnor (henceforth CRB) argued that under standard assumptions, such a spherically symmetric distribution of charged fluid satisfying the electron's mass, radius, and charge constraints leads to a scenario where a portion of the system must have negative rest mass (or equivalently, negative energy density) in parts of the interior~\cite{CRB1970}.
+
+A motivation for studying spherically symmetric charged spheres within general relativity is to understand the self-energy problem of fundamental particles and the role of mass-energy equivalence in electrostatic configurations. In this context, the CRB argument explores the constraints imposed by Einstein--Maxwell theory on such systems.
+
+\paragraph{CRB argument:} The crux is that the classical electrostatic self-energy of a pointlike (or tiny) charge is infinite. If one attempts to confine the electron's charge in a uniform or spherically symmetric mass distribution, general relativity forces a compensating negative energy component so that the total net mass is still positive, but with some portion of the stress--energy tensor effectively negative. This phenomenon is often linked to Reissner--Nordstr"om repulsion~\cite{Bonnor1965}.
+
+\paragraph{Extensions by Herrera and Varela (HV):} Herrera and Varela revisited the same question by allowing additional anisotropy in the pressure distribution, such that $(p_t - p_r)\propto q^2/r^2$ \cite{HerreraVarela1994}. They reached essentially the same conclusion: namely, that negative energy density seems unavoidable unless one introduces new physics (spin, anisotropic pressures, or quantum effects).
+
+\paragraph{Kerr--Newman geometry:} CRB, HV, and others subsequently discussed whether a Kerr--Newman (KN) solution could obviate the need for negative energy~\cite{Herrera1982,MannMorris1993}. Although a rotating charged metric might reduce or reinterpret the negative-mass region, these authors noted a caveat: the KN solution is suspect on subnuclear scales ($\sim10^{-16},\mathrm{cm}$), likely invalidating its usage in a literal electron model. Therefore, purely classical Einstein--Maxwell electron models remain problematic, as they yield negative rest mass in the interior.
+
+\paragraph{Implications:} The results by CRB and HV underscore that a naive classical--relativistic view of a tiny charged sphere leads to peculiar or unphysical features such as negative energy density. Many subsequent works argue that quantum field theoretic considerations or more detailed spin structures must come into play if one wishes to avoid or reinterpret these negative-energy regions~\cite{CRB1970,HerreraVarela1994}. This suggests that the electron's structure and energy distribution are not fully captured by classical electrostatics and general relativity alone.
 
 
-\paragraph{Key Takeaway:} From a purely fluid‐mechanical viewpoint, a uniform circular velocity field has $\omega = 2 \,\Omega$.
-Thus, it is natural to say “the electron’s Bohr velocity can be identified with the tangential velocity in a vortex whose vorticity is $2\,v/r$.” In standard quantum mechanics, this is at best a useful analogy, but it can help conceptualize why one might see the Bohr velocity as “vorticity” rather than plain translational motion.
+
 
