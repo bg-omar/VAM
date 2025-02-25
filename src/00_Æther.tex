@@ -11,7 +11,11 @@
 \usepackage{physics}
 \usepackage{cite}
 \usepackage{natbib}
-
+\usepackage{authblk}
+\usepackage{subfiles}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{markdown}
 
 \geometry{margin=1in}
 
@@ -50,11 +54,22 @@
     \input{04_observation_on_light_particle}
     \input{05_riged_body}
     \input{06_derevation_swirl}
+
+    \section{Part II}\label{sec:part-2}
     \input{07_VAM-reformulation-GR}
     \input{08_path-Integral-gauge-relativity}
     \input{09_Magnetism_as_vorticity}
-    \input{10_rest}
-    \input{11_vorticity_derivation}
+
+
+
+    \input{10_vortex_induced_magnetic_fields}
+    \input{11_addressing_qed_corrections}
+    \input{12_vam_derevation}
+    \input{14_bragg}
+
+
+%    \input{20_rest}
+%    \input{21_vorticity_derivation}
 
     \bibliographystyle{ieeetr}
     \bibliography{references}
