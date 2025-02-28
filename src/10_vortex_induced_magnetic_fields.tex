@@ -28,9 +28,9 @@ By incorporating VAM’s \textbf{maximum force constraint (\( F_{\text{max}} \))
 
 \subsubsection*{Maxwell’s Equations with Vortex Contributions}
 Maxwell’s equations in tensor notation are defined as:
-\begin{equation}
+\begin{equation*}
     F^{\mu\nu} = \partial^\mu A^\nu - \partial^\nu A^\mu,
-\end{equation}
+\end{equation*}
 where:
 \begin{itemize}
     \item \( A^\mu = (\phi, \mathbf{A}) \) is the \textbf{four-potential} ,
@@ -38,9 +38,9 @@ where:
 \end{itemize}
 
 To extend Maxwell’s equations to include \textbf{vorticity-driven sources} , we propose a modified field equation:
-\begin{equation}
+\begin{equation*}
     \partial_\mu F^{\mu\nu} = \mu_0 J^\nu + \lambda \Omega^\nu.
-\end{equation}
+\end{equation*}
 where:
 \begin{itemize}
     \item \( \Omega^\nu = (\omega, \mathbf{\omega}) \) is the \textbf{vorticity four-vector} , encoding absolute vorticity \( \omega \) and its spatial components.
@@ -48,15 +48,15 @@ where:
 \end{itemize}
 
 The modified Bianchi identity incorporating vortex effects is:
-\begin{equation}
+\begin{equation*}
     \partial_\mu \tilde{F}^{\mu\nu} = \sigma \tilde{\Omega}^\nu.
-\end{equation}
+\end{equation*}
 
 \subsubsection*{Derivation of the Vorticity-Electromagnetic Coupling Constant \( \lambda \)}
 The coupling constant \( \lambda \) is defined as:
-\begin{equation}
+\begin{equation*}
     \lambda = \frac{C_e \hbar}{q R_c^2}.
-\end{equation}
+\end{equation*}
 Breaking down dimensions:
 - \( C_e \) (Vortex Core Tangential Velocity) → \( [L/T] \),
 - \( \hbar \) (Planck’s Reduced Constant) → \( [M L^2 / T] \),
@@ -64,51 +64,51 @@ Breaking down dimensions:
 - \( R_c \) (Vortex Core Radius) → \( [L] \),
 
 Yields:
-\begin{equation}
+\begin{equation*}
     \lambda \sim \frac{M L^2}{A T^3}.
-\end{equation}
+\end{equation*}
 
 \subsubsection*{Vorticity Contributions to Field Tensor}
 In \textbf{classical electromagnetism} , the four-potential is defined as:
-\begin{equation}
+\begin{equation*}
     A^\mu_{\text{charge}} = \left( \phi, \mathbf{A} \right).
-\end{equation}
+\end{equation*}
 However, in \textbf{VAM} , we introduce an additional \textbf{vorticity-dependent potential} :
-\begin{equation}
+\begin{equation*}
     A^\mu_{\text{total}} = A^\mu_{\text{charge}} + A^\mu_{\text{vortex}},
-\end{equation}
+\end{equation*}
 where:
-\begin{equation}
+\begin{equation*}
     A^\mu_{\text{vortex}} = \lambda g^{\mu\nu} \Omega_\nu.
-\end{equation}
+\end{equation*}
 
 The \textbf{total field tensor}  then modifies as:
-\begin{equation}
+\begin{equation*}
     F^{\mu\nu}_{\text{total}} = F^{\mu\nu}_{\text{charge}} + \lambda (\partial^\mu \Omega^\nu - \partial^\nu \Omega^\mu).
-\end{equation}
+\end{equation*}
 
 \subsubsection*{Component Form of the Extended Maxwell-VAM Equations}
 Using the \textbf{extended tensor formulation} , we explicitly modify the standard Maxwell equations.
 
-### \textbf{Gauss’s Law for Electric Fields}
-\begin{equation}
+\textbf{Gauss’s Law for Electric Fields}
+\begin{equation*}
     \nabla \cdot \mathbf{E}_{\text{total}} = \frac{\rho}{\varepsilon_0} + \frac{F_{\text{max}} \omega}{C_e R_c^2}.
-\end{equation}
+\end{equation*}
 
-### \textbf{Gauss’s Law for Magnetism}
-\begin{equation}
+\textbf{Gauss’s Law for Magnetism}
+\begin{equation*}
     \nabla \cdot \mathbf{B} = 0.
-\end{equation}
+\end{equation*}
 
-### \textbf{Faraday’s Law of Induction (Extended)}
-\begin{equation}
+\textbf{Faraday’s Law of Induction (Extended)}
+\begin{equation*}
     \nabla \times \mathbf{E}_{\text{total}} = - \frac{\partial \mathbf{B}_{\text{total}}}{\partial t} + \gamma \epsilon^{ijk} \partial_j \omega^k.
-\end{equation}
+\end{equation*}
 
-### \textbf{Ampère’s Law (Extended)}
-\begin{equation}
+\textbf{Ampère’s Law (Extended)}
+\begin{equation*}
     \nabla \times \mathbf{B}_{\text{total}} = \mu_0 \mathbf{J} + \mu_0 \varepsilon_0 \frac{\partial \mathbf{E}_{\text{total}}}{\partial t} + \frac{C_e \hbar}{q R_c^2} \Omega^i.
-\end{equation}
+\end{equation*}
 
 \subsubsection*{Conclusion}
 We have successfully \textbf{integrated vorticity contributions into Maxwell’s equations} . Future work should explore:
