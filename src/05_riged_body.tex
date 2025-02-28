@@ -10,43 +10,47 @@ In fluid mechanics, the vorticity $\boldsymbol{\omega}$ is defined as:
 where $\mathbf{v}$ is the velocity field of the fluid. To illustrate its role in rotational motion, we consider an idealized rigid-body rotation about the $z$-axis with constant angular velocity $\Omega$. The velocity field at radius $r$ in cylindrical coordinates is:
 
 \begin{equation*}
-\mathbf{v}(r) = \Omega \hat{z} \times \mathbf{r} = \Omega(-y\hat{x} + x\hat{y}) \quad \Rightarrow \quad |
-\mathbf{v}(r)| = \Omega r.\label{eq:cylindrical-velocity}
+    \mathbf{v}(r) = \Omega \hat{z} \times \mathbf{r} = \Omega(-y\hat{x} + x\hat{y}) \quad \Rightarrow \quad |
+    \mathbf{v}(r)| = \Omega r.\label{eq:cylindrical-velocity}
 \end{equation*}
 
 A standard result is that the corresponding vorticity magnitude is:
 
 \begin{equation}
-|\boldsymbol{\omega}| = \left| \nabla \times \mathbf{v} \right| = 2\Omega.\label{eq:vorticity-magnitude}
+    |\boldsymbol{\omega}| = \left| \nabla \times \mathbf{v} \right| = 2\Omega.\label{eq:vorticity-magnitude}
 \end{equation}
 
 Hence, if the tangential (orbital) velocity at radius $r$ is $v_{\text{tangential}} = \Omega r$, the local vorticity is:
 
 \begin{equation*}
-\omega = 2\Omega = \frac{2v_{\text{tangential}}}{r}.\label{eq:2velocity}
+    \omega = 2\Omega \quad 2v_{\text{tangential}} = \omega r.\label{eq:2velocity}
 \end{equation*}
 
-Thus, one can state that the vorticity is twice the angular velocity'' or equivalently, the vorticity (multiplied by $r$) is twice the tangential velocity.''
+Thus, one can state that the vorticity is twice the angular velocity or equivalently, ''the vorticity (multiplied by $r$) is twice the tangential velocity.''
 
 \subsubsection*{Standard Bohr Orbit (Classical Picture)}
-In the simplified (pre-Schr"odinger) Bohr model of the hydrogen atom, the electron in the ground state ($n=1$) is classically pictured as moving on a circle of radius $a_0$ (the Bohr radius) with speed $v_1$. This is given by:
+In the simplified (pre-Schr\"{o}dinger) Bohr model of the hydrogen atom, the electron in the ground state ($n=1$) is classically pictured as moving on a circle of radius $a_0$ (the Bohr radius) with speed $v_\text{bohr}$. This is given by:
 
 \begin{equation*}
-v_1 = \alpha c \approx 2.1877 \times 10^6 \text{ m/s},\label{eq:tangential-velocity}
+    v_\text{bohr} = \alpha c \approx 2.1877 \times 10^6 \text{ m/s},\label{eq:tangential-velocity}
 \end{equation*}
 
 where $\alpha \approx 1/137.036$ is the fine-structure constant, and $c \approx 3 \times 10^8 \text{ m/s}$ is the speed of light.
 
 \subsubsection*{Identifying This Speed'' as Part of a Vortex Flow}
-From a fluid-mechanical or vortex standpoint (rather than a literal point mass in orbit''), one could regard $v_1$ as the local tangential speed of a circulating flow at a ``radius'' $r = a_0$ and $\omega$ as the local vorticity (i.e., twice the angular velocity) of that circulating flow.
+From a fluid-mechanical or vortex standpoint (rather than a literal point mass in orbit''), one could regard $v_\text{bohr}$ instead of a translation velocity as the local vorticity $\omega$, twice the angular velocity 2$\Omega$ or twice the local tangential speed of that circulating flow at a ``radius'' $r = a_0$,
 
-Hence, if the flow near radius $r$ is seen as a rigid rotation with angular velocity $\omega$, then:
+Hence, if the flow near radius $r$ is seen as a rigid rotation with angular velocity $\Omega$, then:
 
 \begin{equation*}
-v_1 = \Omega r, \quad \omega = 2\Omega = \frac{2v_1}{r}.\label{eq:angular-velocity}
+    \omega = v_\text{bohr} = 2\Omega, \quad  \Omega = \frac{v_\text{bohr}}{2 r}.\label{eq:angular-velocity}
 \end{equation*}
 
-In this interpretation, the electron’s orbital speed'' in the Bohr picture is not merely a translational velocity'' along a circle but rather the tangential velocity of a vortex flow, whose local vorticity is $2 v_1 / r$.
+In this interpretation, the electron’s orbital speed'' in the Bohr picture is not merely a translational velocity'' along a circle but rather the local vorticity, which is twice the tangential velocity of a vortex flow. This gives us the tangiental velocity of the solid rotating vortex core as:
+
+\begin{equation*}
+    v_{\text{tangential}} = 1/2 v_\text{bohr}  \approx 1.0938 \times 10^6 \ \text{m/s},
+\end{equation*}
 
 This suggests that the electron's structure and energy distribution are not fully captured by classical electrostatics and general relativity alone. Therefore, we transition to an alternative perspective: interpreting electron motion using fluid-mechanical vorticity principles.
 
