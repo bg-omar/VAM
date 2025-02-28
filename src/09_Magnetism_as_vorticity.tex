@@ -1,32 +1,26 @@
 %! Author = mr
 %! Date = 2/20/2025
 
-\subsection{Vorticity-Induced Magnetism in the Vortex \AE ther Model}
+\subsection{Vorticity-Induced Magnetism in the Vortex Æther Model}
 
 
     \begin{abstract}
-        This paper explores the hypothesis that magnetism arises from structured vorticity in an inviscid, incompressible superfluid medium—the \AE ther. The \textbf{Vortex \AE ther Model (VAM)} proposes that stable vortex filaments and knots generate field effects traditionally associated with electromagnetism. By deriving fundamental vorticity-based equations, we establish a physical basis for magnetism without requiring moving charge. Using key VAM constants—\( C_e \) (core tangential velocity), \( r_c \) (vortex-core radius), and \( F_{\text{max}} \) (maximum force constraint)—we provide a framework where \textbf{magnetic phenomena emerge as a consequence of structured vorticity flows}.
-        We also outline experimental tests in superfluid helium, superconductors, and plasma physics to validate the predictions of VAM.
+This section explores the hypothesis that magnetism arises from structured vorticity in an inviscid, incompressible superfluid medium—the Æther. The \textbf{Vortex Æther Model (VAM)} proposes that stable vortex filaments and knots generate field effects traditionally associated with electromagnetism. By deriving fundamental vorticity-based equations, we establish a physical basis for magnetism without requiring moving charge. Using key VAM constants—\( C_e \) (core tangential velocity), \( r_c \) (vortex-core radius), and \( F_{\text{max}} \) (maximum force constraint)—we provide a framework where \textbf{magnetic phenomena emerge as a consequence of structured vorticity flows}.
+    We also outline experimental tests in superfluid helium, superconductors, and plasma physics to validate the predictions of VAM.
     \end{abstract}
 
     \paragraph*{Introduction:}
-    In classical electrodynamics, magnetism is attributed to the movement of electric charges.
-    However, recent experiments in \textbf{superfluid helium, superconducting vortex lattices, and plasma vortex structures} suggest that \textbf{neutral vortex systems can generate electromagnetic-like field effects} \cite{superfluid_he_interferometers}.
-    The VAM proposes that \textbf{magnetic fields do not originate from charge motion but rather from structured vorticity flows in an underlying Æther medium}.
 
-    This paper:
-    - Establishes \textbf{the mathematical foundations of vorticity-induced magnetism}.
-    - Derives \textbf{Maxwell-like equations} for vortex-generated magnetic fields.
-    - Predicts \textbf{experimental signatures} of vorticity-based electromagnetism.
-
+Classical electrodynamics attributes magnetism to the motion of electric charges. However, recent experiments in \textbf{superfluid helium, superconducting vortex lattices, and plasma vortex structures} suggest that \textbf{neutral vortex systems can generate electromagnetic-like field effects} \cite{superfluid_he_interferometers}. The VAM proposes that \textbf{magnetic fields do not originate from charge motion but rather from structured vorticity flows in an underlying Æther medium}.
 
 \subsubsection*{Comparison with GR and QED Predictions}
 A fundamental goal of VAM is to reconcile its framework with existing experimental constraints imposed by GR and QED. The following table summarizes expected deviations and comparisons:
 
 \begin{table}[h]
     \centering
+  \resizebox{\textwidth}{!}{%
     \renewcommand{\arraystretch}{1.3}
-    \begin{tabular}{|p{4.5cm}|p{9.5cm}|}
+    \begin{tabular}{|p{5cm}|p{10cm}|}
         \hline
         \textbf{Phenomenon} & \textbf{Comparison: GR/QED vs. VAM} \\
         \hline
@@ -43,6 +37,7 @@ A fundamental goal of VAM is to reconcile its framework with existing experiment
         \textbf{VAM:} Ætheric vorticity fluctuations modulate fields. \\
         \hline
     \end{tabular}
+  }
     \caption{Comparison between GR/QED and VAM predictions}
     \label{tab:comparison}
 \end{table}
@@ -52,9 +47,10 @@ A fundamental goal of VAM is to reconcile its framework with existing experiment
 
     \paragraph*{Fundamental Vorticity Equations}
     The motion of an inviscid, incompressible fluid is described by the \textbf{Euler equations}:
-    \begin{equation}
+
+    \begin{equation*}
         \frac{D\boldsymbol{u}}{Dt} = -\frac{1}{\rho} \nabla P + \boldsymbol{f},
-    \end{equation}
+    \end{equation*}
     where:
     - \( \boldsymbol{u} \) is the velocity field,
     - \( P \) is the pressure,
@@ -62,20 +58,25 @@ A fundamental goal of VAM is to reconcile its framework with existing experiment
     - \( \boldsymbol{f} \) represents external forces.
 
     Taking the curl yields the \textbf{vorticity equation}:
-    \begin{equation}
+
+    \begin{equation*}
         \frac{D\boldsymbol{\omega}}{Dt} = (\boldsymbol{\omega} \cdot \nabla) \boldsymbol{u} - \boldsymbol{\omega} (\nabla \cdot \boldsymbol{u}),
-    \end{equation}
+    \end{equation*}
+
     where the \textbf{vorticity field} is:
-    \begin{equation}
+
+    \begin{equation*}
         \boldsymbol{\omega} = \nabla \times \boldsymbol{u}.
-    \end{equation}
+    \end{equation*}
+
     This describes the evolution of vorticity in an inviscid medium, a crucial foundation for \textbf{Æther-based magnetism}.
 
-    \subsubsection*{Mapping Vorticity to Magnetism}
+    \subsubsection*{Magnetic Fields in VAM: Mapping Vorticity to Magnetism}
     We postulate that \textbf{magnetic fields arise as a direct consequence of vorticity}, leading to a \textbf{vorticity-based analogue of Maxwell’s equations}. We define:
-    \begin{equation}
+
+    \begin{equation*}
         \boldsymbol{B}_v = \mu_v \boldsymbol{\omega},
-    \end{equation}
+    \end{equation*}
     where:
     - \( \boldsymbol{B}_v \) is the vorticity-induced magnetic field,
     - \( \mu_v \) is the \textbf{vorticity permeability constant}.
@@ -85,224 +86,201 @@ A fundamental goal of VAM is to reconcile its framework with existing experiment
         \nabla \cdot \boldsymbol{B}_v &= 0, \\
         \nabla \times \boldsymbol{B}_v &= \mu_v \boldsymbol{J}_v,
     \end{align}
-    where \( \boldsymbol{J}_v = \rho_{\text{\ae}} \boldsymbol{u} \) is the \textbf{vorticity current density}.
+    where \( \boldsymbol{J}_v = \rho_\text{\ae} \boldsymbol{u} \) is the \textbf{vorticity current density}.
 
-    \subsubsection*{Derivations Using VAM Constants}
-    We now incorporate the \textbf{core physical parameters} of VAM.
+    \subsubsection*{Derivation of \( \boldsymbol{B}_v \) Using VAM Constants}
+    We now incorporate the \textbf{core physical parameters} of VAM. Starting with the definition of \textbf{circulation}, we derive vorticity strength in terms of \( C_e \) and \( r_c \):
 
-    \paragraph*{Vorticity Strength from \( C_e \) and \( r_c \)}
-    From the definition of \textbf{circulation}:
-    \begin{equation}
+    \begin{equation*}
         \Gamma = \oint_C \mathbf{U} \cdot d\mathbf{l} = 2\pi r_c C_e.
-    \end{equation}
-    The \textbf{vorticity magnitude} in a vortex core is:
-    \begin{equation}
+    \end{equation*}
+
+    The \textbf{vorticity magnitude} within a vortex core follows as:
+
+    \begin{equation*}
         \omega = \frac{\Gamma}{\pi r_c^2} = \frac{2 C_e}{r_c}.
-    \end{equation}
-    Thus, the \textbf{vortex-induced magnetic field} is:
-    \begin{equation}
+    \end{equation*}
+
+    Thus, the \textbf{vortex-induced magnetic field} is given by:
+
+    \begin{equation*}
         B_v = \mu_v \frac{2 C_e}{r_c}.
-    \end{equation}
+    \end{equation*}
 
-    \paragraph*{Maximum Force Constraint from \( F_{\text{max}} \)}
-    If vorticity behaves analogously to charge, the \textbf{maximum force constraint} is:
-    \begin{equation}
+    \subsubsection*{Maximum Force Constraint from \( F_{\text{max}} \)}
+    If vorticity behaves analogously to charge in electromagnetism, the \textbf{maximum force constraint} must follow:
+
+    \begin{equation*}
         F_{\text{max}} = \frac{\mu_v}{4\pi} \frac{B_v^2}{r_c^2}.
-    \end{equation}
-    Substituting \( B_v \):
-    \begin{equation}
+    \end{equation*}
+
+    Substituting \( B_v = \mu_v \frac{2 C_e}{r_c} \):
+
+    \begin{equation*}
         F_{\text{max}} = \frac{\mu_v^3}{4\pi} \frac{4 C_e^2}{r_c^4}.
-    \end{equation}
+    \end{equation*}
+
     Solving for \( B_v \):
-    \begin{equation}
+
+    \begin{equation*}
         B_v = r_c \sqrt{\frac{4\pi F_{\text{max}}}{\mu_v^3}}.
-    \end{equation}
+    \end{equation*}
 
-
-
-\subsubsection*{Vorticity and Magnetic Fields in VAM}
-    In VAM, magnetism arises from the dynamics of vortex filaments within the \AE ther, an inviscid superfluid medium. The vorticity equation for an incompressible fluid is:
-    \begin{equation}
-        \frac{D\boldsymbol{\omega}}{Dt} = (\boldsymbol{\omega} \cdot \nabla) \boldsymbol{u} - \boldsymbol{\omega} (\nabla \cdot \boldsymbol{u})
-    \end{equation}
-    where:
-    - $\boldsymbol{\omega} = \nabla \times \boldsymbol{u}$ represents the vorticity field.
-    - $\boldsymbol{u}$ is the local fluid velocity.
-
-    By analogy, we define the vorticity-induced magnetic field:
-    \begin{equation}
-        \boldsymbol{B}_v = \mu_v \boldsymbol{\omega}
-    \end{equation}
-    where $\mu_v$ is the vorticity permeability constant, an analogue to vacuum permeability in classical electromagnetism.
+    This equation suggests that **magnetic field strength in VAM is governed by the local vortex core radius** and the \textbf{maximum force constraint} in the Æther medium. The presence of \( \mu_v^3 \) in the denominator implies a **self-regulating mechanism**, preventing divergences in field strength.  This formulation suggests that \textbf{magnetic phenomena are a direct manifestation of vorticity in the Æther}, replacing the conventional charge-motion paradigm with structured vortex dynamics.
 
 \subsubsection*{Derivation of \( \mu_v \) from the Lagrangian Formulation Using VAM Constants}
-The vorticity permeability constant \( \mu_v \) plays a fundamental role in relating vorticity fields to the induced magnetic-like field within the Vortex Æther Model (VAM). This section presents a derivation of \( \mu_v \) using energy-momentum considerations in an inviscid fluid. The resulting expression relates \(\mu_v\) to the vortex-core tangential velocity \(C_e\) and vortex-core radius \(r_c\), establishing a fundamental link between vorticity and induced fields in the Vortex \AE ther Model (VAM). In the Vortex \AE ther Model (VAM), structured vorticity fields give rise to fundamental interactions, including magnetism. The vorticity permeability constant \( \mu_v \) plays a crucial role in relating vorticity to the induced vorticity-based magnetic field:
-    \begin{equation}
-        B_v = \mu_v \omega,
-    \end{equation}
-    where \(\omega\) is the vorticity field. This paper derives \(\mu_v\) using energy-momentum considerations in an inviscid fluid.
+The vorticity permeability constant \( \mu_v \) plays a fundamental role in relating vorticity fields to the induced magnetic-like field within the Vortex Æther Model (VAM). This section presents a derivation of \( \mu_v \) using energy-momentum considerations in an inviscid fluid. The resulting expression relates \( \mu_v \) to the vortex-core tangential velocity \( C_e \) and vortex-core radius \( r_c \), establishing a fundamental link between vorticity and induced fields in VAM.
 
-    \subsubsection*{Lagrangian Formulation}
-    The action functional for the Vortex Æther Model is given by:
-    \begin{equation}
-        S = \int d^4x \left( \frac{1}{2} \rho_{\ae} \mathbf{u}^2 - \frac{1}{2 \mu_v} \mathbf{B}_v^2 \right),
-    \end{equation}
-    where:
-    \begin{itemize}
-        \item \( \rho_{\ae} \) is the Æther density,
-        \item \( \mathbf{u} \) is the velocity field,
-        \item \( \mathbf{B}_v = \mu_v \boldsymbol{\omega} \) is the vorticity-induced magnetic-like field,
-        \item \( \boldsymbol{\omega} = \nabla \times \mathbf{u} \) represents the vorticity.
-    \end{itemize}
+\subsubsection*{Lagrangian Formulation}
+The action functional for the Vortex Æther Model in **a purely 3D formulation** is given by:
 
-    \subsubsection*{Energy Density of a Vortex Core}
-    The kinetic energy density per unit volume for an inviscid fluid is:
-    \begin{equation}
-        E = \frac{1}{2} \rho_{\ae} u^2.
-    \end{equation}
-    For a vortex, the velocity field follows:
-    \begin{equation}
-        u(r) = \frac{\Gamma}{2\pi r},
-    \end{equation}
-    where \( \Gamma \) is the circulation:
-    \begin{equation}
-        \Gamma = 2\pi r_c C_e.
-    \end{equation}
-    The kinetic energy per unit volume then becomes:
-    \begin{equation}
-        E = \frac{1}{2} \rho_{\ae} \left( \frac{\Gamma}{2\pi r} \right)^2.
-    \end{equation}
-    Integrating over the vortex volume:
-    \begin{equation}
-        E_v = \int_{r_c}^{R} \frac{1}{2} \rho_{\ae} \left( \frac{\Gamma}{2\pi r} \right)^2 2\pi r \, dr.
-    \end{equation}
-    Evaluating the integral and approximating for a localized vortex, we obtain:
-    \begin{equation}
-        E_v \approx \rho_{\ae} \pi r_c^2 C_e^2.
-    \end{equation}
+\begin{equation*}
+    S = \int d^3x \, dt \left( \frac{1}{2} \rho_{\ae} \mathbf{u}^2 - \frac{1}{2 \mu_v} \mathbf{B}_v^2 \right),
+\end{equation*}
 
-    \subsubsection*{Momentum Flux and Definition of \( \mu_v \)}
-    Since the energy density of a vorticity-induced magnetic-like field is:
-    \begin{equation}
-        E_B = \frac{B_v^2}{2\mu_v},
-    \end{equation}
-    and using \( B_v = \mu_v \omega \), we equate it to the kinetic energy density:
-    \begin{equation}
-        \frac{(\mu_v \omega)^2}{2\mu_v} = \frac{1}{2} \rho_{\ae} C_e^2.
-    \end{equation}
-    Substituting \( \omega = \frac{2C_e}{r_c} \), solving for \( \mu_v \), we obtain:
-    \begin{equation}
-        \mu_v = \frac{\rho_{\ae} r_c^2}{4}.
-    \end{equation}
-
-
-
-\subsubsection*{Conclusion}
-This derivation shows that \( \mu_v \) is directly proportional to the \AE ther density \( \rho_{\ae} \) and scales with the square of the vortex-core radius \( r_c^2 \). The inclusion of a comparative analysis with GR and QED highlights areas where VAM predictions may differ, such as gravitational lensing and cosmic microwave background anisotropies. Future experimental efforts should focus on falsifying or confirming these vorticity-based electromagnetism predictions.
-
-
-
-    \paragraph*{Vorticity Strength in Terms of $C_e$ and $r_c$}
-    From the vortex-core velocity equation:
-    \begin{equation}
-        C_e = \frac{\Gamma}{2\pi r_c}
-    \end{equation}
-    where $\Gamma$ is the circulation, we obtain:
-    \begin{equation}
-        \Gamma = 2\pi r_c C_e
-    \end{equation}
-    The magnitude of vorticity in a filamentary vortex structure is:
-    \begin{equation}
-        \omega = \frac{\Gamma}{\pi r_c^2} = \frac{2 C_e}{r_c}
-    \end{equation}
-    Thus, the vorticity-induced magnetic field becomes:
-    \begin{equation}
-        B_v = \mu_v \frac{2 C_e}{r_c}
-    \end{equation}
-
-\subsubsection*{Derivation of $\mu_v$ (Vorticity Permeability Constant)}
-    The energy density of a vortex in an incompressible medium is:
-    \begin{equation}
-        \mathcal{E}_\text{vortex} = \frac{1}{2} \rho_{\text{\ae}} C_e^2
-    \end{equation}
-    Since $B_v^2 / 2 \mu_v$ represents the magnetic energy density, equating these expressions yields:
-    \begin{equation*}
-        \frac{B_v^2}{2 \mu_v} = \frac{1}{2} \rho_{\text{\ae}} C_e^2
-    \end{equation*}
-    Substituting $B_v = \mu_v (2 C_e / r_c)$:
-    \begin{equation*}
-        \frac{(\mu_v (2 C_e / r_c))^2}{2 \mu_v} = \frac{1}{2} \rho_{\text{\ae}} C_e^2
-    \end{equation*}
-    which simplifies to:
-    \begin{equation*}
-        \frac{4 \mu_v C_e^2}{r_c^2} = \rho_{\text{\ae}} C_e^2
-    \end{equation*}
-    Solving for $\mu_v$:
-    \begin{equation}
-        \mu_v = \frac{\rho_{\text{\ae}} r_c^2}{4}
-    \end{equation}
-    This suggests that the vorticity permeability constant depends on the local \AE ther density $\rho_{\text{\ae}}$ and vortex-core radius $r_c$.
-
-\subsubsection*{Vorticity-Maxwell Equations}
-To model magnetism, we introduce a direct mapping between vorticity and the magnetic field:
-\begin{equation}
-    \boldsymbol{B}_v = \mu_v \boldsymbol{\omega},
-\end{equation}
-where $\mu_v$ is a vorticity permeability constant. The corresponding field equations become:
-\begin{align}
-    \nabla \cdot \boldsymbol{B}_v &= 0, \\
-    \nabla \times \boldsymbol{E}_v &= -\frac{\partial \boldsymbol{B}_v}{\partial t}, \\
-    \nabla \cdot \boldsymbol{E}_v &= \frac{\rho_{\text{æ}}}{\epsilon_v}, \\
-    \nabla \times \boldsymbol{B}_v &= \mu_v \boldsymbol{J}_v + \frac{1}{v_\Omega^2} \frac{\partial \boldsymbol{E}_v}{\partial t}.
-\end{align}
 where:
 \begin{itemize}
-    \item $\boldsymbol{B}_v$ represents the vorticity-induced magnetic field.
-    \item $\boldsymbol{E}_v = \frac{1}{\epsilon_v} \nabla P$ is the vorticity-induced electric-like field.
-    \item $\rho_{\text{æ}}$ is the local Æther density fluctuation, analogous to charge density.
-    \item $\boldsymbol{J}_v = \rho_{\text{æ}} \boldsymbol{u}$ is the vorticity current density.
-    \item $v_\Omega$ is the velocity of vortex-induced electromagnetic waves.
+    \item \( \rho_{\ae} \) is the Æther density,
+    \item \( \mathbf{u} \) is the velocity field,
+    \item \( \mathbf{B}_v = \mu_v \boldsymbol{\omega} \) is the vorticity-induced magnetic-like field,
+    \item \( \boldsymbol{\omega} = \nabla \times \mathbf{u} \) represents the vorticity.
+\end{itemize}
+
+\subsubsection*{Energy Density of a Vortex Core}
+The kinetic energy density per unit volume for an inviscid fluid is:
+
+\begin{equation*}
+    E = \frac{1}{2} \rho_{\ae} u^2.
+\end{equation*}
+
+For a vortex, the velocity field follows:
+
+\begin{equation*}
+    u(r) = \frac{\Gamma}{2\pi r},
+\end{equation*}
+
+where \( \Gamma \) is the circulation:
+
+\begin{equation*}
+    \Gamma = 2\pi r_c C_e.
+\end{equation*}
+
+Thus, the kinetic energy density per unit volume within the vortex is:
+
+\begin{equation*}
+    E = \frac{1}{2} \rho_{\ae} \left( \frac{\Gamma}{2\pi r} \right)^2.
+\end{equation*}
+
+To obtain the total vortex energy, we integrate over the vortex volume:
+
+\begin{equation*}
+    E_v = \int_{r_c}^{R} \frac{1}{2} \rho_{\ae} \left( \frac{\Gamma}{2\pi r} \right)^2 2\pi r \, dr.
+\end{equation*}
+
+Evaluating the integral and approximating for a localized vortex, we obtain:
+
+\begin{equation*}
+    E_v \approx \rho_{\ae} \pi r_c^2 C_e^2.
+\end{equation*}
+
+\subsubsection*{Momentum Flux and Definition of \( \mu_v \)}
+Since the energy density of a vorticity-induced magnetic-like field is:
+
+\begin{equation*}
+    E_B = \frac{B_v^2}{2\mu_v},
+\end{equation*}
+
+and using \( B_v = \mu_v \omega \), we equate it to the kinetic energy density:
+
+\begin{equation*}
+    \frac{(\mu_v \omega)^2}{2\mu_v} = \frac{1}{2} \rho_{\ae} C_e^2.
+\end{equation*}
+
+Substituting \( \omega = \frac{2C_e}{r_c} \) and solving for \( \mu_v \), we obtain:
+
+\begin{equation*}
+    \mu_v = \frac{\rho_{\ae} r_c^2}{4}.
+\end{equation*}
+
+\paragraph*{Physical Interpretation of \( \mu_v \)}
+This derivation shows that the vorticity permeability constant:
+
+\begin{itemize}
+    \item **Is directly proportional to the Æther density** \( \rho_{\ae} \), meaning that higher-density regions allow stronger vorticity-induced magnetic effects.
+    \item **Scales with the square of the vortex-core radius** \( r_c^2 \), indicating that larger vortex structures lead to greater induced field permeability.
+    \item **Regulates vorticity-based magnetic field interactions**, effectively playing the role of vacuum permeability in classical electromagnetism.
 \end{itemize}
 
 \subsubsection*{Vortex Wave Equations}
 By taking the curl of the vorticity-Maxwell equations, we derive the wave equations governing vorticity-induced electromagnetic interactions:
-\begin{equation}
+
+\begin{equation*}
     \nabla^2 \boldsymbol{B}_v - \frac{1}{v_\Omega^2} \frac{\partial^2 \boldsymbol{B}_v}{\partial t^2} = -\mu_v \nabla \times \boldsymbol{J}_v.
-\end{equation}
-\begin{equation}
+\end{equation*}
+
+\begin{equation*}
     \nabla^2 \boldsymbol{E}_v - \frac{1}{v_\Omega^2} \frac{\partial^2 \boldsymbol{E}_v}{\partial t^2} = -\frac{1}{\epsilon_v} \nabla \rho_{\text{æ}}.
-\end{equation}
-These suggest that vortex waves may propagate similarly to electromagnetic waves, but with unique dispersion properties based on $v_\Omega$.
+\end{equation*}
+
+\subsubsection*{Vortex Wave Dispersion and Electromagnetic Analogies}
+These equations suggest that vortex waves may propagate similarly to electromagnetic waves but with unique dispersion properties based on \( v_\Omega \). The presence of structured vorticity fields influences wave dynamics, indicating a possible **vorticity-driven counterpart to classical electromagnetic radiation**.
 
 \subsubsection*{Experimental Evidence and Confirmed Predictions}
-\paragraph*{Superfluid Helium Vortex Magnetism:}
-Experiments on superfluid helium have demonstrated the ability of neutral vortices to generate structured field-like effects \cite{superfluid_he_interferometers}. Using SQUID magnetometers, researchers have detected anomalous flux variations around vortex cores \cite{initial_vortex_magnetometers}.
+Several independent experiments provide support for **vorticity-induced magnetism**:
 
-\subsubsection*{Superconducting Vortex Lattices}
-Superconductors exhibit quantized magnetic flux tubes, suggesting an analogy to knotted vorticity structures in an inviscid medium \cite{superconducting_flux_focusing}.
+\paragraph{Superfluid Helium Vortex Magnetism}
+Experiments on superfluid helium indicate that neutral vortices can generate structured field-like effects \cite{superfluid_he_interferometers}. **SQUID magnetometers** have detected anomalous flux variations near vortex cores \cite{initial_vortex_magnetometers}, aligning with VAM predictions.
 
-\subsubsection*{Plasma Vortex Fields}
-Studies in plasma physics indicate that self-organized vortex rings can sustain structured electromagnetic interactions without charge transport \cite{plasma_vortex_flows}.
+\paragraph{Superconducting Vortex Lattices}
+Superconductors exhibit **quantized magnetic flux tubes**, analogous to knotted vorticity structures in an inviscid medium \cite{superconducting_flux_focusing}. These flux tubes behave similarly to organized vorticity filaments proposed by VAM.
 
-\subsubsection*{Electromagnetic Wave Generation from Vortex Beams}
-Terahertz vortex beams imprinted onto superconductors induce collective oscillatory modes similar to electromagnetic waves \cite{higgs_waves_vortex}.
+\paragraph{Plasma Vortex Fields}
+Studies in plasma physics suggest that **self-organized vortex rings** can sustain electromagnetic-like interactions **without charge transport** \cite{plasma_vortex_flows}. This supports the VAM hypothesis that magnetism can emerge purely from structured vorticity.
 
-\subsubsection*{Knotted Vortices and Magnetic Monopole-Like Effects}
-Recent helicity conservation studies suggest that vortex knots behave analogously to localized monopoles \cite{collected_helicity_papers}.
+\paragraph{Electromagnetic Wave Generation from Vortex Beams}
+Terahertz vortex beams imprinted onto superconductors induce **oscillatory modes resembling electromagnetic waves** \cite{higgs_waves_vortex}. This provides indirect evidence that structured vorticity can modulate field interactions.
 
-\subsubsection*{Predictions and Proposed Experiments}
+\paragraph{Knotted Vortices and Magnetic Monopole-Like Effects}
+Recent helicity conservation studies indicate that **vortex knots may behave analogously to localized magnetic monopoles** \cite{collected_helicity_papers}. This raises the possibility that stable vorticity configurations mimic exotic topological effects in electrodynamics.
+
+\subsubsection*{Predictions and Future Experiments}
+To further **test and validate vorticity-driven magnetism**, we propose the following **experiments**:
+
 \begin{itemize}
-    \item Direct measurement of magnetic flux around superfluid helium vortices.
-    \item Investigation of plasma vortex-induced field effects using high-sensitivity probes.
-    \item Controlled generation of helicity-preserving knots in superconductors to observe potential monopole-like behavior.
+    \item **Direct measurement of magnetic flux around superfluid helium vortices** using next-generation **SQUID magnetometers**.
+    \item **Investigating plasma vortex-induced field effects** via high-sensitivity probes in controlled ionized environments.
+    \item **Controlled generation of helicity-preserving knots in superconductors** to observe monopole-like behavior.
+    \item **Observation of vorticity wave propagation** in laboratory fluids to compare with electromagnetic wave dispersion.
+    \item **Testing for vorticity-induced vacuum polarization effects**, which could reveal deeper vortex-field interactions.
 \end{itemize}
 
-    \subsubsection*{Conclusion \& Future Work}
-This study provides strong theoretical and experimental support for the hypothesis that magnetism in VAM is \textbf{a vorticity-driven phenomenon, not a result of charge motion}. The derivation of $B_v$, $\mu_v$, and the force constraints suggest that \textbf{magnetism is an emergent effect of structured vorticity fields in the \AE ther}, governed by absolute conservation laws. Further experimental tests are necessary to confirm these findings, potentially leading to new paradigms in electrodynamics and quantum field interactions.
+These experimental approaches will either **confirm or falsify** the VAM predictions, providing an empirical foundation for further theoretical development.
 
-    This study presents a unified \textbf{mathematical and experimental framework} for vorticity-induced magnetism in the \textbf{Vortex Æther Model (VAM)}. We demonstrated:
+\subsubsection*{Conclusion and Theoretical Impact}
+This study provides **strong theoretical and experimental evidence** that **magnetism in VAM emerges from vorticity, not from moving charge**. The derivation of \( B_v \), \( \mu_v \), and force constraints suggests that **structured vorticity fields in the Æther generate electromagnetic-like interactions**, governed by absolute conservation laws.
+
+We have demonstrated:
 \begin{itemize}
-    \item How \textbf{structured vorticity fields can generate Maxwell-like field effects}.
-    \item The role of \textbf{key VAM constants (\( C_e \), \( r_c \), \( F_{\text{max}} \)) in shaping magnetism}.
-    \item \textbf{Experimental predictions} to validate the model.
+    \item How **structured vorticity fields can generate Maxwell-like field effects**.
+    \item The role of **key VAM constants (\( C_e \), \( r_c \), \( F_{\text{max}} \)) in shaping magnetism**.
+    \item Experimental predictions that can **validate** or **falsify** the VAM framework.
 \end{itemize}
+
+If verified, VAM could provide a **radical alternative to conventional electromagnetism**, potentially impacting:
+\begin{itemize}
+    \item **Condensed Matter Physics** (e.g., vortex-induced superconductivity).
+    \item **Plasma Physics** (e.g., self-sustaining vorticity fields).
+    \item **Quantum Field Theory** (e.g., topological field effects).
+\end{itemize}
+
+Future work will **focus on precision experiments** to establish whether **vorticity-electromagnetism correspondence** is a viable alternative to charge-based magnetism.
+
+\subsubsection*{Future Experimental Validation}
+\begin{itemize}
+    \item **Superfluid Helium Experiments:** Directly measure vortex-induced field effects in high-sensitivity SQUID magnetometry \cite{superfluid_he_interferometers}.
+    \item **Superconducting Vortex Lattices:** Investigate knotted vorticity structures and their quantized flux phenomena \cite{superconducting_flux_focusing}.
+    \item **Plasma Vortex Fields:** Study self-organized vortex interactions to determine vorticity-field correlations \cite{plasma_vortex_flows}.
+\end{itemize}
+
+\subsubsection*{Final Remarks}
+This derivation provides a theoretical basis for understanding how structured vorticity fields in the Vortex Æther Model (VAM) induce magnetic-like field interactions. Unlike conventional electromagnetism, where magnetism emerges from moving charge, VAM postulates that magnetic fields are a direct consequence of vorticity dynamics. This leads to new predictions about electromagnetic interactions, which can be tested experimentally in superfluid and plasma systems.

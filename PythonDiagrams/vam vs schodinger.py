@@ -2,6 +2,11 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+from scipy.special import genlaguerre
+from scipy.constants import physical_constants
 
 # Define grid for 3D plot
 theta = np.linspace(0, 2 * np.pi, 100)  # Angular component
@@ -186,8 +191,8 @@ ax2.set_ylabel(r'$y$ (normalized)')
 ax2.set_zlabel(r'Probability Amplitude')
 ax2.set_title(r'Schrödinger QM Interpretation of s Orbitals')
 
-# Show plot
-plt.show()
+# # Show plot
+# plt.show()
 
 # Recompute vortex swirl amplitudes without forced symmetry
 def vam_vortex_swirl(R, Rc, a0, n):
@@ -204,6 +209,13 @@ Z_vam_4s = vam_vortex_swirl(R, Rc, a0, 4)
 def schrodinger_wavefunction(R, a0, n):
     """Computes the natural Schrödinger wavefunction for the nth s-orbital."""
     return (1 - (n-1) * R / (n * a0)) * np.exp(-R / (n * a0)) * (R > Rc)
+
+def schrodinger_wavefunction(r, n):
+    """Computes the correct radial Schrödinger wavefunction for s-orbitals (ℓ=0)."""
+    prefactor = np.sqrt((2 / (n * a0))**3 * np.math.factorial(n - 1) / (2 * n * np.math.factorial(n)))
+    rho = 2 * r / (n * a0)  # Scaled radius
+    laguerre_poly = genlaguerre(n - 1, 2)(rho)  # Associated Laguerre polynomial
+    return prefactor * np.exp(-rho / 2) * laguerre_poly
 
 Z_sch_1s_raw = schrodinger_wavefunction(R, a0, 1)
 Z_sch_2s_raw = schrodinger_wavefunction(R, a0, 2)
@@ -230,7 +242,7 @@ ax1.plot(node_x_4s, node_y_4s, Z_vam_4s[0, -1] * np.ones_like(theta), color='pur
 ax1.set_xlabel(r'$x$ (normalized)')
 ax1.set_ylabel(r'$y$ (normalized)')
 ax1.set_zlabel(r'Vortex Swirl Amplitude')
-ax1.set_title(r'VAM Interpretation of s Orbitals (Corrected Natural Amplitudes)')
+ax1.set_title(r'VAM Interpretation of s Orbitals')
 
 # Right plot: Schrödinger QM Interpretation (Natural Amplitudes)
 ax2 = fig.add_subplot(122, projection='3d')
@@ -249,7 +261,7 @@ ax2.plot(node_x_4s, node_y_4s, Z_sch_4s_raw[0, -1] * np.ones_like(theta), color=
 ax2.set_xlabel(r'$x$ (normalized)')
 ax2.set_ylabel(r'$y$ (normalized)')
 ax2.set_zlabel(r'Probability Amplitude')
-ax2.set_title(r'Schrödinger QM Interpretation of s Orbitals (Natural)')
+ax2.set_title(r'Schrödinger QM Interpretation of s Orbitals')
 
 # Show plot
 plt.show()

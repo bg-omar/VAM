@@ -1,76 +1,92 @@
-    \subsection{Vorticity-Based Reformulation of General Relativity Laws in a 3D Absolute Time Framework}
-    We are going to reformulate the laws of General Relativity (GR) within a three-dimensional Euclidean space and absolute time framework, replacing spacetime curvature with vorticity fields as the fundamental mediators of interactions between vortex knots.
 
-    \subsubsection*{Field Equations in the Vorticity Framework: Vorticity-Potential Equation}
-    The gravitational potential $\Phi_{\text{vortex}}$ is replaced with a vorticity potential:
-    \begin{equation}
-        \nabla^2 \Phi_{\text{vortex}} = -4 \pi G_{\text{fluid}} \rho_{\text{energy}},
-    \end{equation}
-    where:
-    \begin{itemize}
-        \item $G_{\text{fluid}} = \frac{C_e c^3 l_p^2}{2 F_{\text{max}} R_c^2}$,
-        \item $\rho_{\text{energy}}$ is the energy density of the vortices.
-    \end{itemize}
+\subsection{Vorticity-Based Reformulation of General Relativity Laws in a 3D Absolute Time Framework}
 
-    \paragraph*{Vorticity Conservation:}
-    Since vorticity is solenoidal, it satisfies the conservation equation:
-    \begin{equation}
-        \nabla \cdot \vec{\omega} = 0.
-    \end{equation}
+\subsubsection*{Vorticity as the Fundamental Gravitational Interaction}
 
-    \paragraph*{Momentum and Energy Conservation:}
-    The stress-energy tensor in the vorticity field is given by:
-    \begin{equation}
-        R_{\mu \nu} - \frac{1}{2} R g_{\mu \nu} = \frac{8 \pi}{c^4} T_{\mu \nu}^{\text{vorticity}},
-    \end{equation}
-    where:
-    \begin{equation}
-        T_{\mu \nu}^{\text{vorticity}} = \frac{1}{\mu_0} \left[ \omega_\mu \omega_\nu - \frac{1}{2} \eta_{\mu \nu} (\vec{\omega} \cdot \vec{\omega}) \right].
-    \end{equation}
+General Relativity (GR) describes gravity as a result of \textbf{spacetime curvature}, governed by Einstein’s field equations:
 
-    \paragraph*{Vorticity Interaction Force:}
-    The interaction force between two vortex knots is derived as:
-    \begin{equation}
-        \vec{F}_{\text{interaction}} = -\nabla \Phi_{\text{vortex}}.
-    \end{equation}
+\begin{equation*}
+    G_{\mu\nu} = \frac{8\pi G}{c^4} T_{\mu\nu}.
+\end{equation*}
 
-    \subsection*{Time Flow and Effective Distance}
+However, in the Vortex Æther Model (VAM), \textbf{gravity is not caused by curvature} but by \textbf{vorticity-induced pressure gradients in an inviscid Æther}. Instead of using a \textbf{4D metric tensor}, we define gravity as a 3D vorticity field \( \omega \), where mass acts as a localized vortex concentration.
 
-    \subsubsection*{Effective Distance from Vorticity Potential}
-    \begin{equation}
-        d_{\text{vortex}} = \int_{r_1}^{r_2} \frac{1}{C_e} \frac{d\vec{r}}{\Phi_{\text{vortex}}}.
-    \end{equation}
+\subsubsection*{Replacing Einstein’s Equations with a 3D Vorticity Field Equation}
 
-    \subsubsection*{Time Flow Modification by Vorticity}
-    \begin{equation}
-        t_{\text{vortex}} = \int_0^r \frac{C_e}{F_{\text{max}}} \vec{\omega} \cdot d\vec{r}.
-    \end{equation}
+We replace the Einstein curvature equations with a \textbf{3D vorticity-Poisson equation}, where the gravitational potential \( \Phi_v \) is related to vorticity magnitude:
 
-    \subsubsection*{Vorticity Tensor Representation}
-    The vorticity tensor $\Omega_{\mu \nu}$ is defined as:
-    \begin{equation}
-        \Omega_{\mu \nu} = \partial_\mu \omega_\nu - \partial_\nu \omega_\mu.
-    \end{equation}
-    The interaction of vortex knots is then given by:
-    \begin{equation}
-        F_{\text{interaction}} = \int \Omega_{\mu \nu}^{(x)} \Omega^{\mu \nu}_{(y)} dV.
-    \end{equation}
+\begin{equation*}
+    \nabla^2 \Phi_v = - \rho_{\text{Æ}} |\omega|^2.
+\end{equation*}
 
-    \subsubsection*{Mapping of GR Concepts to Vorticity Framework}
+Here:
+- \( \Phi_v \) is the \textbf{vorticity-induced gravitational potential}.
+- \( \rho_{\text{Æ}} \) is the \textbf{local Æther density}.
+- \( |\omega|^2 = (\nabla \times v)^2 \) is the \textbf{vorticity magnitude}.
 
-    \begin{center}
-        \begin{tabular}{|c|c|}
-            \hline
-            \textbf{General Relativity} & \textbf{Vorticity Interpretation} \\
-            \hline
-            Spacetime curvature & Vorticity gradients and potentials \\
-            Metric tensor $g_{\mu\nu}$ & Vorticity tensor $\Omega_{\mu\nu}$ \\
-            Geodesics & Vorticity flux paths \\
-            Energy-momentum tensor & Stress-energy tensor of the vorticity field \\
-            Einstein's equations & Poisson-like equation for vorticity potential $\Phi_{\text{vortex}}$ \\
-            \hline
-        \end{tabular}
-    \end{center}
+Instead of \textbf{mass-energy tensor components}, gravity is determined by the \textbf{local vorticity density}.
 
-    \subsubsection*{Conclusion}
-    This framework retains GR-like laws while adhering to absolute time and Euclidean space, replacing spacetime curvature with vorticity interactions. The model aligns with vortex dynamics in an inviscid Æther, ensuring consistency with conservation laws and structured vorticity flow.
+---
+
+\subsubsection*{Motion in VAM: Replacing Geodesics with Vortex Streamlines}
+
+In GR, test particles follow \textbf{geodesics in curved spacetime}. In VAM, particles follow \textbf{vortex streamlines}, governed by the \textbf{vorticity transport equation}:
+
+\begin{equation*}
+    \frac{D\omega}{Dt} = (\omega \cdot \nabla) v - (\nabla \cdot v) \omega.
+\end{equation*}
+
+This replaces \textbf{spacetime curvature} with \textbf{fluid-dynamic vorticity transport} \cite{lamb_hydrodynamics, feynman_superfluid}.
+
+---
+
+\subsubsection*{Frame-Dragging as a 3D Vortex Effect}
+
+In General Relativity, frame-dragging is described using the \textbf{Kerr metric}, which predicts that spinning masses drag spacetime along with them. In VAM, this effect is caused by \textbf{vortex interactions in the Æther}.
+
+We replace the Kerr metric with the \textbf{vorticity-induced rotational velocity field}:
+
+\begin{equation*}
+    \Omega_{\text{vortex}} = \frac{\Gamma}{2\pi r^2},
+\end{equation*}
+
+where:
+- \( \Gamma = \oint v \cdot dl \) is the \textbf{circulation of the vortex}.
+- \( r \) is the \textbf{radial distance from the vortex core}.
+
+This ensures that frame-dragging emerges \textbf{naturally} from vorticity rather than requiring \textbf{spacetime warping}.
+
+---
+
+\subsubsection*{Replacing Gravitational Time Dilation with Vorticity Effects}
+
+In GR, time dilation is caused by \textbf{spacetime curvature}, leading to:
+
+\begin{equation*}
+    dt_{\text{GR}} = dt \sqrt{1 - \frac{2GM}{rc^2}}.
+\end{equation*}
+
+In VAM, time dilation is caused by \textbf{vorticity-induced energy gradients}, leading to:
+
+\begin{equation*}
+    dt_{\text{VAM}} = \frac{dt}{\sqrt{1 - \frac{C_e^2}{c^2} e^{-r/r_c} - \frac{\Omega^2}{c^2} e^{-r/r_c}}},
+\end{equation*}
+
+where:
+- \( C_e \) is the \textbf{vortex core tangential velocity}.
+- \( \Omega \) is the \textbf{local vorticity angular velocity}.
+
+This formula eliminates the need for \textbf{mass-based time dilation} and instead relies purely on \textbf{fluid dynamic principles}.
+
+---
+
+\subsubsection*{Summary: A 3D Vorticity-Based Alternative to General Relativity}
+
+The Vortex Æther Model replaces the \textbf{4D spacetime formalism of General Relativity} with a \textbf{3D vorticity-driven description}:
+
+\begin{itemize}
+    \item \textbf{Gravity} is not caused by \textbf{curved spacetime} but by \textbf{vorticity-induced pressure gradients}.
+    \item \textbf{Geodesic motion} is replaced by \textbf{vortex streamlines} in an inviscid Æther.
+    \item \textbf{Frame-dragging} is explained through \textbf{circulation velocity in vorticity fields}, rather than through Kerr spacetime.
+    \item \textbf{Time dilation} arises from \textbf{energy gradients in vortex structures}, not from mass-induced curvature.
+\end{itemize}
