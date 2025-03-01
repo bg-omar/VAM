@@ -1,0 +1,25 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="000_Æther" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+    <texify>
+      <compiler>PDFLATEX</compiler>
+      <compiler-path />
+      <sumatra-path />
+      <pdf-viewer>NONE</pdf-viewer>
+      <viewer-command />
+      <compiler-arguments />
+      <envs />
+      <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
+      <before-run-command />
+      <main-file>$PROJECT_DIR$/src/000_Æther.tex</main-file>
+      <output-path>$PROJECT_DIR$/out</output-path>
+      <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
+      <compile-twice>$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$</compile-twice>
+      <output-format>PDF</output-format>
+      <latex-distribution>PROJECT_SDK</latex-distribution>
+      <has-been-run>$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$</has-been-run>
+      <bib-run-config>[]</bib-run-config>
+      <makeindex-run-config>[]</makeindex-run-config>
+    </texify>
+    <method v="2" />
+  </configuration>
+</component>
