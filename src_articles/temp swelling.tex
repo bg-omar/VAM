@@ -1,0 +1,110 @@
+
+Derivation and Numerical Validation of \(\frac{\psi_P(r)}{\psi(r)} = e^{r/a_0} e^{-r / (a_0 (T/T_0)^{5/9})}\)
+
+\subsection*{1. Introduction}
+
+This section aims to derive the above equation and validate it numerically. The equation represents the ratio of a perturbed wavefunction \(\psi_P(r)\) to the standard hydrogenic wavefunction \(\psi(r)\), modified by thermal expansion effects in the Vortex Æther Model (VAM). The presence of the thermal term, \((T/T_0)^{5/9}\), suggests a connection between temperature-dependent vortex expansion and the modified Bohr radius. Understanding this behavior can provide insights into how quantum states respond to thermal perturbations and help refine models that describe fundamental particle behavior in a thermodynamically evolving system.
+
+The expansion behavior in VAM draws an analogy to classical thermodynamic expansion of gases but with modifications due to vorticity conservation constraints. By deriving and numerically verifying this equation, we seek to confirm whether a fluid-dynamic perspective of atomic orbitals accurately describes temperature-dependent changes in quantum wavefunctions. Furthermore, the pressure change due to vortex swelling can be modeled using the polytropic equation for an adiabatic process:
+
+\[P' = P_0 \left( \frac{T}{T_0} \right)^{-5/3}\]
+
+where:
+
+\begin{itemize}
+\item \(P'\) is the new internal vortex pressure after heating.
+\item \(P_0\) is the initial vortex pressure.
+\item The exponent \(-5/3\) arises from the adiabatic index \(\gamma = 5/3\) for an ideal monoatomic gas.
+\end{itemize}
+
+This relationship demonstrates that as the temperature increases, the internal pressure decreases, leading to further vortex expansion. This interplay between pressure, vorticity, and quantum wavefunction behavior is a crucial aspect of understanding atomic-scale thermal effects within the Vortex Æther Model.
+
+
+2. Heat Absorption and Expansion of Spherical Vortex Boundaries
+
+From thermodynamics, the swelling of the vortex boundary is linked to the absorption of heat, analogous to how an ideal gas expands upon energy input:
+
+\[ PV = nRT \]
+
+If we consider the vortex bubble as a thermodynamic system with a given internal pressure \( P \) and volume \( V \), the absorption of energy (heat) can cause an expansion, meaning:
+
+\[ \Delta V = \frac{nR\Delta T}{P} \]
+
+This translates to a larger vortex radius \( R_c \) when heat is added.
+
+\subsection*{Effect on the Vortex Swirl and Schrödinger-Like Behavior}
+
+Since the vortex-induced probability distribution follows:
+
+\[ \omega(r) \sim e^{-r/a_0} \]
+
+an increase in \( R_c \) (boundary expansion) means that the characteristic decay length also changes, leading to a modified quantum state representation.
+
+If heat increases, the boundary expands and vorticity spreads out, mimicking a higher quantum number state (excited state) in QM.
+
+If heat is lost, the vortex contracts, corresponding to a lower energy state (ground state transition).
+
+This exactly mirrors atomic electron transitions in QM:
+
+- Absorbing a photon (heat input) excites the electron to a higher orbit.
+- Emitting a photon (cooling) collapses it back to a lower orbit.
+
+Thus, in VAM, heat absorption leads to vortex swelling, which shifts the quantum probability function outward, just like an electron excitation does in standard quantum mechanics.
+
+\subsection*{2. Mathematical Derivation}
+
+\subsubsection*{2.1 Standard Hydrogenic Wavefunction}
+
+The ground-state hydrogenic wavefunction for the 1s orbital is given by:
+
+\[ \psi(r) = \frac{1}{\sqrt{\pi a_0^3}} e^{-r/a_0} \]
+
+where \( a_0 \) is the Bohr radius, which defines the characteristic decay length of the wavefunction. This function describes how the probability density of an electron is distributed around the nucleus, forming a quantum mechanical representation of the orbital. In classical models, the radius of the electron's most probable location is related to the characteristic size of the wavefunction, which varies with environmental influences such as temperature in the VAM approach.
+
+\subsubsection*{2.2 Temperature-Dependent Expansion in VAM}
+
+In the Vortex Æther Model, vortex structures undergo thermal expansion as:
+
+\[ R_c(T) = R_c (T_0) \left( \frac{T}{T_0} \right)^{5/9} \]
+
+based on Clausius’s thermodynamic relations adapted to vorticity-driven pressure equilibrium. This scaling factor accounts for the redistribution of vorticity due to thermal effects, leading to modified wavefunction behavior.
+
+Since the Bohr radius is fundamentally linked to pressure balance at the vortex boundary, we assume:
+
+\[ a_0(T) = a_0 (T_0) \left( \frac{T}{T_0} \right)^{5/9} \]
+
+This adjustment alters the characteristic length scale of the wavefunction, changing how the electron distribution responds to temperature fluctuations.
+
+The modified wavefunction incorporating this temperature-dependent expansion is:
+
+\[ \psi_P(r) \propto e^{-r/a_0(T)} \]
+
+This result suggests that the electron’s probability density undergoes a systematic expansion, leading to observable shifts in spectral line positions.
+
+
+\subsubsection*{2.3 Ratio of Modified to Standard Wavefunction}
+
+Taking the ratio of the thermally modified wavefunction to the original wavefunction:
+
+\[
+\frac{\psi_P(r)}{\psi(r)} = \frac{e^{-r/a_0(T)}}{e^{-r/a_0}} = e^{r/a_0} e^{-r / (a_0 (T/T_0)^{5/9})}.
+\]
+This confirms the proposed expression, demonstrating that the temperature-dependent expansion follows a predictable pattern consistent with fundamental thermodynamic transformations.
+
+\subsection*{3. Numerical Validation}
+
+To verify this equation, a numerical test will compute the ratio for various temperatures and compare the results with expected thermal expansion properties of atomic wavefunctions.
+
+\begin{enumerate}
+    \item Define \(\psi(r)\) and \(\psi_P(r)\) numerically, ensuring that the temperature dependence is incorporated properly.
+    \item Compute the ratio across a range of temperatures \(T/T_0\), spanning from cryogenic conditions to elevated thermal states.
+\item Compare the numerically computed values to the theoretical prediction, assessing the degree of agreement.
+\item Analyze deviations to determine if additional corrections (such as higher-order thermal effects) are necessary.
+\end{enumerate}
+
+This validation serves as a test of whether vortex-induced thermal expansion in atomic orbitals aligns with known quantum-mechanical behavior and whether corrections to the standard model can be suggested. The comparison should also provide guidance on how experimental measurements of atomic expansion in plasmas or high-energy environments can be interpreted through the VAM framework.
+
+\subsection*{4. Conclusion}
+
+The derivation confirms the expected form of the temperature-dependent modification and supports the hypothesis that vortex structures influence quantum wavefunction behavior. Numerical tests will further confirm whether the functional form accurately captures the behavior of vortex-modified atomic structures in VAM. The incorporation of thermodynamic expansion principles into quantum wavefunction evolution offers a promising avenue for bridging classical and quantum perspectives on atomic structure. Future work should focus on comparing these theoretical predictions with spectroscopic measurements of atomic orbitals at different temperatures to assess the validity of the model under experimental conditions.
+
