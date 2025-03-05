@@ -54,6 +54,7 @@ constants_dict = {
     "rho_ae": get_dynamic_rho_ae("midpoint"),
     "F_max": PhysicalConstant(r"F_{\text{max}}", 29.053507, "N", "Maximum force", "exact"),
     "F_Coulomb": PhysicalConstant(r"F_{\text{Coulomb}}", 29.053507, "N", "Maximum Coulomb Force", "exact"),
+    "F_GRmax": PhysicalConstant(r"F_{\text{GRmax}}", 3.0256389108455157e+43, "N", "Maximum Universal Force", "exact"),
     "c": PhysicalConstant(r"c", 299792458, "m s^-1", "Speed of light in vacuum", "exact"),
     "G": PhysicalConstant(r"G", 6.67430e-11, "m^3 kg^-1 s^-2", "Newtonian constant of gravitation", "2.2e-5"),
     "h": PhysicalConstant(r"h", 6.62607015e-34, "J Hz^-1", "Planck constant", "exact"),
@@ -97,6 +98,7 @@ constants_dict = {
 C_e = constants_dict["C_e"].value
 rho_ae = constants_dict["rho_ae"].value
 F_max = constants_dict["F_max"].value
+F_GRmax = constants_dict["F_GRmax"].value
 F_Coulomb = constants_dict["F_Coulomb"].value
 c = constants_dict["c"].value
 G = constants_dict["G"].value
@@ -164,7 +166,7 @@ c = sc.c  # Speed of light (m/s)
 import numpy as np
 
 # Physical Constants
-m_e = 9.10938356e-31  # Electron mass (kg)
+
 pi = np.pi            # Pi constant
 
 r_t = 2.8179403227e-15   # Classical electron radius (m) or use Compton wavelength
@@ -173,7 +175,7 @@ r_t = 2.8179403227e-15   # Classical electron radius (m) or use Compton waveleng
 omega = 1e23  # Typical vorticity (1/s), refine if needed
 
 # Calculate Æther Density
-rho_aether = (m_e * c**2) / (pi**2 * A_0 * R_e**2 * omega**2)
+rho_aether = (M_e * c**2) / (pi**2 * A_0 * R_e**2 * omega**2)
 
 # Print result
 print(f"Aether Density (ρ_æ): {rho_aether:.3e} kg/m³")
@@ -188,12 +190,14 @@ omega_C_p = c / lambda_C_p  # Proton Compton angular frequency (1/s)
 
 
 # Calculate Æther Density using toroidal formula
-rho_aether = (m_e * c**2) / (pi**2 * A_0 * R_e**2 * omega_C_p**2)
-rho_aether = (m_e * c**2) / (pi**2 * R_c * R_c**2 * (c/lambda_c)**2)
+rho_aether = (M_e * c**2) / (pi**2 * A_0 * R_e**2 * omega_C_p**2)
+
+rho_aether2 = (M_e * c**2) / (pi**2 * R_c * R_c**2 * (c/lambda_c)**2)
 # Print results
 print(f"Proton Compton Wavelength: {lambda_C_p:.3e} m")
 print(f"Proton Compton Angular Frequency (ω_C_p): {omega_C_p:.3e} s⁻¹")
 print(f"Aether Density (ρ_æ): {rho_aether:.3e} kg/m³")
+print(f"Aether Density2 (ρ_æ): {rho_aether2:.3e} kg/m³")
 
 
 # Vortex Æther Model constants (approximate values, to be refined)
@@ -237,3 +241,14 @@ print(rho_AE)
 
 k = (hbar * c) / (4 * const.pi**3  * r_c**2 * C_e * c**3)
 print("k:", k)
+
+print("F_grmax:", F_GRmax)
+
+f_e = C_e/ (2 * pi * R_c)
+
+print("fe: ", f_e)
+
+f_e = M_e * c**2 / h
+
+
+print("fe: ", f_e)

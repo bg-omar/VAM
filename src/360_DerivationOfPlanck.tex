@@ -1,0 +1,73 @@
+\subsection{Derivation of Planck's Law from Entropy Principles}
+
+Planck’s law describes the spectral distribution of radiation emitted by a blackbody at thermal equilibrium. Its derivation from entropy considerations provides profound insight into the quantum nature of radiation and matter.
+
+\subsubsection*{Energy Quantization and Statistical Mechanics}
+
+Planck considered a cavity containing electromagnetic radiation, modeling the radiation field as a collection of harmonic oscillators. He postulated that the energy levels of an oscillator of frequency $\nu$ are quantized:
+
+\begin{equation}
+    E_n = n h \nu, \quad n = 0,1,2, \dots
+\end{equation}
+
+where $h$ is Planck’s constant and $\nu$ is the frequency of the oscillator.
+
+The probability of an oscillator being in state $n$ follows the Boltzmann distribution:
+
+\begin{equation}
+    p_n = \frac{e^{-E_n / k_B T}}{Z},
+\end{equation}
+
+where $Z$ is the partition function:
+
+\begin{equation}
+    Z = \sum_{n=0}^{\infty} e^{-n h \nu / k_B T} = \frac{1}{1 - e^{-h \nu / k_B T}}.
+\end{equation}
+
+The average energy of an oscillator is given by:
+
+\begin{equation}
+    \langle E \rangle = \frac{\sum_{n=0}^{\infty} n h \nu e^{-n h \nu / k_B T}}{\sum_{n=0}^{\infty} e^{-n h \nu / k_B T}},
+\end{equation}
+
+which evaluates to:
+
+\begin{equation}
+    \langle E \rangle = \frac{h \nu}{e^{h \nu / k_B T} - 1}.
+\end{equation}
+
+\subsubsection*{Spectral Energy Density and Entropy}
+
+Planck related the average energy of oscillators to the spectral energy density $u(\nu, T)$ of radiation at frequency $\nu$:
+
+\begin{equation}
+    u(\nu, T) = \frac{8 \pi \nu^2}{c^3} \langle E \rangle.
+\end{equation}
+
+Substituting $\langle E \rangle$, we obtain the Planck radiation law:
+
+\begin{equation}
+    u(\nu, T) = \frac{8 \pi h \nu^3}{c^3} \frac{1}{e^{h \nu / k_B T} - 1}.
+\end{equation}
+
+\subsubsection*{Entropy Considerations}
+
+Entropy plays a crucial role in Planck’s derivation. By considering the entropy $S$ of a system in terms of the probability distribution of states, using Boltzmann’s entropy formula:
+
+\begin{equation}
+    S = - k_B \sum_i p_i \ln p_i,
+\end{equation}
+
+Planck ensured that the energy distribution satisfied thermodynamic constraints. The quantization of energy was introduced to avoid the ultraviolet catastrophe predicted by classical physics.
+
+\subsubsection*{Implications for Quantum Theory}
+
+Planck’s derivation established the foundation for quantum mechanics, leading to the realization that:
+\begin{enumerate}
+    \item Energy exchanges occur in discrete quanta.
+    \item Entropy governs the equilibrium properties of quantum systems.
+    \item The relationship between thermodynamics and quantum mechanics is deeply rooted in statistical distributions.
+\end{enumerate}
+
+This work paved the way for further quantum developments, including Einstein’s explanation of the photoelectric effect and Bohr’s atomic model.
+
