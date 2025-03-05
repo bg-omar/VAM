@@ -4,75 +4,75 @@ To formalize the quantization of vorticity in the Vortex \AE ther Model (VAM), w
 
 \subsubsection*{Defining the Vorticity Operator in VAM}
 Vorticity $\boldsymbol{\omega}$ in an incompressible, inviscid fluid follows:
-\begin{equation}
+\begin{equation*}
     \boldsymbol{\omega} = \nabla \times \mathbf{v}
-\end{equation}
+\end{equation*}
 where $\mathbf{v}$ is the velocity field of the \AE ther.
 
 From quantum mechanics, we recall that angular momentum operators satisfy the Lie algebra $su(2)$:
-\begin{equation}
+\begin{equation*}
 [J_+, J_-] = 2J_z, \quad [J_z, J_{\pm}] = \pm J_{\pm}
-\end{equation}
+\end{equation*}
 
 In the quantized vortex model, we postulate that vorticity components follow a similar algebraic structure:
-\begin{equation}
+\begin{equation*}
 [\omega_+, \omega_-] = 2\omega_z, \quad [\omega_z, \omega_{\pm}] = \pm \omega_{\pm}
-\end{equation}
+\end{equation*}
 This implies a discrete vorticity spectrum, analogous to quantized angular momentum in quantum mechanics.
 
 However, instead of the usual Lie algebra $su(2)$, we use the quantum deformation $SL(2)_q$, leading to:
-\begin{equation}
+\begin{equation*}
 [\omega_+, \omega_-] = \frac{q^{2\omega_z} - q^{-2\omega_z}}{q - q^{-1}}
-\end{equation}
+\end{equation*}
 where $q$ is the deformation parameter controlling vorticity quantization.
 
 \subsubsection*{Quantum Group Representation and Discrete Vorticity States}
 The irreducible representations of $SL(2)_q$ define discrete states for vorticity $\omega$:
-\begin{equation}
+\begin{equation*}
     \omega_z |n\rangle = n |n\rangle, \quad n \in \{0, 1, 2, \dots\}
-\end{equation}
+\end{equation*}
 where $|n\rangle$ represents a quantized vortex state. The ladder operators modify vorticity states:
-\begin{equation}
+\begin{equation*}
     \omega_+ |n\rangle = \sqrt{[n+1]_q} |n+1\rangle, \quad \omega_- |n\rangle = \sqrt{[n]_q} |n-1\rangle
-\end{equation}
+\end{equation*}
 where
-\begin{equation}
+\begin{equation*}
 [n]_q = \frac{q^n - q^{-n}}{q - q^{-1}}
-\end{equation}
+\end{equation*}
 ensures quantized vortex strength.
 
 Thus, vorticity in VAM follows a discrete spectrum rather than being continuous, aligning with the quantized nature of superfluid vortices.
 
 \subsubsection*{Energy Spectrum of a Knotted Vortex}
 The energy density of a vortex filament in VAM is given by:
-\begin{equation}
+\begin{equation*}
     E = \frac{1}{2} \int_V |\boldsymbol{\omega}|^2 dV
-\end{equation}
+\end{equation*}
 Using the quantum algebra formulation, we expand $\boldsymbol{\omega}$ in terms of its quantized basis:
-\begin{equation}
+\begin{equation*}
     E_n = \frac{1}{2} \langle n | \omega^2 | n \rangle = \frac{1}{2} [n]_q^2
-\end{equation}
+\end{equation*}
 which suggests that energy levels depend on the quantum deformation parameter.
 
 For small $q \approx 1$, the standard quantum number emerges:
-\begin{equation}
+\begin{equation*}
     E_n \approx \frac{1}{2} n(n+1)
-\end{equation}
+\end{equation*}
 which mirrors the energy spectrum of angular momentum states in quantum mechanics.
 
 \subsubsection*{Linking Vortex Quantization to Fine-Structure Constant}
 From VAM's fundamental relations, the fine-structure constant $\alpha$ emerges as:
-\begin{equation}
+\begin{equation*}
     \alpha = \frac{e^2}{4\pi \varepsilon_0 \hbar c} = \frac{\omega_c R_e}{c}
-\end{equation}
+\end{equation*}
 where:
 - $R_e$ is the classical electron radius,
 - $\omega_c$ is a characteristic vortex frequency.
 
 If we substitute $\omega_c$ with the quantized vorticity spectrum $[n]_q$, we obtain:
-\begin{equation}
+\begin{equation*}
     \alpha = \frac{[n]_q R_e}{c}
-\end{equation}
+\end{equation*}
 which implies that the fine-structure constant is linked to vortex quantization in the \AE ther.
 
 \subsubsection*{Conclusion}

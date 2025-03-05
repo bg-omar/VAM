@@ -1,26 +1,16 @@
-\documentclass{article}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{graphicx}
-\usepackage{hyperref}
 
-\begin{document}
+  \section{Derivation and Numerical Validation of $\frac{\psi_P(r)}{\psi(r)} = e^{r/a_0} e^{-r / (a_0 (T/T_0)^{5/9})}$}
 
-  \title{Derivation and Numerical Validation of $\frac{\psi_P(r)}{\psi(r)} = e^{r/a_0} e^{-r / (a_0 (T/T_0)^{5/9})}$}
-  \author{}
-  \date{}
-  \maketitle
-
-  \section{Introduction}
+  \paragraph*{Introduction}
   This section aims to derive the above equation and validate it numerically. The equation represents the ratio of a perturbed wavefunction $\psi_P(r)$ to the standard hydrogenic wavefunction $\psi(r)$, modified by thermal expansion effects in the Vortex \AE ther Model (VAM). The presence of the thermal term, $(T/T_0)^{5/9}$, suggests a connection between temperature-dependent vortex expansion and the modified Bohr radius. Understanding this behavior can provide insights into how quantum states respond to thermal perturbations and help refine models that describe fundamental particle behavior in a thermodynamically evolving system.
 
   The expansion behavior in VAM draws an analogy to classical thermodynamic expansion of gases but with modifications due to vorticity conservation constraints. By deriving and numerically verifying this equation, we seek to confirm whether a fluid-dynamic perspective of atomic orbitals accurately describes temperature-dependent changes in quantum wavefunctions.
 
   \section{Pressure Change Due to Vortex Swelling}
   Using the polytropic equation for an adiabatic process:
-  \begin{equation}
+  \begin{equation*}
     P' = P_0 \left( \frac{T}{T_0} \right)^{-5/3},
-  \end{equation}
+  \end{equation*}
   where:
   \begin{itemize}
     \item $P'$ is the new internal vortex pressure after heating.
@@ -31,50 +21,50 @@
 
   \section{Heat Absorption and Expansion of Spherical Vortex Boundaries}
   From thermodynamics, the swelling of the vortex boundary is linked to the absorption of heat, analogous to how an ideal gas expands upon energy input:
-  \begin{equation}
+  \begin{equation*}
     PV = nRT.
-  \end{equation}
+  \end{equation*}
   If we consider the vortex bubble as a thermodynamic system with a given internal pressure $P$ and volume $V$, the absorption of energy (heat) can cause an expansion, meaning:
-  \begin{equation}
+  \begin{equation*}
     \Delta V = \frac{nR \Delta T}{P}.
-  \end{equation}
+  \end{equation*}
   This translates to a larger vortex radius $R_c$ when heat is added.
 
   \section{Effect on the Vortex Swirl and Schr\"{o}dinger-Like Behavior}
   Since the vortex-induced probability distribution follows:
-  \begin{equation}
+  \begin{equation*}
     \omega(r) \sim e^{-r/a_0},
-  \end{equation}
+  \end{equation*}
   an increase in $R_c$ (boundary expansion) means that the characteristic decay length also changes, leading to a modified quantum state representation.
 
   \section{Mathematical Derivation}
   \subsection{Standard Hydrogenic Wavefunction}
   The ground-state hydrogenic wavefunction for the 1s orbital is given by:
-  \begin{equation}
+  \begin{equation*}
     \psi(r) = \frac{1}{\sqrt{\pi a_0^3}} e^{-r/a_0},
-  \end{equation}
+  \end{equation*}
   where $a_0$ is the Bohr radius, which defines the characteristic decay length of the wavefunction.
 
   \subsection{Temperature-Dependent Expansion in VAM}
   In the Vortex \AE ther Model, vortex structures undergo thermal expansion as:
-  \begin{equation}
+  \begin{equation*}
     R_c(T) = R_c (T_0) \left( \frac{T}{T_0} \right)^{5/9},
-  \end{equation}
+  \end{equation*}
   based on Clausius’s thermodynamic relations adapted to vorticity-driven pressure equilibrium. Since the Bohr radius is fundamentally linked to pressure balance at the vortex boundary, we assume:
-  \begin{equation}
+  \begin{equation*}
     a_0(T) = a_0 (T_0) \left( \frac{T}{T_0} \right)^{5/9}.
-  \end{equation}
+  \end{equation*}
 
   The modified wavefunction incorporating this temperature-dependent expansion is:
-  \begin{equation}
+  \begin{equation*}
     \psi_P(r) \propto e^{-r/a_0(T)}.
-  \end{equation}
+  \end{equation*}
 
   \subsection{Ratio of Modified to Standard Wavefunction}
   Taking the ratio of the thermally modified wavefunction to the original wavefunction:
-  \begin{equation}
+  \begin{equation*}
     \frac{\psi_P(r)}{\psi(r)} = \frac{e^{-r/a_0(T)}}{e^{-r/a_0}} = e^{r/a_0} e^{-r / (a_0 (T/T_0)^{5/9})}.
-  \end{equation}
+  \end{equation*}
   This confirms the proposed expression.
 
   \section{Numerical Validation}
@@ -88,4 +78,3 @@
   \section{Conclusion}
   The derivation confirms the expected form of the temperature-dependent modification and supports the hypothesis that vortex structures influence quantum wavefunction behavior. Numerical tests will further confirm whether the functional form accurately captures the behavior of vortex-modified atomic structures in VAM.
 
-\end{document}

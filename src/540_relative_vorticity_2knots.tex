@@ -6,22 +6,22 @@
     \textbf{Rigid Rotor Dynamics:} Each vortex knot is conceptualized as a rigidly rotating entity, maintaining a stable angular velocity throughout its core. These cores are presumed to exhibit minimal deformation, ensuring that their rotational characteristics remain consistent under idealized conditions.
 
     \textbf{Vorticity as a Vector Field:} The vorticity vector for each knot is defined as:
-    \begin{equation}
+    \begin{equation*}
         \vec{\omega} = \omega \hat{z},
-    \end{equation}
+    \end{equation*}
     where the Z-axis serves as the axis of rotation. This orientation aligns with the inherent symmetry of the system and simplifies analytical treatment.
 
     \textbf{Kinematic Parameters:}
     \begin{itemize}
         \item \textbf{Spatial positions:} The vortex knots occupy positions $z_1$ and $z_2$ along the Z-axis, maintaining a clear separation that facilitates distinct dynamic interactions.
         \item \textbf{Temporal velocities:} Their respective velocities along the Z-axis are represented as:
-        \begin{equation}
+        \begin{equation*}
             v_1 = \frac{dz_1}{dt}, \quad v_2 = \frac{dz_2}{dt}.
-        \end{equation}
+        \end{equation*}
         \item \textbf{Relative velocity:} Defined as:
-        \begin{equation}
+        \begin{equation*}
             v_{\text{rel}} = v_2 - v_1 = \frac{d(z_2 - z_1)}{dt},
-        \end{equation}
+        \end{equation*}
         this parameter quantifies the differential motion between the two knots.
     \end{itemize}
 
@@ -31,36 +31,36 @@
 
     \subsection*{Derivation of Relative Vorticity}
     \textbf{Differential Vorticity:} The relative vorticity between the two vortex knots is expressed as:
-    \begin{equation}
+    \begin{equation*}
         \Delta \omega = \omega_2 - \omega_1.
-    \end{equation}
+    \end{equation*}
 
     \textbf{Relationship Between Angular Velocity and Vorticity:} The angular velocity $\theta$ governs the local vorticity for each knot:
-    \begin{equation}
+    \begin{equation*}
         \omega_1 = \frac{d\theta_1}{dt}, \quad \omega_2 = \frac{d\theta_2}{dt}.
-    \end{equation}
+    \end{equation*}
     By extension:
-    \begin{equation}
+    \begin{equation*}
         \Delta \omega = \frac{d\theta_2}{dt} - \frac{d\theta_1}{dt} = \frac{d(\theta_2 - \theta_1)}{dt}.
-    \end{equation}
+    \end{equation*}
 
     \textbf{Relative Angular Velocity:} The angular displacement difference evolves over time as:
-    \begin{equation}
+    \begin{equation*}
         \Delta \omega = \omega_{\text{rel}} = \frac{d(\theta_2 - \theta_1)}{dt}.
-    \end{equation}
+    \end{equation*}
     This term directly quantifies the rotational disparity between the two knots.
 
     \subsection*{Coupling Relative Vorticity to Translational Dynamics}
     \textbf{Translational-Vorticity Mapping:} Angular dynamics propagate through the vortex tube, linking rotational motion to linear velocities via:
-    \begin{equation}
+    \begin{equation*}
         \omega_{\text{rel}} = C \frac{v_{\text{rel}}}{|z_2 - z_1|},
-    \end{equation}
+    \end{equation*}
     where $C$ represents a dimensionless proportionality constant encapsulating the tube’s properties and the Æther’s physical characteristics.
 
     \textbf{Incorporation of Relative Velocity:} Substituting $v_{\text{rel}} = v_2 - v_1$, the relative vorticity becomes:
-    \begin{equation}
+    \begin{equation*}
         \Delta \omega = C \frac{v_2 - v_1}{|z_2 - z_1|}.
-    \end{equation}
+    \end{equation*}
     This formula succinctly connects the linear and angular dynamics of the system.
 
     \subsection*{Extended Physical Interpretation}

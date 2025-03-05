@@ -12,9 +12,9 @@ Sprites are a form of transient luminous events (TLEs) in the upper atmosphere, 
 Sprites occur when the electric field exceeds the breakdown threshold $E_{\text{break}}$ in the mesosphere (approximately 50–90 km altitude). This threshold is determined by the interaction between the ambient electric field and atmospheric ionization processes:
 
 
-\begin{equation}
+\begin{equation*}
 E_{\text{break}} = \frac{N \cdot e \cdot v_d}{\mu_e},
-\end{equation}
+\end{equation*}
 where:
 \begin{itemize}
 \item $N$ is the air density, which decreases exponentially with altitude,
@@ -31,9 +31,9 @@ As $N$ decreases with height, $E_{\text{break}}$ also varies, making the breakdo
 Sprites are triggered by a sudden change in the electrostatic field following a strong cloud-to-ground lightning strike. This results in a charge moment change $M$, defined as:
 
 
-\begin{equation}
+\begin{equation*}
 M = Q \cdot h,
-\end{equation}
+\end{equation*}
 where:
 \begin{itemize}
 \item $Q$ is the total charge involved in the lightning strike,
@@ -48,9 +48,9 @@ A larger charge moment change creates a stronger electric field in the upper atm
 The electric field $E$ generated in the mesosphere by the charge moment change is given by:
 
 
-\begin{equation}
+\begin{equation*}
 E(r, z) = \frac{\rho Q h}{2 \pi \varepsilon_0 (r^2 + z^2)^{3/2}},
-\end{equation}
+\end{equation*}
 where:
 \begin{itemize}
 \item $r$ is the horizontal radial distance from the lightning strike,
@@ -66,9 +66,9 @@ This quasi-electrostatic field persists for milliseconds after a lightning disch
 For a sprite to occur, the induced electric field $E$ in the mesosphere must exceed $E_{\text{break}}$. Combining the expressions results in the inequality:
 
 
-\begin{equation}
+\begin{equation*}
 \frac{\rho Q h}{2 \pi \varepsilon_0 (r^2 + z^2)^{3/2}} > E_{\text{break}}.
-\end{equation}
+\end{equation*}
 
 
 This equation determines whether the conditions for sprite formation are met at a given location and altitude.
@@ -78,15 +78,15 @@ This equation determines whether the conditions for sprite formation are met at 
 The air density $N$ and electron mobility $\mu_e$ vary significantly with altitude, typically following exponential profiles:
 
 
-\begin{equation}
+\begin{equation*}
 N(z) = N_0 e^{-z/H}, \quad \mu_e(z) = \mu_0 e^{z/H},
-\end{equation}
+\end{equation*}
 where $H$ is the atmospheric scale height, typically around 7 km in the mesosphere. Substituting these expressions into the breakdown threshold equation:
 
 
-\begin{equation}
+\begin{equation*}
 E_{\text{break}}(z) = \frac{N_0 e^{-z/H} \cdot e \cdot v_d}{\mu_0 e^{z/H}} = \frac{N_0 e \cdot v_d}{\mu_0} e^{-2z/H}.
-\end{equation}
+\end{equation*}
 
 
 This exponential scaling implies that breakdown conditions become more favorable at lower altitudes, where air density is higher.
@@ -96,9 +96,9 @@ This exponential scaling implies that breakdown conditions become more favorable
 The altitude at which a sprite forms, $z_{\text{sprite}}$, is determined by equating the quasi-electrostatic field to the breakdown threshold:
 
 
-\begin{equation}
+\begin{equation*}
 \frac{\rho Q h}{2 \pi \varepsilon_0 (r^2 + z_{\text{sprite}}^2)^{3/2}} = \frac{N_0 e \cdot v_d}{\mu_0} e^{-2z_{\text{sprite}}/H}.
-\end{equation}
+\end{equation*}
 
 
 Solving for $z_{\text{sprite}}$ generally requires numerical methods due to the nonlinear nature of the equation. However, it provides a quantitative framework for estimating the altitude at which sprites occur based on known atmospheric conditions and lightning characteristics.
@@ -108,17 +108,17 @@ Solving for $z_{\text{sprite}}$ generally requires numerical methods due to the 
 Summarizing, the fundamental governing equation for sprite formation is:
 
 
-\begin{equation}
+\begin{equation*}
 E(r, z) = \frac{\rho Q h}{2 \pi \varepsilon_0 (r^2 + z^2)^{3/2}},
-\end{equation}
+\end{equation*}
 
 
 and sprites form if:
 
 
-\begin{equation}
+\begin{equation*}
 E(r, z) > E_{\text{break}}(z).
-\end{equation}
+\end{equation*}
 
 
 Since $E_{\text{break}}(z)$ decreases with altitude due to the exponential scaling of air density and electron mobility, sprites are more likely to form at higher altitudes where the breakdown condition is met with a lower electric field. However, the altitude also depends on the strength of the lightning discharge and the spatial distribution of the resulting electrostatic field.

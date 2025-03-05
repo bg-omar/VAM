@@ -1,0 +1,64 @@
+\section*{Derivation from Vorticity in Superfluid Helium Analogs}
+
+Superfluid helium serves as an exemplary macroscopic realization of quantum vorticity, making it a highly suitable framework for investigating fundamental vortex dynamics in quantum fluids. This derivation is motivated by the fundamental role of circulation in both classical and quantum hydrodynamics, where the quantization of circulation in superfluid systems provides a direct parallel to fundamental physical constraints governing microscopic vortex behavior.
+
+
+In fluid dynamics, circulation, denoted as $\Gamma$, characterizes the net rotational motion enclosed by a closed contour. Mathematically, it is given by:
+
+\begin{equation*}
+\Gamma = \oint \mathbf{v} \cdot d\mathbf{l},
+\label{eq:circulation_definition}
+\end{equation*}
+
+where \mathbf{v} is the velocity field of the fluid and d\mathbf{l} represents an infinitesimal line element along the closed path. In classical fluid mechanics, circulation emerges as a macroscopic quantity describing vortex-induced motion. However, in superfluid systems, the constraint of quantum mechanical coherence mandates that circulation assumes discrete quantized values, reflecting the inherent wave-particle duality of the quantum fluid. This behavior is directly linked to the topological stability of vortices in inviscid flows, ensuring that vorticity remains a conserved quantity across macroscopic scales. For superfluid helium, the quantization of circulation is expressed as:
+
+\begin{equation*}
+\Gamma = \frac{h}{M_e},
+\label{eq:circulation}
+\end{equation*}
+
+where $h$ denotes Planck’s constant, and  $ M_e $ is the electron mass. The physical implication of this relation is that vorticity in quantum fluids cannot assume arbitrary values but instead follows strict quantization rules imposed by the underlying quantum state. This fundamental constraint leads to the emergence of well-defined vortex states, each characterized by discrete angular momentum values. Such quantized vortex states have been observed experimentally in Bose-Einstein condensates and superfluid helium, reinforcing their validity as a cornerstone of quantum hydrodynamics.
+
+
+\section{Relationship Between The Coulomb Barier $R_c$ and The Classical Electron Radius $R_e$ }
+The relationship $R_c = \frac{R_e}{2}$ naturally arises from the geometric structure of a vortex ring within the context of superfluid vortices and toroidal topology. A torus is characterized by two fundamental radii:
+
+\begin{itemize}
+\item Major radius ($R$): The distance from the center of the torus to the center of the vortex core cross-section.
+\item Minor radius ($r$): The radius of the vortex core cross-section.
+\end{itemize}
+
+For an electron modeled as a vortex ring, we conceptualize it as a toroidal structure where the radii ($R$) and ($r$) both are $R_c$ which corresponds to a horn torus, a torus with no hole. Since a horn torus a vortex tube folded into itself, the characteristic vortex core radius $R_c$ is naturally interpreted as half the toroidal structure’s radius:
+
+\begin{equation*}
+R_c = \frac{R_e}{2}.
+\end{equation*}
+
+This relation ensures the proper balance between rotational energy along the ring and localized vorticity within the core's cross-sectional flow. To determine the characteristic tangential velocity associated with a quantum vortex at a defined radius  $ R_c $, we invoke Kelvin’s circulation theorem \cite{donnelly_quantized_1991,tilley_superfluidity_1990}, which states:
+
+\begin{equation*}
+    C_e = \frac{\Gamma}{2\pi R_c}.\label{eq:tangential_velocity}
+\end{equation*}
+
+Substituting Eq.\eqref{eq:circulation} into Eq.\eqref{eq:tangential_velocity} yields:
+
+\begin{equation*}
+    C_e = \frac{h}{2\pi M_e R_c}.
+    \label{eq:Ce_vorticity}
+\end{equation*}
+
+Using established physical constants:
+\begin{align*}
+h &= 6.62607015 \times 10^{-34} \text{ J s}, \
+M_e &= 9.1093837015 \times 10^{-31} \text{ kg}, \
+R_c &= 1.40897017 \times 10^{-15} \text{ m},
+\end{align*}
+we obtain the numerical result:
+
+\begin{equation*}
+C_e \approx 1.0938456 \times 10^6 \text{ m/s}.
+\end{equation*}
+
+This derivation rigorously establishes  $ C_e $ a as a fundamental velocity scale arising from quantum vortex dynamics, demonstrating its direct dependence on intrinsic quantum mechanical parameters. The correspondence between superfluid circulation quantization and fundamental electron dynamics reinforces the hypothesis that microscopic vortex structures underpin key physical phenomena in the Vortex \AE ther Model (VAM). This approach not only validates the role of circulation quantization in governing vortex-induced motion but also provides a theoretical basis for linking quantum fluid behavior to emergent macroscopic phenomena.
+
+
