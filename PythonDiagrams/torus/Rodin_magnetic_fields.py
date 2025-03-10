@@ -2,6 +2,8 @@
 
 
 
+import matplotlib
+matplotlib.use('TkAgg')  # Ensure it uses Tkinter backend
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -54,19 +56,19 @@ def biot_savart(xc, yc, zc, coil_x, coil_y, coil_z):
     return Bx, By, Bz
 
 # Create a 3D Grid to compute B-field at sample points
-grid_size = 10
-x_range = np.linspace(-2, 2, grid_size)
-y_range = np.linspace(-2, 2, grid_size)
-z_range = np.linspace(-2, 2, grid_size)
+
+x_range = np.linspace(-2, 2, 9)
+y_range = np.linspace(-2, 2, 9)
+z_range = np.linspace(-2, 2, 5)
 
 X, Y, Z = np.meshgrid(x_range, y_range, z_range)
 Bx_total, By_total, Bz_total = np.zeros_like(X), np.zeros_like(Y), np.zeros_like(Z)
 
 # Compute Magnetic Field Contributions from each phase
 for coil in [coil_1, coil_2, coil_3]:
-    for i in range(grid_size):
-        for j in range(grid_size):
-            for k in range(grid_size):
+    for i in range(9):
+        for j in range(9):
+            for k in range(5):
                 Bx, By, Bz = biot_savart(X[i, j, k], Y[i, j, k], Z[i, j, k], *coil)
                 Bx_total[i, j, k] += Bx
                 By_total[i, j, k] += By

@@ -2,8 +2,10 @@
 
 
 import numpy as np
+import matplotlib
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
+matplotlib.use('TkAgg')  # Ensure it uses Tkinter backend
 import dpnp as dnp  # Intel oneAPI SYCL acceleration
 import dpctl.tensor as dpt  # oneMKL acceleration
 from scipy.ndimage import gaussian_filter
