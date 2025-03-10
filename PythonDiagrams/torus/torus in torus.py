@@ -1,4 +1,7 @@
 # Reimporting necessary libraries after state reset
+import os
+from datetime import datetime
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -139,6 +142,18 @@ ax.set_zlim(-20, 20)
 
 # Adjust the view angle
 ax.view_init(30, 30)
+
+# ✅ Get the script filename dynamically
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+# ✅ **Create a Folder for Saving Frames**
+save_folder = "export"
+if not os.path.exists(save_folder):
+    os.makedirs(save_folder, exist_ok=True)  # Ensure folder exists
+
+# Generate a unique filename using timestamp
+timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+filename = f"{script_name}_{timestamp}.png"
+
 
 plt.show()
 
