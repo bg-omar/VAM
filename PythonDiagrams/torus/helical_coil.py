@@ -12,14 +12,31 @@ radius = .25   # Radius of the coil
 height = .25   # Height of the coil
 points_per_turn = 50  # Resolution of the coil
 
-# Generate helical coil
-t = np.linspace(0, 2 * np.pi * turns, turns * points_per_turn)
-x_coil = radius * np.cos(t)
-y_coil = radius * np.sin(t)
-z_coil = np.linspace(-height / 2, height / 2, turns * points_per_turn)
+# # Generate helical coil
+# t = np.linspace(0, 2 * np.pi * turns, turns * points_per_turn)
+# x_coil = radius * np.cos(t)
+# y_coil = radius * np.sin(t)
+# z_coil = np.linspace(-height / 2, height / 2, turns * points_per_turn)
+
+
+# Coil parameters
+R, r = 1.0, 1.0  # Major and minor radius of the torus
+num_turns = 12   # Total turns per phase
+num_points = 500  # Resolution of the coil
+
+
+theta = np.linspace(0, num_turns * 2 * np.pi, num_points)
+phi = (2 + 2/5) * theta  # Rodin winding ratio with phase shift
+
+x_coil = (R + r * np.cos(phi)) * np.cos(theta)
+y_coil = (R + r * np.cos(phi)) * np.sin(theta)
+z_coil = r * np.sin(phi)
+
+
+
 
 # Define a larger 3D grid for better visualization
-grid_size = 15
+grid_size = 9
 x_range = np.linspace(-4, 4, grid_size)
 y_range = np.linspace(-4, 4, grid_size)
 z_range = np.linspace(-4, 4, grid_size)
@@ -79,13 +96,14 @@ dBz_dt = np.gradient(B_time_series[:, 2], axis=0)
 
 # Compute Electric Field (E = -dB/dt)
 # Use a perpendicular rotation: E = ẑ × (-dB/dt)
-Ex = -dBy_dt  # Rotate component
-Ey = dBx_dt   # Rotate component
+Ex = -dBy_dt  # Rotated component from -∂Bz/∂t
+Ey = dBx_dt   # Rotated component from ∂Bz/∂t
 Ez = np.zeros_like(Ey)  # No electric field along z-axis (it forms loops)
 
 
+
 # Create 3D figure
-fig = plt.figure(figsize=(16, 16))
+fig = plt.figure(figsize=(12, 12))
 ax = fig.add_subplot(111, projection='3d')
 
 # Plot the coil
@@ -97,7 +115,7 @@ streamline_vectors_B = np.array([Bx.flatten(), By.flatten(), Bz.flatten()]).T
 streamline_segments_B = np.array([streamline_points_B, streamline_points_B + streamline_vectors_B * 0.3]).swapaxes(0, 1)
 
 # Add magnetic field streamlines
-magnetic_field_lines = Line3DCollection(streamline_segments_B, colors='red', linewidths=0.5, alpha=0.6)
+magnetic_field_lines = Line3DCollection(streamline_segments_B, colors='red', linewidths=1, alpha=0.6)
 ax.add_collection3d(magnetic_field_lines)
 
 
@@ -106,8 +124,12 @@ streamline_points_E = np.array([X.flatten(), Y.flatten(), Z.flatten()]).T
 streamline_vectors_E = np.array([Ex[0].flatten(), Ey[0].flatten(), Ez[0].flatten()]).T
 streamline_segments_E = np.array([streamline_points_E, streamline_points_E + streamline_vectors_E * 0.3]).swapaxes(0, 1)
 
+streamline_vectors_B *= 5  # Scale up magnetic field visualization
+streamline_vectors_E *= 10  # Scale up electric field visualization
+
+
 # Add electric field streamlines
-electric_field_lines = Line3DCollection(streamline_segments_E, colors='blue', linewidths=0.5, alpha=0.6)
+electric_field_lines = Line3DCollection(streamline_segments_E, colors='blue', linewidths=1, alpha=0.6)
 ax.add_collection3d(electric_field_lines)
 
 # Animation function
@@ -118,17 +140,60 @@ def update(frame):
     # Oscillating current I(t) = cos(ωt)
     I_t = np.cos(omega * frame / time_steps * 2 * np.pi)
 
-    # Update magnetic field streamlines
-    streamline_vectors_B = np.array([Bx.flatten() * I_t, By.flatten() * I_t, Bz.flatten() * I_t]).T
-    streamline_segments_B = np.array([streamline_points_B, streamline_points_B + streamline_vectors_B * 0.3]).swapaxes(0, 1)
+    # Update Magnetic Field (Oscillating)
+    streamline_vectors_B = np.array([
+        Bx.flatten() * I_t,
+        By.flatten() * I_t,
+        Bz.flatten() * I_t
+    ]).T
+    streamline_segments_B = np.array([
+        streamline_points_B,
+        streamline_points_B + streamline_vectors_B * 0.3
+    ]).swapaxes(0, 1)
     magnetic_field_lines.set_segments(streamline_segments_B)
 
-    # Update electric field streamlines
-    streamline_vectors_E = np.array([Ex[idx].flatten(), Ey[idx].flatten(), Ez[idx].flatten()]).T
-    streamline_segments_E = np.array([streamline_points_E, streamline_points_E + streamline_vectors_E * 0.3]).swapaxes(0, 1)
+    # Compute dB/dt dynamically
+    dBx_dt = -omega * np.sin(omega * frame / time_steps * 2 * np.pi) * Bx
+    dBy_dt = -omega * np.sin(omega * frame / time_steps * 2 * np.pi) * By
+    dBz_dt = -omega * np.sin(omega * frame / time_steps * 2 * np.pi) * Bz
+
+    # Compute spatial derivatives of B (∇ × B)
+    dBz_dy = np.gradient(Bz, axis=1)  # ∂Bz/∂y
+    dBy_dz = np.gradient(By, axis=2)  # ∂By/∂z
+    dBx_dz = np.gradient(Bx, axis=2)  # ∂Bx/∂z
+    dBz_dx = np.gradient(Bz, axis=0)  # ∂Bz/∂x
+    dBy_dx = np.gradient(By, axis=0)  # ∂By/∂x
+    dBx_dy = np.gradient(Bx, axis=1)  # ∂Bx/∂y
+
+    # Compute curl of dB/dt (∇ × dB/dt)
+    dBz_dt_dy = np.gradient(dBz_dt, axis=1)
+    dBy_dt_dz = np.gradient(dBy_dt, axis=2)
+    dBx_dt_dz = np.gradient(dBx_dt, axis=2)
+    dBz_dt_dx = np.gradient(dBz_dt, axis=0)
+    dBy_dt_dx = np.gradient(dBy_dt, axis=0)
+    dBx_dt_dy = np.gradient(dBx_dt, axis=1)
+
+    # Compute Electric Field using Faraday’s Law: E = -∇ × B - ∇ × dB/dt
+    Ex = -((dBz_dy - dBy_dz) + (dBz_dt_dy - dBy_dt_dz))
+    Ey = -((dBx_dz - dBz_dx) + (dBx_dt_dz - dBz_dt_dx))
+    Ez = -((dBy_dx - dBx_dy) + (dBy_dt_dx - dBx_dt_dy))
+
+
+    # Scale Electric Field for better visualization
+    scaling_factor = 0.2  # Adjust as needed
+    streamline_vectors_E = np.array([
+        Ex.flatten() * scaling_factor,
+        Ey.flatten() * scaling_factor,
+        Ez.flatten() * scaling_factor
+    ]).T
+    streamline_segments_E = np.array([
+        streamline_points_E,
+        streamline_points_E + streamline_vectors_E * 0.3
+    ]).swapaxes(0, 1)
     electric_field_lines.set_segments(streamline_segments_E)
 
     return magnetic_field_lines, electric_field_lines
+
 
 
 
