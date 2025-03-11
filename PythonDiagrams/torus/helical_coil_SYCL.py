@@ -17,10 +17,10 @@ queue = dpctl.SyclQueue(device)
 print(f"Using Device: {device}")
 
 # Define coil parameters
-turns = 20   # Number of turns in the coil
+turns = 12   # Number of turns in the coil
 radius = .25   # Radius of the coil
 height = .25   # Height of the coil
-points_per_turn = 50  # Resolution of the coil
+points_per_turn = 12  # Resolution of the coil
 
 # Use dpnp (SYCL-accelerated NumPy) for calculations
 t = dnp.linspace(0, 2 * dnp.pi * turns, turns * points_per_turn, dtype=dnp.float32)

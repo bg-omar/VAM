@@ -1,11 +1,13 @@
+import matplotlib
+matplotlib.use('TkAgg')  # Ensure it uses Tkinter backend
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
 num_turns=10
 num_points=1000
-theta = np.linspace(0, num_turns * 2 * np.pi, num_points)
-phi = (2 + 2/5) * theta  # Adjusted winding ratio for Rodin pattern
+
+
 # Function to generate Rodin coil windings
 def generate_rodin_coil(R, r, num_turns=12, num_points=1000):
     """
@@ -43,6 +45,8 @@ def generate_rodin_3phase(R, r, num_turns=10, num_points=1000):
 
     # Apply 120-degree phase shifts
     theta_shift = 2 * np.pi / 3
+    theta = np.linspace(0, num_turns * 2 * np.pi, num_points)
+    phi = (2 + 2 / 5) * theta  # Adjusted winding ratio for Rodin pattern
     x2 = (R + r * np.cos(phi + theta_shift)) * np.cos(theta + theta_shift)
     y2 = (R + r * np.cos(phi + theta_shift)) * np.sin(theta + theta_shift)
     z2 = r * np.sin(phi + theta_shift)

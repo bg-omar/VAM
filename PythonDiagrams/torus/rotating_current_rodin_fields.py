@@ -47,9 +47,9 @@ Jx_3, Jy_3, Jz_3 = compute_current_vectors(*coil_3)
 
 # Create a 3D Grid (🔥 20x20x20 grid size!)
 
-x_range = np.linspace(-4, 4, 18)
-y_range = np.linspace(-4, 4, 18)
-z_range = np.linspace(-4, 4, 9)
+x_range = np.linspace(-4, 4, 9)
+y_range = np.linspace(-4, 4, 9)
+z_range = np.linspace(-4, 4, 5)
 
 X, Y, Z = np.meshgrid(x_range, y_range, z_range)
 
