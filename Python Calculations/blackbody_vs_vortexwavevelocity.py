@@ -2,18 +2,9 @@
 import math
 import pandas as pd
 import ace_tools_open as tools
+from constants import *
 
-# Constants for Blackbody Radiation Energy Density
-k_B = 1.380649e-23  # Boltzmann constant (J/K)
-h = 6.62607015e-34  # Planck constant (J·s)
-c = 299792458  # Speed of light (m/s)
-pi = math.pi
-r_c = 1.40897017e-15
 
-# Vortex model constants
-F_max = 29.053507  # Maximum force (N)
-C_e = 1.09384563e6  # Vorticity constant (m/s)
-lambda_c = 2.42631023867e-12  # Electron Compton wavelength (m)
 
 # Assuming a typical photon frequency (visible light) around 5e14 Hz
 nu = 5e14  # Frequency in Hz (s⁻¹)

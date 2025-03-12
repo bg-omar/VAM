@@ -52,6 +52,7 @@ constants_dict = {
     "rho_ae": get_dynamic_rho_ae("midpoint"),
     "F_max": PhysicalConstant(r"F_{\text{max}}", 29.053507, "N", "Maximum force", "exact"),
     "F_Coulomb": PhysicalConstant(r"F_{\text{Coulomb}}", 29.053507, "N", "Maximum Coulomb Force", "exact"),
+    "F_GRmax": PhysicalConstant(r"F_{\text{GRmax}}", 3.0256389108455157e+43, "N", "Maximum Universal Force", "exact"),
     "c": PhysicalConstant(r"c", 299792458, "m s^-1", "Speed of light in vacuum", "exact"),
     "G": PhysicalConstant(r"G", 6.67430e-11, "m^3 kg^-1 s^-2", "Newtonian constant of gravitation", "2.2e-5"),
     "h": PhysicalConstant(r"h", 6.62607015e-34, "J Hz^-1", "Planck constant", "exact"),
@@ -77,6 +78,8 @@ constants_dict = {
     "k_B": PhysicalConstant(r"k_B", 1.380649e-23, "J K^-1", "Boltzmann constant", "exact"),
     "R": PhysicalConstant(r"R", 8.314462618, "J mol^-1 K^-1", "Gas constant", "exact"),
     "alpha-1": PhysicalConstant(r"\frac{1}{\alpha}", 137.035999084, "", "Fine structure constant reciprocal", "1.6e-10"),
+    "f_c": PhysicalConstant(r"f_c", 1.235589965e20, "m", "Compton frequency of the electron", "1.0e-10"),
+    "omega_c": PhysicalConstant(r"\Omega_c", 7.763440711e20, "m", "Compton angular frequency of the electron", "1.0e-10"),
     "lambda_c": PhysicalConstant(r"\lambda_c", 2.42631023867e-12, "m", "Compton wavelength of the electron", "1.0e-10"),
     "Phi_0": PhysicalConstant(r"\Phi_0", 2.067833848e-15, "Wb", "Magnetic flux quantum", "exact"),
     "varphi": PhysicalConstant(r"\varphi", 1.618033988, "", "Golden ratio (Fibonacci constant)", "7.3e-22"),
@@ -88,40 +91,42 @@ constants_dict = {
     "ER_": PhysicalConstant(r"ER_\infty", 2.1798723611035e-18, "J", "Rydberg energy (in joules)", "1.1e-12"),
     "fR_": PhysicalConstant(r"fR_\infty", 3.2898419602508e15, "Hz", "Rydberg frequency", "1.1e-12"),
     "sigma": PhysicalConstant(r"\sigma", 5.670374419e-8, "W m^-2 K^-4", "Stefan-Boltzmann constant", "exact"),
-    "b": PhysicalConstant(r"b", 2.897771955e-3, "m K", "Wien displacement constant", "exact")
+    "b": PhysicalConstant(r"b", 2.897771955e-3, "m K", "Wien displacement constant", "exact"),
+    "k_e": PhysicalConstant(r"k_e", 8.9875517862e9, "N m^2 C^-2", "Coulomb constant", "exact")
 }
-
-
-C_e = constants_dict["C_e"].value
+C_e = constants_dict["C_e"].value # Vortex-Core Tangential Velocity (m/s)
+R_c = constants_dict["R_c"].value
+r_c = constants_dict["r_c"].value  # Coulomb barrier (m)
 rho_ae = constants_dict["rho_ae"].value
 F_max = constants_dict["F_max"].value
-F_Coulomb = constants_dict["F_Coulomb"].value
+varepsilon_0 = constants_dict["varepsilon_0"].value
+F_GRmax = constants_dict["F_GRmax"].value
+F_Cmax = constants_dict["F_Coulomb"].value  # Maximum force (N)
 c = constants_dict["c"].value
 G = constants_dict["G"].value
 h = constants_dict["h"].value
-alpha = constants_dict["alpha"].value
-R_c = constants_dict["R_c"].value
-r_c = constants_dict["r_c"].value
+alpha = constants_dict["alpha"].value   # Fine-structure constant
 R_e = constants_dict["R_e"].value
+f_c = constants_dict["f_c"].value
+omega_c = constants_dict["omega_c"].value
+lambda_c = constants_dict["lambda_c"].value
 alpha_g = constants_dict["alpha_g"].value
-mu_0 = constants_dict["mu_0"].value
-varepsilon_0 = constants_dict["varepsilon_0"].value
+mu_0 = constants_dict["mu_0"].value  # Vacuum permeability (N/A^2)
 Z_0 = constants_dict["Z_0"].value
 hbar = constants_dict["hbar"].value
 L_p = constants_dict["L_p"].value
 M_p = constants_dict["M_p"].value
-t_p = constants_dict["t_p"].value
-T_p = constants_dict["T_p"].value
+t_p = constants_dict["t_p"].value # Planck time (s)
+T_p = constants_dict["T_p"].value # Planck Temperatuur (s)
 e = constants_dict["e"].value
 R_ = constants_dict["R_"].value
-A_0 = constants_dict["A_0"].value
-M_e = constants_dict["M_e"].value
+A_0 = constants_dict["A_0"].value # Bohr radius (m)
+M_e = constants_dict["M_e"].value # Electron mass (kg)
 M_pr = constants_dict["M_pr"].value
 M_n = constants_dict["M_n"].value
 k_B = constants_dict["k_B"].value
 R = constants_dict["R"].value
 alpha_1 = constants_dict["alpha-1"].value
-lambda_c = constants_dict["lambda_c"].value
 Phi_0 = constants_dict["Phi_0"].value
 varphi = constants_dict["varphi"].value
 eV = constants_dict["eV"].value
@@ -133,3 +138,4 @@ ER_ = constants_dict["ER_"].value
 fR_ = constants_dict["fR_"].value
 sigma = constants_dict["sigma"].value
 b = constants_dict["b"].value
+pi = math.pi
