@@ -9,6 +9,7 @@ import matplotlib.animation as animation
 from mpl_toolkits.mplot3d import Axes3D
 from mpl_toolkits.mplot3d.art3d import Line3DCollection
 from matplotlib_colors import colormaps
+from matplotlib_colors import color_names
 
 
 # Define coil parameters

@@ -1,4 +1,9 @@
 import numpy as np
+
+import matplotlib
+matplotlib.use('TkAgg')  # Ensure it uses Tkinter backend
+
+import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 # Define torus parameters
