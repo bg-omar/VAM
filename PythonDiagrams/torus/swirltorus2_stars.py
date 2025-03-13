@@ -1,6 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
+import matplotlib
+matplotlib.use('TkAgg')  # Ensure it uses Tkinter backend
+
 # Define torus parameters
 R = 2.0  # Major radius (distance from center to tube center, in XY plane)
 r = 0.9 * R  # Minor radius (tube thickness)

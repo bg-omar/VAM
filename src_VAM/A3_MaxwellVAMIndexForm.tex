@@ -1,0 +1,126 @@
+%! Author = mr
+%! Date = 3/13/2025
+
+\section{Appendix 3. Extended Maxwell--VAM Equations in Index Form}
+
+\subsection{Preliminaries and Notation}
+
+\begin{enumerate}
+    \item \textbf{Indices}: We use \(i, j, k \in \{1,2,3\}\) to refer to spatial coordinates \(x^1, x^2, x^3\). Time is denoted as \(t\) or \(x^0\) in four-dimensional notation if needed, but VAM preserves a strict three-dimensional geometry with absolute time as an external parameter.
+    \item \textbf{Fields}:
+    \begin{itemize}
+        \item \textbf{VAM-Electric Field}: \(E_{v}^i(\mathbf{r}, t)\)
+        \item \textbf{VAM-Magnetic Field}: \(B_{v}^i(\mathbf{r}, t)\)
+    \end{itemize}
+    These are derived from the underlying fluid velocity \(\mathbf{v}\) and its decomposition into irrotational (\(\nabla \Phi_v\)) and solenoidal (\(\nabla \times \mathbf{A}_v\)) parts. In many treatments:
+    \[
+        E_{v}^i \;\equiv\; -\,\partial^i \Phi_v,
+        \quad
+        B_{v}^i \;\equiv\; \epsilon^{ijk}\,\partial_j A_{v,k},
+    \]
+    where \(\Phi_v\) and \(\mathbf{A}_v\) play roles analogous to the scalar and vector potentials in standard electromagnetism.
+    \item \textbf{VAM Charge and Current}:
+    \begin{itemize}
+        \item \textbf{VAM-Charge Density}: \(\rho_v(\mathbf{r}, t)\)
+        \item \textbf{VAM-Current Density}: \(J_{v}^i(\mathbf{r}, t)\)
+    \end{itemize}
+    These are effective sources or sinks of the vortex flow, representing how vortex filaments might “start” or “end” at boundaries or within certain knots.
+    \item \textbf{Coupling Constants}:
+    \begin{itemize}
+        \item \textbf{Permittivity-like constant}: \(\varepsilon_v\)
+        \item \textbf{Permeability-like constant}: \(\mu_v\)
+    \end{itemize}
+    They set the strength and speed of wave-like excitations in the Æther, analogous to \(\varepsilon_0, \mu_0\) in standard electromagnetism.
+\end{enumerate}
+
+\subsection{Gauss’s Law for VAM-Electric Field}
+
+In differential (index) form, the usual Gauss’s law \(\nabla\cdot\mathbf{E} = \rho/\varepsilon_0\) becomes:
+
+\[
+    \partial_i E_{v}^i
+    \;=\;
+    \frac{\rho_v}{\varepsilon_v},
+    \tag{1}
+\]
+where \(\partial_i \equiv \frac{\partial}{\partial x^i}\). This states that any net vortex “charge” density \(\rho_v\) produces a nonzero divergence in the field \(E_{v}^i\).
+
+\subsection{Gauss’s Law for VAM-Magnetic Field}
+
+Because \(\mathbf{B}_v\) arises from rotating flows (akin to \(\nabla\times \mathbf{A}_v\)), no “magnetic monopoles” exist in VAM:
+
+\[
+    \partial_i B_{v}^i
+    \;=\; 0.
+    \tag{2}
+\]
+This condition expresses the purely solenoidal nature of vortex flows: vortex lines do not begin or end in free space (unless they meet boundaries or other vortex lines to form closed loops or knots).
+
+\subsection{Faraday’s Law of Induction in VAM}
+
+The differential form of Faraday’s law, \(\nabla\times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}\), in index notation becomes:
+
+\[
+    \epsilon_{ijk}\,\partial_j E_{v}^k
+    \;=\;
+    -\,\frac{\partial B_{v,i}}{\partial t},
+    \tag{3}
+\]
+where \(\epsilon_{ijk}\) is the Levi-Civita symbol (with \(\epsilon_{123} = +1\)). This implies that time-varying “magnetic” fields (i.e. time-varying vortex rotation patterns) induce an irrotational response in \(\mathbf{E}_v\), preserving the fluid continuity.
+
+\subsection{Ampère--Maxwell Law in VAM}
+
+In standard electromagnetism, \(\nabla\times \mathbf{B} = \mu_0 \mathbf{J} + \mu_0\varepsilon_0\,\partial_t\mathbf{E}\). The VAM analog is:
+
+\[
+    \epsilon_{ijk}\,\partial_j B_{v}^k
+    \;=\;
+    \mu_v\,J_{v,i}
+    \;+\;
+    \mu_v\,\varepsilon_v\;\frac{\partial E_{v,i}}{\partial t}.
+    \tag{4}
+\]
+Here, \(\mathbf{J}_v\) is the effective “vortex current,” capturing how net inflows or outflows of vortex lines transit across a given area. Just as in Maxwell’s correction, a changing “electric” field (\(\partial_t E_{v,i}\)) contributes to the curl of \(\mathbf{B}_v\).
+
+\subsection{Wave Propagation and VAM Light Speed}
+
+From (3) and (4), one can combine time derivatives and curls to show that \(\mathbf{E}_v\) and \(\mathbf{B}_v\) obey wave equations in vacuum-like regions (where \(\rho_v=0\) and \(\mathbf{J}_v=0\)):
+
+\[
+    \partial_t^2 \mathbf{E}_v
+    \;-\;
+    \frac{1}{\mu_v\,\varepsilon_v}\,
+    \nabla^2 \mathbf{E}_v
+    \;=\; 0,
+\]
+and similarly for \(\mathbf{B}_v\). This reveals a wave speed
+\[
+    v_{\mathrm{wave}}
+    \;=\;
+    \frac{1}{\sqrt{\mu_v\,\varepsilon_v}},
+\]
+analogous to \(c = 1/\sqrt{\mu_0\varepsilon_0}\) in standard electromagnetism but now interpreted as the propagation speed of vortex-mediated disturbances in the Æther.
+
+\subsection{Physical Interpretation and Unifying Principles}
+
+\begin{enumerate}
+    \item \textbf{Irrotational vs. Solenoidal Components} \\
+    The decomposition \(\mathbf{v} = \nabla \Phi_v + \nabla\times \mathbf{A}_v\) underpins the definitions of \(E_{v}^i\) and \(B_{v}^i\). Source-like “charges” appear if vortex lines enter or exit a boundary; solenoidal loops remain closed, implying \(\partial_i B_{v}^i=0\).
+    \item \textbf{Charge Conservation} \\
+    Continuity equations in index form (not shown here) ensure \(\partial_t \rho_v + \partial_i J_{v}^i = 0\), meaning net vortex “charge” is conserved in a closed system. This parallels electric charge conservation in standard Maxwell theory.
+    \item \textbf{Comparisons with Standard Maxwell Equations} \\
+    While the form of equations (1)--(4) closely mirrors Maxwell’s, the VAM interpretation is purely fluidic: no four-dimensional spacetime curvature or external gauge fields are needed. Instead, all phenomena follow from the velocity field’s topology and boundary conditions in 3D Euclidean geometry.
+\end{enumerate}
+
+\subsection{Concluding Remarks}
+
+The index-based Maxwell--VAM equations confirm that, at the level of mathematical structure, VAM and classical electromagnetism share striking parallels:
+
+\begin{enumerate}
+    \item \textbf{Gauss’s Laws} ensure source-like behavior for \(\mathbf{E}_v\) and the solenoidal nature of \(\mathbf{B}_v\).
+    \item \textbf{Faraday’s Law} and \textbf{Ampère--Maxwell} relations describe how time-varying vortex flows couple the two field components, giving rise to wave-like propagation.
+    \item \textbf{VAM Coupling Constants} \(\mu_v, \varepsilon_v\) replace \(\mu_0, \varepsilon_0\) and set a wave speed \(\frac{1}{\sqrt{\mu_v\varepsilon_v}}\).
+\end{enumerate}
+
+Hence, the index form not only makes the theory precise for potential numerical implementation but also underscores how VAM’s fluid-based approach recovers Maxwell’s structure in a purely 3D, vorticity-driven setting.
+

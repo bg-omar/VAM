@@ -1,0 +1,233 @@
+%! Author = mr
+%! Date = 3/13/2025
+
+\section*{Appendix 2. Full Poisson-Like Equation for Vorticity-Based Gravity}
+
+\subsection*{1. Setting the Stage: Inviscid Fluid and Vortex Flow}
+
+\subsubsection*{1.1 Euler’s Equation for an Inviscid Fluid}
+In VAM, the Æther is assumed inviscid and (often) incompressible. Neglecting time dependence for simplicity or considering a near-steady flow, the Euler equation takes the form
+\[
+    \rho_{\mathrm{\AE}}\;(\mathbf{v}\,\cdot\,\nabla)\,\mathbf{v}
+    \;=\;
+    -\,\nabla p,
+\]
+where:
+\begin{itemize}
+    \item \(\rho_{\mathrm{\AE}}\) is the density of the Æther,
+    \item \(\mathbf{v}\) is the flow (velocity) field,
+    \item \(p\) is the fluid pressure,
+    \item \((\mathbf{v}\cdot\nabla)\mathbf{v}\) denotes the convective acceleration.
+\end{itemize}
+
+\subsubsection*{1.2 Local Pressure and the Emergent “Potential”}
+Unlike a conventional fluid, VAM postulates that \textit{large} vorticity \(\boldsymbol{\omega} = \nabla \times \mathbf{v}\) lowers the local pressure. This pressure deficit acts similarly to how mass density generates gravitational pull. Define a scalar function \(\Phi_v(\mathbf{r})\) such that:
+\[
+    p(\mathbf{r})
+    \;=\;
+    p_0 \;-\; \alpha \,\rho_{\mathrm{\AE}}\,\Phi_v(\mathbf{r}),
+\]
+where \(p_0\) is a reference (far-field) pressure, and \(\alpha\) is a dimensionless coupling constant. Then
+\[
+    \nabla p
+    \;=\;
+    -\alpha \,\rho_{\mathrm{\AE}} \,\nabla \Phi_v.
+\]
+Thus, Euler’s equation becomes
+\[
+    \rho_{\mathrm{\AE}}\;(\mathbf{v}\,\cdot\,\nabla)\,\mathbf{v}
+    \;=\;
+    \alpha\,\rho_{\mathrm{\AE}}\,\nabla \Phi_v.
+\]
+Canceling \(\rho_{\mathrm{\AE}}\) on both sides:
+\[
+    (\mathbf{v}\,\cdot\,\nabla)\,\mathbf{v}
+    \;=\;
+    \alpha\,\nabla \Phi_v.
+    \tag{1}
+\]
+
+\subsection*{2. Relating Convective Acceleration to Vorticity}
+
+\subsubsection*{2.1 Convective Acceleration Identity}
+A well-known fluid-mechanics vector identity states:
+\[
+    (\mathbf{v}\,\cdot\,\nabla)\,\mathbf{v}
+    \;=\;
+    \nabla\!\bigl(\tfrac12\,|\mathbf{v}|^2\bigr)
+    \;-\;
+    \mathbf{v}\times(\nabla\times \mathbf{v})
+    \;=\;
+    \nabla\bigl(\tfrac12\,|\mathbf{v}|^2\bigr)
+    \;-\;
+    \mathbf{v}\times \boldsymbol{\omega}.
+\]
+Hence equation (1) can be written as:
+\[
+    \nabla
+    \Bigl(
+    \tfrac12 \,\lvert \mathbf{v}\rvert^2
+    \Bigr)
+    \;-\;
+    \mathbf{v}\times \boldsymbol{\omega}
+    \;=\;
+    \alpha \,\nabla \Phi_v.
+    \tag{2}
+\]
+Rearrange it to:
+\[
+    \nabla
+    \Bigl(
+    \tfrac12\,|\mathbf{v}|^2
+    \;-\;
+    \alpha\,\Phi_v
+    \Bigr)
+    \;=\;
+    \mathbf{v}\times \boldsymbol{\omega}.
+    \tag{3}
+\]
+Taking the curl of both sides yields
+\[
+    \nabla \times \Bigl[
+        \nabla\bigl(
+        \tfrac12\,|\mathbf{v}|^2 - \alpha\,\Phi_v
+        \bigr)
+        \Bigr]
+    \;=\;
+    \nabla \times \bigl(\mathbf{v}\times \boldsymbol{\omega}\bigr).
+\]
+But the curl of a gradient \(\nabla \chi\) is zero, so the left side vanishes:
+\[
+    0
+    \;=\;
+    \nabla \times (\mathbf{v}\times \boldsymbol{\omega}).
+    \tag{4}
+\]
+
+\subsubsection*{2.2 Expand \(\nabla \times (\mathbf{v}\times \boldsymbol{\omega})\)}
+Using the triple-vector identity,
+\[
+    \nabla \times (\mathbf{A}\times \mathbf{B})
+    \;=\;
+    (\mathbf{B}\cdot\nabla)\mathbf{A}
+    \;-\;
+    (\mathbf{A}\cdot\nabla)\mathbf{B}
+    \;+\;
+    \mathbf{A}\,(\nabla\cdot \mathbf{B})
+    \;-\;
+    \mathbf{B}\,(\nabla\cdot \mathbf{A}),
+\]
+we set \(\mathbf{A} = \mathbf{v}\) and \(\mathbf{B} = \boldsymbol{\omega}\). Thus
+\[
+    \nabla \times (\mathbf{v}\times \boldsymbol{\omega})
+    \;=\;
+    (\boldsymbol{\omega}\cdot \nabla)\mathbf{v}
+    \;-\;
+    (\mathbf{v}\cdot \nabla)\boldsymbol{\omega}
+    \;+\;
+    \mathbf{v}\,(\nabla\cdot \boldsymbol{\omega})
+    \;-\;
+    \boldsymbol{\omega}\,(\nabla\cdot \mathbf{v}).
+\]
+Equation (4) demands this be zero:
+\[
+    (\boldsymbol{\omega}\cdot \nabla)\mathbf{v}
+    \;-\;
+    (\mathbf{v}\cdot \nabla)\boldsymbol{\omega}
+    \;+\;
+    \mathbf{v}\,(\nabla\cdot \boldsymbol{\omega})
+    \;-\;
+    \boldsymbol{\omega}\,(\nabla\cdot \mathbf{v})
+    \;=\;
+    0.
+    \tag{5}
+\]
+In many VAM treatments, \(\nabla \cdot \mathbf{v} = 0\) (incompressibility) and \(\nabla \cdot \boldsymbol{\omega} = 0\) (the divergence of a curl is always zero). Then
+\[
+    (\boldsymbol{\omega}\cdot \nabla)\mathbf{v}
+    \;=\;
+    (\mathbf{v}\cdot \nabla)\boldsymbol{\omega}.
+    \tag{6}
+\]
+This condition underlies vortex conservation: if \(\boldsymbol{\omega}\) is large in one region, it must remain stable unless boundary interactions (or reconnection) intervene.
+
+\section{Identifying a Poisson-Like Equation for \(\Phi_v\)}
+
+\subsection{Bernoulli-like Relation and Pressure}
+From equation (3), we see that
+\[
+    \tfrac12\,|\mathbf{v}|^2
+    \;-\;
+    \alpha\,\Phi_v
+    \;=\;
+    \mathrm{constant}
+    \quad
+    \text{(along streamlines)},
+\]
+akin to the Bernoulli principle. Where vorticity is strong, \(\mathbf{v}\) is large, driving \(\Phi_v\) up or down accordingly.
+
+\subsection{Defining \(\nabla^2 \Phi_v\)}
+To find a connection between \(\Phi_v\) and \(|\boldsymbol{\omega}|^2\), VAM posits a near-equilibrium relation where the local pressure deficit is proportional to \(|\boldsymbol{\omega}|^2\). Equivalently, we let
+\[
+    p(\mathbf{r})
+    \;=\;
+    p_0
+    \;-\;
+    \alpha\,\rho_{\mathrm{\AE}}
+    \;\Phi_v(\mathbf{r}),
+\]
+and we demand
+\[
+    \Phi_v
+    \;\propto\;
+    \int |\boldsymbol{\omega}|^2 \,dV
+    \quad
+    \text{(locally)},
+\]
+so that if \(\boldsymbol{\omega}\) is large, \(\Phi_v\) is negative or “deep.”  Making this local and differential, we propose an ansatz:
+\[
+    \nabla^2 \Phi_v
+    \;=\;
+    -\,\alpha\,\rho_{\mathrm{\AE}}\;\lvert \boldsymbol{\omega}\rvert^2.
+    \tag{7}
+\]
+Here:
+\begin{itemize}
+    \item The negative sign ensures that higher vorticity corresponds to a more negative \(\Phi_v\), analogous to how higher mass density \(\rho\) in Newton’s law leads to \(\nabla^2 \Phi = -4\pi G\rho\).
+    \item \(\rho_{\mathrm{\AE}}\) sets the scale of the fluid’s inertia (i.e., how strongly it responds to rotation).
+    \item \(\alpha\) calibrates the coupling strength between vorticity magnitude and “gravitational potential.”
+\end{itemize}
+
+\subsection{Physical Justification}
+\begin{enumerate}
+    \item \textbf{Analogy with Newtonian Poisson Equation} \\
+    In Newtonian gravity, \(\nabla^2 \Phi = -4\pi G\rho\). By analogy, \(\rho_{\mathrm{\AE}}|\boldsymbol{\omega}|^2\) plays the role of an “effective mass density,” producing a negative potential.
+    \item \textbf{Stationary Flow Requirement} \\
+    In regions of near-steady vortex flow, the net swirl remains approximately constant, so the potential \(\Phi_v\) must solve the above Poisson-like equation with appropriate boundary conditions (\(\Phi_v \to 0\) at large \(r\), for instance).
+    \item \textbf{Empirical Matching} \\
+    Parameter \(\alpha\) can be fitted to recover standard gravitational results at large distance (where vorticity correlates with mass distribution). In high-swirl regions (like near a black-hole analog or near nuclear-scale vortex knots), this potential saturates or modifies the local “gravitational” field.
+\end{enumerate}
+
+\section{Final Boxed Equation}
+
+Thus, the fundamental field equation for vorticity-driven gravity in VAM takes the form:
+
+\[
+    \boxed{
+        \nabla^2 \Phi_v(\mathbf{r})
+        \;=\;
+        -\;\alpha\;\rho_{\mathrm{\AE}}\;\bigl|\boldsymbol{\omega}(\mathbf{r})\bigr|^2,
+    }
+\]
+where \(\boldsymbol{\omega} = \nabla \times \mathbf{v}\), \(\rho_{\mathrm{\AE}}\) is the Æther density, and \(\alpha\) is a dimensionless coupling parameter. In analogy to standard Newtonian gravity, \(\Phi_v\) becomes more negative in regions of strong vortex flow, reproducing an “attractive” effect that draws other vortex structures inward.
+
+\section{Concluding Remarks}
+
+\begin{enumerate}
+    \item \textbf{Conceptual Shift} \\
+    Rather than treating mass-energy as the source of gravitational potential, VAM places vorticity squarely in the driver’s seat. Regions with intense rotation (high \(|\boldsymbol{\omega}|\)) generate deeper potentials and hence stronger “gravitational” pull.
+    \item \textbf{Boundary Conditions and Extensions} \\
+    Real systems may require boundary conditions that handle compressibility (in astrophysical or high-energy domains) or vortex reconnection events. These nuances can alter the strict Poisson form but keep the same core insight: \textit{vorticity begets gravity-like forces}.
+    \item \textbf{Next Steps} \\
+    Using equation (7), one can solve for \(\Phi_v\) in specified geometries (e.g., rotating spheres, vortex filaments, or topological knots). Matching these solutions to observed gravitational phenomena (e.g., orbital velocities or lensing effects) offers a novel test of VAM’s validity and predictive power.
+\end{enumerate}

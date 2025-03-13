@@ -4,6 +4,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
+import matplotlib
+matplotlib.use('TkAgg')  # Ensure it uses Tkinter backend
 
 # Define view angles and parameters
 view_angles = [(20, -20)] * 3 + [(30, -20)] * 3  # Three for normal, three for swirled versions

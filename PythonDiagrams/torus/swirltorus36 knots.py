@@ -1,6 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
+import matplotlib
+matplotlib.use('TkAgg')  # Ensure it uses Tkinter backend
 
 # Define torus parameters
 R = 2.0  # Major radius (distance from center to tube center, in XY plane)
@@ -167,11 +169,11 @@ for ax, (elev, azim), title in zip(axes, view_angles, titles):
         ax.text(4.1*np.cos(helix_theta)[index], 4.1*np.sin(helix_theta)[index], 0, str(i + 1), color='black', fontsize=14, ha='center', va='center')
     # Plot helical spirals
     if rgb == 1:
-        ax.plot(helix_x, helix_y, helix_z, 'r-', linewidth=2)
+        ax.plot(helix_x2, helix_y2, helix_z2, 'r-', linewidth=2)
     if rgb == 2:
-        ax.plot(helix_x2, helix_y2, helix_z2, 'b-', linewidth=2)
+        ax.plot(helix_x, helix_y, helix_z, 'g-', linewidth=2)
     if rgb == 3:
-        ax.plot(helix_x3, helix_y3, helix_z3, 'g-', linewidth=2)
+        ax.plot(helix_x3, helix_y3, helix_z3, 'b-', linewidth=2)
 
     rgb += 1
     # Set view angle
