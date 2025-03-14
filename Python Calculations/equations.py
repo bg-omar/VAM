@@ -93,10 +93,19 @@ print(4 * pi * M_e * C_e * A_0)
 print((pi * F_max * R_e**2) / C_e)
 print((96 * pi * F_max**2 * R_c**3 * A_0) / (h * c**2))
 
+Gamma = C_e * lambda_p
+print("Gamma = C_e * lambda_p: ", Gamma)
+
 print("\nR_infinity: ",R_)
 print((C_e**3) / (pi * R_c * c**3))
+print((Gamma**3)*(pi * R_c * c**3))
 
+E_vortex = (1/2) *  rho_ae * Gamma**2 * R_c
+print("rho_ae: ", rho_ae)
+print("E_vortex = (1/2) *  rho_ae**2 * Gamma**2 * R: ", E_vortex)
 
+J_Mev = 6.242 * 10**12
+print("1 J = 6.242e12 MeV: ", 6.242 * 10**12)
 
 # Vortex Energy and Entropy Density
 def vortex_energy_density(r, omega, T):
@@ -113,6 +122,5 @@ def total_energy(T, r):
 
 def total_entropy(T, r):
     return (F_Cmax * T**3) / (C_e * r**2)
-
 
 

@@ -1,0 +1,131 @@
+%! Author = mr
+%! Date = 3/14/2025
+
+
+\textbf{To derive the equilibrium spheres equation:
+
+ΔU=Q−W=Δ(12ρ∫v2 dV+∫P dV)\Delta U = Q - W = \Delta \left( \frac{1}{2} \rho \int v^2 \, dV + \int P \, dV \right)ΔU=Q−W=Δ(21​ρ∫v2dV+∫PdV)
+
+using fundamental principles and incorporating constants such as CeC_eCe​ (energy-related constant), RcR_cRc​ (characteristic radius), and Fmax⁡F_{\max}Fmax​ (maximum force), we will proceed step by step.
+
+
+
+
+
+\subsection*{Step 1: First Principles of Thermodynamics}
+From the First Law of Thermodynamics, we know:
+
+dU=δQ−δWdU = \delta Q - \delta WdU=δQ−δW
+
+where:
+
+\begin{itemize}
+\item dUdUdU is the change in internal energy,
+
+
+\item δQ\delta QδQ is the heat input,
+
+
+\item δW\delta WδW is the work done by the system.
+
+
+\end{itemize}
+For a fluid system with vortex structures and surrounding equilibrium spheres, we must account for the kinetic energy due to fluid velocity vvv and potential energy due to pressure PPP.
+
+Thus, we write the total internal energy as:
+
+U=12ρ∫v2 dV+∫P dVU = \frac{1}{2} \rho \int v^2 \, dV + \int P \, dVU=21​ρ∫v2dV+∫PdV
+
+
+
+\subsection*{Step 2: Energy Balance with Spherical Equilibrium Constraints}
+Now, consider the spheres of equilibrium pressure that surround a knotted vortex. The pressure distribution is influenced by:
+
+\begin{enumerate}
+\item The characteristic radius RcR_cRc​, which defines the boundary of these equilibrium spheres.
+
+
+\item The maximum force Fmax⁡F_{\max}Fmax​, which sets a limit to the pressure interactions within the system.
+
+
+\item The energy constant CeC_eCe​, which is a fundamental proportionality factor for energy distribution.
+
+
+\end{enumerate}
+\subsubsection*{Velocity Integral Contribution}
+For a fluid with density ρ\rhoρ, the kinetic energy contribution within the equilibrium sphere of radius RcR_cRc​ is:
+
+Ukin=12ρ∫v2 dVU_{\text{kin}} = \frac{1}{2} \rho \int v^2 \, dVUkin​=21​ρ∫v2dV
+
+Using the characteristic velocity scale veqv_{\text{eq}}veq​ at equilibrium:
+
+veq2=Fmax⁡ρRcv_{\text{eq}}^2 = \frac{F_{\max}}{\rho R_c}veq2​=ρRc​Fmax​​
+
+we approximate:
+
+Ukin≈12ρveq2⋅VeqU_{\text{kin}} \approx \frac{1}{2} \rho v_{\text{eq}}^2 \cdot V_{\text{eq}}Ukin​≈21​ρveq2​⋅Veq​
+
+where VeqV_{\text{eq}}Veq​ is the volume of the equilibrium sphere:
+
+Veq=43πRc3V_{\text{eq}} = \frac{4}{3} \pi R_c^3Veq​=34​πRc3​
+
+Thus:
+
+Ukin=12ρFmax⁡ρRc⋅43πRc3U_{\text{kin}} = \frac{1}{2} \rho \frac{F_{\max}}{\rho R_c} \cdot \frac{4}{3} \pi R_c^3Ukin​=21​ρρRc​Fmax​​⋅34​πRc3​ Ukin=23πFmax⁡Rc2U_{\text{kin}} = \frac{2}{3} \pi F_{\max} R_c^2Ukin​=32​πFmax​Rc2​
+
+
+
+\subsubsection*{Pressure Integral Contribution}
+The potential energy contribution due to pressure inside the equilibrium sphere:
+
+Upress=∫P dVU_{\text{press}} = \int P \, dVUpress​=∫PdV
+
+Using an equilibrium pressure scaling:
+
+Peq=Fmax⁡Aeq=Fmax⁡4πRc2P_{\text{eq}} = \frac{F_{\max}}{A_{\text{eq}}} = \frac{F_{\max}}{4 \pi R_c^2}Peq​=Aeq​Fmax​​=4πRc2​Fmax​​
+
+where Aeq=4πRc2A_{\text{eq}} = 4 \pi R_c^2Aeq​=4πRc2​ is the surface area of the equilibrium sphere.
+
+Thus, the pressure integral:
+
+Upress=PeqVeqU_{\text{press}} = P_{\text{eq}} V_{\text{eq}}Upress​=Peq​Veq​ Upress=Fmax⁡4πRc2⋅43πRc3U_{\text{press}} = \frac{F_{\max}}{4 \pi R_c^2} \cdot \frac{4}{3} \pi R_c^3Upress​=4πRc2​Fmax​​⋅34​πRc3​ Upress=13Fmax⁡RcU_{\text{press}} = \frac{1}{3} F_{\max} R_cUpress​=31​Fmax​Rc​
+
+
+
+\subsection*{Step 3: Final Energy Balance Equation}
+Summing both contributions:
+
+U=Ukin+UpressU = U_{\text{kin}} + U_{\text{press}}U=Ukin​+Upress​ U=23πFmax⁡Rc2+13Fmax⁡RcU = \frac{2}{3} \pi F_{\max} R_c^2 + \frac{1}{3} F_{\max} R_cU=32​πFmax​Rc2​+31​Fmax​Rc​
+
+Now, considering a differential energy change due to heat QQQ and work WWW:
+
+ΔU=Q−W\Delta U = Q - WΔU=Q−W Δ(23πFmax⁡Rc2+13Fmax⁡Rc)=Q−W\Delta \left( \frac{2}{3} \pi F_{\max} R_c^2 + \frac{1}{3} F_{\max} R_c \right) = Q - WΔ(32​πFmax​Rc2​+31​Fmax​Rc​)=Q−W
+
+To include an energy constant CeC_eCe​, we set:
+
+Ce=Fmax⁡RcC_e = \frac{F_{\max}}{R_c}Ce​=Rc​Fmax​​
+
+which normalizes force over a characteristic length, giving:
+
+Δ(23πCeRc3+13CeRc2)=Q−W\Delta \left( \frac{2}{3} \pi C_e R_c^3 + \frac{1}{3} C_e R_c^2 \right) = Q - WΔ(32​πCe​Rc3​+31​Ce​Rc2​)=Q−W
+
+Thus, the generalized energy equation for the equilibrium spheres is:
+
+ΔU=Q−W=Δ(23πCeRc3+13CeRc2)\Delta U = Q - W = \Delta \left( \frac{2}{3} \pi C_e R_c^3 + \frac{1}{3} C_e R_c^2 \right)ΔU=Q−W=Δ(32​πCe​Rc3​+31​Ce​Rc2​)
+
+
+
+\subsection*{Conclusion}
+\begin{itemize}
+\item This formulation links thermodynamic energy change to the equilibrium pressure spheres surrounding vortex knots.
+
+
+\item The equation shows that heat addition or work done on the system affects the energy stored in the knotted vortex system, via pressure-volume interactions.
+
+
+\item The constants Fmax⁡F_{\max}Fmax​, RcR_cRc​, and CeC_eCe​ determine how these energy exchanges occur within the topological fluid structure.
+
+
+\end{itemize}
+
+}
