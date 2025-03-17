@@ -1,14 +1,36 @@
 
 import numpy as np
-
 import matplotlib
+from setuptools.command.rotate import rotate
 from sympy.abc import alpha
-
 matplotlib.use('TkAgg')  # Ensure it uses Tkinter backend
-import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d.art3d import Line3DCollection
 
+# premier_league
+# team
+# analyst
+# vibrant
+# asteroid
+# steel
+# vibrant2
+# forest
+# energy
+# turquoise
+# noir
+# red_blue
+# orange_purple
+# space_cadet
+# astro
+# skin
+# purples
+# green_blue
+
+gridsize = 1
+
+# Define points around the wire for field visualization
+num_field_points = 5  # Number of points in the plane around each coil segment
+field_radius = 0.2  # Radius of the circular magnetic field lines
 # Define coil parameters
 turns = 12  # Number of turns in the helical coil
 height = 1  # Height of the coil
@@ -27,9 +49,9 @@ X = (R + r * np.cos(Phi)) * np.cos(Theta)
 Y = (R + r * np.cos(Phi)) * np.sin(Theta)
 Z = r * np.sin(Phi)
 # Define a 3D grid for visualization
-x_range = np.linspace(-2, 2, 24)
-y_range = np.linspace(-2, 2, 24)
-z_range = np.linspace(-1, 1, 9)
+x_range = np.linspace(-gridsize, gridsize, 9)
+y_range = np.linspace(-gridsize, gridsize, 9)
+z_range = np.linspace(-0.5, 0.5, 9)
 X_grid, Y_grid, Z_grid = np.meshgrid(x_range, y_range, z_range)
 
 
@@ -85,6 +107,7 @@ def get_coil(type = "helical"):
     x_rodin_coil = (R + r * np.cos(phi)) * np.cos(theta)
     y_rodin_coil = (R + r * np.cos(phi)) * np.sin(theta)
     z_rodin_coil = r * np.sin(phi)
+
     if type == "helical":
         x = x_helical_coil
         y = y_helical_coil
@@ -158,11 +181,16 @@ def plot_radial_vectors(field_radius, phase_adjustment, num_field_points):
     # Get colormap correctly
     B_colormap = plt.colormaps["turbo"]  # ✅ Correct Matplotlib 3.7+ syntax
     B_colors = B_colormap(B_magnitude_flat / np.max(B_magnitude_flat))
+    # Use the angle of direction to define the color
+    angles = np.arctan2(By_list.flatten() , Bx_list.flatten() )  # Angle in the XY plane
+    colormap = plt.colormaps["turbo"]  # ✅ Correct Matplotlib 3.7+ syntax
+    colors = colormap((angles + np.pi) / (2 * np.pi))  # Normalize angles between 0 and 1
+
     # Plot magnetic field vectors around the wire
     ax.quiver(X_field, Y_field, Z_field, Bx_list, By_list, Bz_list,
-              linewidth=1, length=0.1, alpha=0.2, normalize=True, color=B_colors)
+              linewidth=1, length=0.1, alpha=0.2, normalize=True, color=colors)
 
-def set_numers(num_labels):
+def set_numers(ax, num_labels):
     global i
     t = np.linspace(0, 2 * np.pi, 300)
     for i in range(num_labels):
@@ -170,12 +198,12 @@ def set_numers(num_labels):
         ax.text(2 * R * np.cos(t)[index], 2 * R * np.sin(t)[index], 0, str(i + 1), color='black', fontsize=14,
                 ha='center', va='center')
 
-def set_labels():
+def set_labels(ax, elev, azim):
     # Set limits and labels
     ax.view_init(elev=elev, azim=azim)
-    ax.set_xlim(-2, 2)
-    ax.set_ylim(-2, 2)
-    ax.set_zlim(-2, 2)
+    ax.set_xlim(-gridsize, gridsize)
+    ax.set_ylim(-gridsize, gridsize)
+    ax.set_zlim(-gridsize, gridsize)
     ax.set_xlabel("X")
     ax.set_ylabel("Y")
     ax.set_zlabel("Z")
@@ -183,65 +211,129 @@ def set_labels():
 
 
 
+
 # Create multiple subplots for different views
-fig, axes = plt.subplots(1, 3, figsize=(20, 15), subplot_kw={'projection': '3d'})
+fig, axes = plt.subplots(2, 2, figsize=(12, 12), subplot_kw={'projection': '3d'})
 view_angles = [
     (0, 90),   # Top view
     (0, 90),    # Side view
+    (0, 90),    # Angled view
     (0, 90)    # Angled view
 ]
 rgb = 1
-titles = ["WrappedField Top View", "WrappedField Side View", "WrappedField Angled View"]
-for ax, (elev, azim), title in zip(axes, view_angles, titles):
-    set_numers(12)
-
+titles = ["Rodin", "Helical", "Rodin", "Star-shaped"]
+for ax, (elev, azim), title in zip(axes.flatten(), view_angles, titles):
+    set_labels(ax, elev, azim)
     if rgb == 1:
         x_coil, y_coil, z_coil = get_coil("rodin")
         # Plot the Rodin coil
         ax.plot(x_coil, y_coil, z_coil,
                 color="red", linewidth=1, label="Rodin Coil")
 
-        # Define points around the wire for field visualization
-        num_field_points = 5  # Number of points in the plane around each coil segment
-        field_radius = 0.2  # Radius of the circular magnetic field lines
-
-        plot_radial_vectors(field_radius, 0, 3)
-        plot_radial_vectors(field_radius * 2, np.pi / 3, 6)
-        plot_radial_vectors(field_radius * 3, np.pi / 6, 9)
+        # plot_radial_vectors(field_radius, 0, 3)
+        # plot_radial_vectors(field_radius * 2, np.pi / 3, 6)
+        # plot_radial_vectors(field_radius * 3, np.pi / 6, 9)
     if rgb == 2:
         x_coil, y_coil, z_coil = get_coil("helical")
-        # Compute the magnetic field at each point in the grid
-        Bx, By, Bz = compute_magnetic_field(X_grid, Y_grid, Z_grid, x_coil, y_coil, z_coil)
-        # Normalize the magnetic field vectors
-        B_magnitude = np.sqrt(Bx ** 2 + By ** 2 + Bz ** 2) + 1e-9
-        Bx, By, Bz = Bx / B_magnitude, By / B_magnitude, Bz / B_magnitude
-        B_magnitude_flat = np.sqrt(Bx.flatten() ** 2 + By.flatten() ** 2 + Bz.flatten() ** 2)
-        # Get colormap correctly
-        B_colormap = plt.colormaps["turbo"]  # ✅ Correct Matplotlib 3.7+ syntax
-        B_colors = B_colormap(B_magnitude_flat / np.max(B_magnitude_flat))
-        # Plot the coil
-        ax.plot(x_coil, y_coil, z_coil, color="red", linewidth=1, label="Helix Coil")
-        # Use quiver to plot the magnetic field vectors
-        ax.quiver(X_grid, Y_grid, Z_grid, Bx, By, Bz, linewidth=0.5,length=0.2, normalize=True, color=B_colors)
+
     if rgb == 3:
         # Generate the coil
-        x_coil_rodin, y_coil_rodin, z_coil_rodin = get_coil("rodin")
-        # Compute the magnetic field at each point in the grid
-        Bx_rodin, By_rodin, Bz_rodin = compute_magnetic_field(X_grid, Y_grid, Z_grid, x_coil_rodin, y_coil_rodin,
-                                                              z_coil_rodin)
-        # Normalize the magnetic field vectors
-        B_magnitude_rodin = np.sqrt(Bx_rodin ** 2 + By_rodin ** 2 + Bz_rodin ** 2) + 1e-9
-        Bx_rodin, By_rodin, Bz_rodin = Bx_rodin / B_magnitude_rodin, By_rodin / B_magnitude_rodin, Bz_rodin / B_magnitude_rodin
-        B_magnitude_flat = np.sqrt(Bx_rodin.flatten() ** 2 + By_rodin.flatten() ** 2 + Bz_rodin.flatten() ** 2)
-        # Get colormap correctly
-        B_colormap = plt.colormaps["turbo"]  # ✅ Correct Matplotlib 3.7+ syntax
-        B_colors = B_colormap(B_magnitude_flat / np.max(B_magnitude_flat))
-        # Plot the coil
-        ax.plot(x_coil_rodin, y_coil_rodin, z_coil_rodin, color="red", linewidth=0.5, label="Rodin Coil")
-        # Use quiver to plot the magnetic field vectors
-        ax.quiver(X_grid, Y_grid, Z_grid, Bx_rodin, By_rodin, Bz_rodin, linewidth=0.5,length=0.2, normalize=True, color=B_colors)
+        x_coil, y_coil, z_coil = get_coil("rodin")
+    if rgb == 4:
+        set_numers(ax, 9)
+        # Define the base sequence for the star-shaped coil using only 9 points
+        base_sequence = [1, 5, 9, 4, 8, 3, 7, 2, 6]  # This sequence should only use 9 unique points
 
-    set_labels()
+        # Define number of turns in the coil and spacing in the Z-direction
+        num_layers = 10  # Number of full cycles up the coil
+        z_spacing = 0.1  # Distance between layers in the Z-direction
+
+        # Define the 9 points evenly spaced around a circle
+        angles = np.linspace(0, 2 * np.pi, 10)[:-1]  # 9 points in a circular arrangement
+        positions = {i+1: (np.cos(angle), np.sin(angle)) for i, angle in enumerate(angles)}
+
+        # Generate 3D coil wire path using only the 9 points
+        x_coil, y_coil, z_coil = [], [], []
+        for turn in range(num_layers):
+            z_layer = turn * z_spacing  # Increase height per turn
+            for num in base_sequence:
+                x, y = positions[num]  # Get (x, y) position from the sequence
+                x_coil.append(x)
+                y_coil.append(y)
+                z_coil.append(z_layer - (num_layers * z_spacing) * 0.5)
+
+        # Mark each coil point
+        ax.scatter(x_coil, y_coil, z_coil, color='red', s=10, label="Points")
+
+
+
+    # Compute the magnetic field at each point in the grid
+    Bx, By, Bz = compute_magnetic_field(X_grid, Y_grid, Z_grid, x_coil, y_coil, z_coil)
+    B_magnitude = np.sqrt(Bx ** 2 + By ** 2 + Bz ** 2) + 1e-9
+    Bx, By, Bz = Bx / B_magnitude, By / B_magnitude, Bz / B_magnitude
+    B_magnitude_flat = np.sqrt(Bx.flatten() ** 2 + By.flatten() ** 2 + Bz.flatten() ** 2)
+
+    ax.plot(x_coil, y_coil, z_coil, color="red", linewidth=1, label="Coil")
+
+    rotation_axis = "x"  # Change to "x" or "y" as needed
+    pole_axis = "y"  # Change to "x" or "y" as needed
+
+    if rotation_axis == "z":
+        dBy_dx = np.gradient(By, axis=0)  # ∂By/∂x
+        dBx_dy = np.gradient(Bx, axis=1)  # ∂Bx/∂y
+        rotation_direction = dBy_dx - dBx_dy  # Rotation in XY-plane (Z-axis rotation)
+
+    elif rotation_axis == "y":
+        dBx_dz = np.gradient(Bx, axis=2)  # ∂Bx/∂z
+        dBz_dx = np.gradient(Bz, axis=0)  # ∂Bz/∂x
+        rotation_direction = dBx_dz - dBz_dx  # Rotation in XZ-plane (Y-axis rotation)
+
+    elif rotation_axis == "x":
+        dBz_dy = np.gradient(Bz, axis=1)  # ∂Bz/∂y
+        dBy_dz = np.gradient(By, axis=2)  # ∂By/∂z
+        rotation_direction = dBz_dy - dBy_dz  # Rotation in YZ-plane (X-axis rotation)
+
+    if pole_axis == "z":
+        dBy_dx = np.gradient(By, axis=0)  # ∂By/∂x
+        dBx_dy = np.gradient(Bx, axis=1)  # ∂Bx/∂y
+        pole_direction = dBy_dx - dBx_dy  # Rotation in XY-plane (Z-axis rotation)
+
+    elif pole_axis == "y":
+        dBx_dz = np.gradient(Bx, axis=2)  # ∂Bx/∂z
+        dBz_dx = np.gradient(Bz, axis=0)  # ∂Bz/∂x
+        pole_direction = dBx_dz - dBz_dx  # Rotation in XZ-plane (Y-axis rotation)
+
+    elif pole_axis == "x":
+        dBz_dy = np.gradient(Bz, axis=1)  # ∂Bz/∂y
+        dBy_dz = np.gradient(By, axis=2)  # ∂By/∂z
+        pole_direction = dBz_dy - dBy_dz  # Rotation in YZ-plane (X-axis rotation)
+
+
+    # Normalize rotation for color mapping
+    rotation_normalized = (rotation_direction - np.min(rotation_direction)) / (np.max(rotation_direction) - np.min(rotation_direction))
+
+    # Normalize pole for color mapping
+    pole_normalized = (pole_direction - np.min(pole_direction)) / (np.max(pole_direction) - np.min(pole_direction))
+
+
+
+    rot_cmap = plt.get_cmap("seismic")  # Get Turbo colormap safely
+    rotate_colors = rot_cmap(rotation_normalized.flatten())  # Get Turbo colors (RGBA)
+
+    pole_cmap = plt.get_cmap("Greys")  # White → Black transition
+    pole_colors = pole_cmap(pole_normalized.flatten())  # Get Blue-Red colormap for Z-axis
+
+    # --- 3. Blend the colors ---
+    blend_factor = 1   # Adjust for color dominance
+    final_colors = (blend_factor * rotate_colors + (1 - blend_factor) * pole_colors)  # Weighted blend
+
+    # --- 4. Plot with combined colors ---
+    ax.quiver(
+        X_grid, Y_grid, Z_grid,
+        Bx, By, Bz,
+        linewidth=0.5, length=0.2, normalize=True, color=final_colors, label="Vectors"
+    )
+
     rgb += 1
 plt.tight_layout()
 plt.show()

@@ -38,7 +38,7 @@ def get_dynamic_rho_ae(method="midpoint"):
     elif method == "max":
         rho_value = rho_max
     elif method == "midpoint":
-        rho_value = (rho_min * rho_max) ** 0.5  # Geometric mean
+        rho_value = 7e-7  # Geometric mean
     elif method == "random":
         rho_value = random.uniform(rho_min, rho_max)
     else:
