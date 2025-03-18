@@ -98,6 +98,7 @@ print((h * alpha * c) / (8 * pi * R_c**2))
 print(e**2 / (16 * pi * varepsilon_0 * R_c**2))
 print((mu_v / (4 * math.pi)) * ((mu_v * omega) ** 2 / r_c**2))
 print((mu_v / (4 * math.pi)) * ((mu_v * (2 * C_e / r_c)) ** 2 / r_c**2))
+print((C_e * hbar) / (2 * r_c**2))
 
 print("\nh: ",h)
 print(4 * pi * M_e * C_e * A_0)
@@ -225,3 +226,21 @@ t_adjusted = Delta_t * math.sqrt(1 - (2 * G * M_effective(r)) / (r * c**2) - (C_
 
 
 
+# Assuming a typical photon frequency (visible light) around 5e14 Hz
+nu = f_c  # Frequency in Hz (s⁻¹)
+omega = 2 * math.pi * nu  # Convert to angular frequency (rad/s)
+
+# Assume a characteristic radius in meters
+r = R_c  # 1 micron (example value)
+
+# Compute Left-Hand Side (LHS)
+LHS = (8 * math.pi * h * nu**3) / (c**3)
+
+# Compute Right-Hand Side (RHS)
+RHS = (F_max * omega**3) / (C_e * r**2)
+
+# Display results
+print("LHS, RHS", LHS, RHS)
+
+
+print("(3 * h) / (2 * math.pi * M_e * R_c**3): ",(3 * h) / (2 * math.pi * M_e * R_c**3) )
