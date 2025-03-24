@@ -127,3 +127,5 @@ print(f"Coulomb Force at Bohr Radius (N): {F_Coulomb_derived:.3e}")
 print(f"Vortex-Induced Force (N): {F_Vortex:.3e}")
 print("Max Force Scaling for Different Core Radii:")
 print(F_max_scaling)
+
+print ( (3 * h) / (2 * np.pi * M_e * R_c**3))
