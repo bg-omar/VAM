@@ -1,0 +1,79 @@
+%! Author = omar.iskandarani
+%! Date = 3/25/2025
+
+\section{VAM vs. EHD: Advanced Modeling of Propulsive Mechanisms}
+
+
+This section provides a comparative analysis of the conventional Electrohydrodynamic (EHD) propulsion model and the Vortex \AE{}ther Model (VAM), emphasizing foundational principles, governing equations, and momentum transfer paradigms. The synthesis integrates recent empirical findings \cite{ehdreview2023} \cite{ehdpropeller2023} \cite{electricfluidsetup2023} \cite{ehdmodeling2023} with a rigorous theoretical reinterpretation through the VAM framework.
+
+
+\subsection{Canonical EHD Momentum Formulation}
+In the traditional EHD framework, momentum transfer arises from the interaction of electric fields with charged species in a viscous fluid. The underlying dynamics are governed by a modified Navier--Stokes equation:
+\begin{equation}
+\rho \left( \frac{\partial \vec{U}}{\partial t} + (\vec{U} \cdot \nabla)\vec{U} \right) = -\nabla p + \mu \nabla^2 \vec{U} - \rho \nabla V
+\end{equation}
+This yields the standard EHD thrust relation:
+\begin{equation}
+T = \frac{I g}{\mu}
+\end{equation}
+where $I$ is the current, $g$ the interelectrode gap, and $\mu$ the ion mobility \cite{ehdreview2023}.
+
+
+\subsection{VAM: Ætheric Dynamics and Vorticity-Based Thrust}
+Contrastingly, VAM posits that net force arises from structured pressure gradients induced by confined vorticity within an inviscid, irrotational \AE{}ther medium. The central nonlinear thrust expression is:
+\begin{equation}
+T(V) = T_{\text{max}}(1 - e^{-\lambda V^2})
+\end{equation}
+where $V$ is the applied voltage, $\lambda$ is a geometry-coupled curvature factor, and $T_{\text{max}} = \rho_\ae C_e^2 A$ denotes the saturation-level vortex-induced pressure thrust \cite{vamderive2024}.
+
+
+When voltage is time-dependent, the VAM framework yields a dynamic thrust response:
+\begin{equation}
+\boxed{
+T = \kappa \cdot \frac{dV}{dt}
+\quad \text{with } \kappa = \frac{\rho_\ae A \delta z \alpha_E}{2\pi}
+}
+\end{equation}
+This captures the empirical behavior of impulse-based lifter configurations, where vortex unpinning events are synchronized with rapid field variations \cite{vamthrustfit2025}.
+
+
+\subsection{Rotational Kinetics Within the VAM Framework}
+In rotational systems, such as EHD propellers and toroidal coil drives, angular momentum conservation governs net torque generation. VAM expresses torque from shell pressure as:
+\begin{equation}
+\tau_{\text{VAM}} = \int R \cdot dF_\theta = \int R \cdot \rho_\ae C_e^2 , dA \Rightarrow \tau = R \cdot \rho_\ae C_e^2 A_{\text{active}}
+\end{equation}
+
+
+The induced angular velocity of the propeller becomes:
+\begin{equation}
+\boxed{
+\omega_p = \frac{\rho_\ae C_e^2 A R}{J_p}
+}
+\end{equation}
+
+
+Furthermore, equating the angular momenta of the vortex and the propeller yields:
+\begin{equation}
+J_p \omega_p = I_{\text{vortex}} \omega = \rho_\ae R^2 A \cdot \omega
+\Rightarrow \boxed{
+\omega_p = \omega = \frac{L_{\text{vortex}}}{J_p}
+}
+\end{equation}
+
+
+\subsection{Comparative Framework: VAM vs. EHD}
+\begin{center}
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Property} & \textbf{EHD Paradigm} & \textbf{VAM Paradigm} \
+\hline
+Driving Mechanism & Linear ion momentum & Confined vortex-induced pressure \
+Thrust Expression & $T = \frac{Ig}{\mu}$ & $T = \kappa \cdot \frac{dV}{dt}$ or sigmoid $T(V)$ \
+Electrode Configuration & Asymmetric pair (wire/foil) & Topological confinement (e.g. 3-phase coil) \
+Field Topology & Linear electric gradient & Rotational vector potential shell \
+Role of Current & Primary driver of force & Emergent artifact of vortex activation \
+Role of Voltage & Charge acceleration & Ætheric potential well curvature \
+Optimized Mode & Steady voltage & Pulsed excitation (e.g. sawtooth, rotating fields) \
+\hline
+\end{tabular}
+\end{center}
