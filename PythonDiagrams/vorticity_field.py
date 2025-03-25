@@ -2,6 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
+
+plotGridsize = 4
 # Define trefoil knot centerline
 def trefoil_knot(s):
     x = (2 + np.cos(3 * s)) * np.cos(2 * s)
@@ -65,8 +67,8 @@ for i, x in enumerate(x_vals):
 # Display velocity magnitude and pressure
 import ace_tools_open as tools; tools.display_dataframe_to_user(name="Trefoil Vortex Field Slice (z = 0)", dataframe=
 pd.DataFrame({
-    "x (m)": np.tile(x_vals, grid_size),
-    "y (m)": np.repeat(y_vals, grid_size),
+    "x (1e-15m)": np.tile(x_vals, grid_size),
+    "y (1e-15m)": np.repeat(y_vals, grid_size),
     "|v| (m/s)": velocity_magnitude.flatten(),
     "P (Pa)": pressure_field.flatten()
 }))
@@ -77,6 +79,9 @@ fig, axs = plt.subplots(1, 2, figsize=(14, 6))
 
 # Velocity magnitude plot
 c1 = axs[0].contourf(x_vals, y_vals, velocity_magnitude, levels=50, cmap='viridis')
+axs[0].set_xlim(-plotGridsize, plotGridsize)
+axs[0].set_ylim(-plotGridsize, plotGridsize)
+
 axs[0].set_title('Velocity Magnitude |v| (m/s) at z=0')
 axs[0].set_xlabel('x (m)')
 axs[0].set_ylabel('y (m)')
@@ -84,12 +89,76 @@ fig.colorbar(c1, ax=axs[0], label='|v| (m/s)')
 
 # Pressure field plot
 c2 = axs[1].contourf(x_vals, y_vals, pressure_field, levels=50, cmap='coolwarm')
+axs[1].set_xlim(-plotGridsize, plotGridsize)
+axs[1].set_ylim(-plotGridsize, plotGridsize)
+
 axs[1].set_title('Pressure Field P (Pa) at z=0')
 axs[1].set_xlabel('x (m)')
 axs[1].set_ylabel('y (m)')
 fig.colorbar(c2, ax=axs[1], label='Pressure (Pa)')
 
 plt.tight_layout()
+# plt.show()
+
+# Reduce grid size for faster processing
+grid_size_light = 25
+x_vals_light = np.linspace(-4, 4, grid_size_light)
+y_vals_light = np.linspace(-4, 4, grid_size_light)
+
+# Reuse same z-slices
+slice_data_light = []
+
+# Use only 3 slices to avoid timeouts
+z_slices_focus = [-1.0, 0.0, 1.0]
+slice_data_focus = []
+
+# Evaluate velocity magnitude and pressure for focused slices
+for z_val in z_slices_focus:
+    velocity_slice = np.zeros((grid_size_light, grid_size_light))
+    pressure_slice = np.zeros((grid_size_light, grid_size_light))
+    for i, x in enumerate(x_vals_light):
+        for j, y in enumerate(y_vals_light):
+            r = np.array([x, y, z_val])
+            v = biot_savart_velocity(r, X, T)
+            v_mag = np.linalg.norm(v)
+            velocity_slice[j, i] = v_mag
+            pressure_slice[j, i] = P_infinity - 0.5 * rho_ae * v_mag**2
+    slice_data_focus.append({
+        "z": z_val,
+        "velocity": velocity_slice,
+        "pressure": pressure_slice
+    })
+
+# Visualize selected z-slices
+fig, axs = plt.subplots(len(z_slices_focus), 2, figsize=(12, 4 * len(z_slices_focus)))
+
+for idx, slice_info in enumerate(slice_data_focus):
+    z = slice_info["z"]
+    vel = slice_info["velocity"]
+    pres = slice_info["pressure"]
+
+    # Velocity magnitude
+    ax_v = axs[idx, 0]
+    c1 = ax_v.contourf(x_vals_light, y_vals_light, vel, levels=40, cmap='viridis')
+    ax_v.set_xlim(-plotGridsize, plotGridsize)
+    ax_v.set_ylim(-plotGridsize, plotGridsize)
+    ax_v.set_box_aspect('equal')  # Ensures 1:1:1 aspect ratio
+    ax_v.set_title(f'|v| at z = {z:.2f}')
+    ax_v.set_xlabel('x (m)')
+    ax_v.set_ylabel('y (m)')
+
+    # Pressure field
+    ax_p = axs[idx, 1]
+    c2 = ax_p.contourf(x_vals_light, y_vals_light, pres, levels=40, cmap='coolwarm')
+    ax_p.set_xlim(-plotGridsize, plotGridsize)
+    ax_p.set_ylim(-plotGridsize, plotGridsize)
+    ax_p.set_box_aspect('equal')  # Ensures 1:1:1 aspect ratio
+    ax_p.set_title(f'P at z = {z:.2f}')
+    ax_p.set_xlabel('x (m)')
+    ax_p.set_ylabel('y (m)')
+
+plt.tight_layout()
+# plt.show()
 
 from mpl_toolkits.mplot3d import Axes3D
 
@@ -161,7 +230,7 @@ pole_cmap = plt.get_cmap("Greys")  # White → Black transition
 pole_colors = pole_cmap(pole_normalized.flatten())  # Get Blue-Red colormap for Z-axis
 
 # --- 3. Blend the colors ---
-blend_factor = 1   # Adjust for color dominance
+blend_factor = 0.25   # Adjust for color dominance
 final_colors = (blend_factor * rotate_colors + (1 - blend_factor) * pole_colors)  # Weighted blend
 
 
@@ -183,68 +252,80 @@ ax.plot(knot_sample[:, 0], knot_sample[:, 1], knot_sample[:, 2],
         color='red', linewidth=2, label='Trefoil Vortex Filament')
 
 ax.set_title('3D Trefoil Vortex and Induced Velocity Field')
+ax.set_xlim(-plotGridsize, plotGridsize)
+ax.set_ylim(-plotGridsize, plotGridsize)
+ax.set_zlim(-plotGridsize, plotGridsize)
+ax.set_box_aspect('equal')  # Ensures 1:1:1 aspect ratio
 ax.set_xlabel('x (m)')
 ax.set_ylabel('y (m)')
 ax.set_zlabel('z (m)')
 ax.legend()
 plt.tight_layout()
-plt.show()
-#
-# # Compute a simple time evolution of the trefoil vortex using the vorticity transport equation
-# # Here, we perform a basic discretized evolution of the filament using the Biot–Savart-induced velocity field
-#
-# def evolve_vortex(X_init, T_init, dt=0.01, steps=10, Gamma=1.0):
-#     X_evolved = np.copy(X_init)
-#     for step in range(steps):
-#         V_induced = np.array([biot_savart_velocity(xi, X_evolved, T_init, Gamma=Gamma) for xi in X_evolved])
-#         X_evolved += dt * V_induced
-#     return X_evolved
-#
-# # Evolve for 10 small time steps
-# X_evolved = evolve_vortex(X, T, dt=0.01, steps=10)
-# T_evolved = compute_tangent(X_evolved)
-#
-# # Plot initial and evolved trefoil vortex
-# fig = plt.figure(figsize=(12, 10))
-# ax = fig.add_subplot(111, projection='3d')
-#
-# # Initial vortex (gray)
-# ax.plot(X[:, 0], X[:, 1], X[:, 2], color='gray', linewidth=1.5, label='Initial Trefoil')
-#
-# # Evolved vortex (red)
-# ax.plot(X_evolved[:, 0], X_evolved[:, 1], X_evolved[:, 2], color='red', linewidth=2.5, label='Evolved Trefoil')
-#
-# ax.set_title('Trefoil Vortex Evolution Under VAM Dynamics')
-# ax.set_xlabel('x (m)')
-# ax.set_ylabel('y (m)')
-# ax.set_zlabel('z (m)')
-# ax.legend()
-# plt.tight_layout()
+
+
+# Compute a simple time evolution of the trefoil vortex using the vorticity transport equation
+# Here, we perform a basic discretized evolution of the filament using the Biot–Savart-induced velocity field
+
+def evolve_vortex(X_init, T_init, dt=0.01, steps=10, Gamma=1.0):
+    X_evolved = np.copy(X_init)
+    for step in range(steps):
+        V_induced = np.array([biot_savart_velocity(xi, X_evolved, T_init, Gamma=Gamma) for xi in X_evolved])
+        X_evolved += dt * V_induced
+    return X_evolved
+
+# Evolve for 10 small time steps
+X_evolved = evolve_vortex(X, T, dt=0.01, steps=10)
+T_evolved = compute_tangent(X_evolved)
+
+# Plot initial and evolved trefoil vortex
+fig = plt.figure(figsize=(12, 10))
+ax = fig.add_subplot(111, projection='3d')
+
+# Initial vortex (gray)
+ax.plot(X[:, 0], X[:, 1], X[:, 2], color='gray', linewidth=1.5, label='Initial Trefoil')
+
+# Evolved vortex (red)
+ax.plot(X_evolved[:, 0], X_evolved[:, 1], X_evolved[:, 2], color='red', linewidth=2.5, label='Evolved Trefoil')
+
+ax.set_title('Trefoil Vortex Evolution Under VAM Dynamics')
+ax.set_xlim(-plotGridsize, plotGridsize)
+ax.set_ylim(-plotGridsize, plotGridsize)
+ax.set_zlim(-plotGridsize, plotGridsize)
+ax.set_box_aspect('equal')  # Ensures 1:1:1 aspect ratio
+ax.set_xlabel('x (m)')
+ax.set_ylabel('y (m)')
+ax.set_zlabel('z (m)')
+ax.legend()
+plt.tight_layout()
 # plt.show()
 
-# # Optimize by reducing number of points and steps
-# # Sample fewer points along the knot
-# s_vals_light = np.linspace(0, 2 * np.pi, 150)
-# X_light = trefoil_knot(s_vals_light)
-# T_light = compute_tangent(X_light)
-#
-# # Evolve with fewer steps
-# X_evolved_light = evolve_vortex(X_light, T_light, dt=0.01, steps=5)
-# T_evolved_light = compute_tangent(X_evolved_light)
-#
-# # Plot initial and evolved vortex
-# fig = plt.figure(figsize=(12, 10))
-# ax = fig.add_subplot(111, projection='3d')
-#
-# # Initial vortex (gray)
-# ax.plot(X_light[:, 0], X_light[:, 1], X_light[:, 2], color='gray', linewidth=1.5, label='Initial Trefoil')
-#
-# # Evolved vortex (red)
-# ax.plot(X_evolved_light[:, 0], X_evolved_light[:, 1], X_evolved_light[:, 2], color='red', linewidth=2.5, label='Evolved Trefoil')
-#
-# ax.set_title('Optimized 3D Trefoil Vortex Evolution (VAM Dynamics)')
-# ax.set_xlabel('x (m)')
-# ax.set_ylabel('y (m)')
-# ax.set_zlabel('z (m)')
-# ax.legend()
-# plt.show()
+# Optimize by reducing number of points and steps
+# Sample fewer points along the knot
+s_vals_light = np.linspace(0, 2 * np.pi, 150)
+X_light = trefoil_knot(s_vals_light)
+T_light = compute_tangent(X_light)
+
+# Evolve with fewer steps
+X_evolved_light = evolve_vortex(X_light, T_light, dt=0.01, steps=5)
+T_evolved_light = compute_tangent(X_evolved_light)
+
+# Plot initial and evolved vortex
+fig = plt.figure(figsize=(12, 10))
+ax = fig.add_subplot(111, projection='3d')
+
+# Initial vortex (gray)
+ax.plot(X_light[:, 0], X_light[:, 1], X_light[:, 2], color='gray', linewidth=1.5, label='Initial Trefoil')
+
+# Evolved vortex (red)
+ax.plot(X_evolved_light[:, 0], X_evolved_light[:, 1], X_evolved_light[:, 2], color='red', linewidth=2.5, label='Evolved Trefoil')
+
+ax.set_title('Optimized 3D Trefoil Vortex Evolution (VAM Dynamics)')
+ax.set_xlim(-plotGridsize, plotGridsize)
+ax.set_ylim(-plotGridsize, plotGridsize)
+ax.set_zlim(-plotGridsize, plotGridsize)
+ax.set_box_aspect('equal')  # Ensures 1:1:1 aspect ratio
+ax.set_xlabel('x (m)')
+ax.set_ylabel('y (m)')
+ax.set_zlabel('z (m)')
+ax.legend()
+plt.show()

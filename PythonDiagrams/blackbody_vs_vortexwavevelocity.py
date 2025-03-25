@@ -98,7 +98,7 @@ RHS = (F_max * omega**3) / (C_e * r_c**2)
 
 print(LHS, " = ", RHS)
 print()
-print((8 * pi * h * nu_lambda_feq ** 3) / (c ** 3 ) )
-print((F_max * lambda_angular_velocity ** 3) / (C_e * r_c ** 2))
+print((8 * pi * h * nu ** 3) / (c ** 3 ) )
+print((F_GRmax * lambda_angular_velocity ** 3) / (C_e * r_c ** 2))
 
 
