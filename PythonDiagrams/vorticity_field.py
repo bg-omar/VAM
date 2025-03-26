@@ -142,7 +142,7 @@ for idx, slice_info in enumerate(slice_data_focus):
     c1 = ax_v.contourf(x_vals_light, y_vals_light, vel, levels=40, cmap='viridis')
     ax_v.set_xlim(-plotGridsize, plotGridsize)
     ax_v.set_ylim(-plotGridsize, plotGridsize)
-    ax_v.set_box_aspect('equal')  # Ensures 1:1:1 aspect ratio
+
     ax_v.set_title(f'|v| at z = {z:.2f}')
     ax_v.set_xlabel('x (m)')
     ax_v.set_ylabel('y (m)')
@@ -152,7 +152,7 @@ for idx, slice_info in enumerate(slice_data_focus):
     c2 = ax_p.contourf(x_vals_light, y_vals_light, pres, levels=40, cmap='coolwarm')
     ax_p.set_xlim(-plotGridsize, plotGridsize)
     ax_p.set_ylim(-plotGridsize, plotGridsize)
-    ax_p.set_box_aspect('equal')  # Ensures 1:1:1 aspect ratio
+
     ax_p.set_title(f'P at z = {z:.2f}')
     ax_p.set_xlabel('x (m)')
     ax_p.set_ylabel('y (m)')
@@ -255,7 +255,7 @@ ax.set_title('3D Trefoil Vortex and Induced Velocity Field')
 ax.set_xlim(-plotGridsize, plotGridsize)
 ax.set_ylim(-plotGridsize, plotGridsize)
 ax.set_zlim(-plotGridsize, plotGridsize)
-ax.set_box_aspect('equal')  # Ensures 1:1:1 aspect ratio
+
 ax.set_xlabel('x (m)')
 ax.set_ylabel('y (m)')
 ax.set_zlabel('z (m)')
@@ -291,7 +291,7 @@ ax.set_title('Trefoil Vortex Evolution Under VAM Dynamics')
 ax.set_xlim(-plotGridsize, plotGridsize)
 ax.set_ylim(-plotGridsize, plotGridsize)
 ax.set_zlim(-plotGridsize, plotGridsize)
-ax.set_box_aspect('equal')  # Ensures 1:1:1 aspect ratio
+
 ax.set_xlabel('x (m)')
 ax.set_ylabel('y (m)')
 ax.set_zlabel('z (m)')
@@ -323,7 +323,7 @@ ax.set_title('Optimized 3D Trefoil Vortex Evolution (VAM Dynamics)')
 ax.set_xlim(-plotGridsize, plotGridsize)
 ax.set_ylim(-plotGridsize, plotGridsize)
 ax.set_zlim(-plotGridsize, plotGridsize)
-ax.set_box_aspect('equal')  # Ensures 1:1:1 aspect ratio
+
 ax.set_xlabel('x (m)')
 ax.set_ylabel('y (m)')
 ax.set_zlabel('z (m)')

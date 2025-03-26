@@ -6,7 +6,7 @@ import matplotlib.animation as animation
 from matplotlib import cm
 from mpl_toolkits.mplot3d import Axes3D
 
-######################################################################################
+#####################################################################################
 # Constants
 mu_0 = 4 * np.pi * 1e-7  # Vacuum permeability (T·m/A)
 epsilon_0 = 8.854e-12
@@ -156,8 +156,8 @@ def update(frame):
 
     # ✅ **Current Density Arrows Flowing Along the Moving Coil**
     quiver_J1 = ax.quiver(coil_1t[0], coil_1t[1], coil_1t[2], Jx_1t, Jy_1t, Jz_1t, color='k', length=0.1, label="J-Field Phase 1", alpha=1, linewidth=1.5)
-    #quiver_J2 = ax.quiver(coil_2t[0], coil_2t[1], coil_2t[2], Jx_2t, Jy_2t, Jz_2t, color='c', length=0.15, label="J-Field Phase 2", alpha=1, linewidth=1.5)
-    #quiver_J3 = ax.quiver(coil_3t[0], coil_3t[1], coil_3t[2], Jx_3t, Jy_3t, Jz_3t, color='m', length=0.15, label="J-Field Phase 3", alpha=1, linewidth=1.5)
+    quiver_J2 = ax.quiver(coil_2t[0], coil_2t[1], coil_2t[2], Jx_2t, Jy_2t, Jz_2t, color='c', length=0.15, label="J-Field Phase 2", alpha=1, linewidth=1.5)
+    quiver_J3 = ax.quiver(coil_3t[0], coil_3t[1], coil_3t[2], Jx_3t, Jy_3t, Jz_3t, color='m', length=0.15, label="J-Field Phase 3", alpha=1, linewidth=1.5)
 
     return quiver_E, quiver_B, quiver_J1, quiver_J2, quiver_J3
 

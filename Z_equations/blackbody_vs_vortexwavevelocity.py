@@ -2,7 +2,8 @@
 import math
 import pandas as pd
 import ace_tools_open as tools
-from constants import *
+
+from Z_equations.constants import *
 
 
 

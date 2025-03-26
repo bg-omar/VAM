@@ -223,7 +223,7 @@ view_angles = [
 rgb = 1
 titles = ["Rodin", "Helical", "Rodin", "Star-shaped"]
 for ax, (elev, azim), title in zip(axes.flatten(), view_angles, titles):
-    set_labels(ax, elev, azim)
+
     if rgb == 1:
         x_coil, y_coil, z_coil = get_coil("rodin")
         # Plot the Rodin coil
@@ -333,7 +333,7 @@ for ax, (elev, azim), title in zip(axes.flatten(), view_angles, titles):
         Bx, By, Bz,
         linewidth=0.5, length=0.2, normalize=True, color=final_colors, label="Vectors"
     )
-
+    set_labels(ax, elev, azim)
     rgb += 1
 plt.tight_layout()
 plt.show()
