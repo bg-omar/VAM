@@ -1,10 +1,6 @@
 import math
-import random
 
 class PhysicalConstant:
-    """
-    A class to store physical constants with LaTeX representation, value, units, and uncertainty.
-    """
     def __init__(self, latex, value, unit, quantity, uncertainty):
         self.latex = latex
         self.value = value
@@ -14,42 +10,10 @@ class PhysicalConstant:
 
     def __repr__(self):
         return f"{self.latex} = {self.value} {self.unit} ({self.quantity}, Uncertainty: {self.uncertainty})"
-
-# Æther Density with Dynamic Selection
-def get_dynamic_rho_ae(method="midpoint"):
-    """
-    Returns a dynamically chosen value for the Æther density constant.
-
-    Parameters:
-        method (str): "min", "max", "midpoint", or "random".
-                      - "min": Returns the lower bound.
-                      - "max": Returns the upper bound.
-                      - "midpoint": Returns the geometric mean of the range.
-                      - "random": Returns a random value within the range.
-
-    Returns:
-        PhysicalConstant: A PhysicalConstant object for \rho_{\text{\ae}}.
-    """
-    rho_min = 5.0e-8   # Lower bound
-    rho_max = 5.0e-5   # Upper bound
-
-    if method == "min":
-        rho_value = rho_min
-    elif method == "max":
-        rho_value = rho_max
-    elif method == "midpoint":
-        rho_value = 7e-7  # Geometric mean
-    elif method == "random":
-        rho_value = random.uniform(rho_min, rho_max)
-    else:
-        raise ValueError("Invalid method. Choose 'min', 'max', 'midpoint', or 'random'.")
-
-    return PhysicalConstant(r"\rho_\text{\ae}", rho_value, "kg m^-3", "Æther density", f"Range: {rho_min} to {rho_max} kg m^-3")
-
 # Dictionary of physical constants
 constants_dict = {
     "C_e": PhysicalConstant(r"C_e", 1093845.63, "m s^-1", "Vortex-Tangential-Velocity", "exact"),
-    "rho_ae": get_dynamic_rho_ae("midpoint"),
+    "rho_ae": PhysicalConstant(r"\rho_\text{\ae}",  7e-7, "kg m^-3", "Æther density", f"Range: 5.0e-8 to 5.0e-5 kg m^-3"),
     "F_max": PhysicalConstant(r"F_{\text{max}}", 29.053507, "N", "Maximum force", "exact"),
     "F_Coulomb": PhysicalConstant(r"F_{\text{Coulomb}}", 29.053507, "N", "Maximum Coulomb Force", "exact"),
     "F_GRmax": PhysicalConstant(r"F_{\text{GRmax}}", 3.0256389108455157e+43, "N", "Maximum Universal Force", "exact"),

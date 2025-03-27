@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>VAM Lifter Simulator</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Input Parameters</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      <ion-item>
+        <ion-label>Voltage (V): {{ voltage }}</ion-label>
+      </ion-item>
+      <ion-range min="8000" max="30000" step="100" [(ngModel)]="voltage">
+        <ion-label slot="start">8kV</ion-label>
+        <ion-label slot="end">30kV</ion-label>
+      </ion-range>
+
+      <ion-item>
+        <ion-label position="stacked">Electrode Gap (mm)</ion-label>
+        <ion-input type="number" [(ngModel)]="gap"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Shield Type</ion-label>
+        <ion-select [(ngModel)]="shield">
+          <ion-select-option *ngFor="let option of shieldOptions" [value]="option">
+            {{ option | titlecase }}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>VAM Thrust Output</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Thrust:</ion-label>
+        <ion-note slot="end">{{ thrust.toFixed(2) }} g</ion-note>
+      </ion-item>
+      <ion-item>
+        <ion-label>Estimated Current:</ion-label>
+        <ion-note slot="end">{{ current.toFixed(2) }} μA</ion-note>
+      </ion-item>
+      <ion-item>
+        <ion-label>Pressure Drop:</ion-label>
+        <ion-note slot="end">{{ pressureDrop | number:'1.0-0' }} Pa</ion-note>
+      </ion-item>
+      <ion-item>
+        <ion-label>Field Gradient:</ion-label>
+        <ion-note slot="end">{{ fieldGradient | number:'1.0-0' }} V/m</ion-note>
+      </ion-item>
+      <ion-item>
+        <ion-label>Optimal Gap:</ion-label>
+        <ion-note slot="end">{{ optimalGap.toFixed(2) }} mm</ion-note>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

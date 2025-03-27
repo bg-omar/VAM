@@ -10,6 +10,8 @@ G = 6.67430e-11  # m^3 kg^-1 s^-2
 c = 299792458  # m/s
 hbar = 1.054571817e-34  # J·s
 M_sun = 1.98847e30  # kg
+# Prepare results
+results = []
 
 # Benchmark cases
 benchmark_cases = [
@@ -45,8 +47,144 @@ benchmark_cases = [
     }
 ]
 
-# Prepare results
-results = []
+observational_additions = {
+    "Electron": {
+        "Obs Orbital dτ/dt": 1.0,
+        "Obs Ω_eff (rad/s)": None,
+        "Obs Ω_LT (rad/s)": None,
+    },
+    "Proton": {
+        "Obs Orbital dτ/dt": 1.0,
+        "Obs Ω_eff (rad/s)": None,
+        "Obs Ω_LT (rad/s)": None,
+    },
+    "Earth": {
+        "Obs Orbital dτ/dt": 7910,  # based on GPS orbital frame approx
+        "Obs Ω_eff (rad/s)": 0.00124,
+        "Obs Ω_LT (rad/s)": 3.03e-14,
+    },
+    "Neutron Star": {
+        "Obs Orbital dτ/dt": 1.3e8,  # estimate based on known spin and frame dragging
+        "Obs Ω_eff (rad/s)": 12900,
+        "Obs Ω_LT (rad/s)": 700,
+    },
+    "Sun": {
+        "Obs Orbital dτ/dt": 4.37e5,  # based on Keplerian orbit near surface
+        "Obs Ω_eff (rad/s)": 0.000627,
+        "Obs Ω_LT (rad/s)": 2.0e-11,
+    }
+}
+# Add known observational data (either measured or theoretically predicted and validated)
+Obs_data = {
+    "Earth": {
+        "Obs_dτ/dt": 1 - 6.97e-10,  # gravitational time dilation at surface
+        "Obs_Ω_LT": 3.03e-14,  # rad/s, Gravity Probe B result (GP-B paper)
+    },
+    "Sun": {
+        "Obs_dτ/dt": 0.9999979,  # Solar gravitational redshift
+        "Obs_Ω_LT": 2.0e-11,  # theoretical expectation for solar frame-dragging (no direct measurement)
+    },
+    "Neutron Star": {
+        "Obs_dτ/dt": 0.76,  # from gravitational redshift in X-ray burst spectra
+        "Obs_Ω_LT": 700.0,  # theoretical expectation based on millisecond pulsars
+    },
+    "Electron": {
+        "Obs_dτ/dt": 1.0,
+        "Obs_Ω_LT": None,
+    },
+    "Proton": {
+        "Obs_dτ/dt": 1.0,
+        "Obs_Ω_LT": None,
+    }
+}
+# Define the preferred column order for clarity
+preferred_column_order = [
+    "Object",
+    "Mass (kg)",
+    "Radius (m)",
+    "J (kg·m²/s)",
+    "Schwarz Term",
+    "Spin Term",
+    "dτ/dt",
+    "Obs dτ/dt",
+    "Orbital dτ/dt",
+    "Obs Orbital dτ/dt",
+    "Ω_eff (rad/s)",
+    "Obs Ω_eff (rad/s)",
+    "Ω_LT (rad/s)",
+    "Obs Ω_LT (rad/s)"
+]
+# GR Observable Functions
+def schwarzschild_precession(M, a, e):
+    return (6 * math.pi * G * M) / (a * (1 - e**2) * c**2)
+
+def shapiro_delay(M, r1, r2, b):
+    return (2 * G * M / c**3) * math.log((4 * r1 * r2) / b**2)
+
+def light_deflection(M, R):
+    return (4 * G * M) / (R * c**2)
+
+def isco_radius(M, a=0):
+    return 6 * G * M / c**2  # Schwarzschild case
+
+def gw_inspiral_period_derivative(m1, m2, a):
+    μ = m1 * m2 / (m1 + m2)
+    M = m1 + m2
+    return -(192 * math.pi * G**(5/3) * μ * M**(2/3)) / (5 * c**5 * a**(5/2))
+
+def geodetic_precession(M, R, v_orbit):
+    return (3 * G * M * v_orbit) / (2 * c**2 * R**2)
+
+def lense_thirring_precession(J, R):
+    return (2 * G * J) / (c**2 * R**3)
+
+def flrw_cosmological_redshift(a_emit, a_obs=1.0):
+    return (a_obs / a_emit) - 1
+
+def flrw_scale_factor_from_z(z):
+    return 1 / (1 + z)
+
+def orbital_time_dilation(mass, radius, omega, J):
+    """
+    Computes time dilation for a circular equatorial orbit using the Kerr metric (co-rotating observer).
+    Uses first-order approximation for angular velocity and Lense–Thirring effect.
+    """
+    # Angular velocity of orbiting observer (Keplerian)
+    Omega_K = (G * mass / radius**3)**0.5  # rad/s
+
+    # Frame-dragging angular velocity (Lense–Thirring)
+    Omega_LT = (2 * G * J) / (c**2 * radius**3)  # rad/s
+
+    # Total angular velocity seen by the co-rotating observer (approximate)
+    Omega_eff = Omega_K - Omega_LT
+
+    # Kerr metric coefficients in equatorial plane (approximate)
+    g_tt = -(1 - (2 * G * mass) / (radius * c**2))
+    g_phiphi = (radius**2 + (J / (mass * c))**2 + (2 * G * J**2) / (mass * c**2 * radius**3))
+    g_tphi = -(2 * G * J) / (radius * c**3)
+
+    # Proper time ratio for a rotating observer:
+    # (dτ/dt)^2 = - (g_tt + 2 * g_tphi * Omega + g_phiphi * Omega^2)
+    term = -(g_tt + 2 * g_tphi * Omega_eff + g_phiphi * Omega_eff**2)
+    if term > 0:
+        return math.sqrt(term), Omega_eff, Omega_LT
+    else:
+        return float('nan'), Omega_eff, Omega_LT
+def corrected_orbital_time_dilation(mass, radius, J):
+    Omega_K = math.sqrt(G * mass / radius**3)
+    Omega_LT = (2 * G * J) / (c**2 * radius**3)
+    Omega = Omega_K - Omega_LT
+
+    g_tt = -(1 - (2 * G * mass) / (radius * c**2))
+    g_tphi = - (2 * G * J) / (radius * c**3)
+    g_phiphi = radius**2
+
+    term = g_tt + 2 * g_tphi * Omega + g_phiphi * Omega**2
+    return math.sqrt(term) if term > 0 else float('nan'), Omega, Omega_LT
+
+
+
+
 
 for case in benchmark_cases:
     m = case["mass"]
@@ -77,80 +215,6 @@ for case in benchmark_cases:
         "dτ/dt": tau_over_t
     })
 
-# # Create DataFrame
-# df = pd.DataFrame(results)
-# tools.display_dataframe_to_user(name="Time Dilation Benchmark Table", dataframe=df)
-
-# Extend benchmark: add observers in orbit (co-rotating with the mass) and Lense-Thirring precession
-def orbital_time_dilation(mass, radius, omega, J):
-    """
-    Computes time dilation for a circular equatorial orbit using the Kerr metric (co-rotating observer).
-    Uses first-order approximation for angular velocity and Lense–Thirring effect.
-    """
-    # Angular velocity of orbiting observer (Keplerian)
-    Omega_K = (G * mass / radius**3)**0.5  # rad/s
-
-    # Frame-dragging angular velocity (Lense–Thirring)
-    Omega_LT = (2 * G * J) / (c**2 * radius**3)  # rad/s
-
-    # Total angular velocity seen by the co-rotating observer (approximate)
-    Omega_eff = Omega_K - Omega_LT
-
-    # Kerr metric coefficients in equatorial plane (approximate)
-    g_tt = -(1 - (2 * G * mass) / (radius * c**2))
-    g_phiphi = (radius**2 + (J / (mass * c))**2 + (2 * G * J**2) / (mass * c**2 * radius**3))
-    g_tphi = -(2 * G * J) / (radius * c**3)
-
-    # Proper time ratio for a rotating observer:
-    # (dτ/dt)^2 = - (g_tt + 2 * g_tphi * Omega + g_phiphi * Omega^2)
-    term = -(g_tt + 2 * g_tphi * Omega_eff + g_phiphi * Omega_eff**2)
-    if term > 0:
-        return math.sqrt(term), Omega_eff, Omega_LT
-    else:
-        return float('nan'), Omega_eff, Omega_LT
-
-def geodetic_precession(M, R, v_orbit):
-    return (3 * G * M * v_orbit) / (2 * c**2 * R**2)
-
-def lense_thirring_precession(J, R):
-    return (2 * G * J) / (c**2 * R**3)
-
-def corrected_orbital_time_dilation(mass, radius, J):
-    Omega_K = math.sqrt(G * mass / radius**3)
-    Omega_LT = (2 * G * J) / (c**2 * radius**3)
-    Omega = Omega_K - Omega_LT
-
-    g_tt = -(1 - (2 * G * mass) / (radius * c**2))
-    g_tphi = - (2 * G * J) / (radius * c**3)
-    g_phiphi = radius**2
-
-    term = g_tt + 2 * g_tphi * Omega + g_phiphi * Omega**2
-    return math.sqrt(term) if term > 0 else float('nan'), Omega, Omega_LT
-
-# GR Observable Functions
-def schwarzschild_precession(M, a, e):
-    return (6 * math.pi * G * M) / (a * (1 - e**2) * c**2)
-
-def shapiro_delay(M, r1, r2, b):
-    return (2 * G * M / c**3) * math.log((4 * r1 * r2) / b**2)
-
-def light_deflection(M, R):
-    return (4 * G * M) / (R * c**2)
-
-def isco_radius(M, a=0):
-    return 6 * G * M / c**2  # Schwarzschild case
-
-def gw_inspiral_period_derivative(m1, m2, a):
-    μ = m1 * m2 / (m1 + m2)
-    M = m1 + m2
-    return -(192 * math.pi * G**(5/3) * μ * M**(2/3)) / (5 * c**5 * a**(5/2))
-
-
-def flrw_cosmological_redshift(a_emit, a_obs=1.0):
-    return (a_obs / a_emit) - 1
-
-def flrw_scale_factor_from_z(z):
-    return 1 / (1 + z)
 
 # Apply only to macroscopic rotating bodies (Earth, Sun, Neutron Star)
 for case in results:
@@ -177,30 +241,6 @@ for case in results:
 # # Updated DataFrame
 # df_extended = pd.DataFrame(results)
 # tools.display_dataframe_to_user(name="Orbital Time Dilation and Lense-Thirring", dataframe=df_extended)
-
-# Add known observational data (either measured or theoretically predicted and validated)
-Obs_data = {
-    "Earth": {
-        "Obs_dτ/dt": 1 - 6.97e-10,  # gravitational time dilation at surface
-        "Obs_Ω_LT": 3.03e-14,  # rad/s, Gravity Probe B result (GP-B paper)
-    },
-    "Sun": {
-        "Obs_dτ/dt": 0.9999979,  # Solar gravitational redshift
-        "Obs_Ω_LT": 2.0e-11,  # theoretical expectation for solar frame-dragging (no direct measurement)
-    },
-    "Neutron Star": {
-        "Obs_dτ/dt": 0.76,  # from gravitational redshift in X-ray burst spectra
-        "Obs_Ω_LT": 700.0,  # theoretical expectation based on millisecond pulsars
-    },
-    "Electron": {
-        "Obs_dτ/dt": 1.0,
-        "Obs_Ω_LT": None,
-    },
-    "Proton": {
-        "Obs_dτ/dt": 1.0,
-        "Obs_Ω_LT": None,
-    }
-}
 
 # Insert observational values into the table
 for case in results:
@@ -235,33 +275,7 @@ for case in results:
 
 # Add missing observational estimates for orbital time dilation and effective rotation
 
-observational_additions = {
-    "Electron": {
-        "Obs Orbital dτ/dt": 1.0,
-        "Obs Ω_eff (rad/s)": None,
-        "Obs Ω_LT (rad/s)": None,
-    },
-    "Proton": {
-        "Obs Orbital dτ/dt": 1.0,
-        "Obs Ω_eff (rad/s)": None,
-        "Obs Ω_LT (rad/s)": None,
-    },
-    "Earth": {
-        "Obs Orbital dτ/dt": 7910,  # based on GPS orbital frame approx
-        "Obs Ω_eff (rad/s)": 0.00124,
-        "Obs Ω_LT (rad/s)": 3.03e-14,
-    },
-    "Neutron Star": {
-        "Obs Orbital dτ/dt": 1.3e8,  # estimate based on known spin and frame dragging
-        "Obs Ω_eff (rad/s)": 12900,
-        "Obs Ω_LT (rad/s)": 700,
-    },
-    "Sun": {
-        "Obs Orbital dτ/dt": 4.37e5,  # based on Keplerian orbit near surface
-        "Obs Ω_eff (rad/s)": 0.000627,
-        "Obs Ω_LT (rad/s)": 2.0e-11,
-    }
-}
+
 
 # Add to existing results
 for case in results:
@@ -278,23 +292,7 @@ for case in results:
 # Updated DataFrame with observational orbital data
 df_final = pd.DataFrame(results)
 
-# Define the preferred column order for clarity
-preferred_column_order = [
-    "Object",
-    "Mass (kg)",
-    "Radius (m)",
-    "J (kg·m²/s)",
-    "Schwarz Term",
-    "Spin Term",
-    "dτ/dt",
-    "Obs dτ/dt",
-    "Orbital dτ/dt",
-    "Obs Orbital dτ/dt",
-    "Ω_eff (rad/s)",
-    "Obs Ω_eff (rad/s)",
-    "Ω_LT (rad/s)",
-    "Obs Ω_LT (rad/s)"
-]
+
 
 # Reorder the DataFrame columns
 df_reordered = df_final[preferred_column_order]
@@ -334,35 +332,7 @@ df_extended = df_extended[preferred_column_order]
 tools.display_dataframe_to_user(name="Extended GR Benchmark with Prec", dataframe=df_extended)
 
 print("\n")
-# GR Observable Functions
-def schwarzschild_precession(M, a, e):
-    return (6 * math.pi * G * M) / (a * (1 - e**2) * c**2)
 
-def shapiro_delay(M, r1, r2, b):
-    return (2 * G * M / c**3) * math.log((4 * r1 * r2) / b**2)
-
-def light_deflection(M, R):
-    return (4 * G * M) / (R * c**2)
-
-def isco_radius(M, a=0):
-    return 6 * G * M / c**2  # Schwarzschild case
-
-def gw_inspiral_period_derivative(m1, m2, a):
-    μ = m1 * m2 / (m1 + m2)
-    M = m1 + m2
-    return -(192 * math.pi * G**(5/3) * μ * M**(2/3)) / (5 * c**5 * a**(5/2))
-
-def geodetic_precession(M, R, v_orbit):
-    return (3 * G * M * v_orbit) / (2 * c**2 * R**2)
-
-def lense_thirring_precession(J, R):
-    return (2 * G * J) / (c**2 * R**3)
-
-def flrw_cosmological_redshift(a_emit, a_obs=1.0):
-    return (a_obs / a_emit) - 1
-
-def flrw_scale_factor_from_z(z):
-    return 1 / (1 + z)
 
 # Obs Test Case Parameters
 precession_mercury = schwarzschild_precession(M_sun, 5.79e10, 0.2056)

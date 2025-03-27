@@ -1,0 +1,114 @@
+%! Author = Omar Iskandarani
+%! Date = 2/15/2025
+
+\documentclass[aps,preprint,superscriptaddress]{revtex4}
+
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{physics}
+
+\begin{document}
+\sloppy % Allow LaTeX to adjust spacing to avoid overfull boxes
+\author{Omar Iskandarani}
+\title{The Vortex Æther Model: Æther Vortex Field Model}
+\date{\today}
+\affiliation{Independent Researcher, Groningen, The Netherlands}
+\thanks{ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961}}
+\email{info@omariskandarani.com}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%    Abstract    %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{abstract}
+    The Vortex Æther Model (VAM) introduces a unified, non-relativistic framework wherein gravity, electromagnetism, and quantum phenomena emerge from structured vorticity in an inviscid superfluid-like æther. Unlike General Relativity, which invokes spacetime curvature, VAM models stable vortex knots in a 3D Euclidean medium with absolute time. Observed time dilation results from vortex-induced local energy gradients. This paper derives time dilation analogs to GR, explores vortex-energetic time shifts, and presents experimental implications.
+\end{abstract}
+
+
+\maketitle
+%%%%%%%%%%%%%%%%%%%%%%%%%%    Introduction    %%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+    \begin{figure}[h]
+        \includegraphics[width=\textwidth]{vorticity_field1}
+        \caption{Illustration of vorticity fields in Æther.}
+        \label{fig:vorticity_field1}
+    \end{figure}
+
+    \section*{Core Assumptions}
+    The Æther is modeled as an inviscid, incompressible superfluid governed by:
+
+\begin{tabular}{ll}
+    \toprule
+    \midrule
+        * & Conservation of Absolute Vorticity \\
+        * & A 3D Euclidean medium with absolute time \\
+        * & Particles as vortex knots \\
+        * & Irrotational outside vortex cores, but with conserved vorticity inside knots \\
+        * & Gravity from vorticity-induced pressure gradients \\
+    \bottomrule
+\end{tabular}
+
+    Let:
+
+    \begin{tabular}{ll}
+        \toprule
+        Symbol & Description \\
+        \midrule
+        \(\vec{v}\) & Æther velocity field \\
+        \(\vec{\omega}\) &  Vorticity \(\vec{\omega} = \nabla \times \vec{v}\) \\
+        \(\rho_\text{æ}\) & Æther density (constant) \\
+        \(\Phi\) & Vorticity-induced potential \\
+        \(\kappa\) & Circulation constant \\
+        \(\mathcal{K}\) & Knot topological class (Hopf link, torus knot, etc.) \\
+        \bottomrule
+    \end{tabular}
+
+    \subsection*{Introduction to Fluid Dynamics and Vorticity Conservation}
+    Euler Equation (Inviscid Flow)
+    \begin{equation}
+        \frac{\partial \vec{v}}{\partial t} + (\vec{v} \cdot \nabla)\vec{v} = -\frac{1}{\rho_\text{æ}} \nabla p
+    \end{equation}
+    Taking the curl to get the Vorticity Transport
+    \begin{equation}
+        \frac{\partial \vec{\omega}}{\partial t} + (\vec{v} \cdot \nabla)\vec{\omega} = (\vec{\omega} \cdot \nabla) \vec{v}
+    \end{equation}
+
+    \subsection*{Vorticity-Induced Gravity}
+    We define a Newtonian like vorticity-based gravitational potential $\Phi$:
+    \begin{equation}
+        \vec{F}_g = -\nabla \Phi
+    \end{equation}
+    Where $\Phi$ is the Vorticity Potential:
+    \begin{equation}
+        \Phi(\vec{r}) = \gamma \int \frac{|\vec{\omega}(\vec{r'})|^2}{|\vec{r} - \vec{r'}|} \, d^3r'
+    \end{equation}
+    This mirrors the Newtonian potential but replaces mass density with vorticity intensity. This gives attractive force fields between vortex knots (like a particle).
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%    PART 1    %%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{01_}
+%%%%%%%%%%%%%%%%%%%%%%%%%%    PART 2    %%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{02_}
+%%%%%%%%%%%%%%%%%%%%%%%%%%    PART 3    %%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{03_}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%    References    %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \bibliography{citations}
+    \bibliographystyle{apsrev4-2}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%    Appendices    %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \appendix \label{sec:Part-4}
+    \input{appendix_01_DerivationTimeModulation}\label{appendix:1}
+
+\end{document}

@@ -1,0 +1,78 @@
+
+
+    \section{Time Dilation in the Æther-Vortex Model}\label{sec:time}
+    We consider an inviscid, irrotational superfluid æther with stable topological vortex knots. The Æther experiences absolute time $t_{\text{abs}}$, but local clocks experience slowed rates due to pressure gradients and knot energetics.
+
+    \subsection{Bernoulli-Based Local Time Modulation}
+    In high-vorticity regions, Bernoulli's principle implies a pressure drop:
+    \begin{equation}
+        \frac{1}{2} \rho v^2 + p = p_0 \Rightarrow p = p_0 - \frac{1}{2} \rho v^2
+    \end{equation}
+    Assuming time frequency scales with pressure:
+    \begin{equation}
+        \frac{t_{\text{local}}}{t_0} = \left(1 - \frac{\rho v^2}{2p_0} \right)^{-1}
+    \end{equation}
+    For circular vortex motion $v = \Omega r$:
+    \begin{equation}
+        \frac{t_{\text{local}}}{t_0} \approx 1 + \frac{\rho \Omega^2 r^2}{2p_0}
+    \end{equation}
+
+    \subsection{Heuristic Time Modulation by Knot Rotation}
+    Let $\Omega_k$ be the average angular velocity of a vortex knot:
+    \begin{equation}
+        \label{eq:omegamod}
+        \frac{t_{\text{local}}}{t_{\text{abs}}} = \left(1 + \alpha \Omega_k^2 \right)^{-1}
+    \end{equation}
+    For small $\Omega_k$:
+    \begin{equation}
+        \frac{t_{\text{local}}}{t_{\text{abs}}} \approx 1 - \alpha \Omega_k^2 + \mathcal{O}(\Omega_k^4)
+    \end{equation}
+    This matches special relativistic time dilation:
+    \begin{equation}
+        \frac{t_{\text{moving}}}{t_{\text{rest}}} \approx 1 - \frac{v^2}{2c^2}
+    \end{equation}
+
+    \subsection{Vorticity-Induced Gravitational Time Dilation}
+    Let $\Phi(\vec{r})$ be a potential from vortex energy density:
+    \begin{equation}
+        \Phi(\vec{r}) = \gamma \int \frac{|\vec{\omega}(\vec{r}')|^2}{|\vec{r} - \vec{r}'|} \, d^3r'
+    \end{equation}
+    Time dilation follows:
+    \begin{equation}
+        \frac{t_{\text{local}}}{t_{\infty}} = \sqrt{1 - \frac{2\Phi(\vec{r})}{c^2}}
+    \end{equation}
+    For point-like vorticity:
+    \begin{equation}
+        \frac{t_{\text{local}}}{t_{\infty}} = \sqrt{1 - \frac{2\gamma \omega_0^2}{r c^2}}
+    \end{equation}
+
+    \subsection{Proper Time and Kerr-Like Analogy}
+    In GR, proper time near a rotating mass is:
+    \begin{equation}
+        \left(\frac{d\tau}{dt}\right)^2 = -\left[g_{tt} + 2 g_{t\phi}\Omega_{\text{eff}} + g_{\phi\phi}\Omega_{\text{eff}}^2\right]
+    \end{equation}
+    In Æther terms, set:
+    \begin{align*}
+        g_{tt} &\rightarrow -\left(1 - \frac{v_r^2}{c^2}\right) \\
+        g_{t\phi} &\rightarrow -\frac{v_r v_\phi}{c^2} \\
+        g_{\phi\phi} &\rightarrow -\frac{v_\phi^2}{c^2} r^2
+    \end{align*}
+    With $v_\phi = r\Omega_k$:
+    \begin{equation}
+        \left(\frac{d\tau}{dt}\right)^2 = 1 - \frac{1}{c^2}(v_r + r\Omega_k)^2
+    \end{equation}
+
+    \subsection{Kerr-Like Time Adjustment}
+    From GR:
+    \begin{equation}
+        t_{\text{adjusted}} = \Delta t \cdot \sqrt{1 - \frac{2GM}{rc^2} - \frac{J^2}{r^3 c^2}}
+    \end{equation}
+    In Æther terms:
+    \begin{equation}
+        \boxed{t_{\text{adjusted}} = \Delta t \cdot \sqrt{1 - \frac{\gamma \langle \omega^2 \rangle}{r c^2} - \frac{\kappa^2}{r^3 c^2}}}
+    \end{equation}
+    This reproduces gravitational and frame-dragging effects via vorticity and circulation.
+
+    \subsection{Conclusion and Experimental Outlook}
+    The Vortex Æther Model replaces spacetime curvature with conserved vorticity in a 3D fluid. Time dilation arises from local fluid velocities and rotational energy. Future work includes simulation of vortex clocks and tests using BECs, helium II, or electrohydrodynamic lifters.
+

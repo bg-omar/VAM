@@ -1,0 +1,56 @@
+%! Author = mr
+%! Date = 3/27/2025
+
+\section{proper time for a rotating observer}\label{sec:Part-3}
+
+In General Relativity, the flow of proper time for a rotating observer in a stationary, axisymmetric spacetime is given by
+\begin{equation}
+    \left(\frac{d\tau}{dt}\right)^2_{\text{GR}} = -\left[g_{tt} + 2 g_{t\phi}\Omega_{\text{eff}} + g_{\phi\phi}\Omega_{\text{eff}}^2\right],
+    \label{eq:GRtime}
+\end{equation}
+where $\Omega_{\text{eff}}$ is the observer's angular velocity, and the metric components $g_{\mu\nu}$ describe spacetime curvature (e.g., Kerr geometry) \cite{misner1973gravitation}.
+
+In a vortex-based Æther theory, we posit that time dilation arises not from spacetime curvature, but from the local motion of an inviscid superfluid medium. We associate metric-like effects with Æther flow variables:
+\begin{align*}
+    g_{tt} &\rightarrow -\left(1 - \frac{v_r^2}{c^2} \right), \\
+    g_{t\phi} &\rightarrow -\frac{v_r v_\phi}{c^2}, \\
+    g_{\phi\phi} &\rightarrow -\frac{v_\phi^2}{c^2} r^2,
+\end{align*}
+where $v_r$ and $v_\phi$ are the radial and tangential components of Æther velocity, and $v_\phi = r \Omega_k$, with $\Omega_k = \kappa / (2\pi r^2)$ representing the local vortex rotation rate \cite{fedi2017gravity, sbitnev2021quaternion}.
+
+Substituting into the structure of Equation~\ref{eq:GRtime}, we obtain:
+\begin{align}
+    \left( \frac{d\tau}{dt} \right)^2_{\text{Æther}} &= 1 - \frac{v_r^2}{c^2} - 2\frac{v_r v_\phi}{c^2} - \frac{v_\phi^2}{c^2} \\
+    &= 1 - \frac{1}{c^2}(v_r + v_\phi)^2 \\
+    &= 1 - \frac{1}{c^2}(v_r + r \Omega_k)^2.
+    \label{eq:timeflow}
+\end{align}
+
+This result mirrors the GR proper time flow structure, yet is entirely fluid-mechanical. It predicts the slowing of proper time near intense vortex structures due to Æther flow speeds approaching $c$, effectively creating a “time-well” analogous to gravitational redshift.
+
+\subsection*{Kerr-Like Time Adjustment from Vorticity and Circulation}
+
+The General Relativistic form of time adjustment near a rotating mass, such as in the Kerr geometry, is approximately
+\begin{equation}
+    t_{\text{adjusted}} = \Delta t \cdot \sqrt{1 - \frac{2GM}{rc^2} - \frac{J^2}{r^3 c^2}}.
+    \label{eq:kerrtime}
+\end{equation}
+
+We now express this in Æther-vortex terms, replacing $M$ and $J$ with effective vorticity energy density and circulation:
+\begin{itemize}
+    \item Mass-energy term: $\displaystyle \frac{2GM}{rc^2} \rightarrow \frac{\gamma \langle \omega^2 \rangle}{rc^2}$,
+    \item Angular momentum term: $\displaystyle \frac{J^2}{r^3 c^2} \rightarrow \frac{\kappa^2}{r^3 c^2}$.
+\end{itemize}
+
+Thus, the Æther-based analog becomes:
+\begin{equation}
+    \boxed{
+        t_{\text{adjusted}} = \Delta t \cdot \sqrt{
+            1 - \frac{\gamma \langle \omega^2 \rangle}{r c^2}
+            - \frac{\kappa^2}{r^3 c^2}
+        }
+    }
+    \label{eq:ae_kerr}
+\end{equation}
+
+This formulation reproduces gravitational and frame-dragging time effects purely from Æther dynamics: $\langle \omega^2 \rangle$ plays the role of gravitational redshift, and circulation $\kappa$ encodes rotational drag. This approach aligns with recent fluid-dynamic interpretations of gravity and time \cite{barcelo2011analogue}, \cite{fedi2017gravity}.
