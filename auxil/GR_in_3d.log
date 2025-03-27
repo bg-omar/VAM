@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.2.28)  27 MAR 2025 22:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.2.28)  27 MAR 2025 23:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -427,16 +427,35 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 32.
 
 (C:\Users\mr\AppData\Local\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1{C:/Users/mr/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-<vorticity_field1.png, id=112, 867.24pt x 722.7pt>
-File: vorticity_field1.png Graphic file (type png)
-<use vorticity_field1.png>
-Package pdftex.def Info: vorticity_field1.png  used on input line 37.
-(pdftex.def)             Requested size: 468.0pt x 389.99855pt.
- [2 <./vorticity_field1.png>]
-(01_.tex [3] [4]) (02_.tex [5] [6] [7]) (03_.tex [8])
-(C:/Users\mr\IdeaProjects\VAM\auxil\GR_in_3d.bbl)
-(appendix_01_DerivationTimeModulation.tex [9]
+) [1{C:/Users/mr/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (01_.tex [2
+]
+<export/streamlinesDiPole.png, id=113, 867.24pt x 722.7pt>
+File: export/streamlinesDiPole.png Graphic file (type png)
+<use export/streamlinesDiPole.png>
+Package pdftex.def Info: export/streamlinesDiPole.png  used on input line 9.
+(pdftex.def)             Requested size: 397.80286pt x 331.5087pt.
+ [3 <./export/streamlinesDiPole.png>]
+<export/RadialProfileOfLocalTimeDilation_Radial_LocalTime_Dilation.png, id=122,
+ 722.7pt x 433.62pt>
+File: export/RadialProfileOfLocalTimeDilation_Radial_LocalTime_Dilation.png Gra
+phic file (type png)
+<use export/RadialProfileOfLocalTimeDilation_Radial_LocalTime_Dilation.png>
+Package pdftex.def Info: export/RadialProfileOfLocalTimeDilation_Radial_LocalTi
+me_Dilation.png  used on input line 35.
+(pdftex.def)             Requested size: 374.40143pt x 224.6434pt.
+ [4 <./export/RadialProfileOfLocalTimeDilation_Radial_LocalTime_Dilation.png>]
+<export/RadialProfileOfLocalTimeDilation_Vortex-Induced_Time_Well.png, id=133, 
+578.16pt x 433.62pt>
+File: export/RadialProfileOfLocalTimeDilation_Vortex-Induced_Time_Well.png Grap
+hic file (type png)
+<use export/RadialProfileOfLocalTimeDilation_Vortex-Induced_Time_Well.png>
+Package pdftex.def Info: export/RadialProfileOfLocalTimeDilation_Vortex-Induced
+_Time_Well.png  used on input line 57.
+(pdftex.def)             Requested size: 374.40143pt x 280.79764pt.
+ [5 <./export/RadialProfileOfLocalTimeDilation_Vortex-Induced_Time_Well.png>]) 
+(02_.tex [6] [7]) (03_.tex [8])
+(C:/Users\mr\IdeaProjects\VAM\auxil\GR_in_3d.bbl [9])
+(appendix_01_DerivationTimeModulation.tex
 
 appendix_01_DerivationTimeModulation.tex:6: LaTeX Error: Unicode character ↔ 
 (U+2194)
@@ -516,37 +535,42 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `GR_in_3d.out' has not changed.
-(rerunfilecheck)             Checksum: 5FE741F0DD8FE5FA51F6D9CC808DBEB7;5496.
+(rerunfilecheck)             Checksum: 2BB52798E4842901FD23DA033DB893E2;4606.
  ) 
 Here is how much of TeX's memory you used:
- 12062 strings out of 473562
- 178833 string characters out of 5721499
- 591935 words of memory out of 5000000
- 35033 multiletter control sequences out of 15000+600000
- 567315 words of font info for 71 fonts, out of 8000000 for 9000
+ 12086 strings out of 473562
+ 180614 string characters out of 5721499
+ 593760 words of memory out of 5000000
+ 35058 multiletter control sequences out of 15000+600000
+ 568256 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 79i,11n,93p,640b,518s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,11n,93p,640b,613s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\mr\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm120
 0.pk><C:/Users/mr/AppData/Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pf
 b><C:/Users/mr/AppData/Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
 C:/Users/mr/AppData/Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/
-Users/mr/AppData/Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Use
-rs/mr/AppData/Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/m
-r/AppData/Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mr/Ap
-pData/Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/mr/AppDat
-a/Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/mr/AppData/Loc
-al/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/mr/AppData/Local/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/mr/AppData/Local/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/mr/AppData/Local/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/mr/AppData/Local/MiKTeX/font
-s/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/mr/AppData/Local/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmti8.pfb><C:/Users/mr/AppData/Local/MiKTeX/fonts/type1
-/public/amsfonts/symbols/msbm10.pfb>
-Output written on C:/Users\mr\IdeaProjects\VAM\out\GR_in_3d.pdf (11 pages, 4275
-89 bytes).
+Users/mr/AppData/Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Use
+rs/mr/AppData/Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/
+mr/AppData/Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/mr/A
+ppData/Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mr/AppDa
+ta/Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/mr/AppData/L
+ocal/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/mr/AppData/Local/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/mr/AppData/Local/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/mr/AppData/Local/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/mr/AppData/Local/MiKTeX/font
+s/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/mr/AppData/Local/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmti12.pfb><C:/Users/mr/AppData/Local/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmti8.pfb><C:/Users/mr/AppData/Local/MiKTeX/fonts/type1/pu
+blic/amsfonts/symbols/msbm10.pfb>
+Output written on C:/Users\mr\IdeaProjects\VAM\out\GR_in_3d.pdf (11 pages, 6727
+73 bytes).
 PDF statistics:
- 304 PDF objects out of 1000 (max. 8388607)
- 72 named destinations out of 1000 (max. 500000)
- 190 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 299 PDF objects out of 1000 (max. 8388607)
+ 71 named destinations out of 1000 (max. 500000)
+ 176 words of extra memory for PDF output out of 10000 (max. 10000000)
 

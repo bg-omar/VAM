@@ -1,8 +1,13 @@
 # Æther Vortex Simulation Framework
 # Simulates vorticity field, pressure gradients, and local time modulation
-
-import numpy as np
+import math
+import os
+import re
+from datetime import datetime
+import matplotlib
+matplotlib.use('TkAgg')  # Ensure it uses Tkinter backend
 import matplotlib.pyplot as plt
+import numpy as np
 from matplotlib import cm
 
 # Grid setup
@@ -68,4 +73,20 @@ for ax in axs.flat:
     ax.set_ylabel("y")
 
 plt.tight_layout()
+# ✅ Get the script filename dynamically
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+# ✅ **Create a Folder for Saving Frames**
+save_folder = "export"
+if not os.path.exists(save_folder):
+    os.makedirs(save_folder, exist_ok=True)  # Ensure folder exists
+
+# Generate a unique filename using timestamp
+timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+filename = f"{script_name}.png"
+
+
+
+save_path = os.path.join(save_folder, filename)
+plt.savefig(save_path, dpi=150)  # Save image with high resolution
+
 plt.show()
