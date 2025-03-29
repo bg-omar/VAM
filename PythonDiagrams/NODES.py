@@ -1,8 +1,8 @@
 import matplotlib
-matplotlib.use('Agg')  # Use Agg backend for non-interactive plotting
+
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib.animation as animation
+from matplotlib.animation import FuncAnimation
 
 # -------------------------------------------------
 # Helper functions
@@ -55,8 +55,7 @@ def main_sim():
     fig = plt.figure(figsize=(6, 6))
     ax = fig.add_subplot(111, projection='3d')
 
-    for step in range(nsteps + 1):
-        if step % 50 == 0:  # Plot every 50 steps instead of 20
+    def update(step):
             ax.clear()
             ax.set_title(f"Vortex Rings, step={step}")
             ax.plot(ring1[:, 0], ring1[:, 1], ring1[:, 2], 'r.-', label='Ring A')
@@ -67,14 +66,13 @@ def main_sim():
             ax.set_xlabel('x')
             ax.set_ylabel('y')
             ax.set_zlabel('z')
-            if step == 0:
-                ax.legend()
-            plt.pause(0.01)
 
-        ring1 = update_vortex_positions(ring1, dt, eps=0.05)
-        ring1[-1] = ring1[0]
-        ring2 = update_vortex_positions(ring2, dt, eps=0.05)
-        ring2[-1] = ring2[0]
+
+            for ring in [ring1, ring2]:
+                ring[:] = update_vortex_positions(ring, dt, eps=0.05)
+                ring[-1] = ring[0]
+
+    ani = FuncAnimation(fig, update, frames=nsteps + 1, interval=50)
     plt.show()
 
 if __name__ == "__main__":

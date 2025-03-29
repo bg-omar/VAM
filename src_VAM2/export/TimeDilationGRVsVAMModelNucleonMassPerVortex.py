@@ -1,6 +1,14 @@
-# Re-import necessary libraries after kernel reset
-import numpy as np
+# Æther Vortex Simulation Framework
+# Simulates vorticity field, pressure gradients, and local time modulation
+import math
+import os
+import re
+from datetime import datetime
+import matplotlib
+matplotlib.use('TkAgg')  # Ensure it uses Tkinter backend
 import matplotlib.pyplot as plt
+import numpy as np
+from matplotlib import cm
 
 # Constants
 G_val = 6.67430e-11             # m^3 kg^-1 s^-2
@@ -35,7 +43,15 @@ plt.title("Time Dilation: GR vs Æther Model with Full Nucleon Mass per Vortex")
 plt.grid(True)
 plt.legend()
 plt.tight_layout()
-from mpl_toolkits.mplot3d import Axes3D
+
+# ✅ Get the script filename dynamically
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+# ✅ **Create a Folder for Saving Frames**
+
+timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+filename = f"{script_name}1.png"
+
+plt.savefig(filename, dpi=150)  # Save image with high resolution
 
 # Create 3D plot to show both curves clearly
 fig = plt.figure(figsize=(10, 6))
@@ -54,9 +70,17 @@ ax.plot(radii / 1e3, t_vortex_corrected, z_ae, label="Æther Model (m_vortex = m
 # Axes labels
 ax.set_xlabel("Radius from NS center [km]")
 ax.set_ylabel("Normalized Time Rate")
-ax.set_zlabel("Model Index (0 = GR, 1 = Æther)")
-ax.set_title("3D Comparison: GR vs Æther Model (Time Dilation)")
+ax.set_zlabel("Model Index (0 = GR, 1 = VAM)")
+ax.set_title("3D Comparison: GR vs VAM (Time Dilation)")
 ax.legend()
 plt.tight_layout()
+# ✅ Get the script filename dynamically
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+# ✅ **Create a Folder for Saving Frames**
+
+filename = f"{script_name}2.png"
+
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+
 plt.show()
 

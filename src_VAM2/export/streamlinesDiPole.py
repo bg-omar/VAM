@@ -11,7 +11,7 @@ import numpy as np
 from matplotlib import cm
 
 # Grid setup
-L = 5.0  # domain size
+L = 4.0  # domain size
 N = 200  # grid resolution
 x = np.linspace(-L, L, N)
 y = np.linspace(-L, L, N)
@@ -76,17 +76,8 @@ plt.tight_layout()
 # ✅ Get the script filename dynamically
 script_name = os.path.splitext(os.path.basename(__file__))[0]
 # ✅ **Create a Folder for Saving Frames**
-save_folder = "export"
-if not os.path.exists(save_folder):
-    os.makedirs(save_folder, exist_ok=True)  # Ensure folder exists
-
-# Generate a unique filename using timestamp
-timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 filename = f"{script_name}.png"
 
-
-
-save_path = os.path.join(save_folder, filename)
-plt.savefig(save_path, dpi=150)  # Save image with high resolution
+plt.savefig(filename, dpi=150)  # Save image with high resolution
 
 plt.show()

@@ -2,7 +2,7 @@
 %! Date = 2/15/2025
 
 \documentclass[aps,preprint,superscriptaddress]{revtex4}
-
+\usepackage[none]{hyphenat}
 \usepackage{array}
 \usepackage{booktabs}
 \usepackage{amsmath}
@@ -45,7 +45,6 @@
     \bottomrule
 \end{tabular}
 
-    Let:
 
     \begin{tabular}{ll}
         \toprule
@@ -82,25 +81,27 @@
     This mirrors the Newtonian potential but replaces mass density with vorticity intensity. This gives attractive force fields between vortex knots (like a particle).
 
 
+    %%%%%%%%%%%%%%%%%%%%%%%%%%    PART 1    %%%%%%%%%%%%%%%%%%%%%%%%%%
+    \input{01_}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%    PART 2    %%%%%%%%%%%%%%%%%%%%%%%%%%
+    \input{02_}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%    PART 3    %%%%%%%%%%%%%%%%%%%%%%%%%%
+    \input{03_}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%    PART 4    %%%%%%%%%%%%%%%%%%%%%%%%%%
+    \input{04_}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%    PART 5    %%%%%%%%%%%%%%%%%%%%%%%%%%
+    \input{05_}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%    PART 1    %%%%%%%%%%%%%%%%%%%%%%%%%%
-\input{01_}
-%%%%%%%%%%%%%%%%%%%%%%%%%%    PART 2    %%%%%%%%%%%%%%%%%%%%%%%%%%
-\input{02_}
-%%%%%%%%%%%%%%%%%%%%%%%%%%    PART 3    %%%%%%%%%%%%%%%%%%%%%%%%%%
-\input{03_}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%    References    %%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%    References    %%%%%%%%%%%%%%%%%%%%%%%%%%
 
     \bibliography{citations}
     \bibliographystyle{apsrev4-2}
 
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%    Appendices    %%%%%%%%%%%%%%%%%%%%%%%%%%
 
-    \appendix \label{sec:Part-4}
-    \input{appendix_01_DerivationTimeModulation}\label{appendix:1}
+    \appendix \label{sec:Part-6}
+    \input{appendix_01}\label{appendix:1}
+    \input{appendix_02}\label{appendix:2}
 
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.2.28)  27 MAR 2025 23:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.28)  29 MAR 2025 10:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -72,6 +72,11 @@ on)
 (C:\Users\mr\AppData\Local\MiKTeX\tex/latex/revtex4\12pt.rtx
 File: 12pt.rtx 2020/09/30 v4.0a (http://publish.aps.org/revtex4/ for documentat
 ion)
+)
+(C:\Users\mr\AppData\Local\Programs\MiKTeX\tex/latex/hyphenat\hyphenat.sty
+Package: hyphenat 2009/09/02 v2.3c hyphenation utilities
+\langwohyphens=\language79
+LaTeX Info: Redefining \_ on input line 43.
 )
 (C:\Users\mr\AppData\Local\MiKTeX\tex/latex/tools\array.sty
 Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
@@ -359,7 +364,11 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 ))
 Package: xparse 2024-08-16 L3 Experimental document command parser
 ))
-(C:/Users\mr\IdeaProjects\VAM\auxil\GR_in_3d.aux)
+(C:/Users\mr\IdeaProjects\VAM\auxil\GR_in_3d.aux
+
+LaTeX Warning: Label `LastBibItem' multiply defined.
+
+)
 \openout1 = `GR_in_3d.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
@@ -384,8 +393,7 @@ Class revtex4 Info: Unrecognized array package. Please update this document cla
 ss! (Proceeding with fingers crossed.) on input line 14.
 Class revtex4 Info: cite was not loaded (OK!) on input line 14.
 Class revtex4 Info: multicol was not loaded (OK!) on input line 14.
-
-(C:\Users\mr\AppData\Local\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+ (C:\Users\mr\AppData\Local\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count305
 \scratchdimen=\dimen171
@@ -429,95 +437,517 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 32.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1{C:/Users/mr/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (01_.tex [2
 ]
-<export/streamlinesDiPole.png, id=113, 867.24pt x 722.7pt>
+<export/streamlinesDiPole.png, id=193, 867.24pt x 722.7pt>
 File: export/streamlinesDiPole.png Graphic file (type png)
 <use export/streamlinesDiPole.png>
-Package pdftex.def Info: export/streamlinesDiPole.png  used on input line 9.
+Package pdftex.def Info: export/streamlinesDiPole.png  used on input line 7.
 (pdftex.def)             Requested size: 397.80286pt x 331.5087pt.
- [3 <./export/streamlinesDiPole.png>]
-<export/RadialProfileOfLocalTimeDilation_Radial_LocalTime_Dilation.png, id=122,
+
+Underfull \hbox (badness 2111) in paragraph at lines 14--15
+[]\OT1/cmr/m/n/12 In a clas-si-cal, in-vis-cid, in-com-press-ible fluid, Bernou
+lli's equa-tion de-scribes the
+ []
+
+[3 <./export/streamlinesDiPole.png>]
+01_.tex:17: Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.17 \frac{1}{2} \rho_\ae
+                          v^2 + p = p_0 \Rightarrow p = p_0 - \frac{1}{2} \r...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+
+LaTeX Warning: Command \ae invalid in math mode on input line 17.
+
+01_.tex:17: Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.17 ...\Rightarrow p = p_0 - \frac{1}{2} \rho_\ae
+                                                   v^2
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+
+LaTeX Warning: Command \ae invalid in math mode on input line 17.
+
+01_.tex:18: You can't use `\eqno' in math mode.
+\veqno ->\@kernel@eqno 
+                       \aftergroup \ignorespaces 
+l.18 \end{equation}
+                   
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+01_.tex:18: Missing } inserted.
+<inserted text> 
+                }
+l.18 \end{equation}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+01_.tex:18: Missing } inserted.
+<inserted text> 
+                }
+l.18 \end{equation}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+01_.tex:23: Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.23 \item $\rho_\ae
+                    $ is the constant æther density,
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+
+LaTeX Warning: Command \ae invalid in math mode on input line 23.
+
+01_.tex:23: Missing } inserted.
+<inserted text> 
+                }
+l.23 \item $\rho_\ae$
+                      is the constant æther density,
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+01_.tex:30: Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.30 ...l}}}{f_0} = 1 - \frac{\rho_\ae v^2}{2 p_0}
+                                                  
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+
+LaTeX Warning: Command \ae invalid in math mode on input line 30.
+
+01_.tex:30: Missing } inserted.
+<inserted text> 
+                }
+l.30 ...l}}}{f_0} = 1 - \frac{\rho_\ae v^2}{2 p_0}
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+01_.tex:36: Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.36 ..._0} = \left(1 - \frac{\rho_\ae v^2}{2 p_0}
+                                                  \right)^{-1}
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+
+LaTeX Warning: Command \ae invalid in math mode on input line 36.
+
+01_.tex:36: Missing } inserted.
+<inserted text> 
+                }
+l.36 ..._0} = \left(1 - \frac{\rho_\ae v^2}{2 p_0}
+                                                  \right)^{-1}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+01_.tex:42: Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.42 ...ft(1 - \frac{\rho_\ae \Omega^2 r^2}{2 p_0}
+                                                   \right)^{-1} \approx 1 + ...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+
+LaTeX Warning: Command \ae invalid in math mode on input line 42.
+
+01_.tex:42: Missing } inserted.
+<inserted text> 
+                }
+l.42 ...ft(1 - \frac{\rho_\ae \Omega^2 r^2}{2 p_0}
+                                                   \right)^{-1} \approx 1 + ...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+01_.tex:42: Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.42 ...ox 1 + \frac{\rho_\ae \Omega^2 r^2}{2 p_0}
+                                                  
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+
+LaTeX Warning: Command \ae invalid in math mode on input line 42.
+
+01_.tex:42: Missing } inserted.
+<inserted text> 
+                }
+l.42 ...ox 1 + \frac{\rho_\ae \Omega^2 r^2}{2 p_0}
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+01_.tex:48: Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.48 \frac{\rho_\ae}{p_0}
+                          \sim \frac{1}{c^2}
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+
+LaTeX Warning: Command \ae invalid in math mode on input line 48.
+
+01_.tex:48: Missing } inserted.
+<inserted text> 
+                }
+l.48 \frac{\rho_\ae}{p_0}
+                          \sim \frac{1}{c^2}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+<export/RadialProfileOfLocalTimeDilation_Radial_LocalTime_Dilation.png, id=202,
  722.7pt x 433.62pt>
 File: export/RadialProfileOfLocalTimeDilation_Radial_LocalTime_Dilation.png Gra
 phic file (type png)
 <use export/RadialProfileOfLocalTimeDilation_Radial_LocalTime_Dilation.png>
 Package pdftex.def Info: export/RadialProfileOfLocalTimeDilation_Radial_LocalTi
-me_Dilation.png  used on input line 35.
+me_Dilation.png  used on input line 60.
 (pdftex.def)             Requested size: 374.40143pt x 224.6434pt.
- [4 <./export/RadialProfileOfLocalTimeDilation_Radial_LocalTime_Dilation.png>]
-<export/RadialProfileOfLocalTimeDilation_Vortex-Induced_Time_Well.png, id=133, 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[4]
+<export/RadialProfileOfLocalTimeDilation_Vortex-Induced_Time_Well.png, id=216, 
 578.16pt x 433.62pt>
 File: export/RadialProfileOfLocalTimeDilation_Vortex-Induced_Time_Well.png Grap
 hic file (type png)
 <use export/RadialProfileOfLocalTimeDilation_Vortex-Induced_Time_Well.png>
 Package pdftex.def Info: export/RadialProfileOfLocalTimeDilation_Vortex-Induced
-_Time_Well.png  used on input line 57.
+_Time_Well.png  used on input line 87.
 (pdftex.def)             Requested size: 374.40143pt x 280.79764pt.
- [5 <./export/RadialProfileOfLocalTimeDilation_Vortex-Induced_Time_Well.png>]) 
-(02_.tex [6] [7]) (03_.tex [8])
-(C:/Users\mr\IdeaProjects\VAM\auxil\GR_in_3d.bbl [9])
-(appendix_01_DerivationTimeModulation.tex
 
-appendix_01_DerivationTimeModulation.tex:6: LaTeX Error: Unicode character ↔ 
-(U+2194)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[5 <./export/RadialProfileOfLocalTimeDilation_Radial_LocalTime_Dilation.png>]
+[6 <./export/RadialProfileOfLocalTimeDilation_Vortex-Induced_Time_Well.png>])
+(02_.tex [7] [8]) (03_.tex [9]
+
+LaTeX Warning: Command \ae invalid in math mode on input line 40.
+
+[10
+pdfTeX warning (ext4): destination with the same identifier (name{equation.24})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.46 \begin{equation}
+                     ]
+pdfTeX warning (ext4): destination with the same identifier (name{equation.24})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.46 \begin{equation}
+                     
+pdfTeX warning (ext4): destination with the same identifier (name{equation.24})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.46 \begin{equation}
+                     
+pdfTeX warning (ext4): destination with the same identifier (name{equation.24})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.46 \begin{equation}
+                     
+pdfTeX warning (ext4): destination with the same identifier (name{equation.24})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.46 \begin{equation}
+                     
+
+LaTeX Warning: Command \ae invalid in math mode on input line 47.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.24})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.54 \begin{equation}
+                     
+pdfTeX warning (ext4): destination with the same identifier (name{equation.24})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.54 \begin{equation}
+                     
+pdfTeX warning (ext4): destination with the same identifier (name{equation.24})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.54 \begin{equation}
+                     
+pdfTeX warning (ext4): destination with the same identifier (name{equation.24})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.54 \begin{equation}
+                     
+
+LaTeX Warning: Command \ae invalid in math mode on input line 55.
+
+) (04_.tex [11
+pdfTeX warning (ext4): destination with the same identifier (name{equation.24})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1 \section
+            {Kerr-Like Time Adjustment from Vorticity and Circulation}]
+Underfull \hbox (badness 10000) in paragraph at lines 1--1
+[]\OT1/cmr/bx/n/10.95 KERR-LIKE TIME AD-JUST-MENT FROM VOR-TIC-ITY AND
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.24})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.8 \begin{equation}
+                    
+pdfTeX warning (ext4): destination with the same identifier (name{equation.24})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.8 \begin{equation}
+                    
+pdfTeX warning (ext4): destination with the same identifier (name{equation.24})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.8 \begin{equation}
+                    
+pdfTeX warning (ext4): destination with the same identifier (name{equation.24})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.8 \begin{equation}
+                     [12]
+pdfTeX warning (ext4): destination with the same identifier (name{equation.24})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.32 \begin{equation}
+                     
+pdfTeX warning (ext4): destination with the same identifier (name{equation.24})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.32 \begin{equation}
+                     
+pdfTeX warning (ext4): destination with the same identifier (name{equation.24})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.32 \begin{equation}
+                     
+pdfTeX warning (ext4): destination with the same identifier (name{equation.24})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.32 \begin{equation}
+                     
+pdfTeX warning (ext4): destination with the same identifier (name{equation.24})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.42 \begin{equation}
+                     
+pdfTeX warning (ext4): destination with the same identifier (name{equation.24})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.42 \begin{equation}
+                     
+pdfTeX warning (ext4): destination with the same identifier (name{equation.24})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.42 \begin{equation}
+                     
+pdfTeX warning (ext4): destination with the same identifier (name{equation.24})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.42 \begin{equation}
+                      [13]
+Underfull \hbox (badness 3148) in paragraph at lines 66--67
+[]\OT1/cmr/m/n/12 For de-tailed deriva-tions of cross-energy and vor-tex in-ter
+-ac-tion en-er-get-ics, see
+ []
+
+) (05_.tex
+05_.tex:10: Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.10 ...vistic time dilation form when \( \rho_\ae
+                                                   / p_0 \sim 1/c^2 \).
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+
+LaTeX Warning: Command \ae invalid in math mode on input line 10.
+
+05_.tex:10: Missing } inserted.
+<inserted text> 
+                }
+l.10 ... form when \( \rho_\ae / p_0 \sim 1/c^2 \)
+                                                  .
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+[14] [15]
+Underfull \hbox (badness 1895) in paragraph at lines 68--69
+[]\OT1/cmr/bx/n/12 Reception in Main-stream Physics: \OT1/cmr/m/n/12 While nich
+e com-mu-ni-ties may en-gage,
+ []
+
+[16]) (C:/Users\mr\IdeaProjects\VAM\auxil\GR_in_3d.bbl) (appendix_01.tex
+
+appendix_01.tex:3: Class revtex4 Error: \begin{abstract} must be used before \m
+aketitle.
+
+See the revtex4 class documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \begin{abstract}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[17]
+Underfull \hbox (badness 1377) in paragraph at lines 21--24
+\OT1/cmr/m/n/12 Navier--Stokes or Eu-ler equa-tions. For in-vis-cid anal-y-ses,
+ the Eu-ler equa-tions for
+ []
+
+
+Underfull \hbox (badness 1205) in paragraph at lines 34--40
+\OT1/cmr/m/n/12 in-de-pen-dently (for in-stance, from lo-cal swirling mo-tions)
+, while $\OML/cmm/m/it/12 E[]$ \OT1/cmr/m/n/12 en-codes the
+ []
+
+[18] [19] [20]) (appendix_02.tex
+
+appendix_02.tex:5: LaTeX Error: Unicode character ↔ (U+2194)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.6     \item Charge ↔
+l.5     \item Charge ↔
                          twist or chirality of knot
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-appendix_01_DerivationTimeModulation.tex:7: LaTeX Error: Unicode character ↔ 
-(U+2194)
+appendix_02.tex:6: LaTeX Error: Unicode character ↔ (U+2194)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.7     \item Mass ↔
+l.6     \item Mass ↔
                        integrated vorticity energy
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-appendix_01_DerivationTimeModulation.tex:8: LaTeX Error: Unicode character ↔ 
-(U+2194)
+appendix_02.tex:7: LaTeX Error: Unicode character ↔ (U+2194)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.8     \item Spin ↔
+l.7     \item Spin ↔
                        knot helicity:
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-appendix_01_DerivationTimeModulation.tex:14: LaTeX Error: Unicode character ↔
- (U+2194)
+appendix_02.tex:13: LaTeX Error: Unicode character ↔ (U+2194)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.14 Stability ↔
+l.13 Stability ↔
                    knot type (Hopf links, Trefoil, etc.) and energy minimiza...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
-appendix_01_DerivationTimeModulation.tex:29: Misplaced alignment tab character 
-&.
+appendix_02.tex:28: Misplaced alignment tab character &.
 <argument> III. Thermodynamic &
                                 Quantum Behavior from Vorticity Fluctuations
-l.29 ...ntum Behavior from Vorticity Fluctuations}
+l.28 ...ntum Behavior from Vorticity Fluctuations}
                                                   
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -528,49 +958,62 @@ might try typing `S' now just to see what is salvageable.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `alignment tab' on input line 29.
+(hyperref)                removing `alignment tab' on input line 28.
 
-[10]) [11] (C:/Users\mr\IdeaProjects\VAM\auxil\GR_in_3d.aux)
+[21])
+
+Class revtex4 Warning: Endnote numbers changed: rerun LaTeX.
+
+[22] (C:/Users\mr\IdeaProjects\VAM\auxil\GR_in_3d.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `GR_in_3d.out' has not changed.
-(rerunfilecheck)             Checksum: 2BB52798E4842901FD23DA033DB893E2;4606.
+
+Package rerunfilecheck Warning: File `GR_in_3d.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `GR_in_3d.out':
+(rerunfilecheck)             Before: BE4B81D6A18927E626C3D1E6D91FCF37;10830
+(rerunfilecheck)             After:  2E3D6AD4F523DB333C7680423FBFA3DD;10946.
  ) 
 Here is how much of TeX's memory you used:
- 12086 strings out of 473562
- 180614 string characters out of 5721499
- 593760 words of memory out of 5000000
- 35058 multiletter control sequences out of 15000+600000
- 568256 words of font info for 75 fonts, out of 8000000 for 9000
+ 12273 strings out of 473562
+ 183237 string characters out of 5721499
+ 591689 words of memory out of 5000000
+ 35163 multiletter control sequences out of 15000+600000
+ 571025 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 79i,11n,93p,640b,613s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,12n,93p,796b,603s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\mr\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm120
 0.pk><C:/Users/mr/AppData/Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pf
 b><C:/Users/mr/AppData/Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
 C:/Users/mr/AppData/Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/
 Users/mr/AppData/Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Use
 rs/mr/AppData/Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/
-mr/AppData/Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/mr/A
-ppData/Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mr/AppDa
-ta/Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/mr/AppData/L
-ocal/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/mr/AppData/Local/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/mr/AppData/Local/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/mr/AppData/Local/MiKTeX/
-fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/mr/AppData/Local/MiKTeX/font
-s/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/mr/AppData/Local/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmti12.pfb><C:/Users/mr/AppData/Local/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmti8.pfb><C:/Users/mr/AppData/Local/MiKTeX/fonts/type1/pu
-blic/amsfonts/symbols/msbm10.pfb>
-Output written on C:/Users\mr\IdeaProjects\VAM\out\GR_in_3d.pdf (11 pages, 6727
-73 bytes).
+mr/AppData/Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/mr/A
+ppData/Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/mr/AppDa
+ta/Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/mr/AppData
+/Local/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mr/AppData/Loc
+al/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/mr/AppData/Local/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/mr/AppData/Local/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/mr/AppData/Local/MiKTeX/font
+s/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/mr/AppData/Local/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmsy7.pfb><C:/Users/mr/AppData/Local/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmsy8.pfb><C:/Users/mr/AppData/Local/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmti10.pfb><C:/Users/mr/AppData/Local/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmti12.pfb><C:/Users/mr/AppData/Local/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmti8.pfb><C:/Users/mr/AppData/Local/MiKTeX/fonts/type1/public/amsfon
+ts/symbols/msbm10.pfb>
+Output written on C:/Users\mr\IdeaProjects\VAM\out\GR_in_3d.pdf (22 pages, 7717
+02 bytes).
 PDF statistics:
- 299 PDF objects out of 1000 (max. 8388607)
- 71 named destinations out of 1000 (max. 500000)
- 176 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 480 PDF objects out of 1000 (max. 8388607)
+ 132 named destinations out of 1000 (max. 500000)
+ 336 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,178 +1,68 @@
-\documentclass[11pt]{article}
-\usepackage[margin=1in]{geometry}
-\usepackage{amsmath,amssymb}
-\usepackage{amsthm}
-\usepackage{graphicx}
-\usepackage{hyperref}
+\section{Kerr-Like Time Adjustment from Vorticity and Circulation}
 
-\begin{document}
+To complete the analogy between General Relativity (GR) and the Vortex Æther Model (VAM), we now derive a time modulation formula that mirrors the redshift and frame-dragging structure found in the Kerr solution. In GR, the Kerr metric describes the spacetime geometry around a rotating mass, predicting both gravitational time dilation and frame-dragging due to angular momentum. VAM captures similar phenomena through the dynamics of structured vorticity and circulation in the æther, without requiring spacetime curvature.
 
-\title{Foundations of Velocity Fields and Energies in a Vortex System: A Brief Article}
-\author{(VAM Working Group)}
-\date{\today}
-\maketitle
+\subsection*{A. General Relativistic Kerr Redshift Structure}
 
-\begin{abstract}
-This article outlines theoretical foundations of vortical velocity fields and their associated energies,
-including a distinction between self- and cross-energies, in the context of a generic vortex-based model.
-We close with a derivation outline for the cross-energy term, highlighting its application in vortex dynamics
-and fluid–structure interactions.
-\end{abstract}
-
-\section{Introduction}
-Vortex dynamics are a core component of many fluid and plasma systems, including
-tornado-like flows, knotted vortices in classical or superfluid turbulence, and various
-complex topological fluid systems. A deeper understanding of the energy budgets
-associated with these flows can shed light on processes like vortex stability, reconnection,
-and global flow organization. We begin by motivating how velocity fields can be
-decomposed so as to capture the total energy (i.e.\ self- plus cross-energy), and how
-this approach helps track flows in both 2D and 3D.
-
-\section{Foundations: Velocity Fields and Total (Self + Cross) Energy}
-\label{sec:foundations}
-In an incompressible fluid, the velocity field $\mathbf{u}(\mathbf{x}, t)$ is typically
-governed by the Navier--Stokes or Euler equations. For inviscid analyses, the Euler
-equations for incompressible flow read
+In the GR Kerr metric, the proper time $d\tau$ for an observer near a rotating mass is affected by both mass-energy and angular momentum. A simplified approximation for the time dilation factor near a rotating body is:
 \begin{equation}
-  \frac{\partial \mathbf{u}}{\partial t} + (\mathbf{u} \cdot \nabla)\mathbf{u} = -\frac{1}{\rho}\nabla p,
-  \quad \nabla \cdot \mathbf{u} = 0.
+    t_{\text{adjusted}} = \Delta t \cdot \sqrt{1 - \frac{2GM}{rc^2} - \frac{J^2}{r^3c^2}}
+    \tag{22}
 \end{equation}
-We also consider the vorticity $\boldsymbol{\omega} = \nabla \times \mathbf{u}$,
-which can be used to characterize vortex structures.
+where:
+\begin{itemize}
+    \item $M$: mass of the rotating body,
+    \item $J$: angular momentum,
+    \item $r$: radial distance from the source,
+    \item $G$: Newton’s gravitational constant,
+    \item $c$: speed of light.
+\end{itemize}
 
-To understand the \emph{total} kinetic energy, we can split it as follows:
+The first term corresponds to gravitational redshift from mass, while the second accounts for rotational (frame-dragging) effects.
+
+\subsection*{B. Æther Analog via Vorticity and Circulation}
+
+In VAM, we express gravitational-like influences through vorticity intensity $\langle \omega^2 \rangle$ and total circulation $\kappa$. These are interpreted as:
+\begin{itemize}
+    \item $\langle \omega^2 \rangle$: mean squared vorticity over a region,
+    \item $\kappa$: conserved circulation, encoding angular momentum.
+\end{itemize}
+
+We define the æther-based analog by making the replacements:
 \begin{equation}
-  E_{\text{total}} \;=\; E_{\text{self}} \;+\; E_{\text{cross}}.
+    \begin{aligned}
+        \frac{2GM}{rc^2} &\rightarrow \frac{\gamma \langle \omega^2 \rangle}{rc^2}, \\
+        \frac{J^2}{r^3c^2} &\rightarrow \frac{\kappa^2}{r^3c^2}
+    \end{aligned}
+    \tag{23}
 \end{equation}
-Here, $E_{\text{self}}$ is that portion of energy which each vortex or partial flow
-element contributes independently (for instance, from local swirling motions), while
-$E_{\text{cross}}$ encodes the contributions that arise from the interaction of different
-vortical elements. In a multi-vortex scenario, such a decomposition helps isolate the
-direct interaction between two (or more) vortex filaments or sheets.
 
-\section{Momentum and Self-Energy Considerations}
-\label{sec:momentum}
-A starting point is to recall that for a single vortex of circulation $\Gamma$, with an
-azimuthally symmetric core, the induced velocity is sometimes approximated by
-classical results such as
+Here, $\gamma$ is a coupling constant relating vorticity to effective gravitational strength (analogous to $G$). Then the æther-based proper time becomes:
+
 \begin{equation}
-   V \;=\; \frac{\Gamma}{4 \pi R}
-   \bigl(\ln \tfrac{8 R}{a} - \beta \bigr),
+    \boxed{t_{\text{adjusted}} = \Delta t \cdot \sqrt{1 - \frac{\gamma \langle \omega^2 \rangle}{rc^2} - \frac{\kappa^2}{r^3c^2}}}
+    \tag{Kerr-Like Time Dilation from Vorticity and Circulation}
 \end{equation}
-where $R$ is the main vortex loop radius, $a \ll R$ is a measure of core thickness,
-and $\beta$ depends on details of the core model \cite{Saffman1992}. The
-\emph{self-energy} associated with that vortex, $E_{\text{self}}$, can be cast in a
-similar form that depends on $\ln(R/a)$, exemplifying how thin-core vortices'
-energies scale with geometry.
 
-In more general fluid or vortex-lattice models, we can track $E_{\text{self}}$ as the
-sum of individual core energies. Further, the presence of multiple filaments modifies
-the total energy by cross-terms of the velocity fields (the cross-energy). This
-cross-energy often drives key phenomena such as vortex merging or the `recoil'
-effects in wave--vortex interactions.
+This formulation preserves the structure of Kerr’s redshift and frame-dragging effects, now recast in terms of measurable fluid-dynamic quantities. In this picture:
+\begin{itemize}
+    \item $\langle \omega^2 \rangle$ plays the role of energy density producing gravitational redshift,
+    \item $\kappa$ represents angular momentum generating temporal frame-dragging,
+    \item The equation reduces to flat æther time ($t_{\text{adjusted}} \to \Delta t$) when both terms vanish.
+\end{itemize}
 
-\section{Defining and Tracking Cross-Energy}
-\label{sec:cross}
-When multiple vortices (or partial velocity distributions) co-exist, the total velocity
-field $\mathbf{u}$ can be superposed:
-\begin{equation}
-   \mathbf{u} \;=\; \mathbf{u}_1 \;+\;\mathbf{u}_2,
-\end{equation}
-where $\mathbf{u}_1$ and $\mathbf{u}_2$ come from distinct sub-systems. In that
-scenario, the kinetic energy for a fluid volume $V$ is
-\begin{align}
-   E_{\text{total}} &= \frac{\rho}{2} \int_V \mathbf{u}^2 \,dV
-   = \frac{\rho}{2} \int_V \bigl(\mathbf{u}_1 + \mathbf{u}_2 \bigr)^2\, dV \\
-   &= \frac{\rho}{2} \int_V \mathbf{u}_1^2 \,dV \;+\;\frac{\rho}{2} \int_V \mathbf{u}_2^2 \, dV
-   \;+\;\rho \int_V \mathbf{u}_1 \cdot \mathbf{u}_2 \, dV,
-\end{align}
-revealing an interaction or \emph{cross-energy} term
-\begin{equation}
-   E_{\text{cross}} \;=\; \rho \int_V \mathbf{u}_1 \cdot \mathbf{u}_2 \, dV.
-   \label{eq:cross-term}
-\end{equation}
-Much of the interesting physics arises from \eqref{eq:cross-term}, because it
-grows or shrinks depending on the vortex geometry and distance between them.
-Its dynamical evolution can lead to, e.g., merging or rebound. A main point is that
-each vortex's self-velocity can significantly affect the mutual velocities and thus
-create net forces or torque.
+\subsection*{C. Model Assumptions and Scope}
 
-\section{Applications to Helicity and Topological Flows}
-\label{sec:helicity}
-A related concept is helicity, measuring the topological complexity (knotting or
-linking) of vortex tubes. Classically, helicity $H$ is given by
-\begin{equation}
-   H \;=\; \int_V \mathbf{u} \cdot \boldsymbol{\omega}\, dV,
-\end{equation}
-which can remain constant or be partially lost during reconnection events. In certain
-dissipative flows, the cross-energy terms in \eqref{eq:cross-term} can influence
-the effective rate of helicity change. Understanding $E_{\text{cross}}$ is important
-for analyzing reconnection pathways in classical or superfluid turbulence.
+This result depends on several assumptions:
+\begin{itemize}
+    \item The flow is irrotational outside the vortex cores,
+    \item Viscosity and turbulence are neglected,
+    \item Compressibility is ignored (ideal incompressible superfluid),
+    \item Vorticity fields are sufficiently smooth to define $\langle \omega^2 \rangle$.
+\end{itemize}
 
-\section{Derivation Outline for Cross-Energy}
-\label{sec:derivation}
-Finally, we provide a succinct outline for deriving the cross-energy expression.
-Starting with the total velocity field $\mathbf{u} = \sum_{n=1}^N \mathbf{u}_n$
-for $N$ vortex or partial velocity fields, the total kinetic energy is:
-\begin{equation}
-   E_{\text{total}}
-   = \frac{\rho}{2} \int_V \left(\sum_{n=1}^N \mathbf{u}_n \right)^2 dV
-   = \frac{\rho}{2} \sum_{n=1}^N \int_V \mathbf{u}_n^2 \, dV
-      \;+\;\rho \sum_{n<m} \int_V \mathbf{u}_n \cdot \mathbf{u}_m \, dV.
-\end{equation}
-One obtains $N$ self-energy terms plus pairwise cross-energy integrals.
-The cross-energy for a pair $(i,j)$ is:
-\begin{equation}
-   E_{\text{cross}}^{(ij)} \;=\; \rho \int_V \mathbf{u}_i \cdot \mathbf{u}_j \, dV.
-\end{equation}
-In practice, each $\mathbf{u}_n$ may be represented by known solutions of the
-Stokes or potential flow equations, or from approximate solutions for vortex loops.
-Then, either analytically or numerically, one obtains approximate cross-energies
-that can be used in reduced models describing the evolution of multi-vortex
-systems.
+These conditions mirror the assumptions of ideal fluid GR analog models. The formulation bridges the macroscopic flow dynamics of the æther with effective geometric predictions, reinforcing the possibility of replacing curved spacetime with structured vorticity fields.
 
-\section*{Conclusion}
-We have surveyed how the total fluid kinetic energy in the presence of multiple
-vortices can be split into self- and cross-energy terms. These cross-energy
-contributions are crucial for understanding vortex merging, knotted vortex
-untangling, or vortex–wave interactions in classical, superfluid, and plasma
-flows. In addition, we have sketched a systematic derivation of cross-energy and
-highlighted key aspects in discussing momentum and helicity. Future directions
-include refining these expressions for axisymmetric or knotted vortices and
-integrating them into large-scale models or computational frameworks.
+For detailed derivations of cross-energy and vortex interaction energetics, see Appendix~\ref{appendix:1}.
 
-\begin{thebibliography}{99}
-
-\bibitem{Saffman1992}
-P.~G. Saffman,
-\textit{Vortex Dynamics},
-Cambridge University Press, 1992.
-
-\bibitem{BabinskyStevens2016}
-H. Babinsky and R. Stevens,
-Low-order modeling approaches for unsteady aero flows,
-\textit{Exp. Fluids}, \textbf{57} (2016), 71--85.
-
-\bibitem{AndreuAngulo2020}
-I. Andreu-Angulo, C. Manzo, B. Basu and H. Babinsky,
-On unsteady aerodynamic effect of strong wind gusts on small-scale rotor systems,
-\textit{AIAA J.}, \textbf{58} (2020), 5041--5056.
-
-\bibitem{Wu1981}
-J.-Z. Wu,
-Theory of Vorticity and Vortex Dynamics,
-Springer, 1981.
-
-\bibitem{LiWu2018}
-M. Li and J.-Z. Wu,
-Generalized vortex force maps for the unsteady lift,
-\textit{Theor. Comput. Fluid Dyn.} \textbf{32} (2018), 695--710.
-
-\bibitem{KlecknerIrvine2013}
-D. Kleckner and W. T. M. Irvine,
-Creation and dynamics of knotted vortices,
-\textit{Nature Phys.}, \textbf{9} (2013), 253--258.
-
-\end{thebibliography}
-
-\end{document}
+In future work, corrections for boundary conditions, quantized vorticity spectra, and compressible effects may be added to refine the analogy. Next, we will summarize how these fluid-based time dilation mechanisms unify under the VAM framework and identify their experimental implications.
