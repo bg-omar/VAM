@@ -1,0 +1,124 @@
+%! Author = mr
+%! Date = 3/29/2025
+
+
+\chapter*{VAM Vortex Scattering Framework (Inspired by Elastic Theory)}
+
+\section*{1. Governing Equations of VAM Vorticity Dynamics}
+
+\subsection*{1.1 Vorticity Transport Equation (Linearized Form)}
+
+In the Vortex Æther Model (VAM), the dynamics of the vorticity field \(\vec{\omega} = \nabla \times \vec{v}\) are governed by the Euler equation and its vorticity form:
+
+\[
+\frac{\partial \omega_i}{\partial t} + v_j \partial_j \omega_i = \omega_j \partial_j v_i
+\]
+
+This nonlinear structure implies vortex deformation due to stretching and advection. For small perturbations \(\delta\omega\) near a background vortex knot field \(\omega^{(0)}\), linearization gives:
+
+\[
+\frac{\partial (\delta \omega_i)}{\partial t} + v_j^{(0)} \partial_j (\delta \omega_i) \approx \omega_j^{(0)} \partial_j (\delta v_i)
+\]
+
+Define the VAM linear response operator \(\mathcal{L}_{ij}\):
+
+\[
+\mathcal{L}_{ij} \, \delta v_j(\vec{r}) = \delta F_i^{\text{vortex}}(\vec{r})
+\]
+
+\subsection*{1.2 Vorticity Green Tensor Equation}
+
+\[
+\mathcal{L}_{ij} \, \mathcal{G}_{jk}(\vec{r}, \vec{r}') = -\delta_{ik} \, \delta(\vec{r} - \vec{r}')
+\]
+
+The induced velocity field \(v_i\) from a source vortex forcing \(F_k(\vec{r}')\) is then:
+
+\[
+v_i(\vec{r}) = \int \mathcal{G}_{ik}(\vec{r}, \vec{r}') \, F_k^{\text{vortex}}(\vec{r}') \, d^3 r'
+\]
+
+\section*{2. VAM Scattering Theory for Vortex Knots}
+
+\subsection*{2.1 Born Approximation for Vorticity Perturbations}
+
+Assume an incident vorticity potential \(\Phi^{(0)}(\vec{r})\) encounters a vortex knot at \(\vec{r}_k\). The scattered vorticity field becomes:
+
+\[
+\Phi(\vec{r}) = \Phi^{(0)}(\vec{r}) + \int \mathcal{G}_{ij}(\vec{r}, \vec{r}') \, \delta \mathcal{V}_{jk}(\vec{r}') \, v_k^{(0)}(\vec{r}') \, d^3r'
+\]
+
+Here, \(\delta \mathcal{V}_{jk}\) represents a vorticity polarizability tensor associated with the knot—a VAM analog to elastic moduli perturbation.
+
+\section*{3. Æther Stress Tensor and Energy Flux}
+
+\subsection*{3.1 VAM Stress Tensor}
+
+\[
+\mathcal{T}_{ij} = \rho_\ae \, v_i v_j - \frac{1}{2} \delta_{ij} \rho_\ae v^2
+\]
+
+\subsection*{3.2 Æther Vorticity Force Density}
+
+\[
+f_i^{\text{vortex}} = \partial_j \mathcal{T}_{ij}
+\]
+
+\subsection*{3.3 Vorticity Energy Flux}
+
+\[
+\vec{S}_\omega = - \mathcal{T} \cdot \vec{v}
+\]
+
+This vector captures energy transfer through vortex knot interactions and defines scattering "cross sections" via the divergence \(\nabla \cdot \vec{S}_\omega\).
+
+\section*{4. Time Dilation and Knot Scattering}
+
+\subsection*{4.1 Time Dilation from Knot Rotation}
+
+Let the incident vorticity field induce localized time slowing due to a knot’s rotational energy:
+
+\[
+\frac{t_{\text{local}}}{t_{\infty}} = \left(1 + \frac{1}{2} \alpha I \Omega_k^2 \right)^{-1}
+\]
+
+In the Born approximation, the change in proper time near a knot under external vorticity flow is:
+
+\subsection*{4.2 Scattered Correction from External Field}
+
+\[
+\delta \left( \frac{t_{\text{local}}}{t_{\infty}} \right) \approx - \frac{1}{2} \alpha I \Omega_k \, \delta \Omega_k
+\]
+
+\[
+\delta \Omega_k \sim \int \chi(\vec{r}_k - \vec{r}') \cdot \vec{\omega}^{(0)}(\vec{r}') \, d^3r'
+\]
+
+Here, \(\chi\) is the topological vortex susceptibility kernel.
+
+
+
+\section*{5. Summary of VAM-Inspired Scattering Constructs}
+
+\begin{table}
+    \centering
+    \begin{tabular}{lll}
+        \toprule
+        \textbf{Concept} & \textbf{Elastic Theory} & \textbf{VAM Analog} \\
+        \midrule
+        Medium property & cijklc_{ijkl} & ρ\ae,Ωk,κ\rho_\ae, \Omega_k, \kappa \\
+        Wavefield & Displacement uiu_i & Velocity viv_i \\
+        Source & Body force fif_i & Vorticity forcing FivortexF_i^{\text{vortex}} \\
+        Green function & Gij(r⃗,r⃗′)G_{ij}(\vec{r}, \vec{r}') & Gij(r⃗,r⃗′)\mathcal{G}_{ij}(\vec{r}, \vec{r}') \\
+        Stress tensor & τij\tau_{ij} & Tij\mathcal{T}_{ij} \\
+        Energy flux & JP,i=−τiju˙jJ_{P,i} = -\tau_{ij} \dot{u}_j & Sω,i=−TijvjS_{\omega,i} = -\mathcal{T}_{ij} v_j \\
+        Time dilation mechanism & GR metric gμνg_{\mu\nu} & Ωk,κ,⟨ω2⟩\Omega_k, \kappa, \langle \omega^2 \rangle \\
+        \bottomrule
+    \end{tabular}
+    \caption{}
+    \label{tab:}
+\end{table}
+
+
+This scattering framework generalizes classical elastic analogs into a topologically and energetically motivated Ætheric formalism. It enables the computation of field modifications, time dilation effects, and energy flux due to stable, interacting vortex knots in the Vortex Æther Model (VAM).
+
