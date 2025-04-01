@@ -1,20 +1,20 @@
 \section{Time Dilation from Vortex Dynamics}\label{sec:Part-1}
 
-    We consider an inviscid, irrotational superfluid æther with stable topological vortex knots. Absolute time $t_{\text{abs}}$ always ticks constant, while local clocks might experience slowed rates due to pressure gradients and knot energetics. The Vortex Æther Model posits that the rate at which time flows in the local frame (near the knot) depends on the internal angular frequency $\Omega_k$. In this section, we derive time dilation analogues inspired by the predictions of general relativity (GR), based solely on pressure and vorticity gradients in the fluid.
+    We consider an inviscid, irrotational superfluid æther with stable topological vortex knots. Absolute time $t_{\text{abs}}$ flows at a constant rate, while local clocks might experience slowed rates due to pressure gradients and knot energetics. The Vortex Æther Model posits that the rate at which time flows in the local frame (near the knot) depends on the internal angular frequency $\Omega_k$. In this section, we derive time dilation analogues inspired by the predictions of general relativity (GR), based solely on pressure and vorticity gradients in the fluid.
 
-\begin{figure}[h!]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.85\textwidth]{export/streamlinesDiPole}
+    \includegraphics[width=0.85\textwidth]{streamlinesDiPole}
     \caption{Velocity streamlines, vorticity, pressure, and local time rate $\tau$ for a simulated vortex pair. The pressure minimum and time slow-down clearly align with the regions of high vorticity. This directly illustrates the æther model's central claim: time dilation follows from vortex energetics and pressure depletion.}
     \label{fig:vortexfields}
 \end{figure}
 
-\subsection*{A. Bernoulli Flow and Local Time Depletion}
+\subsection{Bernoulli Flow and Local Time Depletion}
 
 In a classical, inviscid, incompressible fluid, Bernoulli's equation describes the conservation of energy in a flow:
 
 \begin{equation}
-    \frac{1}{2} \rho_{\text{\ae}}  v^2 + p = p_0 \Rightarrow p = p_0 - \frac{1}{2} \rho_{\text{\ae}} v^2
+    \frac{1}{2} \rho_{\text{\ae}}  v^2 + p = p_0 \Rightarrow p = p_0 - \frac{1}{2} \rho_{\text{\ae}} v^2\label{eq:bernoulli}
 \end{equation}
 
 Here:
@@ -27,65 +27,65 @@ Here:
 Assuming that clock rate is proportional to pressure (i.e., time slows in low-pressure regions), we relate the local clock frequency to the background as:
 
 \begin{equation}
-\frac{f_{\text{local}}}{f_0} = 1 - \frac{\rho_{\text{\ae}} v^2}{2 p_0}
+    \frac{f_{\text{local}}}{f_0} = 1 - \frac{\rho_{\text{\ae}} v^2}{2 p_0}\label{eq:local_clock_frequency}
 \end{equation}
 
 Hence, time dilation is:
 
 \begin{equation}
-    \frac{t_{\text{local}}}{t_0} = \left(1 - \frac{\rho_{\text{\ae}} v^2}{2 p_0}\right)^{-1}
+    \frac{t_{\text{local}}}{t_0} = \left(1 - \frac{\rho_{\text{\ae}} v^2}{2 p_0}\right)^{-1}\label{eq:time_dilation}
 \end{equation}
 
 For rotational flow, with $v = \Omega r$,
 
 \begin{equation}
-    \frac{t_{\text{local}}}{t_0} = \left(1 - \frac{\rho_{\text{\ae}} \Omega^2 r^2}{2 p_0} \right)^{-1} \approx 1 + \frac{\rho_{\text{\ae}}\Omega^2 r^2}{2 p_0}
+    \frac{t_{\text{local}}}{t_0} = \left(1 - \frac{\rho_{\text{\ae}} \Omega^2 r^2}{2 p_0} \right)^{-1} \approx 1 + \frac{\rho_{\text{\ae}}\Omega^2 r^2}{2 p_0}\label{eq:time_dilation_rotational}
 \end{equation}
 
 This expression recovers the first-order time dilation analog if we define the dimensionless coupling:
 
 \begin{equation}
-    \frac{\rho_{\text{\ae}}}{p_0} \sim \frac{1}{c^2}
+    \frac{\rho_{\text{\ae}}}{p_0} \sim \frac{1}{c^2}\label{eq:dimensionless_coupling}
 \end{equation}
 
 This motivates the analogy to relativistic time dilation:
 
 \begin{equation}
-    \frac{t_{\text{moving}}}{t_\text{rest}} \approx 1 + \frac{v^2}{2 c^2}
+    \frac{t_{\text{moving}}}{t_\text{rest}} \approx 1 + \frac{v^2}{2 c^2}\label{eq:relativistic_time_dilation}
 \end{equation}
 
-\begin{figure}[h!]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{export/RadialProfileOfLocalTimeDilation_Vortex-Induced_Time_Well}
+    \includegraphics[width=0.8\textwidth]{RadialProfileOfLocalTimeDilation_Vortex-Induced_Time_Well}
     \caption{Schematic of a vortex-induced time well in the æther. Local time $t_{\text{local}} / t_{\text{abs}}$ is shown as a color gradient in 2D space. The central vortex region exhibits the most time slowing due to high $\Omega_k$, forming a well-like structure.}
     \label{fig:vortex_time_well}
 \end{figure}
 
 
-\subsection*{B. Heuristic Knot-Based Time Modulation}
+\subsection{Heuristic Knot-Based Time Modulation}
 
 Topological vortex knots have intrinsic angular frequency $\Omega_k$, conserved due to vorticity confinement. We introduce a first-principles motivated
 time dilation expression:
 
 \begin{equation}
-\frac{t_{\text{local}}}{t_{\text{abs}}} = \left(1 + \alpha \Omega_k^2 \right)^{-1}
+\frac{t_{\text{local}}}{t_{\text{abs}}} = \left(1 + \alpha \Omega_k^2 \right)^{-1}\label{eq:angular_time_dilation}
 \end{equation}
 
 where $\alpha$ is a coupling parameter with dimensions $[\alpha] = \text{s}^2$. Expanding for small $\Omega_k$:
 
 \begin{equation}
-\frac{t_{\text{local}}}{t_{\text{abs}}} \approx 1 - \alpha \Omega_k^2 + \mathcal{O}(\Omega_k^4)
+\frac{t_{\text{local}}}{t_{\text{abs}}} \approx 1 - \alpha \Omega_k^2 + \mathcal{O}(\Omega_k^4)\label{eq:angular_time_dilation_expansion}
 \end{equation}
 
-This form mirrors the expansion of the Lorentz factor:
+This form parallels the Lorentz factor expansion:
 
 \begin{equation}
-\frac{t_{\text{moving}}}{t_{\text{rest}}} \approx 1 - \frac{v^2}{2 c^2}
+\frac{t_{\text{moving}}}{t_{\text{rest}}} \approx 1 - \frac{v^2}{2 c^2}\label{eq:lorentz_time_dilation}
 \end{equation}
 
-\begin{figure}[h!]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{export/RotationalVsHeuristicTimeDilation}
+    \includegraphics[width=0.8\textwidth]{RotationalVsHeuristicTimeDilation}
     \caption{\textbf{Comparison: Heuristic vs Rotational Time Dilation (\(\Omega_k \propto 1/r^2\))}.
     This graph compares two models of time modulation within the Vortex Æther framework.
     The heuristic model (green) assumes time rate reduction proportional to \((1 + \alpha \Omega_k^2)^{-1}\),
@@ -97,31 +97,32 @@ This form mirrors the expansion of the Lorentz factor:
     \label{fig:radial_time_profile}
 \end{figure}
 
-\subsection*{C. Time Dilation from Rotational Inertia}
+\subsection{Time Dilation from Rotational Inertia}
 
 We now ground the heuristic form in physical energetics. For a knot with moment of inertia $I$, the rotational energy is:
 
 \begin{equation}
-E_{\text{rot}} = \frac{1}{2} I \Omega_k^2
+E_{\text{rot}} = \frac{1}{2} I \Omega_k^2\label{eq:rotational_energy}
 \end{equation}
 
 Thus, the time dilation becomes:
 
 \begin{equation}
-\frac{t_{\text{local}}}{t_{\text{abs}}} = \left(1 + \alpha E_{\text{rot}} \right)^{-1} = \left(1 + \frac{1}{2} \alpha I \Omega_k^2 \right)^{-1}
+\frac{t_{\text{local}}}{t_{\text{abs}}} = \left(1 + \alpha E_{\text{rot}} \right)^{-1} = \left(1 + \frac{1}{2} \alpha I \Omega_k^2 \right)^{-1}\label{eq:time_dilation_rotational_energy}
 \end{equation}
 
-This boxed equation is the core result of this section:
+This is the key result:
 
 \begin{equation}
-\boxed{\frac{t_{\text{local}}}{t_{\text{abs}}} = \left(1 + \frac{1}{2} \alpha I \Omega_k^2 \right)^{-1}}
+    \boxed{\frac{t_{\text{local}}}{t_{\text{abs}}} = \left(1 + \frac{1}{2} \alpha I \Omega_k^2 \right)^{-1}}
+    \label{eq:localtime_vortex}
 \end{equation}
 
-\subsection*{D. Summary of Model Hierarchy}
+\subsection{Summary of Model Hierarchy}
 
 \begin{itemize}
 \item Pressure-Based (Bernoulli): Time slows in low-pressure zones due to vortex velocity.
-\item Heuristic Angular Model: Time slows as a function of $\Omega_k^2$.
+\item Heuristic Angular Model: Time slows proportionally to $\Omega_k^2$.
 \item Energetic Model: Time flow depends on stored rotational energy in the knot.
 \end{itemize}
 

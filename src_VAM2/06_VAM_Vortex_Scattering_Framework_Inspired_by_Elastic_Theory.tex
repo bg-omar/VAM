@@ -4,9 +4,9 @@
 
 \section{VAM Vortex Scattering Framework (Inspired by Elastic Theory)}
 
-\subsection*{1. Governing Equations of VAM Vorticity Dynamics}
+\subsection{Governing Equations of VAM Vorticity Dynamics}
 
-\subsection*{1.1 Vorticity Transport Equation (Linearized Form)}
+\subsubsection*{Vorticity Transport Equation (Linearized Form)}
 
 In the Vortex Æther Model (VAM), the dynamics of the vorticity field \(\vec{\omega} = \nabla \times \vec{v}\) are governed by the Euler equation and its vorticity form:
 
@@ -26,7 +26,7 @@ Define the VAM linear response operator \(\mathcal{L}_{ij}\):
 \mathcal{L}_{ij} \, \delta v_j(\vec{r}) = \delta F_i^{\text{vortex}}(\vec{r})
 \]
 
-\subsection*{1.2 Vorticity Green Tensor Equation}
+\subsubsection*{Vorticity Green Tensor Equation}
 
 \[
 \mathcal{L}_{ij} \, \mathcal{G}_{jk}(\vec{r}, \vec{r}') = -\delta_{ik} \, \delta(\vec{r} - \vec{r}')
@@ -38,9 +38,34 @@ The induced velocity field \(v_i\) from a source vortex forcing \(F_k(\vec{r}')\
 v_i(\vec{r}) = \int \mathcal{G}_{ik}(\vec{r}, \vec{r}') \, F_k^{\text{vortex}}(\vec{r}') \, d^3 r'
 \]
 
-\section*{2. VAM Scattering Theory for Vortex Knots}
+\subsection{Vortex Thread Interaction}
+Interactions arise from exchange of vorticity or reconnections between vortex filaments:
+\begin{itemize}
+    \item Attractive if threads reinforce circulation (parallel)
+    \item Repulsive if threads cancel (antiparallel)
+    \item Interaction strength:
+\end{itemize}
+\begin{equation}
+    \vec{F}_{\text{int}} = \beta \cdot \kappa_1 \kappa_2 \cdot \frac{\vec{r}_{12} \times (\vec{v}_1 - \vec{v}_2)}{|\vec{r}_{12}|^3}\label{eq:interaction_strength}
+\end{equation}
+Where \(\kappa_i\) are circulations of filaments and \(\vec{r}_{12}\) is the vector between them.
 
-\subsection*{2.1 Born Approximation for Vorticity Perturbations}
+\subsection{Thermodynamic \& Quantum Behavior from Vorticity Fluctuations}
+\begin{itemize}
+    \item Entropy \(\leftrightarrow\) volume of vortex expansion or knot deformation
+    \item Quantum transitions \(\leftrightarrow\) topological reconnection events
+    \item Zero-point motion \(\leftrightarrow\) background quantum turbulence of the Æther:
+\end{itemize}
+
+\subsubsection*{Quantum Vorticity Background}
+\begin{equation}
+    \langle \omega^2 \rangle \sim \frac{\hbar}{\rho_\text{æ} \xi^4}\label{eq:quantum_vorticity_background}
+\end{equation}
+Where \(\xi\) is the coherence length between vortex filaments.
+
+\subsection{VAM Scattering Theory for Vortex Knots}
+
+\subsubsection*{Born Approximation for Vorticity Perturbations}
 
 Assume an incident vorticity potential \(\Phi^{(0)}(\vec{r})\) encounters a vortex knot at \(\vec{r}_k\). The scattered vorticity field becomes:
 
@@ -50,21 +75,21 @@ Assume an incident vorticity potential \(\Phi^{(0)}(\vec{r})\) encounters a vort
 
 Here, \(\delta \mathcal{V}_{jk}\) represents a vorticity polarizability tensor associated with the knot—a VAM analog to elastic moduli perturbation.
 
-\section*{3. Æther Stress Tensor and Energy Flux}
+\subsection{Æther Stress Tensor and Energy Flux}
 
-\subsection*{3.1 VAM Stress Tensor}
+\subsubsection*{VAM Stress Tensor}
 
 \[
 \mathcal{T}_{ij} = \rho_{\text{\ae}} \, v_i v_j - \frac{1}{2} \delta_{ij} \rho_{\text{\ae}} v^2
 \]
 
-\subsection*{3.2 Æther Vorticity Force Density}
+\subsubsection*{Æther Vorticity Force Density}
 
 \[
 f_i^{\text{vortex}} = \partial_j \mathcal{T}_{ij}
 \]
 
-\subsection*{3.3 Vorticity Energy Flux}
+\subsubsection*{Vorticity Energy Flux}
 
 \[
 \vec{S}_\omega = - \mathcal{T} \cdot \vec{v}
@@ -72,9 +97,9 @@ f_i^{\text{vortex}} = \partial_j \mathcal{T}_{ij}
 
 This vector captures energy transfer through vortex knot interactions and defines scattering "cross sections" via the divergence \(\nabla \cdot \vec{S}_\omega\).
 
-\section*{4. Time Dilation and Knot Scattering}
+\subsection{Time Dilation and Knot Scattering}
 
-\subsection*{4.1 Time Dilation from Knot Rotation}
+\subsubsection*{Time Dilation from Knot Rotation}
 
 Let the incident vorticity field induce localized time slowing due to a knot’s rotational energy:
 
@@ -84,24 +109,21 @@ Let the incident vorticity field induce localized time slowing due to a knot’s
 
 In the Born approximation, the change in proper time near a knot under external vorticity flow is:
 
-\subsection*{4.2 Scattered Correction from External Field}
+\subsubsection*{Scattered Correction from External Field}
 
-\[
-\delta \left( \frac{t_{\text{local}}}{t_{\infty}} \right) \approx - \frac{1}{2} \alpha I \Omega_k \, \delta \Omega_k
-\]
-
-\[
-\delta \Omega_k \sim \int \chi(\vec{r}_k - \vec{r}') \cdot \vec{\omega}^{(0)}(\vec{r}') \, d^3r'
-\]
+\begin{gather*}
+    \delta \left( \frac{t_{\text{local}}}{t_{\infty}} \right) \approx - \frac{1}{2} \alpha I \Omega_k \, \delta \Omega_k\\
+    \delta \Omega_k \sim \int \chi(\vec{r}_k - \vec{r}') \cdot \vec{\omega}^{(0)}(\vec{r}') \, d^3r'\\
+\end{gather*}
 
 Here, \(\chi\) is the topological vortex susceptibility kernel.
 
 
 
-\section*{5. Summary of VAM-Inspired Scattering Constructs}
+\subsection{Summary of VAM-Inspired Scattering Constructs}
 
 
-\begin{table}[h!]
+\begin{table}[htbp]
     \centering
     \begin{tabular}{lll}
         \toprule

@@ -16,14 +16,14 @@ governed by the Navier--Stokes or Euler equations. For inviscid analyses, the Eu
 equations for incompressible flow read
 \begin{equation}
   \frac{\partial \mathbf{u}}{\partial t} + (\mathbf{u} \cdot \nabla)\mathbf{u} = -\frac{1}{\rho}\nabla p,
-  \quad \nabla \cdot \mathbf{u} = 0.
+  \quad \nabla \cdot \mathbf{u} = 0.\label{eq:appendix:Euler}
 \end{equation}
 We also consider the vorticity $\boldsymbol{\omega} = \nabla \times \mathbf{u}$,
 which can be used to characterize vortex structures.
 
 To understand the \emph{total} kinetic energy, we can split it as follows:
 \begin{equation}
-  E_{\text{total}} \;=\; E_{\text{self}} \;+\; E_{\text{cross}}.
+  E_{\text{total}} \;=\; E_{\text{self}} \;+\; E_{\text{cross}}.\label{eq:appendix:total-energy}
 \end{equation}
 Here, $E_{\text{self}}$ is that portion of energy which each vortex or partial flow
 element contributes independently (for instance, from local swirling motions), while
@@ -38,7 +38,7 @@ azimuthally symmetric core, the induced velocity is sometimes approximated by
 classical results such as
 \begin{equation}
    V \;=\; \frac{\Gamma}{4 \pi R}
-   \bigl(\ln \tfrac{8 R}{a} - \beta \bigr),
+   \bigl(\ln \tfrac{8 R}{a} - \beta \bigr),\label{eq:appendix:velocity}
 \end{equation}
 where $R$ is the main vortex loop radius, $a \ll R$ is a measure of core thickness,
 and $\beta$ depends on details of the core model \cite{Saffman1992}. The
@@ -57,7 +57,7 @@ effects in wave--vortex interactions.
 When multiple vortices (or partial velocity distributions) co-exist, the total velocity
 field $\mathbf{u}$ can be superposed:
 \begin{equation}
-   \mathbf{u} \;=\; \mathbf{u}_1 \;+\;\mathbf{u}_2,
+   \mathbf{u} \;=\; \mathbf{u}_1 \;+\;\mathbf{u}_2,\label{eq:appendix:superpose}
 \end{equation}
 where $\mathbf{u}_1$ and $\mathbf{u}_2$ come from distinct sub-systems. In that
 scenario, the kinetic energy for a fluid volume $V$ is
@@ -83,7 +83,7 @@ create net forces or torque.
 A related concept is helicity, measuring the topological complexity (knotting or
 linking) of vortex tubes. Classically, helicity $H$ is given by
 \begin{equation}
-   H \;=\; \int_V \mathbf{u} \cdot \boldsymbol{\omega}\, dV,
+   H \;=\; \int_V \mathbf{u} \cdot \boldsymbol{\omega}\, dV,\label{eq:appendix:helicity}
 \end{equation}
 which can remain constant or be partially lost during reconnection events. In certain
 dissipative flows, the cross-energy terms in \eqref{eq:cross-term} can influence
@@ -99,12 +99,12 @@ for $N$ vortex or partial velocity fields, the total kinetic energy is:
    E_{\text{total}}
    = \frac{\rho}{2} \int_V \left(\sum_{n=1}^N \mathbf{u}_n \right)^2 dV
    = \frac{\rho}{2} \sum_{n=1}^N \int_V \mathbf{u}_n^2 \, dV
-      \;+\;\rho \sum_{n<m} \int_V \mathbf{u}_n \cdot \mathbf{u}_m \, dV.
+      \;+\;\rho \sum_{n<m} \int_V \mathbf{u}_n \cdot \mathbf{u}_m \, dV.\label{eq:appendix:total-energy-derivation}
 \end{equation}
 One obtains $N$ self-energy terms plus pairwise cross-energy integrals.
 The cross-energy for a pair $(i,j)$ is:
 \begin{equation}
-   E_{\text{cross}}^{(ij)} \;=\; \rho \int_V \mathbf{u}_i \cdot \mathbf{u}_j \, dV.
+   E_{\text{cross}}^{(ij)} \;=\; \rho \int_V \mathbf{u}_i \cdot \mathbf{u}_j \, dV.\label{eq:appendix:cross-energy-derivation}
 \end{equation}
 In practice, each $\mathbf{u}_n$ may be represented by known solutions of the
 Stokes or potential flow equations, or from approximate solutions for vortex loops.

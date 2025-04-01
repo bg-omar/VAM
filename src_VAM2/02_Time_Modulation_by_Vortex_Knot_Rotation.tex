@@ -4,12 +4,12 @@ Building upon the previous section's treatment of time dilation via pressure and
 
 Rather than curving spacetime, we propose that internal rotational energy and helicity conservation induce temporal slowdowns analogous to gravitational redshift. This section develops these ideas through heuristic and energetic arguments consistent with the hierarchy introduced in Section I.
 
-\subsection*{A. Heuristic and Energetic Derivation}
+\subsection{Heuristic and Energetic Derivation}
 
 We begin by proposing a rotationally-induced time dilation formula based on the knot's internal angular frequency:
 
 \begin{equation}
-\frac{t_{\text{local}}}{t_{\text{abs}}} = \left(1 + \alpha \Omega_k^2 \right)^{-1}
+\frac{t_{\text{local}}}{t_{\text{abs}}} = \left(1 + \alpha \Omega_k^2 \right)^{-1}\label{eq:rotational_induced_time_dilation}
 \end{equation}
 
 where:
@@ -24,13 +24,13 @@ where:
 For small angular velocities, we obtain a first-order expansion:
 
 \begin{equation}
-\frac{t_{\text{local}}}{t_{\text{abs}}} \approx 1 - \alpha \Omega_k^2 + \mathcal{O}(\Omega_k^4)
+\frac{t_{\text{local}}}{t_{\text{abs}}} \approx 1 - \alpha \Omega_k^2 + \mathcal{O}(\Omega_k^4)\label{eq:rotational_induced_time_dilation_expansion}
 \end{equation}
 
 This form parallels the Lorentz factor at low velocities in special relativity:
 
 \begin{equation}
-\frac{t_{\text{moving}}}{t_{\text{rest}}} \approx 1 - \frac{v^2}{2c^2}
+\frac{t_{\text{moving}}}{t_{\text{rest}}} \approx 1 - \frac{v^2}{2c^2}\label{eq:parallels_lorentz_time_dilation}
 \end{equation}
 
 This establishes an important analogy: internal rotational motion in VAM induces temporal slowing, similar to how translational velocity induces time dilation in SR.
@@ -38,34 +38,36 @@ This establishes an important analogy: internal rotational motion in VAM induces
 To strengthen the physical foundation of this expression, we now relate time dilation to the energy stored in vortex rotation. Let the vortex knot have an effective moment of inertia $I$. Its rotational energy is given by:
 
 \begin{equation}
-E_{\text{rot}} = \frac{1}{2} I \Omega_k^2
+E_{\text{rot}} = \frac{1}{2} I \Omega_k^2\label{eq:rotational_energy_inertia}
 \end{equation}
 
 Assuming time slows due to this energy density, we write:
 
 \begin{equation}
-\frac{t_{\text{local}}}{t_{\text{abs}}} = \left(1 + \alpha E_{\text{rot}} \right)^{-1} = \left(1 + \frac{1}{2} \alpha I \Omega_k^2 \right)^{-1}
+\frac{t_{\text{local}}}{t_{\text{abs}}} = \left(1 + \alpha E_{\text{rot}} \right)^{-1} = \left(1 + \frac{1}{2} \alpha I \Omega_k^2 \right)^{-1}\label{eq:time_dilation_rotational_energy_inertia}
 \end{equation}
 
-This expression serves as the energetic analog of the pressure-based Bernoulli model from Section I. It supports the interpretation of vortex-induced time wells via energy storage rather than geometric deformation.
+This expression serves as the energetic analog of the pressure-based Bernoulli model from Section I (see Eq.~\eqref{eq:localtime_vortex}). It supports the interpretation of vortex-induced time wells via energy storage rather than geometric deformation.
 
-We highlight this key result with a boxed formulation:
-
-\begin{equation}
-\boxed{\frac{t_{\text{local}}}{t_{\text{abs}}} = \left(1 + \frac{1}{2} \alpha I \Omega_k^2 \right)^{-1}}
-\end{equation}
-
-\subsection*{B. Topological and Physical Justification}
+\subsection{Topological and Physical Justification}
 
 Topological vortex knots are not only characterized by rotation but also by helicity:
 
 \begin{equation}
-H = \int \vec{v} \cdot \vec{\omega} \, d^3x
+H = \int \vec{v} \cdot \vec{\omega} \, d^3x \label{eq:helicity_rotation}
 \end{equation}
 
 Helicity is a conserved quantity in ideal (inviscid, incompressible) fluids, encoding the linkage and twisting of vortex lines. The rotational frequency $\Omega_k$ becomes a topologically meaningful indicator of the knot’s identity and dynamical state.
 
-Higher $\Omega_k$ implies greater rotational energy and stronger localized pressure depletion, forming a "temporal well" in the æther. These wells naturally mimic gravitational redshift effects in curved spacetime, but arise here purely from classical fluid mechanics.
+Larger $\Omega_k$ values indicate more rotational energy and deeper pressure wells, producing temporal slowdowns that resemble gravitational redshift—but without invoking spacetime curvature.
+
+Each particle is a topological vortex knot:
+\begin{itemize}
+    \item Charge $\leftrightarrow$ twist or chirality of knot
+    \item Mass $\leftrightarrow$ integrated vorticity energy
+    \item Spin $\leftrightarrow$ knot helicity:
+\end{itemize}
+Stability $\leftrightarrow$ knot type (Hopf links, Trefoil, etc.) and energy minimization in the vortex core
 
 This model:
 
