@@ -14,53 +14,53 @@
 In a classical, inviscid, incompressible fluid, Bernoulli's equation describes the conservation of energy in a flow:
 
 \begin{equation}
-\frac{1}{2} \rho_\ae v^2 + p = p_0 \Rightarrow p = p_0 - \frac{1}{2} \rho_\ae v^2
+    \frac{1}{2} \rho_{\ae}  v^2 + p = p_0 \Rightarrow p = p_0 - \frac{1}{2} \rho_{\ae} v^2
 \end{equation}
 
 Here:
 \begin{itemize}
-\item $p_0$ is the background reference pressure,
-\item $\rho_\ae$ is the constant æther density,
-\item $v$ is the local velocity of the æther near the vortex.
+    \item $p_0$ is the background reference pressure,
+    \item $\rho_\ae$ is the constant æther density,
+    \item $v$ is the local velocity of the æther near the vortex.
 \end{itemize}
 
 Assuming that clock rate is proportional to pressure (i.e., time slows in low-pressure regions), we relate the local clock frequency to the background as:
 
 \begin{equation}
-\frac{f_{\text{local}}}{f_0} = 1 - \frac{\rho_\ae v^2}{2 p_0}
+\frac{f_{\text{local}}}{f_0} = 1 - \frac{\rho_{\ae} v^2}{2 p_0}
 \end{equation}
 
 Hence, time dilation is:
 
 \begin{equation}
-\frac{t_{\text{local}}}{t_0} = \left(1 - \frac{\rho_\ae v^2}{2 p_0}\right)^{-1}
+    \frac{t_{\text{local}}}{t_0} = \left(1 - \frac{\rho_{\ae} v^2}{2 p_0}\right)^{-1}
 \end{equation}
 
 For rotational flow, with $v = \Omega r$,
 
 \begin{equation}
-\frac{t_{\text{local}}}{t_0} = \left(1 - \frac{\rho_\ae \Omega^2 r^2}{2 p_0} \right)^{-1} \approx 1 + \frac{\rho_\ae \Omega^2 r^2}{2 p_0}
+    \frac{t_{\text{local}}}{t_0} = \left(1 - \frac{\rho_{\ae} \Omega^2 r^2}{2 p_0} \right)^{-1} \approx 1 + \frac{\rho_{\ae}\Omega^2 r^2}{2 p_0}
 \end{equation}
 
 This expression recovers the first-order time dilation analog if we define the dimensionless coupling:
 
 \begin{equation}
-\frac{\rho_\ae}{p_0} \sim \frac{1}{c^2}
+    \frac{\rho_{\ae}}{p_0} \sim \frac{1}{c^2}
 \end{equation}
 
 This motivates the analogy to relativistic time dilation:
 
 \begin{equation}
-\frac{t_{\text{moving}}}{t_\text{rest}} \approx 1 + \frac{v^2}{2 c^2}
+    \frac{t_{\text{moving}}}{t_\text{rest}} \approx 1 + \frac{v^2}{2 c^2}
 \end{equation}
-
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.8\textwidth]{export/RadialProfileOfLocalTimeDilation_Radial_LocalTime_Dilation}
-    \caption{Radial profile of normalized local time $t_{\text{local}} / t_{\text{abs}}$ as a function of distance $r$ from the vortex core, assuming $\Omega_k \propto 1/r^2$. Time slows significantly near the vortex center and recovers to background values with distance.}
-    \label{fig:radial_time_profile}
+    \includegraphics[width=0.8\textwidth]{export/RadialProfileOfLocalTimeDilation_Vortex-Induced_Time_Well}
+    \caption{Schematic of a vortex-induced time well in the æther. Local time $t_{\text{local}} / t_{\text{abs}}$ is shown as a color gradient in 2D space. The central vortex region exhibits the most time slowing due to high $\Omega_k$, forming a well-like structure.}
+    \label{fig:vortex_time_well}
 \end{figure}
+
 
 \subsection*{B. Heuristic Knot-Based Time Modulation}
 
@@ -84,9 +84,16 @@ This form mirrors the expansion of the Lorentz factor:
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.8\textwidth]{export/RadialProfileOfLocalTimeDilation_Vortex-Induced_Time_Well}
-    \caption{Schematic of a vortex-induced time well in the æther. Local time $t_{\text{local}} / t_{\text{abs}}$ is shown as a color gradient in 2D space. The central vortex region exhibits the most time slowing due to high $\Omega_k$, forming a well-like structure.}
-    \label{fig:vortex_time_well}
+    \includegraphics[width=0.8\textwidth]{export/RotationalVsHeuristicTimeDilation}
+    \caption{\textbf{Comparison: Heuristic vs Rotational Time Dilation (\(\Omega_k \propto 1/r^2\))}.
+    This graph compares two models of time modulation within the Vortex Æther framework.
+    The heuristic model (green) assumes time rate reduction proportional to \((1 + \alpha \Omega_k^2)^{-1}\),
+        while the rotational model (dark blue) incorporates rotational energy \(E_{\text{rot}} = \frac{1}{2} I \Omega_k^2\) and suppresses local time via
+        \((1 + \frac{1}{2} \alpha I \Omega_k^2)^{-1}\). Both curves exhibit strong time dilation near the vortex core (\(r \sim 10^{-15}\) m),
+        approaching absolute time flow only at extended distances. The rotational model yields a steeper suppression,
+        highlighting the energetic cost of maintaining high angular momentum in fluid-based time curvature.
+    }
+    \label{fig:radial_time_profile}
 \end{figure}
 
 \subsection*{C. Time Dilation from Rotational Inertia}

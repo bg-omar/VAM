@@ -47,53 +47,43 @@ script_name = os.path.splitext(os.path.basename(__file__))[0]
 filename = f"{script_name}_Radial_LocalTime_Dilation.png"
 plt.savefig(filename, dpi=150)  # Save image with high resolution
 
+# Constants
+C_e = 1.09384563e6        # m/s
+rho_ae = 7e-7             # kg/m^3
+r_c = 1.40897017e-15      # m
+c = 2.99792458e8          # m/s
+G = 6.67430e-11           # m^3/kg/s^2
 
-# Recalculate vortex schematic with Ω_k(R) ∝ 1/R²
-epsilon = 0.01  # to prevent division by zero
-Omega_k_2D = 1e6 / (R**2 + epsilon)
-t_local_2D = 1 / (1 + 0.5 * alpha * I * Omega_k_2D**2)
-# Varying Omega_k with radius: assume Ω_k ∝ 1/r^2 (core rotation decays with radius)
-r = np.linspace(0.01, 1.0, 500)  # avoid r = 0
-Omega_k_r = 1e6 / r**2           # example vortex profile
-alpha = 1e-8
-I = 1e-20
+# Derived constants
+alpha = (r_c**2) / (C_e**2)  # s^2
+I = 1e-20  # rotational inertia scaling for consistency if needed
 
-# Time dilation as function of r
-t_local_r = 1 / (1 + 0.5 * alpha * I * Omega_k_r**2)
+# Define a femtometer-scale 2D grid
+x = np.linspace(-5e-15, 5e-15, 400)  # ~10 fm across
+y = np.linspace(-5e-15, 5e-15, 400)
+X, Y = np.meshgrid(x, y)
+R = np.sqrt(X**2 + Y**2)
 
-# Zoom in the 2D vortex well around center: crop to region [-0.2, 0.2]
-zoom_idx = np.logical_and(np.abs(x) <= 0.2, True)
-X_zoom, Y_zoom = np.meshgrid(x[zoom_idx], y[zoom_idx])
-R_zoom = np.sqrt(X_zoom**2 + Y_zoom**2)
-Omega_k_zoom = 1e6 / (R_zoom**2 + epsilon)
-t_local_zoom = 1 / (1 + 0.5 * alpha * I * Omega_k_zoom**2)
+# Apply a softening factor to avoid division by zero
+epsilon = 1e-20
+Omega_k_2D = C_e / (R + epsilon)
 
+# Heuristic model (no rotational inertia used here)
+t_local_2D = 1 / (1 + alpha * Omega_k_2D**2)
+
+# Plotting the 2D time well at femtometer scale
 plt.figure(figsize=(8, 6))
-contour_zoom = plt.contourf(X_zoom, Y_zoom, t_local_zoom, levels=50, cmap='viridis')
-cbar = plt.colorbar(contour_zoom)
+contour = plt.contourf(X * 1e15, Y * 1e15, t_local_2D, levels=50, cmap='viridis')
+cbar = plt.colorbar(contour)
 cbar.set_label("Local Time $t_{local} / t_{abs}$")
-plt.title("Schematic of Vortex-Induced Time Well (Ωₖ ∝ 1/R²)")
-plt.xlabel("x [m]")
-plt.ylabel("y [m]")
+plt.title("Vortex-Induced Time Well (Femtometer Scale)")
+plt.xlabel("x [fm]")
+plt.ylabel("y [fm]")
 plt.axis('equal')
 plt.grid(True)
 plt.tight_layout()
 
-
-# ✅ Get the script filename dynamically
-script_name = os.path.splitext(os.path.basename(__file__))[0]
-# ✅ **Create a Folder for Saving Frames**
-save_folder = "export"
-if not os.path.exists(save_folder):
-    os.makedirs(save_folder, exist_ok=True)  # Ensure folder exists
-
-# Generate a unique filename using timestamp
-timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 filename = f"{script_name}_Vortex-Induced_Time_Well.png"
-
-
-
-save_path = os.path.join(save_folder, filename)
-plt.savefig(save_path, dpi=150)  # Save image with high resolution
+plt.savefig(filename, dpi=150)  # Save image with high resolution
 
 plt.show()
