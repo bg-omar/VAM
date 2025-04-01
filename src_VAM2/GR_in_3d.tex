@@ -46,20 +46,6 @@
     \bottomrule
 \end{tabular}
 
-
-    \begin{tabular}{ll}
-        \toprule
-        Symbol & Description \\
-        \midrule
-        \(\vec{v}\) & Æther velocity field \\
-        \(\vec{\omega}\) &  Vorticity \(\vec{\omega} = \nabla \times \vec{v}\) \\
-        \(\rho_\text{æ}\) & Æther density (constant) \\
-        \(\Phi\) & Vorticity-induced potential \\
-        \(\kappa\) & Circulation constant \\
-        \(\mathcal{K}\) & Knot topological class (Hopf link, torus knot, etc.) \\
-        \bottomrule
-    \end{tabular}
-
 \subsection*{VAM Constants and Scaling}
 
 The Vortex Æther Model (VAM) is anchored by a small set of universal constants that replace geometric curvature with fluid-dynamic quantities. These include:
@@ -97,6 +83,24 @@ These provide a physically motivated scale system that replaces conventional con
 
 
 \subsection*{Introduction to Fluid Dynamics and Vorticity Conservation}
+
+    \begin{table}[h!]
+        \centering
+        \begin{tabular}{llc}
+            \hline
+            Symbol & Description \\
+            \hline
+            \midrule
+            \(\vec{v}\) & Æther velocity field \\
+            \(\vec{\omega}\) &  Vorticity \(\vec{\omega} = \nabla \times \vec{v}\) \\
+            \(\Phi\) & Vorticity-induced potential \\
+            \(\kappa\) & Circulation constant \\
+            \(\mathcal{K}\) & Knot topological class (Hopf link, torus knot, etc.) \\
+            \bottomrule
+            \hline
+        \end{tabular}
+    \end{table}
+
     Euler Equation (Inviscid Flow)
     \begin{equation}
         \frac{\partial \vec{v}}{\partial t} + (\vec{v} \cdot \nabla)\vec{v} = -\frac{1}{\rho_\text{æ}} \nabla p
@@ -115,7 +119,9 @@ These provide a physically motivated scale system that replaces conventional con
     \begin{equation}
         \Phi(\vec{r}) = \gamma \int \frac{|\vec{\omega}(\vec{r'})|^2}{|\vec{r} - \vec{r'}|} \, d^3r'
     \end{equation}
-    This mirrors the Newtonian potential but replaces mass density with vorticity intensity. This gives attractive force fields between vortex knots (like a particle).
+    Where \textbf{$\gamma$} in \textbf{$\text{m}^5 / \text{s}^{2}$} is the Vorticity-gravity coupling constant, replacing Newton's $G$. This
+mirrors
+the Newtonian potential but replaces mass density with vorticity intensity. This gives attractive force fields between vortex knots (like a particle).
 
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%    PART 1    %%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -136,7 +142,7 @@ These provide a physically motivated scale system that replaces conventional con
     %%%%%%%%%%%%%%%%%%%%%%%%%%    References    %%%%%%%%%%%%%%%%%%%%%%%%%%
 
     \bibliography{citations}
-    \bibliographystyle{apsrev4-2}
+    \bibliographystyle{unsrtnat}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%    Appendices    %%%%%%%%%%%%%%%%%%%%%%%%%%
