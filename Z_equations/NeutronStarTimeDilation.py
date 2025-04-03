@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 
 # Provided constants
 C_e = 1.09384563e6        # m/s
-rho_ae = 7e-7             # kg/m^3
+rho_ae = 3.8934358266918687e+18  # æther density in kg/m^3
 r_c = 1.40897017e-15      # m
 c = 2.99792458e8          # m/s
 G = 6.67430e-11           # m^3/kg/s^2

@@ -94,7 +94,7 @@ df_debug = pd.DataFrame({
 tools.display_dataframe_to_user(name="Debugging: h * omega / (k_B * T) Values", dataframe=df_debug)
 
 LHS = (8 * pi * h * nu**3) / (c**3)
-RHS = (F_max * omega**3) / (C_e * r_c**2)
+RHS =  (C_e * r_c**2)/(F_max * omega**3)
 
 
 print(LHS, " = ", RHS)

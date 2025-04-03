@@ -13,8 +13,9 @@ class PhysicalConstant:
 # Dictionary of physical constants
 constants_dict = {
     "C_e": PhysicalConstant(r"C_e", 1093845.63, "m s^-1", "Vortex-Tangential-Velocity", "exact"),
-    "rho_ae": PhysicalConstant(r"\rho_\text{\ae}",  7e-7, "kg m^-3", "Æther density", f"Range: 5.0e-8 to 5.0e-5 kg m^-3"),
+    "rho_ae": PhysicalConstant(r"\rho_\text{\ae}",  3.8934358266918687e+18, "kg m^-3", "Æther density", "exact"),
     "F_max": PhysicalConstant(r"F_{\text{max}}", 29.053507, "N", "Maximum force", "exact"),
+    "r_c": PhysicalConstant(r"r_c", 1.40897017e-15, "m", "Vortex-Core radius", "exact"),
     "F_Coulomb": PhysicalConstant(r"F_{\text{Coulomb}}", 29.053507, "N", "Maximum Coulomb Force", "exact"),
     "F_GRmax": PhysicalConstant(r"F_{\text{GRmax}}", 3.0256389108455157e+43, "N", "Maximum Universal Force", "exact"),
     "c": PhysicalConstant(r"c", 299792458, "m s^-1", "Speed of light in vacuum", "exact"),
@@ -22,7 +23,6 @@ constants_dict = {
     "h": PhysicalConstant(r"h", 6.62607015e-34, "J Hz^-1", "Planck constant", "exact"),
     "alpha": PhysicalConstant(r"\alpha", 7.2973525643e-3, "", "Fine-structure constant", "1.6e-10"),
     "R_c": PhysicalConstant(r"R_c", 1.40897017e-15, "m", "Coulomb barrier", "exact"),
-    "r_c": PhysicalConstant(r"r_c", 1.40897017e-15, "m", "Vortex-Core radius", "exact"),
     "R_e": PhysicalConstant(r"R_e", 2.8179403262e-15, "m", "Classical electron radius", "1.3e-24"),
     "alpha_g": PhysicalConstant(r"\alpha_g", 1.7518e-45, "", "Gravitational coupling constant", "exact"),
     "mu_0": PhysicalConstant(r"\mu_0", 4 * math.pi * 1e-7, "N A^-2", "Vacuum magnetic permeability", "exact"),

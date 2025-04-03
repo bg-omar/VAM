@@ -2,7 +2,7 @@ import math
 from sympy import symbols, simplify
 
 # Physical constants from VAM constants list
-rho_ae = 7.0e-7  # Æther density [kg/m^3]
+rho_ae = 3.8934358266918687e+18  # æther density in kg/m^3
 Gamma_e = 2 * math.pi * 1.054571817e-34 / (9.1093837015e-31)  # Circulation ~ hbar/m_e [m^2/s]
 R = 2.8179403262e-15  # classical electron radius [m]
 a = 1.616255e-35  # core radius ~ Planck length [m]

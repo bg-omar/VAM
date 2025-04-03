@@ -113,6 +113,10 @@ print((C_e**3) / (pi * R_c * c**3))
 print((Gamma**3)*(pi * R_c * c**3))
 
 E_vortex = (1/2) *  rho_ae * Gamma**2 * R_c
+
+rho_ae = 4 * F_max / (math.pi * alpha**2 * c**2 * r_c**2)
+print("rho_ae: ", rho_ae)
+rho_ae = F_max / (math.pi * C_e**2 * r_c**2)
 print("rho_ae: ", rho_ae)
 print("E_vortex = (1/2) *  rho_ae**2 * Gamma**2 * R: ", E_vortex)
 

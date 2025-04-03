@@ -262,3 +262,60 @@ VAM = {
 print(VAM['t_ratio_heuristic'])
 print(VAM['t_ratio_gr_like'])
 print(VAM['t_ratio_kerr_like'])
+# Re-import libraries after reset
+import pandas as pd
+import math
+import numpy as np
+import ace_tools_open as tools
+
+# Re-declare constants
+c = 299792458  # speed of light (m/s)
+Ce = 1.09384563e6  # vortex-core tangential velocity (m/s)
+rc = 1.40897017e-15  # vortex-core radius (m)
+G = 6.67430e-11  # gravitational constant (m^3/kg/s^2)
+epsilon = 1e-30
+
+# Object table again
+objects = [
+    {"name": "Electron", "mass": 9.1093837015e-31, "radius": 2.8179403262e-15, "omega": Ce / rc},
+    {"name": "Proton", "mass": 1.67262192369e-27, "radius": 0.84e-15, "omega": Ce / rc},
+    {"name": "Earth", "mass": 5.972e24, "radius": 6.371e6, "omega": 7.2921159e-5},
+    {"name": "Neutron Star", "mass": 1.4 * 1.98847e30, "radius": 1e4, "omega": 2 * math.pi * 700},
+    {"name": "Sun", "mass": 1.98847e30, "radius": 6.9634e8, "omega": 1.997e-6}
+]
+
+# Define hybrid μ(r) function
+def hybrid_mu(r, r_star=1e-3):
+    if r < r_star:
+        return (rc * Ce) / (r**2)
+    else:
+        return 1.0
+
+# Apply hybrid model
+vam_hybrid_results = []
+
+for obj in objects:
+    name = obj["name"]
+    r = max(obj["radius"], epsilon)
+    m = obj["mass"]
+    omega = obj["omega"]
+
+    I = (2/5) * m * r**2
+    mu = hybrid_mu(r)
+    J_vam_hybrid = mu * I * omega
+
+    omega_drag_vam_hybrid = (2 * G * J_vam_hybrid) / (c**2 * r**3)
+
+    J_gr = I * omega
+    omega_lt_gr = (2 * G * J_gr) / (c**2 * r**3)
+
+    vam_hybrid_results.append({
+        "Object": name,
+        "GR Lense–Thirring ω (rad/s)": omega_lt_gr,
+        "VAM ω_drag (Hybrid μ) (rad/s)": omega_drag_vam_hybrid,
+        "Ratio (VAM/GR)": omega_drag_vam_hybrid / omega_lt_gr if omega_lt_gr != 0 else float("inf")
+    })
+
+# Display
+df_fd_hybrid_mu = pd.DataFrame(vam_hybrid_results)
+tools.display_dataframe_to_user(name="Frame Dragging: Hybrid μ(r) vs GR", dataframe=df_fd_hybrid_mu)

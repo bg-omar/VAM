@@ -10,7 +10,7 @@ pd.set_option('display.width', None)
 c = 299792458  # speed of light in m/s
 Ce = 1.0938456e6  # vortex-core tangential velocity in m/s
 rc = 1.40897017e-15  # vortex-core radius in m
-rho_ae = 7.0e-7  # æther density in kg/m^3
+rho_ae = 3.8934358266918687e+18  # æther density in kg/m^3
 alpha = 7.2973525693e-3  # fine-structure constant
 Lp = 1.616255e-35  # Planck length in m
 Fmax_vam = (c**4 / (4 * 6.67430e-11)) * alpha * (rc / Lp)**2

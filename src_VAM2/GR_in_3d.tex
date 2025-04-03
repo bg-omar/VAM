@@ -21,137 +21,20 @@
 \email{info@omariskandarani.com}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%    Abstract    %%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{00_Abstract_Introduction}
+\input{01_Time_Dilation_from_Vortex_Dynamics}
+\input{02_Time_Modulation_by_Vortex_Knot_Rotation}
+\input{03_Proper_Time_for_a_Rotating_Observer_in_Æther_Flow}
+\input{04_Kerr-Like_Time_Adjustment_from_Vorticity_and_Circulation}
+\input{05_Unified_Framework_and_Synthesis_of_Time_Dilation_in_VAM}
+\input{06_VAM_Vortex_Scattering_Framework_Inspired_by_Elastic_Theory}
+\input{07_Experimental_Anchors}
 
+\bibliography{citations}
+\bibliographystyle{unsrtnat}
 
-    \begin{abstract}
-        This paper presents a geometric reformulation of general relativity through a three-dimensional Vortex Æther Model (VAM), where gravitational and temporal effects arise not from spacetime curvature but from vorticity-induced pressure gradients in an inviscid, superfluid-like medium. In this framework, structured flow fields—velocity, circulation, and vorticity—replace the tensorial geometry of GR, and proper time evolves as a scalar field modulated by topological vortex knots.
-
-        We derive analogs to the Schwarzschild and Kerr metrics based on Æther energy density, rotational inertia, and angular momentum of vortex filaments. Motion follows conserved vorticity flux lines rather than relativistic geodesics, with gravity emerging as a topological pressure deficit in regions of high swirl.
-
-        Thermodynamic consistency is established by embedding Clausius entropy within the vorticity structure of knotted matter, leading to a novel interpretation of the photoelectric effect and low-energy nuclear reactions (LENR) as resonant transitions in confined vortex networks. This analogue gravity approach builds on and extends superfluid-based spacetime models, as explored by Barceló, Visser, and Volovik \cite{barcelo2011analogue, volovik2009universe}.
-
-        By unifying kinematic, energetic, and thermodynamic descriptions under a conserved vorticity formalism, VAM offers a coherent post-relativistic candidate for spacetime dynamics in topologically structured continua.
-    \end{abstract}
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%    Introduction    %%%%%%%%%%%%%%%%%%%%%%%%%%
-    \maketitle
-
-    \section*{Core Assumptions}
-        The æther is modeled as an inviscid, incompressible superfluid governed by:
-
-    \begin{tabular}{ll}
-        \toprule
-        \midrule
-            * & Conservation of Absolute Vorticity \\
-            * & A 3D Euclidean medium with absolute time \\
-            * & Particles as vortex knots \\
-            * & Irrotational outside vortex cores, but with conserved vorticity inside knots \\
-            * & Gravity from vorticity-induced pressure gradients \\
-        \bottomrule
-    \end{tabular}
-
-    \subsection*{VAM Constants and Scaling}
-
-    The Vortex Æther Model (VAM) is anchored by a small set of universal constants that replace geometric curvature with fluid-dynamic quantities. These include:
-
-    \begin{table}[h!]
-        \centering
-        \begin{tabular}{llc}
-            \hline
-            \textbf{Symbol} & \textbf{Name} & \textbf{Approx. Value} \\
-            \hline
-            $C_e$ & Core tangential velocity & $1.09 \times 10^6$ m/s \\
-            $r_c$ & Vortex core radius (Coulomb barrier) & $1.41 \times 10^{-15}$ m \\
-            $\rho_{\text{\ae}}$ & Æther density & $7 \times 10^{-7}$ kg/m$^3$ \\
-            $F_{\max}$ & Maximum vortex-interaction force & $\approx 29$ N \\
-            $\alpha$ & Fine-structure constant (emergent) & $= \frac{2 C_e}{c}$ \\
-            $G_{\text{swirl}}$ & Effective gravitational constant & $ \propto \rho_{\text{\ae}} C_e^2$ (context-dependent) \\
-            \hline
-        \end{tabular}
-        \caption{Fundamental VAM constants defined in prior work \cite{vam2025field, vam2025unified}.}\label{tab:table}
-    \end{table}
-
-    For instance, $C_e$ is derived from matching vortex circulation to electron parameters via:
-
-    \[
-        C_e = \frac{h}{2\pi m_e r_c}
-    \]
-
-    Likewise, $F_{\max}$ arises from momentum flux across a vortex core:
-
-    \[
-        F_{\max} = \rho_{\text{\ae}} C_e^2 \pi r_c^2
-    \]
-
-    These provide a physically motivated scale system that replaces conventional constants like $c$ and $G$ with parameters derived from Ætheric flow.
-
-
-    \subsection*{Introduction to Fluid Dynamics and Vorticity Conservation}
-
-    \begin{table}[h!]
-        \centering
-        \begin{tabular}{llc}
-            \hline
-            Symbol & Description \\
-            \hline
-            \midrule
-            \(\vec{v}\) & Æther velocity field \\
-            \(\vec{\omega}\) &  Vorticity \(\vec{\omega} = \nabla \times \vec{v}\) \\
-            \(\Phi\) & Vorticity-induced potential \\
-            \(\kappa\) & Circulation constant \\
-            \(\mathcal{K}\) & Knot topological class (Hopf link, torus knot, etc.) \\
-            \bottomrule
-            \hline
-        \end{tabular}\label{tab:table2}
-    \end{table}
-
-    Euler Equation (Inviscid Flow)
-    \begin{equation}
-        \frac{\partial \vec{v}}{\partial t} + (\vec{v} \cdot \nabla)\vec{v} = -\frac{1}{\rho_\text{æ}} \nabla p\label{eq:Euler-Equation}
-    \end{equation}
-    Taking the curl to get the Vorticity Transport
-    \begin{equation}
-        \frac{\partial \vec{\omega}}{\partial t} + (\vec{v} \cdot \nabla)\vec{\omega} = (\vec{\omega} \cdot \nabla) \vec{v}\label{eq:Vorticity-Transport}
-    \end{equation}
-
-    \subsection*{Vorticity-Induced Gravity}
-    We define a Newtonian like vorticity-based gravitational potential $\Phi$:
-    \begin{equation}
-        \vec{F}_g = -\nabla \Phi\label{eq:Vorticity-Induced-Gravity}
-    \end{equation}
-    Where $\Phi$ is the Vorticity Potential:
-    \begin{equation}
-        \Phi(\vec{r}) = \gamma \int \frac{|\vec{\omega}(\vec{r'})|^2}{|\vec{r} - \vec{r'}|} \, d^3r'\label{eq:Vorticity_Potential}
-    \end{equation}
-    Where \textbf{$\gamma$} in \textbf{$\text{m}^5 / \text{s}^{2}$} is the Vorticity-gravity coupling constant, replacing Newton's $G$. This mirrors the Newtonian potential but replaces mass density with vorticity intensity. This gives attractive force fields between vortex knots (like a particle).
-
-
-    \input{01_Time_Dilation_from_Vortex_Dynamics}
-
-    \input{02_Time_Modulation_by_Vortex_Knot_Rotation}
-
-    \input{03_Proper_Time_for_a_Rotating_Observer_in_Æther_Flow}
-
-    \input{04_Kerr-Like_Time_Adjustment_from_Vorticity_and_Circulation}
-
-    \input{05_Unified_Framework_and_Synthesis_of_Time_Dilation_in_VAM}
-
-    \input{06_VAM_Vortex_Scattering_Framework_Inspired_by_Elastic_Theory}
-
-    \input{07_Experimental_Anchors}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%    References    %%%%%%%%%%%%%%%%%%%%%%%%%%
-
-    \bibliography{citations}
-    \bibliographystyle{unsrtnat}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%    Appendices    %%%%%%%%%%%%%%%%%%%%%%%%%%
-
-    \appendix \label{sec:Part-6}
-    \input{appendix_01}\label{appendix:1}
-    \input{appendix_02}\label{appendix:2}
+\appendix \label{sec:Part-6}
+\input{appendix_01}\label{appendix:1}
+\input{appendix_02}\label{appendix:2}
 
 \end{document}
