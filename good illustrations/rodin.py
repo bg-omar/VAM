@@ -16,8 +16,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Define parameters for the ring torus (R = 4r)
-R_ring = 1  # Major radius of the ring torus
-r_ring = 0.25  # Minor radius of the ring torus
+R_ring = 0.75  # Major radius of the ring torus
+r_ring = 0.125  # Minor radius of the ring torus
 
 # Define parameters for the horn torus (R = 4r)
 R_horn = 1  # Major radius of the horn torus
@@ -88,18 +88,97 @@ def generate_rodin_3phase(R, r, num_turns=10, num_points=1000):
 
     return (x1, y1, z1), (x2, y2, z2), (x3, y3, z3)
 
+
+
+
+rotation_steps=0
+rotation_angle = (2 * np.pi / 27) / 3
+# Define provided base sequence
+base_sequence = [1, 5, 9, 4, 8, 3, 7, 2, 6, 1]
+
+# Create explicit sequences as per user request
+sequence_A_forward = [((num * 3 - 0 - 1) % 27) + 1 for num in base_sequence]
+sequence_A_neutral = [((num * 3 - 0 - 1) % 27) + 1 for num in base_sequence]
+sequence_A_backward = [((num * 3 - 0 - 1) % 27) + 1 for num in base_sequence]
+
+sequence_B_forward = [((num * 3 - 1 - 1) % 27) + 1 for num in base_sequence]
+sequence_B_neutral = [((num * 3 - 1 - 1) % 27) + 1 for num in base_sequence]
+sequence_B_backward = [((num * 3 - 1 - 1) % 27) + 1 for num in base_sequence]
+
+sequence_C_forward = [((num * 3 - 2 - 1) % 27) + 1 for num in base_sequence]
+sequence_C_neutral = [((num * 3 - 2 - 1) % 27) + 1 for num in base_sequence]
+sequence_C_backward = [((num * 3 - 2 - 1) % 27) + 1 for num in base_sequence]
+
+# Points setup
+angles = np.linspace(0, 2 * np.pi, 28)[:-1]
+positions = {i+1: (np.cos(angle), np.sin(angle)) for i, angle in enumerate(angles)}
+segment_shift = ((2 * np.pi / 27) / 3)
+
+
+# Recalculate positions with adjusted angles for rotation and reversed numbering
+angles_rotated = np.linspace(0, 2 * np.pi, 28)[:-1] - np.pi*1.5 +(2*np.pi*(1/27)) # Rotate 90° counterclockwise
+angles_rotated = angles_rotated[::-1]  # Reverse numbering for clockwise count
+positions_rotated = {i+1: (np.cos(angle), np.sin(angle)) for i, angle in enumerate(angles_rotated)}
+
+angles_rotated += rotation_angle
+
+# Define parameters for multi-layer 3D coil
+num_layers = 10  # Number of layers in the coil
+layer_spacing = 0.1  # Distance between layers in the z-axis
+
+
+
+# Function to generate multi-layer wire paths
+def generate_3d_wire(sequence, segment, z_layer, base_color, style, alpha=1.0):
+    # Recalculate 3D positions for multiple layers
+    angles = np.linspace(0, 2 * np.pi, 28)[:-1] - np.pi * 1.5 + (2 * np.pi * (1 / 27))
+    angles = angles[::-1]  # Reverse numbering for clockwise count
+    segment_shift = ((2 * np.pi / 27) / 3)
+    """Generates a 3D multi-layer wire visualization."""
+    for i in range(len(sequence) - 1):
+        num = sequence[i]
+        next_num = sequence[i + 1]
+
+        # Apply rotation and segment shift
+        angle_start = angles[(num - 1) % 27] + segment_shift * (segment - 1)
+        angle_end = angles[(next_num - 1) % 27] + segment_shift * (segment - 1)
+
+        x_start, y_start = np.cos(angle_start), np.sin(angle_start)
+        x_end, y_end = np.cos(angle_end), np.sin(angle_end)
+
+        # Move up one layer in z when sequence restarts
+        z_start = z_layer
+        z_end = z_layer
+
+        if i == len(sequence) - 2:  # If reaching the end, move to next layer
+            z_end = z_layer + layer_spacing
+
+        ax.plot([x_start, x_end], [y_start, y_end], [z_start, z_end],
+                color=base_color, linestyle=style, linewidth=2, alpha=alpha)
+
+# Setup 3D plot
+fig = plt.figure(figsize=(12, 12))
+ax = fig.add_subplot(111, projection='3d')
+
+
+
+
 # Function to plot the Rodin coil and its variations
 def plot_rodin_coil():
-    R, r = 1.5, 1  # Set torus major and minor radii
+    R, r = 0.75, 0.5  # Set torus major and minor radii
 
-    fig = plt.figure(figsize=(12, 6))
-    ax = fig.add_subplot(111, projection='3d')
 
     # Plot 3-phase Rodin coil windings
     (x1, y1, z1), (x2, y2, z2), (x3, y3, z3) = generate_rodin_3phase(R, r)
     ax.plot(x1, y1, z1, 'r-', linewidth=2, label="Phase 1")
     ax.plot(x2, y2, z2, 'b-', linewidth=2, label="Phase 2")
     ax.plot(x3, y3, z3, 'g-', linewidth=2, label="Phase 3")
+
+    # Plot 3-phase Rodin coil windings
+    (x1, y1, z1), (x2, y2, z2), (x3, y3, z3) = generate_rodin_3phase(-1.5*R, 1.5*r)
+    ax.plot(x1, y1, z1+1, 'r-', linewidth=2, label="Phase 1")
+    ax.plot(x2, y2, z2+1, 'b-', linewidth=2, label="Phase 2")
+    ax.plot(x3, y3, z3+1, 'g-', linewidth=2, label="Phase 3")
     # Plot the ring torus in blue with 85% transparency
     ax.plot_surface(X_ring, Y_ring, Z_ring, rstride=5, cstride=5, color='blue', alpha=0.15, edgecolor='k')
 
@@ -116,6 +195,26 @@ def plot_rodin_coil():
     Z = r * np.sin(phi)
 
     ax.plot_wireframe(X, Y, Z, color='gray', alpha=0.2, linewidth=0.5)
+    # Plot multiple layers of the coil
+    for layer in range(num_layers):
+        z_layer = layer * layer_spacing-1.5
+
+        # Phase A (Blue)
+        generate_3d_wire(sequence_A_forward, 1, z_layer, 'blue', '-', alpha=0.9)
+        generate_3d_wire(sequence_A_neutral, 2, z_layer, 'blue', '--', alpha=0.3)
+        generate_3d_wire(sequence_A_backward, 3, z_layer, 'cyan', '-', alpha=0.9)
+
+        # Phase B (Red)
+        generate_3d_wire(sequence_B_forward, 1, z_layer, 'red', '-', alpha=0.9)
+        generate_3d_wire(sequence_B_neutral, 2, z_layer, 'red', '--', alpha=0.3)
+        generate_3d_wire(sequence_B_backward, 3, z_layer, 'orange', '-', alpha=0.9)
+
+        # Phase C (Green)
+        generate_3d_wire(sequence_C_forward, 1, z_layer, 'green', '-', alpha=0.9)
+        generate_3d_wire(sequence_C_neutral, 2, z_layer, 'green', '--', alpha=0.3)
+        generate_3d_wire(sequence_C_backward, 3, z_layer, 'purple', '-', alpha=0.9)
+
+
 
 
     # Set plot labels
@@ -130,6 +229,13 @@ def plot_rodin_coil():
     ax.set_zlim(-2, 2)
     ax.set_box_aspect([1,1,1])
     ax.legend()
+    # ✅ Get the script filename dynamically
+    import os
+    from datetime import datetime
+    script_name = os.path.splitext(os.path.basename(__file__))[0]
+    timestamp = datetime.now().strftime("%H%M%S")
+    filename = f"{script_name}_{timestamp}.png"
+    plt.savefig(filename, dpi=150)  # Save image with high resolution
     plt.show()
 
 # Generate and plot the optimized Rodin coil
