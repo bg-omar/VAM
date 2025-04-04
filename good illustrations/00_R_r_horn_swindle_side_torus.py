@@ -105,20 +105,11 @@ for ax, (elev, azim), title in zip(axes.flatten(), view_angles, titles):
 
 
 # ✅ Get the script filename dynamically
+import os
+from datetime import datetime
 script_name = os.path.splitext(os.path.basename(__file__))[0]
-# ✅ **Create a Folder for Saving Frames**
-save_folder = "export"
-if not os.path.exists(save_folder):
-    os.makedirs(save_folder, exist_ok=True)  # Ensure folder exists
-
-# Generate a unique filename using timestamp
-timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+timestamp = datetime.now().strftime("%H%M%S")
 filename = f"{script_name}_{timestamp}.png"
-
-
-
-save_path = os.path.join(save_folder, filename)
-plt.savefig(save_path, dpi=150)  # Save image with high resolution
-
+plt.savefig(filename, dpi=150)  # Save image with high resolution
 plt.tight_layout()
 plt.show()
