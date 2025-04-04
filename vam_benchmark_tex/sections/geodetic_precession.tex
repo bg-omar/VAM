@@ -1,0 +1,53 @@
+\section{Geodetic Precession (de Sitter Precession)}
+
+The geodetic effect, or de Sitter precession, is the relativistic precession of a gyroscope moving through curved spacetime in the absence of local mass rotation. This was a central test of General Relativity (GR) performed by the Gravity Probe B mission.
+
+\subsection*{GR Prediction}
+
+In GR, a gyroscope in orbit around a spherical mass $M$ experiences a precession of its spin axis given by:
+\begin{equation}
+    \boldsymbol{\Omega}_{\text{geod}} = \frac{3}{2} \frac{GM}{c^2 a^3} \, \mathbf{v} \times \mathbf{r}
+\end{equation}
+where $a$ is the semi-major axis of the orbit. For Gravity Probe B in polar orbit around Earth, this predicts a precession rate of:
+\begin{equation}
+    \Omega_{\text{geod}}^{\text{GR}} \approx 6606.1 \, \text{mas/yr}
+\end{equation}
+Gravity Probe B measured a value of $6601.8 \pm 18.3$ mas/yr, which agrees with GR to within $0.3\%$~\cite{everitt2011}.
+
+\subsection*{VAM Consideration}
+
+The Vortex \AE ther Model (VAM) does not curve spacetime, so it lacks the geometric parallel transport that causes spin precession in GR. However, spin transport might still arise if one includes differential effects from aether flow along an orbit.
+
+In flat space, the geodetic effect can also be derived using special relativity and successive Lorentz transformations (Thomas precession), which VAM could in principle emulate if it incorporates equivalence principle effects.
+
+Alternatively, VAM could postulate a spin precession rate in terms of the aether flow gradient:
+\begin{equation}
+    \boldsymbol{\Omega}_{\text{geo}}^{\text{VAM}} = -\frac{1}{2} \nabla \times \mathbf{v}_{\text{aether}}
+\end{equation}
+Evaluated along the orbital trajectory, this may yield the correct magnitude if the vortex circulation is appropriately structured.
+
+\subsection*{Comparison}
+
+\begin{table}[h!]
+    \centering
+    \caption{Geodetic vs Frame-Dragging Precession (Earth Satellite, Gravity Probe B)}
+    \label{tab:geodetic}
+    \begin{tabular}{lccc}
+        \toprule
+        Effect & GR Prediction (mas/yr) & VAM Prediction (mas/yr) & Observation (mas/yr) \\
+        \midrule
+        Geodetic (de Sitter) & $6606.1$ & Not derived (possibly $0$) & $6601.8 \pm 18.3$ \\
+        Frame-Dragging (LT)  & $39.2$   & $39.2$ (matched)           & $37.2 \pm 7.2$ \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection*{Conclusion}
+
+VAM correctly matches the frame-dragging precession by design, but currently lacks a mechanism for geodetic precession. A proposed fix is to define a spin transport law analogous to Fermi--Walker transport in the curved aether flow:
+\begin{equation}
+    \frac{d\mathbf{S}}{dt} = \boldsymbol{\Omega}_{\text{geo}}^{\text{VAM}} \times \mathbf{S}
+\end{equation}
+with $\boldsymbol{\Omega}_{\text{geo}}^{\text{VAM}}$ derived from aether vorticity gradients.
+
+This extension would allow VAM to replicate the de Sitter precession while preserving flat space, provided it respects the relativistic equivalence principle through the behavior of spin vectors in flow gradients.

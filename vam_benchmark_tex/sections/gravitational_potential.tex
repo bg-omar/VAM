@@ -1,0 +1,63 @@
+\section{Gravitational Potential and Field Strength}
+
+This section addresses the static gravitational potential $\Phi(r)$ and the derived field strength quantities that both GR and VAM must match in the Newtonian limit.
+
+\subsection{GR Prediction}
+In general relativity, the weak-field approximation yields the Newtonian potential:
+\begin{equation}
+    \Phi_{\text{GR}}(r) = -\frac{GM}{r},
+\end{equation}
+with gravitational acceleration (field strength):
+\begin{equation}
+    g(r) = -\nabla \Phi = \frac{GM}{r^2}.
+\end{equation}
+These expressions are valid across scales from laboratory experiments to planetary systems and match known observations except in extremely strong-field regimes.
+
+\subsection{VAM Formulation}
+In the Vortex \AE{}ther Model (VAM), the gravitational potential arises from aetheric vortex flow. The paper defines:
+\begin{equation}
+    \Phi_{\text{VAM}} = -\frac{1}{2} \vec{\omega} \cdot \vec{v},
+\end{equation}
+where $\vec{\omega}$ is the vorticity field and $\vec{v}$ is the aether flow velocity. For a coherent vortex, where $\vec{\omega} = \nabla \times \vec{v}$, this expression approximates the Newtonian $-GM/r$ outside the core if the vorticity decays as $1/r^2$.
+
+A coupling constant $\gamma$ plays the role of $G$ in the effective potential and is calibrated to match the Newtonian regime at macroscopic distances. Thus:
+\begin{equation}
+    \Phi_{\text{VAM}}(r) \xrightarrow{r \gg r_c} -\frac{GM}{r},
+\end{equation}
+reproducing classical gravity by construction.
+
+\begin{table}[H]
+    \centering
+    \caption{Comparison of Gravitational Potential and Field Strength}
+    \begin{tabular}{lccc}
+        \toprule
+        Object & $\Phi_{\text{GR}} = -GM/R$ [J/kg] & $g = GM/R^2$ [m/s$^2$] & VAM Agreement \\
+        \midrule
+        Earth & $-6.25\times10^7$ & $9.81$ & Matches (tuned $\gamma$) \\
+        Sun & $-1.9\times10^8$ & $274$ & Matches (tuned $\gamma$) \\
+        Neutron Star & $\sim -2\times10^{13}$ & $\sim 1.6\times10^{12}$ & Matches if $v_\phi \rightarrow c$ \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Potential Deviations at Quantum Scales}
+VAM introduces a scale-dependent suppression factor $\mu(r)$ to reduce gravity at quantum scales. This avoids large gravitational forces from intense vortex energy in elementary particles (e.g., electron, proton), where GR would still apply $\Phi = -GM/r$. In VAM:
+\begin{equation}
+    \mu(r) \approx \begin{cases}
+                       1 & r \gg r^* \\
+                       \frac{r_c C_e}{r^2} & r \ll r^*
+    \end{cases},
+\end{equation}
+ensuring agreement with gravity tests down to $\sim$50 $\mu$m.
+
+\subsection{ISCO and Stability Considerations}
+In GR, the innermost stable circular orbit (ISCO) for a Schwarzschild black hole occurs at:
+\begin{equation}
+    r_{\text{ISCO}} = 6GM/c^2.
+\end{equation}
+
+VAM currently lacks a formal mechanism for an ISCO, but the breakdown of laminar aether flow as $v_\phi \rightarrow c$ may act as an effective cutoff. This could mimic ISCO behavior if instability or dissipative effects emerge beyond a critical radius. Such a cutoff must be added to match GR in extreme gravity (e.g., accretion disks, gravitational waves).
+
+\subsection{Assessment}
+VAM recovers Newtonian potential and field strength at macroscopic scales exactly by construction. Its use of $\Phi = -\tfrac{1}{2}\vec{\omega}\cdot\vec{v}$ as a gravitational potential is dynamically motivated and provides an interpretational alternative to curved spacetime. To match ISCO and black hole physics, further development of relativistic fluid stability in the vortex is needed.
+

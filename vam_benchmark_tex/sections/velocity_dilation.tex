@@ -1,0 +1,54 @@
+\section{Kinetic and Orbital Time Dilation in VAM and GR}
+
+\subsection{Kinetic Time Dilation (Velocity-Based)}
+
+In Special Relativity (SR), time dilation for a moving clock with velocity $v$ is:
+\[
+    \frac{d\tau}{dt} = \sqrt{1 - \frac{v^2}{c^2}}.
+\]
+The Vortex Æther Model (VAM) reproduces this by treating motion relative to the local aether flow. A clock moving with the aether (e.g., tangential velocity $v_\phi$ from rotation) experiences the same relativistic slowdown:
+\[
+    \frac{d\tau}{dt}_{\text{VAM}} = \sqrt{1 - \frac{v_\phi^2}{c^2}}.
+\]
+This ensures equivalence between SR and VAM predictions in flat, rotating frames. For instance:
+\begin{itemize}
+    \item An equatorial atomic clock on Earth ($v=465$ m/s) experiences a slowdown of $\sim 10^{-11}$ per day~\cite{ashby2003relativity}.
+    \item A GPS satellite ($v \approx 3.9$ km/s) suffers SR time dilation of 7 μs/day, balanced by gravitational blueshift (+45 μs/day)~\cite{ashby2003relativity}.
+\end{itemize}
+These effects are matched exactly by VAM using the corresponding $v_\phi$ values.
+
+\subsection{Orbital Time Dilation (Kerr Metric Analogue)}
+
+General Relativity (GR) predicts that time dilation in a rotating gravitational field (Kerr metric) includes both gravitational and frame-dragging components. The combined approximation is:
+\[
+    \frac{d\tau}{dt} \approx 1 - \frac{3GM}{rc^2} + \frac{2GJ\omega_{\text{orb}}}{c^4},
+\]
+where $J$ is angular momentum and $\omega_{\text{orb}}$ is the orbital angular frequency.
+
+In VAM, the analogue derives from the swirl and circulation of the aether. Time dilation near a rotating mass is modeled as:
+\[
+    \frac{d\tau}{dt}_{\text{VAM}} = \sqrt{1 - \alpha \langle \omega^2 \rangle - \beta \kappa},
+\]
+where $\langle \omega^2 \rangle$ is vorticity intensity and $\kappa$ is the circulation of the aether vortex~\cite{grin3d2025}.
+
+For example, VAM matches GR’s frame-dragging predictions for satellites in Earth orbit. The difference in clock rates between prograde and retrograde orbits is $\sim 10^{-14}$—a negligible but confirmed GR prediction, and also captured by VAM’s tuned $\kappa$~\cite{ashby2003relativity}.
+
+\subsubsection*{Black Hole Case and Event Horizon}
+
+Near a spinning black hole, GR predicts extreme time dilation and an innermost stable circular orbit (ISCO). In VAM, as $v_\phi \rightarrow c$, the time dilation factor diverges:
+\[
+    \lim_{v_\phi \to c} \frac{d\tau}{dt}_{\text{VAM}} \to 0,
+\]
+which mimics the event horizon~\cite{grin3d2025}.
+
+\subsection*{Corrections: $\mu(r)$ Scaling Factor}
+
+To avoid unrealistically large frame-dragging at small scales, VAM introduces a radial scaling function $\mu(r)$, yielding:
+\[
+    \omega_{\text{drag}}^{\text{VAM}}(r) = \mu(r) \cdot \frac{4GM}{5c^2 r} \Omega(r).
+\]
+This ensures frame-dragging only applies macroscopically. At atomic scales, $\mu(r) \ll 1$, thus suppressing excessive frame-dragging from small spinning particles~\cite{grin3d2025,adelberger2003tests}.
+
+\subsection*{Conclusion}
+
+VAM’s velocity and orbital time dilation mechanisms replicate SR and GR effects to all currently measurable precision. While orbital Kerr-like structure in VAM requires careful parameter tuning ($\kappa$, $\mu(r)$), no experimental contradiction is currently known in satellite or geodesic scenarios.
