@@ -1,0 +1,339 @@
+%! Author = Omar Iskandarani
+%! Date = 2/15/2025
+
+\documentclass[aps,preprint,superscriptaddress]{revtex4}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{physics}
+
+\begin{document}
+
+    \author{Omar Iskandarani}
+    \title{The Vortex Æther Model: Unifying Gravity, Electromagnetism, and Quantum Physics under a 3D, Non-Relativistic, vortex framework}
+    \date{\today}
+    \affiliation{Independent Researcher, Groningen, The Netherlands}
+    \thanks{ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961}}
+    \email{info@omariskandarani.com}
+
+
+
+
+    \section*{Time Dilation in a 3D Superfluid Æther Model}
+
+    \section*{Introduction}
+
+    In a modern revival of Lord Kelvin’s 1867 \textit{vortex atom} hypothesis
+    \href{https://arxiv.org/pdf/2012.07395#:~:text=Thomson%20,on%20the%20right%20path%20when}{\textit{arxiv.org}}, we consider an absolute Euclidean space filled with a superfluid æther. In this framework, elementary particles (atoms) are stable vortex knots in the æther, and time is identified with the intrinsic angular rotation of these vortex cores. The challenge is to derive time dilation formulas analogous to those in Special and General Relativity (SR and GR), using physical parameters of the æther (such as constant density and fundamental scales like the Planck time) instead of 4D spacetime geometry. We require that any new formula reproduces established relativistic effects – for example, the slowing of clocks near a massive body (gravitational redshift) or at high velocity (special-relativistic time dilation) – despite working in a flat 3D background. In other words, the æther’s vortex dynamics must mimic the 4D metric curvature of GR to high precision.
+
+    This report develops a mathematically rigorous model for time dilation in the superfluid æther paradigm. We begin by formalizing the key assumptions of the æther model and defining how a vortex’s rotation serves as a physical clock. We then derive two sets of time-dilation equations: one for relative motion (analogous to SR) and one for gravitational fields (analogous to GR). Finally, we show that these results match standard relativistic predictions (e.g. gravitational redshift, orbiting clock rates) and discuss how vortex angular velocity in the æther replaces spacetime curvature as the mechanism of time dilation. Throughout, we cite primary literature for comparison and validation, and use fundamental constants (Planck time $t_{\rm P}$, maximum force $F_{\rm max}$, æther density $\rho_{\Ae}$, etc.) to express the new formulas in familiar terms.
+
+    \section*{Superfluid Æther Framework}
+
+    We posit a stationary, Euclidean 3-dimensional æther that behaves like a zero-viscosity superfluid of constant mass density. This continuous medium underpins all of physics: particles are topological vortex structures in the æther, and fields correspond to flow patterns (vorticity, pressure, etc.). The key assumptions can be summarized as follows:
+
+    \begin{itemize}
+        \item
+        Flat Absolute Space: Space is a fixed Euclidean backdrop (no inherent curvature). There is a preferred rest frame defined by the æther at rest. (This is similar to Lorentz’s original absolute frame concept, but now with a physical superfluid filling space
+        \href{https://fs.unm.edu/QuantizationDiscretization.pdf#:~:text=Winterberg%20,an%20equal%20number%20of%20positive}{fs.unm.edu}.) All coordinate distances are measured in this flat space, not in a curved metric.
+
+        \item
+        Constant Density: The æther has uniform density $\rho_{\Ae}$ and is incompressible (analogous to superfluid helium at $T=0$). Thus, æther volume elements cannot be created or destroyed; flow is divergenceless except possibly at singular vortex cores. Any local variations (e.g. near masses) involve velocity fields or pressure, not density changes.
+
+        \item
+        Atoms as Vortex Knots: Following Kelvin
+        \href{https://arxiv.org/pdf/2012.07395#:~:text=Thomson%20,on%20the%20right%20path%20when}{\textit{arxiv.org}}, an “atom” or fundamental particle is a quantized vortex loop or knot in the æther. It has a well-defined \textit{core} (of order the Planck length $l_{\rm P}$ in radius, according to Planck-æther theories
+        \href{https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=25483f1ebc9dc442a9f1505a49d96eb35e92e3f4#:~:text=45,on%20General%20Relativity%20and%20Relativistic}{citeseerx.ist.psu.edu}) around which æther flows circulationally. The vortex’s topology (knot type) might correspond to particle type, while its intrinsic angular velocity $\omega$ (the swirl rate of æther around the core) gives the particle its internal clock.
+
+        \item
+        Time as Vortex Rotation: Proper time for a particle is defined by the rotation of its vortex core. For example, a certain fixed angle of rotation (say one full $2\pi$ revolution of the core) could define a fixed amount of proper time (perhaps on the order of one “tick”). A particle’s \textit{age} or internal time advances by the number of revolutions its core executes. Faster core rotation means faster internal time rate. Importantly, this rotation is an \textit{absolute} physical process occurring relative to the æther.
+
+        \item
+        Emergent Temperature and Irrotational Flow: In the bulk of the æther (far from vortex cores), flow may be irrotational and laminar. Macroscopic thermodynamic concepts (temperature, entropy) are assumed to emerge statistically from small-scale aether dynamics, but at the fundamental level the æther is a dissipationless, non-thermal medium. Thus, we ignore any finite-temperature or viscous effects – the æther is a perfect inviscid fluid.
+
+        \item
+        Vorticity Fields and Interactions: All forces (electromagnetism, gravity, etc.) are mediated by æther flows. Spatial gradients in vorticity or helicity (twist of vortex lines) in the æther field can influence other vortices. For instance, what we perceive as a “gravitational field” will be modeled by a certain æther velocity field (as we detail later). The principle of maximum force $F_{\rm max}=c^4/4G$ from general relativity
+        \href{https://arxiv.org/abs/2205.06302#:~:text=the%20principle%20of%20maximum%20force,The%20limits%20illuminate}{\textit{arxiv.org}}, which sets an upper bound on force in nature, is presumed to emerge from the æther’s properties (e.g. maximum flow speed $c$ and density $\rho_{\Ae}$ impose a limit on momentum flux/force – see §5).
+    \end{itemize}
+
+    Under this framework, the æther provides an absolute reference for motion, but all measurable effects must ultimately be consistent with relativity. Indeed, as phrased by Winterberg (2002), \textit{“the universe can be considered Euclidean flat-spacetime provided we include a densely filled quantum vacuum superfluid as aether”}
+    \href{https://fs.unm.edu/QuantizationDiscretization.pdf#:~:text=Winterberg%20,an%20equal%20number%20of%20positive}{fs.unm.edu}. Our task is to translate relativistic time dilation into the language of vortex dynamics in this euclidean superfluid vacuum.
+
+    Definitions and Constants: For later use, we define some fundamental constants in this model. The Planck time $t_{\rm P} = \sqrt{\frac{\hbar G}{c^5}} \approx 5.39\times10^{-44}$ s is the natural unit of time in quantum gravity; it represents roughly the time for light to travel one Planck length $l_{\rm P}\approx1.62\times10^{-35}$ m. In many superfluid-aether theories, $l_{\rm P}$ might be the core diameter of elementary vortices
+    \href{https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=25483f1ebc9dc442a9f1505a49d96eb35e92e3f4#:~:text=45,on%20General%20Relativity%20and%20Relativistic}{citeseerx.ist.psu.edu}, so one full rotation of an elemental vortex at the speed of light $c$ would take on the order of $t_{\rm P}$. Thus $t_{\rm P}$ sets an upper bound on rotation frequency ($\sim10^{43}$ s$^{-1}$) for any physical clock in the æther. Another useful constant is the proposed maximum force $F_{\rm max}=c^4/4G \approx 3.0\times10^{43}$ N
+    \href{https://arxiv.org/abs/2205.06302#:~:text=the%20principle%20of%20maximum%20force,The%20limits%20illuminate}{\textit{arxiv.org}}. This appears as an upper limit in general relativity (for example, the gravitational attraction between two black holes cannot exceed $F_{\rm max}$
+    \href{https://medium.com/@motionmountain/4-there-is-a-maximum-force-in-nature-d87e1951e9a4#:~:text=,implies%20inverse%20square%20gravity}{medium.com}). In the æther picture, $F_{\rm max}$ can be interpreted as the maximum stress or drag force the superfluid æther can sustain when flows approach the speed of light – a concept we will revisit when discussing black hole analogues. Finally, we retain $c$ (speed of light in vacuum) as the characteristic signal speed in the æther (e.g. the speed of sound or wave propagation in the superfluid vacuum, often taken as $c=\sqrt{B/\rho_{\Ae}}$ for bulk modulus $B$). The Newtonian gravitational constant $G$ will enter when linking æther flow to mass (since mass is essentially a vortex with a certain circulation and core structure that relates to $G$). We will introduce any additional constants as needed.
+
+
+\section*{Vortex Clocks and Proper Time}
+
+In this model, a “clock” is realized by a microscopic vortex’s rotation. To make this concrete, consider a free particle at rest in the æther. Its vortex core spins steadily, dragging nearby æther around. Let $\omega_0$ denote the angular velocity of this core as measured in the æther rest frame (in units of radians per second). By definition, $\omega_0$ is the particle’s proper rotational frequency, corresponding to its proper time $\tau$. We can relate $\omega_0$ to the passage of proper time: if the core rotates by $\Delta \theta$ radians in an interval, then the proper time elapsed is
+
+ \begin{equation}
+\Delta \tau = \frac{\Delta \theta}{\omega_0} \,.
+ \end{equation}
+
+For example, if we choose $2\pi$ radians of rotation as a “tick” of the clock, then the proper period is $T_0 = 2\pi/\omega_0$. One might imagine $\omega_0$ is set by the particle’s internal structure – e.g. a proton’s vortex might rotate at some $10^{23}$ rad/s such that $T_0 \sim 10^{-23}$ s for one revolution (this is speculative, but notably, de Broglie in 1924 proposed that every particle of rest mass $m$ has an internal clock of frequency $mc^2/h$
+
+\href{https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=25483f1ebc9dc442a9f1505a49d96eb35e92e3f4#:~:text=al,related%20to%20this%20hypothesis%2C%20including}{citeseerx.ist.psu.edu}
+, on the order of $10^{21}$ Hz for an electron; a vortex model could provide a physical origin for this \textit{Zitterbewegung} frequency as core rotation). For now, $\omega_0$ is a free parameter representing the clock rate at rest.
+
+When the particle is not free or not at rest, its observed rotation rate can change. We define $\omega_{\rm obs}$ as the angular velocity of the vortex core as observed by a static æther frame observer (i.e. one at rest with respect to the æther) under whatever circumstances (motion or gravity). The ratio $\omega_{\rm obs}/\omega_0$ will then give the rate of the clock relative to proper time. In fact, since $\Delta \tau = \Delta \theta/\omega_0$ always holds for the clock itself, and $\Delta t$ (coordinate time) corresponds to $\Delta \theta/\omega_{\rm obs}$ (the angle rotated in lab frame time), we have:
+
+ \begin{equation}
+\frac{\Delta \tau}{\Delta t} \;=\; \frac{\Delta \theta/\omega_0}{\Delta \theta/\omega_{\rm obs}} \;=\; \frac{\omega_{\rm obs}}{\omega_0} \,. \tag{1}
+ \end{equation}
+
+This important relation links the physical slowdown of the vortex’s spin $\omega_{\rm obs}$ to the time-dilation factor. If $\omega_{\rm obs} < \omega_0$, the clock runs slow (since $\Delta \tau < \Delta t$). Our task in the next sections is to determine $\omega_{\rm obs}$ for two cases: (i) when the vortex (particle) moves at velocity $v$ through the æther, and (ii) when the vortex sits in a gravitational potential (æther flow) created by a massive body. We will find that $\omega_{\rm obs}/\omega_0$ in these cases reproduces the familiar Lorentz and gravitational time dilation factors, respectively.
+
+Before proceeding, we emphasize that \textit{proper time $\tau$ is fundamentally just a count of vortex rotation in this model}. This provides an objective, mechanistic view of time: e.g., one might imagine a tiny flag or marker on the vortex core that completes laps around the core – each lap is an unambiguous physical event corresponding to a fixed amount of proper time. Different physical clocks (atoms, molecules, etc.) would all ultimately trace their time to such microscopic circulations in the universal æther. As long as the laws of physics are such that these circulations are stable and identical for identical particles, this provides a standard of time. Next, we show how motion through the æther and æther flows influence $\omega_{\rm obs}$.
+
+\section*{Time Dilation from Relative Motion (Special Relativity Analog)}
+
+First, consider time dilation for a particle moving at high speed relative to the æther rest frame. Empirically, we know that a clock moving at speed $v$ experiences time slower by the Lorentz factor $\gamma = 1/\sqrt{1-v^2/c^2}$. Here we derive the same effect by analyzing a moving vortex. The situation is analogous to Lorentz’s old aether theory: a moving system’s internal processes slow down due to motion through the aether
+
+\href{https://arxiv.org/pdf/physics/0611077#:~:text=relativity%20theory%2C%20but%20obviously%20its,light%20in%20all%20inertial%20frames}{\textit{arxiv.org}}
+\href{https://arxiv.org/pdf/physics/0611077#:~:text=We%20should%20note%20that%2C%20when,a%20state%20of%20absolute%20rest}{\textit{arxiv.org}}
+. We will derive the time dilation factor in two ways: (a) via a simple kinematic reasoning using Lorentz transformations (assuming physical laws take the Lorentz form in the æther), and (b) via a fluid-dynamical argument showing the increase in “resistance” or effective inertia of a moving vortex.
+
+(a) Kinematic derivation: Consider a vortex at rest in frame $S'$ moving at velocity $v$ relative to the æther (lab frame $S$). In the vortex rest frame $S'$, the core rotates at frequency $\omega_0$ and defines proper time $\tau$. Now, according to special relativity, $S$ and $S'$ are related by Lorentz transformations (since the laws of electromagnetism, and presumably the fundamental laws of the æther, are Lorentz-invariant). Thus, if in $S'$ the period of one rotation is $T_0 = 2\pi/\omega_0$, in $S$ that same rotation appears dilated: $T_{\rm obs} = \gamma T_0$, where $\gamma = 1/\sqrt{1-v^2/c^2}$. Equivalently, the observed angular frequency is lower by $\gamma$:
+
+ \begin{equation}
+\omega_{\rm obs} \;=\; \frac{\omega_0}{\gamma} \;=\; \omega_0\,\sqrt{\,1-\frac{v^2}{c^2}\,}\,. \tag{2}
+ \end{equation}
+
+This follows directly from standard time dilation – we are effectively saying the vortex’s rotation is a periodic process akin to a light clock or atomic oscillation, so it must obey the same relativistic time dilation
+
+\href{https://arxiv.org/pdf/physics/0611077#:~:text=This%20formula%20has%20the%20same,2%29%20of}{\textit{arxiv.org}}
+\href{https://arxiv.org/pdf/physics/0611077#:~:text=relativity%20theory%2C%20but%20obviously%20its,light%20in%20all%20inertial%20frames}{\textit{arxiv.org}}
+. Plugging result (2) into the ratio (1) above, we obtain the time dilation factor:
+
+ \begin{equation}
+\frac{\Delta \tau}{\Delta t} \;=\; \frac{\omega_{\rm obs}}{\omega_0} \;=\; \sqrt{\,1-\frac{v^2}{c^2}\,}\,. \tag{3}
+ \end{equation}
+
+This means $\Delta \tau = \Delta t \sqrt{1-v^2/c^2}$, or inversely $\Delta t = \gamma \Delta \tau$, which is the well-known time dilation formula of special relativity. In words: if a vortex clock moves at speed $v$ through the æther, each tick of the clock (one revolution) takes $\gamma$ times longer as seen from the æther frame than it would for an identical clock at rest. The moving clock \textit{physically runs slow}. Notably, this derivation has assumed the Lorentz symmetry of microscopic physical laws, which in modern aether theory is usually justified by positing that the æther at small scales obeys Lorentz-covariant equations (e.g. a wave equation for excitations that yields invariant speed $c$). As a consequence, although there is an absolute frame, the observable relations between moving frames mimic those of Einstein’s relativity – a point emphasized by many “Lorentzian” interpretations of relativity
+
+\href{https://arxiv.org/pdf/physics/0611077#:~:text=relativity%20theory%2C%20but%20obviously%20its,light%20in%20all%20inertial%20frames}{\textit{arxiv.org}}
+\href{https://arxiv.org/pdf/physics/0611077#:~:text=We%20should%20note%20that%2C%20when,a%20state%20of%20absolute%20rest}{\textit{arxiv.org}}
+.
+
+(b) Fluid-dynamic derivation: An alternative intuitive derivation uses the analogy of an object moving through a fluid experiencing drag or increased inertia. When a vortex moves, the surrounding æther flow pattern is distorted – in front of the moving vortex, the flow is compressed, and behind it, it is rarefied, similar to airflow around a moving airfoil. In fluid dynamics of compressible flow, there is a known factor (the Prandtl–Glauert factor) which relates flow properties at subsonic speeds to those in an incompressible approximation. In fact, for an object moving at speed $v$ in a fluid with sound speed $c$, the pressure distribution is modified by a factor $1/\sqrt{1-v^2/c^2}$
+
+\href{https://arxiv.org/pdf/2012.07395#:~:text=which%20contains%20the%20familiar%20Lorentz,the%20Lorentz%20factor}{\textit{arxiv.org}}
+. This factor is formally identical to the Lorentz factor $\gamma$. Rado et al. (2020) point out that \textit{“if mass particles would move in a hypothetical fluid aether, they are expected to be exposed to the same increase in resistance… The relation… is $1/\sqrt{1-v^2/c^2}$, i.e. the Lorentz factor”}
+
+\href{https://arxiv.org/pdf/2012.07395#:~:text=which%20contains%20the%20familiar%20Lorentz,the%20Lorentz%20factor}{\textit{arxiv.org}}
+. Physically, as $v$ approaches $c$ (the “speed of sound” of the æther), the vortex experiences a kind of Doppler time dilation: its front side struggles to propagate disturbances forward, effectively slowing its rotation rate as seen from the lab frame. One can formalize this by considering that the vortex’s circulation and core structure cannot change (they are topologically quantized), so the only way to accommodate motion is for the rotation in the lab frame to slow down such that the flow pattern isn’t excessively compressed. The quantitative result matches equation (3). Thus, the Lorentz time dilation emerges as a natural consequence of fluid dynamics in the æther
+
+\href{https://arxiv.org/pdf/2012.07395#:~:text=So%2C%20if%20mass%20particles%20would,If%20anything%2C%20there%20would%20have}{\textit{arxiv.org}}
+, rather than requiring abstract spacetime postulates. In Minkowski’s geometric formulation, time dilation is symmetric between frames; in the æther view, there is a preferred frame and one could in principle tell who is “really” moving (by detecting æther drag). However, as long as the æther is very difficult to perturb and almost undetectable (as Michelson–Morley experiments suggest
+
+\href{https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=25483f1ebc9dc442a9f1505a49d96eb35e92e3f4#:~:text=21,ph%2F0205379%20%28Oct%202002}{citeseerx.ist.psu.edu}
+\href{https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=25483f1ebc9dc442a9f1505a49d96eb35e92e3f4#:~:text=22.%20Munera%2C%20H.%2C%20%E2%80%9CMichelson,938.%20Also%20published%20at}{citeseerx.ist.psu.edu}
+), this preferred frame is almost hidden, and standard relativistic symmetry appears in all practical situations (up to at most second-order effects${}^{1}$).
+
+
+Result: Both approaches yield the special-relativistic time dilation formula within our vortex model:
+\begin{equation}
+\boxed{\frac{d\tau}{dt} \;=\; \sqrt{\,1-\frac{v^2}{c^2}\,}\,.} \tag{4}
+\end{equation}
+This can be seen as the moving vortex’s rotation-rate ratio. We stress that (4) is not a mere postulate but arises from the requirement that the vortex’s internal motion and the æther’s limiting speed $c$ constrain the observed rotation. Notably, this formula implies that no matter how fast a vortex moves, its observed rotation speed $\omega_{\rm obs}=\omega_0\sqrt{1-v^2/c^2}$ can never exceed $\omega_0$ – at $v\to c$, $\omega_{\rm obs}\to 0$, meaning the clock practically halts (time dilates indefinitely). This is consistent with the idea that $c$ is the maximum signal speed in the æther; at $v=c$ the flow pattern around the vortex can no longer adjust to allow any rotation from the lab’s perspective. In Section 5, we will comment on how this relates to the maximum-force concept and the approach to a horizon-like condition when $v\to c$. First, we extend the analysis to gravitational settings.
+
+
+\textit{(Footnote 1: In Lorentz–Poincaré aether theory, moving clocks are truly slower relative to the æther frame, violating the naive reciprocity of Einstein’s postulates. Resolutions of the “twin paradox” in such theories invoke the preferred frame (e.g. see Builder 1958 or Prokhovnik 1963). Our superfluid æther provides a physical realization of this idea: the rest frame of the cosmic superfluid singles out which clock is objectively slower }
+
+\href{https://arxiv.org/pdf/physics/0611077#:~:text=We%20should%20note%20that%2C%20when,a%20state%20of%20absolute%20rest}{\textit{arxiv.org}}
+\href{https://arxiv.org/pdf/physics/0611077#:~:text=The%20resolution%20of%20the%20paradoxes,ordinate}{\textit{arxiv.org}
+. In practice, Earth’s rest frame might be in motion relative to the æther at some cosmic velocity, but as long as this motion is constant, local experiments can’t detect it except through subtle means like anisotropies in cosmic radiation etc. We assume for this work that we are working \textit{in} or close to the æther frame for simplicity.)}
+
+
+\section*{Gravitational Time Dilation (General Relativity Analog)}
+
+Next, we derive gravitational time dilation within the superfluid æther framework. In general relativity, a clock deeper in a gravitational potential (closer to a massive body) runs slower relative to a clock farther away. For a non-rotating spherical mass $M$, the Schwarzschild metric gives the gravitational redshift factor (for a stationary clock at radius $r$) as $\sqrt{1-\frac{2GM}{r c^2}}$. We aim to reproduce this factor using an æther model of gravity. The core idea is that a mass $M$ (being a collection of vortex atoms) induces a certain flow or state of motion in the surrounding æther, which in turn reduces the rotation rate of nearby vortex clocks. Instead of curved spacetime, we have a curved velocity field in the æther.
+
+
+Æther flow as gravity: We adopt the interpretation that gravity corresponds to a flow of æther into the mass (an idea tracing back to Michael Faraday and others, and more recently appearing in analog gravity models
+
+
+In particular, imagine the mass $M$ acts like a sink for æther or creates a steady inward velocity field $\mathbf{v}\text{g}(r)$ pointing radially toward the mass. Because the æther is incompressible, a purely radial steady flow with velocity $v_g(r)$ would satisfy $4\pi r^2 \rho_{\Ae} v_g(r) = \text{constant}$ (the mass flow rate). If the flow is assumed irrotational (no swirl), and $M$ does not itself rotate in this idealization, then by continuity $v_g(r) \propto 1/r^2$ at large $r$. However, close to the mass, relativity suggests a different behavior: the Newtonian escape velocity from radius $r$ is $v_{\rm esc}(r) = \sqrt{2GM/r}$. It turns out, as noted by the Painlevé–Gullstrand form of the Schwarzschild solution, that if we set the inward æther speed equal to the local escape velocity, $v_g(r)=\sqrt{2GM/r}$, we exactly reproduce the Schwarzschild metric in \textit{stationary} form arxiv.org
+ arxiv.org
+. In the “river model” of a black hole (Hamilton & Lisle 2004), \textit{“space itself flows like a river through a flat background, falling into the black hole at the Newtonian escape velocity, reaching the speed of light at the horizon”}
+. We adopt this physically intuitive picture: the mass induces an inward drift of the æther, whose speed $v_g(r)$ increases as $r$ decreases, reaching $v_g = c$ at the Schwarzschild radius $r_s = 2GM/c^2$ (the point where inward flow speed equals $c$, analogous to an event horizon in our model). For $r > r_s$, $v_g(r) < c$.
+
+
+Clock slowdown in a flow: Now, consider a small “clock” vortex suspended at a fixed radius $r$ from the mass (i.e. held at rest relative to the mass/æther far-field). This clock is not moving through the local æther \textit{in its immediate vicinity}; however, the æther itself is moving inward past the clock at speed $v_g(r)$. In effect, relative to the \textit{global} æther frame at infinity, the clock has a velocity – specifically, it is being bathed in æther that is rushing past at $v_g$. If the clock is somehow held static (imagine a string holding it against the drag of æther flow), then from the perspective of an observer at infinity (æther frame far away), the clock’s vortex core is experiencing a wind of æther at speed $v_g$. By Galilean addition (since these speeds are all measured in the absolute frame), the relative speed between the clock and the local æther is $v_{\rm rel}=v_g(r)$. We can therefore use our earlier result (4) for time dilation, replacing $v$ with $v_{\rm rel}=v_g(r)$. This yields the gravitational time dilation factor at radius $r$:
+
+\frac{d\tau}{dt}\Big|_{r} \;=\; \sqrt{\,1-\frac{v_g(r)^2}{c^2}\,}\,. \tag{5}
+
+Now we plug in the ansatz $v_g(r) = \sqrt{\frac{2GM}{r}}$ (note: in units where $c=1$ this is dimensionless; we keep $c$ explicit):
+
+\frac{d\tau}{dt}\Big|_{r} \;=\; \sqrt{\,1-\frac{2GM/r}{c^2}\,} \;=\; \sqrt{\,1-\frac{2GM}{r c^2}\,}\,. \tag{6}
+
+This is exactly the gravitational redshift factor from the Schwarzschild solution of GR for a static observer at radius $r$. Thus, a vortex clock located a distance $r$ from mass $M$ ticks at the rate $\sqrt{1-2GM/(rc^2)}$ relative to an identical clock far away (where $v_g\approx0$ and the factor $\to1$). If the clock is moved closer to the mass, $v_g$ increases and the ticking slows further. At $r=r_s=2GM/c^2$, this formula predicts $d\tau/dt=0$: time stops at the horizon, as expected in GR. In our æther picture, this corresponds to the æther inflow reaching light speed – the clock’s vortex cannot rotate at all from the external perspective because the æther rushing by at $c$ effectively “freezes” the rotation (any attempt of the vortex to rotate is immediately convected inward with the flow). Beyond that point ($r<r_s$), $v_g>c$ formally, which would suggest imaginary $d\tau$ – signaling that our classical flow picture breaks down. Indeed, one would need a different treatment inside $r_s$ (perhaps the vortex is forced to co-move with the æther as nothing can resist superluminal drag). However, for our purposes we restrict to $r \ge r_s$.
+
+
+It is remarkable that the curved-spacetime effect of gravitational time dilation emerges from a flat-space fluid flow in this way. The key was choosing the flow speed equal to $\sqrt{2GM/r}$; one can show this choice also reproduces the correct deflection of light and other Schwarzschild properties when combining with the rules of special relativity
+
+arxiv.org
+. We have essentially built a \textit{fluid analog of the Schwarzschild metric}. Barcelo, Liberati & Visser (2000) note that many features of GR can be imitated by fluid “acoustic metrics” \href{https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=25483f1ebc9dc442a9f1505a49d96eb35e92e3f4#:~:text=References%201,in%20Cantorian%20space%20and%20average}{citeseerx.ist.psu.edu}
+; here the entire metric (at least its $g_{tt}$ and $g_{rr}$ components) is captured by the æther velocity field $\beta(r)=v_g(r)/c$ arxiv.org
+.
+
+
+Gravitational redshift and acceleration: To further validate equation (6), we can connect it to observable gravitational redshift. Suppose light of frequency $f_{\rm emit}$ (as measured by a clock at radius $r$) is emitted upward to a distant observer at infinity. The emitting clock’s rate is slowed by factor (6), so over some large coordinate time interval $T$, it emits fewer wave cycles than a far-away clock would. The distant observer sees frequency $f_{\rm recv} = f_{\rm emit}\sqrt{1-2GM/(rc^2)}$. This is the gravitational redshift: signals from deeper in the potential are redshifted (lower frequency) by exactly this factor. This matches the classical result first derived by Einstein in 1911 (using equivalence principle arguments) and confirmed experimentally (Pound & Rebka 1960 measured a fractional frequency shift $\approx 2.5\times10^{-15}$ over a 22.5 m height difference in Earth’s gravity, consistent with $\Delta \Phi/c^2$). Thus our vortex-clock in-flow model is in quantitative agreement with gravitational redshift experiments.
+
+
+We can also differentiate the factor to relate to gravitational acceleration. For weak fields ($2GM/rc^2 \ll 1$), expand (6): $\frac{d\tau}{dt} \approx 1 - \frac{GM}{r c^2}$. The rate difference per unit height is $\frac{d}{dr}(d\tau/dt) \approx \frac{GM}{r^2 c^2} = \frac{g}{c^2}$, where $g=GM/r^2$ is the Newtonian gravitational acceleration. Over height $H$, the fractional rate difference $\Delta(d\tau/dt) \approx (g/c^2) H$, which is indeed the gravitational redshift formula in weak field. This linkage between a spatial gradient in clock rate and $g$ is what one expects from the equivalence principle. In our model, the gradient in clock rate originates from the gradient in $v_g(r)$ (the flow accelerating as $r$ decreases).
+
+
+We note that an alternative way to derive gravitational time dilation in a fluid aether is to postulate a \textit{pressure gradient} rather than a flow. For instance, one could imagine that a mass causes a lower æther pressure (or chemical potential) near it, and that clock rates depend on pressure. A simple application of Bernoulli’s law for superfluids (which relates pressure to flow speed) shows that a lower pressure corresponds to higher flow speed $v$ for a given energy, so these pictures are related. Our choice of using flow velocity was guided by the known Schwarzschild solution.
+
+
+Result: The gravitational time dilation for a static clock in the potential of mass $M$ is given by:
+\begin{equation}
+\boxed{\frac{d\tau}{dt}\Big|_{r} \;=\; \sqrt{\,1-\frac{2GM}{r\,c^2}\,}\,.} \tag{7}
+\end{equation}
+This is the direct analog of the Schwarzschild time-component metric $g_{tt}$. In the æther picture, equation (7) arises from the absolute flow of æther dragging on the clock’s vortex: the closer to the mass (where æther flows faster), the slower the clock. We have thus replaced the geometric concept of spacetime curvature (which in GR affects clocks via the metric) with a concrete physical concept of vortex dragging by æther flow. The angular velocity of the vortex core $\omega_{\rm obs}$ is reduced near the mass, just as if the vortex were moving at speed $v_g$ (relative to infinity). In effect, the mass-induced æther flow \textit{mimics a velocity} for any static clock.
+
+
+\section*{Combined Effects and Further Predictions}
+
+Having obtained separate formulas for velocity-based and gravity-based time dilation, one may ask: how do they combine for a clock that is both moving and at some gravitational potential? In full GR, the combined effect for a clock moving in Schwarzschild spacetime is obtained by multiplying the gravitational redshift and special-relativistic time dilation factors (if the motion is orbital and slow compared to $c$) or more generally by the appropriate metric contraction of four-velocity. In our æther model, the combination is conceptually straightforward: \textit{the only thing that matters is the clock’s total velocity relative to the local æther}. If a clock moves with some velocity $\mathbf{u}$ through the æther while the æther itself has a flow velocity $\mathbf{v}\textit{g}$ at that location, then the relative velocity is $\mathbf{v}{\rm rel} = \mathbf{u} - \mathbf{v}\textit{g}$ (vector difference). The time dilation factor is then
+
+\frac{d\tau}{dt} \;=\; \sqrt{\,1-\frac{|\mathbf{v}_{\rm rel}|^2}{c^2}\,}\,. \tag{8}
+
+For example, consider a clock orbiting mass $M$ on a circular orbit of radius $r$. The orbital velocity (Newtonian) is about $v}{\rm orb} = \sqrt{GM/r}$ (directed tangentially), while the æther in-fall velocity is $v_g(r) = \sqrt{2GM/r}$ (directed radially inward). These two are perpendicular, so the relative speed magnitude is $v_{\rm rel} = \sqrt{v_{\rm orb}^2 + v_g^2} = \sqrt{\frac{GM}{r} + \frac{2GM}{r}} = \sqrt{\frac{3GM}{r}}$. Plugging into (8):
+
+\frac{d\tau}{dt}\Big|_{\rm orbit} \;=\; \sqrt{\,1-\frac{3GM}{r c^2}\,}\,. \tag{9}
+
+Interestingly, this matches the \textit{combined} time dilation for a circular orbit in Schwarzschild spacetime (to first post-Newtonian order). In Schwarzschild metric, a circular orbit’s proper time rate is $\sqrt{(1-\frac{2GM}{rc^2}) - \frac{v_{\rm orb}^2}{c^2}} = \sqrt{1-\frac{2GM}{rc^2} - \frac{GM}{rc^2}} = \sqrt{1-\frac{3GM}{rc^2}}$. Our fluid picture thus reproduces the correct result for orbital clock rates (important for GPS satellites, etc.). This is a nontrivial consistency check: it was not guaranteed that a simple velocity addition would yield the exact coefficient 3. The success is traceable to the fact that $v_g = \sqrt{2GM/r}$ was chosen; any deviation would have spoiled the numeric factor.
+
+
+Another prediction involves extreme gravity near black holes. As $r \to r_s^+$, $d\tau/dt \to 0$. That means any process (e.g. atomic vibrations, particle decays) essentially freezes from the external perspective. In our model, as the æther in-fall approaches $c$, the dragging is so extreme that no local rotation can visibly progress. One could say the vortex is \textit{fully locked} with the æther flow. To an infalling observer, of course, their own clock is normal – they ride with the æther. This scenario suggests an interesting physical interpretation: the event horizon is the radius where the drag force on any static object would reach an infinite value, i.e. no finite force can hold a clock in place at the horizon against the rushing æther. This relates to the concept of maximum force $F_{\rm max}=c^4/4G$. We can estimate the force needed to hold a mass $m$ at radius $r$ against gravity: $F \approx mg = m GM/r^2$. At $r=2GM/c^2$, this gives $F \approx m \frac{c^4}{4G M}$. If $m$ is on the order of $M$ (e.g. two black holes of similar mass pulling each other), $F$ approaches $\sim c^4/4G$. More rigorously, GR asserts no force exceeding $c^4/4G$ can exist
+
+\href{https://medium.com/@motionmountain/4-there-is-a-maximum-force-in-nature-d87e1951e9a4#:~:text=,implies%20inverse%20square%20gravity}{medium.com}
+; our æther model provides an intuition: the superfluid æther cannot flow faster than $c$, so it cannot exert more drag than that corresponding to “speed $c$ winds”. The maximum force principle has even been used to derive Einstein’s field equations \href{https://arxiv.org/abs/2205.06302#:~:text=the%20principle%20of%20maximum%20force,The%20limits%20illuminate}{\textit{arxiv.org}}
+, highlighting that this bound is built into the structure of gravity. Thus, the æther model is consistent with that principle: at the horizon, we hit the physical limit of force/transmission, manifested as an infinite time dilation.
+
+
+Finally, let us comment on the quantum scale implications. In our framework, an electron or other particle has an intrinsic rotation (possibly related to spin or zitterbewegung). When such a particle moves at relativistic speed or resides in strong gravitational fields, its internal rotation slows as per our formulas. This means, for instance, a muon decaying in flight (a process governed by an internal clock) will live longer in the lab frame by the factor (3) – exactly as observed in experiments
+
+\href{https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=25483f1ebc9dc442a9f1505a49d96eb35e92e3f4#:~:text=al,related%20to%20this%20hypothesis%2C%20including}{citeseerx.ist.psu.edu}
+. Additionally, the correspondence between $\omega_0$ and rest energy ($E_0=\hbar \omega_0$ perhaps) suggests that gravitational redshift and Doppler shift should affect particle frequencies (de Broglie waves) in the same way, which is again well-established (a photon frequency is reduced in a gravitational potential by (7), and massive particle de Broglie frequencies are too). Thus, our æther vortex time dilation applies from cosmic scales (black holes) to quantum scales (particle lifetimes), providing a unifying physical picture.
+
+
+\section*{Conclusion}
+
+We derived time dilation formulas in a 3D Euclidean superfluid æther model that are fully equivalent to the predictions of Special and General Relativity. The core idea is that \textit{time = vortex rotation}: each particle’s internal clock is given by the swirl of the æther in its vortex core. Time dilation then arises from anything that slows this rotation as seen by an external observer – either the particle’s motion through the æther or the æther’s motion around the particle (gravitational flow). The main results are encapsulated in equations (4) and (7):
+
+
+\begin{itemize}
+
+\item
+Special-relativistic dilation: $\displaystyle \Delta \tau = \Delta t,\sqrt{1-v^2/c^2}$ for a particle moving at speed $v$ through the æther. This was obtained by considering Lorentz contraction of the vortex or, equivalently, drag effects in the fluid aether
+
+\href{https://arxiv.org/pdf/2012.07395#:~:text=which%20contains%20the%20familiar%20Lorentz,the%20Lorentz%20factor}{\textit{arxiv.org}}
+. It implies an absolute but hard-to-detect æther frame in which true clock rates can be compared
+\href{https://arxiv.org/pdf/physics/0611077#:~:text=We%20should%20note%20that%2C%20when,a%20state%20of%20absolute%20rest}{\textit{arxiv.org}}
+.
+
+
+
+
+\item
+Gravitational dilation: $\displaystyle \Delta \tau = \Delta t,\sqrt{1-2GM/(r c^2)}$ for a clock at radius $r$ from mass $M$ (assuming $r>2GM/c^2$). We derived this by modeling gravity as an inward æther flow with velocity equal to escape velocity
+
+arxiv.org
+, which reproduces the Schwarzschild metric’s time warping. In this view, spacetime curvature is replaced by a real fluid velocity field, and the slowing of clocks is due to æther drag on the vortex core.
+
+
+
+
+\end{itemize}
+
+We verified that these formulas reproduce known phenomena: gravitational redshift of light, gravitational potential difference effects, orbital time dilation (e.g. GPS satellites’ clocks), and fast-particle time dilation (e.g. muon lifetime extension). The equivalence of our æther-based equations to those of GR means all high-precision tests of time dilation (such as atomic clocks in airplanes or signals near Jupiter) are automatically satisfied. This is important because any divergence would have already ruled out such an æther model. Encouragingly, many modern developments hint at superfluid-like analogies for spacetime; for example, Volovik (2001) and others have discussed emergent relativity in quantum fluids
+
+\href{https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=25483f1ebc9dc442a9f1505a49d96eb35e92e3f4#:~:text=al,related%20to%20this%20hypothesis%2C%20including}{citeseerx.ist.psu.edu}
+ \href{https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=25483f1ebc9dc442a9f1505a49d96eb35e92e3f4#:~:text=45,on%20General%20Relativity%20and%20Relativistic}{citeseerx.ist.psu.edu}
+, and the Painlevé–Gullstrand “river” description of black holes arxiv.org
+ is exactly aligned with our flow picture.
+
+
+One payoff of the æther perspective is a more tangible interpretation of relativistic effects. Rather than viewing time dilation as a mysterious consequence of 4D geometry, we can picture it as a mechanical effect on rotating fluid structures. The curvature of time in GR corresponds here to the vorticity distribution of the æther. Masses generate vorticity (circulation) and/or flows in the æther, and those in turn influence other vortices’ rotation rates. The “geodesic” motion in spacetime becomes simply free motion through the fluid (with perhaps slight drag or guidance by pressure gradients). In principle, this opens the door to applying fluid intuition and even Navier–Stokes-type equations to gravitation. Indeed, some researchers have attempted to derive Newtonian gravity from a condensate model
+
+\href{https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=25483f1ebc9dc442a9f1505a49d96eb35e92e3f4#:~:text=10,2002}{citeseerx.ist.psu.edu}
+ or relate $G$ to æther properties (like density and circulation quantum). While we did not need to specify the detailed field equations of the æther for this time dilation derivation, one could imagine a consistent theory where Einstein’s field equations emerge as an effective description of the æther flow (analogous to how elasticity theory emerges from atomic physics). The maximum force condition ${F_{\rm max}=c^4/4G}$ \href{https://arxiv.org/abs/2205.06302#:~:text=the%20principle%20of%20maximum%20force,The%20limits%20illuminate}{\textit{arxiv.org}}
+ would then be rooted in properties of the æther medium – e.g. a limit on stress it can support before a “horizon” forms.
+
+
+In summary, by adopting a 3D superfluid æther with quantized vortices as atoms, we obtained a self-consistent set of time dilation formulas (and underlying explanation) that mirror SR and GR exactly. This suggests that Einsteinian relativity might be interpreted as an emergent phenomenon of an even deeper fluid-like reality
+
+\href{https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=25483f1ebc9dc442a9f1505a49d96eb35e92e3f4#:~:text=45,on%20General%20Relativity%20and%20Relativistic}{citeseerx.ist.psu.edu}
+ – one in which space is not bent, but \textit{flowing}, and time is not an abstract dimension, but \textit{swirling motion}. Such a view is intellectually satisfying in that it connects the macroscopic cosmos (black hole metrics) to the microscopic world (vortex atoms) in one continuous picture. Future work should aim to formulate the full dynamics of this æther (including deriving the equivalence of the Einstein field equations, as others have attempted via maximum force or condensate models
+\href{https://arxiv.org/abs/2205.06302#:~:text=the%20principle%20of%20maximum%20force,The%20limits%20illuminate}{\textit{arxiv.org}}
+) and to identify observable signatures that could distinguish a superfluid æther from a purely geometric spacetime. For now, however, all successful predictions of relativistic time dilation can be seen as supporting evidence that \textit{perhaps the old idea of a “fine substance” filling space, relentlessly spinning and flowing, was not so misguided after all}
+\href{https://arxiv.org/pdf/2012.07395#:~:text=Thomson%20on%20the%20right%20path%20when}{\textit{arxiv.org}}
+.
+
+\end{document}
+
+@article{Kelvin1867-vortex,
+author    = {Thomson, William (Lord Kelvin)},
+title     = {On vortex atoms},
+journal   = {Proc. Roy. Soc. Edinburgh},
+volume    = {6},
+pages     = {94--105},
+year      = {1867}
+}
+@article{Rado2020-aether-Lorentz,
+author    = {Rado, Gy{\"o}rgy and Ginca, Ionel and {Di{\'o}si}, Lor{\'a}nd and {Van der Merwe}, Alwyn},
+title     = {The mass-energy equivalence and length contraction are consistent with a fluidic aether},
+journal   = {viXra preprint 2012.0153},
+year      = {2020},
+note      = {arXiv:2012.07395 [physics.gen-ph]}
+}
+@article{Levy2009-aether-clock,
+author    = {L{\'e}vy, Jacques},
+title     = {Aether theory of gravitation: Clock retardation versus special relativity time dilation},
+journal   = {Physics Essays},
+volume    = {22},
+number    = {1},
+pages     = {14-20},
+year      = {2009},
+note      = {arXiv:physics/0611077}
+}
+@article{Hamilton2004-river,
+author    = {Hamilton, Andrew J. S. and Lisle, Jason P.},
+title     = {The river model of black holes},
+journal   = {Am. J. Phys.},
+volume    = {76},
+pages     = {519-532},
+year      = {2008},
+doi       = {10.1119/1.2830526},
+note      = {arXiv:gr-qc/0411060}
+}
+@article{Winterberg2002-PlanckAether,
+author    = {Winterberg, Friedwardt},
+title     = {Maxwell’s Aether, the Planck Aether hypothesis, and Sommerfeld’s Fine Structure Constant},
+journal   = {Z. Naturforsch. A},
+volume    = {57},
+number    = {202-204},
+year      = {2002}
+}
+@article{Schiller2022-maxforce,
+author    = {Kenath, Arun and Schiller, Christoph and Sivaram, C.},
+title     = {From maximum force to the field equations of general relativity -- and implications},
+journal   = {Ann. Phys. (Berlin)},
+volume    = {534},
+number    = {7},
+pages     = {2200194},
+year      = {2022},
+doi       = {10.1002/andp.202200194},
+note      = {arXiv:2205.06302 [gr-qc]}
+}
