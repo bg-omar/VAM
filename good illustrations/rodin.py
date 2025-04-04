@@ -7,6 +7,37 @@ from mpl_toolkits.mplot3d import Axes3D
 num_turns=10
 num_points=1000
 
+# Reimporting necessary libraries after state reset
+import os
+from datetime import datetime
+import matplotlib
+matplotlib.use('TkAgg')  # Ensure it uses Tkinter backend
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Define parameters for the ring torus (R = 4r)
+R_ring = 1  # Major radius of the ring torus
+r_ring = 0.25  # Minor radius of the ring torus
+
+# Define parameters for the horn torus (R = 4r)
+R_horn = 1  # Major radius of the horn torus
+r_horn = 1  # Minor radius of the horn torus
+
+# Define the grid for the tori
+theta = np.linspace(0, 2 * np.pi, 100)
+phi = np.linspace(0, 2 * np.pi, 100)
+theta, phi = np.meshgrid(theta, phi)
+
+# Parametric equations for the ring torus
+X_ring = (R_ring + r_ring * np.cos(phi)) * np.cos(theta)
+Y_ring = (R_ring + r_ring * np.cos(phi)) * np.sin(theta)
+Z_ring = r_ring * np.sin(phi)
+
+# Parametric equations for the horn torus
+X_horn = (R_horn + r_horn * np.cos(phi)) * np.cos(theta)
+Y_horn = (R_horn + r_horn * np.cos(phi)) * np.sin(theta)
+Z_horn = r_horn * np.sin(phi)
+
 
 # Function to generate Rodin coil windings
 def generate_rodin_coil(R, r, num_turns=12, num_points=1000):
@@ -69,6 +100,11 @@ def plot_rodin_coil():
     ax.plot(x1, y1, z1, 'r-', linewidth=2, label="Phase 1")
     ax.plot(x2, y2, z2, 'b-', linewidth=2, label="Phase 2")
     ax.plot(x3, y3, z3, 'g-', linewidth=2, label="Phase 3")
+    # Plot the ring torus in blue with 85% transparency
+    ax.plot_surface(X_ring, Y_ring, Z_ring, rstride=5, cstride=5, color='blue', alpha=0.15, edgecolor='k')
+
+    # Plot the horn torus in red with 90% transparency
+    # ax.plot_surface(X_horn, Y_horn, Z_horn, rstride=5, cstride=5, color='red', alpha=0.10, edgecolor='k')
 
     # Plot toroidal frame
     theta = np.linspace(0, 2 * np.pi, 100)
