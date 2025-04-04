@@ -1,4 +1,5 @@
 # 3D Visualization of the Starship Coil - Multiple Layers
+
 import numpy as np
 
 import matplotlib
@@ -110,5 +111,13 @@ ax.set_zlabel('Z-axis')
 ax.set_box_aspect([1, 1, 1])  # Ensures 1:1:1 aspect ratio
 
 
-plt.show()
 
+# ✅ Get the script filename dynamically
+import os
+from datetime import datetime
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+timestamp = datetime.now().strftime("%H%M%S")
+filename = f"{script_name}_{timestamp}.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+plt.tight_layout()
+plt.show()
