@@ -84,4 +84,14 @@ for num, (x, y) in positions_rotated.items():
 plt.legend()
 plt.title("3-Phase Rodin Coil", fontsize=16)
 plt.grid(True)
+
+
+# ✅ Get the script filename dynamically
+import os
+from datetime import datetime
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+timestamp = datetime.now().strftime("%H%M%S")
+filename = f"{script_name}_{timestamp}.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+plt.tight_layout()
 plt.show()
