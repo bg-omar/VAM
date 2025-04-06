@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.4.3)  4 APR 2025 07:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.4.3)  6 APR 2025 17:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -402,7 +402,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--22
 []
  []
 
-(C:/Users\mr\IdeaProjects\VAM\auxil\vam_gr_benchmark.aux)
+(C:/Users\mr\IdeaProjects\VAM\out\vam_gr_benchmark.aux)
 \openout1 = `vam_gr_benchmark.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
@@ -480,8 +480,8 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring OFF on input line 23.
-(C:/Users\mr\IdeaProjects\VAM\auxil\vam_gr_benchmark.out)
-(C:/Users\mr\IdeaProjects\VAM\auxil\vam_gr_benchmark.out)
+(C:/Users\mr\IdeaProjects\VAM\out\vam_gr_benchmark.out)
+(C:/Users\mr\IdeaProjects\VAM\out\vam_gr_benchmark.out)
 \@outlinefile=\write3
 \openout3 = `vam_gr_benchmark.out'.
 
@@ -490,9 +490,9 @@ Package hyperref Info: Link coloring OFF on input line 23.
 [1
 
 {C:/Users/mr/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-(sections/introduction.tex
+(sections/01_introduction.tex
 
-sections/introduction.tex:6: LaTeX Error: Unicode character τ (U+03C4)
+sections/01_introduction.tex:6: LaTeX Error: Unicode character τ (U+03C4)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -504,7 +504,7 @@ l.6 ...ormalized to the observation or GR value.)}
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
-) (sections/time_dilation.tex
+) (sections/02_time_dilation.tex
 
 LaTeX Warning: Citation `will2014confrontation' on page 2 undefined on input li
 ne 7.
@@ -516,7 +516,7 @@ ne 7.
 LaTeX Warning: Citation `grin3d2025' on page 3 undefined on input line 14.
 
 
-sections/time_dilation.tex:23: LaTeX Error: Unicode character μ (U+03BC)
+sections/02_time_dilation.tex:23: LaTeX Error: Unicode character μ (U+03BC)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -569,13 +569,14 @@ s, VAM in-tro-duces a scale-dependent
 
 )
 
-[3] (sections/velocity_dilation.tex
+[3] (sections/03_velocity_dilation.tex
 
 LaTeX Warning: Citation `ashby2003relativity' on page 4 undefined on input line
  15.
 
 
-sections/velocity_dilation.tex:16: LaTeX Error: Unicode character μ (U+03BC)
+sections/03_velocity_dilation.tex:16: LaTeX Error: Unicode character μ (U+03BC
+)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -589,7 +590,8 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-sections/velocity_dilation.tex:16: LaTeX Error: Unicode character μ (U+03BC)
+sections/03_velocity_dilation.tex:16: LaTeX Error: Unicode character μ (U+03BC
+)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -626,7 +628,7 @@ LaTeX Warning: Citation `grin3d2025' on page 5 undefined on input line 50.
 LaTeX Warning: Citation `adelberger2003tests' on page 5 undefined on input line
  50.
 
-) (sections/frame_dragging.tex
+) (sections/04_frame_dragging.tex
 
 LaTeX Warning: Citation `ciufolini2004confirmation' on page 5 undefined on inpu
 t line 7.
@@ -661,7 +663,7 @@ Overfull \hbox (64.27475pt too wide) in paragraph at lines 28--36
 
 LaTeX Warning: Citation `grin3d2025' on page 6 undefined on input line 43.
 
-) (sections/redshift.tex
+) (sections/05_redshift.tex
 
 LaTeX Warning: Citation `will2014confrontation' on page 6 undefined on input li
 ne 7.
@@ -696,7 +698,7 @@ Overfull \hbox (12.1178pt too wide) in paragraph at lines 26--36
 
 LaTeX Warning: Citation `grin3d2025' on page 7 undefined on input line 50.
 
-) (sections/light_deflection.tex
+) (sections/06_light_deflection.tex
 
 [7]
 
@@ -719,7 +721,7 @@ LaTeX Warning: Citation `shapiro2004gravitational' on page 8 undefined on input
 
 
 
-[8]) (sections/perihelion_precession.tex
+[8]) (sections/07_perihelion_precession.tex
 
 LaTeX Warning: Citation `will2014confrontation' on page 9 undefined on input li
 ne 3.
@@ -746,12 +748,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: Citation `sereno2006solar' on page 10 undefined on input line 44
 .
 
-) (sections/gravitational_potential.tex
+) (sections/08-gravitational_potential.tex
 
 [10]
 
-sections/gravitational_potential.tex:29: LaTeX Error: Unknown float option `H'.
-
+sections/08-gravitational_potential.tex:29: LaTeX Error: Unknown float option `
+H'.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -761,7 +763,7 @@ l.29 \begin{table}[H]
                      
 Option `H' ignored and `p' used.
 
-) (sections/gravitational_waves.tex
+) (sections/09_gravitational_waves.tex
 
 [11]
 
@@ -775,7 +777,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-[12]) (sections/geodetic_precession.tex
+[12]) (sections/10_geodetic_precession.tex
 
 LaTeX Warning: Citation `everitt2011' on page 13 undefined on input line 15.
 
@@ -789,34 +791,34 @@ Overfull \hbox (27.95462pt too wide) in paragraph at lines 35--43
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (sections/conclusion.tex
+) (sections/11_conclusion.tex
 
-sections/conclusion.tex:10: LaTeX Error: Environment tabularx undefined.
+sections/11_conclusion.tex:10: LaTeX Error: Environment tabularx undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.10     \begin{tabularx}
-                         {\textwidth}{|l|X|X|X|c|}
+                         {\textwidth}{l X X X c}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-sections/conclusion.tex:10: Missing number, treated as zero.
+sections/11_conclusion.tex:10: Missing number, treated as zero.
 <to be read again> 
                    }
 l.10     \begin{tabularx}{\textwidth}
-                                     {|l|X|X|X|c|}
+                                     {l X X X c}
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-sections/conclusion.tex:10: Illegal unit of measure (pt inserted).
+sections/11_conclusion.tex:10: Illegal unit of measure (pt inserted).
 <to be read again> 
                    }
 l.10     \begin{tabularx}{\textwidth}
-                                     {|l|X|X|X|c|}
+                                     {l X X X c}
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -824,7 +826,7 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-sections/conclusion.tex:11: Misplaced \noalign.
+sections/11_conclusion.tex:11: Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
 l.11         \hline
@@ -832,7 +834,7 @@ l.11         \hline
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
-sections/conclusion.tex:12: Misplaced alignment tab character &.
+sections/11_conclusion.tex:12: Misplaced alignment tab character &.
 l.12         \textbf{Phenomenon} &
                                    \textbf{GR Prediction} & \textbf{VAM Pred...
 I can't figure out why you would want to use a tab mark
@@ -842,7 +844,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:12: Misplaced alignment tab character &.
+sections/11_conclusion.tex:12: Misplaced alignment tab character &.
 l.12 ...tbf{Phenomenon} & \textbf{GR Prediction} &
                                                    \textbf{VAM Prediction} &...
 I can't figure out why you would want to use a tab mark
@@ -852,7 +854,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:12: Misplaced alignment tab character &.
+sections/11_conclusion.tex:12: Misplaced alignment tab character &.
 l.12 ...GR Prediction} & \textbf{VAM Prediction} &
                                                    \textbf{Observation} & \t...
 I can't figure out why you would want to use a tab mark
@@ -862,7 +864,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:12: Misplaced alignment tab character &.
+sections/11_conclusion.tex:12: Misplaced alignment tab character &.
 l.12 ...f{VAM Prediction} & \textbf{Observation} &
                                                    \textbf{Agreement} \\
 I can't figure out why you would want to use a tab mark
@@ -872,7 +874,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:13: Misplaced \noalign.
+sections/11_conclusion.tex:13: Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
 l.13         \hline
@@ -880,7 +882,7 @@ l.13         \hline
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
-sections/conclusion.tex:14: Misplaced alignment tab character &.
+sections/11_conclusion.tex:14: Misplaced alignment tab character &.
 l.14 ...avitational Time Dilation (Static Field) &
                                                    $d\tau/dt = \sqrt{1 - 2GM...
 I can't figure out why you would want to use a tab mark
@@ -890,7 +892,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:14: Misplaced alignment tab character &.
+sections/11_conclusion.tex:14: Misplaced alignment tab character &.
 l.14 ...ield) & $d\tau/dt = \sqrt{1 - 2GM/rc^2}$ &
                                                    $d\tau/dt = \sqrt{1 - \Om...
 I can't figure out why you would want to use a tab mark
@@ -900,7 +902,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:14: Misplaced alignment tab character &.
+sections/11_conclusion.tex:14: Misplaced alignment tab character &.
 l.14 ...$d\tau/dt = \sqrt{1 - \Omega^2 r^2/c^2}$ &
                                                    GPS: $6.9 \times 10^{-10}...
 I can't figure out why you would want to use a tab mark
@@ -910,7 +912,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:14: Misplaced alignment tab character &.
+sections/11_conclusion.tex:14: Misplaced alignment tab character &.
 l.14 ...0}$, Pound--Rebka: $2.5 \times 10^{-15}$ &
                                                    Yes (0\%) \\
 I can't figure out why you would want to use a tab mark
@@ -920,7 +922,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:15: Misplaced \noalign.
+sections/11_conclusion.tex:15: Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
 l.15         \hline
@@ -928,7 +930,7 @@ l.15         \hline
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
-sections/conclusion.tex:16: Misplaced alignment tab character &.
+sections/11_conclusion.tex:16: Misplaced alignment tab character &.
 l.16         Velocity Time Dilation (SR) &
                                            $d\tau/dt = \sqrt{1 - v^2/c^2}$ &...
 I can't figure out why you would want to use a tab mark
@@ -938,7 +940,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:16: Misplaced alignment tab character &.
+sections/11_conclusion.tex:16: Misplaced alignment tab character &.
 l.16 ...n (SR) & $d\tau/dt = \sqrt{1 - v^2/c^2}$ &
                                                    Identical & Muon decay, p...
 I can't figure out why you would want to use a tab mark
@@ -948,7 +950,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:16: Misplaced alignment tab character &.
+sections/11_conclusion.tex:16: Misplaced alignment tab character &.
 l.16 ...tau/dt = \sqrt{1 - v^2/c^2}$ & Identical &
                                                    Muon decay, particle acce...
 I can't figure out why you would want to use a tab mark
@@ -958,7 +960,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:16: Misplaced alignment tab character &.
+sections/11_conclusion.tex:16: Misplaced alignment tab character &.
 l.16 ...ical & Muon decay, particle accelerators &
                                                    Yes \\
 I can't figure out why you would want to use a tab mark
@@ -968,7 +970,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:17: Misplaced \noalign.
+sections/11_conclusion.tex:17: Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
 l.17         \hline
@@ -976,7 +978,7 @@ l.17         \hline
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
-sections/conclusion.tex:18: Misplaced alignment tab character &.
+sections/11_conclusion.tex:18: Misplaced alignment tab character &.
 l.18         Rotational (Kinetic) Time Dilation &
                                                   Implicit (via $E=mc^2$) & ...
 I can't figure out why you would want to use a tab mark
@@ -986,7 +988,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:18: Misplaced alignment tab character &.
+sections/11_conclusion.tex:18: Misplaced alignment tab character &.
 l.18 ... Time Dilation & Implicit (via $E=mc^2$) &
                                                    $d\tau/dt = \left(1 + \fr...
 I can't figure out why you would want to use a tab mark
@@ -996,7 +998,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:18: Misplaced alignment tab character &.
+sections/11_conclusion.tex:18: Misplaced alignment tab character &.
 l.18 ... \frac{1}{2}\beta I\Omega^2\right)^{-1}$ &
                                                    Pulsar slowing (~0.5\%) &...
 I can't figure out why you would want to use a tab mark
@@ -1006,7 +1008,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:18: Misplaced alignment tab character &.
+sections/11_conclusion.tex:18: Misplaced alignment tab character &.
 l.18 ...2\right)^{-1}$ & Pulsar slowing (~0.5\%) &
                                                    Yes (if $\beta$ tuned) \\
 I can't figure out why you would want to use a tab mark
@@ -1016,7 +1018,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:19: Misplaced \noalign.
+sections/11_conclusion.tex:19: Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
 l.19         \hline
@@ -1024,7 +1026,7 @@ l.19         \hline
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
-sections/conclusion.tex:20: Misplaced alignment tab character &.
+sections/11_conclusion.tex:20: Misplaced alignment tab character &.
 l.20         Gravitational Redshift &
                                       $z = (1 - 2GM/rc^2)^{-1/2} - 1$ & $z =...
 I can't figure out why you would want to use a tab mark
@@ -1034,7 +1036,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:20: Misplaced alignment tab character &.
+sections/11_conclusion.tex:20: Misplaced alignment tab character &.
 l.20 ...dshift & $z = (1 - 2GM/rc^2)^{-1/2} - 1$ &
                                                    $z = (1 - v_\phi^2/c^2)^{...
 I can't figure out why you would want to use a tab mark
@@ -1044,7 +1046,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:20: Misplaced alignment tab character &.
+sections/11_conclusion.tex:20: Misplaced alignment tab character &.
 l.20 ...1$ & $z = (1 - v_\phi^2/c^2)^{-1/2} - 1$ &
                                                    Solar: $2.12 \times 10^{-...
 I can't figure out why you would want to use a tab mark
@@ -1054,7 +1056,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:20: Misplaced alignment tab character &.
+sections/11_conclusion.tex:20: Misplaced alignment tab character &.
 l.20 ...s 10^{-6}$, Sirius B: $5 \times 10^{-5}$ &
                                                    Yes \\
 I can't figure out why you would want to use a tab mark
@@ -1064,7 +1066,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:21: Misplaced \noalign.
+sections/11_conclusion.tex:21: Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
 l.21         \hline
@@ -1072,7 +1074,7 @@ l.21         \hline
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
-sections/conclusion.tex:22: Misplaced alignment tab character &.
+sections/11_conclusion.tex:22: Misplaced alignment tab character &.
 l.22         Light Deflection &
                                 $\delta = \frac{4GM}{Rc^2} \approx 1.75''$ &...
 I can't figure out why you would want to use a tab mark
@@ -1082,7 +1084,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:22: Misplaced alignment tab character &.
+sections/11_conclusion.tex:22: Misplaced alignment tab character &.
 l.22 ...delta = \frac{4GM}{Rc^2} \approx 1.75''$ &
                                                    Identical formula & VLBI:...
 I can't figure out why you would want to use a tab mark
@@ -1092,7 +1094,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:22: Misplaced alignment tab character &.
+sections/11_conclusion.tex:22: Misplaced alignment tab character &.
 l.22 ...c^2} \approx 1.75''$ & Identical formula &
                                                    VLBI: $1.75'' \pm 0.07''$...
 I can't figure out why you would want to use a tab mark
@@ -1102,7 +1104,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:22: Misplaced alignment tab character &.
+sections/11_conclusion.tex:22: Misplaced alignment tab character &.
 l.22 ...ical formula & VLBI: $1.75'' \pm 0.07''$ &
                                                    Yes \\
 I can't figure out why you would want to use a tab mark
@@ -1112,7 +1114,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:23: Misplaced \noalign.
+sections/11_conclusion.tex:23: Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
 l.23         \hline
@@ -1120,7 +1122,7 @@ l.23         \hline
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
-sections/conclusion.tex:24: Misplaced alignment tab character &.
+sections/11_conclusion.tex:24: Misplaced alignment tab character &.
 l.24         Perihelion Precession (Mercury) &
                                                $\Delta \varpi = \frac{6\pi G...
 I can't figure out why you would want to use a tab mark
@@ -1130,7 +1132,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:24: Misplaced alignment tab character &.
+sections/11_conclusion.tex:24: Misplaced alignment tab character &.
 l.24 ...ta \varpi = \frac{6\pi GM}{a(1-e^2)c^2}$ &
                                                    Identical formula & $43.1...
 I can't figure out why you would want to use a tab mark
@@ -1140,7 +1142,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:24: Misplaced alignment tab character &.
+sections/11_conclusion.tex:24: Misplaced alignment tab character &.
 l.24 ...pi GM}{a(1-e^2)c^2}$ & Identical formula &
                                                    $43.1''$/century & Yes \\
 I can't figure out why you would want to use a tab mark
@@ -1150,7 +1152,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:24: Misplaced alignment tab character &.
+sections/11_conclusion.tex:24: Misplaced alignment tab character &.
 l.24 ...$ & Identical formula & $43.1''$/century &
                                                    Yes \\
 I can't figure out why you would want to use a tab mark
@@ -1160,7 +1162,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:25: Misplaced \noalign.
+sections/11_conclusion.tex:25: Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
 l.25         \hline
@@ -1168,7 +1170,7 @@ l.25         \hline
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
-sections/conclusion.tex:26: Misplaced alignment tab character &.
+sections/11_conclusion.tex:26: Misplaced alignment tab character &.
 l.26         Frame-Dragging (Lense--Thirring) &
                                                 $\Omega_{LT} = \frac{2GJ}{c^...
 I can't figure out why you would want to use a tab mark
@@ -1178,7 +1180,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:26: Misplaced alignment tab character &.
+sections/11_conclusion.tex:26: Misplaced alignment tab character &.
 l.26 ...g) & $\Omega_{LT} = \frac{2GJ}{c^2 r^3}$ &
                                                    $\Omega_{drag} = \frac{4G...
 I can't figure out why you would want to use a tab mark
@@ -1188,7 +1190,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:26: Misplaced alignment tab character &.
+sections/11_conclusion.tex:26: Misplaced alignment tab character &.
 l.26 ...Omega_{drag} = \frac{4GM\Omega}{5c^2 r}$ &
                                                    GP-B: $37.2 \pm 7.2$ mas/...
 I can't figure out why you would want to use a tab mark
@@ -1198,7 +1200,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:26: Misplaced alignment tab character &.
+sections/11_conclusion.tex:26: Misplaced alignment tab character &.
 l.26 ...}{5c^2 r}$ & GP-B: $37.2 \pm 7.2$ mas/yr &
                                                    Yes \\
 I can't figure out why you would want to use a tab mark
@@ -1208,7 +1210,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:27: Misplaced \noalign.
+sections/11_conclusion.tex:27: Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
 l.27         \hline
@@ -1216,7 +1218,7 @@ l.27         \hline
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
-sections/conclusion.tex:28: Misplaced alignment tab character &.
+sections/11_conclusion.tex:28: Misplaced alignment tab character &.
 l.28         Geodetic Precession &
                                    $\Omega_{geo} = \frac{3GM}{2c^2 a} v$ & N...
 I can't figure out why you would want to use a tab mark
@@ -1226,7 +1228,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:28: Misplaced alignment tab character &.
+sections/11_conclusion.tex:28: Misplaced alignment tab character &.
 l.28 ... & $\Omega_{geo} = \frac{3GM}{2c^2 a} v$ &
                                                    Not derived (0?) & GP-B: ...
 I can't figure out why you would want to use a tab mark
@@ -1236,7 +1238,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:28: Misplaced alignment tab character &.
+sections/11_conclusion.tex:28: Misplaced alignment tab character &.
 l.28 ...\frac{3GM}{2c^2 a} v$ & Not derived (0?) &
                                                    GP-B: $6601.8 \pm 18.3$ m...
 I can't figure out why you would want to use a tab mark
@@ -1246,7 +1248,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:28: Misplaced alignment tab character &.
+sections/11_conclusion.tex:28: Misplaced alignment tab character &.
 l.28 ...ed (0?) & GP-B: $6601.8 \pm 18.3$ mas/yr &
                                                    \textbf{No} \\
 I can't figure out why you would want to use a tab mark
@@ -1256,7 +1258,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:29: Misplaced \noalign.
+sections/11_conclusion.tex:29: Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
 l.29         \hline
@@ -1264,7 +1266,7 @@ l.29         \hline
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
-sections/conclusion.tex:30: Misplaced alignment tab character &.
+sections/11_conclusion.tex:30: Misplaced alignment tab character &.
 l.30         ISCO Radius &
                            $r_{\text{ISCO}} = 6GM/c^2$ & Not defined & BH sh...
 I can't figure out why you would want to use a tab mark
@@ -1274,7 +1276,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:30: Misplaced alignment tab character &.
+sections/11_conclusion.tex:30: Misplaced alignment tab character &.
 l.30 ...SCO Radius & $r_{\text{ISCO}} = 6GM/c^2$ &
                                                    Not defined & BH shadow, ...
 I can't figure out why you would want to use a tab mark
@@ -1284,7 +1286,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:30: Misplaced alignment tab character &.
+sections/11_conclusion.tex:30: Misplaced alignment tab character &.
 l.30 ...r_{\text{ISCO}} = 6GM/c^2$ & Not defined &
                                                    BH shadow, accretion disk...
 I can't figure out why you would want to use a tab mark
@@ -1294,7 +1296,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:30: Misplaced alignment tab character &.
+sections/11_conclusion.tex:30: Misplaced alignment tab character &.
 l.30 ...Not defined & BH shadow, accretion disks &
                                                    \textbf{No} \\
 I can't figure out why you would want to use a tab mark
@@ -1304,7 +1306,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:31: Misplaced \noalign.
+sections/11_conclusion.tex:31: Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
 l.31         \hline
@@ -1312,7 +1314,7 @@ l.31         \hline
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
-sections/conclusion.tex:32: Misplaced alignment tab character &.
+sections/11_conclusion.tex:32: Misplaced alignment tab character &.
 l.32         Gravitational Wave Emission &
                                            $dP_b/dt = -2.4 \times 10^{-12}$ ...
 I can't figure out why you would want to use a tab mark
@@ -1322,7 +1324,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:32: Misplaced alignment tab character &.
+sections/11_conclusion.tex:32: Misplaced alignment tab character &.
 l.32 ...n & $dP_b/dt = -2.4 \times 10^{-12}$ s/s &
                                                    $0$ (incompressible mediu...
 I can't figure out why you would want to use a tab mark
@@ -1332,7 +1334,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:32: Misplaced alignment tab character &.
+sections/11_conclusion.tex:32: Misplaced alignment tab character &.
 l.32 ...{-12}$ s/s & $0$ (incompressible medium) &
                                                    PSR1913+16: exact match t...
 I can't figure out why you would want to use a tab mark
@@ -1342,7 +1344,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:32: Misplaced alignment tab character &.
+sections/11_conclusion.tex:32: Misplaced alignment tab character &.
 l.32 ... medium) & PSR1913+16: exact match to GR &
                                                    \textbf{No} \\
 I can't figure out why you would want to use a tab mark
@@ -1352,7 +1354,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-sections/conclusion.tex:33: Misplaced \noalign.
+sections/11_conclusion.tex:33: Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
 l.33         \hline
@@ -1361,8 +1363,8 @@ I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
 
-sections/conclusion.tex:34: LaTeX Error: \begin{table} on input line 5 ended by
- \end{tabularx}.
+sections/11_conclusion.tex:34: LaTeX Error: \begin{table} on input line 5 ended
+ by \end{tabularx}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1396,7 +1398,7 @@ No file vam_gr_benchmark.bbl.
 
 [17]
 
-[18] (C:/Users\mr\IdeaProjects\VAM\auxil\vam_gr_benchmark.aux)
+[18] (C:/Users\mr\IdeaProjects\VAM\out\vam_gr_benchmark.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1406,16 +1408,16 @@ L3 programming layer <2025-01-18>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `vam_gr_benchmark.out' has not changed.
-(rerunfilecheck)             Checksum: 42F35AE7254857895A05D3699DB1E37A;4152.
+(rerunfilecheck)             Checksum: BD92FDFC2B0B4441CEEC349D7C68E207;4170.
  ) 
 Here is how much of TeX's memory you used:
- 11165 strings out of 473562
- 169455 string characters out of 5721500
+ 11187 strings out of 473562
+ 170520 string characters out of 5721500
  580999 words of memory out of 5000000
- 34062 multiletter control sequences out of 15000+600000
+ 34084 multiletter control sequences out of 15000+600000
  570009 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 79i,13n,93p,871b,511s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,13n,93p,870b,511s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 , replaced by a fixed one
@@ -1442,7 +1444,7 @@ fonts/cm/cmsy7.pfb><C:/Users/mr/AppData/Local/MiKTeX/fonts/type1/public/amsfont
 s/cm/cmti10.pfb><C:/Users/mr/AppData/Local/MiKTeX/fonts/type1/public/amsfonts/s
 ymbols/msbm10.pfb>
 Output written on C:/Users\mr\IdeaProjects\VAM\out\vam_gr_benchmark.pdf (18 pag
-es, 339315 bytes).
+es, 339346 bytes).
 PDF statistics:
  364 PDF objects out of 1000 (max. 8388607)
  114 named destinations out of 1000 (max. 500000)

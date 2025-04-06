@@ -5,7 +5,7 @@
 
 
     \begin{abstract}
-This section explores the hypothesis that magnetism arises from structured vorticity in an inviscid, incompressible superfluid medium—the Æther. The \textbf{Vortex Æther Model (VAM)} proposes that stable vortex filaments and knots generate field effects traditionally associated with electromagnetism. By deriving fundamental vorticity-based equations, we establish a physical basis for magnetism without requiring moving charge. Using key VAM constants—\( C_e \) (core tangential velocity), \( r_c \) (vortex-core radius), and \( F_{\text{max}} \) (maximum force constraint)—we provide a framework where \textbf{magnetic phenomena emerge as a consequence of structured vorticity flows}.
+This section explores the hypothesis that magnetism arises from structured vorticity in an inviscid, incompressible superfluid medium—the Æther. The \textbf{Vortex Æther Model (VAM)} proposes that stable vortex filaments and knots generate field effects traditionally associated with electromagnetism. By deriving fundamental vorticity-based equations, we establish a physical basis for magnetism without requiring moving charge. Using key VAM constants—\( C_e \) (core tangential velocity), \( r_c \) (vortex-core radius), and \( F_{\max} \) (maximum force constraint)—we provide a framework where \textbf{magnetic phenomena emerge as a consequence of structured vorticity flows}.
     We also outline experimental tests in superfluid helium, superconductors, and plasma physics to validate the predictions of VAM.
     \end{abstract}
 
@@ -106,23 +106,23 @@ A fundamental goal of VAM is to reconcile its framework with existing experiment
         B_v = \mu_v \frac{2 C_e}{r_c}.
     \end{equation*}
 
-    \subsubsection*{Maximum Force Constraint from \( F_{\text{max}} \)}
+    \subsubsection*{Maximum Force Constraint from \( F_{\max} \)}
     If vorticity behaves analogously to charge in electromagnetism, the \textbf{maximum force constraint} must follow:
 
     \begin{equation*}
-        F_{\text{max}} = \frac{\mu_v}{4\pi} \frac{B_v^2}{r_c^2}.
+        F_{\max} = \frac{\mu_v}{4\pi} \frac{B_v^2}{r_c^2}.
     \end{equation*}
 
     Substituting \( B_v = \mu_v \frac{2 C_e}{r_c} \):
 
     \begin{equation*}
-        F_{\text{max}} = \frac{\mu_v^3}{4\pi} \frac{4 C_e^2}{r_c^4}.
+        F_{\max} = \frac{\mu_v^3}{4\pi} \frac{4 C_e^2}{r_c^4}.
     \end{equation*}
 
     Solving for \( B_v \):
 
     \begin{equation*}
-        B_v = r_c \sqrt{\frac{4\pi F_{\text{max}}}{\mu_v^3}}.
+        B_v = r_c \sqrt{\frac{4\pi F_{\max}}{\mu_v^3}}.
     \end{equation*}
 
     This equation suggests that \textbf{magnetic field strength in VAM is governed by the local vortex core radius} and the \textbf{maximum force constraint} in the Æther medium. The presence of \( \mu_v^3 \) in the denominator implies a \textbf{self-regulating mechanism}, preventing divergences in field strength.  This formulation suggests that \textbf{magnetic phenomena are a direct manifestation of vorticity in the Æther}, replacing the conventional charge-motion paradigm with structured vortex dynamics.
@@ -134,12 +134,12 @@ The vorticity permeability constant \( \mu_v \) plays a fundamental role in rela
 The action functional for the Vortex Æther Model in \textbf{a purely 3D formulation} is given by:
 
 \begin{equation*}
-    S = \int d^3x \, dt \left( \frac{1}{2} \rho_{\ae} \mathbf{u}^2 - \frac{1}{2 \mu_v} \mathbf{B}_v^2 \right),
+    S = \int d^3x \, dt \left( \frac{1}{2} \rho_{\text{\ae}} \mathbf{u}^2 - \frac{1}{2 \mu_v} \mathbf{B}_v^2 \right),
 \end{equation*}
 
 where:
 \begin{itemize}
-    \item \( \rho_{\ae} \) is the Æther density,
+    \item \( \rho_{\text{\ae}} \) is the Æther density,
     \item \( \mathbf{u} \) is the velocity field,
     \item \( \mathbf{B}_v = \mu_v \boldsymbol{\omega} \) is the vorticity-induced magnetic-like field,
     \item \( \boldsymbol{\omega} = \nabla \times \mathbf{u} \) represents the vorticity.
@@ -149,7 +149,7 @@ where:
 The kinetic energy density per unit volume for an inviscid fluid is:
 
 \begin{equation*}
-    E = \frac{1}{2} \rho_{\ae} u^2.
+    E = \frac{1}{2} \rho_{\text{\ae}} u^2.
 \end{equation*}
 
 For a vortex, the velocity field follows:
@@ -167,19 +167,19 @@ where \( \Gamma \) is the circulation:
 Thus, the kinetic energy density per unit volume within the vortex is:
 
 \begin{equation*}
-    E = \frac{1}{2} \rho_{\ae} \left( \frac{\Gamma}{2\pi r} \right)^2.
+    E = \frac{1}{2} \rho_{\text{\ae}} \left( \frac{\Gamma}{2\pi r} \right)^2.
 \end{equation*}
 
 To obtain the total vortex energy, we integrate over the vortex volume:
 
 \begin{equation*}
-    E_v = \int_{r_c}^{R} \frac{1}{2} \rho_{\ae} \left( \frac{\Gamma}{2\pi r} \right)^2 2\pi r \, dr.
+    E_v = \int_{r_c}^{R} \frac{1}{2} \rho_{\text{\ae}} \left( \frac{\Gamma}{2\pi r} \right)^2 2\pi r \, dr.
 \end{equation*}
 
 Evaluating the integral and approximating for a localized vortex, we obtain:
 
 \begin{equation*}
-    E_v \approx \rho_{\ae} \pi r_c^2 C_e^2.
+    E_v \approx \rho_{\text{\ae}} \pi r_c^2 C_e^2.
 \end{equation*}
 
 \subsubsection*{Momentum Flux and Definition of \( \mu_v \)}
@@ -192,20 +192,20 @@ Since the energy density of a vorticity-induced magnetic-like field is:
 and using \( B_v = \mu_v \omega \), we equate it to the kinetic energy density:
 
 \begin{equation*}
-    \frac{(\mu_v \omega)^2}{2\mu_v} = \frac{1}{2} \rho_{\ae} C_e^2.
+    \frac{(\mu_v \omega)^2}{2\mu_v} = \frac{1}{2} \rho_{\text{\ae}} C_e^2.
 \end{equation*}
 
 Substituting \( \omega = \frac{2C_e}{r_c} \) and solving for \( \mu_v \), we obtain:
 
 \begin{equation*}
-    \mu_v = \frac{\rho_{\ae} r_c^2}{4}.
+    \mu_v = \frac{\rho_{\text{\ae}} r_c^2}{4}.
 \end{equation*}
 
 \paragraph*{Physical Interpretation of \( \mu_v \)}
 This derivation shows that the vorticity permeability constant:
 
 \begin{itemize}
-    \item \textbf{Is directly proportional to the Æther density} \( \rho_{\ae} \), meaning that higher-density regions allow stronger vorticity-induced magnetic effects.
+    \item \textbf{Is directly proportional to the Æther density} \( \rho_{\text{\ae}} \), meaning that higher-density regions allow stronger vorticity-induced magnetic effects.
     \item \textbf{Scales with the square of the vortex-core radius} \( r_c^2 \), indicating that larger vortex structures lead to greater induced field permeability.
     \item \textbf{Regulates vorticity-based magnetic field interactions}, effectively playing the role of vacuum permeability in classical electromagnetism.
 \end{itemize}
@@ -261,7 +261,7 @@ This study provides \textbf{strong theoretical and experimental evidence} that \
 We have demonstrated:
 \begin{itemize}
     \item How \textbf{structured vorticity fields can generate Maxwell-like field effects}.
-    \item The role of \textbf{key VAM constants (\( C_e \), \( r_c \), \( F_{\text{max}} \)) in shaping magnetism}.
+    \item The role of \textbf{key VAM constants (\( C_e \), \( r_c \), \( F_{\max} \)) in shaping magnetism}.
     \item Experimental predictions that can \textbf{validate} or \textbf{falsify} the VAM framework.
 \end{itemize}
 

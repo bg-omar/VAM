@@ -30,11 +30,11 @@ This scalar potential explicitly represents the global-to-local vorticity intera
 \subsection{Relation to Inertia and Local Dynamics}
 Considering Euler's equation for an incompressible fluid:
 \begin{equation}
-    \frac{\partial \mathbf{v}}{\partial t}+(\mathbf{v}\cdot \nabla)\mathbf{v}=-\frac{1}{\rho_{\ae}}\nabla p,
+    \frac{\partial \mathbf{v}}{\partial t}+(\mathbf{v}\cdot \nabla)\mathbf{v}=-\frac{1}{\rho_{\text{\ae}}}\nabla p,
 \end{equation}
-where $\rho_{\ae}$ is the Æther density, and pp is the pressure. Expressing pressure gradients in terms of global vorticity, we introduce the scalar potential into the equations:
+where $\rho_{\text{\ae}}$ is the Æther density, and pp is the pressure. Expressing pressure gradients in terms of global vorticity, we introduce the scalar potential into the equations:
 \begin{equation}
-    \nabla p = \rho_{\ae}\left[-\frac{\partial\mathbf{v}}{\partial t} - (\mathbf{v}\cdot\nabla)\mathbf{v}\right] = \rho_{\ae}, \nabla \Phi_M.
+    \nabla p = \rho_{\text{\ae}}\left[-\frac{\partial\mathbf{v}}{\partial t} - (\mathbf{v}\cdot\nabla)\mathbf{v}\right] = \rho_{\text{\ae}}, \nabla \Phi_M.
 \end{equation}
 
 
@@ -44,7 +44,7 @@ Thus, local inertial and gravitational phenomena emerge naturally as effects of 
 \subsection{Inertia Tensor and Equations of Motion}
 The inertia of local vortex knots is influenced by the scalar potential via the inertia tensor $I_{ij}$:
 \begin{equation}
-    I_{ij}(\mathbf{x}) \sim \rho_{\ae}\int_V \left[\delta_{ij}|\mathbf{x}-\mathbf{x}'|^2 - (x_i - x'_i)(x_j - x'_j)\right]\Phi_M(\mathbf{x}',t), dV'.
+    I_{ij}(\mathbf{x}) \sim \rho_{\text{\ae}}\int_V \left[\delta_{ij}|\mathbf{x}-\mathbf{x}'|^2 - (x_i - x'_i)(x_j - x'_j)\right]\Phi_M(\mathbf{x}',t), dV'.
 \end{equation}
 
 
