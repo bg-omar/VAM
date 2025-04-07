@@ -207,12 +207,12 @@ plt.grid(True)
 
 # ✅ Get the script filename dynamically
 import os
-from datetime import datetime
 script_name = os.path.splitext(os.path.basename(__file__))[0]
-timestamp = datetime.now().strftime("%H%M%S")
-filename = f"{script_name}_{timestamp}.png"
+filename = f"{script_name}1.png"
 plt.savefig(filename, dpi=150)  # Save image with high resolution
 plt.tight_layout()
+
+
 # Vector field visualization in a separate figure
 fig_field = plt.figure(figsize=(12, 10))
 ax_field = fig_field.add_subplot(111, projection='3d')
@@ -245,6 +245,12 @@ ax_field.set_xlim(-xlimit, xlimit)
 ax_field.set_ylim(-ylimit, ylimit)
 ax_field.set_zlim(-zlimit, zlimit)
 ax_field.set_box_aspect([1, 1, 1])
+
+# ✅ Get the script filename dynamically
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+filename = f"{script_name}2.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
 plt.tight_layout()
 
 

@@ -99,10 +99,8 @@ ax.set_box_aspect([1, 1, 1])  # Ensures 1:1:1 aspect ratio
 
 # ✅ Get the script filename dynamically
 import os
-from datetime import datetime
 script_name = os.path.splitext(os.path.basename(__file__))[0]
-timestamp = datetime.now().strftime("%H%M%S")
-filename = f"{script_name}_{timestamp}.png"
+filename = f"{script_name}.png"
 plt.savefig(filename, dpi=150)  # Save image with high resolution
 plt.tight_layout()
 plt.show()

@@ -8,37 +8,32 @@ matplotlib.use('TkAgg')  # Ensure it uses Tkinter backend
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
-coil_corners = 12
-coil_amount = 3
+coil_corners = 18
 # Define parameters for multi-layer 3D coil
-num_layers = 10  # Number of layers in the coil
+num_layers = 4  # Number of layers in the coil
 layer_spacing = 0.1  # Distance between layers in the z-axis
 
-total_corners = coil_corners * coil_amount
+total_corners = coil_corners * 1
 
 rotation_steps=0
-rotation_angle = (2 * np.pi / coil_corners) / coil_amount
+rotation_angle = (2 * np.pi / coil_corners)
 # Define provided base sequence
-base_sequence = [1, 6, 11, 4, 9, 2, 7, 12, 5, 10, 3, 8, 1]
+# 1 + 7 mod 18
+base_sequence = [1, 8, 15, 4, 11, 18, 7, 14, 3, 10, 17, 6, 13, 2, 9, 16, 5, 12, 1]
 
 # Create explicit sequences as per user request
-sequence_A_forward = [((num * 3 - 0 - 1) % (total_corners)) + 1 for num in base_sequence]
-
-
-sequence_B_forward = [((coil_corners + num * 3 - 1 - 1) % (total_corners)) + 1 for num in base_sequence]
-
-
-sequence_C_forward = [(((coil_corners * 2) + num * 3 - 2 - 1)  % (total_corners)) + 1 for num in base_sequence]
-
+sequence_A_forward = [((num - 0 - 1) % (coil_corners)) + 1 for num in base_sequence]
+# Create explicit sequences as per user request
+sequence_A_backwards = [((num - 0 - 1) % (coil_corners)) + 1 for num in base_sequence[::-1]]
 
 # Points setup
-angles = np.linspace(0, 2 * np.pi, (total_corners) +1)[:-1]
+angles = np.linspace(0, 2 * np.pi, (coil_corners) +1)[:-1]
 positions = {i+1: (np.cos(angle), np.sin(angle)) for i, angle in enumerate(angles)}
-segment_shift = ((2 * np.pi / (total_corners)) / 3)
+segment_shift = ((2 * np.pi / (coil_corners)) / 3)
 
 
 # Recalculate positions with adjusted angles for rotation and reversed numbering
-angles_rotated = np.linspace(0, 2 * np.pi, (total_corners)+1)[:-1] - np.pi*1.5 +(2*np.pi*(1/(total_corners))) # Rotate 90° counterclockwise
+angles_rotated = np.linspace(0, 2 * np.pi, (coil_corners)+1)[:-1] - np.pi*1.5 +(2*np.pi*(1/(coil_corners))) # Rotate 90° counterclockwise
 angles_rotated = angles_rotated[::-1]  # Reverse numbering for clockwise count
 positions_rotated = {i+1: (np.cos(angle), np.sin(angle)) for i, angle in enumerate(angles_rotated)}
 
@@ -79,18 +74,13 @@ ax = fig.add_subplot(111, projection='3d')
 
 # Plot multiple layers of the coil
 for layer in range(num_layers):
-    z_layer = layer * layer_spacing-0.5
+    z_layer = layer * layer_spacing
 
     # Phase A (Blue)
     generate_3d_wire(sequence_A_forward, 1, z_layer, 'blue', '-', alpha=0.9)
+    generate_3d_wire(sequence_A_backwards, 1, z_layer, 'red', '-', alpha=0.9)
 
 
-    # Phase B (Red)
-    generate_3d_wire(sequence_B_forward, 1, z_layer, 'red', '-', alpha=0.9)
-
-
-    # Phase C (Green)
-    generate_3d_wire(sequence_C_forward, 1, z_layer, 'green', '-', alpha=0.9)
 
 
 
