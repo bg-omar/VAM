@@ -1,0 +1,20 @@
+\documentclass{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\begin{document}
+    \begin{tikzpicture}
+        \begin{axis}
+            \addplot [
+                contour gnuplot={
+                    levels={-2,-1,0,1,2},
+                    draw color=black,
+                },
+                samples=60,
+                domain=-3:3,
+                y domain=-3:3
+            ]
+            { y / (x^2 + y^2) };
+        \end{axis}
+    \end{tikzpicture}
+\end{document}

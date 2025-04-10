@@ -8,11 +8,16 @@
 \usepackage{booktabs}
 \usepackage{amssymb}
 \usepackage{physics}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta}
 
 \sloppy
 \begin{document}
 \author{Omar Iskandarani}
-\title{Tijdsdilatatie in een 3D Superfluïde Æther Model, Gebaseerd op Wervel kernrotatie en Ætherische Stroom}
+\title{Tijdsdilatatie in een 3D Superfluïde Æther Model, Gebaseerd op Wervel kernrotatie en ætherische Stroom}
 \date{\today}
 \affiliation{Onafhankelijk onderzoeker, Groningen, Nederland}
 \thanks{ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961}}
@@ -21,7 +26,123 @@
 \maketitle
 
 \section*{Abstract}
-In dit artikel leiden we tijddilatatievergelijkingen af binnen een 3D Euclidisch superfluïde æthermodel. In het Vortex-Æther Model beschouwen we een \textit{wervel} (vortex) als een topologisch behouden draaiveld in een superfluïde medium. In dit raamwerk worden fundamentele deeltjes gemodelleerd als wervelknopen en wordt tijd gedefinieerd door de intrinsieke hoekrotatie van hun wervelkernen. Het doel is om het ruimtetijdkrommingsconcept van de algemene relativiteitstheorie (GR) te vervangen door gekwantiseerde hoeksnelheidsvelden in een vlakke-ruimte-æther, terwijl alle experimentele voorspellingen van tijddilatatie onder GR en speciale relativiteitstheorie (SR) worden gereproduceerd. We bieden afleidingen van eerste principes, gegrond in vloeistofdynamica en wervelmechanica, en drukken de tijddilatatiefactoren uit in termen van fundamentele constanten zoals de Planck-tijd en maximale kracht.
+In dit artikel leiden we tijdsdilatatievergelijkingen af binnen een 3D Euclidisch superfluïde æthermodel. In het Vortex-Æther Model (VAM) beschouwen we een \textit{wervel} (vortex) als een topologisch behouden draaiveld in een superfluïde medium. In dit raamwerk worden fundamentele deeltjes gemodelleerd als wervelknopen en wordt tijd gedefinieerd door de intrinsieke hoekrotatie van hun wervelkernen. Het doel is om het ruimtetijdkrommingsconcept van de algemene relativiteitstheorie (GR) te vervangen door gekwantiseerde hoeksnelheidsvelden in een vlakke-ruimte-æther, terwijl alle experimentele voorspellingen van tijdsdilatatie onder GR en speciale relativiteitstheorie (SR) worden gereproduceerd. We bieden afleidingen van eerste principes, gegrond in vloeistofdynamica en wervelmechanica, en drukken de tijdsdilatatiefactoren uit in termen van fundamentele constanten zoals de Planck-tijd en maximale kracht.
+
+
+
+
+\begin{tikzpicture}[scale=1.2, >=Stealth, every node/.style={font=\small}]
+
+% First: Pure Rotation
+    \node at (-3,2.5) {Rotatie};
+    \draw[thick] (-3,1) circle (1);
+    \draw[->, red, thick] (-4,1) -- (-4,2.2) node[left] {$R\omega = v_T$};
+    \draw[->, red, thick] (-3,2) -- (-1.8,2) node[right] {$v_T$};
+    \draw[->, red, thick] (-3,0) -- (-4.2,0) node[left] {$v_T$};
+    \draw[->, red, thick] (-2,1) -- (-2,-0.2) node[below] {$v_T$};
+
+% Second: Pure Translation
+    \node at (1,2.5) {Translatie};
+    \draw[thick] (1,1) circle (1);
+    \draw[->, blue, thick] (1,1) -- (2.2,1) node[right] {$v_{CM}$};
+    \draw[->, blue, thick] (0,1) -- (1.2,1);
+    \draw[->, blue, thick] (2,1) -- (3.2,1);
+    \draw[->, blue, thick] (1,0) -- (2.2,0);
+    \draw[->, blue, thick] (1,2) -- (2.2,2);
+
+% Third: Combined Motion
+    \node at (5.5,2.5) {Combinatie};
+    \draw[thick] (5.5,1) circle (1);
+    \draw[->, thick, purple] (5.5,2) -- (7.2,2) node[right] {$2v_{CM}$};
+    \draw[->, thick, purple] (5.5,1) -- (6.7,1) node[right] {$v_{CM}$};
+    \filldraw[purple] (5.5,0) circle (2pt);
+    \node at (5.3,-0.3) {$0$};
+
+% Labels
+    \node[align=center] at (-3,-1.8) {tangentiële richting t.o.v. het zwaartepunt};
+    \node[align=center] at (1,-1.8) {t.o.v. achtergrond};
+    \node[align=center] at (5.5,-1.8) {t.o.v. achtergrond};
+
+\end{tikzpicture}
+
+    \begin{tikzpicture}[scale=2]
+
+        % Concentric streamlines (æther circling the vortex)
+        \foreach \r in {0.9, 1.2, 1.5} {
+            \draw[blue!60, ->] (\r, 0) arc (0:270:\r);
+        }
+
+        % Emitter en collector labels
+        \node at (0,1.7) {Emitter (+)};
+        \node at (0,-1.7) {Collector (-)};
+        \draw[dashed] (0,1.6) -- (0,-1.6);
+
+        % Vortexring
+        \draw[thick] (1,0) circle (0.6);
+        \draw[thick, ->] (0:0.6) arc (0:45:0.6);
+        \node at (0.8,0.2) {$\omega_0$};
+        \filldraw[red] (0.6,0) circle (1pt);
+
+        % Vortexring
+        \draw[thick] (-1,0) circle (0.6);
+        \draw[thick, ->] (0:0.6) arc (-0:45:0.6);
+        \node at (0.8,0.2) {$\omega_0$};
+        \filldraw[red] (0.6,0) circle (1pt);
+
+        % Annotatie
+        \node at (0,-0.85) {Wervelrotatie = interne klok};
+
+        % Vectorveld label
+        \node[blue!80] at (-1.8,-1.4) {$\vec{v}_{\ae}$ rond vortex};
+
+    \end{tikzpicture}
+
+
+
+
+\begin{tikzpicture}
+    \draw[thick, ->] (0,0) circle (1);
+    \node at (1.2,0.2) {$\omega_0$};
+    \filldraw[red] (1,0) circle (2pt); % Marker op de wervel
+    \node at (0,-1.4) {Wervelrotatie = interne klok};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+    % Æther achtergrond
+    \foreach \y in {-1.5,-1,...,1.5} {
+        \draw[->, blue!40] (-3,\y) -- (3,\y);
+    }
+
+    % Vortex in rust
+    \draw[thick] (-1.5,0) circle (0.5);
+    \draw[->] (-1.5,0) ++(0.5,0) arc (0:270:0.5);
+    \node at (-1.5,-0.8) {rust};
+
+    % Vortex in beweging
+    \draw[thick] (1.5,0) circle (0.5);
+    \draw[->, gray] (1.5,0) ++(0.5,0) arc (0:180:0.5); % Tragere rotatie
+    \draw[->, red] (1.5,-1.2) -- ++(1,0) node[right] {$v$};
+    \node at (1.5,-0.8) {beweging};
+
+    \node at (0,-2) {Beweging door æther verlaagt $\omega_{\text{obs}}$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+    % Centrale massa
+    \filldraw[black] (0,0) circle (5pt) node[above right] {$M$};
+
+    % Ætherstroming
+    \foreach \angle in {0,30,...,330} {
+        \draw[->, blue!60] ({2*cos(\angle)}, {2*sin(\angle)}) -- ({1.2*cos(\angle)}, {1.2*sin(\angle)});
+    }
+
+    % Vortex op afstand
+    \draw[thick] (2,0) circle (0.3);
+    \draw[->] (2.3,0) arc (0:270:0.3);
+    \node at (2,-0.6) {wervel};
+
+    \node at (0,-2.5) {Radiale ætherinstroom verlaagt lokale $\omega_{\text{obs}}$};
+\end{tikzpicture}
 
 \input{01_introductie}
 \input{02_supervloeistof_æther_geraamte}
