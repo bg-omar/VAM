@@ -73,11 +73,8 @@ for ax in axs.flat:
     ax.set_ylabel("y")
 
 plt.tight_layout()
-# ✅ Get the script filename dynamically
+
 script_name = os.path.splitext(os.path.basename(__file__))[0]
-# ✅ **Create a Folder for Saving Frames**
 filename = f"{script_name}.png"
-
 plt.savefig(filename, dpi=150)  # Save image with high resolution
-
 plt.show()
