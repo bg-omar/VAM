@@ -56,9 +56,9 @@ In dit artikel leiden we tijdsdilatatievergelijkingen af binnen een 3D Euclidisc
 % Second: Pure Translation
     \node at (1,2.5) {Translatie};
     \draw[thick] (1,1) circle (1);
-    \draw[->, blue, thick] (1,1) -- (2.2,1) node[right] {$v_{CM}$};
+
     \draw[->, blue, thick] (0,1) -- (1.2,1);
-    \draw[->, blue, thick] (2,1) -- (3.2,1);
+    \draw[->, blue, thick] (2,1) -- (3.2,1) node[right] {$v_{CM}$};
     \draw[->, blue, thick] (1,0) -- (2.2,0);
     \draw[->, blue, thick] (1,2) -- (2.2,2);
 
@@ -77,84 +77,44 @@ In dit artikel leiden we tijdsdilatatievergelijkingen af binnen een 3D Euclidisc
 
 \end{tikzpicture}
 
-    \begin{tikzpicture}[scale=2]
+\begin{tikzpicture}[scale=2]
+    \usetikzlibrary{decorations.markings}
 
-        % Concentric streamlines (æther circling the vortex)
-        \foreach \r in {0.9, 1.2, 1.5} {
-            \draw[blue!60, ->] (\r, 0) arc (0:270:\r);
-        }
+    % Streamlines with varying arc lengths
+    \draw[blue!60, ->,
+        postaction={decorate},
+        decoration={markings,
+        mark=at position 0.5 with {\arrow{>}}}
+    ] (0.9,0) arc (0:210:0.9); % Short arc
 
-        % Emitter en collector labels
-        \node at (0,1.7) {Emitter (+)};
-        \node at (0,-1.7) {Collector (-)};
-        \draw[dashed] (0,1.6) -- (0,-1.6);
+    \draw[blue!60, ->,
+        postaction={decorate},
+        decoration={markings,
+        mark=at position 0.5 with {\arrow{>}}}
+    ] (1.2,0) arc (0:150:1.2); % Medium arc
 
-        % Vortexring
-        \draw[thick] (1,0) circle (0.6);
-        \draw[thick, ->] (0:0.6) arc (0:45:0.6);
-        \node at (0.8,0.2) {$\omega_0$};
-        \filldraw[red] (0.6,0) circle (1pt);
+    \draw[blue!60, ->,
+        postaction={decorate},
+        decoration={markings,
+        mark=at position 0.5 with {\arrow{>}}}
+    ] (1.5,0) arc (0:90:1.5); % Long arc
 
-        % Vortexring
-        \draw[thick] (-1,0) circle (0.6);
-        \draw[thick, ->] (0:0.6) arc (-0:45:0.6);
-        \node at (0.8,0.2) {$\omega_0$};
-        \filldraw[red] (0.6,0) circle (1pt);
+    % Vortexring
+    \draw[thick] (0,0) circle (0.6);
+    \draw[thick, ->] (0:0.6) arc (0:45:0.6);
+    \node at (0.8,0.2) {$\omega_0$};
+    \filldraw[red] (0.6,0) circle (1pt);
 
-        % Annotatie
-        \node at (0,-0.85) {Wervelrotatie = interne klok};
+    % Annotatie
+    \node at (0,-0.85) {Wervelrotatie = interne klok};
 
-        % Vectorveld label
-        \node[blue!80] at (-1.8,-1.4) {$\vec{v}_{\ae}$ rond vortex};
+    % Vectorveld label
+    \node[blue!80] at (-1.8,-1.4) {$\vec{v}_{\ae}$ rond vortex};
 
-    \end{tikzpicture}
-
-
-
-
-\begin{tikzpicture}
-    \draw[thick, ->] (0,0) circle (1);
-    \node at (1.2,0.2) {$\omega_0$};
-    \filldraw[red] (1,0) circle (2pt); % Marker op de wervel
-    \node at (0,-1.4) {Wervelrotatie = interne klok};
 \end{tikzpicture}
 
-\begin{tikzpicture}
-    % Æther achtergrond
-    \foreach \y in {-1.5,-1,...,1.5} {
-        \draw[->, blue!40] (-3,\y) -- (3,\y);
-    }
 
-    % Vortex in rust
-    \draw[thick] (-1.5,0) circle (0.5);
-    \draw[->] (-1.5,0) ++(0.5,0) arc (0:270:0.5);
-    \node at (-1.5,-0.8) {rust};
 
-    % Vortex in beweging
-    \draw[thick] (1.5,0) circle (0.5);
-    \draw[->, gray] (1.5,0) ++(0.5,0) arc (0:180:0.5); % Tragere rotatie
-    \draw[->, red] (1.5,-1.2) -- ++(1,0) node[right] {$v$};
-    \node at (1.5,-0.8) {beweging};
-
-    \node at (0,-2) {Beweging door æther verlaagt $\omega_{\text{obs}}$};
-\end{tikzpicture}
-
-\begin{tikzpicture}
-    % Centrale massa
-    \filldraw[black] (0,0) circle (5pt) node[above right] {$M$};
-
-    % Ætherstroming
-    \foreach \angle in {0,30,...,330} {
-        \draw[->, blue!60] ({2*cos(\angle)}, {2*sin(\angle)}) -- ({1.2*cos(\angle)}, {1.2*sin(\angle)});
-    }
-
-    % Vortex op afstand
-    \draw[thick] (2,0) circle (0.3);
-    \draw[->] (2.3,0) arc (0:270:0.3);
-    \node at (2,-0.6) {wervel};
-
-    \node at (0,-2.5) {Radiale ætherinstroom verlaagt lokale $\omega_{\text{obs}}$};
-\end{tikzpicture}
 
 \input{01_introductie}
 \input{02_supervloeistof_æther_geraamte}
