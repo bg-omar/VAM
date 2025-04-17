@@ -36,10 +36,11 @@ for i, ax in enumerate(axes):
             ax.arrow(-2, y, 4, 0, head_width=0.1, head_length=0.2,
                      fc='deepskyblue', ec='deepskyblue', linewidth=1.5)
         ax.text(0, -1.8, r'Ætherstroom $\vec{v}$', fontsize=12, ha='center', color='deepskyblue')
+        ax.text(2.3, 1.6, r'$|\vec{v}| = v$', fontsize=11, color='deepskyblue')
 
 # Caption
 plt.figtext(0.5, 0.01,
-            "Beweging door æther verlaagt de waargenomen hoeksnelheid $\\omega_{\\mathrm{obs}}$.",
+            "Beweging door æther verlaagt de waargenomen hoeksnelheid $\omega_{\mathrm{obs}}$.",
             wrap=True, horizontalalignment='center', fontsize=11)
 
 plt.suptitle("Effect van ætherbeweging op rotatie van wervelkern", fontsize=14)

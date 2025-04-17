@@ -13,7 +13,7 @@ mass = plt.Circle((0, 0), mass_radius, color='black')
 ax.add_patch(mass)
 ax.text(0, 0, 'M', color='white', fontsize=12, ha='center', va='center')
 
-# Æther inflow vectors
+# Æther inflow vectors with magnitude coloring
 radii = np.linspace(1.5, 5.5, 5)
 angles = np.linspace(0, 2 * np.pi, 20, endpoint=False)
 
@@ -21,10 +21,11 @@ for r in radii:
     for theta in angles:
         x = r * np.cos(theta)
         y = r * np.sin(theta)
-        dx = -0.5 * np.cos(theta)
-        dy = -0.5 * np.sin(theta)
+        mag = 0.5 + 0.4 * (5.5 - r)  # stronger closer in
+        dx = -mag * np.cos(theta)
+        dy = -mag * np.sin(theta)
         ax.arrow(x, y, dx, dy, head_width=0.2, head_length=0.3,
-                 fc='deepskyblue', ec='deepskyblue', linewidth=1.5)
+                 fc='deepskyblue', ec='deepskyblue', linewidth=1.5, alpha=0.6 + 0.4 * (5.5 - r) / 4)
 
 # Add example vortex at a radius
 r_vortex = 4
@@ -35,8 +36,8 @@ ax.add_patch(vortex)
 ax.plot(vortex_x + 0.4, vortex_y, 'ro', markersize=10)
 ax.text(vortex_x, vortex_y - 1, 'Wervelklok', ha='center', fontsize=11)
 
-# Æther speed label
-ax.text(0, -6.2, r'Æther instroomsnelheid: $v_g(r) = \sqrt{2GM / r}$',
+# Æther speed label (moved higher)
+ax.text(0, -5.6, r'Æther instroomsnelheid: $v_g(r) = \sqrt{2GM / r}$',
         fontsize=12, ha='center', color='deepskyblue')
 
 # Caption
