@@ -10,6 +10,31 @@ for i, ax in enumerate(axes):
     ax.axis('off')
     ax.set_title(titles[i], fontsize=12)
 
+    # Æther flow in moving case
+    if i == 1:
+        # Stroming rond vaste vortex geïnspireerd op stroomlijn rond cilinder
+        x = np.linspace(-2, 2, 200)
+        y = np.linspace(-1.8, 1.8, 200)
+        X, Y = np.meshgrid(x, y)
+        R = np.sqrt(X**2 + Y**2)
+        THETA = np.arctan2(Y, X)
+
+        # Potentiaal en stroomfunctie (uniforme stroming + dipool)
+        U_inf = -1.0
+        a = 1.0
+        with np.errstate(divide='ignore', invalid='ignore'):
+            psi = U_inf * (Y * (1 - (a**2) / (R**2)))
+            u = U_inf * (1 - (a**2) * (X**2 - Y**2) / R**4)
+            v = -2 * U_inf * a**2 * X * Y / R**4
+
+        u[R < a] = np.nan
+        v[R < a] = np.nan
+
+        ax.streamplot(X, Y, u, v, color='navy', density=.4, arrowsize=1.5, linewidth=2.5, cmap='Blues', integration_direction='both')
+
+        ax.text(0, 1.1, r'Ætherstroom $\vec{v}$ rond wervel', fontsize=12, ha='center', color='navy')
+        ax.text(2.3, 1.6, r'$|\vec{v}| = v$', fontsize=11, color='navy')
+
     # Draw vortex circle
     circle = plt.Circle((0, 0), 1, edgecolor='black', facecolor='lightblue', linewidth=2)
     ax.add_patch(circle)
@@ -18,28 +43,38 @@ for i, ax in enumerate(axes):
     theta = np.deg2rad(45)
     x_marker = np.cos(theta)
     y_marker = np.sin(theta)
-    ax.plot(x_marker, y_marker, 'ro', markersize=10)
+    ax.plot(x_marker, y_marker, 'ro', markersize=20)
+
+    # Tangentiële rotatiepijl op de rand van de vortex
+    theta0 = np.pi / 4  # 45 graden
+    r = 1.0
+    x_start = r * np.cos(theta0)
+    y_start = r * np.sin(theta0)
+
+    # Richting loodrecht op radiusvector (d.w.z. tangentieel)
+    dx = r * np.sin(theta0) * 0.5
+    dy =  -r * np.cos(theta0) * 0.5
+
+
 
     # Rotation arrow (adjust length in moving case)
     if i == 0:
-        ax.annotate('', xy=(0.7, 0), xytext=(0, 0.9),
-                    arrowprops=dict(facecolor='black', arrowstyle='->', linewidth=2))
+        ax.annotate('', xy=(x_start + dx, y_start + dy), xytext=(x_start, y_start),
+                    arrowprops=dict(facecolor='red',  edgecolor='red', arrowstyle='->', linewidth=2))
     else:
-        ax.annotate('', xy=(0.5, 0), xytext=(0, 0.6),
-                    arrowprops=dict(facecolor='black', arrowstyle='->', linewidth=2))
+        # Richting loodrecht op radiusvector (d.w.z. tangentieel)
+        dx = r * np.sin(theta0) * 0.4
+        dy =  -r * np.cos(theta0) * 0.4
+        ax.annotate('', xy=(x_start + dx, y_start + dy), xytext=(x_start, y_start),
+                    arrowprops=dict(facecolor='red',  edgecolor='red', arrowstyle='->', linewidth=2))
 
-    ax.text(0.75 if i == 0 else 0.55, 0.05, omega_labels[i], fontsize=14)
+    ax.text(0.75 if i == 0 else 0.22, 0.3, omega_labels[i], fontsize=14)
 
-    # Æther flow in moving case
-    if i == 1:
-        for y in np.linspace(-1.5, 1.5, 5):
-            ax.arrow(-2, y, 4, 0, head_width=0.1, head_length=0.2,
-                     fc='deepskyblue', ec='deepskyblue', linewidth=1.5)
-        ax.text(0, -1.8, r'Ætherstroom $\vec{v}$', fontsize=12, ha='center', color='deepskyblue')
-        ax.text(2.3, 1.6, r'$|\vec{v}| = v$', fontsize=11, color='deepskyblue')
+
+
 
 # Caption
-plt.figtext(0.5, 0.01,
+plt.figtext(0.5, 0.02,
             "Beweging door æther verlaagt de waargenomen hoeksnelheid $\omega_{\mathrm{obs}}$.",
             wrap=True, horizontalalignment='center', fontsize=11)
 

@@ -26,51 +26,43 @@
 \maketitle
 
 \section*{Abstract}
-In dit artikel leiden we tijdsdilatatievergelijkingen af binnen een 3D Euclidisch superfluïde æthermodel. In het Vortex-Æther Model (VAM) beschouwen we een \textit{wervel} (vortex) als een topologisch behouden draaiveld in een superfluïde medium. In dit raamwerk worden fundamentele deeltjes gemodelleerd als wervelknopen en wordt tijd gedefinieerd door de intrinsieke hoekrotatie van hun wervelkernen. Het doel is om het ruimtetijdkrommingsconcept van de algemene relativiteitstheorie (GR) te vervangen door gekwantiseerde hoeksnelheidsvelden in een vlakke-ruimte-æther, terwijl alle experimentele voorspellingen van tijdsdilatatie onder GR en speciale relativiteitstheorie (SR) worden gereproduceerd. We bieden afleidingen van eerste principes, gegrond in vloeistofdynamica en wervelmechanica, en drukken de tijdsdilatatiefactoren uit in termen van fundamentele constanten zoals de Planck-tijd en maximale kracht.
+In dit artikel leiden we tijdsdilatatievergelijkingen af binnen een 3D Euclidisch superfluïde æthermodel. In het Vortex-Æther Model (VAM)
+beschouwen we een \textit{wervel} (vortex) als een topologisch behouden draaiveld in een superfluïde medium. In dit raamwerk worden fundamentele deeltjes gemodelleerd als wervelknopen en wordt tijd gedefinieerd door de intrinsieke hoekrotatie van hun wervelkernen. Het doel is om het ruimtetijdkrommingsconcept van de algemene relativiteitstheorie (GR) te vervangen door gekwantiseerde hoeksnelheidsvelden in een vlakke-ruimte-æther, terwijl alle experimentele voorspellingen van tijdsdilatatie onder GR en speciale relativiteitstheorie (SR) worden gereproduceerd. We bieden afleidingen van eerste principes, gegrond in vloeistofdynamica en wervelmechanica, en drukken de tijdsdilatatiefactoren uit in termen van fundamentele constanten zoals de Planck-tijd en maximale kracht. De verschillende bewegingsmodi van een vortex worden schematisch getoond in Figuur~\ref{fig:rotatie-translatie}.
 
 
+\begin{tikzpicture}[scale=1, >=Stealth, every node/.style={font=\small}]
+    % First: Pure Rotation
+        \node at (-3,2.5) {Rotatie};
+        \draw[thick] (-3,1) circle (1);
+        \draw[->, red, thick] (-4,1) -- (-4,2.2) node[left] {$R\omega = v_T$};
+        \draw[->, red, thick] (-3,2) -- (-1.8,2) node[right] {$v_T$};
+        \draw[->, red, thick] (-3,0) -- (-4.2,0) node[left] {$v_T$};
+        \draw[->, red, thick] (-2,1) -- (-2,-0.2) node[below] {$v_T$};
 
+    % Second: Pure Translation
+        \node at (1,2.5) {Translatie};
+        \draw[thick] (1,1) circle (1);
+        \draw[->, blue, thick] (0,1) -- (1.2,1);
+        \draw[->, blue, thick] (2,1) -- (3.2,1) node[right] {$v_{cm}$};
+        \draw[->, blue, thick] (1,0) -- (2.2,0);
+        \draw[->, blue, thick] (1,2) -- (2.2,2);
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.85\textwidth]{cylinder_flow}
-    \caption{}
-    \label{fig:cylinderflow}
-\end{figure}
+    % Third: Combined Motion
+        \node at (5.5,2.5) {Combinatie};
+        \draw[thick] (5.5,1) circle (1);
+        \draw[->, thick, purple] (5.5,2) -- (7.2,2) node[right] {$2v_{cm}$};
+        \draw[->, thick, purple] (5.5,1) -- (6.7,1) node[right] {$v_{cm}$};
+        \filldraw[purple] (5.5,0) circle (2pt);
+        \node at (5.3,-0.3) {$0$};
 
-\begin{tikzpicture}[scale=1.2, >=Stealth, every node/.style={font=\small}]
+    % Labels
+        \node[align=center] at (-3,-1.8) {Pure rotatie met \\lokale tangentiële snelheid \\$v_T = R\omega$.};
+        \node[align=center] at (1,-1.8) {Translatie met snelheid $v_{cm}$ \\zonder rotatie.};
+        \node[align=center] at (5.5,-1.8) {Gecombineerde beweging \\met variërende relatieve snelheid \\over de vortex.};
+\end{tikzpicture} \label{fig:rotatie-translatie}
 
-% First: Pure Rotation
-    \node at (-3,2.5) {Rotatie};
-    \draw[thick] (-3,1) circle (1);
-    \draw[->, red, thick] (-4,1) -- (-4,2.2) node[left] {$R\omega = v_T$};
-    \draw[->, red, thick] (-3,2) -- (-1.8,2) node[right] {$v_T$};
-    \draw[->, red, thick] (-3,0) -- (-4.2,0) node[left] {$v_T$};
-    \draw[->, red, thick] (-2,1) -- (-2,-0.2) node[below] {$v_T$};
+$v_{\text{cm}}$ staat voor de snelheid van het massamiddelpunt (\emph{center of mass}) van de vortexstructuur t.o.v. het ætherkader.
 
-% Second: Pure Translation
-    \node at (1,2.5) {Translatie};
-    \draw[thick] (1,1) circle (1);
-
-    \draw[->, blue, thick] (0,1) -- (1.2,1);
-    \draw[->, blue, thick] (2,1) -- (3.2,1) node[right] {$v_{CM}$};
-    \draw[->, blue, thick] (1,0) -- (2.2,0);
-    \draw[->, blue, thick] (1,2) -- (2.2,2);
-
-% Third: Combined Motion
-    \node at (5.5,2.5) {Combinatie};
-    \draw[thick] (5.5,1) circle (1);
-    \draw[->, thick, purple] (5.5,2) -- (7.2,2) node[right] {$2v_{CM}$};
-    \draw[->, thick, purple] (5.5,1) -- (6.7,1) node[right] {$v_{CM}$};
-    \filldraw[purple] (5.5,0) circle (2pt);
-    \node at (5.3,-0.3) {$0$};
-
-% Labels
-    \node[align=center] at (-3,-1.8) {tangentiële snelheid};
-    \node[align=center] at (1,-1.8) {t.o.v. achtergrond};
-    \node[align=center] at (5.5,-1.8) {t.o.v. achtergrond};
-
-\end{tikzpicture}
 
 
 
@@ -85,7 +77,11 @@ In dit artikel leiden we tijdsdilatatievergelijkingen af binnen een 3D Euclidisc
 \input{06_gecombineerde_effecten}
 \input{07_conclusie}
 
-\bibliographystyle{plain}
+\bibliographystyle{unsrt}
 \bibliography{00_Tijdsdilatatie_in_3D_Superfluïde_Æther_Model}
+
+\appendix \label{sec:Part-6}
+\input{appendix_A}\label{appendix:KlokkenInWervelstructuren}
+\input{appendix_B}\label{appendix:AfwijkendeVoorspellingen}
 
 \end{document}
