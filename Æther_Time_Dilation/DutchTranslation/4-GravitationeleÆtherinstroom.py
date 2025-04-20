@@ -25,25 +25,25 @@ for r in radii:
         dx = -mag * np.cos(theta)
         dy = -mag * np.sin(theta)
         ax.arrow(x, y, dx, dy, head_width=0.2, head_length=0.3,
-                 fc='deepskyblue', ec='deepskyblue', linewidth=1.5, alpha=0.6 + 0.4 * (5.5 - r) / 4)
+                 fc='deepskyblue', ec='deepskyblue', linewidth=1, alpha=0.6 + 0.4 * (5.5 - r) / 4)
 
 # Add example vortex at a radius
 r_vortex = 4
 vortex_x = r_vortex * np.cos(np.pi / 4)
 vortex_y = r_vortex * np.sin(np.pi / 4)
-vortex = plt.Circle((vortex_x, vortex_y), 0.6, color='lightblue', ec='black', linewidth=2)
+vortex = plt.Circle((vortex_x, vortex_y), 0.6, color='lightblue', ec='black', linewidth=1)
 ax.add_patch(vortex)
 ax.plot(vortex_x + 0.4, vortex_y, 'ro', markersize=10)
 ax.text(vortex_x, vortex_y - 1, 'Wervelklok', ha='center', fontsize=11)
 
-# Æther speed label (moved higher)
+# Æther speed label
 ax.text(0, -5.6, r'Æther instroomsnelheid: $v_g(r) = \sqrt{2GM / r}$',
-        fontsize=12, ha='center', color='deepskyblue')
+        fontsize=12, ha='center', color='black')
 
-# Caption
-plt.figtext(0.5, 0.01,
-            "Ætherinstroom richting massa M veroorzaakt gravitationele tijdsdilatatie bij de wervelklok.",
-            wrap=True, horizontalalignment='center', fontsize=11)
+# # Caption
+# plt.figtext(0.5, 0.01,
+#             "Ætherinstroom richting massa M veroorzaakt gravitationele tijdsdilatatie bij de wervelklok.",
+#             wrap=True, horizontalalignment='center', fontsize=11)
 
 import os
 script_name = os.path.splitext(os.path.basename(__file__))[0]

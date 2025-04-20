@@ -4,44 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68444c05-2aa5-47b0-a236-1340c65f3f8d" name="Changes" comment="Add 3D multi-layer visualization for Starship coil; implement dynamic wire path generation and filename saving">
-      <change afterPath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/appendix_A.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/appendix_B.tex" afterDir="false" />
+    <list default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" id="68444c05-2aa5-47b0-a236-1340c65f3f8d" name="Changes" comment="Add project configuration files and update æther framework documentation; include new Python scripts for time dilation and æther flow animations">
       <change beforePath="$PROJECT_DIR$/.idea/VAM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/VAM.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM/05_Unified_Framework_and_Synthesis_of_Time_Dilation_in_VAM.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM/05_Unified_Framework_and_Synthesis_of_Time_Dilation_in_VAM.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM/07_Experimental_Anchors.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM/07_Experimental_Anchors.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/00_GR_in_3d.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/00_GR_in_3d.synctex.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/00_Tijdsdilatatie_in_3D_Superfluïde_Æther_Model.aux" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/00_Tijdsdilatatie_in_3D_Superfluïde_Æther_Model.bbl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/00_Tijdsdilatatie_in_3D_Superfluïde_Æther_Model.blg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/00_Tijdsdilatatie_in_3D_Superfluïde_Æther_Model.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/00_Tijdsdilatatie_in_3D_Superfluïde_Æther_Model.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/00_Tijdsdilatatie_in_3D_Superfluïde_Æther_Model.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/00_Tijdsdilatatie_in_3D_Superfluïde_Æther_Model.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/00_Tijdsdilatatie_in_3D_Superfluïde_Æther_Model.synctex.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/00_aether_time_dilation.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/00_aether_time_dilation.synctex.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/GR_in_3d.aux" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/GR_in_3d.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/GR_in_3d.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/VAM_Gravity_LERN_ftl.aux" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/VAM_Gravity_LERN_ftl.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/vam_gr_benchmark.aux" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/vam_gr_benchmark.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/vam_gr_benchmark.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/vam_gr_benchmark.synctex.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/00_Tijdsdilatatie_in_3D_Superfluïde_Æther_Model.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/0_Swirl_Clocks_and_Vorticity-Induced_Gravity.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/00_Tijdsdilatatie_in_3D_Superfluïde_Æther_Model.bib" beforeDir="false" afterPath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/00_Tijdsdilatatie_in_3D_Superfluïde_Æther_Model.bib" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/00_Tijdsdilatatie_in_3D_Superfluïde_Æther_Model.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/00_Tijdsdilatatie_in_3D_Superfluïde_Æther_Model.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/01_introductie.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/01_introductie.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/02_supervloeistof_æther_geraamte.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/02_supervloeistof_æther_geraamte.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/03_vortex_klokken.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/03_vortex_klokken.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/04_speciale_relativiteit.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/04_speciale_relativiteit.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/05_gravitationele_tijd_dilatatie.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/05_gravitationele_tijd_dilatatie.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/06_gecombineerde_effecten.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/06_gecombineerde_effecten.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/07_conclusie.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/07_conclusie.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/1-WervelkernKlok.png" beforeDir="false" afterPath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/1-WervelkernKlok.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/1-WervelkernKlok.py" beforeDir="false" afterPath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/1-WervelkernKlok.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/3-TijdsdilatatieBeweging.png" beforeDir="false" afterPath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/3-TijdsdilatatieBeweging.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/3-TijdsdilatatieBeweging.py" beforeDir="false" afterPath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/3-TijdsdilatatieBeweging.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/4-GravitationeleÆtherinstroom.png" beforeDir="false" afterPath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/4-GravitationeleÆtherinstroom.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/4-GravitationeleÆtherinstroom.py" beforeDir="false" afterPath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/4-GravitationeleÆtherinstroom.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/5-BaanRondMassa.png" beforeDir="false" afterPath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/5-BaanRondMassa.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/5-BaanRondMassa.py" beforeDir="false" afterPath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/5-BaanRondMassa.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/6-HorizonTijdsbevriezing.png" beforeDir="false" afterPath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/6-HorizonTijdsbevriezing.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/6-HorizonTijdsbevriezing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/6-HorizonTijdsbevriezing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/7-TijdsvertragingRelatieveBeweging.png" beforeDir="false" afterPath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/7-TijdsvertragingRelatieveBeweging.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/7-TijdsvertragingRelatieveBeweging.py" beforeDir="false" afterPath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/7-TijdsvertragingRelatieveBeweging.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/CombinedTimeDilationSurface.png" beforeDir="false" afterPath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/CombinedTimeDilationSurface.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/CombinedTimeDilationSurface.py" beforeDir="false" afterPath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/CombinedTimeDilationSurface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/appendix_A.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/appendix_A.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/appendix_B.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/appendix_B.tex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="false" />
@@ -87,9 +80,9 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
-    <option name="autoscrollFromSource" value="true" />
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
+    <option name="autoscrollFromSource" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
+    <option name="hideEmptyMiddlePackages" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
+    <option name="showLibraryContents" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
@@ -105,6 +98,7 @@
     "LaTeX.00_aether_time_dilation.executor": "Run",
     "LaTeX.00_Æther.executor": "Run",
     "LaTeX.01_TIME_DILATION_FROM_VORTEX_DYNAMICS.executor": "Run",
+    "LaTeX.02_supervloeistof_æther_geraamte.executor": "Run",
     "LaTeX.06_VAM_Vortex_Scattering_Framework_Inspired_by_Elastic_Theory.executor": "Run",
     "LaTeX.100_PhotonVortexDipole.executor": "Run",
     "LaTeX.DerivationElectrostatic.executor": "Run",
@@ -120,8 +114,12 @@
     "Python.00_R_r_horn_swindle_side_torus.executor": "Run",
     "Python.01_Starship-MultiLayer-24.executor": "Run",
     "Python.01_Starship-MultiLayer-3phase-27x3points.executor": "Run",
+    "Python.1-WervelkernKlok.executor": "Run",
     "Python.3-TijdsdilatatieBeweging.executor": "Run",
     "Python.4-GravitationeleÆtherinstroom.executor": "Run",
+    "Python.5-BaanRondMassa.executor": "Run",
+    "Python.6-HorizonTijdsbevriezing.executor": "Run",
+    "Python.7-TijdsvertragingRelatieveBeweging.executor": "Run",
     "Python.Animate.executor": "Run",
     "Python.Biot-Savart.executor": "Run",
     "Python.C_e.executor": "Run",
@@ -162,7 +160,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/workspace/projects/vamcore",
+    "last_opened_file_path": "C:/Users/mr/IdeaProjects/VAM",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -171,7 +169,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "settings.qodana",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "ts.external.directory.path": "C:\\Users\\Omar.Iskandarani\\AppData\\Local\\Programs\\IntelliJ IDEA Ultimate 2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
@@ -199,34 +197,53 @@
       </texify-bibtex>
       <method v="2" />
     </configuration>
-    <configuration default="true" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+    <configuration name="02_supervloeistof_æther_geraamte bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify-bibtex>
-        <compiler />
+        <compiler>BIBTEX</compiler>
         <compiler-path />
         <compiler-arguments />
         <envs />
-        <main-file />
-        <aux-dir />
-        <latex-distribution>PROJECT_SDK</latex-distribution>
+        <main-file>$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation/02_supervloeistof_æther_geraamte.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
+        <latex-distribution>MIKTEX</latex-distribution>
       </texify-bibtex>
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="BibTeX.00_Tijdsdilatatie_in_3D_Superfluïde_Æther_Model bibliography" />
-      <item itemvalue="LaTeX.[GR_3d]" />
-      <item itemvalue="LaTeX.Tijdsdilatatie" />
-    </list>
+    <configuration default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <sumatra-path />
+        <pdf-viewer>SUMATRA</pdf-viewer>
+        <viewer-command />
+        <compiler-arguments />
+        <envs />
+        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
+        <before-run-command />
+        <main-file />
+        <output-path>{projectDir}/out</output-path>
+        <auxil-path>{projectDir}/auxil</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>MIKTEX</latex-distribution>
+        <has-been-run>false</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.23774.435" />
         <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-IU-251.23774.435" />
       </set>
     </attachedChunks>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="false" transferred="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="false" transferred="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
+    <task active="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" id="Default" summary="Default task">
       <changelist id="68444c05-2aa5-47b0-a236-1340c65f3f8d" name="Changes" comment="" />
       <created>1739871427489</created>
       <option name="number" value="Default" />
@@ -278,6 +295,11 @@
       <workItem from="1744881900469" duration="159000" />
       <workItem from="1744882067182" duration="4078000" />
       <workItem from="1744977368074" duration="7474000" />
+      <workItem from="1745159666057" duration="78000" />
+      <workItem from="1745159750900" duration="29000" />
+      <workItem from="1745159787367" duration="82000" />
+      <workItem from="1745159878322" duration="266000" />
+      <workItem from="1745160155673" duration="7865000" />
     </task>
     <task id="LOCAL-00001" summary="some small tests">
       <created>1739958944014</created>
@@ -408,6 +430,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
+    <ignored-roots>
+      <path value="$USER_HOME$/projects/VAMcore" />
+    </ignored-roots>
     <MESSAGE value="some small tests" />
     <MESSAGE value="Added some constants and equations" />
     <MESSAGE value="Add references for Maxwell and Michelson, update Einstein's title, and refine Vinen's citation" />
@@ -426,42 +451,46 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/VAM$cylinder_flow.coverage" NAME="cylinder_flow Coverage Results" MODIFIED="1744288256163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation" />
-    <SUITE FILE_PATH="coverage/VAM$vortex_flow_electron_orbital_diagram.coverage" NAME="vortex flow electron orbital diagram Coverage Results" MODIFIED="1742314034935" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
-    <SUITE FILE_PATH="coverage/VAM$RotationalVsHeuristicTimeDilation.coverage" NAME="RotationalVsHeuristicTimeDilation Coverage Results" MODIFIED="1743499851435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src_VAM2/export" />
-    <SUITE FILE_PATH="coverage/VAM$01_Starship_MultiLayer_3phase_27x3points.coverage" NAME="01_Starship-MultiLayer-3phase-27x3points Coverage Results" MODIFIED="1743755255706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$01_Starship_MultiLayer_24.coverage" NAME="01_Starship-MultiLayer-24 Coverage Results" MODIFIED="1744370249534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$torus_in_torus.coverage" NAME="torus in torus Coverage Results" MODIFIED="1743774083114" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
     <SUITE FILE_PATH="coverage/VAM$Animate.coverage" NAME="Animate Coverage Results" MODIFIED="1744799692963" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation" />
-    <SUITE FILE_PATH="coverage/VAM$GR_Observables.coverage" NAME="GR_Observables Coverage Results" MODIFIED="1742919014569" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Z_equations" />
-    <SUITE FILE_PATH="coverage/VAM$vortex_2d.coverage" NAME="vortex_2d Coverage Results" MODIFIED="1742903556190" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
-    <SUITE FILE_PATH="coverage/VAM$VelocityFieldSurroundingATrefoilVortexKnot.coverage" NAME="VelocityFieldSurroundingATrefoilVortexKnot Coverage Results" MODIFIED="1743772563580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$LifterVsStarshipFields.coverage" NAME="LifterVsStarshipFields Coverage Results" MODIFIED="1742911187314" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
-    <SUITE FILE_PATH="coverage/VAM$NewGraph.coverage" NAME="NewGraph Coverage Results" MODIFIED="1743499858837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src_VAM2/export" />
-    <SUITE FILE_PATH="coverage/VAM$starship.coverage" NAME="starship Coverage Results" MODIFIED="1742903626195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
-    <SUITE FILE_PATH="coverage/VAM$ESHFieldLines.coverage" NAME="ESHFieldLines Coverage Results" MODIFIED="1742911070851" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
-    <SUITE FILE_PATH="coverage/VAM$Biot_Savart.coverage" NAME="Biot-Savart Coverage Results" MODIFIED="1742315238292" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
-    <SUITE FILE_PATH="coverage/VAM$LifterInwardFieldlines.coverage" NAME="LifterInwardFieldlines Coverage Results" MODIFIED="1742909556072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
-    <SUITE FILE_PATH="coverage/VAM$ThrustVsVoltage.coverage" NAME="ThrustVsVoltage Coverage Results" MODIFIED="1742906152644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
-    <SUITE FILE_PATH="coverage/VAM$GR_Benchmark.coverage" NAME="GR_Benchmark Coverage Results" MODIFIED="1742919179818" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Z_equations" />
-    <SUITE FILE_PATH="coverage/VAM$C_e.coverage" NAME="C_e Coverage Results" MODIFIED="1739881070159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python Calculations" />
-    <SUITE FILE_PATH="coverage/VAM$RadialProfileOfLocalTimeDilation.coverage" NAME="RadialProfileOfLocalTimeDilation Coverage Results" MODIFIED="1743500035091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src_VAM2/export" />
-    <SUITE FILE_PATH="coverage/VAM$4_GravitationeleÆtherinstroom.coverage" NAME="4-GravitationeleÆtherinstroom Coverage Results" MODIFIED="1744790735415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation" />
-    <SUITE FILE_PATH="coverage/VAM$blackbody_vs_vortexwavevelocity.coverage" NAME="blackbody_vs_vortexwavevelocity Coverage Results" MODIFIED="1742553117664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
-    <SUITE FILE_PATH="coverage/VAM$rodin.coverage" NAME="rodin Coverage Results" MODIFIED="1743775025795" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$roding_field_animation.coverage" NAME="roding_field_animation Coverage Results" MODIFIED="1742903582927" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
-    <SUITE FILE_PATH="coverage/VAM$rotating_current_rodin_fields.coverage" NAME="rotating_current_rodin_fields Coverage Results" MODIFIED="1742903605566" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
-    <SUITE FILE_PATH="coverage/VAM$00_R_r_horn_swindle_side_torus.coverage" NAME="00_R_r_horn_swindle_side_torus Coverage Results" MODIFIED="1743773126037" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$combined_flow.coverage" NAME="combined_flow Coverage Results" MODIFIED="1744288583565" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation" />
     <SUITE FILE_PATH="coverage/VAM$WaveFunctionVAM_QM.coverage" NAME="WaveFunctionVAM_QM Coverage Results" MODIFIED="1742313811347" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
-    <SUITE FILE_PATH="coverage/VAM$3_TijdsdilatatieBeweging.coverage" NAME="3-TijdsdilatatieBeweging Coverage Results" MODIFIED="1744984782272" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation" />
-    <SUITE FILE_PATH="coverage/VAM$Starship_3phase_27x3points.coverage" NAME="Starship-3phase-27x3points Coverage Results" MODIFIED="1742314140341" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
+    <SUITE FILE_PATH="coverage/VAM$LifterVsStarshipFields.coverage" NAME="LifterVsStarshipFields Coverage Results" MODIFIED="1742911187314" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
+    <SUITE FILE_PATH="coverage/VAM$5_BaanRondMassa.coverage" NAME="5-BaanRondMassa Coverage Results" MODIFIED="1745168701306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation" />
     <SUITE FILE_PATH="coverage/VAM$streamlines_dipole.coverage" NAME="streamlines_dipole Coverage Results" MODIFIED="1744289077838" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation" />
-    <SUITE FILE_PATH="coverage/VAM$CombinedTimeDilationSurface.coverage" NAME="CombinedTimeDilationSurface Coverage Results" MODIFIED="1744793229569" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation" />
-    <SUITE FILE_PATH="coverage/VAM$starship_coil.coverage" NAME="starship-coil Coverage Results" MODIFIED="1742903992891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
-    <SUITE FILE_PATH="coverage/VAM$Starship_MultiLayer_3phase_27x3points.coverage" NAME="Starship-MultiLayer-3phase-27x3points Coverage Results" MODIFIED="1742903712657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
-    <SUITE FILE_PATH="coverage/VAM$SimulatedStarshipCoilPulsedVortexThrust.coverage" NAME="SimulatedStarshipCoilPulsedVortexThrust Coverage Results" MODIFIED="1742905702390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
+    <SUITE FILE_PATH="coverage/VAM$NewGraph.coverage" NAME="NewGraph Coverage Results" MODIFIED="1743499858837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src_VAM2/export" />
     <SUITE FILE_PATH="coverage/VAM$magnetic_round_coil.coverage" NAME="magnetic round coil Coverage Results" MODIFIED="1742904016875" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
+    <SUITE FILE_PATH="coverage/VAM$C_e.coverage" NAME="C_e Coverage Results" MODIFIED="1739881070159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python Calculations" />
+    <SUITE FILE_PATH="coverage/VAM$torus_in_torus.coverage" NAME="torus in torus Coverage Results" MODIFIED="1743774083114" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
+    <SUITE FILE_PATH="coverage/VAM$ESHFieldLines.coverage" NAME="ESHFieldLines Coverage Results" MODIFIED="1742911070851" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
+    <SUITE FILE_PATH="coverage/VAM$3_TijdsdilatatieBeweging.coverage" NAME="3-TijdsdilatatieBeweging Coverage Results" MODIFIED="1745168708479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation" />
+    <SUITE FILE_PATH="coverage/VAM$4_GravitationeleÆtherinstroom.coverage" NAME="4-GravitationeleÆtherinstroom Coverage Results" MODIFIED="1745168705834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation" />
+    <SUITE FILE_PATH="coverage/VAM$starship.coverage" NAME="starship Coverage Results" MODIFIED="1742903626195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
+    <SUITE FILE_PATH="coverage/VAM$vortex_flow_electron_orbital_diagram.coverage" NAME="vortex flow electron orbital diagram Coverage Results" MODIFIED="1742314034935" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
+    <SUITE FILE_PATH="coverage/VAM$rodin.coverage" NAME="rodin Coverage Results" MODIFIED="1743775025795" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
+    <SUITE FILE_PATH="coverage/VAM$00_R_r_horn_swindle_side_torus.coverage" NAME="00_R_r_horn_swindle_side_torus Coverage Results" MODIFIED="1743773126037" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
+    <SUITE FILE_PATH="coverage/VAM$6_HorizonTijdsbevriezing.coverage" NAME="6-HorizonTijdsbevriezing Coverage Results" MODIFIED="1745168694570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation" />
+    <SUITE FILE_PATH="coverage/VAM$ThrustVsVoltage.coverage" NAME="ThrustVsVoltage Coverage Results" MODIFIED="1742906152644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
+    <SUITE FILE_PATH="coverage/VAM$7_TijdsvertragingRelatieveBeweging.coverage" NAME="7-TijdsvertragingRelatieveBeweging Coverage Results" MODIFIED="1745168791482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation" />
+    <SUITE FILE_PATH="coverage/VAM$CombinedTimeDilationSurface.coverage" NAME="CombinedTimeDilationSurface Coverage Results" MODIFIED="1745161481840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation" />
+    <SUITE FILE_PATH="coverage/VAM$Starship_MultiLayer_3phase_27x3points.coverage" NAME="Starship-MultiLayer-3phase-27x3points Coverage Results" MODIFIED="1742903712657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
     <SUITE FILE_PATH="coverage/VAM$vorticity_field.coverage" NAME="vorticity_field Coverage Results" MODIFIED="1742905754172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
+    <SUITE FILE_PATH="coverage/VAM$GR_Observables.coverage" NAME="GR_Observables Coverage Results" MODIFIED="1742919014569" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Z_equations" />
+    <SUITE FILE_PATH="coverage/VAM$RadialProfileOfLocalTimeDilation.coverage" NAME="RadialProfileOfLocalTimeDilation Coverage Results" MODIFIED="1743500035091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src_VAM2/export" />
+    <SUITE FILE_PATH="coverage/VAM$SimulatedStarshipCoilPulsedVortexThrust.coverage" NAME="SimulatedStarshipCoilPulsedVortexThrust Coverage Results" MODIFIED="1742905702390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
+    <SUITE FILE_PATH="coverage/VAM$01_Starship_MultiLayer_3phase_27x3points.coverage" NAME="01_Starship-MultiLayer-3phase-27x3points Coverage Results" MODIFIED="1743755255706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
+    <SUITE FILE_PATH="coverage/VAM$Biot_Savart.coverage" NAME="Biot-Savart Coverage Results" MODIFIED="1742315238292" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
+    <SUITE FILE_PATH="coverage/VAM$combined_flow.coverage" NAME="combined_flow Coverage Results" MODIFIED="1744288583565" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation" />
+    <SUITE FILE_PATH="coverage/VAM$starship_coil.coverage" NAME="starship-coil Coverage Results" MODIFIED="1742903992891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
+    <SUITE FILE_PATH="coverage/VAM$vortex_2d.coverage" NAME="vortex_2d Coverage Results" MODIFIED="1742903556190" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
+    <SUITE FILE_PATH="coverage/VAM$Starship_3phase_27x3points.coverage" NAME="Starship-3phase-27x3points Coverage Results" MODIFIED="1742314140341" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
+    <SUITE FILE_PATH="coverage/VAM$RotationalVsHeuristicTimeDilation.coverage" NAME="RotationalVsHeuristicTimeDilation Coverage Results" MODIFIED="1743499851435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src_VAM2/export" />
+    <SUITE FILE_PATH="coverage/VAM$cylinder_flow.coverage" NAME="cylinder_flow Coverage Results" MODIFIED="1744288256163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation" />
+    <SUITE FILE_PATH="coverage/VAM$01_Starship_MultiLayer_24.coverage" NAME="01_Starship-MultiLayer-24 Coverage Results" MODIFIED="1744370249534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
+    <SUITE FILE_PATH="coverage/VAM$1_WervelkernKlok.coverage" NAME="1-WervelkernKlok Coverage Results" MODIFIED="1745165225289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation" />
+    <SUITE FILE_PATH="coverage/VAM$GR_Benchmark.coverage" NAME="GR_Benchmark Coverage Results" MODIFIED="1742919179818" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Z_equations" />
+    <SUITE FILE_PATH="coverage/VAM$rotating_current_rodin_fields.coverage" NAME="rotating_current_rodin_fields Coverage Results" MODIFIED="1742903605566" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
+    <SUITE FILE_PATH="coverage/VAM$LifterInwardFieldlines.coverage" NAME="LifterInwardFieldlines Coverage Results" MODIFIED="1742909556072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
+    <SUITE FILE_PATH="coverage/VAM$VelocityFieldSurroundingATrefoilVortexKnot.coverage" NAME="VelocityFieldSurroundingATrefoilVortexKnot Coverage Results" MODIFIED="1743772563580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
+    <SUITE FILE_PATH="coverage/VAM$roding_field_animation.coverage" NAME="roding_field_animation Coverage Results" MODIFIED="1742903582927" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
+    <SUITE FILE_PATH="coverage/VAM$blackbody_vs_vortexwavevelocity.coverage" NAME="blackbody_vs_vortexwavevelocity Coverage Results" MODIFIED="1742553117664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
   </component>
 </project>

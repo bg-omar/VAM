@@ -33,7 +33,7 @@ for i, ax in enumerate(axes):
         ax.streamplot(X, Y, u, v, color='navy', density=.4, arrowsize=1.5, linewidth=2.5, cmap='Blues', integration_direction='both')
 
         ax.text(0, 1.1, r'Ætherstroom $\vec{v}$ rond wervel', fontsize=12, ha='center', color='navy')
-        ax.text(2.3, 1.6, r'$|\vec{v}| = v$', fontsize=11, color='navy')
+        # ax.text(1.3, 1.6, r'$|\vec{v}| = v$', fontsize=11, color='navy')
 
     # Draw vortex circle
     circle = plt.Circle((0, 0), 1, edgecolor='black', facecolor='lightblue', linewidth=2)
@@ -74,9 +74,9 @@ for i, ax in enumerate(axes):
 
 
 # Caption
-plt.figtext(0.5, 0.02,
-            "Beweging door æther verlaagt de waargenomen hoeksnelheid $\omega_{\mathrm{obs}}$.",
-            wrap=True, horizontalalignment='center', fontsize=11)
+# plt.figtext(0.5, 0.01,
+#             "Beweging door æther verlaagt de waargenomen hoeksnelheid $\omega_{\mathrm{obs}}$.",
+#             wrap=True, horizontalalignment='center', fontsize=11)
 
 plt.suptitle("Effect van ætherbeweging op rotatie van wervelkern", fontsize=14)
 plt.tight_layout()

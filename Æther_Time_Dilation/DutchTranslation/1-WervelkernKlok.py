@@ -22,14 +22,14 @@ ax.plot(x_marker, y_marker, 'ro', markersize=10, label='Markering (ronddraaiend)
 arrow_length = 0.4
 ax.annotate('', xy=(0, 1.2), xytext=(0.6, 0),
             arrowprops=dict(facecolor='black', arrowstyle='->', linewidth=2))
-ax.text(0.65, 0.05, r'$\omega$', fontsize=16)
+ax.text(0.65, 0.45, r'$\omega$', fontsize=16)
 
 # Add label in center
 ax.text(0, 0, 'Wervelkern', ha='center', va='center', fontsize=12, weight='bold')
 
 # Add caption
-plt.figtext(0.5, -0.05,
-            "Elke $2\pi$ rotatie van de wervelkern komt overeen met één tick van de interne klok.",
+plt.figtext(0.5, 0.05,
+            "Elke $2\pi$ rotatie van de wervelkern komt overeen \nmet één tick van de interne klok.",
             wrap=True, horizontalalignment='center', fontsize=11)
 
 plt.title("Visualisatie van wervelrotatie als interne klok", fontsize=14)

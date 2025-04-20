@@ -47,17 +47,17 @@ vrel_x = vt_x + vg_x
 vrel_y = vt_y + vg_y
 ax.arrow(vx, vy, vrel_x, vrel_y, head_width=0.2, head_length=0.3,
          fc='purple', ec='purple', linewidth=2)
-ax.text(vx + vrel_x + 0.2, vy + vrel_y, r'$\vec{v}_{\mathrm{rel}}$', color='purple', fontsize=12)
+ax.text(vx + vrel_x + 0.2, vy + vrel_y + 0.1, r'$\vec{v}_{\mathrm{rel}}$', color='purple', fontsize=12)
 
 # Formula box
 formula = r"$v_{\mathrm{rel}} = \sqrt{v_{\mathrm{orb}}^2 + v_g^2}$" + "\n" + \
           r"$\frac{d\tau}{dt} = \sqrt{1 - \frac{v_{\mathrm{rel}}^2}{c^2}}$"
-ax.text(-6, -6.5, formula, fontsize=12, ha='left', va='top', bbox=dict(facecolor='white', alpha=0.7))
+ax.text(-5.5, -4, formula, fontsize=12, ha='left', va='top', bbox=dict(facecolor='white', alpha=0.7))
 
 # Caption
-plt.figtext(0.5, 0.01,
-            "Een vortex in een cirkelvormige baan ervaart gecombineerde tijdsdilatatie door orbitaal- en ætherstroming.",
-            wrap=True, horizontalalignment='center', fontsize=11)
+# plt.figtext(0.5, 0.01,
+#             "Een vortex in een cirkelvormige baan ervaart gecombineerde tijdsdilatatie door orbitaal- en ætherstroming.",
+#             wrap=True, horizontalalignment='center', fontsize=11)
 
 import os
 script_name = os.path.splitext(os.path.basename(__file__))[0]

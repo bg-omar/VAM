@@ -95,10 +95,10 @@ y_vortex = rs * np.sin(theta)
 vortex = plt.Circle((x_vortex, y_vortex), 0.5, color='lightblue', ec='black', linewidth=2)
 ax.add_patch(vortex)
 ax.plot(x_vortex + 0.4, y_vortex, 'ro', markersize=10)
-ax.text(x_vortex, y_vortex - 0.8, 'Bevroren wervel', ha='center', fontsize=11)
+ax.text(x_vortex, y_vortex + 0.6, 'Bevroren wervel', ha='center', fontsize=11)
 
 # Rotation arrow - omega = 0
-ax.text(x_vortex + 0.6, y_vortex - 0.1, r'$\omega_{\mathrm{obs}} = 0$', fontsize=12, color='gray')
+ax.text(x_vortex + 0.6, y_vortex - 0.1, r'$\omega_{\mathrm{obs}} = 0$', fontsize=12, color='black')
 
 # Inset: graph of dτ/dt vs r
 inset_ax = fig.add_axes([0.65, 0.15, 0.28, 0.25])
@@ -112,10 +112,10 @@ inset_ax.grid(True)
 inset_ax.set_xlim(rs, 10)
 inset_ax.set_ylim(0, 1)
 
-# Caption
-plt.figtext(0.5, 0.01,
-            "Ætherstroming versnelt richting $r_s$, waar de waargenomen rotatie van de klok nul wordt: tijd bevriest.",
-            wrap=True, horizontalalignment='center', fontsize=11)
+# # Caption
+# plt.figtext(0.5, 0.01,
+#             "Ætherstroming versnelt richting $r_s$, waar de waargenomen rotatie van de klok nul wordt: tijd bevriest.",
+#             wrap=True, horizontalalignment='center', fontsize=11)
 
 import os
 script_name = os.path.splitext(os.path.basename(__file__))[0]

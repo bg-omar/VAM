@@ -25,6 +25,7 @@ time_dilation = np.clip(time_dilation, 0, 1)  # prevent complex values
 # Create a 3D surface plot
 fig = plt.figure(figsize=(10, 7))
 ax = fig.add_subplot(111, projection='3d')
+
 surf = ax.plot_surface(R / 1e6, V / 1e3, time_dilation, cmap='viridis', edgecolor='none')
 
 # Labels and titles
