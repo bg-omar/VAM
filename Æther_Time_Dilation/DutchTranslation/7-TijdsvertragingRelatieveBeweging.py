@@ -25,10 +25,6 @@ ax.annotate("Cirkelbaan (v ≈ √3GM/r)", xy=(0.6, np.sqrt(1 - 0.6**2)),
 ax.annotate("Horizon (v = c)", xy=(0.99, 0), xytext=(0.75, 0.2),
             arrowprops=dict(arrowstyle="->", color='black'), fontsize=11)
 
-# # Caption
-# plt.figtext(0.5, 0.01,
-#             "De kloksnelheid daalt naarmate de relatieve snelheid door æther toeneemt. Bij |v⃗rel| = c stopt de tijd.",
-#             wrap=True, horizontalalignment='center', fontsize=11)
 
 plt.tight_layout()
 import os
