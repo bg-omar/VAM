@@ -18,7 +18,7 @@ Beide documenten benadrukken het belang van vortexknopen, maar "000_Æther-18-03
 
 Relatie met bestaande theorieën:
 
-"000_Æther-18-03-2025.pdf" legt duidelijker de relatie met de speciale relativiteitstheorie uit en hoe VAM een alternatief biedt voor het concept van tijd dilatatie. Het zou goed zijn om in "00_VAM.pdf" explicieter te vermelden hoe VAM zich verhoudt tot de relativiteitstheorie en de klassieke elektromagnetische theorie van Maxwell.
+"000_Æther-18-03-2025.pdf" legt duidelijker de relatie met de speciale relativiteitstheorie uit en hoe VAM een alternatief biedt voor het concept van tijdsdilatatie. Het zou goed zijn om in "00_VAM.pdf" explicieter te vermelden hoe VAM zich verhoudt tot de relativiteitstheorie en de klassieke elektromagnetische theorie van Maxwell.
 
 Wiskundige Formalisme:
 

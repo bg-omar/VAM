@@ -29,11 +29,11 @@ ax = fig.add_subplot(111, projection='3d')
 surf = ax.plot_surface(R / 1e6, V / 1e3, time_dilation, cmap='viridis', edgecolor='none')
 
 # Labels and titles
-ax.set_title('Combined Time Dilation Surface (Æther Flow + Orbital Motion)', fontsize=12)
-ax.set_xlabel('Radius from Center of Mass (10^6 Meter)', fontsize=10)
-ax.set_ylabel('Orbital Speed (km/s)', fontsize=10)
-ax.set_zlabel('dτ/dt (Time Dilation Factor)', fontsize=10)
-fig.colorbar(surf, ax=ax, shrink=0.5, aspect=10, label='dτ/dt')
+ax.set_title('Gecombineerde Tijdsdilatatie door Ætherinstroom en Orbitale Beweging', fontsize=12)
+ax.set_xlabel('Straal vanaf massamiddelpunt (in $10^6$ meter)', fontsize=10)
+ax.set_ylabel('Orbitale snelheid (km/s)', fontsize=10)
+ax.set_zlabel('dτ/dt (Tijdsdilatatiefactor)', fontsize=10)
+fig.colorbar(surf, ax=ax, shrink=0.5, aspect=10, label='Tijdsdilatatiefactor dτ/dt')
 
 plt.tight_layout()
 import os
