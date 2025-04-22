@@ -1,0 +1,79 @@
+\documentclass[a4paper,12pt]{revtex4}
+\usepackage[paperwidth=210mm, paperheight=297mm, margin=2.5cm]{geometry}
+\usepackage[none]{hyphenat}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage[font=footnotesize]{caption}
+\usetikzlibrary{arrows.meta}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta}
+
+\sloppy
+\begin{document}
+\author{Omar Iskandarani}
+\title{Time Dilation in a 3D Superfluid Æther Model, Based on Vortex Core Rotation and Ætheric Flow}
+\date{\today}
+\affiliation{Independent Researcher, Groningen, The Netherlands}
+\thanks{ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961}}
+\email{info@omariskandarani.com}
+
+\maketitle
+
+\section*{Abstract}
+In this paper we derive time dilation equations within a 3D Euclidean superfluid æther model. In the Vortex-Æther Model (VAM) we consider a \textit{vortex} as a topologically conserved rotation field in a superfluid medium. In this framework, fundamental particles are modeled as vortex nodes and time is defined by the intrinsic angular rotation of their vortex cores. The goal is to replace the spacetime curvature concept of general relativity (GR) with quantized angular velocity fields in a flat-space æther, while reproducing all experimental predictions of time dilation under GR and special relativity (SR). We provide first-principles derivations, grounded in fluid dynamics and vortex mechanics, and express the time dilation factors in terms of fundamental constants such as the Planck time and maximum force. The different modes of motion of a vortex are shown schematically in Figure~\ref{fig:rotation-translation}.
+
+\begin{figure}[H]
+        \centering
+        \begin{tikzpicture}[scale=1.1, >=Stealth, every node/.style={font=\small}]
+            % First: Pure Rotation
+                \node at (-3,2.5) {Rotatie};
+                \draw[thick] (-3,1) circle (1);
+                \draw[->, red, thick] (-4,1) -- (-4,2.2) node[left] {$R\omega = v_t$};
+                \draw[->, red, thick] (-3,2) -- (-1.8,2) node[right] {$v_t$};
+                \draw[->, red, thick] (-3,0) -- (-4.2,0) node[left] {$v_t$};
+                \draw[->, red, thick] (-2,1) -- (-2,-0.2) node[below] {$v_t$};
+
+            % Second: Pure Translation
+                \node at (1,2.5) {Translatie};
+                \draw[thick] (1,1) circle (1);
+                \draw[->, blue, thick] (0,1) -- (1.2,1);
+                \draw[->, blue, thick] (2,1) -- (3.2,1) node[right] {$v_{cm}$};
+                \draw[->, blue, thick] (1,0) -- (2.2,0);
+                \draw[->, blue, thick] (1,2) -- (2.2,2);
+
+            % Third: Combined Motion
+                \node at (5.5,2.5) {Combinatie};
+                \draw[thick] (5.5,1) circle (1);
+                \draw[->, thick, purple] (5.5,2) -- (7.2,2) node[right] {$2v_{cm}$};
+                \draw[->, thick, purple] (5.5,1) -- (6.7,1) node[right] {$v_{cm}$};
+                \filldraw[purple] (5.5,0) circle (2pt);
+                \node at (5.3,-0.3) {$0$};
+        \end{tikzpicture}
+        \caption{Schematic representation of three modes of motion of a vortex in the æther model. \textbf{(Left)} Pure rotation with local tangential velocity $v_t = R\omega$. \textbf{(Middle)} Translation with velocity $v_{\text{cm}}$ without internal rotation. \textbf{(Right)} Combining both leads to a relative velocity that differs over the vortex circumference: $v_{\text{rel}} = v_t + v_{\text{cm}}$.}
+        \label{fig:rotation-translation}
+\end{figure}
+
+\input{1_introduction}
+\input{2_superfluid_æther_framework}
+\input{3_vortex_clocks}
+\input{4_special_relativity}
+\input{5_gravitational_time_dilation}
+\input{6_combined_effects}
+\input{7_conclusion}
+
+\bibliographystyle{unsrt}
+\bibliography{../VAM-1}
+
+\appendix \label{sec:Part-6}
+\input{appendix_A}\label{appendix:ClocksInVortexStructures}
+\input{appendix_B}\label{appendix:DeviatingPredictions}
+
+\end{document}
