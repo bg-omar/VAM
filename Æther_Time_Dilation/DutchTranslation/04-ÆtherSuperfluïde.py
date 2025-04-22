@@ -1,5 +1,7 @@
-import matplotlib.pyplot as plt
+import matplotlib
+matplotlib.use('TkAgg')  # Ensure it uses Tkinter backend
 import numpy as np
+import matplotlib.pyplot as plt
 
 # Create grid
 x = np.linspace(-5, 5, 20)

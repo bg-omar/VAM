@@ -1,68 +1,7 @@
-import matplotlib.pyplot as plt
+import matplotlib
+matplotlib.use('TkAgg')  # Ensure it uses Tkinter backend
 import numpy as np
-
-# Set up figure with 2 subplots: one for schematic, one for graph
-fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6))
-fig.suptitle("Tijdbevriezing bij de gebeurtenishorizon", fontsize=15)
-
-# --- Left: Schematic view of æther infall towards black hole ---
-ax1.set_aspect('equal')
-ax1.set_xlim(-6, 6)
-ax1.set_ylim(-6, 6)
-ax1.set_title("Ætherinstroom richting gebeurtenishorizon")
-
-# Draw Schwarzschild radius (event horizon)
-rs = 2
-horizon = plt.Circle((0, 0), rs, color='black', alpha=0.8)
-ax1.add_patch(horizon)
-ax1.text(0, 0, 'r = rs', color='white', fontsize=11, ha='center')
-
-# Æther flow arrows pointing inward
-radii = np.linspace(3, 5.5, 4)
-angles = np.linspace(0, 2 * np.pi, 20, endpoint=False)
-for r in radii:
-    for theta in angles:
-        x = r * np.cos(theta)
-        y = r * np.sin(theta)
-        dx = -0.4 * np.cos(theta)
-        dy = -0.4 * np.sin(theta)
-        ax1.arrow(x, y, dx, dy, head_width=0.2, head_length=0.3,
-                  fc='deepskyblue', ec='deepskyblue', linewidth=1.5)
-
-# Frozen vortex at horizon
-vortex = plt.Circle((rs * np.cos(np.pi / 4), rs * np.sin(np.pi / 4)), 0.6,
-                    color='lightblue', ec='black', linewidth=2)
-ax1.add_patch(vortex)
-ax1.text(rs * np.cos(np.pi / 4), rs * np.sin(np.pi / 4) - 1,
-         'ωobs → 0', ha='center', fontsize=11)
-
-ax1.axis('off')
-
-# --- Right: Graph of dτ/dt vs. radius ---
-ax2.set_title("dτ/dt versus afstand r tot M")
-r_vals = np.linspace(rs + 0.01, 10, 300)
-dil_vals = np.sqrt(1 - 2 / r_vals)  # normalized: 2GM = 2, c = 1
-
-ax2.plot(r_vals, dil_vals, color='purple', linewidth=2)
-ax2.axvline(rs, color='black', linestyle='--', label='r = rs')
-ax2.set_xlabel("r (afstand tot massa M, in eenheden waar rs = 2)")
-ax2.set_ylabel(r"$\frac{d\tau}{dt}$")
-ax2.set_ylim(0, 1.05)
-ax2.grid(True)
-ax2.legend()
-
-# Caption
-plt.figtext(0.5, 0.01,
-            "De klok bij de gebeurtenishorizon stopt: dτ/dt → 0. Dit wordt veroorzaakt door maximale ætherinstroom (vg → c).",
-            wrap=True, horizontalalignment='center', fontsize=11)
-
-plt.tight_layout(rect=[0, 0.03, 1, 0.95])
-
-
-###################################################
-
 import matplotlib.pyplot as plt
-import numpy as np
 
 fig, ax = plt.subplots(figsize=(8, 8))
 ax.set_aspect('equal')
@@ -111,11 +50,6 @@ inset_ax.set_ylabel(r'$\frac{d\tau}{dt}$', fontsize=8)
 inset_ax.grid(True)
 inset_ax.set_xlim(rs, 10)
 inset_ax.set_ylim(0, 1)
-
-# # Caption
-# plt.figtext(0.5, 0.01,
-#             "Ætherstroming versnelt richting $r_s$, waar de waargenomen rotatie van de klok nul wordt: tijd bevriest.",
-#             wrap=True, horizontalalignment='center', fontsize=11)
 
 import os
 script_name = os.path.splitext(os.path.basename(__file__))[0]

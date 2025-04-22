@@ -1,5 +1,7 @@
-import matplotlib.pyplot as plt
+import matplotlib
+matplotlib.use('TkAgg')  # Ensure it uses Tkinter backend
 import numpy as np
+import matplotlib.pyplot as plt
 
 # Snelheden van 0 tot c
 c = 1  # eenheidslichtsnelheid

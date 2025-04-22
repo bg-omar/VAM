@@ -1,5 +1,6 @@
 import os
-
+import matplotlib
+matplotlib.use('TkAgg')  # Ensure it uses Tkinter backend
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec

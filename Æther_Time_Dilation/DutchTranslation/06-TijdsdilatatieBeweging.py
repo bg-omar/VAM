@@ -1,5 +1,7 @@
-import matplotlib.pyplot as plt
+import matplotlib
+matplotlib.use('TkAgg')  # Ensure it uses Tkinter backend
 import numpy as np
+import matplotlib.pyplot as plt
 
 fig, axes = plt.subplots(1, 2, figsize=(12, 6))
 titles = ['(1) Deeltje in rust in æther', '(2) Deeltje in beweging met snelheid v']
@@ -69,14 +71,6 @@ for i, ax in enumerate(axes):
                     arrowprops=dict(facecolor='red',  edgecolor='red', arrowstyle='->', linewidth=2))
 
     ax.text(0.75 if i == 0 else 0.22, 0.3, omega_labels[i], fontsize=14)
-
-
-
-
-# Caption
-# plt.figtext(0.5, 0.01,
-#             "Beweging door æther verlaagt de waargenomen hoeksnelheid $\omega_{\mathrm{obs}}$.",
-#             wrap=True, horizontalalignment='center', fontsize=11)
 
 plt.suptitle("Effect van ætherbeweging op rotatie van wervelkern", fontsize=14)
 plt.tight_layout()

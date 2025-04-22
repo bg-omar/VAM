@@ -1,5 +1,7 @@
-import matplotlib.pyplot as plt
+import matplotlib
+matplotlib.use('TkAgg')  # Ensure it uses Tkinter backend
 import numpy as np
+import matplotlib.pyplot as plt
 
 fig, ax = plt.subplots(figsize=(7, 7))
 ax.set_aspect('equal')
@@ -39,11 +41,6 @@ ax.text(vortex_x, vortex_y - 1, 'Wervelklok', ha='center', fontsize=11)
 # Æther speed label
 ax.text(0, -5.6, r'Æther instroomsnelheid: $v_g(r) = \sqrt{2GM / r}$',
         fontsize=12, ha='center', color='black')
-
-# # Caption
-# plt.figtext(0.5, 0.01,
-#             "Ætherinstroom richting massa M veroorzaakt gravitationele tijdsdilatatie bij de wervelklok.",
-#             wrap=True, horizontalalignment='center', fontsize=11)
 
 import os
 script_name = os.path.splitext(os.path.basename(__file__))[0]
