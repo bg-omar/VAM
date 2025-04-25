@@ -1,0 +1,564 @@
+%apsrev4-2.bst 2019-01-14 (MD) hand-edited version of apsrev4-1.bst
+%Control: key (0)
+%Control: author (72) initials jnrlst
+%Control: editor formatted (1) identically to author
+%Control: production of article title (-1) disabled
+%Control: page (0) single
+%Control: year (1) truncated
+%Control: production of eprint (0) enabled
+\begin{thebibliography}{71}%
+\makeatletter
+\providecommand \@ifxundefined [1]{%
+ \@ifx{#1\undefined}
+}%
+\providecommand \@ifnum [1]{%
+ \ifnum #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \@ifx [1]{%
+ \ifx #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \natexlab [1]{#1}%
+\providecommand \enquote  [1]{``#1''}%
+\providecommand \bibnamefont  [1]{#1}%
+\providecommand \bibfnamefont [1]{#1}%
+\providecommand \citenamefont [1]{#1}%
+\providecommand \href@noop [0]{\@secondoftwo}%
+\providecommand \href [0]{\begingroup \@sanitize@url \@href}%
+\providecommand \@href[1]{\@@startlink{#1}\@@href}%
+\providecommand \@@href[1]{\endgroup#1\@@endlink}%
+\providecommand \@sanitize@url [0]{\catcode `\\12\catcode `\$12\catcode
+  `\&12\catcode `\#12\catcode `\^12\catcode `\_12\catcode `\%12\relax}%
+\providecommand \@@startlink[1]{}%
+\providecommand \@@endlink[0]{}%
+\providecommand \url  [0]{\begingroup\@sanitize@url \@url }%
+\providecommand \@url [1]{\endgroup\@href {#1}{\urlprefix }}%
+\providecommand \urlprefix  [0]{URL }%
+\providecommand \Eprint [0]{\href }%
+\providecommand \doibase [0]{https://doi.org/}%
+\providecommand \selectlanguage [0]{\@gobble}%
+\providecommand \bibinfo  [0]{\@secondoftwo}%
+\providecommand \bibfield  [0]{\@secondoftwo}%
+\providecommand \translation [1]{[#1]}%
+\providecommand \BibitemOpen [0]{}%
+\providecommand \bibitemStop [0]{}%
+\providecommand \bibitemNoStop [0]{.\EOS\space}%
+\providecommand \EOS [0]{\spacefactor3000\relax}%
+\providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
+\let\auto@bib@innerbib\@empty
+%</preamble>
+\bibitem [{\citenamefont {Maxwell}(1861)}]{maxwell1861}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~C.}\ \bibnamefont
+  {Maxwell}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {Philosophical Magazine}\ }\textbf {\bibinfo {volume} {21}},\ \bibinfo
+  {pages} {161} (\bibinfo {year} {1861})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Helmholtz}(1858{\natexlab{a}})}]{helmholtz1858}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Helmholtz}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {Journal für die reine und angewandte Mathematik}\ }\textbf {\bibinfo
+  {volume} {55}},\ \bibinfo {pages} {25} (\bibinfo {year}
+  {1858}{\natexlab{a}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kelvin)}(1867{\natexlab{a}})}]{kelvin1867}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.~T.~L.}\
+  \bibnamefont {Kelvin)}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo
+  {journal} {Proceedings of the Royal Society of Edinburgh}\ }\textbf {\bibinfo
+  {volume} {6}},\ \bibinfo {pages} {94} (\bibinfo {year}
+  {1867}{\natexlab{a}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kleckner}\ and\ \citenamefont
+  {Irvine}(2013{\natexlab{a}})}]{kleckner2013}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Kleckner}}\ and\ \bibinfo {author} {\bibfnamefont {W.~T.~M.}\ \bibnamefont
+  {Irvine}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Nature
+  Physics}\ }\textbf {\bibinfo {volume} {9}},\ \bibinfo {pages} {253} (\bibinfo
+  {year} {2013}{\natexlab{a}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Vinen}(2002)}]{vinen2002}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.~F.}\ \bibnamefont
+  {Vinen}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {CERN}\
+  ,\ \bibinfo {pages} {1}} (\bibinfo {year} {2002})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Cahill}(2005)}]{cahill2005}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~T.}\ \bibnamefont
+  {Cahill}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {Progress in Physics}\ }\textbf {\bibinfo {volume} {3}},\ \bibinfo {pages}
+  {30} (\bibinfo {year} {2005})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Bělík}\ \emph {et~al.}(2023)\citenamefont
+  {Bělík}, \citenamefont {Dokken}, \citenamefont {Shvartsman}, \citenamefont
+  {Bibelnieks}, \citenamefont {Laskowski},\ and\ \citenamefont
+  {Lukanen}}]{belik2023}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Bělík}}, \bibinfo {author} {\bibfnamefont {D.~P.}\ \bibnamefont {Dokken}},
+  \bibinfo {author} {\bibfnamefont {M.~M.}\ \bibnamefont {Shvartsman}},
+  \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Bibelnieks}}, \bibinfo
+  {author} {\bibfnamefont {R.}~\bibnamefont {Laskowski}},\ and\ \bibinfo
+  {author} {\bibfnamefont {A.}~\bibnamefont {Lukanen}},\ }\href
+  {https://doi.org/10.4236/ojfd.2023.133012} {\bibfield  {journal} {\bibinfo
+  {journal} {Open Journal of Fluid Dynamics}\ }\textbf {\bibinfo {volume}
+  {13}},\ \bibinfo {pages} {144} (\bibinfo {year} {2023})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Young}(1801)}]{young1801}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+  {Young}},\ }\href {https://doi.org/10.1098/rstl.1802.0004} {\bibfield
+  {journal} {\bibinfo  {journal} {Philosophical Transactions of the Royal
+  Society of London}\ }\textbf {\bibinfo {volume} {92}},\ \bibinfo {pages} {12}
+  (\bibinfo {year} {1801})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Maxwell}(1865)}]{maxwell1865}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~C.}\ \bibnamefont
+  {Maxwell}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {Philosophical Transactions of the Royal Society of London}\ }\textbf
+  {\bibinfo {volume} {155}},\ \bibinfo {pages} {459} (\bibinfo {year}
+  {1865})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Michelson}\ and\ \citenamefont
+  {Morley}(1887)}]{michelson1887}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~A.}\ \bibnamefont
+  {Michelson}}\ and\ \bibinfo {author} {\bibfnamefont {E.~W.}\ \bibnamefont
+  {Morley}},\ }\href {https://doi.org/10.2475/ajs.s3-34.203.333} {\bibfield
+  {journal} {\bibinfo  {journal} {American Journal of Science}\ }\textbf
+  {\bibinfo {volume} {34}},\ \bibinfo {pages} {333} (\bibinfo {year}
+  {1887})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Einstein}(1905{\natexlab{a}})}]{einstein_1905_4}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Einstein}},\ }\href {https://doi.org/10.1002/andp.19053221004} {\bibfield
+  {journal} {\bibinfo  {journal} {Annalen der Physik}\ }\textbf {\bibinfo
+  {volume} {17}},\ \bibinfo {pages} {891} (\bibinfo {year}
+  {1905}{\natexlab{a}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kaluza}(1921)}]{Kaluza1921}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+  {Kaluza}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {Sitzungsberichte der Preußischen Akademie der Wissenschaften (Berlin)}\ ,\
+  \bibinfo {pages} {966}} (\bibinfo {year} {1921})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Klein}(1926)}]{Klein1926}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.}~\bibnamefont
+  {Klein}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {Zeitschrift für Physik}\ }\textbf {\bibinfo {volume} {37}},\ \bibinfo
+  {pages} {895} (\bibinfo {year} {1926})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kleckner}\ and\ \citenamefont
+  {Irvine}(2016{\natexlab{a}})}]{kleckner2016}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Kleckner}}\ and\ \bibinfo {author} {\bibfnamefont {W.~T.~M.}\ \bibnamefont
+  {Irvine}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Nature
+  Physics}\ }\textbf {\bibinfo {volume} {12}},\ \bibinfo {pages} {650}
+  (\bibinfo {year} {2016}{\natexlab{a}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Keller}\ and\ \citenamefont
+  {Cheviakov}(2024{\natexlab{a}})}]{keller2024}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~M.}\ \bibnamefont
+  {Keller}}\ and\ \bibinfo {author} {\bibfnamefont {A.~F.}\ \bibnamefont
+  {Cheviakov}},\ }\bibfield  {journal} {\bibinfo  {journal} {Fundamental Plasma
+  Physics}\ }\textbf {\bibinfo {volume} {11}},\ \href
+  {https://doi.org/10.1016/j.fpp.2024.100063} {10.1016/j.fpp.2024.100063}
+  (\bibinfo {year} {2024}{\natexlab{a}})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Polchinski}(1998)}]{Polchinski1998}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Polchinski}},\ }\href@noop {} {\emph {\bibinfo {title} {String Theory}}},\
+  Vol.~\bibinfo {volume} {1}\ (\bibinfo  {publisher} {Cambridge University
+  Press},\ \bibinfo {year} {1998})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Einstein}(1905{\natexlab{b}})}]{einstein1905}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Einstein}},\ }\href {https://doi.org/10.1002/andp.19053221004} {\bibfield
+  {journal} {\bibinfo  {journal} {Annalen der Physik}\ }\textbf {\bibinfo
+  {volume} {17}},\ \bibinfo {pages} {891} (\bibinfo {year}
+  {1905}{\natexlab{b}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Higgs}(1964)}]{higgs1964}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.~W.}\ \bibnamefont
+  {Higgs}},\ }\href {https://doi.org/10.1103/PhysRevLett.13.508} {\bibfield
+  {journal} {\bibinfo  {journal} {Physical Review Letters}\ }\textbf {\bibinfo
+  {volume} {13}},\ \bibinfo {pages} {508} (\bibinfo {year} {1964})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Hertz}(1893)}]{hertz1893}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Hertz}},\ }\href@noop {} {\emph {\bibinfo {title} {Electric Waves: Being
+  Researches on the Propagation of Electric Action with Finite Velocity Through
+  Space}}}\ (\bibinfo  {publisher} {Macmillan and Co.},\ \bibinfo {address}
+  {London},\ \bibinfo {year} {1893})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Lorentz}(1895)}]{lorentz1895}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.~A.}\ \bibnamefont
+  {Lorentz}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {Versl. Kon. Akad. Wetensch. Amsterdam}\ }\textbf {\bibinfo {volume} {4}},\
+  \bibinfo {pages} {176} (\bibinfo {year} {1895})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Weiss}\ \emph {et~al.}(2021)\citenamefont {Weiss},
+  \citenamefont {Scheeler}, \citenamefont {Kleckner},\ and\ \citenamefont
+  {Irvine}}]{weiss2021}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
+  {Weiss}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Scheeler}},
+  \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Kleckner}},\ and\
+  \bibinfo {author} {\bibfnamefont {W.~T.~M.}\ \bibnamefont {Irvine}},\ }\href
+  {https://doi.org/10.1038/s41467-021-25436-3} {\bibfield  {journal} {\bibinfo
+  {journal} {Nature Communications}\ }\textbf {\bibinfo {volume} {12}},\
+  \bibinfo {pages} {5210} (\bibinfo {year} {2021})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Donnelly}(1991{\natexlab{a}})}]{donnelly1991}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~J.}\ \bibnamefont
+  {Donnelly}},\ }\href@noop {} {\emph {\bibinfo {title} {Quantized Vortices in
+  Helium II}}}\ (\bibinfo  {publisher} {Cambridge University Press},\ \bibinfo
+  {year} {1991})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Einstein}(1915)}]{Einstein1915}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Einstein}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {Sitzungsberichte der Königlich Preußischen Akademie der Wissenschaften
+  (Berlin)}\ ,\ \bibinfo {pages} {844}} (\bibinfo {year} {1915})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont
+  {Donnelly}(1991{\natexlab{b}})}]{donnelly_quantized_1991}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~J.}\ \bibnamefont
+  {Donnelly}},\ }\href {https://doi.org/10.1017/CBO9780511564175} {\emph
+  {\bibinfo {title} {Quantized Vortices in Helium II}}}\ (\bibinfo  {publisher}
+  {Cambridge University Press},\ \bibinfo {year} {1991})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Tilley}\ and\ \citenamefont
+  {Tilley}(1990)}]{tilley_superfluidity_1990}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.~R.}\ \bibnamefont
+  {Tilley}}\ and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Tilley}},\ }\href@noop {} {\emph {\bibinfo {title} {Superfluidity and
+  Superconductivity}}},\ \bibinfo {edition} {3rd}\ ed.\ (\bibinfo  {publisher}
+  {Institute of Physics Publishing},\ \bibinfo {year} {1990})\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Podkletnov}\ and\ \citenamefont
+  {Nieminen}(1992)}]{Podkletnov1992}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Podkletnov}}\ and\ \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Nieminen}},\ }\href {https://doi.org/10.1016/0921-4534(92)90397-H}
+  {\bibfield  {journal} {\bibinfo  {journal} {Physica C: Superconductivity}\
+  }\textbf {\bibinfo {volume} {203}},\ \bibinfo {pages} {441} (\bibinfo {year}
+  {1992})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Tajmar}\ and\ \citenamefont
+  {de~Matos}(2006)}]{Tajmar2006}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Tajmar}}\ and\ \bibinfo {author} {\bibfnamefont {C.~J.}\ \bibnamefont
+  {de~Matos}},\ }in\ \href {https://doi.org/10.1063/1.2404563} {\emph {\bibinfo
+  {booktitle} {AIP Conference Proceedings}}},\ Vol.\ \bibinfo {volume} {880}\
+  (\bibinfo {year} {2006})\ pp.\ \bibinfo {pages} {1073--1082}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Scalo}\ \emph {et~al.}(2017)\citenamefont {Scalo},
+  \citenamefont {Yu},\ and\ \citenamefont {Chapelier}}]{scalo2017}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {Scalo}}, \bibinfo {author} {\bibfnamefont {Z.}~\bibnamefont {Yu}},\ and\
+  \bibinfo {author} {\bibfnamefont {J.-B.}\ \bibnamefont {Chapelier}},\ }\href
+  {https://doi.org/10.1017/jfm.2017.583} {\bibfield  {journal} {\bibinfo
+  {journal} {Journal of Fluid Mechanics}\ }\textbf {\bibinfo {volume} {835}},\
+  \bibinfo {pages} {45} (\bibinfo {year} {2017})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Ricca}(1998)}]{ricca1998}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~L.}\ \bibnamefont
+  {Ricca}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Banach
+  Center Publications}\ }\textbf {\bibinfo {volume} {42}},\ \bibinfo {pages}
+  {321} (\bibinfo {year} {1998})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Meunier}\ \emph {et~al.}(2005)\citenamefont
+  {Meunier}, \citenamefont {Leweke},\ and\ \citenamefont
+  {Williamson}}]{meunier2005}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Meunier}}, \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Leweke}},\
+  and\ \bibinfo {author} {\bibfnamefont {C.~H.~K.}\ \bibnamefont
+  {Williamson}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {Journal of Fluid Mechanics}\ }\textbf {\bibinfo {volume} {52}},\ \bibinfo
+  {pages} {1223} (\bibinfo {year} {2005})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Orlandi}\ and\ \citenamefont
+  {Verzicco}(2021)}]{orlandi2021}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Orlandi}}\ and\ \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Verzicco}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {Physics of Fluids}\ } (\bibinfo {year} {2021})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Clausius}(1865)}]{clausius1865}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Clausius}},\ }\href@noop {} {\emph {\bibinfo {title} {The Mechanical Theory
+  of Heat}}}\ (\bibinfo  {publisher} {John van Voorst},\ \bibinfo {year}
+  {1865})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Verlinde}(2010)}]{verlinde2010}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Verlinde}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {Journal of High Energy Physics}\ }\textbf {\bibinfo {volume} {2011}},\
+  \bibinfo {pages} {29} (\bibinfo {year} {2010})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Raymer}\ and\ \citenamefont
+  {Smith}(2007)}]{raymer2007}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~G.}\ \bibnamefont
+  {Raymer}}\ and\ \bibinfo {author} {\bibfnamefont {B.~J.}\ \bibnamefont
+  {Smith}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {SPIE
+  Reviews}\ }\textbf {\bibinfo {volume} {6937}},\ \bibinfo {pages} {69370J}
+  (\bibinfo {year} {2007})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Lamb}(1945{\natexlab{a}})}]{lamb_hydrodynamics}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Lamb}},\ }\href@noop {} {\emph {\bibinfo {title} {Hydrodynamics}}}\
+  (\bibinfo  {publisher} {Cambridge University Press},\ \bibinfo {year}
+  {1945})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Feynman}(1985)}]{feynman_qed}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Feynman}},\ }\href@noop {} {\emph {\bibinfo {title} {QED: The Strange Theory
+  of Light and Matter}}}\ (\bibinfo  {publisher} {Princeton University Press},\
+  \bibinfo {year} {1985})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Bohr}(1913)}]{bohr_atom}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Bohr}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {Philosophical Magazine}\ }\textbf {\bibinfo {volume} {26}},\ \bibinfo
+  {pages} {1} (\bibinfo {year} {1913})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Bethe}(1957)}]{bethe_qmech}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Bethe}},\ }\href@noop {} {\emph {\bibinfo {title} {Quantum Mechanics of One-
+  and Two-Electron Atoms}}}\ (\bibinfo  {publisher} {Springer},\ \bibinfo
+  {year} {1957})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Onsager}(1949)}]{onsager_superfluid}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
+  {Onsager}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Il
+  Nuovo Cimento}\ }\textbf {\bibinfo {volume} {6}},\ \bibinfo {pages} {279}
+  (\bibinfo {year} {1949})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Feynman}(1955)}]{feynman_superfluid}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Feynman}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {Reviews of Modern Physics}\ }\textbf {\bibinfo {volume} {27}},\ \bibinfo
+  {pages} {205} (\bibinfo {year} {1955})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Moffatt}(2014)}]{moffatt_helicity}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Moffatt}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {PNAS}\ }\textbf {\bibinfo {volume} {111}},\ \bibinfo {pages} {3663}
+  (\bibinfo {year} {2014})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kleckner}\ and\ \citenamefont
+  {Irvine}(2013{\natexlab{b}})}]{knotted_vortices}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Kleckner}}\ and\ \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont
+  {Irvine}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Nature
+  Physics}\ }\textbf {\bibinfo {volume} {9}},\ \bibinfo {pages} {253} (\bibinfo
+  {year} {2013}{\natexlab{b}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Thomson}(1867{\natexlab{a}})}]{thomson_knots}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.}~\bibnamefont
+  {Thomson}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {Philosophical Magazine}\ }\textbf {\bibinfo {volume} {34}},\ \bibinfo
+  {pages} {15} (\bibinfo {year} {1867}{\natexlab{a}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Dirac}(1930)}]{dirac1930quantum}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.~A.~M.}\
+  \bibnamefont {Dirac}},\ }\href@noop {} {\emph {\bibinfo {title} {The
+  Principles of Quantum Mechanics}}}\ (\bibinfo  {publisher} {Oxford University
+  Press},\ \bibinfo {year} {1930})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Vinen}(2024)}]{vinen2024}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.~F.}\ \bibnamefont
+  {Vinen}},\ }\bibfield  {journal} {\bibinfo  {journal} {Journal of Physics and
+  Astronomy}\ }\href {https://doi.org/10.1017/jfm.2021.943}
+  {10.1017/jfm.2021.943} (\bibinfo {year} {2024})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Barceló}\ \emph {et~al.}(2005)\citenamefont
+  {Barceló}, \citenamefont {Liberati},\ and\ \citenamefont
+  {Visser}}]{barcelo_superfluid}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {Barceló}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Liberati}},\
+  and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Visser}},\ }\href
+  {https://doi.org/10.12942/lrr-2005-12} {\bibfield  {journal} {\bibinfo
+  {journal} {Living Reviews in Relativity}\ }\textbf {\bibinfo {volume} {8}},\
+  \bibinfo {pages} {12} (\bibinfo {year} {2005})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Schiller}(2006{\natexlab{a}})}]{schiller_max_force}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {Schiller}},\ }\href {https://doi.org/10.1007/s10773-005-4830-7} {\bibfield
+  {journal} {\bibinfo  {journal} {International Journal of Theoretical
+  Physics}\ }\textbf {\bibinfo {volume} {45}},\ \bibinfo {pages} {221}
+  (\bibinfo {year} {2006}{\natexlab{a}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kelvin)}(1867{\natexlab{b}})}]{thomson_vortex}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.~T.~L.}\
+  \bibnamefont {Kelvin)}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo
+  {journal} {Philosophical Magazine}\ }\textbf {\bibinfo {volume} {34}},\
+  \bibinfo {pages} {15} (\bibinfo {year} {1867}{\natexlab{b}})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Sato}\ and\ \citenamefont
+  {Packard}(2012)}]{superfluid_he_interferometers}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
+  {Sato}}\ and\ \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Packard}},\
+  }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Physics Today}\
+  }\textbf {\bibinfo {volume} {65}},\ \bibinfo {pages} {31} (\bibinfo {year}
+  {2012})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gallagher}(1994)}]{initial_vortex_magnetometers}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.~J.}\ \bibnamefont
+  {Gallagher}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {Physical Review B}\ }\textbf {\bibinfo {volume} {50}},\ \bibinfo {pages}
+  {13664} (\bibinfo {year} {1994})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Vettoliere}\ and\ \citenamefont
+  {Granata}(2024)}]{superconducting_flux_focusing}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Vettoliere}}\ and\ \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {Granata}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {Sensors}\ }\textbf {\bibinfo {volume} {24}},\ \bibinfo {pages} {3998}
+  (\bibinfo {year} {2024})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Keller}\ and\ \citenamefont
+  {Cheviakov}(2024{\natexlab{b}})}]{plasma_vortex_flows}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~M.}\ \bibnamefont
+  {Keller}}\ and\ \bibinfo {author} {\bibfnamefont {A.~F.}\ \bibnamefont
+  {Cheviakov}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {Fundamental Plasma Physics}\ }\textbf {\bibinfo {volume} {11}},\ \bibinfo
+  {pages} {100063} (\bibinfo {year} {2024}{\natexlab{b}})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Mizushima}\ and\ \citenamefont
+  {Sato}(2023)}]{higgs_waves_vortex}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+  {Mizushima}}\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Sato}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Physical
+  Review Research}\ }\textbf {\bibinfo {volume} {5}},\ \bibinfo {pages}
+  {L042004} (\bibinfo {year} {2023})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kleckner}\ and\ \citenamefont
+  {Irvine}(2016{\natexlab{b}})}]{collected_helicity_papers}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Kleckner}}\ and\ \bibinfo {author} {\bibfnamefont {W.~T.~M.}\ \bibnamefont
+  {Irvine}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Nature
+  Physics}\ }\textbf {\bibinfo {volume} {12}},\ \bibinfo {pages} {650}
+  (\bibinfo {year} {2016}{\natexlab{b}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont
+  {Thomson}(1867{\natexlab{b}})}]{kelvin1867_vortexAtoms}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.~L.~K.}\
+  \bibnamefont {Thomson}},\ }\href {https://doi.org/10.1017/S0370164600042267}
+  {\bibfield  {journal} {\bibinfo  {journal} {Proceedings of the Royal Society
+  of Edinburgh}\ }\textbf {\bibinfo {volume} {6}},\ \bibinfo {pages} {94}
+  (\bibinfo {year} {1867}{\natexlab{b}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont
+  {Helmholtz}(1858{\natexlab{b}})}]{helmholtz1858integrals}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Helmholtz}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {Journal of Pure and Applied Mathematics}\ }\textbf {\bibinfo {volume}
+  {55}},\ \bibinfo {pages} {25} (\bibinfo {year}
+  {1858}{\natexlab{b}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kelvin}(1867)}]{kelvin1867vortex}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
+  {Kelvin}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {Philosophical Magazine}\ }\textbf {\bibinfo {volume} {34}},\ \bibinfo
+  {pages} {15} (\bibinfo {year} {1867})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Lamb}(1945{\natexlab{b}})}]{lamb1945hydrodynamics}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Lamb}},\ }\href@noop {} {\emph {\bibinfo {title} {Hydrodynamics}}},\
+  \bibinfo {edition} {6th}\ ed.\ (\bibinfo  {publisher} {Cambridge University
+  Press},\ \bibinfo {year} {1945})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Jackson}(1999)}]{jackson1999classical}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~D.}\ \bibnamefont
+  {Jackson}},\ }\href@noop {} {\emph {\bibinfo {title} {Classical
+  Electrodynamics}}},\ \bibinfo {edition} {3rd}\ ed.\ (\bibinfo  {publisher}
+  {Wiley},\ \bibinfo {year} {1999})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Witten}(1989)}]{witten1989quantum}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Witten}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {Communications in Mathematical Physics}\ }\textbf {\bibinfo {volume}
+  {121}},\ \bibinfo {pages} {351} (\bibinfo {year} {1989})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Feynman}(1951)}]{feynman1951quantum}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Feynman}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {Physical Review}\ }\textbf {\bibinfo {volume} {84}},\ \bibinfo {pages} {108}
+  (\bibinfo {year} {1951})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Batchelor}(1967)}]{batchelor1967introduction}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
+  {Batchelor}},\ }\href@noop {} {\emph {\bibinfo {title} {An Introduction to
+  Fluid Dynamics}}}\ (\bibinfo  {publisher} {Cambridge University Press},\
+  \bibinfo {year} {1967})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Saffman}(1992)}]{saffman1992vortex}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Saffman}},\ }\href@noop {} {\emph {\bibinfo {title} {Vortex Dynamics}}}\
+  (\bibinfo  {publisher} {Cambridge University Press},\ \bibinfo {year}
+  {1992})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont
+  {Donnelly}(1991{\natexlab{c}})}]{donnelly1991quantized}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Donnelly}},\ }\href@noop {} {\emph {\bibinfo {title} {Quantized Vortices in
+  Helium II}}}\ (\bibinfo  {publisher} {Cambridge University Press},\ \bibinfo
+  {year} {1991})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Goulding}(2010)}]{goulding_knot_2010}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Goulding}},\ }\href {https://example.com/goulding_knot_theory} {\emph
+  {\bibinfo {title} {Knot Theory: The Yang-Baxter Equation, Quantum Groups and
+  Computation of the Homfly Polynomial}}}\ (\bibinfo  {publisher} {University
+  of Cambridge},\ \bibinfo {year} {2010})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Iskandarani}(2025)}]{iskandarani_vortex_2025}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.}~\bibnamefont
+  {Iskandarani}},\ }\href {https://example.com/vortex_aether_model} {\bibfield
+  {journal} {\bibinfo  {journal} {Vortex Dynamics Journal}\ }\textbf {\bibinfo
+  {volume} {32}},\ \bibinfo {pages} {45} (\bibinfo {year} {2025})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Yang}\ and\ \citenamefont
+  {Baxter}(1982)}]{yang_baxter_eq}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~N.}\ \bibnamefont
+  {Yang}}\ and\ \bibinfo {author} {\bibfnamefont {R.~J.}\ \bibnamefont
+  {Baxter}},\ }\href {https://doi.org/10.1063/1.525236} {\bibfield  {journal}
+  {\bibinfo  {journal} {Journal of Mathematical Physics}\ }\textbf {\bibinfo
+  {volume} {23}},\ \bibinfo {pages} {718} (\bibinfo {year} {1982})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Majid}(1995)}]{sl2q_representations}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Majid}},\ }\href {https://example.com/foundations_qg} {\emph {\bibinfo
+  {title} {Foundations of Quantum Group Theory}}}\ (\bibinfo  {publisher}
+  {Cambridge University Press},\ \bibinfo {year} {1995})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Jimbo}(1985)}]{sl2q_quantization}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Jimbo}},\ }\href {https://doi.org/10.1007/BF00400222} {\bibfield  {journal}
+  {\bibinfo  {journal} {Letters in Mathematical Physics}\ }\textbf {\bibinfo
+  {volume} {10}},\ \bibinfo {pages} {63} (\bibinfo {year} {1985})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Schiller}(2006{\natexlab{b}})}]{Schiller2006}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {Schiller}},\ }\href {https://doi.org/10.1007/s10773-005-4835-2} {\bibfield
+  {journal} {\bibinfo  {journal} {International Journal of Theoretical
+  Physics}\ }\textbf {\bibinfo {volume} {45}},\ \bibinfo {pages} {221–233}
+  (\bibinfo {year} {2006}{\natexlab{b}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gibbons}(2002)}]{Gibbons2002}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.~W.}\ \bibnamefont
+  {Gibbons}},\ }\href {https://doi.org/10.1023/A:1022370717626} {\bibfield
+  {journal} {\bibinfo  {journal} {Foundations of Physics}\ }\textbf {\bibinfo
+  {volume} {32}},\ \bibinfo {pages} {1891} (\bibinfo {year}
+  {2002})}\BibitemShut {NoStop}%
+\end{thebibliography}%

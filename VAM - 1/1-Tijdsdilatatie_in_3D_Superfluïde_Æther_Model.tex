@@ -1,0 +1,80 @@
+\documentclass[a4paper,12pt]{revtex4}
+\usepackage[paperwidth=210mm, paperheight=297mm, margin=2.5cm]{geometry}
+\usepackage[none]{hyphenat}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage[font=footnotesize]{caption}
+\usetikzlibrary{arrows.meta}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta}
+
+\sloppy
+\begin{document}
+\author{Omar Iskandarani}
+\title{Tijdsdilatatie in een 3D Superfluïde Æther Model, Gebaseerd op Wervel kernrotatie en ætherische Stroom}
+\date{\today}
+\affiliation{Onafhankelijk onderzoeker, Groningen, Nederland}
+\thanks{ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961}}
+\email{info@omariskandarani.com}
+
+\maketitle
+
+\section*{Abstract}
+In dit artikel leiden we tijdsdilatatievergelijkingen af binnen een 3D Euclidisch superfluïde æthermodel. In het Vortex-Æther Model (VAM)
+beschouwen we een \textit{wervel} (vortex) als een topologisch behouden draaiveld in een superfluïde medium. In dit raamwerk worden fundamentele deeltjes gemodelleerd als wervelknopen en wordt tijd gedefinieerd door de intrinsieke hoekrotatie van hun wervelkernen. Het doel is om het ruimtetijdkrommingsconcept van de algemene relativiteitstheorie (GR) te vervangen door gekwantiseerde hoeksnelheidsvelden in een vlakke-ruimte-æther, terwijl alle experimentele voorspellingen van tijdsdilatatie onder GR en speciale relativiteitstheorie (SR) worden gereproduceerd. We bieden afleidingen van eerste principes, gegrond in vloeistofdynamica en wervelmechanica, en drukken de tijdsdilatatiefactoren uit in termen van fundamentele constanten zoals de Planck-tijd en maximale kracht. De verschillende bewegingsmodi van een vortex worden schematisch getoond in Figuur~\ref{fig:rotatie-translatie}.
+
+\begin{figure}[H]
+        \centering
+        \begin{tikzpicture}[scale=1.1, >=Stealth, every node/.style={font=\small}]
+            % First: Pure Rotation
+                \node at (-3,2.5) {Rotatie};
+                \draw[thick] (-3,1) circle (1);
+                \draw[->, red, thick] (-4,1) -- (-4,2.2) node[left] {$R\omega = v_t$};
+                \draw[->, red, thick] (-3,2) -- (-1.8,2) node[right] {$v_t$};
+                \draw[->, red, thick] (-3,0) -- (-4.2,0) node[left] {$v_t$};
+                \draw[->, red, thick] (-2,1) -- (-2,-0.2) node[below] {$v_t$};
+        
+            % Second: Pure Translation
+                \node at (1,2.5) {Translatie};
+                \draw[thick] (1,1) circle (1);
+                \draw[->, blue, thick] (0,1) -- (1.2,1);
+                \draw[->, blue, thick] (2,1) -- (3.2,1) node[right] {$v_{cm}$};
+                \draw[->, blue, thick] (1,0) -- (2.2,0);
+                \draw[->, blue, thick] (1,2) -- (2.2,2);
+        
+            % Third: Combined Motion
+                \node at (5.5,2.5) {Combinatie};
+                \draw[thick] (5.5,1) circle (1);
+                \draw[->, thick, purple] (5.5,2) -- (7.2,2) node[right] {$2v_{cm}$};
+                \draw[->, thick, purple] (5.5,1) -- (6.7,1) node[right] {$v_{cm}$};
+                \filldraw[purple] (5.5,0) circle (2pt);
+                \node at (5.3,-0.3) {$0$};
+        \end{tikzpicture}
+        \caption{Schematische voorstelling van drie bewegingsmodi van een vortex in het æthermodel. \textbf{(Links)} Pure rotatie met lokale tangentiële snelheid $v_t = R\omega$. \textbf{(Midden)} Translatie met snelheid $v_{\text{cm}}$ zonder interne rotatie. \textbf{(Rechts)} Combinatie van beide leidt tot een relatieve snelheid die verschilt over de vortexomtrek: $v_{\text{rel}} = v_t + v_{\text{cm}}$.   }
+        \label{fig:rotatie-translatie}
+\end{figure}
+
+\input{Tijdsdilatatie/1_introductie}
+\input{Tijdsdilatatie/2_supervloeistof_æther_geraamte}
+\input{Tijdsdilatatie/3_vortex_klokken}
+\input{Tijdsdilatatie/4_speciale_relativiteit}
+\input{Tijdsdilatatie/5_gravitationele_tijd_dilatatie}
+\input{Tijdsdilatatie/6_gecombineerde_effecten}
+\input{Tijdsdilatatie/7_conclusie}
+
+\bibliographystyle{unsrt}
+\bibliography{VAM-1}
+
+\appendix \label{sec:Part-6}
+\input{Tijdsdilatatie/appendix_A}\label{appendix:KlokkenInWervelstructuren}
+\input{Tijdsdilatatie/appendix_B}\label{appendix:AfwijkendeVoorspellingen}
+
+\end{document}
