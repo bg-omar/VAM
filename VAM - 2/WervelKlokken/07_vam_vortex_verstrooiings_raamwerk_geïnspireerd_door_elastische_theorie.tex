@@ -1,19 +1,19 @@
 %! Auteur = dhr
 %! Datum = 29-3-2025
 
-\section{VAM Vortexverstrooiingsraamwerk (geïnspireerd door elastische theorie)}
+\section{VAM Wervelverstrooiingsraamwerk (geïnspireerd door elastische theorie)}
 
 \subsection{Bepalende vergelijkingen van VAM Vorticiteitsdynamiek}
 
 \subsubsection*{Vorticiteitstransportvergelijking (gelineariseerde vorm)}
 
-In het Vortex-Æthermodel (VAM) wordt de dynamiek van het vorticiteitsveld \(\vec{\omega} = \nabla \times \vec{v}\) bepaald door de Euler-vergelijking en de bijbehorende vorticiteitsvorm:
+In het Vortex Æther Model (VAM) wordt de dynamiek van het vorticiteitsveld \(\vec{\omega} = \nabla \times \vec{v}\) bepaald door de Euler-vergelijking en de bijbehorende vorticiteitsvorm:
 
 \[
 \frac{\partial \omega_i}{\partial t} + v_j \partial_j \omega_i = \omega_j \partial_j v_i
 \]
 
-Deze niet-lineaire structuur impliceert vortexvervorming door uitrekking en advectie. Voor kleine verstoringen \(\delta\omega\) nabij een achtergrondwervelknoopveld \(\omega^{(0)}\) geeft linearisatie:
+Deze niet-lineaire structuur impliceert wervelvervorming door uitrekking en advectie. Voor kleine verstoringen \(\delta\omega\) nabij een achtergrondwervelknoopveld \(\omega^{(0)}\) geeft linearisatie:
 
 \[
 \frac{\partial (\delta \omega_i)}{\partial t} + v_j^{(0)} \partial_j (\delta \omega_i) \approx \omega_j^{(0)} \partial_j (\delta v_i)
@@ -22,7 +22,7 @@ Deze niet-lineaire structuur impliceert vortexvervorming door uitrekking en adve
 Definieer de lineaire responsoperator van VAM \(\mathcal{L}_{ij}\):
 
 \[
-\mathcal{L}_{ij} \, \delta v_j(\vec{r}) = \delta F_i^{\text{vortex}}(\vec{r})
+\mathcal{L}_{ij} \, \delta v_j(\vec{r}) = \delta F_i^{\text{wervel}}(\vec{r})
 \]
 
 \subsubsection*{Vorticiteit Groene Tensor Vergelijking}
@@ -38,7 +38,7 @@ v_i(\vec{r}) = \int \mathcal{G}_{ik}(\vec{r}, \vec{r}') \, F_k^{\text{wervel}}(\
 \]
 
 \subsection{Wisselwerking werveldraad}
-Interacties ontstaan door uitwisseling van wervelkracht of Herverbindingen tussen vortexfilamenten:
+Interacties ontstaan door uitwisseling van wervelkracht of Herverbindingen tussen wervelfilamenten:
 \begin{itemize}
 \item Aantrekkelijk als draden de circulatie versterken (parallel)
 \item Afstotend als draden elkaar opheffen (antiparallel)
@@ -51,7 +51,7 @@ Waar \(\kappa_i\) de circulaties van filamenten zijn en \(\vec{r}_{12}\) de vect
 
 \subsection{Thermodynamisch & kwantumgedrag van vorticiteitsfluctuaties}
 \begin{itemize}
-\item Entropie \(\leftrightarrow\) volume van vortexuitbreiding of knoopvervorming
+\item Entropie \(\leftrightarrow\) volume van werveluitbreiding of knoopvervorming
 \item Kwantumovergangen \(\leftrightarrow\) topologische herverbindingsgebeurtenissen
 \item Nulpuntbeweging \(\leftrightarrow\) achtergrondkwantumturbulentie van de Æther:
 \end{itemize}
@@ -60,7 +60,7 @@ Waar \(\kappa_i\) de circulaties van filamenten zijn en \(\vec{r}_{12}\) de vect
 \begin{equation}
 \langle \omega^2 \rangle \sim \frac{\hbar}{\rho_\text{æ} \xi^4}\label{eq:quantum_vorticity_background}
 \end{equation}
-Waarbij \(\xi\) de coherentielengte tussen vortexfilamenten is.
+Waarbij \(\xi\) de coherentielengte tussen wervelfilamenten is.
 
 \subsection{VAM-verstrooiingstheorie voor wervelknopen}
 
@@ -85,7 +85,7 @@ Hier vertegenwoordigt \(\delta \mathcal{V}_{jk}\) een vorticiteitspolarisatieten
 \subsubsection*{Æther Vorticiteit Krachtdichtheid}
 
 \[
-f_i^{\text{vortex}} = \partial_j \mathcal{T}_{ij}
+f_i^{\text{wervel}} = \partial_j \mathcal{T}_{ij}
 \]
 
 \subsubsection*{Vorticiteit Energieflux}
@@ -115,7 +115,7 @@ In de Born-benadering is de verandering in eigentijd nabij een knoop onder exter
 \delta \Omega_k \sim \int \chi(\vec{r}_k - \vec{r}') \cdot \vec{\omega}^{(0)}(\vec{r}') \, d^3r'\\
 \end{gather*}
 
-Hier is \(\chi\) de topologische vortexgevoeligheidskern.
+Hier is \(\chi\) de topologische wervelgevoeligheidskern.
 
 \subsection{Samenvatting van VAM-geïnspireerde verstrooiingsconstructies}
 
@@ -126,7 +126,7 @@ Hier is \(\chi\) de topologische vortexgevoeligheidskern.
 \textbf{Concept} & \textbf{Elastische theorie} & \textbf{VAM-analoog} \\
 \midrule
 Mediumeigenschap & \( c_{ijkl} \) & \( \rho_{\text{\ae}},\, \Omega_k,\, \kappa \) \\
-Golfveld & \( u_i \) (verplaatsing) & \( v_i \) (ethersnelheid) \\
+Golfveld & \( u_i \) (verplaatsing) & \( v_i \) (æthersnelheid) \\
 Bron & \( f_i \) (lichaamskracht) & \( F_i^{\text{vortex}} \) (vorticiteitsforcering) \\
 Groene functie & \( G_{ij}(\vec{r}, \vec{r}') \) & \( \mathcal{G}_{ij}(\vec{r}, \vec{r}') \) \\
 Spanningstensor & \( \tau_{ij} \) & \( \mathcal{T}_{ij} \) \\
@@ -134,8 +134,8 @@ Energieflux & \( J_{P,i} = -\tau_{ij} \dot{u}_j \) & \( S_{\omega,i} = -\mathcal
 Tijddilatatiemechanisme & \( g_{\mu\nu} \) (GR metrisch) & \( \Omega_k,\, \kappa,\, \langle \omega^2 \rangle \) \\
 \bottomrule
 \end{tabular}
-\caption{Conceptuele overeenkomst tussen klassieke elasticiteit en Vortex-Æther Model (VAM).}
+\caption{Conceptuele overeenkomst tussen klassieke elasticiteit en Vortex Æther Model (VAM).}
 \label{tab:elastic-vam-analogy}
 \end{table}
 
-Dit verstrooiingsraamwerk generaliseert klassieke elastische analogen naar een topologisch en energetisch gemotiveerd Ætherisch formalisme. Het maakt de berekening mogelijk van veldmodificaties, tijddilatatie-effecten en energieflux als gevolg van stabiele, interacterende vortexknopen in het Vortex-Æther Model (VAM).
+Dit verstrooiingsraamwerk generaliseert klassieke elastische analogen naar een topologisch en energetisch gemotiveerd Ætherisch formalisme. Het maakt de berekening mogelijk van veldmodificaties, tijddilatatie-effecten en energieflux als gevolg van stabiele, interacterende vortexknopen in het Vortex Æther Model (VAM).
