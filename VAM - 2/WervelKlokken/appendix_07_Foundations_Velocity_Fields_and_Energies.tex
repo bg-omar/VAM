@@ -1,0 +1,113 @@
+\section{Grondslagen van snelheidsvelden en energieën in een vortexsysteem.}
+
+\subsection{Inleiding}
+Vortexdynamica is een kerncomponent van veel vloeistof- en plasmasystemen, waaronder
+tornado-achtige stromingen, geknoopte wervels in klassieke of superfluïde turbulentie en diverse
+complexe topologische vloeistofsystemen. Een beter begrip van de energiebalansen
+die met deze stromingen gepaard gaan, kan licht werpen op processen zoals vortexstabiliteit, herverbinding
+en globale stromingsorganisatie. We beginnen met een motivatie voor hoe snelheidsvelden kunnen worden
+ontbonden om de totale energie (d.w.z. zelf- plus kruisenergie) vast te leggen, en hoe
+deze aanpak helpt bij het volgen van stromingen in zowel 2D als 3D.
+
+\subsection{Fundamenten: Snelheidsvelden en totale (zelf- + dwars-)energie}
+\label{sec:foundations}
+In een onsamendrukbare vloeistof wordt het snelheidsveld $\mathbf{u}(\mathbf{x}, t)$ doorgaans
+bepaald door de Navier-Stokes- of Euler-vergelijkingen. Voor niet-viskeuze analyses luiden de Euler-vergelijkingen voor onsamendrukbare stroming als volgt:
+\begin{equation}
+\frac{\partial \mathbf{u}}{\partial t} + (\mathbf{u} \cdot \nabla)\mathbf{u} = -\frac{1}{\rho}\nabla p,
+\quad \nabla \cdot \mathbf{u} = 0.\label{eq:appendix:Euler}
+\end{equation}
+We beschouwen ook de vorticiteit $\boldsymbol{\omega} = \nabla \times \mathbf{u}$,
+die kan worden gebruikt om vortexstructuren te karakteriseren.
+
+Om de totale kinetische energie te begrijpen, kunnen we deze als volgt opsplitsen:
+\begin{equation}
+E_{\text{totaal}} \;=\; E_{\text{zelf}} \;+\; E_{\text{kruis}}.\label{eq:appendix:totale-energie}
+\end{equation}
+Hier is $E_{\text{zelf}}$ het deel van de energie dat elk wervel- of deelstroomelement onafhankelijk bijdraagt ​​(bijvoorbeeld door lokale wervelbewegingen), terwijl
+$E_{\text{kruis}}$ de bijdragen codeert die voortkomen uit de interactie van verschillende
+wervelelementen. In een multi-vortexscenario helpt een dergelijke decompositie om de
+directe interactie tussen twee (of meer) wervelfilamenten of -lagen te isoleren.
+
+\subsection{Overwegingen met betrekking tot impuls en eigen energie}
+\label{sec:impuls}
+Een startpunt is om te onthouden dat voor een enkele circulatiewervel $\Gamma$, met een
+azimutaal symmetrische kern, de geïnduceerde snelheid soms wordt benaderd door
+klassieke resultaten zoals
+\begin{equation}
+V \;=\; \frac{\Gamma}{4 \pi R}
+\bigl(\ln \tfrac{8 R}{a} - \beta \bigr),\label{eq:appendix:velocity}
+\end{equation}
+waarbij $R$ de straal van de hoofdwervellus is, $a \ll R$ een maat is voor de kerndikte,
+en $\beta$ afhangt van de details van het kernmodel \cite{Saffman1992}. De
+\emph{zelfenergie} die aan die vortex is gekoppeld, $E_{\text{self}}$, kan in een
+vergelijkbare vorm worden gegoten die afhankelijk is van $\ln(R/a)$, wat illustreert hoe de energieën van dunnekernvortexen
+schalen met de geometrie.
+
+In meer algemene vloeistof- of vortexroostermodellen kunnen we $E_{\text{self}}$ volgen als de
+som van de individuele kernenergieën. Bovendien wijzigt de aanwezigheid van meerdere filamenten
+de totale energie door de kruistermen van de snelheidsvelden (de kruisenergie). Deze
+kruisenergie is vaak de drijvende kracht achter belangrijke fenomenen zoals het samensmelten van vortexen of de `terugslag'-effecten
+in golf-vortexinteracties.
+
+\subsection{Definiëren en volgen van kruisenergie}
+\label{sec:cross}
+Wanneer meerdere wervelingen (of gedeeltelijke snelheidsverdelingen) naast elkaar bestaan, kan het totale snelheidsveld $\mathbf{u}$ worden gesuperponeerd:
+\begin{equation}
+\mathbf{u} \;=\; \mathbf{u}_1 \;+\;\mathbf{u}_2,\label{eq:appendix:superpose}
+\end{equation}
+waarbij $\mathbf{u}_1$ en $\mathbf{u}_2$ afkomstig zijn van verschillende subsystemen. In dat
+scenario is de kinetische energie voor een vloeistofvolume $V$
+\begin{align}
+E_{\text{total}} &= \frac{\rho}{2} \int_V \mathbf{u}^2 \,dV
+= \frac{\rho}{2} \int_V \bigl(\mathbf{u}_1 + \mathbf{u}_2 \bigr)^2\, dV \\
+&= \frac{\rho}{2} \int_V \mathbf{u}_1^2 \,dV \;+\;\frac{\rho}{2} \int_V \mathbf{u}_2^2 \,dV
+\;+\;\rho \int_V \mathbf{u}_1 \cdot \mathbf{u}_2 \, dV,
+\end{align}
+onthulling van een interactie of \emph{kruisenergie} term
+\begin{equation}
+E_{\text{cross}} \;=\; \rho \int_V \mathbf{u}_1 \cdot \mathbf{u}_2 \, dV.
+\label{eq:cross-term}
+\end{equation}
+Veel van de interessante natuurkunde komt voort uit \eqref{eq:cross-term}, omdat deze
+groeit of krimpt afhankelijk van de geometrie van de wervels en de afstand ertussen.
+De dynamische evolutie ervan kan bijvoorbeeld leiden tot samensmelting of terugvering. Een belangrijk punt is dat
+de eigensnelheid van elke wervel de onderlinge snelheden aanzienlijk kan beïnvloeden en zo
+nettokrachten of koppel kan creëren.
+\subsection{Toepassingen op heliciteit en topologische stromingen}
+\label{sec:helicity}
+Een verwant concept is heliciteit, waarmee de topologische complexiteit (knopen of
+verbindingen) van vortexbuizen wordt gemeten. Klassiek wordt heliciteit $H$ gegeven door
+\begin{equation}
+H \;=\; \int_V \mathbf{u} \cdot \boldsymbol{\omega}\, dV,\label{eq:appendix:helicity}
+\end{equation}
+die constant kan blijven of gedeeltelijk verloren kan gaan tijdens herverbindingsgebeurtenissen. In bepaalde
+dissipatieve stromingen kunnen de kruisenergietermen in \eqref{eq:cross-term} de effectieve snelheid van heliciteitsverandering beïnvloeden. Het begrijpen van $E_{\text{cross}}$ is belangrijk
+voor het analyseren van herverbindingspaden in klassieke of superfluïde turbulentie.
+
+\subsection{Afleidingsschema voor kruisenergie}
+\label{sec:derivation}
+Ten slotte geven we een beknopt schema voor het afleiden van de uitdrukking voor kruisenergie. Beginnend met het totale snelheidsveld $\mathbf{u} = \sum_{n=1}^N \mathbf{u}_n$
+voor $N$ vortex- of partiële snelheidsvelden is de totale kinetische energie:
+\begin{equation}
+E_{\text{totaal}}
+= \frac{\rho}{2} \int_V \left(\sum_{n=1}^N \mathbf{u}_n \right)^2 dV
+= \frac{\rho}{2} \sum_{n=1}^N \int_V \mathbf{u}_n^2 \, dV
+\;+\;\rho \sum_{n<m} \int_V \mathbf{u}_n \cdot \mathbf{u}_m \, dV.\label{eq:appendix:total-energy-derivation}
+\end{equation}
+Men verkrijgt $N$ zelfenergietermen plus paarsgewijze kruisenergie-integralen.
+De kruisenergie voor een paar $(i,j)$ is:
+\begin{equation}
+E_{\text{cross}}^{(ij)} \;=\; \rho \int_V \mathbf{u}_i \cdot \mathbf{u}_j \, dV.\label{eq:appendix:cross-energy-derivation}
+\end{equation}
+In de praktijk kan elke $\mathbf{u}_n$ worden weergegeven door bekende oplossingen van de
+Stokes- of potentiaalstroomvergelijkingen, of door benaderde oplossingen voor wervellussen. Vervolgens verkrijgt men, analytisch of numeriek, benaderde kruisenergieën
+die gebruikt kunnen worden in gereduceerde modellen die de evolutie van multi-vortexsystemen beschrijven.
+
+\subsection*{Conclusion}
+We hebben onderzocht hoe de totale kinetische energie van vloeistoffen in de aanwezigheid van meerdere
+vortices kan worden opgesplitst in termen van zelf- en kruisenergie. Deze bijdragen van kruisenergieën
+zijn cruciaal voor het begrijpen van het samensmelten van wervels, het ontwarren van geknoopte wervels, of wervel-golfinteracties in klassieke, superfluïde en plasmastromen. Daarnaast hebben we een systematische afleiding van kruisenergie geschetst en
+belangrijke aspecten benadrukt bij de bespreking van impuls en heliciteit. Toekomstige richtingen
+zijn onder meer het verfijnen van deze uitdrukkingen voor axiaal symmetrische of geknoopte wervels en
+het integreren ervan in grootschalige modellen of computationele kaders.

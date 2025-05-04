@@ -1,0 +1,141 @@
+%! Auteur = dhr
+%! Datum = 29-3-2025
+
+\section{VAM Vortexverstrooiingsraamwerk (geïnspireerd door elastische theorie)}
+
+\subsection{Bepalende vergelijkingen van VAM Vorticiteitsdynamiek}
+
+\subsubsection*{Vorticiteitstransportvergelijking (gelineariseerde vorm)}
+
+In het Vortex-Æthermodel (VAM) wordt de dynamiek van het vorticiteitsveld \(\vec{\omega} = \nabla \times \vec{v}\) bepaald door de Euler-vergelijking en de bijbehorende vorticiteitsvorm:
+
+\[
+\frac{\partial \omega_i}{\partial t} + v_j \partial_j \omega_i = \omega_j \partial_j v_i
+\]
+
+Deze niet-lineaire structuur impliceert vortexvervorming door uitrekking en advectie. Voor kleine verstoringen \(\delta\omega\) nabij een achtergrondwervelknoopveld \(\omega^{(0)}\) geeft linearisatie:
+
+\[
+\frac{\partial (\delta \omega_i)}{\partial t} + v_j^{(0)} \partial_j (\delta \omega_i) \approx \omega_j^{(0)} \partial_j (\delta v_i)
+\]
+
+Definieer de lineaire responsoperator van VAM \(\mathcal{L}_{ij}\):
+
+\[
+\mathcal{L}_{ij} \, \delta v_j(\vec{r}) = \delta F_i^{\text{vortex}}(\vec{r})
+\]
+
+\subsubsection*{Vorticiteit Groene Tensor Vergelijking}
+
+\[
+\mathcal{L}_{ij} \, \mathcal{G}_{jk}(\vec{r}, \vec{r}') = -\delta_{ik} \, \delta(\vec{r} - \vec{r}')
+\]
+
+Het geïnduceerde snelheidsveld \(v_i\) van een bronwervelkracht \(F_k(\vec{r}')\) is dan:
+
+\[
+v_i(\vec{r}) = \int \mathcal{G}_{ik}(\vec{r}, \vec{r}') \, F_k^{\text{wervel}}(\vec{r}') \, d^3 r'
+\]
+
+\subsection{Wisselwerking werveldraad}
+Interacties ontstaan door uitwisseling van wervelkracht of Herverbindingen tussen vortexfilamenten:
+\begin{itemize}
+\item Aantrekkelijk als draden de circulatie versterken (parallel)
+\item Afstotend als draden elkaar opheffen (antiparallel)
+\item Interactiesterkte:
+\end{itemize}
+\begin{equation}
+\vec{F}_{\text{int}} = \beta \cdot \kappa_1 \kappa_2 \cdot \frac{\vec{r}_{12} \times (\vec{v}_1 - \vec{v}_2)}{|\vec{r}_{12}|^3}\label{eq:interaction_strength}
+\end{equation}
+Waar \(\kappa_i\) de circulaties van filamenten zijn en \(\vec{r}_{12}\) de vector ertussen.
+
+\subsection{Thermodynamisch & kwantumgedrag van vorticiteitsfluctuaties}
+\begin{itemize}
+\item Entropie \(\leftrightarrow\) volume van vortexuitbreiding of knoopvervorming
+\item Kwantumovergangen \(\leftrightarrow\) topologische herverbindingsgebeurtenissen
+\item Nulpuntbeweging \(\leftrightarrow\) achtergrondkwantumturbulentie van de Æther:
+\end{itemize}
+
+\subsubsection*{Achtergrond kwantumvorticiteit}
+\begin{equation}
+\langle \omega^2 \rangle \sim \frac{\hbar}{\rho_\text{æ} \xi^4}\label{eq:quantum_vorticity_background}
+\end{equation}
+Waarbij \(\xi\) de coherentielengte tussen vortexfilamenten is.
+
+\subsection{VAM-verstrooiingstheorie voor wervelknopen}
+
+\subsubsection*{Born-benadering voor wervelstoringen}
+
+Veronderstel dat een invallende wervelpotentiaal \(\Phi^{(0)}(\vec{r})\) een wervelknoop tegenkomt op \(\vec{r}_k\). Het verstrooide vorticiteitsveld wordt:
+
+\[
+\Phi(\vec{r}) = \Phi^{(0)}(\vec{r}) + \int \mathcal{G}_{ij}(\vec{r}, \vec{r}') \, \delta \mathcal{V}_{jk}(\vec{r}') \, v_k^{(0)}(\vec{r}') \, d^3r'
+\]
+
+Hier vertegenwoordigt \(\delta \mathcal{V}_{jk}\) een vorticiteitspolarisatietensor geassocieerd met de knoop – een VAM-analoog aan elastische moduliperturbatie.
+
+\subsection{Ætherspanningstensor en energieflux}
+
+\subsubsection*{VAM-spanningstensor}
+
+\[
+\mathcal{T}_{ij} = \rho_{\text{\ae}} \, v_i v_j - \frac{1}{2} \delta_{ij} \rho_{\text{\ae}} v^2
+\]
+
+\subsubsection*{Æther Vorticiteit Krachtdichtheid}
+
+\[
+f_i^{\text{vortex}} = \partial_j \mathcal{T}_{ij}
+\]
+
+\subsubsection*{Vorticiteit Energieflux}
+
+\[
+\vec{S}_\omega = - \mathcal{T} \cdot \vec{v}
+\]
+
+Deze vector legt de energieoverdracht vast via wervelknoopinteracties en definieert Verstrooiing van "dwarsdoorsneden" via de divergentie \(\nabla \cdot \vec{S}_\omega\).
+
+\subsection{Tijdsdilatatie en knoopverstrooiing}
+
+\subsubsection*{Tijdsdilatatie door knooprotatie}
+
+Laat het invallende wervelveld een lokale tijdvertraging veroorzaken als gevolg van de rotatie-energie van een knoop:
+
+\[
+\frac{t_{\text{local}}}{t_{\infty}} = \left(1 + \frac{1}{2} \beta I \Omega_k^2 \right)^{-1}
+\]
+
+In de Born-benadering is de verandering in eigentijd nabij een knoop onder externe wervelstroom:
+
+\subsubsection*{Verstrooide correctie door extern veld}
+
+\begin{gather*}
+\delta \left( \frac{t_{\text{local}}}{t_{\infty}} \right) \approx - \frac{1}{2} \beta I \Omega_k \, \delta \Omega_k\\
+\delta \Omega_k \sim \int \chi(\vec{r}_k - \vec{r}') \cdot \vec{\omega}^{(0)}(\vec{r}') \, d^3r'\\
+\end{gather*}
+
+Hier is \(\chi\) de topologische vortexgevoeligheidskern.
+
+\subsection{Samenvatting van VAM-geïnspireerde verstrooiingsconstructies}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lll}
+\toprule
+\textbf{Concept} & \textbf{Elastische theorie} & \textbf{VAM-analoog} \\
+\midrule
+Mediumeigenschap & \( c_{ijkl} \) & \( \rho_{\text{\ae}},\, \Omega_k,\, \kappa \) \\
+Golfveld & \( u_i \) (verplaatsing) & \( v_i \) (ethersnelheid) \\
+Bron & \( f_i \) (lichaamskracht) & \( F_i^{\text{vortex}} \) (vorticiteitsforcering) \\
+Groene functie & \( G_{ij}(\vec{r}, \vec{r}') \) & \( \mathcal{G}_{ij}(\vec{r}, \vec{r}') \) \\
+Spanningstensor & \( \tau_{ij} \) & \( \mathcal{T}_{ij} \) \\
+Energieflux & \( J_{P,i} = -\tau_{ij} \dot{u}_j \) & \( S_{\omega,i} = -\mathcal{T}_{ij} v_j \) \\
+Tijddilatatiemechanisme & \( g_{\mu\nu} \) (GR metrisch) & \( \Omega_k,\, \kappa,\, \langle \omega^2 \rangle \) \\
+\bottomrule
+\end{tabular}
+\caption{Conceptuele overeenkomst tussen klassieke elasticiteit en Vortex-Æther Model (VAM).}
+\label{tab:elastic-vam-analogy}
+\end{table}
+
+Dit verstrooiingsraamwerk generaliseert klassieke elastische analogen naar een topologisch en energetisch gemotiveerd Ætherisch formalisme. Het maakt de berekening mogelijk van veldmodificaties, tijddilatatie-effecten en energieflux als gevolg van stabiele, interacterende vortexknopen in het Vortex-Æther Model (VAM).
