@@ -39,7 +39,7 @@ De postulaten vervangen ruimtetijdkromming door gestructureerde rotatiestromen e
         $C_e$ & Tangentiële wervel-kernsnelheid & $1.094 \times 10^6$ m/s \\
         $r_c$ & Wervelkernstraal & $1.409 \times 10^{-15}$ m \\
         $F_{\text{max}}$ & Maximale wervelkracht & $29.05$ N \\
-        $\rho_{\ae}$ & Æther-dichtheid & $3.893 \times 10^{18}$ kg/m$^3$ \\
+        $\rho_\text{\ae}$ & Æther-dichtheid & $3.893 \times 10^{18}$ kg/m$^3$ \\
         $\alpha$ & Fijnstructuurconstante ($2 C_e/c$) & $7.297 \times 10^{-3}$\\
         $G_{\text{swirl}}$ & VAM-zwaartekrachtconstante & Afgeleid van $C_e$, $r_c$\\
         $\kappa$ & Circulatie-kwantum ($C_e r_c$) & $1.54 \times 10^{-9}$ m$^2$/s \\
@@ -53,28 +53,32 @@ De postulaten vervangen ruimtetijdkromming door gestructureerde rotatiestromen e
 \subsection*{Planck-schaal en topologische massa}
 
 Binnen VAM wordt de maximale wervel-interactiekracht expliciet afgeleid uit Planck-schaalfysica:
-\[
-F_{\text{max}} = \frac{c^4}{4G}\,\alpha\left(\frac{r_c}{L_p}\right)^{-2} = 29.0535~\text{N}
-\]
+\begin{equation}
+    F_{\text{max}} = \frac{8\pi \rho_\text{\ae} r_c^3}{C_e}
+\end{equation}
+
 
 De massa van elementaire deeltjes volgt direct uit topologische wervelknopen, zoals de trefoilknoop ($L_k=3$):
-\[
-M_e = \frac{8\pi \rho_{\ae} r_c^3}{C_e}\, L_k
-\]
+\begin{equation}
+    M_e = \frac{8\pi \rho_\text{\ae} r_c^3}{C_e}\, L_k
+\end{equation}
+
+
 
 Dit verklaart massa en inertie uit topologische knoopstructuren in de æther.
 
 \subsection*{Emergente kwantumconstanten en Schrödingervergelijking}
 
 Plancks constante $\hbar$ ontstaat uit wervel-geometrie en wervelkrachtlimiet:
-\[
-\hbar = \sqrt{\frac{2M_e F_{\max} r_c^3}{5 \lambda_c C_e}}
-\]
+\begin{equation}
+    \hbar = \sqrt{\frac{2M_e F_{\max} r_c^3}{5 \lambda_c C_e}}
+\end{equation}
 
 Hiermee volgt de Schrödingervergelijking direct uit vortex-dynamica:
-\[
-i \hbar \frac{\partial \psi}{\partial t} = -\frac{F_{\max} r_c^3}{5 \lambda_c C_e}\nabla^2 \psi + V\psi
-\]
+\begin{equation}
+    i \hbar \frac{\partial \psi}{\partial t} = -\frac{F_{\max} r_c^3}{5 \lambda_c C_e}\nabla^2 \psi + V\psi
+\end{equation}
+
 
 \subsection*{LENR en vortex-kwantumeffecten}
 
