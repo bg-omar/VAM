@@ -6,7 +6,6 @@
 \usepackage{float}
 \usepackage{tikz}
 \usepackage{makecell}
-\usepackage{tabularx}
 \usepackage[font=footnotesize]{caption}
 \usetikzlibrary{arrows.meta}
 \usepackage{pgfplots}
@@ -42,9 +41,7 @@
 
         Het model levert verklaringen voor ladingkwantisatie, isotopische stabiliteit, bindingsenergie en het bestaan van limieten aan kernmassa, en biedt tevens nieuwe invalshoeken voor fenomenen als quarkconfinement, spin, en massa-hiërarchie. De resultaten tonen dat de topologie van vortexknopen potentieel een verenigend raamwerk biedt waarin klassieke en kwantummechanische eigenschappen van elementen emergent zijn uit fluïdumdynamica.
     \end{abstract}
-
-
-
+    
     \maketitle
 
     \input{sections/01_inleiding}
@@ -59,5 +56,9 @@
 
     \bibliographystyle{apsrev4-2}
     \bibliography{00_Periodeic_Table}
+
+    \appendix \label{sec:Part-6}
+    \input{sections/appendix_afleiding_massa}\label{appendix:Afleiding_massa}
+    \input{sections/appendix_afleiding_massa_2}\label{appendix:Afleiding_massa_2}
 
 \end{document}

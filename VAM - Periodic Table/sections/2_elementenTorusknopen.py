@@ -1,6 +1,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
+import matplotlib
+matplotlib.use('TkAgg')  # Ensure it uses Tkinter backend
 
 # Gegevens: Elementen en corresponderende torusknopen
 elementen = [
