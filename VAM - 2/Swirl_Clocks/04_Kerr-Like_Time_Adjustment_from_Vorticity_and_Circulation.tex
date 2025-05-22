@@ -1,10 +1,10 @@
-\section{Kerr-Like Time Adjustment from Vorticity and Circulation}
+\section{Kerr-like time adjustment based on vorticity and circulation}
 
-To complete the analogy between General Relativity (GR) and the Vortex Æther Model (VAM), we now derive a time modulation formula that mirrors the redshift and frame-dragging structure found in the Kerr solution. In GR, the Kerr metric describes the spacetime geometry around a rotating mass, predicting both gravitational time dilation and frame-dragging due to angular momentum. VAM captures similar phenomena through the dynamics of structured vorticity and circulation in the æther, without requiring spacetime curvature.
+To complete the analogy between general relativity (GR) and the vortex-æther model (VAM), we now derive a time modulation formula that reflects the redshift and frame-dragging structure in the Kerr solution. In GR, the Kerr metric describes the spacetime geometry around a rotating mass and predicts both gravitational time dilation and frame-dragging due to angular momentum. VAM captures similar phenomena via the dynamics of structured vorticity and circulation in the æther, without the need for spacetime curvature.
 
-\subsection{General Relativistic Kerr Redshift Structure}
+\subsection{General relativistic Kerr redshift structure}
 
-In the GR Kerr metric, the proper time $d\tau$ for an observer near a rotating mass is affected by both mass-energy and angular momentum. A simplified approximation for the time dilation factor near a rotating body is:
+In the GR-Kerr metric, the proper time $d\tau$ for an observer near a rotating mass is affected by both mass-energy and angular momentum. A simplified approximation for the time dilation factor near a rotating body is:
 \begin{equation}
     t_{\text{adjusted}} = \Delta t \cdot \sqrt{1 - \frac{2GM}{rc^2} - \frac{J^2}{r^3c^2}}
     \label{eq:Kerr_time_dilation}
@@ -14,44 +14,139 @@ where:
     \item $M$: mass of the rotating body,
     \item $J$: angular momentum,
     \item $r$: radial distance from the source,
-    \item $G$: Newton’s gravitational constant,
+    \item $G$: Newton's gravitational constant,
     \item $c$: speed of light.
 \end{itemize}
 
-The first term corresponds to gravitational redshift from mass, while the second accounts for rotational (frame-dragging) effects.
+The first term corresponds to gravitational redshift with respect to the mass, while the second takes into account rotational effects (frame-dragging).
 
-\subsection{Æther Analog via Vorticity and Circulation}
+\subsection{Æther analogous via vorticity and circulation}
 
-In VAM, we express gravitational-like influences through vorticity intensity $\langle \omega^2 \rangle$ and total circulation $\kappa$. These are interpreted as:
+In VAM we express gravitational influences via vorticity intensity $\langle \omega^2 \rangle$ and total circulation $\kappa$. These are interpreted as:
 \begin{itemize}
-    \item $\langle \omega^2 \rangle$: mean squared vorticity over a region,
+    \item $\langle \omega^2 \rangle$: mean square vorticity over a region,
     \item $\kappa$: conserved circulation, encoding angular momentum.
+
 \end{itemize}
 
-We define the æther-based analog by making the replacements:
+We define the æther-based analogue by performing the following replacements:
 \begin{equation}
     \begin{aligned}
         \frac{2GM}{rc^2} &\rightarrow \frac{\gamma \langle \omega^2 \rangle}{rc^2}, \\
         \frac{J^2}{r^3c^2} &\rightarrow \frac{\kappa^2}{r^3c^2}
     \end{aligned}
-\label{eq:Kerr_replacements}
+    \label{eq:Kerr_replacements}
 \end{equation}
 
-Here, $\gamma$ is a coupling constant relating vorticity to effective gravitational strength (analogous to $G$). Then the æther-based proper time becomes:
+Here $\gamma$ is a coupling constant relating the vorticity to the effective gravity (analogous to $G$). The æther-based proper then becomes:
 
 \begin{equation}
     \boxed{t_{\text{adjusted}} = \Delta t \cdot \sqrt{1 - \frac{\gamma \langle \omega^2 \rangle}{rc^2} - \frac{\kappa^2}{r^3c^2}}}
     \label{eq:Kerr_time_dilation_ae}
 \end{equation}
 
-This mirrors the Kerr redshift and frame-dragging structure using fluid-dynamic variables. In this picture:
+This reflects the Kerr redshift and frame dragging structure using fluid dynamic variables. In this figure:
 \begin{itemize}
-    \item $\langle \omega^2 \rangle$ plays the role of energy density producing gravitational redshift,
-    \item $\kappa$ represents angular momentum generating temporal frame-dragging,
-    \item The equation reduces to flat æther time ($t_{\text{adjusted}} \to \Delta t$) when both terms vanish.
+    \item $\langle \omega^2 \rangle$ plays the role of energy density that produces gravitational redshift,
+    \item $\kappa$ represents angular momentum that generates temporal frame-dragging,
+    \item The equation reduces to a flat æther time ($t_{\text{adjusted}} \tot \Delta t$) when both terms vanish.
+
 \end{itemize}
 
-\subsection{Model Assumptions and Scope}
+\subsection*{Hybrid VAM Frame-Dragging Angular Velocity}
+
+In the Vortex Æther Model (VAM), the frame-dragging angular velocity induced by a rotating vortex-bound object is defined analogously to the Lense-Thirring effect in general relativity, but with a scale-dependent Coupling:
+
+\begin{equation}
+    \omega_{\text{drag}}^{\text{VAM}}(r) =
+    \frac{4 G m}{5 c^2 r} \cdot \mu(r) \cdot \Omega(r)
+\end{equation}
+
+Where \( G \) is the gravitational constant, \( c \) is the speed of light, \( m \) is the mass of the object, \( r \) is the characteristic radius, and \( \Omega(r) \) the angular velocity.
+
+The hybrid coupling factor \( \mu(r) \) interpolates between quantum-scale vortex behavior and classical macroscopic rotation:
+
+\begin{equation}
+    \mu(r) =
+    \begin{cases}
+        \displaystyle \frac{r_c C_e}{r^2}, & \text{if } r < r_\ast \quad \text{(quantum or vortex core regime)} \\
+        1, & \text{if } r \geq r_\ast \quad \text{(macroscopic regime)}
+    \end{cases}
+\end{equation}
+
+where:
+\begin{itemize}
+    \item \( r_c \) is the radius of the vortex core,
+    \item \( C_e \) is the tangential velocity of the vortex core,
+    \item \( r_\ast \sim 10^{-3} \, \text{m} \) is the transition radius between microscopic and macroscopic regimes.
+\end{itemize}
+
+This formulation provides continuity with GR predictions for celestial bodies, while allowing VAM-specific predictions for elementary particles and subatomic vortex structures.
+
+\subsection*{VAM Gravitational Redshift from Core Rotation}
+
+In the Vortex Æther Model (VAM), gravitational redshift arises from the local rotation velocity \( v_\phi \) at the outer boundary of a vortex node. Assuming no spacetime curvature and absolute time, the effective gravitational redshift is given by:
+
+\begin{equation}
+    z_{\text{VAM}} =
+    \left( 1 - \frac{v_\phi^2}{c^2} \right)^{-\frac{1}{2}} - 1
+\end{equation}
+
+where:
+\begin{itemize}
+    \item \( v_\phi = \Omega(r) \cdot r \) is the tangential velocity due to local rotation,
+    \item \( \Omega(r) \) is the angular velocity at the measurement beam \( r \),
+    \item \( c \) is the speed of light in vacuum.
+
+\end{itemize}
+
+This expression reflects the change in time perception caused by local rotational energy, replacing the curvature-based gravitational potential \( \Phi \) of general relativity with a velocity field term. It becomes equivalent to the GR Schwarzschild redshift for low \( v_\phi \) and diverges as \( v_\phi \rightarrow c \), which provides a natural limit to the evolution of the local frame:
+
+\begin{equation}
+    \lim_{v_\phi \to c} z_{\text{VAM}} \to \infty
+\end{equation}
+
+\subsection*{VAM Local Time Dilation Models}
+
+In the Vortex Æther Model (VAM), local time dilation is interpreted as the modulation of absolute time by internal vortex dynamics, not by spacetime curvature. Depending on the system scale, two physically based formulations are used:
+
+\paragraph{1. Time dilation based on velocity fields}
+
+This model relates the local time flow to the tangential speed of the rotating etheric structure (vortex node, planet or star):
+
+\begin{equation}
+    \frac{d\tau}{dt} =
+    \sqrt{1 - \frac{v_\phi^2}{c^2}} =
+    \sqrt{1 - \frac{\Omega^2 r^2}{c^2}}
+\end{equation}
+
+whereby:
+\begin{itemize}
+    \item \( v_\phi = \Omega \cdot r \) is the tangential speed,
+    \item \( \Omega \) is the angular velocity at radius \( r \),
+    \item \( c \) is the speed of light.
+\end{itemize}
+
+\paragraph{2. Time dilation based on rotational energy}
+
+On large scales or with high rotational inertia, time dilation arises from stored rotational energy, leading to:
+
+\begin{equation}
+    \frac{d\tau}{dt} =
+    \left(1 + \frac{1}{2} \cdot \beta \cdot I \cdot \Omega^2 \right)^{-1}
+\end{equation}
+
+with:
+\begin{itemize}
+    \item \( I = \frac{2}{5} m r^2 \): moment of inertia for a uniform sphere,
+    \item \( \beta = \frac{r_c^2}{C_e^2} \): coupling constant of vortex-core dynamics,
+    \item \( m \) is the mass of the object. \end{itemize}
+
+\paragraph{Interpretation}
+
+These models imply that time slows down in regions of high local rotational energy or vorticity, consistent with gravitational time dilation effects in GR. In VAM, however, these effects arise exclusively from the internal dynamics of the æther flow, under flat 3D Euclidean geometry and absolute time.
+
+\subsection{Model assumptions and scope}
 
 This result depends on several assumptions:
 \begin{itemize}
@@ -61,8 +156,8 @@ This result depends on several assumptions:
     \item Vorticity fields are sufficiently smooth to define $\langle \omega^2 \rangle$.
 \end{itemize}
 
-These conditions mirror the assumptions of ideal fluid GR analog models. The formulation bridges the macroscopic flow dynamics of the æther with effective geometric predictions, reinforcing the possibility of replacing curved spacetime with structured vorticity fields.
+These conditions reflect the assumptions of analogous models of ideal fluid GR. The formulation bridges the macroscopic fluid dynamics of the æther with effective geometric predictions, which strengthens the possibility of replacing curved spacetime with structured vorticity fields.
 
-For detailed derivations of cross-energy and vortex interaction energetics, see Appendix~\ref{appendix:1}.
+See Appendix~\ref{appendix:7} for detailed derivations of cross-energy and vortex interaction energetics.
 
-In future work, corrections for boundary conditions, quantized vorticity spectra, and compressible effects may be added to refine the analogy. Next, we will summarize how these fluid-based time dilation mechanisms unify under the VAM framework and identify their experimental implications.
+In future work, corrections for boundary conditions, quantized vorticity spectra, and compressibility effects can be added to refine the analogy. We then summarize how these fluid-based time dilation mechanisms coalesce within the VAM framework and identify their experimental implications.

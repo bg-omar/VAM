@@ -1,0 +1,139 @@
+\section{VAM Vorticity Scattering Framework (inspired by elastic theory)}
+
+\subsection{Governing equations of VAM Vorticity dynamics}
+
+\subsubsection*{Vorticity transport equation (linearized form)}
+
+In the Vortex Æther Model (VAM), the dynamics of the vorticity field \(\vec{\omega} = \nabla \times \vec{v}\) is governed by the Euler equation and the associated vorticity form:
+
+\[
+    \frac{\partial \omega_i}{\partial t} + v_j \partial_j \omega_i = \omega_j \partial_j v_i
+\]
+
+This nonlinear structure implies vortex deformation by stretching and advection. For small perturbations \(\delta\omega\) near a background vortex node field \(\omega^{(0)}\) linearization yields:
+
+\[
+    \frac{\partial (\delta \omega_i)}{\partial t} + v_j^{(0)} \partial_j (\delta \omega_i) \approx \omega_j^{(0)} \partial_j (\delta v_i)
+\]
+
+Define the linear response operator of VAM \(\mathcal{L}_{ij}\):
+
+\[
+    \mathcal{L}_{ij} \, \delta v_j(\vec{r}) = \delta F_i^{\text{vortex}}(\vec{r})
+\]
+
+\subsubsection*{Green Tensor Vorticity Equation}
+
+\[
+    \mathcal{L}_{ij} \, \mathcal{G}_{jk}(\vec{r}, \vec{r}') = -\delta_{ik} \, \delta(\vec{r} - \vec{r}')
+\]
+
+The induced velocity field \(v_i\) of a source vortex force \(F_k(\vec{r}')\) is then:
+
+\[
+    v_i(\vec{r}) = \int \mathcal{G}_{ik}(\vec{r}, \vec{r}') \, F_k^{\text{vortex}}(\vec{r}') \, d^3 r'
+\]
+
+\subsection{Vortex filament interaction}
+Interactions arise from exchange of vortex force or Reconnections between vortex filaments:
+\begin{itemize}
+    \item Attractive when filaments reinforce the circulation (parallel)
+    \item Repulsive when filaments cancel each other out (antiparallel)
+    \item Interaction strength:
+\end{itemize}
+\begin{equation}
+    \vec{F}_{\text{int}} = \beta \cdot \kappa_1 \kappa_2 \cdot \frac{\vec{r}_{12} \times (\vec{v}_1 - \vec{v}_2)}{|\vec{r}_{12}|^3}\label{eq:interaction_strength}
+\end{equation}
+Where \(\kappa_i\) are the circulations of filaments and \(\vec{r}_{12}\) is the vector between them.
+
+\subsection{Thermodynamic & quantum behavior of vorticity fluctuations}
+\begin{itemize}
+    \item Entropy \(\leftrightarrow\) volume of vortex expansion or knot deformation
+    \item Quantum transitions \(\leftrightarrow\) topological reconnection events
+    \item Zero-point motion \(\leftrightarrow\) background quantum turbulence of the Æther:
+\end{itemize}
+
+\subsubsection*{Quantum vorticity background}
+\begin{equation}
+    \langle \omega^2 \rangle \sim \frac{\hbar}{\rho_\text{æ} \xi^4}\label{eq:quantum_vorticity_background}
+\end{equation}
+Where \(\xi\) is the coherence length between vortex filaments.
+
+\subsection{VAM scattering theory for vortex nodes}
+
+\subsubsection*{Born approximation for vortex perturbations}
+
+Suppose that an incident vortex potential \(\Phi^{(0)}(\vec{r})\) encounters a vortex node at \(\vec{r}_k\). The scattered vorticity field becomes:
+
+\[
+    \Phi(\vec{r}) = \Phi^{(0)}(\vec{r}) + \int \mathcal{G}_{ij}(\vec{r}, \vec{r}') \, \delta \mathcal{V}_{jk}(\vec{r}') \, v_k^{(0)}(\vec{r}') \, d^3r'
+\]
+
+Here \(\delta \mathcal{V}_{jk}\) represents a vorticity polarization tensor associated with the node – a VAM analogue of elastic moduli perturbation.
+
+\subsection{Æther stress tensor and energy flux}
+
+\subsubsection*{VAM stress tensor}
+
+\[
+    \mathcal{T}_{ij} = \rho_{\text{\ae}} \, v_i v_j - \frac{1}{2} \delta_{ij} \rho_{\text{\ae}} v^2
+\]
+
+\subsubsection*{Æther Vorticity Force Density}
+
+\[
+    f_i^{\text{vortex}} = \partial_j \mathcal{T}_{ij}
+\]
+
+\subsubsection*{Vorticity Energy Flux}
+
+\[
+    \vec{S}_\omega = - \mathcal{T} \cdot \vec{v}
+\]
+
+This vector captures the energy transfer via vortex node interactions and defines Scattering of "cross sections" via the divergence \(\nabla \cdot \vec{S}_\omega\).
+
+\subsection{Time dilation and nodal scattering}
+
+\subsubsection*{Time dilation due to nodal rotation}
+
+Let the incident vortex field cause a local time delay due to the rotational energy of a node:
+
+\[
+    \frac{t_{\text{local}}}{t_{\infty}} = \left(1 + \frac{1}{2} \beta I \Omega_k^2 \right)^{-1}
+\]
+
+In the Born approximation, the change in proper time near a node under external vortex flow is:
+
+\subsubsection*{Scattered correction due to external field}
+
+\begin{gather*}
+    \delta \left( \frac{t_{\text{local}}}{t_{\infty}} \right) \approx - \frac{1}{2} \beta I \Omega_k \, \delta \Omega_k\\
+    \delta \Omega_k \sim \int \chi(\vec{r}_k - \vec{r}') \cdot \vec{\omega}^{(0)}(\vec{r}') \, d^3r'\\
+\end{gather*}
+
+
+Hier is \(\chi\) de topologische wervelgevoeligheidskern.
+
+\subsection{Samenvatting van VAM-geïnspireerde verstrooiingsconstructies}
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{lll}
+        \toprule
+        \textbf{Concept} & \textbf{Elastische theorie} & \textbf{VAM-analoog} \\
+        \midrule
+        Mediumeigenschap & \( c_{ijkl} \) & \( \rho_{\text{\ae}},\, \Omega_k,\, \kappa \) \\
+        Golfveld & \( u_i \) (verplaatsing) & \( v_i \) (æthersnelheid) \\
+        Bron & \( f_i \) (lichaamskracht) & \( F_i^{\text{vortex}} \) (vorticiteitsforcering) \\
+        Groene functie & \( G_{ij}(\vec{r}, \vec{r}') \) & \( \mathcal{G}_{ij}(\vec{r}, \vec{r}') \) \\
+        Spanningstensor & \( \tau_{ij} \) & \( \mathcal{T}_{ij} \) \\
+        Energieflux & \( J_{P,i} = -\tau_{ij} \dot{u}_j \) & \( S_{\omega,i} = -\mathcal{T}_{ij} v_j \) \\
+        Tijddilatatiemechanisme & \( g_{\mu\nu} \) (GR metrisch) & \( \Omega_k,\, \kappa,\, \langle \omega^2 \rangle \) \\
+        \bottomrule
+    \end{tabular}
+    \caption{Conceptuele overeenkomst tussen klassieke elasticiteit en Vortex Æther Model (VAM).}
+    \label{tab:elastic-vam-analogy}
+\end{table}
+
+Dit verstrooiingsraamwerk generaliseert klassieke elastische analogen naar een topologisch en energetisch gemotiveerd Ætherisch formalisme. Het maakt de berekening mogelijk van veldmodificaties, tijddilatatie-effecten en energieflux als gevolg van stabiele, interacterende wervelknopen in het Vortex Æther Model (VAM).

@@ -1,131 +1,75 @@
-\section{Time Dilation from Vortex Dynamics}\label{sec:Part-1}
+\section{Time dilation from vortex dynamics}
 
-    We consider an inviscid, irrotational superfluid æther with stable topological vortex knots. Absolute time $t_{\text{abs}}$ flows at a constant rate, while local clocks might experience slowed rates due to pressure gradients and knot energetics. The Vortex Æther Model posits that the rate at which time flows in the local frame (near the knot) depends on the internal angular frequency $\Omega_k$. In this section, we derive time dilation analogues inspired by the predictions of general relativity (GR), based solely on pressure and vorticity gradients in the fluid.
+We consider an invisible, irrotational superfluid æther with stable topological vortex nodes. Absolute time $t_{\text{abs}}$ flows at a constant rate, while local clocks may experience a lower rate due to pressure gradients and nodal energetics. The Vortex Æther Model assumes that the rate at which time flows in the local frame (near the node) depends on the internal angular frequency $\Omega_k$. In this section, we derive time dilation analogues, inspired by the predictions of general relativity (GR), based solely on pressure and vorticity gradients in the fluid.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.85\textwidth]{streamlinesDiPole}
-    \caption{Velocity streamlines, vorticity, pressure, and local time rate $\tau$ for a simulated vortex pair. The pressure minimum and time slow-down clearly align with the regions of high vorticity. This directly illustrates the æther model's central claim: time dilation follows from vortex energetics and pressure depletion.}
+    \caption{Velocity streamlines, vorticity, pressure and local time velocity $\tau$ for a simulated vortex pair. The pressure minimum and the time delay clearly correspond to the regions of high vorticity. This immediately illustrates the central claim of the Æther model: time dilation follows from vortex energetics and pressure reduction.}
     \label{fig:vortexfields}
 \end{figure}
 
-\subsection{Bernoulli Flow and Local Time Depletion}
+In the Vortex Æther Model (VAM), time dilation does not arise from the curvature of spacetime, but from local vortex dynamics. Each particle of matter in VAM is a vortex-node structure whose internal rotation (\textit{swirl}) influences the local clock frequency.
 
-In a classical, inviscid, incompressible fluid, Bernoulli's equation describes the conservation of energy in a flow:
-
-\begin{equation}
-    \frac{1}{2} \rho_{\text{\ae}}  v^2 + p = p_0 \Rightarrow p = p_0 - \frac{1}{2} \rho_{\text{\ae}} v^2\label{eq:bernoulli}
+The fundamental link between local vortex velocity and local time measurement follows from the Bernoulli-like relation for pressure reduction in flow fields. The local clock frequency is related to the vortex tangential velocity $v_{\phi}(r)$ by the formula:
+\begin{equation}\label{eq:vortex_time_dilation}
+\frac{d\tau}{dt} = \sqrt{1 - \frac{v_{\phi}^2(r)}{c^2}}
 \end{equation}
 
-Here:
-\begin{itemize}
-    \item $p_0$ is the background reference pressure,
-    \item $\rho_{\text{\ae}}$ is the constant æther density,
-    \item $v$ is the local velocity of the æther near the vortex.
-\end{itemize}
+Where $v_{\phi}(r)$ is the tangential velocity of the æther medium at distance $r$ from the center of the vortex, and $c$ is the speed of light. This is a direct analogy with the special relativistic velocity-dependent time dilation, but without spacetime curvature and caused solely by local rotation of the æther medium.
 
-Assuming that clock rate is proportional to pressure (i.e., time slows in low-pressure regions), we relate the local clock frequency to the background as:
+\subsection{Derivation from vortex hydrodynamics}
 
-\begin{equation}
-    \frac{f_{\text{local}}}{f_0} = 1 - \frac{\rho_{\text{\ae}} v^2}{2 p_0}\label{eq:local_clock_frequency}
+The derivation follows from the Bernoulli principle for an ideal fluid flow, given by:
+\begin{equation}\label{eq:Bernoulli}
+P + \frac{1}{2}\rho_{\ae} v^2 = \text{constant}
 \end{equation}
 
-Hence, time dilation is:
-
-\begin{equation}
-    \frac{t_{\text{local}}}{t_0} = \left(1 - \frac{\rho_{\text{\ae}} v^2}{2 p_0}\right)^{-1}\label{eq:time_dilation}
+With vortex flow introduced via vorticity $\vec{\omega} = \nabla \times \vec{v}$, the local pressure reduction relative to the distant environment defines a local time delay. The local vortex velocity is given by:
+\begin{equation}\label{eq:tangential_velocity}
+v_{\phi}(r) = \frac{\Gamma}{2\pi r} = \frac{\kappa}{r}
 \end{equation}
 
-For rotational flow, with $v = \Omega r$,
-
-\begin{equation}
-    \frac{t_{\text{local}}}{t_0} = \left(1 - \frac{\rho_{\text{\ae}} \Omega^2 r^2}{2 p_0} \right)^{-1} \approx 1 + \frac{\rho_{\text{\ae}}\Omega^2 r^2}{2 p_0}\label{eq:time_dilation_rotational}
+where $\Gamma$ is the circulation constant, and $\kappa$ is the circulation quantum. Substitution of \eqref{eq:tangential_velocity} into \eqref{eq:vortex_time_dilation} gives explicitly:
+\begin{equation}\label{eq:vortex_time_explicit}
+\frac{d\tau}{dt} = \sqrt{1 - \frac{\kappa^2}{c^2 r^2}}
 \end{equation}
 
-This expression recovers the first-order time dilation analog if we define the dimensionless coupling:
+This explicitly expresses the time dilation in fundamental vortex parameters.
 
-\begin{equation}
-    \frac{\rho_{\text{\ae}}}{p_0} \sim \frac{1}{c^2}\label{eq:dimensionless_coupling}
+\subsection{Comparison with general relativity}
+
+For comparison, in general relativity (GR), gravitational time dilation arises from spacetime curvature, expressed by the Schwarzschild metric~\cite{schutz2009first}:
+\begin{equation}\label{eq:GRtime}
+\frac{d\tau}{dt} = \sqrt{1 - \frac{2GM}{rc^2}}
 \end{equation}
 
-This motivates the analogy to relativistic time dilation:
+The similarities and differences are immediately apparent: GR's gravitational time dilation is related to mass $M$ and gravitational constant $G$, while VAM time dilation is purely hydrodynamic and directly connected to the local rotational velocity of the æther medium via vortex circulation $\kappa$.
 
-\begin{equation}
-    \frac{t_{\text{moving}}}{t_\text{rest}} \approx 1 + \frac{v^2}{2 c^2}\label{eq:relativistic_time_dilation}
-\end{equation}
-
-\begin{figure}[htbp]
+\begin{figure}[ht!]
     \centering
-    \includegraphics[width=0.8\textwidth]{RadialProfileOfLocalTimeDilation_Vortex-Induced_Time_Well}
-    \caption{Schematic of a vortex-induced time well in the æther. Local time $t_{\text{local}} / t_{\text{abs}}$ is shown as a color gradient in 2D space. The central vortex region exhibits the most time slowing due to high $\Omega_k$, forming a well-like structure.}
-    \label{fig:vortex_time_well}
+    \includegraphics[width=0.7\linewidth]{RadialProfileOfLocalTimeDilation_Vortex-Induced_Time_Well}
+    \caption{Comparison of VAM (vortex dynamics) and GR time dilation, as a function of distance to vortex core and Schwarzschild radius.}
+    \label{fig:vergelijking_VAMGR}
 \end{figure}
 
+In Figure~\ref{fig:vergelijkingVAMGR} we see that VAM time dilation is functionally comparable to GR prediction at sufficient distance. At decreasing distance (near vortex core or Schwarzschild radius) differences arise due to vortex-specific effects and topological node structures.
 
-\subsection{Heuristic Knot-Based Time Modulation}
+In summary, the VAM replaces spacetime curvature with eddy dynamics, while preserving measurable time dilation effects consistent with established experimental results such as Hafele–Keating~\cite{hafele1972around}, but from a fundamentally different physical explanation.
 
-Topological vortex knots have intrinsic angular frequency $\Omega_k$, conserved due to vorticity confinement. We introduce a first-principles motivated
-time dilation expression:
+For illustration, in Figure~\ref{fig:vergelijkingVAMGR} we explicitly compare VAM and GR for a neutron star with $M = 2\,M_\odot$ and radius $R = 10\,\text{km}$. The differences become clear near the surface of the object, where vortex-specific effects occur.
 
-\begin{equation}
-\frac{t_{\text{local}}}{t_{\text{abs}}} = \left(1 + \beta \Omega_k^2 \right)^{-1}\label{eq:angular_time_dilation}
-\end{equation}
-
-where $\beta$ is a coupling parameter with dimensions $[\beta] = \text{s}^2$. Expanding for small $\Omega_k$:
-
-\begin{equation}
-\frac{t_{\text{local}}}{t_{\text{abs}}} \approx 1 - \beta \Omega_k^2 + \mathcal{O}(\Omega_k^4)\label{eq:angular_time_dilation_expansion}
-\end{equation}
-
-This form parallels the Lorentz factor expansion:
-
-\begin{equation}
-\frac{t_{\text{moving}}}{t_{\text{rest}}} \approx 1 - \frac{v^2}{2 c^2}\label{eq:lorentz_time_dilation}
-\end{equation}
-
-\begin{figure}[htbp]
+\begin{figure}[ht!]
     \centering
-    \includegraphics[width=0.8\textwidth]{RotationalVsHeuristicTimeDilation}
-    \caption{\textbf{Comparison: Heuristic vs Rotational Time Dilation (\(\Omega_k \propto 1/r^2\))}.
-    This graph compares two models of time modulation within the Vortex Æther framework.
-    The heuristic model (green) assumes time rate reduction proportional to \((1 + \beta \Omega_k^2)^{-1}\),
-        while the rotational model (dark blue) incorporates rotational energy \(E_{\text{rot}} = \frac{1}{2} I \Omega_k^2\) and suppresses local time via
-        \((1 + \frac{1}{2} \beta I \Omega_k^2)^{-1}\). Both curves exhibit strong time dilation near the vortex core (\(r \sim 10^{-15}\) m),
-        approaching absolute time flow only at extended distances. The rotational model yields a steeper suppression,
-        highlighting the energetic cost of maintaining high angular momentum in fluid-based time curvature.
-    }
-    \label{fig:radial_time_profile}
+    \includegraphics[width=0.7\linewidth]{RotationalVsHeuristicTimeDilation}
+    \caption{Difference between VAM and GR time dilation for a neutron star ($2\,M_\odot$, $R=10$ km).}
+    \label{fig:comparisonVAMGR}
 \end{figure}
 
-\subsection{Time Dilation from Rotational Inertia}
+\subsection{Interpretation of scale-dependent æther density}
 
-We now ground the heuristic form in physical energetics. For a knot with moment of inertia $I$, the rotational energy is:
+VAM uses a scale-dependent æther density: locally very high ($\sim10^{18}$ kg/m³) for core stability and macroscopically low ($\sim10^{-7}$ kg/m³) to allow inertia-free propagation of interactions. The high density in vortex cores locally enhances the vortex velocity and thus the time dilation significantly, while macroscopically it offers minimal resistance to propagation of effects.
 
-\begin{equation}
-E_{\text{rot}} = \frac{1}{2} I \Omega_k^2\label{eq:rotational_energy}
-\end{equation}
+\subsection{Practical implications and experimental testability}
 
-Thus, the time dilation becomes:
-
-\begin{equation}
-\frac{t_{\text{local}}}{t_{\text{abs}}} = \left(1 + \beta E_{\text{rot}} \right)^{-1} = \left(1 + \frac{1}{2} \beta I \Omega_k^2 \right)^{-1}\label{eq:time_dilation_rotational_energy}
-\end{equation}
-
-This is the key result:
-
-\begin{equation}
-    \boxed{\frac{t_{\text{local}}}{t_{\text{abs}}} = \left(1 + \frac{1}{2} \beta I \Omega_k^2 \right)^{-1}}
-    \label{eq:localtime_vortex}
-\end{equation}
-
-\subsection{Summary of Model Hierarchy}
-
-\begin{itemize}
-\item Pressure-Based (Bernoulli): Time slows in low-pressure zones due to vortex velocity.
-\item Heuristic Angular Model: Time slows proportionally to $\Omega_k^2$.
-\item Energetic Model: Time flow depends on stored rotational energy in the knot.
-\end{itemize}
-
-These form a continuum of physical justification, culminating in a replacement of spacetime curvature with rotational æther mechanics. This establishes the VAM time dilation framework as a fluidic, topologically-conserved analog to GR.
-
-Next, we will explore how these models correspond to GR-like metrics and rotational observers in Section II.
+A practical implication of vortex-induced time dilation is that clocks would run measurably slower close to intense vortex fields. This can be tested theoretically with ultra-precise atomic clocks in laboratory vortex experiments, or indirectly via astrophysical observations of pulsars and neutron stars. The Hafele–Keating experiment provides a direct analogy for time dilation due to motion and height differences, which in VAM corresponds to local vortex variations~\cite{hafele1972around}.

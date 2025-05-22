@@ -2,22 +2,30 @@
 %! Date = 2/15/2025
 
 \documentclass[a4paper, aps,preprint,superscriptaddress, 12pt]{revtex4}
-\usepackage[letterpaper, margin=1in]{geometry}
+\usepackage[paperwidth=210mm, paperheight=297mm, margin=2.5cm]{geometry}
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{makecell}
+\usepackage{tabularx}
+\usepackage[font=footnotesize]{caption}
+\usetikzlibrary{arrows.meta}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
 \usepackage[none]{hyphenat}
 \usepackage{array}
-\usepackage{amsmath, amssymb}
-\usepackage{booktabs, array, multirow}
-\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage[utf8]{inputenc} % Remove if using XeLaTeX or LuaLaTeX
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{physics}
-\usepackage{multirow}
 \usepackage{natbib}
 \usepackage{url}
 \renewcommand{\arraystretch}{1.5}
 \renewcommand{\floatpagefraction}{.8}
 \sloppy
+
 
 \begin{document}
 
@@ -34,21 +42,48 @@
 \email{info@omariskandarani.com}
 
 
+\begin{abstract}
+    This paper presents a fluid dynamical reformulation of general relativity using the Vortex Æther Model (VAM), in which gravity and time dilation arise from vorticity-induced pressure gradients in an incompressible, inviscid superfluid medium. Within a Euclidean space with absolute time, mass and inertia are represented as topologically stable vortex knots, with geodesic motion replaced by streamlines along conserved vorticity flux. Gravitational force is modeled as a Bernoulli potential in vortex fields, with an associated field equation:
+    \begin{equation*}
+        \nabla^2 \Phi_v(\vec{r}) = -\rho_{\ae} \|\boldsymbol{\omega}(\vec{r})\|^2
+    \end{equation*}
+
+    and time dilation follows from local vortex energy:
+    \begin{equation*}
+        \frac{d\tau}{dt} = \sqrt{1 - \frac{C_e^2}{c^2} e^{-r/r_c} - \frac{2G_{\text{swirl}} M_{\text{eff}}(r)}{rc^2} - \beta \Omega^2}
+    \end{equation*}
+
+    VAM introduces a scale-dependent æther density: local (~$10^{18}\,\mathrm{kg/m^3}$) for core stability; macroscopic (~$10^{-7}\,\mathrm{kg/m^3}$) for inertia-free interaction. Thermodynamic consistency is achieved via Clausius entropy of vortex nodes, leading to an entropic interpretation of mass and time. Quantum phenomena such as the photoelectric effect and LENR are interpreted as resonances within vortex networks.
+
+    The model reproduces Newtonian limits and frame-dragging as emergent phenomena and forms a testable, topologically sound alternative to classical gravity models. This approach is consistent with previous analog gravity programs~\cite{barcelo2011analogue,volovik2009universe}, but provides a fundamental hydrodynamical and node-oriented gravity framework.
+\end{abstract}
+
+\maketitle
+
 \input{Swirl_Clocks/00_Introduction}
 \input{Swirl_Clocks/01_Time_Dilation_from_Vortex_Dynamics}
+\input{Swirl_Clocks/02_entropy}
 \input{Swirl_Clocks/02_Time_Modulation_by_Vortex_Knot_Rotation}
 \input{Swirl_Clocks/03_Proper_Time_for_a_Rotating_Observer_in_Æther_Flow}
 \input{Swirl_Clocks/04_Kerr-Like_Time_Adjustment_from_Vorticity_and_Circulation}
 \input{Swirl_Clocks/05_Unified_Framework_and_Synthesis_of_Time_Dilation_in_VAM}
-\input{Swirl_Clocks/06_VAM_Vortex_Scattering_Framework_Inspired_by_Elastic_Theory}
-\input{Swirl_Clocks/07_Experimental_Anchors}
+\input{Swirl_Clocks/06_Applications_of_VAM_to_quantum_and_nuclear_processes}
+\input{Swirl_Clocks/07_VAM_Vortex_Scattering_Framework_Inspired_by_Elastic_Theory}
+\input{Swirl_Clocks/08_Experimental_Anchors}
+\input{Swirl_Clocks/09_VAMvsGR}
 
+\newline
 \bibliography{VAM-ALL-SOURCES}
-\bibliographystyle{unsrtnat}
+\bibliographystyle{unsrt}
 
-\appendix \label{sec:Part-6}
-\input{Swirl_Clocks/appendix_01_Foundations_Velocity_Fields_and_Energies}\label{appendix:1}
-\input{Swirl_Clocks/appendix_02_Integration_of_Clausius_Heat_Theory}\label{appendix:2}
-\input{Swirl_Clocks/appendix_9_TopologicalCharge}\label{appendix:3}
-
+\appendix \label{sec:appendix}
+\input{WervelKlokken/appendix_01_Afleiding_Tijdsdilatie}
+\input{WervelKlokken/appendix_02_Afleiding_gravitatieVeld}
+\input{WervelKlokken/appendix_03_Newtonse_Limieten}
+\input{WervelKlokken/appendix_04_Dynamica_vortexcirculatie_kwantisatie}
+\input{WervelKlokken/appendix_05_Tijdsdilatatie_Vortexenergie_Drukgradiënten}
+\input{WervelKlokken/appendix_06_Parameterafstemming_Limietgedrag}
+\input{WervelKlokken/appendix_07_Foundations_Velocity_Fields_and_Energies}\label{appendix:7}
+\input{WervelKlokken/appendix_08_Integration_of_Clausius_Heat_Theory}\label{appendix:8}
+\input{WervelKlokken/appendix_9_TopologicalCharge}\label{appendix:9}
 \end{document}
