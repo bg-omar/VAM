@@ -1,0 +1,76 @@
+%! Author = omar.iskandarani
+%! Date = 5/22/2025
+
+\section{Topological Charge in the Vortex Æther Model}
+
+\subsection{Motivation from Hopfions and Magnetic Skyrmions}
+
+Recent advances in chiral magnetism have revealed the existence of stable, three-dimensional topological solitons known as \emph{hopfions}, which are ring-shaped, twisted skyrmion strings possessing a conserved topological invariant known as the \emph{Hopf index} $H \in \mathbb{Z}$. These structures are characterized by nontrivial linkings of field lines under maps from $\mathbb{R}^3 \to S^2$, and remain stable due to the Dzyaloshinskii–Moriya interaction (DMI) and micromagnetic constraints \cite{Zheng2023Hopfions}. Analogously, the Vortex Æther Model (VAM) conceptualizes elementary particles as knotted vortex structures in an inviscid, incompressible Æther. We here propose a VAM-compatible topological charge formalism based on fluid helicity and linking theory.
+
+\subsection{Definition of VAM Topological Charge}
+
+Let the Æther be described by a velocity field $\vec{v}(\vec{r})$, with associated vorticity field:
+\begin{equation}
+    \vec{\omega} = \nabla \times \vec{v}.
+\end{equation}
+The \textbf{vortex helicity}, or total linking number of vortex lines, is defined by:
+\begin{equation}
+    H_{\text{vortex}} = \frac{1}{(4\pi)^2} \int_{\mathbb{R}^3} \vec{v} \cdot \vec{\omega} \, d^3x.
+    \label{eq:helicity}
+\end{equation}
+This quantity is conserved in the absence of viscosity and external torques, and represents the Hopf-type linking of vortex tubes in the Æther continuum.
+
+To render this expression dimensionless and suitable for classification, we normalize using the circulation $\Gamma$ and a characteristic length scale $L$:
+\begin{equation}
+    Q_{\text{top}} = \frac{L}{(4\pi)^2 \Gamma^2} \int \vec{v} \cdot \vec{\omega} \, d^3x,
+    \label{eq:qtop}
+\end{equation}
+where $Q_{\text{top}} \in \mathbb{Z}$ is a dimensionless topological charge that classifies stable vortex knots (e.g., trefoils, torus knots).
+
+\subsection{Topological Energy Term in VAM Lagrangian}
+
+We propose to augment the VAM Lagrangian with a topological energy density term derived from Eq.~\eqref{eq:helicity}:
+\begin{equation}
+    \mathcal{L}_{\text{top}} = \frac{C_e^2}{2} \rho_\ae \, \vec{v} \cdot \vec{\omega},
+\end{equation}
+where $\rho_\ae$ is the local Æther density and $C_e$ is the maximum vortex-core tangential velocity. The total energy functional becomes:
+\begin{equation}
+    \mathcal{E}_{\text{VAM}} = \int \left[
+                                        \frac{1}{2} \rho_\ae |\vec{v}|^2
+        + \frac{C_e^2}{2} \rho_\ae \, \vec{v} \cdot \vec{\omega}
+                                        + \Phi_{\text{swirl}} + P(\rho_\ae)
+    \right] d^3x.
+\end{equation}
+Here, $\Phi_{\text{swirl}}$ is the rotational potential (e.g., from pressure gradients), and $P(\rho_\ae)$ captures thermodynamic pressure effects.
+
+\subsection{Quantization and Topological Stability}
+
+Quantization of the helicity ensures stability of knotted structures against perturbations:
+\begin{equation}
+    H_{\text{vortex}} = n H_0, \quad n \in \mathbb{Z},
+\end{equation}
+where $H_0$ is the minimal helicity unit associated with a single trefoil knot. This mirrors quantization conditions in Hopfion solitons and underlies the observed discrete topological spectra in particle states within the VAM framework.
+
+\subsection{Relation to Swirl Clocks and Local Time Dilation}
+
+The swirl-clock formulation of time in VAM is given by:
+\begin{equation}
+    dt = dt_\infty \sqrt{1 - \frac{U_{\text{vortex}}}{U_{\text{max}}}},
+    \quad \text{with} \quad
+    U_{\text{vortex}} = \frac{1}{2} \rho_\ae |\vec{\omega}|^2.
+\end{equation}
+We conjecture that $H_{\text{vortex}}$ contributes to modulations in local temporal flow by adding topological constraints to the rotational energy density, enhancing or restricting local proper time evolution depending on the knotted structure.
+
+\subsection{Outlook}
+
+This formalism allows for a unified topological interpretation of stable mass-energy configurations in VAM, bridging classical fluid helicity, modern soliton theory, and quantized circulation phenomena. Numerical simulations using vortex-based initial conditions and constrained helicity will further validate the proposed topological classification scheme.
+
+\begin{thebibliography}{9}
+
+    \bibitem{Zheng2023Hopfions}
+    F.~Zheng, N.~S. Kiselev, F.~N. Rybakov, L.~Yang, S.~Blügel, and R.~E. Dunin-Borkowski,\\
+    \emph{Hopfion Rings in a Cubic Chiral Magnet},\\
+    \texttt{Nature Communications (preprint)}, (2023).\\
+    \url{https://doi.org/10.1038/s41467-020-15474-8}
+
+\end{thebibliography}
