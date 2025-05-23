@@ -1,0 +1,53 @@
+%! Author = Omar Iskandarani
+%! Date = 5/23/2025
+
+\section{VAM Lagrangian Based on Incompressible Schrödinger Flow}
+
+\subsection{Complex Vortex Waves in Æther}
+
+We model a vortex particle as a normalized two-fold complex wavefunction:
+\[
+    \psi(\vec{r}, t) = \begin{pmatrix} a + ib \\ c + id \end{pmatrix}, \quad |\psi|^2 = 1,
+\]
+from which the spin vector $\vec{s} = (s_1, s_2, s_3)$ and vortex field $\vec{\omega}$ are defined via a Hopf mapping.
+
+\subsection{Lagrangian with Landau–Lifshitz-like term}
+
+We define the VAM wavefunction Lagrangian as:
+\begin{equation}
+    \mathcal{L}_\text{VAM}[\psi] =
+    \frac{i\hbar}{2} \left( \psi^\dagger \partial_t \psi - \psi \partial_t \psi^\dagger \right)
+    - \frac{\hbar^2}{2m} |\nabla \psi|^2
+    - \frac{\alpha}{8} |\nabla \vec{s}|^2,
+\end{equation}
+where:
+\begin{itemize}
+    \item $\hbar$ is replaced by a VAM-conformal quantization constant,
+    \item $\alpha$ is a dimensionless vortex coupling constant,
+    \item $\vec{s}$ is the Hopf spin vector, calculated from $\psi$ via:
+    \[
+        s_1 = a^2 + b^2 - c^2 - d^2, \quad
+        s_2 = 2(bc - ad), \quad
+        s_3 = 2(ac + bd).
+    \]
+\end{itemize}
+
+\subsection{Derivation of the VAM field equation}
+
+Variation with respect to $\psi^*$ yields the modified ISF equation:
+\[
+    i\hbar \frac{\partial \psi}{\partial t} =
+    - \frac{\hbar^2}{2m} \nabla^2 \psi
+    + \frac{\alpha}{4} \frac{\delta}{\delta \psi^*} |\nabla \vec{s}|^2.
+\]
+
+The derived Euler-Lagrange equation contains topological feedback of the nodal structure on the time evolution of the wave.
+
+\subsection{Physical Interpretation}
+
+This formulation allows us to:
+\begin{enumerate}
+    \item Describe quantum superposition of vortex particles; \item Derive VAM time delay from the helicity of $\vec{s}$;
+    \item Coupling stability of vortex nodes to an effective potential \( V(\vec{s}) \sim |\nabla \vec{s}|^2 \);
+    \item Simulate evolution without using classical Navier–Stokes dissipation.
+\end{enumerate}

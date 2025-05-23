@@ -1,0 +1,44 @@
+\section{Split Helicity in the Vortex Æther Model}
+
+\subsection{Motivation and Context}
+
+In classical fluid dynamics, helicity describes the topological complexity of vortex structures. In the Vortex Æther Model (VAM), in which matter is viewed as nodes in a superfluid Æther, helicity is essential for stability, energy distribution, and time dilation.
+
+Based on the work of Tao et al.~\cite{Tao2021}, we split the total helicity $H$ of a vortex tube into two components:
+\begin{equation}
+    H = H_C + H_T,
+\end{equation}
+where:
+\begin{itemize}
+    \item $H_C$: the \textbf{centerline helicity}, associated with the geometric shape of the vortex axis;
+    \item $H_T$: the \textbf{twist helicity}, determined by the rotation of vortex lines around this axis.
+\end{itemize}
+
+\subsection{Formulation of the Helicity Components}
+
+For a vortex tube with vorticity flux $C$ along its central axis, holds:
+\begin{align}
+    H_C &= C^2 \cdot \text{Wr}, \\
+    H_T &= C^2 \cdot \text{Tw}, \\
+    H &= C^2 (\text{Wr} + \text{Tw}),
+\end{align}
+where:
+\begin{itemize}
+    \item $\text{Wr}$: the \textbf{writhe}, a measure of the global curvature and self-coupling of the vortex axis;
+    \item $\text{Tw}$: the \textbf{twist}, a measure of the internal torsion of vortex lines about the axis.
+\end{itemize}
+
+The writhe is calculated as:
+\begin{equation}
+    \text{Wr} = \frac{1}{4\pi} \int_C \int_C \frac{\left(\vec{T}(s) \times \vec{T}(s')\right) \cdot \left(\vec{r}(s) - \vec{r}(s')\right)}{|\vec{r}(s) - \vec{r}(s')|^3} \, ds \, ds',
+\end{equation}
+with $\vec{T}(s)$ the tangent vector of the curve $C$.
+
+\subsection{Application in VAM time dilation}
+
+The split helicity affects the local clock frequency of a vortex particle. We propose:
+\begin{equation}
+    dt = dt_\infty \sqrt{1 - \frac{H_C + H_T}{H_{\text{max}}}} = dt_\infty \sqrt{1 - \frac{C^2 (\text{Wr} + \text{Tw})}{H_{\text{max}}}}.
+\end{equation}
+
+This formulation generalizes the previous energy-based time dilation formula, by explicitly linking topological information to the time course.

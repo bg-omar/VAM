@@ -1,0 +1,53 @@
+\section{Derivation of the vorticity-based gravitational field}
+
+In the Vortex Æther Model (VAM), the æther is modeled as a stationary, incompressible, inviscid fluid with constant mass density~$\rho$. The dynamics of such a medium are described by the stationary Euler equation:
+
+\begin{equation}
+(\vec{v} \cdot \nabla)\vec{v} = -\frac{1}{\rho} \nabla p,
+\end{equation}
+
+where $\vec{v}$ is the velocity field and $p$ is the pressure. To rewrite this expression we use a vector identity:
+
+\begin{equation}
+(\vec{v} \cdot \nabla)\vec{v} = \nabla\left(\frac{1}{2}v^2\right) - \vec{v} \times (\nabla \times \vec{v}) = \nabla\left(\frac{1}{2}v^2\right) - \vec{v} \times \vec{\omega},
+\end{equation}
+
+where $\vec{\omega} = \nabla \times \vec{v}$ is the local vorticity. Substitution yields:
+
+\begin{equation}
+    \nabla\left(\frac{1}{2}v^2\right) - \vec{v} \times \vec{\omega} = -\frac{1}{\rho} \nabla p.
+\end{equation}
+
+We now take the dot product with $\vec{v}$ on both sides:
+
+\begin{equation}
+    \vec{v} \cdot \nabla\left(\frac{1}{2}v^2 + \frac{p}{\rho}\right) = 0.
+\end{equation}
+
+This equation shows that the quantity
+
+\begin{equation}
+    B = \frac{1}{2}v^2 + \frac{p}{\rho}
+\end{equation}
+
+is constant along streamlines, a familiar form of the Bernoulli equation. In regions of high vorticity (such as in vortex cores), $v$ is large and thus $p$ is relatively low. This results in a pressure gradient that behaves as an attractive force—a gravitational analogy within the VAM framework.
+
+We therefore define a vorticity-induced potential $\Phi_v$ such that:
+
+\begin{equation}
+    \vec{F}_g = -\nabla \Phi_v,
+\end{equation}
+
+where the potential is given by:
+
+\begin{equation}
+    \Phi_v(\vec{r}) = \gamma \int \frac{\|\vec{\omega}(\vec{r}')\|^2}{\|\vec{r} - \vec{r}'\|} \, d^3r',
+\end{equation}
+
+with $\gamma$ the vorticity-gravity coupling. This leads to the Poisson-like equation:
+
+\begin{equation}
+    \nabla^2 \Phi_v(\vec{r}) = -\rho \|\vec{\omega}(\vec{r})\|^2,
+\end{equation}
+
+where the role of mass density (as in Newtonian gravitational theory) is replaced by vorticity intensity. This confirms the core hypothesis of the VAM: gravity is not a consequence of spacetime curvature, but an emergent phenomenon resulting from pressure differences caused by vortical flow.

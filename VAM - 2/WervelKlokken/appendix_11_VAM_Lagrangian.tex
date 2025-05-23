@@ -1,0 +1,54 @@
+%! Author = Omar Iskandarani
+%! Date = 5/23/2025
+
+\section{VAM-Lagrangiaan Gebaseerd op Incompressibele Schrödinger Flow}
+
+\subsection{Complexe Vortexgolven in Æther}
+
+We modelleren een vortexdeeltje als een genormaliseerde tweevoudige complexe golffunctie:
+\[
+    \psi(\vec{r}, t) = \begin{pmatrix} a + ib \\ c + id \end{pmatrix}, \quad |\psi|^2 = 1,
+\]
+waaruit de spinvector $\vec{s} = (s_1, s_2, s_3)$ en wervelveld $\vec{\omega}$ worden gedefinieerd via een Hopf-mapping.
+
+\subsection{Lagrangiaan met Landau–Lifshitz-achtige term}
+
+We definiëren de VAM-golffunctie-Lagrangiaan als:
+\begin{equation}
+    \mathcal{L}_\text{VAM}[\psi] =
+    \frac{i\hbar}{2} \left( \psi^\dagger \partial_t \psi - \psi \partial_t \psi^\dagger \right)
+    - \frac{\hbar^2}{2m} |\nabla \psi|^2
+    - \frac{\alpha}{8} |\nabla \vec{s}|^2,
+\end{equation}
+waar:
+\begin{itemize}
+    \item $\hbar$ wordt vervangen door een VAM-conforme kwantisatieconstante,
+    \item $\alpha$ is een dimensieloze vortexkoppelingsconstante,
+    \item $\vec{s}$ de Hopf-spinvector is, berekend uit $\psi$ via:
+    \[
+        s_1 = a^2 + b^2 - c^2 - d^2, \quad
+        s_2 = 2(bc - ad), \quad
+        s_3 = 2(ac + bd).
+    \]
+\end{itemize}
+
+\subsection{Afleiding van de VAM-veldvergelijking}
+
+Via variatie ten opzichte van $\psi^*$ verkrijgen we de gemodificeerde ISF-vergelijking:
+\[
+    i\hbar \frac{\partial \psi}{\partial t} =
+    - \frac{\hbar^2}{2m} \nabla^2 \psi
+    + \frac{\alpha}{4} \frac{\delta}{\delta \psi^*} |\nabla \vec{s}|^2.
+\]
+
+De afgeleide Euler-Lagrange-vergelijking bevat topologische terugkoppeling van de knoopstructuur op de tijdsontwikkeling van de golf.
+
+\subsection{Fysische Interpretatie}
+
+Deze formulering maakt het mogelijk om:
+\begin{enumerate}
+    \item Quantumsuperpositie van vortexdeeltjes te beschrijven;
+    \item VAM-tijdsvertraging af te leiden uit de heliciteit van $\vec{s}$;
+    \item Stabiliteit van vortexknopen te koppelen aan een effectieve potentiaal \( V(\vec{s}) \sim |\nabla \vec{s}|^2 \);
+    \item Evolutie te simuleren zonder gebruik van klassieke Navier–Stokes-dissipatie.
+\end{enumerate}
