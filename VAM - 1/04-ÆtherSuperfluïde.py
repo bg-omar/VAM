@@ -45,6 +45,30 @@ plt.figtext(0.5, -0.05,
             wrap=True, horizontalalignment='center', fontsize=11)
 import os
 script_name = os.path.splitext(os.path.basename(__file__))[0]
+filename = f"{script_name}_nl.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+plt.show()
+
+
+# Plot streamlines
+fig, ax = plt.subplots(figsize=(7, 7))
+strm = ax.streamplot(X, Y, U, V, color='cornflowerblue', linewidth=1, arrowsize=1)
+ax.set_aspect('equal')
+ax.set_title("Superfluid æther in Euclidean space", fontsize=14)
+ax.set_xlabel("x (space coordinate)")
+ax.set_ylabel("y (space coordinate)")
+
+# Add background grid to suggest Euclidean structure
+ax.set_xticks(np.arange(-5, 6, 1))
+ax.set_yticks(np.arange(-5, 6, 1))
+ax.grid(True, linestyle='--', linewidth=0.5, alpha=0.5)
+
+# Caption
+plt.figtext(0.5, -0.05,
+            "A uniform æther current through a Euclidean grid with some vortex structures.",
+            wrap=True, horizontalalignment='center', fontsize=11)
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
 filename = f"{script_name}.png"
 plt.savefig(filename, dpi=150)  # Save image with high resolution
 plt.show()

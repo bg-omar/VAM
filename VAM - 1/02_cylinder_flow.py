@@ -38,5 +38,24 @@ ax.set_ylabel('$y$')
 ax.set_title('Stroming rond een vaste cilinder')
 ax.set_aspect('equal')
 plt.tight_layout()
+plt.savefig("02_cylinder_stroming.png", dpi=300)
+plt.show()
+
+# Plot
+fig, ax = plt.subplots(figsize=(7,5))
+strm = ax.streamplot(X, Y, u, v, color='navy', density=2, linewidth=1)
+
+# Cilinder
+circle = plt.Circle((0, 0), a, color='black', fill=False, linewidth=2)
+ax.add_patch(circle)
+
+# Assen en labels
+ax.set_xlim(-2, 2)
+ax.set_ylim(-2, 2)
+ax.set_xlabel('$x$')
+ax.set_ylabel('$y$')
+ax.set_title('Flow around a fixed cylinder')
+ax.set_aspect('equal')
+plt.tight_layout()
 plt.savefig("02_cylinder_flow.png", dpi=300)
 plt.show()

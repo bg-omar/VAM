@@ -25,15 +25,38 @@ time_dilation = np.clip(time_dilation, 0, 1)  # prevent complex values
 # Create a 3D surface plot
 fig = plt.figure(figsize=(10, 7))
 ax = fig.add_subplot(111, projection='3d')
-
+ax.view_init(elev=15, azim=47)
 surf = ax.plot_surface(R / 1e6, V / 1e3, time_dilation, cmap='viridis', edgecolor='none')
 
 # Labels and titles
 ax.set_title('Gecombineerde Tijdsdilatatie door Ætherinstroom en Orbitale Beweging', fontsize=12)
 ax.set_xlabel('Straal vanaf massamiddelpunt (in $10^6$ meter)', fontsize=10)
 ax.set_ylabel('Orbitale snelheid (km/s)', fontsize=10)
+ax.zaxis.get_major_formatter().set_useOffset(False)
 ax.set_zlabel('dτ/dt (Tijdsdilatatiefactor)', fontsize=10)
 fig.colorbar(surf, ax=ax, shrink=0.5, aspect=10, label='Tijdsdilatatiefactor dτ/dt')
+
+plt.tight_layout()
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+filename = f"{script_name}_nl.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+plt.show()
+
+
+# Create a 3D surface plot
+fig = plt.figure(figsize=(10, 7))
+ax = fig.add_subplot(111, projection='3d')
+ax.view_init(elev=15, azim=47)
+surf = ax.plot_surface(R / 1e6, V / 1e3, time_dilation, cmap='viridis', edgecolor='none')
+
+# Labels and titles
+ax.set_title('Combined Time Dilation by Æther Inflow and Orbital Motion', fontsize=12)
+ax.set_xlabel('Radius from Center of Mass (in $10^6$ meters)', fontsize=10)
+ax.set_ylabel('Orbital Velocity (km/s)', fontsize=10)
+ax.zaxis.get_major_formatter().set_useOffset(False)
+ax.set_zlabel('dτ/dt (Time Dilation Factor)', fontsize=10)
+fig.colorbar(surf, ax=ax, shrink=0.5, aspect=10, label='Time Dilation Factor dτ/dt')
 
 plt.tight_layout()
 import os
