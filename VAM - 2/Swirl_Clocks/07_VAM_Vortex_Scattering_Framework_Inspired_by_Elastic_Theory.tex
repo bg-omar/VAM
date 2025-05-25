@@ -19,7 +19,7 @@ This nonlinear structure implies vortex deformation by stretching and advection.
 Define the linear response operator of VAM \(\mathcal{L}_{ij}\):
 
 \[
-    \mathcal{L}_{ij} \, \delta v_j(\vec{r}) = \delta F_i^{\text{vortex}}(\vec{r})
+    \mathcal{L}_{ij} \, \delta v_j(\vec{r}) = \delta F_i^\text{vortex}(\vec{r})
 \]
 
 \subsubsection*{Green Tensor Vorticity Equation}
@@ -31,7 +31,7 @@ Define the linear response operator of VAM \(\mathcal{L}_{ij}\):
 The induced velocity field \(v_i\) of a source vortex force \(F_k(\vec{r}')\) is then:
 
 \[
-    v_i(\vec{r}) = \int \mathcal{G}_{ik}(\vec{r}, \vec{r}') \, F_k^{\text{vortex}}(\vec{r}') \, d^3 r'
+    v_i(\vec{r}) = \int \mathcal{G}_{ik}(\vec{r}, \vec{r}') \, F_k^\text{vortex}(\vec{r}') \, d^3 r'
 \]
 
 \subsection{Vortex filament interaction}
@@ -42,7 +42,7 @@ Interactions arise from exchange of vortex force or Reconnections between vortex
     \item Interaction strength:
 \end{itemize}
 \begin{equation}
-    \vec{F}_{\text{int}} = \beta \cdot \kappa_1 \kappa_2 \cdot \frac{\vec{r}_{12} \times (\vec{v}_1 - \vec{v}_2)}{|\vec{r}_{12}|^3}\label{eq:interaction_strength}
+    \vec{F}_\text{int} = \beta \cdot \kappa_1 \kappa_2 \cdot \frac{\vec{r}_{12} \times (\vec{v}_1 - \vec{v}_2)}{|\vec{r}_{12}|^3}\label{eq:interaction_strength}
 \end{equation}
 Where \(\kappa_i\) are the circulations of filaments and \(\vec{r}_{12}\) is the vector between them.
 
@@ -76,13 +76,13 @@ Here \(\delta \mathcal{V}_{jk}\) represents a vorticity polarization tensor asso
 \subsubsection*{VAM stress tensor}
 
 \[
-    \mathcal{T}_{ij} = \rho_{\text{\ae}} \, v_i v_j - \frac{1}{2} \delta_{ij} \rho_{\text{\ae}} v^2
+    \mathcal{T}_{ij} = \rho_\text{\ae} \, v_i v_j - \frac{1}{2} \delta_{ij} \rho_\text{\ae} v^2
 \]
 
 \subsubsection*{Æther Vorticity Force Density}
 
 \[
-    f_i^{\text{vortex}} = \partial_j \mathcal{T}_{ij}
+    f_i^\text{vortex} = \partial_j \mathcal{T}_{ij}
 \]
 
 \subsubsection*{Vorticity Energy Flux}
@@ -100,7 +100,7 @@ This vector captures the energy transfer via vortex node interactions and define
 Let the incident vortex field cause a local time delay due to the rotational energy of a node:
 
 \[
-    \frac{t_{\text{local}}}{t_{\infty}} = \left(1 + \frac{1}{2} \beta I \Omega_k^2 \right)^{-1}
+    \frac{t_\text{local}}{t_{\infty}} = \left(1 + \frac{1}{2} \beta I \Omega_k^2 \right)^{-1}
 \]
 
 In the Born approximation, the change in proper time near a node under external vortex flow is:
@@ -108,7 +108,7 @@ In the Born approximation, the change in proper time near a node under external 
 \subsubsection*{Scattered correction due to external field}
 
 \begin{gather*}
-    \delta \left( \frac{t_{\text{local}}}{t_{\infty}} \right) \approx - \frac{1}{2} \beta I \Omega_k \, \delta \Omega_k\\
+    \delta \left( \frac{t_\text{local}}{t_{\infty}} \right) \approx - \frac{1}{2} \beta I \Omega_k \, \delta \Omega_k\\
     \delta \Omega_k \sim \int \chi(\vec{r}_k - \vec{r}') \cdot \vec{\omega}^{(0)}(\vec{r}') \, d^3r'\\
 \end{gather*}
 
@@ -123,9 +123,9 @@ Hier is \(\chi\) de topologische wervelgevoeligheidskern.
         \toprule
         \textbf{Concept} & \textbf{Elastische theorie} & \textbf{VAM-analoog} \\
         \midrule
-        Mediumeigenschap & \( c_{ijkl} \) & \( \rho_{\text{\ae}},\, \Omega_k,\, \kappa \) \\
+        Mediumeigenschap & \( c_{ijkl} \) & \( \rho_\text{\ae},\, \Omega_k,\, \kappa \) \\
         Golfveld & \( u_i \) (verplaatsing) & \( v_i \) (æthersnelheid) \\
-        Bron & \( f_i \) (lichaamskracht) & \( F_i^{\text{vortex}} \) (vorticiteitsforcering) \\
+        Bron & \( f_i \) (lichaamskracht) & \( F_i^\text{vortex} \) (vorticiteitsforcering) \\
         Groene functie & \( G_{ij}(\vec{r}, \vec{r}') \) & \( \mathcal{G}_{ij}(\vec{r}, \vec{r}') \) \\
         Spanningstensor & \( \tau_{ij} \) & \( \mathcal{T}_{ij} \) \\
         Energieflux & \( J_{P,i} = -\tau_{ij} \dot{u}_j \) & \( S_{\omega,i} = -\mathcal{T}_{ij} v_j \) \\

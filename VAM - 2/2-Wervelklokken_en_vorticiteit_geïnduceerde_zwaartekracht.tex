@@ -19,13 +19,14 @@
 \usepackage{array}
 \usepackage{amsmath}
 \usepackage{booktabs}
-\usepackage[utf8x]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{physics}
 \usepackage{natbib}
 \usepackage{url}
+\usepackage{multirow}
 \renewcommand{\arraystretch}{1.5}
 \renewcommand{\floatpagefraction}{.8}
 \sloppy
@@ -34,8 +35,8 @@
 \author{Omar Iskandarani}
 \title{
     Wervelingsklokken en door vorticiteit geïnduceerde zwaartekracht:
-    Relativiteit herformuleren in een gestructureerde vortex-ether\\
-    \textnormal{\normalsize Een topologische vloeistofmechanische benadering van tijdsdilatatie, massa en gravitatie}
+    Relativiteit herformuleren in een gestructureerde vortex-æther\\
+    \textnormal{\normalsize Een topologische vloeistofmechanische benadering van tijddilatatie, massa en gravitatie}
 }
 
 \date{\today}
@@ -46,15 +47,15 @@
 
 
 \begin{abstract}
-Dit artikel presenteert een vloeistofdynamische herformulering van de algemene relativiteit aan de hand van het Vortex Æther Model (VAM), waarin gravitatie en tijdsdilatatie voortkomen uit door vorticiteit geïnduceerde drukgradiënten in een onsamendrukbaar, inviscide superfluïde medium. Binnen een Euclidische ruimte met absolute tijd worden massa en traagheid voorgesteld als topologisch stabiele vortexknopen, waarbij geodetische beweging wordt vervangen door stromingslijnen langs geconserveerde vorticiteitsflux.
+Dit artikel presenteert een vloeistofdynamische herformulering van de algemene relativiteit aan de hand van het Vortex Æther Model (VAM), waarin gravitatie en tijddilatatie voortkomen uit door vorticiteit geïnduceerde drukgradiënten in een onsamendrukbaar, inviscide superfluïde medium. Binnen een Euclidische ruimte met absolute tijd worden massa en traagheid voorgesteld als topologisch stabiele vortexknopen, waarbij geodetische beweging wordt vervangen door stromingslijnen langs geconserveerde vorticiteitsflux.
 Zwaartekracht wordt gemodelleerd als een Bernoulli-potentiaal in vortexvelden, met een bijbehorende veldvergelijking:
 \begin{equation*}
     \nabla^2 \Phi_v(\vec{r}) = -\rho_\text{\ae} \|\boldsymbol{\omega}(\vec{r})\|^2
 \end{equation*}
 
-en tijdsdilatatie volgt uit lokale vortexenergie:
+en tijddilatatie volgt uit lokale vortexenergie:
 \begin{equation*}
-    \frac{d\tau}{dt} = \sqrt{1 - \frac{C_e^2}{c^2} e^{-r/r_c} - \frac{2G_{\text{swirl}} M_{\text{eff}}(r)}{rc^2} - \beta \Omega^2}
+    \frac{d\tau}{dt} = \sqrt{1 - \frac{C_e^2}{c^2} e^{-r/r_c} - \frac{2G_\text{swirl} M_\text{eff}(r)}{rc^2} - \beta \Omega^2}
 \end{equation*}
 
 VAM introduceert een schaalafhankelijke ætherdichtheid: lokaal (~$10^{18}\,\mathrm{kg/m^3}$) voor kernstabiliteit; macroscopisch (~$10^{-7}\,\mathrm{kg/m^3}$) voor inertievrije interactie. Thermodynamische consistentie wordt bereikt via Clausius-entropie van vortexknopen, wat leidt tot een entropische interpretatie van massa en tijd. Kwantumfenomenen zoals het foto-elektrisch effect en LENR worden opgevat als resonanties binnen vortexnetwerken.
@@ -77,10 +78,7 @@ Het model reproduceert Newtonse limieten en frame-dragging als emergente verschi
 \input{WervelKlokken/08_experimentele_ankers}
 \input{WervelKlokken/09_VAMvsGR_Overeenkomstige_Voorspellingen}
 
-\newline
-\bibliography{2-Wervelklokken_en_vorticiteit_geïnduceerde_zwaartekracht}
-\bibliographystyle{unsrt}
-
+\newpage
 \appendix \label{sec:appendix}
     \input{WervelKlokken/appendix_01_Afleiding_Tijdsdilatie}
     \input{WervelKlokken/appendix_02_Afleiding_gravitatieVeld}
@@ -88,9 +86,13 @@ Het model reproduceert Newtonse limieten en frame-dragging als emergente verschi
     \input{WervelKlokken/appendix_04_Dynamica_vortexcirculatie_kwantisatie}
     \input{WervelKlokken/appendix_05_Tijdsdilatatie_Vortexenergie_Drukgradiënten}
     \input{WervelKlokken/appendix_06_Parameterafstemming_Limietgedrag}
-    \input{WervelKlokken/appendix_07_Foundations_Velocity_Fields_and_Energies}\label{appendix:7}
-    \input{WervelKlokken/appendix_08_Integration_of_Clausius_Heat_Theory}\label{appendix:8}
-    \input{WervelKlokken/appendix_09_TopologischeLading}\label{appendix:9}
-    \input{WervelKlokken/appendix_10_GesplitsteHeliciteit}\label{appendix:10}
-    \input{WervelKlokken/appendix_11_VAM_Lagrangian}\label{appendix:11}
+    \input{WervelKlokken/appendix_07_Foundations_Velocity_Fields_and_Energies}
+    \input{WervelKlokken/appendix_08_Integration_of_Clausius_Heat_Theory}
+    \input{WervelKlokken/appendix_09_TopologischeLading}
+    \input{WervelKlokken/appendix_10_GesplitsteHeliciteit}
+    \input{WervelKlokken/appendix_11_VAM_Lagrangian}
+
+\bibliography{2-Wervelklokken_en_vorticiteit_geïnduceerde_zwaartekracht}
+\bibliographystyle{unsrt}
+
 \end{document}

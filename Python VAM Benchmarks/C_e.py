@@ -34,23 +34,23 @@ r_t = 2.8179403227e-15   # Classical electron radius (m) or use Compton waveleng
 omega = 1e23  # Typical vorticity (1/s), refine if needed
 
 # Calculate Æther Density
-rho_aether = (M_e * c**2) / (pi**2 * A_0 * R_e**2 * omega**2)
+rho_æther = (M_e * c**2) / (pi**2 * A_0 * R_e**2 * omega**2)
 
 # Print result
-print(f"Aether Density (ρ_æ): {rho_aether:.3e} kg/m³")
+print(f"Æther Density (ρ_æ): {rho_æther:.3e} kg/m³")
 # Compute Proton Compton Wavelength
 lambda_C_p = h / (M_pr * c)  # Proton Compton wavelength (m)
 # Compute Proton Compton Angular Frequency
 omega_C_p = c / lambda_C_p  # Proton Compton angular frequency (1/s)
 # Calculate Æther Density using toroidal formula
-rho_aether = (M_e * c**2) / (pi**2 * A_0 * R_e**2 * omega_C_p**2)
+rho_æther = (M_e * c**2) / (pi**2 * A_0 * R_e**2 * omega_C_p**2)
 
-rho_aether2 = (M_e * c**2) / (pi**2 * R_c * R_c**2 * (c/lambda_c)**2)
+rho_æther2 = (M_e * c**2) / (pi**2 * R_c * R_c**2 * (c/lambda_c)**2)
 # Print results
 print(f"Proton Compton Wavelength: {lambda_C_p:.3e} m")
 print(f"Proton Compton Angular Frequency (ω_C_p): {omega_C_p:.3e} s⁻¹")
-print(f"Aether Density (ρ_æ): {rho_aether:.3e} kg/m³")
-print(f"Aether Density2 (ρ_æ): {rho_aether2:.3e} kg/m³")
+print(f"Æther Density (ρ_æ): {rho_æther:.3e} kg/m³")
+print(f"Æther Density2 (ρ_æ): {rho_æther2:.3e} kg/m³")
 
 # Vortex Æther Model constants (approximate values, to be refined)
 rho_ae_value = (hbar**2) / (2 * F_max * r_c * lambda_c**2)
@@ -91,10 +91,10 @@ print("f_e = C_e/ (2 * pi * R_c): ", f_e)
 f_e2 = M_e * c**2 / h
 print("f_e = M_e * c**2 / h: ", f_e2)
 
-def calculate_charge_circulation(m_aether, alpha, c, hbar, h, epsilon_0):
+def calculate_charge_circulation(m_æther, alpha, c, hbar, h, epsilon_0):
     """Calculate charge from vortex circulation quantization."""
-    Gamma_1 = h / m_aether
-    k = m_aether * np.sqrt((4 * np.pi * epsilon_0 * alpha * c) / hbar)
+    Gamma_1 = h / m_æther
+    k = m_æther * np.sqrt((4 * np.pi * epsilon_0 * alpha * c) / hbar)
     e_derived = k * Gamma_1
     return e_derived
 
@@ -102,22 +102,22 @@ def calculate_coulomb_force(e_known, epsilon_0, A_0):
     """Calculate Coulomb force at the Bohr radius."""
     return (1 / (4 * np.pi * epsilon_0)) * (e_known**2 / A_0**2)
 
-def calculate_vortex_force(m_aether, alpha, c, hbar, Gamma_1, A_0):
+def calculate_vortex_force(m_æther, alpha, c, hbar, Gamma_1, A_0):
     """Calculate vortex-induced force."""
-    return (m_aether**2 * alpha * c / hbar) * (Gamma_1**2 / A_0**2)
+    return (m_æther**2 * alpha * c / hbar) * (Gamma_1**2 / A_0**2)
 
 def calculate_max_force_scaling(c, G, alpha, L_p, R_c_values):
     """Calculate max force scaling as a function of vortex core radius."""
     return (c**4 / (4 * G)) * alpha * (R_c_values / L_p) ** -2
 
 # Constants
-m_aether = 7.0e-7  # Estimated Æther mass density in kg/m³
+m_æther = 7.0e-7  # Estimated Æther mass density in kg/m³
 
 # Compute values
-e_derived = calculate_charge_circulation(m_aether, alpha, c, hbar, h, varepsilon_0)
+e_derived = calculate_charge_circulation(m_æther, alpha, c, hbar, h, varepsilon_0)
 F_Coulomb_derived = calculate_coulomb_force(e, varepsilon_0, A_0)
-Gamma_1 = h / m_aether
-F_Vortex = calculate_vortex_force(m_aether, alpha, c, hbar, Gamma_1, A_0)
+Gamma_1 = h / m_æther
+F_Vortex = calculate_vortex_force(m_æther, alpha, c, hbar, Gamma_1, A_0)
 F_max_scaling = calculate_max_force_scaling(c, G, alpha, L_p, R_c)
 
 # Display results

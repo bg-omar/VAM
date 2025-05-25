@@ -1,4 +1,5 @@
-\section{Fundamentals of velocity fields and energies in a vortex system.}\label{appendix:7}
+\section{Fundamentals of velocity fields and energies in a vortex system.}
+\label{sec:appendix:7}
 
 \subsection{Introduction}
 Velocity dynamics is a core component of many fluid and plasma systems, including
@@ -22,10 +23,10 @@ which can be used to characterize vortex structures.
 
 To understand the total kinetic energy, we can decompose it as follows:
 \begin{equation}
-   E_{\text{total}} \;=\; E_{\text{self}} \;+\; E_{\text{cross}}.\label{eq:appendix:total-energy}
+   E_\text{total} \;=\; E_\text{self} \;+\; E_\text{cross}.\label{eq:appendix:total-energy}
 \end{equation}
-Here, $E_{\text{self}}$ is the part of the energy that each vortex or substream element contributes independently (e.g., by local vortex motions), while
-$E_{\text{cross}}$ encodes the contributions that arise from the interaction of different
+Here, $E_\text{self}$ is the part of the energy that each vortex or substream element contributes independently (e.g., by local vortex motions), while
+$E_\text{cross}$ encodes the contributions that arise from the interaction of different
 vortex elements. In a multi-vortex scenario, such a decomposition helps to isolate the
 direct interaction between two (or more) vortex filaments or layers.
 
@@ -40,11 +41,11 @@ classical results such as
 \end{equation}
 where $R$ is the radius of the main vortex loop, $a \ll R$ is a measure of the core thickness,
 and $\beta$ depends on the details of the core model \cite{Saffman1992}. The
-\emph{self-energy} associated with that vortex, $E_{\text{self}}$, can be cast in a
+\emph{self-energy} associated with that vortex, $E_\text{self}$, can be cast in a
 similar form that depends on $\ln(R/a)$, illustrating how the energies of thin-core vortices
 scale with geometry.
 
-In more general fluid or vortex-lattice models, we can follow $E_{\text{self}}$ as the
+In more general fluid or vortex-lattice models, we can follow $E_\text{self}$ as the
 sum of the individual core energies. Furthermore, the presence of multiple filaments
 modifies the total energy by the cross terms of the velocity fields (the cross energy). This
 cross energy is often the driving force behind important phenomena such as vortex merging or the `recoil' effects
@@ -59,14 +60,14 @@ When multiple vortices (or partial velocity distributions) coexist, the total ve
 where $\mathbf{u}_1$ and $\mathbf{u}_2$ come from different subsystems. In that
 scenario is the kinetic energy for a fluid volume $V$
 \begin{align}
-   E_{\text{total}} &= \frac{\rho}{2} \int_V \mathbf{u}^2 \,dV
+   E_\text{total} &= \frac{\rho}{2} \int_V \mathbf{u}^2 \,dV
    = \frac{\rho}{2} \int_V \bigl(\mathbf{u}_1 + \mathbf{u}_2 \bigr)^2\, dV \\
    &= \frac{\rho}{2} \int_V \mathbf{u}_1^2 \,dV \;+\;\frac{\rho}{2} \int_V \mathbf{u}_2^2 \,dV
    \;+\;\rho \int_V \mathbf{u}_1 \cdot \mathbf{u}_2 \, dV,
 \end{align}
 disclosure of an interaction or \emph{cross energy} term
 \begin{equation}
-   E_{\text{cross}} \;=\; \rho \int_V \mathbf{u}_1 \cdot \mathbf{u}_2 \, dV.
+   E_\text{cross} \;=\; \rho \int_V \mathbf{u}_1 \cdot \mathbf{u}_2 \, dV.
    \label{eq:cross-term}
 \end{equation}
 
@@ -83,7 +84,7 @@ connections) of vortex tubes. Classically, helicity $H$ is given by
    H \;=\; \int_V \mathbf{u} \cdot \boldsymbol{\omega}\, dV,\label{eq:appendix:helicity}
 \end{equation}
 which can remain constant or be partially lost during reconnection events. In certain
-dissipative flows, the cross-energy terms in \eqref{eq:cross-term} can affect the effective rate of helicity change. Understanding $E_{\text{cross}}$ is important
+dissipative flows, the cross-energy terms in \eqref{eq:cross-term} can affect the effective rate of helicity change. Understanding $E_\text{cross}$ is important
 for analyzing reconnection paths in classical or superfluid turbulence.
 
 \subsection{Derivation scheme for cross-energy}
@@ -91,7 +92,7 @@ for analyzing reconnection paths in classical or superfluid turbulence.
 Finally, we give a concise scheme for deriving the expression for cross-energy. Starting with the total velocity field $\mathbf{u} = \sum_{n=1}^N \mathbf{u}_n$
 for $N$ eddy or partial velocity fields the total kinetic energy is:
 \begin{equation}
-   E_{\text{total}}
+   E_\text{total}
    = \frac{\rho}{2} \int_V \left(\sum_{n=1}^N \mathbf{u}_n \right)^2 dV
    = \frac{\rho}{2} \sum_{n=1}^N \int_V \mathbf{u}_n^2 \, dV
    \;+\;\rho \sum_{n<m} \int_V \mathbf{u}_n \cdot \mathbf{u}_m \, dV.\label{eq:appendix:total-energy-derivation}
@@ -99,7 +100,7 @@ for $N$ eddy or partial velocity fields the total kinetic energy is:
 One obtains $N$ self-energy terms plus pairwise cross-energy integrals.
 The cross energy for a pair $(i,j)$ is:
 \begin{equation}
-   E_{\text{cross}}^{(ij)} \;=\; \rho \int_V \mathbf{u}_i \cdot \mathbf{u}_j \, dV.\label{eq:appendix:cross-energy-derivation}
+   E_\text{cross}^{(ij)} \;=\; \rho \int_V \mathbf{u}_i \cdot \mathbf{u}_j \, dV.\label{eq:appendix:cross-energy-derivation}
 \end{equation}
 In practice, each $\mathbf{u}_n$ can be represented by known solutions of the Stokes or potential-current equations, or by approximate solutions for vortex loops. Next, one obtains, analytically or numerically, approximate cross energies
 that can be used in reduced models describing the evolution of multi-vortex systems.

@@ -11,7 +11,7 @@ dil = np.sqrt(1 - v_rel**2 / c**2)
 # Plot
 fig, ax = plt.subplots(figsize=(8, 5))
 ax.plot(v_rel, dil, color='darkorange', linewidth=2)
-ax.set_title(r"Universele tijdsdilatatie: $\frac{d\tau}{dt} = \sqrt{1 - \frac{|\vec{v}_{\mathrm{rel}}|^2}{c^2}}$", fontsize=14)
+ax.set_title(r"Universele tijddilatatie: $\frac{d\tau}{dt} = \sqrt{1 - \frac{|\vec{v}_{\mathrm{rel}}|^2}{c^2}}$", fontsize=14)
 ax.set_xlabel(r"$|\vec{v}_{\mathrm{rel}}|$ (relatieve snelheid t.o.v. æther)", fontsize=12)
 ax.set_ylabel(r"$\frac{d\tau}{dt}$ (kloksnelheid)", fontsize=12)
 ax.grid(True)

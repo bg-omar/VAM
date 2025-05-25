@@ -1,10 +1,10 @@
 \section{Time dilation from vortex dynamics}
 
-We consider an invisible, irrotational superfluid æther with stable topological vortex nodes. Absolute time $t_{\text{abs}}$ flows at a constant rate, while local clocks may experience a lower rate due to pressure gradients and nodal energetics. The Vortex Æther Model assumes that the rate at which time flows in the local frame (near the node) depends on the internal angular frequency $\Omega_k$. In this section, we derive time dilation analogues, inspired by the predictions of general relativity (GR), based solely on pressure and vorticity gradients in the fluid.
+We consider an invisible, irrotational superfluid æther with stable topological vortex nodes. Absolute time $t_\text{abs}$ flows at a constant rate, while local clocks may experience a lower rate due to pressure gradients and nodal energetics. The Vortex Æther Model assumes that the rate at which time flows in the local frame (near the node) depends on the internal angular frequency $\Omega_k$. In this section, we derive time dilation analogues, inspired by the predictions of general relativity (GR), based solely on pressure and vorticity gradients in the fluid.
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.85\textwidth]{streamlinesDiPole}
+    \includegraphics[width=0.85\textwidth]{01-streamlinesDiPole}
     \caption{Velocity streamlines, vorticity, pressure and local time velocity $\tau$ for a simulated vortex pair. The pressure minimum and the time delay clearly correspond to the regions of high vorticity. This immediately illustrates the central claim of the Æther model: time dilation follows from vortex energetics and pressure reduction.}
     \label{fig:vortexfields}
 \end{figure}
@@ -17,6 +17,22 @@ The fundamental link between local vortex velocity and local time measurement fo
 \end{equation}
 
 Where $v_{\phi}(r)$ is the tangential velocity of the æther medium at distance $r$ from the center of the vortex, and $c$ is the speed of light. This is a direct analogy with the special relativistic velocity-dependent time dilation, but without spacetime curvature and caused solely by local rotation of the æther medium.
+
+To visualize the outer behavior of time dilation predicted by the heuristic vortex-induced model, we extend the radial domain up to macroscopic femtometer scales. This reveals the asymptotic behavior of time rate restoration in the far-field, confirming agreement with known gravitational time dilation decay profiles.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{06-HeuristicTimeDilation4}
+    \caption{
+        Zoomed radial profile of vortex-induced time dilation near the core.
+        This heuristic plot illustrates how the normalized local clock rate
+        $\frac{d\tau}{dt}$ rapidly increases with distance $r$ away from the core,
+        approaching unity asymptotically. This directly visualizes the effect of
+        tangential vortex velocity $v_\varphi(r) \sim \kappa / r$ on the local time flow,
+        as predicted by equation~(5).
+    }
+    \label{fig:HeuristicTimeDilation}
+\end{figure}
 
 \subsection{Derivation from vortex hydrodynamics}
 
@@ -37,6 +53,13 @@ where $\Gamma$ is the circulation constant, and $\kappa$ is the circulation quan
 
 This explicitly expresses the time dilation in fundamental vortex parameters.
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{02-RadialProfileOfLocalTimeDilation_Radial_LocalTime_Dilation}
+  \caption{Radial time dilation profile due to vortex swirl velocity \( v_\varphi(r) = \kappa / r \). The reduction in local clock rate \(\frac{d\tau}{dt}\) scales with \(1/r^2\), and asymptotically approaches 1 at large distances.}
+  \label{fig:radial_time_dilation}
+\end{figure}
+
 \subsection{Comparison with general relativity}
 
 For comparison, in general relativity (GR), gravitational time dilation arises from spacetime curvature, expressed by the Schwarzschild metric~\cite{schutz2009first}:
@@ -48,20 +71,20 @@ The similarities and differences are immediately apparent: GR's gravitational ti
 
 \begin{figure}[ht!]
     \centering
-    \includegraphics[width=0.7\linewidth]{RadialProfileOfLocalTimeDilation_Vortex-Induced_Time_Well}
+    \includegraphics[width=0.7\linewidth]{02-RadialProfileOfLocalTimeDilation_Vortex-Induced_Time_Well}
     \caption{Comparison of VAM (vortex dynamics) and GR time dilation, as a function of distance to vortex core and Schwarzschild radius.}
     \label{fig:vergelijking_VAMGR}
 \end{figure}
 
-In Figure~\ref{fig:vergelijkingVAMGR} we see that VAM time dilation is functionally comparable to GR prediction at sufficient distance. At decreasing distance (near vortex core or Schwarzschild radius) differences arise due to vortex-specific effects and topological node structures.
+In Figure~\ref{fig:vergelijking_VAMGR} we see that VAM time dilation is functionally comparable to GR prediction at sufficient distance. At decreasing distance (near vortex core or Schwarzschild radius) differences arise due to vortex-specific effects and topological node structures.
 
 In summary, the VAM replaces spacetime curvature with eddy dynamics, while preserving measurable time dilation effects consistent with established experimental results such as Hafele–Keating~\cite{hafele1972around}, but from a fundamentally different physical explanation.
 
-For illustration, in Figure~\ref{fig:vergelijkingVAMGR} we explicitly compare VAM and GR for a neutron star with $M = 2\,M_\odot$ and radius $R = 10\,\text{km}$. The differences become clear near the surface of the object, where vortex-specific effects occur.
+For illustration, in Figure~\ref{fig:comparisonVAMGR} we explicitly compare VAM and GR for a neutron star with $M = 2\,M_\odot$ and radius $R = 10\,\text{km}$. The differences become clear near the surface of the object, where vortex-specific effects occur.
 
 \begin{figure}[ht!]
     \centering
-    \includegraphics[width=0.7\linewidth]{RotationalVsHeuristicTimeDilation}
+    \includegraphics[width=0.7\linewidth]{04-RotationalVsHeuristicTimeDilation}
     \caption{Difference between VAM and GR time dilation for a neutron star ($2\,M_\odot$, $R=10$ km).}
     \label{fig:comparisonVAMGR}
 \end{figure}
@@ -73,3 +96,10 @@ VAM uses a scale-dependent æther density: locally very high ($\sim10^{18}$ kg/m
 \subsection{Practical implications and experimental testability}
 
 A practical implication of vortex-induced time dilation is that clocks would run measurably slower close to intense vortex fields. This can be tested theoretically with ultra-precise atomic clocks in laboratory vortex experiments, or indirectly via astrophysical observations of pulsars and neutron stars. The Hafele–Keating experiment provides a direct analogy for time dilation due to motion and height differences, which in VAM corresponds to local vortex variations~\cite{hafele1972around}.
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.7\linewidth]{05-LogarithmicDecayLocalTime}
+    \caption{Extended radial time dilation profile with $\Omega_k \propto 1/r^2$, showing deep time well characteristics of vortex fields at large radius.}
+    \label{fig:NewGraph}
+\end{figure}

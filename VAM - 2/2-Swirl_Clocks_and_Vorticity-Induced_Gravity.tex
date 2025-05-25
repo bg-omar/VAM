@@ -19,7 +19,7 @@
 \usepackage{array}
 \usepackage{amsmath}
 \usepackage{booktabs}
-\usepackage[utf8x]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{hyperref}
@@ -54,7 +54,7 @@
 
     and time dilation follows from local vortex energy:
     \begin{equation*}
-        \frac{d\tau}{dt} = \sqrt{1 - \frac{C_e^2}{c^2} e^{-r/r_c} - \frac{2G_{\text{swirl}} M_{\text{eff}}(r)}{rc^2} - \beta \Omega^2}
+        \frac{d\tau}{dt} = \sqrt{1 - \frac{C_e^2}{c^2} e^{-r/r_c} - \frac{2G_\text{swirl} M_\text{eff}(r)}{rc^2} - \beta \Omega^2}
     \end{equation*}
 
     VAM introduces a scale-dependent æther density: local (~$10^{18}\,\mathrm{kg/m^3}$) for core stability; macroscopic (~$10^{-7}\,\mathrm{kg/m^3}$) for inertia-free interaction. Thermodynamic consistency is achieved via Clausius entropy of vortex nodes, leading to an entropic interpretation of mass and time. Quantum phenomena such as the photoelectric effect and LENR are interpreted as resonances within vortex networks.
@@ -76,20 +76,21 @@
 \input{Swirl_Clocks/08_Experimental_Anchors}
 \input{Swirl_Clocks/09_VAMvsGR}
 
-\newline
+\newpage
+\appendix \label{sec:appendix}
+    \input{Swirl_Clocks/appendix_01_Derivation_TimeDilation}
+    \input{Swirl_Clocks/appendix_02_Derivation_GravitationalField}
+    \input{Swirl_Clocks/appendix_03_Newtonian_Limits}
+    \input{Swirl_Clocks/appendix_04_DynamicsVortexCirculationQuantization}
+    \input{Swirl_Clocks/appendix_05_TimeDilationVortexEnergyPressureGradients}
+    \input{Swirl_Clocks/appendix_06_ParameterTuningLimitBehavior}
+    \input{Swirl_Clocks/appendix_07_Foundations_Velocity_Fields_and_Energies}
+    \input{Swirl_Clocks/appendix_08_Integration_of_Clausius_Heat_Theory}
+    \input{Swirl_Clocks/appendix_09_TopologicalCharge}
+    \input{Swirl_Clocks/appendix_10_SplitHelicity}
+    \input{Swirl_Clocks/appendix_11_VAM_Lagrangian}
+
 \bibliography{2-Swirl_Clocks_and_Vorticity-Induced_Gravity}
 \bibliographystyle{unsrt}
 
-\appendix \label{sec:appendix}
-\input{Swirl_Clocks/appendix_01_Derivation_TimeDilation}
-\input{Swirl_Clocks/appendix_02_Derivation_GravitationalField}
-\input{Swirl_Clocks/appendix_03_Newtonian_Limits}
-\input{Swirl_Clocks/appendix_04_DynamicsVortexCirculationQuantization}
-\input{Swirl_Clocks/appendix_05_TimeDilationVortexEnergyPressureGradients}
-\input{Swirl_Clocks/appendix_06_ParameterTuningLimitBehavior}
-\input{Swirl_Clocks/appendix_07_Foundations_Velocity_Fields_and_Energies}
-\input{Swirl_Clocks/appendix_08_Integration_of_Clausius_Heat_Theory}
-\input{Swirl_Clocks/appendix_09_TopologicalCharge}
-\input{Swirl_Clocks/appendix_10_SplitHelicity}
-\input{Swirl_Clocks/appendix_11_VAM_Lagrangian}
 \end{document}

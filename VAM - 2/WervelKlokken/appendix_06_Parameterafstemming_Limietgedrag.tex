@@ -1,30 +1,30 @@
 %! Author = Omar Iskandarani
 %! Date = 5/4/2025
-\section{Parameterafstemming en limietgedrag}
+\section{Parameterafstemming en limietgedrag}\label{sec:appendix_6}
 
-Om de vergelijkingen van het Vortex Æther Model (VAM) in overeenstemming te brengen met klassieke zwaartekracht, moeten de modelparameters zodanig afgesteld worden dat ze bekende fysische constanten reproduceren in de juiste limieten. In deze sectie leiden we de effectieve gravitatieconstante $G_{\text{swirl}}$ af en analyseren we het gedrag van het zwaartekrachtsveld voor $r \to \infty$.
+Om de vergelijkingen van het Vortex Æther Model (VAM) in overeenstemming te brengen met klassieke zwaartekracht, moeten de modelparameters zodanig afgesteld worden dat ze bekende fysische constanten reproduceren in de juiste limieten. In deze sectie leiden we de effectieve gravitatieconstante $G_\text{swirl}$ af en analyseren we het gedrag van het zwaartekrachtsveld voor $r \to \infty$.
 
-\subsection{Afleiding van $G_{\text{swirl}}$ uit wervelparameters}
+\subsection{Afleiding van $G_\text{swirl}$ uit wervelparameters}
 
 De VAM-potentiaal is gegeven door:
 
 \begin{equation}
-\Phi_v(\vec{r}) = G_{\text{swirl}} \int \frac{\|\vec{\omega}(\vec{r}')\|^2}{\|\vec{r} - \vec{r}'\|} \, d^3r',
+\Phi_v(\vec{r}) = G_\text{swirl} \int \frac{\|\vec{\omega}(\vec{r}')\|^2}{\|\vec{r} - \vec{r}'\|} \, d^3r',
 \end{equation}
 
-waarbij $G_{\text{swirl}}$ moet voldoen aan een dimensionele en fysisch consistente relatie met fundamentele wervelparameters. In termen van:
+waarbij $G_\text{swirl}$ moet voldoen aan een dimensionele en fysisch consistente relatie met fundamentele wervelparameters. In termen van:
 
 \begin{itemize}
   \item $C_e$: tangentiële snelheid aan de wervelkern,
   \item $r_c$: wervelkernstraal,
   \item $t_p$: Planck-tijd,
-  \item $F_{\text{max}}$: maximale kracht in ætherinteracties,
+  \item $F_\text{max}$: maximale kracht in ætherinteracties,
 \end{itemize}
 
 leiden we af:
 
 \begin{equation}
-G_{\text{swirl}} = \frac{C_e c^5 t_p^2}{2 F_{\text{max}} r_c^2}.
+G_\text{swirl} = \frac{C_e c^5 t_p^2}{2 F_\text{max} r_c^2}.
 \end{equation}
 
 Deze expressie volgt uit dimensie-analyse en matching van de VAM-veldvergelijkingen met de Newtonse limiet (zie ook [Iskandarani, 2025]).
@@ -34,26 +34,26 @@ Deze expressie volgt uit dimensie-analyse en matching van de VAM-veldvergelijkin
 Voor grote afstanden buiten een compacte wervelconfiguratie geldt:
 
 \begin{equation}
-\Phi_v(r) = G_{\text{swirl}} \int \frac{\|\vec{\omega}(\vec{r}')\|^2}{|\vec{r} - \vec{r}'|} d^3r' \approx \frac{G_{\text{swirl}}}{r} \int \|\vec{\omega}(\vec{r}')\|^2 d^3r'.
+\Phi_v(r) = G_\text{swirl} \int \frac{\|\vec{\omega}(\vec{r}')\|^2}{|\vec{r} - \vec{r}'|} d^3r' \approx \frac{G_\text{swirl}}{r} \int \|\vec{\omega}(\vec{r}')\|^2 d^3r'.
 \end{equation}
 
 Definieer de \textbf{effectieve massa} van het wervelobject als:
 
 \begin{equation}
-M_{\text{eff}} = \frac{1}{\rho_{\text{æ}}} \int \rho_{\text{æ}} \|\vec{\omega}(\vec{r}')\|^2 d^3r' = \int \|\vec{\omega}(\vec{r}')\|^2 d^3r'.
+M_\text{eff} = \frac{1}{\rho_\text{æ}} \int \rho_\text{æ} \|\vec{\omega}(\vec{r}')\|^2 d^3r' = \int \|\vec{\omega}(\vec{r}')\|^2 d^3r'.
 \end{equation}
 
 Daarmee wordt:
 
 \begin{equation}
-\Phi_v(r) \to -\frac{G_{\text{swirl}} M_{\text{eff}}}{r},
+\Phi_v(r) \to -\frac{G_\text{swirl} M_\text{eff}}{r},
 \end{equation}
 
-wat identiek is aan de Newtonse potentiaal mits $M_{\text{eff}} \approx M_{\text{grav}}$ en $G_{\text{swirl}} \approx G$.
+wat identiek is aan de Newtonse potentiaal mits $M_\text{eff} \approx M_\text{grav}$ en $G_\text{swirl} \approx G$.
 
-\subsection{Relatie tussen $M_{\text{eff}}$ en geobserveerde massa}
+\subsection{Relatie tussen $M_\text{eff}$ en geobserveerde massa}
 
-De effectieve massa $M_{\text{eff}}$ is geen directe massa-inhoud zoals in klassieke fysica, maar weerspiegelt de geïntegreerde vorticiteitenergie in de æther:
+De effectieve massa $M_\text{eff}$ is geen directe massa-inhoud zoals in klassieke fysica, maar weerspiegelt de geïntegreerde vorticiteitenergie in de æther:
 
 \begin{equation}
   M_\text{eff} \propto \int \frac{1}{2} \rho_\text{æ} \|\vec{v}(\vec{r})\|^2 d^3r.
@@ -62,15 +62,15 @@ De effectieve massa $M_{\text{eff}}$ is geen directe massa-inhoud zoals in klass
 In VAM wordt deze massa geassocieerd met een topologisch stabiele wervelknoop (zoals een trefoil voor het elektron) en dus kwantitatief:
 
 \begin{equation}
-M_{\text{eff}} = \alpha \cdot \rho_{\text{æ}} C_e r_c^3 \cdot L_k,
+M_\text{eff} = \alpha \cdot \rho_\text{æ} C_e r_c^3 \cdot L_k,
 \end{equation}
 
-waarbij $L_k$ de linking number is van de knoop en $\alpha$ een vormfactor. Door afstemming van $C_e$, $r_c$ en $\rho_{\text{æ}}$ op bekende massa’s (bijv. van het elektron of de aarde), kan VAM de klassieke massa exact reproduceren:
+waarbij $L_k$ de linking number is van de knoop en $\alpha$ een vormfactor. Door afstemming van $C_e$, $r_c$ en $\rho_\text{æ}$ op bekende massa’s (bijv. van het elektron of de aarde), kan VAM de klassieke massa exact reproduceren:
 
 \begin{equation}
-M_{\text{eff}} \overset{!}{=} M_{\text{obs}}.
+M_\text{eff} \overset{!}{=} M_\text{obs}.
 \end{equation}
 
 \subsection{Conclusie}
 
-Door parameterafstemming voldoet $G_{\text{swirl}}$ aan klassieke limieten en levert VAM een zwaartekrachtsveld dat bij grote afstanden overeenkomt met Newtonse gravitatie. De effectieve massa $M_{\text{eff}}$ fungeert als bronterm, analoog aan de rol van $M$ in Newton en GR.
+Door parameterafstemming voldoet $G_\text{swirl}$ aan klassieke limieten en levert VAM een zwaartekrachtsveld dat bij grote afstanden overeenkomt met Newtonse gravitatie. De effectieve massa $M_\text{eff}$ fungeert als bronterm, analoog aan de rol van $M$ in Newton en GR.

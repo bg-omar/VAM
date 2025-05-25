@@ -1,4 +1,5 @@
 \section{Grondslagen van snelheidsvelden en energieën in een wervelsysteem.}
+\label{sec:appendix_7}
 
 \subsection{Inleiding}
 Werveldynamica is een kerncomponent van veel vloeistof- en plasmasystemen, waaronder
@@ -22,10 +23,10 @@ die kan worden gebruikt om wervelstructuren te karakteriseren.
 
 Om de totale kinetische energie te begrijpen, kunnen we deze als volgt opsplitsen:
 \begin{equation}
-E_{\text{totaal}} \;=\; E_{\text{zelf}} \;+\; E_{\text{kruis}}.\label{eq:appendix:totale-energie}
+E_\text{totaal} \;=\; E_\text{zelf} \;+\; E_\text{kruis}.\label{eq:appendix:totale-energie}
 \end{equation}
-Hier is $E_{\text{zelf}}$ het deel van de energie dat elk wervel- of deelstroomelement onafhankelijk bijdraagt (bijvoorbeeld door lokale wervelbewegingen), terwijl
-$E_{\text{kruis}}$ de bijdragen codeert die voortkomen uit de interactie van verschillende
+Hier is $E_\text{zelf}$ het deel van de energie dat elk wervel- of deelstroomelement onafhankelijk bijdraagt (bijvoorbeeld door lokale wervelbewegingen), terwijl
+$E_\text{kruis}$ de bijdragen codeert die voortkomen uit de interactie van verschillende
 wervelelementen. In een multi-wervelscenario helpt een dergelijke decompositie om de
 directe interactie tussen twee (of meer) wervelfilamenten of -lagen te isoleren.
 
@@ -40,11 +41,11 @@ V \;=\; \frac{\Gamma}{4 \pi R}
 \end{equation}
 waarbij $R$ de straal van de hoofdwervellus is, $a \ll R$ een maat is voor de kerndikte,
 en $\beta$ afhangt van de details van het kernmodel \cite{Saffman1992}. De
-\emph{zelfenergie} die aan die wervel is gekoppeld, $E_{\text{self}}$, kan in een
+\emph{zelfenergie} die aan die wervel is gekoppeld, $E_\text{self}$, kan in een
 vergelijkbare vorm worden gegoten die afhankelijk is van $\ln(R/a)$, wat illustreert hoe de energieën van dunnekernwervelen
 schalen met de geometrie.
 
-In meer algemene vloeistof- of wervelroostermodellen kunnen we $E_{\text{self}}$ volgen als de
+In meer algemene vloeistof- of wervelroostermodellen kunnen we $E_\text{self}$ volgen als de
 som van de individuele kernenergieën. Bovendien wijzigt de aanwezigheid van meerdere filamenten
 de totale energie door de kruistermen van de snelheidsvelden (de kruisenergie). Deze
 kruisenergie is vaak de drijvende kracht achter belangrijke fenomenen zoals het samensmelten van wervels of de `terugslag'-effecten
@@ -59,14 +60,14 @@ Wanneer meerdere wervelingen (of gedeeltelijke snelheidsverdelingen) naast elkaa
 waarbij $\mathbf{u}_1$ en $\mathbf{u}_2$ afkomstig zijn van verschillende subsystemen. In dat
 scenario is de kinetische energie voor een vloeistofvolume $V$
 \begin{align}
-E_{\text{total}} &= \frac{\rho}{2} \int_V \mathbf{u}^2 \,dV
+E_\text{total} &= \frac{\rho}{2} \int_V \mathbf{u}^2 \,dV
 = \frac{\rho}{2} \int_V \bigl(\mathbf{u}_1 + \mathbf{u}_2 \bigr)^2\, dV \\
 &= \frac{\rho}{2} \int_V \mathbf{u}_1^2 \,dV \;+\;\frac{\rho}{2} \int_V \mathbf{u}_2^2 \,dV
 \;+\;\rho \int_V \mathbf{u}_1 \cdot \mathbf{u}_2 \, dV,
 \end{align}
 onthulling van een interactie of \emph{kruisenergie} term
 \begin{equation}
-E_{\text{cross}} \;=\; \rho \int_V \mathbf{u}_1 \cdot \mathbf{u}_2 \, dV.
+E_\text{cross} \;=\; \rho \int_V \mathbf{u}_1 \cdot \mathbf{u}_2 \, dV.
 \label{eq:cross-term}
 \end{equation}
 Veel van de interessante natuurkunde komt voort uit \eqref{eq:cross-term}, omdat deze
@@ -82,7 +83,7 @@ verbindingen) van wervelbuizen wordt gemeten. Klassiek wordt heliciteit $H$ gege
 H \;=\; \int_V \mathbf{u} \cdot \boldsymbol{\omega}\, dV,\label{eq:appendix:helicity}
 \end{equation}
 die constant kan blijven of gedeeltelijk verloren kan gaan tijdens herverbindingsgebeurtenissen. In bepaalde
-dissipatieve stromingen kunnen de kruisenergietermen in \eqref{eq:cross-term} de effectieve snelheid van heliciteitsverandering beïnvloeden. Het begrijpen van $E_{\text{cross}}$ is belangrijk
+dissipatieve stromingen kunnen de kruisenergietermen in \eqref{eq:cross-term} de effectieve snelheid van heliciteitsverandering beïnvloeden. Het begrijpen van $E_\text{cross}$ is belangrijk
 voor het analyseren van herverbindingspaden in klassieke of superfluïde turbulentie.
 
 \subsection{Afleidingsschema voor kruisenergie}
@@ -90,7 +91,7 @@ voor het analyseren van herverbindingspaden in klassieke of superfluïde turbule
 Ten slotte geven we een beknopt schema voor het afleiden van de uitdrukking voor kruisenergie. Beginnend met het totale snelheidsveld $\mathbf{u} = \sum_{n=1}^N \mathbf{u}_n$
 voor $N$ wervel- of partiële snelheidsvelden is de totale kinetische energie:
 \begin{equation}
-E_{\text{totaal}}
+E_\text{totaal}
 = \frac{\rho}{2} \int_V \left(\sum_{n=1}^N \mathbf{u}_n \right)^2 dV
 = \frac{\rho}{2} \sum_{n=1}^N \int_V \mathbf{u}_n^2 \, dV
 \;+\;\rho \sum_{n<m} \int_V \mathbf{u}_n \cdot \mathbf{u}_m \, dV.\label{eq:appendix:total-energy-derivation}
@@ -98,7 +99,7 @@ E_{\text{totaal}}
 Men verkrijgt $N$ zelfenergietermen plus paarsgewijze kruisenergie-integralen.
 De kruisenergie voor een paar $(i,j)$ is:
 \begin{equation}
-E_{\text{cross}}^{(ij)} \;=\; \rho \int_V \mathbf{u}_i \cdot \mathbf{u}_j \, dV.\label{eq:appendix:cross-energy-derivation}
+E_\text{cross}^{(ij)} \;=\; \rho \int_V \mathbf{u}_i \cdot \mathbf{u}_j \, dV.\label{eq:appendix:cross-energy-derivation}
 \end{equation}
 In de praktijk kan elke $\mathbf{u}_n$ worden weergegeven door bekende oplossingen van de
 Stokes- of potentiaalstroomvergelijkingen, of door benaderde oplossingen voor wervellussen. Vervolgens verkrijgt men, analytisch of numeriek, benaderde kruisenergieën

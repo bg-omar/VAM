@@ -19,7 +19,7 @@ Deze niet-lineaire structuur impliceert wervelvervorming door uitrekking en adve
 Definieer de lineaire responsoperator van VAM \(\mathcal{L}_{ij}\):
 
 \[
-\mathcal{L}_{ij} \, \delta v_j(\vec{r}) = \delta F_i^{\text{wervel}}(\vec{r})
+\mathcal{L}_{ij} \, \delta v_j(\vec{r}) = \delta F_i^\text{wervel}(\vec{r})
 \]
 
 \subsubsection*{Vorticiteit Groene Tensor Vergelijking}
@@ -31,7 +31,7 @@ Definieer de lineaire responsoperator van VAM \(\mathcal{L}_{ij}\):
 Het geïnduceerde snelheidsveld \(v_i\) van een bronwervelkracht \(F_k(\vec{r}')\) is dan:
 
 \[
-v_i(\vec{r}) = \int \mathcal{G}_{ik}(\vec{r}, \vec{r}') \, F_k^{\text{wervel}}(\vec{r}') \, d^3 r'
+v_i(\vec{r}) = \int \mathcal{G}_{ik}(\vec{r}, \vec{r}') \, F_k^\text{wervel}(\vec{r}') \, d^3 r'
 \]
 
 \subsection{Wisselwerking werveldraad}
@@ -42,7 +42,7 @@ Interacties ontstaan door uitwisseling van wervelkracht of Herverbindingen tusse
 \item Interactiesterkte:
 \end{itemize}
 \begin{equation}
-\vec{F}_{\text{int}} = \beta \cdot \kappa_1 \kappa_2 \cdot \frac{\vec{r}_{12} \times (\vec{v}_1 - \vec{v}_2)}{|\vec{r}_{12}|^3}\label{eq:interaction_strength}
+\vec{F}_\text{int} = \beta \cdot \kappa_1 \kappa_2 \cdot \frac{\vec{r}_{12} \times (\vec{v}_1 - \vec{v}_2)}{|\vec{r}_{12}|^3}\label{eq:interaction_strength}
 \end{equation}
 Waar \(\kappa_i\) de circulaties van filamenten zijn en \(\vec{r}_{12}\) de vector ertussen.
 
@@ -76,13 +76,13 @@ Hier vertegenwoordigt \(\delta \mathcal{V}_{jk}\) een vorticiteitspolarisatieten
 \subsubsection*{VAM-spanningstensor}
 
 \[
-\mathcal{T}_{ij} = \rho_{\text{\ae}} \, v_i v_j - \frac{1}{2} \delta_{ij} \rho_{\text{\ae}} v^2
+\mathcal{T}_{ij} = \rho_\text{\ae} \, v_i v_j - \frac{1}{2} \delta_{ij} \rho_\text{\ae} v^2
 \]
 
 \subsubsection*{Æther Vorticiteit Krachtdichtheid}
 
 \[
-f_i^{\text{wervel}} = \partial_j \mathcal{T}_{ij}
+f_i^\text{wervel} = \partial_j \mathcal{T}_{ij}
 \]
 
 \subsubsection*{Vorticiteit Energieflux}
@@ -93,14 +93,14 @@ f_i^{\text{wervel}} = \partial_j \mathcal{T}_{ij}
 
 Deze vector legt de energieoverdracht vast via wervelknoopinteracties en definieert Verstrooiing van "dwarsdoorsneden" via de divergentie \(\nabla \cdot \vec{S}_\omega\).
 
-\subsection{Tijdsdilatatie en knoopverstrooiing}
+\subsection{Tijddilatatie en knoopverstrooiing}
 
-\subsubsection*{Tijdsdilatatie door knooprotatie}
+\subsubsection*{Tijddilatatie door knooprotatie}
 
 Laat het invallende wervelveld een lokale tijdvertraging veroorzaken als gevolg van de rotatie-energie van een knoop:
 
 \[
-\frac{t_{\text{local}}}{t_{\infty}} = \left(1 + \frac{1}{2} \beta I \Omega_k^2 \right)^{-1}
+\frac{t_\text{local}}{t_{\infty}} = \left(1 + \frac{1}{2} \beta I \Omega_k^2 \right)^{-1}
 \]
 
 In de Born-benadering is de verandering in eigentijd nabij een knoop onder externe wervelstroom:
@@ -108,7 +108,7 @@ In de Born-benadering is de verandering in eigentijd nabij een knoop onder exter
 \subsubsection*{Verstrooide correctie door extern veld}
 
 \begin{gather*}
-\delta \left( \frac{t_{\text{local}}}{t_{\infty}} \right) \approx - \frac{1}{2} \beta I \Omega_k \, \delta \Omega_k\\
+\delta \left( \frac{t_\text{local}}{t_{\infty}} \right) \approx - \frac{1}{2} \beta I \Omega_k \, \delta \Omega_k\\
 \delta \Omega_k \sim \int \chi(\vec{r}_k - \vec{r}') \cdot \vec{\omega}^{(0)}(\vec{r}') \, d^3r'\\
 \end{gather*}
 
@@ -122,9 +122,9 @@ Hier is \(\chi\) de topologische wervelgevoeligheidskern.
 \toprule
 \textbf{Concept} & \textbf{Elastische theorie} & \textbf{VAM-analoog} \\
 \midrule
-Mediumeigenschap & \( c_{ijkl} \) & \( \rho_{\text{\ae}},\, \Omega_k,\, \kappa \) \\
+Mediumeigenschap & \( c_{ijkl} \) & \( \rho_\text{\ae},\, \Omega_k,\, \kappa \) \\
 Golfveld & \( u_i \) (verplaatsing) & \( v_i \) (æthersnelheid) \\
-Bron & \( f_i \) (lichaamskracht) & \( F_i^{\text{vortex}} \) (vorticiteitsforcering) \\
+Bron & \( f_i \) (lichaamskracht) & \( F_i^\text{vortex} \) (vorticiteitsforcering) \\
 Groene functie & \( G_{ij}(\vec{r}, \vec{r}') \) & \( \mathcal{G}_{ij}(\vec{r}, \vec{r}') \) \\
 Spanningstensor & \( \tau_{ij} \) & \( \mathcal{T}_{ij} \) \\
 Energieflux & \( J_{P,i} = -\tau_{ij} \dot{u}_j \) & \( S_{\omega,i} = -\mathcal{T}_{ij} v_j \) \\

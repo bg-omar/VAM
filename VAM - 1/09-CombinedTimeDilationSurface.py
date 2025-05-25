@@ -29,12 +29,12 @@ ax.view_init(elev=15, azim=47)
 surf = ax.plot_surface(R / 1e6, V / 1e3, time_dilation, cmap='viridis', edgecolor='none')
 
 # Labels and titles
-ax.set_title('Gecombineerde Tijdsdilatatie door Ætherinstroom en Orbitale Beweging', fontsize=12)
+ax.set_title('Gecombineerde Tijddilatatie door Ætherinstroom en Orbitale Beweging', fontsize=12)
 ax.set_xlabel('Straal vanaf massamiddelpunt (in $10^6$ meter)', fontsize=10)
 ax.set_ylabel('Orbitale snelheid (km/s)', fontsize=10)
 ax.zaxis.get_major_formatter().set_useOffset(False)
-ax.set_zlabel('dτ/dt (Tijdsdilatatiefactor)', fontsize=10)
-fig.colorbar(surf, ax=ax, shrink=0.5, aspect=10, label='Tijdsdilatatiefactor dτ/dt')
+ax.set_zlabel('dτ/dt (Tijddilatatiefactor)', fontsize=10)
+fig.colorbar(surf, ax=ax, shrink=0.5, aspect=10, label='Tijddilatatiefactor dτ/dt')
 
 plt.tight_layout()
 import os

@@ -1,75 +1,74 @@
-\section{Parameter tuning and limit behavior}
+\section{Parameter tuning and limit behavior}\label{sec:appendix:6}
 
-To make the equations of the Vortex Æther Model (VAM) consistent with classical gravity, the model parameters must be tuned to reproduce known physical constants in the appropriate limits. In this section, we derive the effective gravitational constant $G_{\text{swirl}}$ and analyze the behavior of the gravitational field for $r \to \infty$.
+To make the equations of the Vortex Æther Model (VAM) consistent with classical gravity, the model parameters must be tuned to reproduce known physical constants in the appropriate limits. In this section, we derive the effective gravitational constant $G_\text{swirl}$ and analyze the behavior of the gravitational field for $r \to \infty$.
 
-\subsection{Derivation of $G_{\text{swirl}}$ from vortex parameters}
+\subsection{Derivation of $G_\text{swirl}$ from vortex parameters}
 
 The VAM potential is given by:
 
 \begin{equation}
-  \Phi_v(\vec{r}) = G_{\text{swirl}} \int \frac{\|\vec{\omega}(\vec{r}')\|^2}{\|\vec{r} - \vec{r}'\|} \, d^3r',
+  \Phi_v(\vec{r}) = G_\text{swirl} \int \frac{\|\vec{\omega}(\vec{r}')\|^2}{\|\vec{r} - \vec{r}'\|} \, d^3r',
 \end{equation}
 
-where $G_{\text{swirl}}$ must satisfy a dimensionally and physically consistent relationship with fundamental vortex parameters. In terms of:
+where $G_\text{swirl}$ must satisfy a dimensionally and physically consistent relationship with fundamental vortex parameters. In terms of:
 
 \begin{itemize}
   \item $C_e$: tangential velocity at the vortex core,
   \item $r_c$: vortex core radius,
   \item $t_p$: Planck time,
-  \item $F_{\text{max}}$: maximum force in æther interactions,
+  \item $F_\text{max}$: maximum force in æther interactions,
 \end{itemize}
 
 we derive:
 
 \begin{equation}
-  G_{\text{swirl}} = \frac{C_e c^5 t_p^2}{2 F_{\text{max}} r_c^2}.
+  G_\text{swirl} = \frac{C_e c^5 t_p^2}{2 F_\text{max} r_c^2}.
 \end{equation}
 
 This expression follows from dimension analysis and matching of the VAM field equations with the Newtonian limit (see also [Iskandarani, 2025]).
 
-\subsection{Limit $r \to \infty$: ​​classical gravity}
+\subsection{Limit $r \to \infty$: classical gravity}
 
 For large distances outside a compact vortex configuration, we have:
 
 \begin{equation}
-  \Phi_v(r) = G_{\text{swirl}} \int \frac{\|\vec{\omega}(\vec{r}')\|^2}{|\vec{r} - \vec{r}'|} d^3r' \approx \frac{G_{\text{swirl}}}{r} \int \|\vec{\omega}(\vec{r}')\|^2 d^3r'.
+  \Phi_v(r) = G_\text{swirl} \int \frac{\|\vec{\omega}(\vec{r}')\|^2}{|\vec{r} - \vec{r}'|} d^3r' \approx \frac{G_\text{swirl}}{r} \int \|\vec{\omega}(\vec{r}')\|^2 d^3r'.
 \end{equation}
 
 Define the \textbf{effective mass} of the vortex object as:
 
 \begin{equation}
-  M_{\text{eff}} = \frac{1}{\rho_{\text{æ}}} \int \rho_{\text{æ}} \|\vec{\omega}(\vec{r}')\|^2 d^3r' = \int \|\vec{\omega}(\vec{r}')\|^2 d^3r'.
+  M_\text{eff} = \frac{1}{\rho_\text{æ}} \int \rho_\text{æ} \|\vec{\omega}(\vec{r}')\|^2 d^3r' = \int \|\vec{\omega}(\vec{r}')\|^2 d^3r'.
 \end{equation}
 
 This means:
 
 \begin{equation}
-  \Phi_v(r) \to -\frac{G_{\text{swirl}} M_{\text{eff}}}{r},
+  \Phi_v(r) \to -\frac{G_\text{swirl} M_\text{eff}}{r},
 \end{equation}
 
-which is identical to the Newtonian potential provided $M_{\text{eff}} \approx M_{\text{grav}}$ and $G_{\text{swirl}} \approx G$.
+which is identical to the Newtonian potential provided $M_\text{eff} \approx M_\text{grav}$ and $G_\text{swirl} \approx G$.
 
-\subsection{Relationship between $M_{\text{eff}}$ and observed mass}
+\subsection{Relationship between $M_\text{eff}$ and observed mass}
 
-The effective mass $M_{\text{eff}}$ is not a direct mass content as in classical physics, but reflects the integrated vorticity energy in the æther:
+The effective mass $M_\text{eff}$ is not a direct mass content as in classical physics, but reflects the integrated vorticity energy in the æther:
 
 \begin{equation}
-  M_{\text{eff}} \propto \int \frac{1}{2} \rho_{\text{æ}} \|\vec{v}(\vec{r})\|^2 d^3r.
+  M_\text{eff} \propto \int \frac{1}{2} \rho_\text{æ} \|\vec{v}(\vec{r})\|^2 d^3r.
 \end{equation}
 
 In VAM, this mass is associated with a topologically stable vortex knot (like a trefoil for the electron) and thus quantitatively:
 
 \begin{equation}
-  M_{\text{eff}} = \alpha \cdot \rho_{\text{æ}} C_e r_c^3 \cdot L_k,
+  M_\text{eff} = \alpha \cdot \rho_\text{æ} C_e r_c^3 \cdot L_k,
 \end{equation}
 
-where $L_k$ is the linking number of the knot and $\alpha$ is a shape factor. By tuning $C_e$, $r_c$ and $\rho_{\text{æ}}$ to known masses (e.g. of the electron or the earth), VAM can reproduce the classical mass exactly:
+where $L_k$ is the linking number of the knot and $\alpha$ is a shape factor. By tuning $C_e$, $r_c$ and $\rho_\text{æ}$ to known masses (e.g. of the electron or the earth), VAM can reproduce the classical mass exactly:
 
 \begin{equation}
-  M_{\text{eff}} \overset{!}{=} M_{\text{obs}}.
-
+  M_\text{eff} \overset{!}{=} M_\text{obs}.
 \end{equation}
 
 \subsection{Conclusion}
 
-By parameter tuning, $G_{\text{swirl}}$ satisfies classical limits and VAM yields a gravitational field that is similar to Newtonian gravity at large distances. The effective mass $M_{\text{eff}}$ acts as a source term, analogous to the role of $M$ in Newton and GR.
+By parameter tuning, $G_\text{swirl}$ satisfies classical limits and VAM yields a gravitational field that is similar to Newtonian gravity at large distances. The effective mass $M_\text{eff}$ acts as a source term, analogous to the role of $M$ in Newton and GR.

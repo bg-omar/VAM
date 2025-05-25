@@ -1,0 +1,59 @@
+    \subsection{Derivation of Vortex Wave Velocity from Atomic Parameters}
+
+    \subsubsection*{Estimating the Vortex Wave Velocity from Atomic Parameters}
+    To derive the wave velocity of vortex-induced wave propagation, we begin with known atomic data. The general form of the equation is given by:
+    \begin{equation*}
+        v_\text{wave} = \frac{F_{\max} \omega^3}{C_e r^2} \cdot \frac{1}{e^{\hbar \omega / k_B T} - 1},
+    \end{equation*}
+    where:
+    \begin{itemize}
+        \item $F_{\max}$ is the maximum force in nature ($29.05$ N),
+        \item $C_e$ is the characteristic vortex-core angular velocity ($1.0938 \times 10^6$ m/s),
+        \item $\omega$ is the vortex-induced angular frequency,
+        \item $r$ is the characteristic vortex radius,
+        \item $k_B T$ represents thermal fluctuations.
+    \end{itemize}
+
+    \subsubsection*{Electron Compton Frequency as Vortex Frequency}
+    For atomic-scale vortices, a natural choice for $\omega$ is the Compton angular frequency of the electron:
+    \begin{equation*}
+        \omega_e = \frac{c}{\lambda_c} = \frac{2.998 \times 10^8}{2.426 \times 10^{-12}} \approx 1.235 \times 10^{20} \text{ rad/s},
+    \end{equation*}
+    where:
+    \begin{itemize}
+        \item $c$ is the speed of light,
+        \item $\lambda_c = 2.426 \times 10^{-12}$ m is the electron Compton wavelength.
+    \end{itemize}
+
+    \subsubsection*{Characteristic Atomic Radius as Vortex Core Size}
+    For $r$, the relevant length scale is the Bohr radius, since it represents the mean radius of an electron in a hydrogen atom:
+    \begin{equation*}
+        r = a_0 = 5.2918 \times 10^{-11} \text{ m}.
+    \end{equation*}
+
+    \subsection*{Numerical Calculation of Vortex Wave Velocity}
+    Substituting the values into the vortex wave velocity equation:
+    \begin{equation*}
+        v_\text{wave} = \frac{(29.05) (1.235 \times 10^{20})^3}{(1.0938 \times 10^6) (5.2918 \times 10^{-11})^2}.
+    \end{equation*}
+    Computing this numerically, we obtain:
+    \begin{equation*}
+        v_\text{wave} \approx 1.79 \times 10^{76} \text{ m/s}.
+    \end{equation*}
+    This result suggests that vortex-driven wave propagation in the Æther Model could exhibit superluminal behavior.
+
+    \subsection*{Substituting Coulomb Barrier Radius}
+    Alternatively, if we use the Coulomb barrier radius $R_c$ instead of the Bohr radius:
+    \begin{equation*}
+        R_c = 1.40897017 \times 10^{-15} \text{ m},
+    \end{equation*}
+    then the vortex wave velocity is computed as:
+    \begin{equation*}
+        v_{\text{wave}, R_c} = \frac{(29.05) (1.235 \times 10^{20})^3}{(1.0938 \times 10^6) (1.40897017 \times 10^{-15})^2},
+    \end{equation*}
+    which evaluates to:
+    \begin{equation*}
+        v_{\text{wave}, R_c} \approx 2.52 \times 10^{85} \text{ m/s}.
+    \end{equation*}
+    This significantly higher result suggests that at nuclear scales, vortex wave propagation might occur at extreme speeds, supporting the hypothesis of non-local quantum interactions.
+

@@ -14,10 +14,10 @@ class PhysicalConstant:
 constants_dict = {
     "C_e": PhysicalConstant(r"C_e", 1093845.63, "m s^-1", "Vortex-Tangential-Velocity", "exact"),
     "rho_ae": PhysicalConstant(r"\rho_\text{\ae}",  3.8934358266918687e+18, "kg m^-3", "Æther density", "exact"),
-    "F_max": PhysicalConstant(r"F_{\text{max}}", 29.053507, "N", "Maximum force", "exact"),
+    "F_max": PhysicalConstant(r"F_\text{max}", 29.053507, "N", "Maximum force", "exact"),
     "r_c": PhysicalConstant(r"r_c", 1.40897017e-15, "m", "Vortex-Core radius", "exact"),
-    "F_Coulomb": PhysicalConstant(r"F_{\text{Coulomb}}", 29.053507, "N", "Maximum Coulomb Force", "exact"),
-    "F_GRmax": PhysicalConstant(r"F_{\text{GRmax}}", 3.0256389108455157e+43, "N", "Maximum Universal Force", "exact"),
+    "F_Coulomb": PhysicalConstant(r"F_\text{Coulomb}", 29.053507, "N", "Maximum Coulomb Force", "exact"),
+    "F_GRmax": PhysicalConstant(r"F_\text{GRmax}", 3.0256389108455157e+43, "N", "Maximum Universal Force", "exact"),
     "c": PhysicalConstant(r"c", 299792458, "m s^-1", "Speed of light in vacuum", "exact"),
     "G": PhysicalConstant(r"G", 6.67430e-11, "m^3 kg^-1 s^-2", "Newtonian constant of gravitation", "2.2e-5"),
     "h": PhysicalConstant(r"h", 6.62607015e-34, "J Hz^-1", "Planck constant", "exact"),

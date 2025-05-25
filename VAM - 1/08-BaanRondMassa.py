@@ -7,7 +7,7 @@ fig, ax = plt.subplots(figsize=(8, 8))
 ax.set_aspect('equal')
 ax.set_xlim(-6, 6)
 ax.set_ylim(-6, 6)
-ax.set_title("Cirkelvormige baan rond massa M met gecombineerde tijdsdilatatie", fontsize=13)
+ax.set_title("Cirkelvormige baan rond massa M met gecombineerde tijddilatatie", fontsize=13)
 
 # Draw central mass
 mass_radius = 0.5

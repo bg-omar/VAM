@@ -1,0 +1,119 @@
+%! Author = Omar Iskandarani
+%! Date = 3/14/2025
+
+
+\textbf{To derive the equilibrium spheres equation:}
+
+\[
+\Delta U = Q - W = \Delta \left( \frac{1}{2} \rho \int v^2 \, dV + \int P \, dV \right)
+\]
+
+using fundamental principles and incorporating constants such as $C_e$ (energy-related constant), $R_c$ (characteristic radius), and $F_{\max}$ (maximum force), we will proceed step by step.
+
+
+
+
+
+\subsection*{Step 1: First Principles of Thermodynamics}
+From the First Law of Thermodynamics, we know:
+
+dU = \delta Q - \delta W
+
+where:
+
+\begin{itemize}
+\item $dU$ is the change in internal energy,
+\item $\delta Q$ is the heat input,
+\item $\delta W$ is the work done by the system.
+\end{itemize}
+For a fluid system with vortex structures and surrounding equilibrium spheres, we must account for the kinetic energy due to fluid velocity vvv and potential energy due to pressure $P$.
+
+Thus, we write the total internal energy as:
+
+U = \frac{1}{2} \rho \int v^2 \, dV + \int P \, dV
+
+
+
+\subsection*{Step 2: Energy Balance with Spherical Equilibrium Constraints}
+Now, consider the spheres of equilibrium pressure that surround a knotted vortex. The pressure distribution is influenced by:
+
+\begin{enumerate}
+\item The characteristic radius RcR_cRc, which defines the boundary of these equilibrium spheres.
+\item The maximum force Fmax⁡F_{\max}Fmax, which sets a limit to the pressure interactions within the system.
+\item The energy constant CeC_eCe, which is a fundamental proportionality factor for energy distribution.
+\end{enumerate}
+\subsubsection*{Velocity Integral Contribution}
+For a fluid with density ρ\rhoρ, the kinetic energy contribution within the equilibrium sphere of radius RcR_cRc is:
+
+U_\text{kin} = \frac{1}{2} \rho \int v^2 \, dV
+
+Using the characteristic velocity scale veqv_\text{eq}veq at equilibrium:
+
+v_\text{eq}^2 = \frac{F_{\max}}{\rho R_c}
+
+we approximate:
+
+U_\text{kin} \approx \frac{1}{2} \rho v_\text{eq}^2 \cdot V_\text{eq}
+
+where VeqV_\text{eq}Veq is the volume of the equilibrium sphere:
+
+V_\text{eq} = \frac{4}{3} \pi R_c^3
+
+Thus:
+
+U_\text{kin} = \frac{2}{3} \pi F_{\max} R_c^2
+
+
+
+\subsubsection*{Pressure Integral Contribution}
+The potential energy contribution due to pressure inside the equilibrium sphere:
+
+U_\text{press} = \int P \, dV
+
+Using an equilibrium pressure scaling:
+
+P_\text{eq} = \frac{F_{\max}}{4 \pi R_c^2}
+
+where Aeq=4πRc2A_\text{eq} = 4 \pi R_c^2Aeq=4πRc2 is the surface area of the equilibrium sphere.
+
+Thus, the pressure integral:
+
+U_\text{press} = \frac{1}{3} F_{\max} R_c
+
+
+
+\subsection*{Step 3: Final Energy Balance Equation}
+Summing both contributions:
+
+U = \frac{2}{3} \pi F_{\max} R_c^2 + \frac{1}{3} F_{\max} R_c
+
+Now, considering a differential energy change due to heat QQQ and work WWW:
+
+\Delta \left( \frac{2}{3} \pi F_{\max} R_c^2 + \frac{1}{3} F_{\max} R_c \right) = Q - W
+
+To include an energy constant CeC_eCe, we set:
+
+C_e = \frac{F_{\max}}{R_c}
+
+which normalizes force over a characteristic length, giving:
+
+\Delta \left( \frac{2}{3} \pi C_e R_c^3 + \frac{1}{3} C_e R_c^2 \right) = Q - W
+
+Thus, the generalized energy equation for the equilibrium spheres is:
+
+\Delta U = Q - W = \Delta \left( \frac{2}{3} \pi C_e R_c^3 + \frac{1}{3} C_e R_c^2 \right)
+
+
+
+\subsection*{Conclusion}
+\begin{itemize}
+\item This formulation links thermodynamic energy change to the equilibrium pressure spheres surrounding vortex knots.
+
+
+\item The equation shows that heat addition or work done on the system affects the energy stored in the knotted vortex system, via pressure-volume interactions.
+
+
+\item The constants Fmax⁡F_{\max}Fmax, RcR_cRc, and CeC_eCe determine how these energy exchanges occur within the topological fluid structure.
+
+
+\end{itemize}
