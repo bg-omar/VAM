@@ -1,17 +1,41 @@
+%! Author = Omar Iskandarani
+%! Title = Benchmarking the Vortex Æther Model vs General Relativity
+%! Date = May 23, 2025
+%! Affiliation = Independent Researcher, Groningen, The Netherlands
+%! License = CC-BY 4.0
+%! ORCID = 0009-0006-1686-3961
 
 % Benchmarking the Vortex Æther Model vs General Relativity
 \documentclass[a4paper, aps,preprint,superscriptaddress, 12pt]{revtex4}
-\usepackage{amsmath}
-\usepackage{graphicx}
-\usepackage{geometry}
-\usepackage{hyperref}
+\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage{bookmark}
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{makecell}
+\usepackage{tabularx}
+\usepackage[font=footnotesize]{caption}
+\usetikzlibrary{arrows.meta}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
 \usepackage[none]{hyphenat}
 \usepackage{array}
+\usepackage{amsmath}
 \usepackage{booktabs}
+\usepackage[utf8]{inputenc}
 \usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
 \usepackage{physics}
-
+\usepackage{natbib}
+\usepackage{url}
+\usepackage{multirow}
+\usepackage{subcaption}
+\usepackage{siunitx}
+\usepackage{listings}
+\renewcommand{\arraystretch}{1.5}
+\renewcommand{\floatpagefraction}{.8}
 \sloppy
+
 \begin{document}
     \author{Omar Iskandarani}
     \title{Benchmarking the Vortex Æther Model vs General Relativity}
@@ -20,41 +44,30 @@
     \thanks{ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961}}
     \email{info@omariskandarani.com}
 
+    % Abstract
+    \begin{abstract}
+    This paper compares the Vortex Æther Model (VAM) to General Relativity (GR) across multiple classical and modern relativistic tests, including time dilation, redshift, light deflection, perihelion precession, frame-dragging, gravitational radiation, and strong-field dynamics. VAM’s predictions are benchmarked numerically against GR and observational data, highlighting areas of agreement and necessary modifications.
+    \end{abstract}
 
-% Abstract
-\begin{abstract}
-This paper compares the Vortex Æther Model (VAM) to General Relativity (GR) across multiple classical and modern relativistic tests, including time dilation, redshift, light deflection, perihelion precession, frame-dragging, gravitational radiation, and strong-field dynamics. VAM’s predictions are benchmarked numerically against GR and observational data, highlighting areas of agreement and necessary modifications.
-\end{abstract}
+  \maketitle
 
-\maketitle
+    % Content placeholder
+    \input{sections/01_introduction}
+    \input{sections/02_time_dilation}
+    \input{sections/03_velocity_dilation}
+    \input{sections/04_frame_dragging}
+    \input{sections/05_redshift}
+    \input{sections/06_light_deflection}
+    \input{sections/07_perihelion_precession}
+    \input{sections/08-gravitational_potential}
+    \input{sections/09_gravitational_waves}
+    \input{sections/10_VortexDrivenGravityWaves}
+    \input{sections/11_geodetic_precession}
+    \input{sections/12_SpinDynamics}
+    \input{sections/13_resolved_Challenges}
+    \input{sections/14_conclusion}
 
-% Content placeholder
-\input{sections/01_introduction}
 
-\input{sections/02_time_dilation}
-
-\input{sections/03_velocity_dilation}
-
-\input{sections/04_frame_dragging}
-
-\input{sections/05_redshift}
-
-\input{sections/06_light_deflection}
-
-\input{sections/07_perihelion_precession}
-
-\input{sections/08-gravitational_potential}
-
-\input{sections/09_gravitational_waves}
-
-\input{sections/10_geodetic_precession}
-
-\input{sections/11_conclusion}
-
-\appendix
-    \input{sections/Appendix_gravitatieGolven}
-    \input{sections/Appendix_spindynamics}
-
-\bibliographystyle{plain}
-\bibliography{3-Benchmarking_Vortex_Æther_Model_vs_General_Relativity}
+    \bibliographystyle{plain}
+    \bibliography{3-Benchmarking_Vortex_Æther_Model_vs_General_Relativity}
 \end{document}

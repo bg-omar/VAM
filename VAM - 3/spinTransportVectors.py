@@ -28,25 +28,40 @@ x_sub, y_sub, z_sub = x[::step], y[::step], z[::step]
 ux_sub, uy_sub, uz_sub = ux[::step], uy[::step], uz[::step]
 
 # Begin plotting
-fig, axes = plt.subplots(1, 3, figsize=(15, 5), subplot_kw={'projection': '3d'})
+fig, axes = plt.subplots(1, 3, figsize=(18, 6), subplot_kw={'projection': '3d'})
 # Define view angles for each subplot
 view_angles = [
     (30, 40),    # Angled view: Elevation, Azimuth
-    (90, 0),    # Angled view
-    (0, 20),    # Angled view
+    (90, 180),    # Angled view
+    (0, 0),    # Angled view
 ]
-for ax, (elev, azim) in zip(axes.flatten(), view_angles):
-    ax.plot(x, y, z, color='blue', label='Trefoil Knot Core')
-    ax.quiver(x_sub, y_sub, z_sub, ux_sub, uy_sub, uz_sub, length=0.5, normalize=True, color='crimson', label='Spin Transport')
+
+for i, (ax, (elev, azim)) in enumerate(zip(axes.flatten(), view_angles)):
+    ax.plot(x, y, z, color='blue', label='Trefoil Knot Core  (T(2,3)-configuration)')
+    ax.quiver(x_sub, y_sub, z_sub, ux_sub, uy_sub, uz_sub, length=0.5, normalize=True, color='crimson', label='$\vec{S}$ Spin Transport Vector')
 
     ax.set_xlabel('x')
     ax.set_ylabel('y')
     ax.set_zlabel('z')
-    ax.set_title('Spin Transport Vector Field Along Swirling Trefoil Knot')
+    ax.set_xlim(-3, 3)
+    ax.set_ylim(-3, 3)
+    ax.set_zlim(-3, 3)
+    ax.set_box_aspect([1, 1, 1])  # Ensures 1:1:1 aspect ratio
+
+    if i == 1:
+        ax.set_title('Spin Transport Vector Field Along Swirling Trefoil Knot')
+        ax.legend()
+        ax.set_zticklabels([])
+
+    if i == 2:
+        ax.set_zlim(-2, 2)
+        ax.set_xticklabels([])
 
     ax.view_init(elev=elev, azim=azim)
-    ax.legend()
-    plt.tight_layout()
+
+
+plt.tight_layout()
+plt.subplots_adjust(left=0.03, right=0.97, wspace=0.2)
 
 # ✅ Get the script filename dynamically and save as pdf
 import os

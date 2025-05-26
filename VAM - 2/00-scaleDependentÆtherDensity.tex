@@ -1,0 +1,84 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{graphicx}
+\usepackage{siunitx}
+\usepackage{hyperref}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\title{Schaalafhankelijke \ae ther Dichtheid in het Vortex \AE ther Model (VAM)}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Fysische Verantwoording van de Dichtheidsafname}
+
+In het Vortex \AE ther Model (VAM) wordt de \ae ther opgevat als een superfluide, onviskeuze continu"um met constante dichtheid binnen macroscopische gebieden, maar met een \emph{schaalafhankelijke structuur} rondom vortexknopen. Deze structuur vereist een hoge lokale dichtheid nabij de kern voor stabiliteit, en een ijle \ae ther op grote schaal om vrije propagatie van signalen (zoals licht) mogelijk te maken.
+
+\subsection*{1. Kernregime}
+
+De dichtheid in de kern benadert:
+\begin{equation}
+\rho_{\ae}(r \to 0) \sim \SI{3.89e18}{kg/m^3},
+\end{equation}
+vereist om topologische stabiliteit van de vortexkern te garanderen. Deze waarde volgt uit energetische argumenten:
+\begin{equation}
+E_{\text{vortex}} = \frac{1}{2} \rho_{\ae} \Omega^2 r_c^5 \quad\Rightarrow\quad \rho_{\ae} \sim \frac{2 E}{\Omega^2 r_c^5},
+\end{equation}
+waarbij \( \Omega = \frac{C_e}{r_c} \) de kernrotatie is, met \( C_e \approx \SI{1.094e6}{m/s} \) en \( r_c \approx \SI{1.409e-15}{m} \).
+
+\subsection*{2. Overgangsregime}
+
+Voor afstanden groter dan de kern, maar kleiner dan macroschaal, geldt een exponenti"ele afname:
+\begin{equation}
+\rho_{\ae}(r) = \rho_{\text{far}} + (\rho_{\text{core}} - \rho_{\text{far}}) e^{-r/r_*},
+\end{equation}
+met \( r_* \sim \SI{1e-12}{m} \) de karakteristieke overgangsschaal. Deze waarde wordt gemotiveerd door het bereik van vortexinvloeden (zoals in EM-interacties).
+
+\subsection*{3. Macroscopisch Regime}
+
+Voor \( r \gg r_* \) bereikt \( \rho_{\ae} \) asymptotisch een constante waarde:
+\begin{equation}
+\rho_{\text{far}} \sim \SI{1e-7}{kg/m^3},
+\end{equation}
+waardoor vrije voortplanting van signalen zonder merkbare inertie optreedt. Dit simuleert een vacu"umachtig gedrag.
+
+\section*{Grafiek: Schaalafhankelijke \ae ther Dichtheid}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.85\textwidth]{00-scaleDependentÆtherDensity_nl}
+  \caption{De \ae ther dichtheid neemt exponentieel af vanaf de vortexkern en benadert asymptotisch een constante waarde op macroschaal.}
+\label{fig:vortexfields}
+\end{figure}
+
+
+\section*{Samenvattende Tabel}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|c|l|}
+\hline
+Regime & Afstand $r$ & $\rho_{\ae}(r)$ & Fysische interpretatie \\
+\hline
+Kern & $r < 10^{-14}$ m & $\sim 10^{18}$ kg/m$^3$ & Vortexstabiliteit \& inertie \\
+Overgang & $10^{-14} - 10^{-11}$ m & Exponentieel dalend & Swirl-uitdoving \& massa-interactie \\
+Macroscopisch & $r > 10^{-11}$ m & $\sim 10^{-7}$ kg/m$^3$ & Vrije \ae ther zonder massaweerstand \\
+\hline
+\end{tabular}
+\caption{Gedrag van de \ae ther dichtheid op verschillende schalen.}
+\end{table}
+
+\section*{Referenties}
+
+\begin{itemize}
+  \item Winterberg, F. (2002). Gamma-ray bursters and Lorentzian relativity. \emph{Zeitschrift f"ur Naturforschung A}, \textbf{57}(4), 202--204. \href{https://doi.org/10.1515/zna-2002-0405}{doi:10.1515/zna-2002-0405}
+  \item Barcel\'o, C., Liberati, S., \& Visser, M. (2011). Analogue gravity. \emph{Living Reviews in Relativity}, \textbf{14}(3). \href{https://doi.org/10.12942/lrr-2011-3}{doi:10.12942/lrr-2011-3}
+\end{itemize}
+
+\end{document}

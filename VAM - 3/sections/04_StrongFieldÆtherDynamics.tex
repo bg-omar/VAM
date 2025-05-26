@@ -1,0 +1,64 @@
+\section{Strong-Field Benchmark: ISCO Radius Around a Schwarzschild Black Hole}
+
+To test the VAM framework in strong-field regimes, we benchmark the predicted innermost stable circular orbit (ISCO) radius around a non-rotating (Schwarzschild) black hole and compare it with General Relativity (GR).
+
+\paragraph{GR Prediction:}
+In GR, the ISCO for a test particle orbiting a Schwarzschild black hole is located at:
+\begin{equation}
+    r_{\text{ISCO}}^{\text{GR}} = \frac{6GM}{c^2}
+\end{equation}
+
+For a black hole with mass \( M = 10 M_\odot \), where \( M_\odot = 1.98847 \times 10^{30} \, \text{kg} \), this yields:
+\begin{align*}
+    G &= 6.67430 \times 10^{-11} \, \text{m}^3 \, \text{kg}^{-1} \, \text{s}^{-2} \\
+    c &= 2.99792458 \times 10^8 \, \text{m/s} \\
+    r_{\text{ISCO}}^{\text{GR}} &= \frac{6 \cdot G \cdot M}{c^2}
+    = \frac{6 \cdot 6.67430 \times 10^{-11} \cdot 10 \cdot 1.98847 \times 10^{30}}{(2.99792458 \times 10^8)^2} \\
+    &\approx 88{,}600.18 \, \text{m}
+\end{align*}
+
+\paragraph{VAM Prediction:}
+In the Vortex Æther Model (VAM), the effective gravitational boundary appears where the swirl (tangential) velocity of the vortex reaches the speed of light \( c \). The critical radius is given by:
+\begin{equation}
+    r_{\text{crit}}^{\text{VAM}} = \frac{GM}{c^2}
+\end{equation}
+Substituting:
+\[
+    r_{\text{crit}}^{\text{VAM}} = \frac{6.67430 \times 10^{-11} \cdot 10 \cdot 1.98847 \times 10^{30}}{(2.99792458 \times 10^8)^2}
+    \approx 14{,}766.70 \, \text{m}
+\]
+
+This corresponds to the Schwarzschild radius \( r_s = 2GM/c^2 \), and implies that a VAM-based ISCO must arise through dynamical instabilities—such as swirl perturbations or pressure shear effects—at a larger multiple of \( r_{\text{crit}} \).
+
+\paragraph{Relative Position Comparison:}
+\begin{equation}
+    \frac{r_{\text{ISCO}}^{\text{GR}}}{r_{\text{crit}}^{\text{VAM}}} = \frac{88{,}600.18}{14{,}766.70} \approx 6.0
+\end{equation}
+
+\paragraph{Summary Table:}
+\begin{table}[H]
+\centering
+\caption{ISCO Radius Comparison for Schwarzschild Black Hole (\( M = 10 M_\odot \))}
+\begin{tabular}{lccc}
+\toprule
+Model & ISCO Radius (m) & Definition & Notes \\
+\midrule
+General Relativity (GR) & 88,600.18 & \( r = \frac{6GM}{c^2} \) & Stable circular orbit limit \\
+VAM Critical Radius & 14,766.70 & \( r = \frac{GM}{c^2} \) & Where \( v_\phi \rightarrow c \) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Conclusion:}
+This benchmark confirms that the swirl-induced tangential velocity in VAM reaches light speed at the same location as the Schwarzschild radius. However, to reproduce the GR ISCO behavior (i.e., the last stable circular orbit at \( 6GM/c^2 \)), VAM must incorporate additional physical criteria such as:
+
+\begin{itemize}
+    \item Instabilities in swirl pressure fields or ætheric shear.
+    \item Breakdown in angular momentum conservation near the core.
+    \item Energy loss due to vorticity radiation or field coupling.
+\end{itemize}
+
+Future numerical simulations of vortex stability and test-particle dynamics in the æther field are needed to fully confirm ISCO-like thresholds in VAM. Nonetheless, this provides a promising foundation for reproducing strong-field behavior in a flat-space, vortex-based gravity model.
+\begin{remark}
+Although VAM defines internal vortex structure via core parameters such as the tangential swirl velocity \( C_e \) and core radius \( r_c \), naive application of the light-speed limit condition \( v_\phi = C_e \) yields critical radii on femtometer scales. This suggests that strong-field gravitational effects must emerge not from local vortex properties alone, but from global æther field organization tied to total mass \( M \). Thus, the gravitational boundary \( r = GM/c^2 \) in VAM can be interpreted as a macroscopic swirl instability limit, supporting its analogy with the Schwarzschild radius and motivating a dynamically induced ISCO.
+\end{remark}
