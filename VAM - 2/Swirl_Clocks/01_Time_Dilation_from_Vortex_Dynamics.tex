@@ -1,3 +1,61 @@
+
+\section*{Scale-dependent æther density in the Vortex Æther Model (VAM)}
+
+VAM uses a scale-dependent æther density: locally very high ($\sim10^{18}$ kg/m³) for core stability and macroscopically low ($\sim10^{-7}$ kg/m³) to allow inertia-free propagation of interactions. The high density in vortex cores locally enhances the vortex velocity and thus the time dilation significantly, while macroscopically it offers minimal resistance to propagation of effects.
+
+
+In the Vortex Æther Model (VAM), the æther is considered to be a superfluid, inviscid continuum with constant density within macroscopic regions, but with a \emph{scale-dependent structure} around vortex nodes. This structure requires a high local density near the core for stability, and a sparse ætheron large scales to allow free propagation of signals (such as light).
+
+\subsection*{1. Core Regime}
+
+The density in the core approaches:
+\begin{equation}
+    \rho_\text{\ae}(r \to 0) \sim \SI{3.89e18}{kg/m^3},
+\end{equation}
+required to ensure topological stability of the vortex core. This value follows from energetic arguments:
+\begin{equation}
+    E_{\text{vortex}} = \frac{1}{2} \rho_\text{\ae} \Omega^2 r_c^5 \quad\Rightarrow\quad \rho_\text{\ae} \sim \frac{2 E}{\Omega^2 r_c^5},
+\end{equation}
+where \( \Omega = \frac{C_e}{r_c} \) is the core rotation, with \( C_e \approx \SI{1.094e6}{m/s} \) and \( r_c \approx \SI{1.409e-15}{m} \).
+
+\subsection*{2. Transition regime}
+
+For distances larger than the core, but smaller than the macroscale, an exponential decay holds:
+\begin{equation}
+    \rho_\text{\ae}(r) = \rho_\text{far} + (\rho_\text{core} - \rho_\text{far}) e^{-r/r_*},
+\end{equation}
+where \( r_* \sim \SI{1e-12}{m} \) is the characteristic transition scale. This value is motivated by the range of vortex influences (as in EM interactions).
+
+\subsection*{3. Macroscopic Regime}
+
+For \( r \gg r_* \), \( \rho_\text{\ae} \) asymptotically reaches a constant value:
+\begin{equation}
+    \rho_\text{far} \sim \SI{1e-7}{kg/m^3},
+\end{equation}
+which results in free propagation of signals without noticeable inertia. This simulates a vacuum-like behavior.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{00_scaleDependentÆtherDensity}
+    \caption{The æther density decreases exponentially from the vortex core and asymptotically approaches a constant value on the macroscale.}
+    \label{fig:vortexfields2}
+\end{figure}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|l|}
+        \hline
+        Regime & Distance $r$ & $\rho_\text{\ae}(r)$ & Physical interpretation \\
+        \hline
+        Core & $r < 10^{-14}$ m & $\sim 10^{18}$ kg/m$^3$ & Vortex stability \& inertia \\
+        Transition & $10^{-14} - 10^{-11}$ m & Exponentially decreasing & Swirl extinction \& mass interaction \\
+        Macroscopic & $r > 10^{-11}$ m & $\sim 10^{-7}$ kg/m$^3$ & Free æther without mass drag \\
+        \hline
+    \end{tabular}
+    \caption{Behavior of the æther density at different scales.}
+\end{table}
+
+
 \section{Time dilation from vortex dynamics}
 
 We consider an invisible, irrotational superfluid æther with stable topological vortex nodes. Absolute time $t_\text{abs}$ flows at a constant rate, while local clocks may experience a lower rate due to pressure gradients and nodal energetics. The Vortex Æther Model assumes that the rate at which time flows in the local frame (near the node) depends on the internal angular frequency $\Omega_k$. In this section, we derive time dilation analogues, inspired by the predictions of general relativity (GR), based solely on pressure and vorticity gradients in the fluid.
@@ -29,7 +87,7 @@ To visualize the outer behavior of time dilation predicted by the heuristic vort
         $\frac{d\tau}{dt}$ rapidly increases with distance $r$ away from the core,
         approaching unity asymptotically. This directly visualizes the effect of
         tangential vortex velocity $v_\varphi(r) \sim \kappa / r$ on the local time flow,
-        as predicted by equation~(5).
+        as predicted by equation\eqref{eq:vortex_time_explicit}.
     }
     \label{fig:HeuristicTimeDilation}
 \end{figure}
@@ -88,10 +146,6 @@ For illustration, in Figure~\ref{fig:comparisonVAMGR} we explicitly compare VAM 
     \caption{Difference between VAM and GR time dilation for a neutron star ($2\,M_\odot$, $R=10$ km).}
     \label{fig:comparisonVAMGR}
 \end{figure}
-
-\subsection{Interpretation of scale-dependent æther density}
-
-VAM uses a scale-dependent æther density: locally very high ($\sim10^{18}$ kg/m³) for core stability and macroscopically low ($\sim10^{-7}$ kg/m³) to allow inertia-free propagation of interactions. The high density in vortex cores locally enhances the vortex velocity and thus the time dilation significantly, while macroscopically it offers minimal resistance to propagation of effects.
 
 \subsection{Practical implications and experimental testability}
 

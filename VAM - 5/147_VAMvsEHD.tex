@@ -24,14 +24,14 @@ Contrastingly, VAM posits that net force arises from structured pressure gradien
 \begin{equation}
 T(V) = T_\text{max}(1 - e^{-\lambda V^2})
 \end{equation}
-where $V$ is the applied voltage, $\lambda$ is a geometry-coupled curvature factor, and $T_\text{max} = \rho_{\ae} C_e^2 A$ denotes the saturation-level vortex-induced pressure thrust \cite{vamderive2024}.
+where $V$ is the applied voltage, $\lambda$ is a geometry-coupled curvature factor, and $T_\text{max} = \rho_\text{\ae} C_e^2 A$ denotes the saturation-level vortex-induced pressure thrust \cite{vamderive2024}.
 
 
 When voltage is time-dependent, the VAM framework yields a dynamic thrust response:
 \begin{equation}
 \boxed{
 T = \kappa \cdot \frac{dV}{dt}
-\quad \text{with } \kappa = \frac{\rho_{\ae} A \delta z \alpha_E}{2\pi}
+\quad \text{with } \kappa = \frac{\rho_\text{\ae} A \delta z \alpha_E}{2\pi}
 }
 \end{equation}
 This captures the empirical behavior of impulse-based lifter configurations, where vortex unpinning events are synchronized with rapid field variations \cite{vamthrustfit2025}.
@@ -40,21 +40,21 @@ This captures the empirical behavior of impulse-based lifter configurations, whe
 \subsection{Rotational Kinetics Within the VAM Framework}
 In rotational systems, such as EHD propellers and toroidal coil drives, angular momentum conservation governs net torque generation. VAM expresses torque from shell pressure as:
 \begin{equation}
-\tau_\text{VAM} = \int R \cdot dF_\theta = \int R \cdot \rho_{\ae} C_e^2 , dA \Rightarrow \tau = R \cdot \rho_{\ae} C_e^2 A_\text{active}
+\tau_\text{VAM} = \int R \cdot dF_\theta = \int R \cdot \rho_\text{\ae} C_e^2 , dA \Rightarrow \tau = R \cdot \rho_\text{\ae} C_e^2 A_\text{active}
 \end{equation}
 
 
 The induced angular velocity of the propeller becomes:
 \begin{equation}
 \boxed{
-\omega_p = \frac{\rho_{\ae} C_e^2 A R}{J_p}
+\omega_p = \frac{\rho_\text{\ae} C_e^2 A R}{J_p}
 }
 \end{equation}
 
 
 Furthermore, equating the angular momenta of the vortex and the propeller yields:
 \begin{equation}
-J_p \omega_p = I_\text{vortex} \omega = \rho_{\ae} R^2 A \cdot \omega
+J_p \omega_p = I_\text{vortex} \omega = \rho_\text{\ae} R^2 A \cdot \omega
 \Rightarrow \boxed{
 \omega_p = \omega = \frac{L_\text{vortex}}{J_p}
 }

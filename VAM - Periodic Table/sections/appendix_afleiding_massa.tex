@@ -1,7 +1,7 @@
 % !TeX root = ../00_Periodeic_Table.tex
 \section{Afleiding van de massa uit vortexcirculatie}
 
-In deze appendix leiden we de massa van een vortexknoop binnen het Vortex Æther Model (VAM) af uit de kinetische energie van de wervelstroom, aangenomen dat de æther een ideale vloeistof is met dichtheid \( \rho_{\ae} \) en circulatie \( \kappa \).
+In deze appendix leiden we de massa van een vortexknoop binnen het Vortex Æther Model (VAM) af uit de kinetische energie van de wervelstroom, aangenomen dat de æther een ideale vloeistof is met dichtheid \( \rho_\text{\ae} \) en circulatie \( \kappa \).
 
 \subsection{Circulatie en snelheidsprofiel}
 Voor een stationaire cilindrische vortex geldt:
@@ -13,39 +13,39 @@ voor \( r_c \leq r \leq R \), waarbij \( r_c \) de kernstraal is en \( R \) een 
 \subsection{Kinetische energie van het vortexveld}
 De energie-inhoud van het circulerende vortexveld over een lengte \( \ell \) is:
 \begin{equation}
-    E = \frac{1}{2} \rho_{\ae} \int_{r_c}^{R} v_\theta^2(r) \cdot 2\pi r \cdot \ell \, dr
+    E = \frac{1}{2} \rho_\text{\ae} \int_{r_c}^{R} v_\theta^2(r) \cdot 2\pi r \cdot \ell \, dr
 \end{equation}
 Substitutie van \( v_\theta(r) = \kappa / (2\pi r) \) levert:
 \begin{align}
-    E &= \frac{\rho_{\ae} \kappa^2 \ell}{4\pi} \int_{r_c}^{R} \frac{1}{r} \, dr = \frac{\rho_{\ae} \kappa^2 \ell}{4\pi} \ln\left( \frac{R}{r_c} \right)
+    E &= \frac{\rho_\text{\ae} \kappa^2 \ell}{4\pi} \int_{r_c}^{R} \frac{1}{r} \, dr = \frac{\rho_\text{\ae} \kappa^2 \ell}{4\pi} \ln\left( \frac{R}{r_c} \right)
 \end{align}
 
 \subsection{Equivalentie met massa}
 Aangezien \( E = M c^2 \), volgt:
 \begin{equation}
-    M = \frac{E}{c^2} = \frac{\rho_{\ae} \kappa^2 \ell}{4\pi c^2} \ln\left( \frac{R}{r_c} \right)
+    M = \frac{E}{c^2} = \frac{\rho_\text{\ae} \kappa^2 \ell}{4\pi c^2} \ln\left( \frac{R}{r_c} \right)
 \end{equation}
 
 Voor een gesloten vortexknoop met lengte \( \ell = 2\pi r_c L_k \), waarbij \( L_k \) de heliciteit of linking number is:
 \begin{equation}
-    M_k = \frac{\rho_{\ae} \kappa^2}{2 c^2} \cdot r_c L_k \cdot \ln\left( \frac{R}{r_c} \right)
+    M_k = \frac{\rho_\text{\ae} \kappa^2}{2 c^2} \cdot r_c L_k \cdot \ln\left( \frac{R}{r_c} \right)
 \end{equation}
 
 \subsection{Expressie in termen van \( C_e \)}
 Met de definitie \( \kappa = C_e r_c \), wordt dit:
 \begin{equation}
-    M_k = \frac{\rho_{\ae} C_e^2 r_c^3}{2 c^2} \cdot L_k \cdot \ln\left( \frac{R}{r_c} \right)
+    M_k = \frac{\rho_\text{\ae} C_e^2 r_c^3}{2 c^2} \cdot L_k \cdot \ln\left( \frac{R}{r_c} \right)
 \end{equation}
 
 Als \( \ln(R/r_c) \approx 1 \) wordt beschouwd als constant:
 \begin{equation}
-    M_k \approx \alpha_m \cdot \rho_{\ae} C_e^2 r_c^3 \cdot L_k, \quad \text{waar} \quad \alpha_m = \frac{1}{2c^2} \ln\left( \frac{R}{r_c} \right)
+    M_k \approx \alpha_m \cdot \rho_\text{\ae} C_e^2 r_c^3 \cdot L_k, \quad \text{waar} \quad \alpha_m = \frac{1}{2c^2} \ln\left( \frac{R}{r_c} \right)
 \end{equation}
 
 \subsection*{Numeriek voorbeeld (trefoilknoop)}
 Gebruikmakend van de parameters:
 \begin{align*}
-    \rho_{\ae} &= 3.893 \times 10^{18}~\text{kg/m}^3 \\
+    \rho_\text{\ae} &= 3.893 \times 10^{18}~\text{kg/m}^3 \\
     C_e &= 1.09384563 \times 10^6~\text{m/s} \\
     r_c &= 1.40897017 \times 10^{-15}~\text{m} \\
     c &= 2.99792458 \times 10^8~\text{m/s} \\
@@ -55,7 +55,7 @@ Gebruikmakend van de parameters:
 
 berekenen we:
 \begin{align*}
-    M_k &= \frac{\rho_{\ae} C_e^2 r_c^3}{2 c^2} \cdot L_k \cdot \ln\left( \frac{R}{r_c} \right) \\
+    M_k &= \frac{\rho_\text{\ae} C_e^2 r_c^3}{2 c^2} \cdot L_k \cdot \ln\left( \frac{R}{r_c} \right) \\
     &\approx 9.27 \times 10^{-31}~\text{kg} \approx 0.520~\text{MeV}/c^2
 \end{align*}
 
