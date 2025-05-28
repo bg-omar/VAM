@@ -1,0 +1,1 @@
+$$   \frac{d\tau}{dt} = \sqrt{1 - \frac{C_e^2}{c^2} e^{-r/r_c} - \frac{2G_\text{swirl} M_\text{eff}(r)}{rc^2} - \beta \Omega^2} $$

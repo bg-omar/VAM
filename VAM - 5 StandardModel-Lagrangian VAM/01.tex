@@ -1,0 +1,37 @@
+\section{Kinetische energie van een wervelstructuur}
+
+De eerste bijdrage aan de Lagrangian in het Vortex Æther Model komt voort uit de klassieke kinetische energie van een fluïdum met lokale snelheid $\vec{v}$ en dichtheid $\rho_\text{\ae}$:
+\[
+    \mathcal{L}_\text{kin} = \frac{1}{2} \rho_\text{\ae} |\vec{v}|^2
+\]
+
+In het bijzonder beschouwen we een stabiele knoopwervelstructuur waarbij de snelheid in de kern lokaal maximaal is en begrensd wordt door een wervelsnelheid $C_e$, eigen aan het knoopkarakter van het deeltje:
+\[
+    |\vec{v}| \approx C_e \quad \Rightarrow \quad \mathcal{L}_\text{kin} \sim \frac{1}{2} \rho_\text{\ae} C_e^2
+\]
+
+Aangezien de wervelkern een typische straal $r_c$ heeft, kunnen we de totale kinetische energie van een enkele knoopwervel benaderen door integratie over zijn volume:
+\[
+    E_\text{kin} = \int_{V_\text{knoop}} \frac{1}{2} \rho_\text{\ae} C_e^2 \, dV \approx \frac{1}{2} \rho_\text{\ae} C_e^2 \cdot \frac{4}{3}\pi r_c^3
+\]
+
+Hieruit volgt een natuurlijke definitie voor een effectieve massa van de wervel:
+\[
+    m_\text{eff} = \rho_\text{\ae} \cdot \frac{4}{3}\pi r_c^3
+    \quad \Rightarrow \quad E = \frac{1}{2} m_\text{eff} C_e^2
+\]
+
+Deze uitdrukking vervult in het VAM de rol van inertie. Ze koppelt directe geometrische eigenschappen van de wervelstructuur (straal $r_c$ en wervelsnelheid $C_e$) aan energie en massa.
+
+\subsection*{Circulatie en traagheid}
+De circulatie rond de kern is gedefinieerd als:
+\[
+    \Gamma = \oint_{\partial S} \vec{v} \cdot d\vec{\ell} = 2\pi r_c C_e
+\]
+
+Omdat de circulatie $\Gamma$ behouden blijft in een ideale æther, volgt dat bij verandering van $r_c$ de wervelsnelheid $C_e$ dient te veranderen. Dit verklaart de traagheid van de structuur onder vervorming — een geometrisch equivalent van massa. De afgeleide massa $m$ hangt dus impliciet af van de topologische stijfheid van de wervel:
+\[
+    m \propto \frac{\Gamma^2}{r_c C_e^2} = \text{const.}
+\]
+
+Deze kinetische term vormt de basis voor de massaopbouw in de Lagrangian die verder wordt uitgebreid in Sectie 3.
