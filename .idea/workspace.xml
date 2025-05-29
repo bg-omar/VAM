@@ -4,26 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68444c05-2aa5-47b0-a236-1340c65f3f8d" name="Changes" comment="Refactor æther density references for consistency; update LaTeX files and Python scripts for clarity; add new visualizations for trefoil knot and scale-dependent æther density">
-      <change afterPath="$PROJECT_DIR$/VAM - 5 StandardModel-Lagrangian VAM/02_motivation.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM - 5 StandardModel-Lagrangian VAM/03_natural_æther_constants.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM - 5 StandardModel-Lagrangian VAM/04_standard_model_lagrangian.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM - 5 StandardModel-Lagrangian VAM/05_standard_model_lagrangian_vam_units.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM - 5 StandardModel-Lagrangian VAM/06_KineticEnergy_ofa_VortexStructure.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM - 5 StandardModel-Lagrangian VAM/07_VorticityFieldEnergyAndGaugeTerms.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM - 5 StandardModel-Lagrangian VAM/08_VortexMassAsInertiaFromCirculation.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM - 5 StandardModel-Lagrangian VAM/09_PressureAndStressPotentialOfTheÆtherCondensate.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM - 5 StandardModel-Lagrangian VAM/10_MappingVAM_SwirlGroups.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM - 5 StandardModel-Lagrangian VAM/12_conclusionanddiscussion.tex" afterDir="false" />
+    <list default="true" id="68444c05-2aa5-47b0-a236-1340c65f3f8d" name="Changes" comment="📌 Reformulated the Standard Model Lagrangian in VAM units paper&#10;Add new sections on conclusion, natural æther constants, and vortex dynamics; r">
+      <change afterPath="$PROJECT_DIR$/VAM - 5 StandardModel-Lagrangian VAM/A1_MappingStandardModelTermsToVAMAnalogues.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM - 5 StandardModel-Lagrangian VAM/A2_NaturalUnitsAndConstantsInTheVortexÆtherModel.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM - 5 StandardModel-Lagrangian VAM/A3_ObservablePredictionsAndSimulationTargets.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 5 StandardModel-Lagrangian VAM/01.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 5 StandardModel-Lagrangian VAM/01_inleiding.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 5 StandardModel-Lagrangian VAM/01_inleiding.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 5 StandardModel-Lagrangian VAM/02.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 5 StandardModel-Lagrangian VAM/03.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 5 StandardModel-Lagrangian VAM/04.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 5 StandardModel-Lagrangian VAM/05.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 5 StandardModel-Lagrangian VAM/06_tijdsklokwerken.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 5 StandardModel-Lagrangian VAM/11_SwirlInducedTimeAndInVortexKnots.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 5 StandardModel-Lagrangian VAM/04_standard_model_lagrangian.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 5 StandardModel-Lagrangian VAM/04_standard_model_lagrangian.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 5 StandardModel-Lagrangian VAM/05_standard_model_lagrangian_vam_units.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 5 StandardModel-Lagrangian VAM/05_standard_model_lagrangian_vam_units.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 5 StandardModel-Lagrangian VAM/06_KineticEnergy_ofa_VortexStructure.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 5 StandardModel-Lagrangian VAM/06_KineticEnergy_ofa_VortexStructure.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 5 StandardModel-Lagrangian VAM/07_VorticityFieldEnergyAndGaugeTerms.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 5 StandardModel-Lagrangian VAM/08_VortexMassAsInertiaFromCirculation.tex" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/VAM - 5 StandardModel-Lagrangian VAM/5-StandardModel-Lagrangian VAM.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 5 StandardModel-Lagrangian VAM/5-StandardModel-Lagrangian VAM.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/5-StandardModel-Lagrangian VAM.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/5-StandardModel-Lagrangian VAM.pdf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="false" />
@@ -663,7 +655,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748381059616</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="📌 Reformulated the Standard Model Lagrangian in VAM units paper&#10;Add new sections on conclusion, natural æther constants, and vortex dynamics; r">
+      <option name="closed" value="true" />
+      <created>1748555544850</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1748555544850</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -697,7 +697,6 @@
     <ignored-roots>
       <path value="$USER_HOME$/projects/VAMcore" />
     </ignored-roots>
-    <MESSAGE value="Rename sections and files for clarity; add new experimental anchors and VAM predictions; introduce scripts for time dilation analysis and visualizations" />
     <MESSAGE value="Update æther density notation for consistency across documents; refine time dilation equations and clarify vortex dynamics descriptions" />
     <MESSAGE value="Refine time dilation expressions and improve clarity in Vortex Æther Model documentation; update references and remove redundant sections" />
     <MESSAGE value="Add auxiliary files and improve time dilation script; streamline image saving process and enhance documentation structure" />
@@ -722,7 +721,8 @@
     <MESSAGE value="Add ISCO benchmarking section and update document structure; rename conclusion and resolved challenges sections" />
     <MESSAGE value="Update figure captions for clarity; modify section title in resolved challenges; add triple helix visualization script with dynamic filename generation for outputs" />
     <MESSAGE value="Refactor æther density references for consistency; update LaTeX files and Python scripts for clarity; add new visualizations for trefoil knot and scale-dependent æther density" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor æther density references for consistency; update LaTeX files and Python scripts for clarity; add new visualizations for trefoil knot and scale-dependent æther density" />
+    <MESSAGE value=" Reformulated the Standard Model Lagrangian in VAM units paper&#10;Add new sections on conclusion, natural æther constants, and vortex dynamics; r" />
+    <option name="LAST_COMMIT_MESSAGE" value=" Reformulated the Standard Model Lagrangian in VAM units paper&#10;Add new sections on conclusion, natural æther constants, and vortex dynamics; r" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">

@@ -1,5 +1,5 @@
 %! Author = Omar Iskandarani
-%! Title = Standaardmodel-Lagrangian in Vortex Æther Model-Eenheden
+%! Title = A Topological Reformulation of the Standard Model via Vortex Æther Dynamics
 %! Date = May 23, 2025
 %! Affiliation = Independent Researcher, Groningen, The Netherlands
 %! License = CC-BY 4.0
@@ -31,6 +31,7 @@
 \usepackage{subcaption}
 \usepackage{siunitx}
 \usepackage{listings}
+\usepackage{lscape}
 \renewcommand{\arraystretch}{1.5}
 \renewcommand{\floatpagefraction}{.8}
 \sloppy
@@ -38,15 +39,16 @@
 \begin{document}
 
 \author{Omar Iskandarani}
-\title{Standaardmodel-Lagrangian in Vortex Æther Model-Eenheden}
+\title{A Topological Reformulation of the Standard Model via Vortex Æther Dynamics}
 \date{Mei 2025}
 \affiliation{Independent Researcher, Groningen, The Netherlands}
 \thanks{ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961}}
 \email{info@omariskandarani.com}
 
 \begin{abstract}
-We present a reformulation of the Standard Model Lagrangian using the dimensional and topological framework of the Vortex Æther Model (VAM). In this formulation, conventional quantum field terms are reinterpreted through fluid-mechanical analogs, where particles correspond to knotted vortex excitations in a compressible æther, and interactions arise from swirl, circulation, and density fluctuations. A complete set of natural units replaces Planck-based constants, rooted in mechanical quantities such as core radius (\(r_c\)), swirl velocity (\(C_e\)), and maximum æther force (\(F^\text{vam}_\text{max}\)). We demonstrate how gauge fields emerge from swirl dynamics, fermionic behavior from knotted helicity propagation, and mass generation from internal topological tension rather than spontaneous symmetry breaking. This reinterpretation leads to a dimensionally self-consistent Lagrangian, where all couplings and field dynamics are geometrically and physically grounded. The resulting model offers a unified mechanical ontology for quantum fields and suggests new avenues for interpreting mass, charge, and time from first principles.
+We present a reformulation of the Standard Model Lagrangian within the dimensional and topological framework of the Vortex Æther Model (VAM). In this approach, conventional quantum field terms are reinterpreted via fluid-mechanical analogs: particles correspond to knotted vortex excitations in a compressible æther, while interactions arise from swirl dynamics, circulation, and density fluctuations. The model replaces Planck-based constants with a complete set of natural units derived from mechanical quantities such as core radius (\(r_c\)), swirl velocity (\(C_e\)), and maximum æther force (\(F^\text{vam}_\text{max}\)). Coupling constants including \(\alpha\), \(\hbar\), and \(e\) emerge from vortex properties rather than being fundamental inputs. We show that gauge fields arise from swirl structure, fermionic behavior from knotted helicity propagation, and mass from internal topological tension rather than spontaneous symmetry breaking. The resulting Lagrangian is dimensionally self-consistent, with all dynamics and interactions geometrically and physically grounded. This framework provides a unified mechanical ontology for quantum fields and offers new insights into the origins of mass, charge, and time from first principles.
 \end{abstract}
+
 
     \maketitle
 
@@ -57,14 +59,14 @@ We present a reformulation of the Standard Model Lagrangian using the dimensiona
     \input{04_standard_model_lagrangian}
     \input{05_standard_model_lagrangian_vam_units}
     \input{06_KineticEnergy_ofa_VortexStructure}
-    \input{07_VorticityFieldEnergyAndGaugeTerms}
-    \input{08_VortexMassAsInertiaFromCirculation}
     \input{09_PressureAndStressPotentialOfTheÆtherCondensate}
     \input{10_MappingVAM_SwirlGroups}
     \input{11_SwirlInducedTimeAndInVortexKnots}
     \input{12_conclusionanddiscussion}
 
+    \appendix
+        \input{A2_NaturalUnitsAndConstantsInTheVortexÆtherModel}
+        \input{A3_ObservablePredictionsAndSimulationTargets}
     \bibliography{referenced}
     \bibliographystyle{unsrt}
-
 \end{document}
