@@ -13,7 +13,8 @@ class PhysicalConstant:
 # Dictionary of physical constants
 constants_dict = {
     "C_e": PhysicalConstant(r"C_e", 1093845.63, "m s^-1", "Vortex-Tangential-Velocity", "exact"),
-    "rho_ae": PhysicalConstant(r"\rho_\text{\ae}",  3.8934358266918687e+18, "kg m^-3", "Æther density", "exact"),
+    "rho_ae_A": PhysicalConstant(r"\rho^\text{core}_\text{\ae}",  3.8934358266918687e+18, "kg m^-3", "Æther Core Density", "exact"),
+    "rho_ae_V": PhysicalConstant(r"\rho^\text{free}_\text{\ae}",  7.0e-7, "kg m^-3", "Æther Vacuum Density", "exact"),
     "F_max": PhysicalConstant(r"F_\text{max}", 29.053507, "N", "Maximum force", "exact"),
     "r_c": PhysicalConstant(r"r_c", 1.40897017e-15, "m", "Vortex-Core radius", "exact"),
     "F_Coulomb": PhysicalConstant(r"F_\text{Coulomb}", 29.053507, "N", "Maximum Coulomb Force", "exact"),
@@ -61,7 +62,9 @@ constants_dict = {
 C_e = constants_dict["C_e"].value # Vortex-Core Tangential Velocity (m/s)
 R_c = constants_dict["R_c"].value
 r_c = constants_dict["r_c"].value  # Coulomb barrier (m)
-rho_ae = constants_dict["rho_ae"].value
+rho_ae = constants_dict["rho_ae_A"].value
+rho_ae_A = constants_dict["rho_ae_A"].value
+rho_ae_V = constants_dict["rho_ae_V"].value
 F_max = constants_dict["F_max"].value
 varepsilon_0 = constants_dict["varepsilon_0"].value
 F_GRmax = constants_dict["F_GRmax"].value

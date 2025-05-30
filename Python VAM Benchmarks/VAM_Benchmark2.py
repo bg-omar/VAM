@@ -1,7 +1,7 @@
 import pandas as pd
 import math
 import ace_tools_open as tools
-from Z_equations.constants import *
+from constants import *
 
 pd.set_option('display.max_columns', None)
 pd.set_option('display.width', None)

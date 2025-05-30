@@ -1,0 +1,95 @@
+\section{Core Pressure, Confinement, and the Mechanical Origin of Mass and Time}
+
+\subsection{Radial Pressure Field and Core Confinement}
+
+The radial pressure profile around a vortex filament in the VAM follows:
+\begin{equation}
+    P(r) = \frac{1}{2} \rho_{\ae} \left( \frac{\Gamma}{2\pi r} \right)^2 = \frac{\rho_{\ae} \Gamma^2}{8\pi^2 r^2}
+\end{equation}
+To avoid singularity at \( r = 0 \), we introduce a core radius \( r_c \), below which the swirl transitions to solid-body rotation. At this boundary, maximum pressure reaches:
+\begin{equation}
+    P_{\text{max}} = \frac{1}{2} \rho_{\ae} C_e^2 \approx 2.3 \, \text{GPa}
+\end{equation}
+
+\subsection{Mass from Swirl Confinement}\label{subsec:mass-from-swirl}
+
+A stable vortex excitation possesses inertial mass due to energy stored in confined swirl:
+\begin{equation}
+    m_f = \frac{\rho_{\ae} \Gamma^2}{3\pi r_c c^2}
+\end{equation}
+This mass arises mechanically from:
+\begin{itemize}
+    \item Vortex circulation \( \Gamma \),
+    \item Core scale \( r_c \),
+    \item Æther density \( \rho_{\ae} \).
+\end{itemize}
+Unlike the Standard Model, no Higgs field or symmetry breaking is needed; mass results from swirl confinement.
+
+\subsection{Smoothed Core Profile}
+
+To maintain physical continuity at the core, we define:
+\begin{equation}
+    v_\theta(r) =
+    \begin{cases}
+        \frac{\Gamma r}{2\pi r_c^2}, & r \leq r_c \\
+        \frac{\Gamma}{2\pi r}, & r > r_c
+    \end{cases}
+    \qquad
+    P(r) =
+    \begin{cases}
+        \frac{\rho_{\ae} \Gamma^2 r^2}{8\pi^2 r_c^4}, & r \leq r_c \\
+        \frac{\rho_{\ae} \Gamma^2}{8\pi^2 r^2}, & r > r_c
+    \end{cases}
+\end{equation}
+
+\subsection{Boundary Layers and the Bohr Radius}
+
+As pressure decays outward, equilibrium with the background æther sets in around:
+\begin{equation}
+    R_{\text{eq}} \sim a_0 = \frac{4\pi \varepsilon_0 \hbar^2}{m_e e^2} \approx 5.29 \times 10^{-11} \, \text{m}
+\end{equation}
+This alignment with the Bohr radius suggests that atomic boundaries are not quantum abstractions but hydrodynamic equilibrium shells.
+
+\subsection{Ætheric Time Dilation}
+
+Building on the helicity model from Section XII, we compute the explicit time dilation:
+\begin{equation}
+    \frac{d\tau}{dt} = \sqrt{1 - \frac{v_\theta^2}{c^2}} \approx 1 - \frac{P(r)}{\rho_{\ae} c^2}
+\end{equation}
+At the core, where \( P \approx P_{\text{max}} \), this yields:
+\begin{equation}
+    \frac{d\tau}{dt} \approx 1 - \left(\frac{C_e}{c}\right)^2 \approx 1 - 6.5 \times 10^{-10}
+\end{equation}
+This confirms that \emph{inertial time dilation} arises from centrifugal swirl pressure in the æther, independent of relativistic or gravitational sources.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{TimeDilationCore}
+    \caption{%
+        \textbf{Radial profile of swirl-induced pressure and time dilation in the Vortex Æther Model (VAM).}
+        The pressure field (blue) peaks near the core radius \( r_c \sim 10^{-15} \,\mathrm{m} \), inducing time dilation (red) via inertial swirl stress. Local clock rates slow subtly in high-pressure regions, consistent with helicity-based temporal emergence. This mechanism provides a fluid-mechanical origin for time dilation without invoking relativistic motion or curvature.
+    }
+    \label{fig:time_dilation_profile}
+\end{figure}
+
+\subsection{Mechanical Ontology Summary}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|l|l|}
+        \hline
+        \textbf{Feature} & \textbf{VAM Interpretation} & \textbf{Standard Model Analogy} \\
+        \hline
+        Core Pressure Spike & Swirl-based confinement & QCD bag pressure \\
+        Mass & Ætheric swirl inertia & Higgs-generated rest mass \\
+        Boundary Layer \( R_{\text{eq}} \) & Swirl equilibrium zone & Bohr radius \\
+        Time Dilation & Ætheric stress response & Relativistic redshift \\
+        Inertia & Resistance to vortex deformation & Undefined in QFT \\
+        \hline
+    \end{tabular}
+    \caption{Comparison of physical mechanisms in VAM and the Standard Model.}
+\end{table}
+
+\subsection*{Final Implication}
+
+The 2.3–2.5GPa pressure spike embodies the ætheric stress needed to stabilize vortex matter and locally warp temporal flow. These structures encode mass, inertia, and clock rate without invoking fields, curvature, or postulates—offering a purely mechanical account of quantum phenomena.
