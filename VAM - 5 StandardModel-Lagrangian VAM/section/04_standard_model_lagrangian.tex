@@ -1,117 +1,99 @@
 \section{Reformulating the Standard Model Lagrangian in VAM Units}\label{sec:lagrangian_vam}
-The Standard Model Lagrangian describes all known particle interactions through a compact formulation based on abstract symmetry principles.
-
+The Standard Model Lagrangian encapsulates particle dynamics through symmetry-based field terms:
 \begin{equation}
-\mathcal{L}_{\text{SM}} = -\frac{1}{4}F^{\mu\nu}F_{\mu\nu} + i\bar{\psi}\gamma^\mu D_\mu \psi + y_f \bar{\psi}\phi \psi + |D_\mu \phi|^2 - V(\phi)
+    \mathcal{L}_{\text{SM}} = -\frac{1}{4}F^{\mu\nu}F_{\mu\nu} + i\bar{\psi}\gamma^\mu D_\mu \psi + y_f \bar{\psi}\phi \psi + |D_\mu \phi|^2 - V(\phi)
 \end{equation}
+While mathematically elegant, these terms are not derived from first physical principles but are inserted axiomatically. The Vortex Æther Model (VAM) replaces this abstraction with a Lagrangian based on vortex dynamics, æther strain, and helicity conservation.
 
-However, its components—mass terms, gauge fields, and couplings—are introduced without mechanistic derivation. In the Vortex Æther Model (VAM), these elements acquire physical meaning through topological structures in a compressible æther medium.
+\subsection*{Core Assumptions}
+\begin{itemize}
+    \item The æther is a compressible, barotropic superfluid with stable vortex excitations.
+    \item Particles are topologically stable vortex knots with quantized circulation.
+    \item The Euler–Lagrange formalism applies to the action integral over fluid kinetic and potential energy densities.
+    \item Helicity and vorticity are conserved modulo reconnection events.
+\end{itemize}
 
-While mathematically concise, each term relies on abstract field principles and lacks physical grounding in geometry or mechanics. In contrast, the Vortex Æther Model (VAM) reformulates each term in terms of fluidic swirl, vorticity, and topological structure in a compressible æther. The core constants defining this reformulation include \( C_e \), \( r_c \), \( \rho_{\ae} \), and \( F^{\text{vam}}_\text{max} \).
-
-\subsection*{VAM Reformulated Lagrangian}
-
-The full VAM Lagrangian reads:
+\subsection*{VAM-Reformulated Lagrangian}
+Each term in the SM Lagrangian maps to a mechanical analog:
 
 \begin{align*}
-    \mathcal{L}_\text{VAM} &= \underbrace{-\frac{1}{4} \sum_{a} F^{a}_{\mu\nu} F^{a\mu\nu}}_{\text{Gauge field kinetic term}}
-    + \underbrace{\sum_{f} i \hbar_\text{VAM} \, \bar{\psi}_f \gamma^\mu D_\mu \psi_f}_{\text{Fermion kinetic term, with } \hbar_\text{VAM} = m_f C_e r_c}\\
-    &- \underbrace{\left| D_\mu \phi \right|^2}_{\text{Higgs kinetic term}}
-    - \underbrace{V(\phi)}_{\text{Higgs potential}}  \qquad \text{where } V(\phi) = -\frac{F_\text{max}}{r_c}|\phi|^2 + \lambda |\phi|^4 \\
-    &- \underbrace{\sum_f \left(y_f \bar{\psi}_f \phi \psi_f + \text{h.c.}\right)}_{\text{Yukawa couplings}}
-    + \underbrace{\mathcal{H}_\text{topo}}_{\text{Topological helicity terms}}
+    \mathcal{L}_\text{VAM} &= \underbrace{-\frac{1}{4} \sum_{a} W^{a}_{\mu\nu} W^{a\mu\nu}}_{\text{Gauge field vorticity}}
+    + \underbrace{\sum_{f} i \, m_f C_e r_c \, \bar{\psi}_f \gamma^\mu D_\mu \psi_f}_{\text{Fermion swirl propagation}} \\
+    &- \underbrace{|D_\mu \phi|^2}_{\text{Æther strain field}}
+    - \underbrace{V(\phi)}_{\text{Æther compression potential}}
+    - \underbrace{\sum_f y_f \bar{\psi}_f \phi \psi_f + \text{h.c.}}_{\text{Mass coupling}}
+    + \underbrace{\mathcal{H}_\text{topo}}_{\text{Vortex helicity term}}
 \end{align*}
-where $ V(\phi) = -\frac{F_\text{max}}{r_c}|\phi|^2 + \lambda |\phi|^4$
-Each term now acquires a concrete geometric or fluid-mechanical meaning, as described below.
 
-\begin{table}[h]
-\centering
-\renewcommand{\arraystretch}{1.3}
-\footnotesize
-\caption{Correspondence Between Standard Model Terms and VAM Reformulations}
-\label{tab:SM_to_VAM_map}
-\begin{tabular}{|c|c|c|}
-\hline
-\textbf{Standard Model Term} & \textbf{VAM Reformulation} & \textbf{Physical Interpretation} \\
-\hline
-$-\frac{1}{4}F_{\mu\nu} F^{\mu\nu}$ &
-$W_{\mu\nu} W^{\mu\nu}$ &
-Vorticity-based field tension \\
-\hline
-$i \bar{\psi} \gamma^\mu D_\mu \psi$ &
-$\rho_\text{\ae} C_e \Gamma (\psi^* \partial_t \psi - \vec{v} \cdot \nabla \psi)$ &
-Swirl-driven fermion propagation \\
-\hline
-$|D_\mu \phi|^2$ &
-$|D_\mu \phi|^2$ &
-Æther strain field kinetic term \\
-\hline
-$V(\phi) = -\mu^2 |\phi|^2 + \lambda |\phi|^4$ &
-$-\dfrac{F_\text{max}}{r_c} |\phi|^2 + \lambda |\phi|^4$ &
-Compression-induced symmetry breaking \\
-\hline
-$y_f \bar{\psi} \phi \psi$ &
-$m_f C_e r_c \, \bar{\psi} \psi$ &
-Mass from vortex inertia \\
-\hline
-(none) &
-$\mathcal{H}_\text{topo} = \int \vec{v} \cdot \vec{\omega} \, dV$ &
-Topological helicity of swirl and vorticity \\
-\hline
-\end{tabular}
-\end{table}
+Where:
+\[
+    V(\phi) = -\frac{F_\text{max}}{r_c}|\phi|^2 + \lambda |\phi|^4
+    \quad \text{and} \quad \mathcal{H}_\text{topo} = \int \vec{v} \cdot \vec{\omega} \, dV
+\]
 
-
-
-\subsection{Gauge Fields as Swirl-Flow Interactions}
-
-The term $-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}$ corresponds to the energy stored in local swirl patterns and vorticity. In VAM, this is recast as:
-
+\subsection{Gauge Fields as Vorticity Structures}
+From Helmholtz’s theorem, the energy density in a vortex field is:
 \begin{equation}
-\mathcal{L}_{\text{swirl}} = \frac{1}{2}\rho_{\ae} \left( |\vec{v}|^2 + \lambda |\nabla \times \vec{v}|^2 \right)
+    \mathcal{L}_{\text{swirl}} = \frac{1}{2} \rho_\text{\ae} \left( |\vec{v}|^2 + \lambda |\nabla \times \vec{v}|^2 \right)
 \end{equation}
+Here, $\vec{v}$ is swirl velocity; $\lambda$ captures æther compressibility. Incompressible flows correspond to pure gauge configurations ($\nabla \cdot \vec{v} = 0$), while compressible strains allow field strength analogs.
 
-where $\vec{v}$ is the local swirl velocity, and $\lambda$ is a compressibility factor. Electromagnetic and Yang-Mills fields emerge from divergence-free swirl flows; the tensor $F^{\mu\nu}$ becomes a derived vorticity descriptor. This hydrodynamic interpretation allows field strengths to be visualized as vorticity patterns, setting the stage for fermionic interactions.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{gauge_swirl_equivalence}
+    \caption{Analogy between gauge symmetry in the Standard Model and swirl invariance in the Vortex Æther Model (VAM). Both allow local reparameterizations that leave physical observables unchanged. Gauge symmetry in quantum field theory is structurally equivalent to potential-flow invariance in vortex dynamics.}
+    \label{fig:gauge_swirl_equivalence}
+\end{figure}
 
-\subsection{Fermion Kinetic Terms from Swirl Propagation}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{SwirlVSGauge}
+    \caption{
+        Visual analogy between a fluid swirl field (left) and a gauge potential field in quantum field theory (right).
+        Both fields depict circulation around a central core, but the left arises from mechanical vorticity in a compressible æther,
+        while the right encodes electromagnetic or gauge interaction via abstract potential terms.
+        This duality illustrates how local gauge invariance in QFT corresponds to conserved swirl topology in VAM.
+    }
+    \label{fig:swirl_gauge_analogy}
+\end{figure}
 
-The kinetic term $i\bar{\psi}\gamma^\mu D_\mu \psi$ becomes:
-
+\subsection{Fermion Kinetics via Swirl Propagation}
+In the hydrodynamic formalism:
 \begin{equation}
-\mathcal{L}_{\text{fermion}} = \rho_{\text{\ae}} C_e \Gamma \left( \psi^* \partial_t \psi - \vec{v} \cdot \nabla \psi \right)
+    \mathcal{L}_{\text{fermion}} = \rho_\text{\ae} C_e \Gamma \left( \psi^* \partial_t \psi - \vec{v} \cdot \nabla \psi \right)
 \end{equation}
+The convective derivative replaces $D_\mu$, and $\Gamma = 2\pi r_c C_e$ links to the particle’s spin-½ topology. Swirl modulates propagation analogous to minimal coupling.
 
-Here, $\Gamma$ is the circulation of the fermionic knot, and $\vec{v}$ is the swirl background. The gamma matrices $\gamma^\mu$ are interpreted as swirl-aligned operators acting on knot orientation. This hydrodynamic interpretation allows field strengths to be visualized as vorticity patterns, setting the stage for fermionic interactions.
-
-\subsection{Mass and Yukawa Terms via Topological Density}
-
-Rather than relying on a Higgs-fermion coupling, mass in VAM arises from internal helicity and tension:
-
+\subsection{Mass from Helicity and Inertia}
+The VAM mass term derives from vortex inertia under æther drag:
 \begin{equation}
-m_f = \frac{\rho_{\text{\ae}} \Gamma^2}{3\pi r_c C^2}
-\quad \Rightarrow \quad
-\mathcal{L}_{\text{mass}} = -m_f \psi^* \psi
+    m_f = \frac{\rho_{\ae} \Gamma^2}{3\pi r_c C_e^2} \quad\Rightarrow\quad \mathcal{L}_{\text{mass}} = -m_f \psi^* \psi
 \end{equation}
+This replaces abstract Yukawa interactions with fluidic resistance to internal swirl flow.
 
-Fermion masses vary according to knot complexity, linking number, and chirality.
-
-\subsection{Higgs Field as Æther Compression Potential}
-
-The scalar Higgs field and its potential $V(\phi) = \mu^2 \phi^2 + \lambda \phi^4$ are replaced with an æther strain field:
-
+\subsection{Higgs Field as Æther Compression}
+The standard Higgs potential $V(\phi) = -\mu^2|\phi|^2 + \lambda|\phi|^4$ becomes:
 \begin{equation}
-V_{\text{æther}}(\rho) = \frac{1}{2}K(\rho - \rho_0)^2
+    V(\rho) = \frac{1}{2}K(\rho - \rho_0)^2 \quad\text{or}\quad V(\phi) = -\frac{F_\text{max}}{r_c} |\phi|^2 + \lambda |\phi|^4
 \end{equation}
+$K$ is the æther’s bulk modulus. The vacuum expectation value corresponds to equilibrium density, leading to spontaneous tension minima that stabilize particle structure.
 
-where $K$ is the bulk modulus of the æther. Symmetry breaking occurs when local density fluctuations create stable swirl configurations.
-
-\subsection{Topological Helicity}
-
-The term $\mathcal{H}_\text{topo}$ captures knottedness and alignment of swirl:
+\subsection{Topological Helicity and Knot Dynamics}
 \begin{equation}
-\mathcal{H}_\text{topo} = \int \vec{v} \cdot \vec{\omega} \, dV
+    \mathcal{H}_\text{topo} = \int \vec{v} \cdot \vec{\omega} \, dV
 \end{equation}
-\bigskip
+This term tracks conservation of topological linkage and orientation. It becomes significant in processes involving particle transmutation, confinement, or decay.
+
+\subsection{Emergent Constants from Fluid Analogs}
+Derivations of $\hbar_{\text{VAM}}$ and charge coupling follow:
+
+\begin{align}
+    \hbar_{\text{VAM}} &= m_f C_e r_c \\
+    e^2 &= 8\pi m_e C_e^2 r_c \\
+    \Gamma &= \frac{h}{m} = 2\pi r_c C_e
+\end{align}
+
+These reinterpret Planck-scale constants as emergent quantities from measurable æther dynamics and flow quantization, aligning with results from BEC vortex systems \cite{Pethick2008BEC, Donnelly1991QuantizedVortices}.
 
 In this formulation, each field and interaction of the Standard Model gains a mechanical analog in the æther medium. The Lagrangian no longer relies on abstract symmetry principles alone, but instead emerges from vortex dynamics, circulation, density modulation, and topological structure within a unified fluid framework.
 
@@ -124,13 +106,13 @@ Kinetic energy of a vortex structure, or the local energy density in a vortex fi
     \mathcal{L}_\text{kin} = \frac{1}{2}\rho_\text{\ae} C_e^2
 \]
 
-Veddy field energy and gauge terms, field tensors follow from Helmholtz vorticity:
+Field energy and gauge terms, field tensors follow from Helmholtz vorticity:
 
 \[
     \mathcal{L}_\text{veld} = -\frac{1}{4}F_{\mu\nu}F^{\mu\nu}
 \]
 
-Veddy mass as inertia from circulation, where the fermion mass is determined by circulation:
+Mass as inertia from circulation, where the fermion mass is determined by circulation:
 \[
     \Gamma = 2\pi r_c C_e \quad\Rightarrow\quad m \sim \rho_\text{\ae} r_c^3
 \]
@@ -147,3 +129,5 @@ Topological terms for the conservation of vortex fields helicity:
 
 \subsection*{Supporting Experimental and Theoretical Observations}
 The VAM is consistent with experimentally and theoretically confirmed phenomena such as vortex stretching, helicity conservation and mass-inertia couplings \cite{batchelor1953,vinen2002,bewley2008,moffatt1969,kleckner2013,scheeler2014,bartlett1986}.
+
+This reformulation offers a physically intelligible and topologically rich counterpart to the Standard Model—one grounded in measurable fluid properties, rather than abstract gauge symmetries alone.

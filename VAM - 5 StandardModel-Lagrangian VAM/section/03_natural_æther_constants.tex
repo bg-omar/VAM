@@ -1,42 +1,55 @@
+\section{Natural Æther Constants and Dimensional Reformulation}
 
-\section{ Natural Æther Constants and Dimensional Reformulation}
-The Vortex Æther Model (VAM) proposes a fundamental shift in how physical quantities are derived and understood. Instead of relying on constants introduced solely for dimensional consistency (as in Planck units), VAM identifies a small set of physically meaningful parameters that arise from the structure and dynamics of an underlying æther medium. These parameters allow mass, energy, time, and charge to be constructed directly from the fluid-dynamical properties of space itself.
+The Vortex Æther Model (VAM) proposes a fundamental shift in how physical quantities are derived and interpreted. Rather than relying on constants introduced purely for dimensional self-consistency (as in Planck units), VAM defines a small set of physically grounded parameters that emerge from the topological and fluid-dynamical behavior of a compressible æther medium. These constants—accessible through theoretical analysis and analog systems—serve as the natural units for describing mass, energy, charge, and time.
 
-At the core of this framework are five fundamental constants: the swirl velocity $C_e$, vortex core radius $r_c$, æther density $\rho_\text{\ae}$, circulation strength $\kappa$, and the maximum transmissible force $F^{\text{vam}}_\text{max}$. These quantities are not arbitrarily chosen but are inferred from known properties of stable matter, gravitational coupling, and vortex behavior in superfluids. Together, they define a natural unit system analogous to Planck units, but grounded in a physically interpretable medium.
+The five central æther parameters are: the core swirl velocity $C_e$, vortex radius $r_c$, local æther density $\rho_\text{\ae}$, circulation quantum $\kappa$, and maximum transmissible force $F_\text{max}^{\text{vam}}$. Each of these is inferred from known or measurable features of matter and vortex dynamics:
+
+- \textbf{Swirl Velocity $C_e$}: Estimated from simulations of stable quantized vortices in Bose–Einstein condensates (BECs), where core rotation frequencies yield swirl velocities on the order of $10^6$ m/s \cite{Pethick2008BEC, Kleckner2013KnottedVortices}.
+
+- \textbf{Core Radius $r_c$}: Chosen to align with the proton charge radius ($\sim 1.4 \times 10^{-15}$ m), representing the minimal stable spatial scale for confined topological knots.
+
+- \textbf{Æther Density $\rho_\text{\ae}$}: Inferred from energy densities consistent with hadronic binding and extreme states of nuclear matter, comparable to estimates from neutron star core equations of state \cite{Lattimer2016EOS}.
+
+- \textbf{Circulation Quantum $\kappa$}: Defined analogously to superfluid helium and atomic BECs, where circulation is quantized in integer multiples of $\kappa = h/m$ \cite{Donnelly1991QuantizedVortices}.
+
+- \textbf{Maximum Force $F_\text{max}^{\text{vam}}$}: Derived from the stress that can be transmitted through a coherent æther core of radius $r_c$ with swirl momentum $C_e \rho_\text{\ae}$.
+
+Together, these quantities form a **natural unit system** grounded in topological fluid structures. Unlike the abstract Planck units—formed from $\hbar$, $G$, and $c$—the VAM parameters are mechanistic and measurable. The following table summarizes how VAM reconstructs key physical constants from æther parameters:
 
 \begin{table}[H]
     \centering
+    \footnotesize
+    \renewcommand{\arraystretch}{1.3}
     \begin{tabular}{|c|c|l|}
         \hline
         \textbf{Symbol} & \textbf{Expression} & \textbf{Interpretation} \\
         \hline
-        $\hbar_\text{VAM}$ & $m_e C_e r_c$ & VAM analogue of the reduced Planck constant \\
+        $\hbar_\text{VAM}$ & $m_e C_e r_c$ & Angular impulse from vortex circulation (Planck analog) \\
         \hline
-        $c$ & $\sqrt{\dfrac{2 F_\text{max} r_c}{m_e}}$ & Emergent wave speed (effective speed of light) \\
+        $c$ & $\sqrt{\dfrac{2 F_\text{max} r_c}{m_e}}$ & Effective wave speed in æther; signal propagation limit \\
         \hline
-        $\alpha$ & $\dfrac{2 C_e}{c}$ & Fine-structure constant (geometric formulation) \\
+        $\alpha$ & $\dfrac{2 C_e}{c}$ & Fine-structure constant from swirl-to-light-speed ratio \\
         \hline
-        $e^2$ & $8\pi m_e C_e^2 r_c$ & Squared elementary charge in natural units \\
+        $e^2$ & $8\pi m_e C_e^2 r_c$ & Electromagnetic coupling as swirl energy flux through core \\
         \hline
-        $\Gamma$ & $2\pi r_c C_e = \dfrac{h}{m_e}$ & Circulation quantum / quantized angular momentum \\
+        $\Gamma$ & $2\pi r_c C_e$ & Total circulation per core; linked to $h/m$ \\
         \hline
-        $v$ & $\sqrt{\dfrac{F_\text{max} r_c^3}{C_e^2}}$ & Higgs-like vacuum field amplitude in VAM \\
+        $v$ & $\sqrt{\dfrac{F_\text{max} r_c^3}{C_e^2}}$ & Higgs-like vacuum amplitude as æther compression scale \\
         \hline
     \end{tabular}
-    \caption{Derived Constants and Couplings in the Vortex Æther Model (VAM)}
+    \caption{Derived constants and coupling strengths in the Vortex Æther Model (VAM), based on æther geometry and dynamics.}
     \label{tab:VAM_constants}
 \end{table}
 
-In contrast to Planck's approach—which combines $\hbar$, $G$, and $c$ to define abstract scales—the VAM system ties each scale directly to mechanical flow properties. Time is determined by the rotation rate of core vortices ($1/C_e$), length by the vortex radius $r_c$, and energy by internal helicity and circulation. This not only provides a deeper ontological interpretation of natural constants but also opens the door to experimental reconstruction of fundamental units from condensed-matter analogs. The table~\ref{tab:VAM_constants} summarizes the key VAM constants and their roles.
+In contrast to Planck’s formulation—which defines mass, time, and length from purely mathematical combinations—VAM's dimensional system arises from vortex geometry and dynamical flow. For instance, time is set by the core swirl frequency ($1/C_e$), length by $r_c$, and energy by the circulation-based helicity. These allow the Standard Model Lagrangian terms (mass, interaction strength, etc.) to be recast in explicitly mechanistic terms.
 
-These constants allow all Lagrangian terms (mass, energy, field strength) to be rendered in units derived from vortex geometry, flow dynamics, and topological charge. For example, We interpret the rest energy as arising from internal flow, not external motion and can be expressed as:
-
+As one illustration, consider the rest mass $M$ of a particle in VAM. Rather than emerging from a Higgs field coupling, $M$ results from the kinetic energy of circular vortex flow:
 
 \begin{equation}
     \frac{1}{2} M c^2 = E_\text{kin} \Rightarrow M = \frac{\rho_\text{\ae} \Gamma^2}{L_k \pi r_c c^2}
 \end{equation}
 
+where $L_k$ is the helicity or linking number of the vortex knot. The full derivation appears in Appendix~\ref{sec:derivation-of-the-kinetic-energy-of-a-circular-vortex-loop}.
 
-where $L_k$ is the helicity (topological linking number) of the vortex knot. The derivation can be found in Appendix~\ref{sec:derivation-of-the-kinetic-energy-of-a-circular-vortex-loop}.
-
+Thus, VAM replaces dimensionally convenient but ontologically opaque constants with experimentally accessible and fluid-dynamically derived quantities.
 
