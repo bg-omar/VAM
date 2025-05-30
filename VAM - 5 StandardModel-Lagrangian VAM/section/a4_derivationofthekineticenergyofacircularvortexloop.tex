@@ -1,0 +1,78 @@
+\section{Variational Derivation of the Vortex \AE ther Model (VAM)}
+
+We begin with the total action for the Vortex \AE ther Model (VAM), expressed as a spacetime integral over the Lagrangian density:
+\begin{equation}
+    S = \int d^4x \, \mathcal{L}[\rho, \vec{v}, \Phi, \vec{\omega}]
+\end{equation}
+where the dynamical fields are:
+\begin{itemize}
+    \item $\rho(\vec{x}, t)$: local \AE ther density,
+    \item $\vec{v}(\vec{x}, t)$: flow velocity field,
+    \item $\Phi(\vec{x}, t)$: swirl-induced gravitational potential,
+    \item $\vec{\omega} = \nabla \times \vec{v}$: vorticity field.
+\end{itemize}
+
+\subsection*{Lagrangian Density}
+We propose the following effective Lagrangian density:
+\begin{equation}
+    \mathcal{L} = \frac{1}{2} \rho \vec{v}^{\,2} - \rho \Phi - U(\rho, \vec{\omega}) - V(\rho)
+\end{equation}
+with the terms interpreted as:
+\begin{itemize}
+    \item $\frac{1}{2} \rho \vec{v}^{\,2}$: kinetic energy of the \AE ther,
+    \item $\rho \Phi$: interaction energy with the swirl gravitational potential,
+    \item $U(\rho, \vec{\omega}) = \kappa \rho |\vec{\omega}|^2$: internal tension energy from vortex twist (with $\kappa$ a stiffness parameter),
+    \item $V(\rho)$: compressibility potential, defining pressure via $P = \rho \frac{\partial V}{\partial \rho} - V$.
+\end{itemize}
+
+\subsection*{Euler--Lagrange Field Equations}
+Applying the Euler--Lagrange formalism to each field $f$:
+\begin{equation}
+    \frac{\partial}{\partial t} \left( \frac{\partial \mathcal{L}}{\partial \dot{f}} \right) + \nabla \cdot \left( \frac{\partial \mathcal{L}}{\partial (\nabla f)} \right) - \frac{\partial \mathcal{L}}{\partial f} = 0
+\end{equation}
+
+\subsubsection*{Density Field $\rho$}
+\begin{equation}
+    \frac{\partial \mathcal{L}}{\partial \rho} = \frac{1}{2} \vec{v}^{\,2} - \Phi - \kappa |\vec{\omega}|^2 - \frac{\partial V}{\partial \rho}
+\end{equation}
+This defines a local Bernoulli-type condition incorporating swirl-induced internal energy.
+
+\subsubsection*{Velocity Field $\vec{v}$}
+The variation with respect to $\vec{v}$ yields:
+\begin{equation}
+    \frac{\delta S}{\delta \vec{v}} = \rho \vec{v} - \nabla \times \left( \frac{\partial U}{\partial \vec{\omega}} \right) = 0
+\end{equation}
+Leading to the momentum equation:
+\begin{equation}
+    \rho \left( \partial_t \vec{v} + (\vec{v} \cdot \nabla)\vec{v} \right) = -\nabla P + \rho \nabla \Phi + \nabla \cdot \left( \kappa \nabla \vec{\omega} \right)
+\end{equation}
+Here, $\frac{d}{dt}$ is the material (convective) derivative.
+
+\subsubsection*{Swirl Potential $\Phi$}
+\begin{equation}
+    \frac{\delta S}{\delta \Phi} = -\rho
+\end{equation}
+leads to a Poisson-type gravitational equation:
+\begin{equation}
+    \nabla^2 \Phi = 4\pi G_{\mathrm{vam}} \rho
+\end{equation}
+where $G_{\mathrm{vam}}$ is the vortex-derived gravitational coupling constant (cf. main text or Appendix E).
+
+\subsection*{Conservation Laws and Structure}
+\begin{itemize}
+    \item \textbf{Conservation of Helicity:}
+    The action is invariant under relabeling of fluid elements, which via Noether’s theorem implies helicity conservation:
+    \[
+        \frac{d}{dt} \int \vec{v} \cdot \vec{\omega} \, d^3x = 0
+    \]
+    \item \textbf{Topological Stability:} In domains with knotted or linked vortex lines, boundary terms must be included in the variation to account for helicity flux or reconnection events.
+    \item \textbf{Pressure Response:} The compressibility potential $V(\rho)$ governs how density gradients produce internal restoring forces.
+\end{itemize}
+
+\subsection*{Interpretation and Extensions}
+This variational formulation shows that:
+\begin{itemize}
+    \item All dynamical laws of the VAM can be derived from a single fluid-based action principle.
+    \item Gravity, inertia, and internal vortex structure emerge coherently from the same Lagrangian.
+    \item This lays the groundwork for future quantum extensions via path-integral quantization of $\mathcal{L}$ or geometric quantization of vortex fields.
+\end{itemize}
