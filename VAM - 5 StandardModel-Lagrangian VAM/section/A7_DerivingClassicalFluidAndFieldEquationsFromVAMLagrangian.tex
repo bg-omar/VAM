@@ -1,0 +1,90 @@
+\section{Deriving Classical Fluid and Field Equations from the VAM Lagrangian}
+
+Here we derive the physical field equations associated with each term in the VAM Lagrangian via the Euler–Lagrange formalism. This section explicitly shows how familiar fluid and wave equations arise.
+
+\subsection*{Kinetic Term and Euler Equation}
+
+Starting from the kinetic term:
+\[
+    \mathcal{L}_{\text{kin}} = \frac{1}{2} \rho_\text{\ae} v^2,
+\]
+and applying the Euler--Lagrange equation with respect to $v^i$, we find:
+\[
+    \frac{\partial \mathcal{L}}{\partial v^i} = \rho_\text{\ae} v^i, \qquad
+    \frac{\partial \mathcal{L}}{\partial (\partial_j v^i)} = 0.
+\]
+Thus, the equation of motion reduces to:
+\[
+    \frac{d}{dt}(\rho_\text{\ae} v^i) = -\partial^i p,
+\]
+where \( p \) is a generalized pressure or constraint force.
+
+\begin{equation}
+    \boxed{
+        \rho_\text{\ae}\, \frac{d \vec{v}}{dt} = -\nabla p
+    }
+\end{equation}
+
+This is the standard form of the \textbf{Euler equation} in inviscid, barotropic fluids \cite{khalatnikov2000}.
+
+\subsection*{Helicity Term and Helmholtz Vorticity Equation}
+
+Now consider the helicity-based term:
+\[
+    \mathcal{L}_{\text{helicity}} = \gamma\, \vec{v} \cdot (\nabla \times \vec{v}) = \gamma\, \epsilon^{ijk} v^i \partial_j v^k.
+\]
+The variation yields:
+\[
+    \frac{\partial \mathcal{L}}{\partial v^i} = \gamma (\nabla \times \vec{v})^i, \qquad
+    \Rightarrow \frac{d}{dt}(\rho_\text{\ae} v^i) = -\nabla^i p + \gamma\, \epsilon^{ijk} \partial_j \omega^k.
+\]
+This adds a topological forcing term from \textbf{helicity gradients}:
+\begin{equation}
+    \boxed{
+        \rho_\text{\ae}\, \frac{d \vec{v}}{dt} = -\nabla p + \gamma\, \nabla \times \vec{\omega}
+    }
+\end{equation}
+
+This form corresponds to the \textbf{Helmholtz vorticity equation} in the presence of helicity gradients \cite{moffatt1969}.
+
+\subsection*{Scalar Field Term and Wave Equation}
+
+The scalar sector is governed by:
+\[
+    \mathcal{L}_\Phi = - \frac{1}{2} \rho_\text{\ae} (\nabla \Phi)^2 - V(\Phi).
+\]
+Applying the Euler–Lagrange equation for scalar fields:
+\[
+    \frac{\partial \mathcal{L}}{\partial \Phi} = - \frac{dV}{d\Phi}, \qquad
+    \frac{\partial \mathcal{L}}{\partial (\partial^i \Phi)} = -\rho_\text{\ae} \partial^i \Phi.
+\]
+Taking divergence:
+\[
+    \partial_i ( \rho_\text{\ae} \partial^i \Phi ) = \frac{dV}{d\Phi}.
+\]
+
+If $\rho_\text{\ae}$ is constant:
+\begin{equation}
+    \boxed{
+        \nabla^2 \Phi = \frac{1}{\rho_\text{\ae}} \frac{dV}{d\Phi}
+    }
+\end{equation}
+
+This is the \textbf{scalar wave equation with source potential}, describing deformation or strain in the æther field \cite{barcelo2011}.
+
+\subsection*{Summary}
+
+Each term in the VAM Lagrangian leads to known physical equations:
+
+\begin{center}
+    \begin{tabular}{|c|c|l|}
+        \hline
+        Term & Resulting Equation & Interpretation \\
+        \hline
+        $ \mathcal{L}_{\text{kin}} = \frac{1}{2} \rho_\text{\ae} v^2 $ & $ \rho_\text{\ae} \frac{d \vec{v}}{dt} = -\nabla p $ & Euler momentum conservation \\
+        $ \mathcal{L}_{\text{helicity}} = \gamma \vec{v} \cdot (\nabla \times \vec{v}) $ & $ +\gamma \nabla \times \vec{\omega} $ & Topological forcing via helicity \\
+        $ \mathcal{L}_\Phi = -\frac{1}{2} \rho_\text{\ae} (\nabla \Phi)^2 - V(\Phi) $ & $ \nabla^2 \Phi = \rho_\text{\ae}^{-1} dV/d\Phi $ & Scalar strain or internal mode \\
+        \hline
+    \end{tabular}
+\end{center}
+

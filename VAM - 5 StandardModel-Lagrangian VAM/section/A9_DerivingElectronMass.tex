@@ -1,0 +1,86 @@
+\section{Dual Derivation of Electron Mass in VAM}
+\label{appendix:mass-derivation}
+
+Within the Vortex Æther Model (VAM), the mass of the electron arises not from fundamental constants directly, but from the interplay of ætheric circulation, vortex stability, and geometric structure. We present two independent derivations of the electron mass: one based on ætheric stress (Planck-limited force) and one based on topological vortex knots.
+
+\subsection*{Planck-Limited Force and Inertial Mass}
+\label{sec:mass-force-balance}
+
+The æther medium exhibits a maximum sustainable stress, analogous to the maximum force conjecture in General Relativity:
+\begin{equation*}
+    F_{\text{Planck}} = \frac{c^4}{4G}.
+\end{equation*}
+
+The electron is modeled as a vortex ring with radius \( r_c \), stabilized against centrifugal expansion by the æther's internal tension \( F_{\text{max}} \). This yields a mechanical balance condition:
+\begin{equation*}
+    M_e \frac{C_e^2}{r_c} = F_{\text{max}}.
+\end{equation*}
+
+Solving for the mass gives:
+\begin{equation*}
+    M_e = \frac{F_{\text{max}} r_c}{C_e^2}.
+\end{equation*}
+
+To connect this to Planck-scale physics, we parameterize the force as a reduced Planck tension:
+\begin{equation*}
+    F_{\text{max}} = \left( \frac{c^4}{4G} \right) \alpha \left( \frac{R_c}{L_p} \right)^{-2},
+\end{equation*}
+
+where:
+- \( \alpha \) is the fine-structure constant,
+- \( R_c \approx 2 r_c \),
+- \( L_p = \sqrt{\hbar G / c^3} \) is the Planck length.
+
+Substituting back, we find:
+\begin{equation}
+    M_e = \frac{2 F_{\text{max}} r_c}{c^2},
+\end{equation}
+as used in multiple other VAM derivations. This result shows how particle mass scales with ætheric stress and core radius.
+
+\subsection*{Topological Knot Energy and Vortex Mass}
+\label{sec:mass-knot}
+
+Alternatively, we consider a volumetric energy formulation, where the electron mass emerges from the rotational energy stored in a quantized vortex knot. The kinetic energy density of such a structure is:
+\begin{equation*}
+    \mathcal{E}_{\text{kin}} = \frac{1}{2} \rho_\text{\ae} C_e^2.
+\end{equation*}
+
+Assuming a core radius \( r_c \) and vortex volume \( V = \frac{4}{3} \pi r_c^3 \), the internal kinetic energy becomes:
+\begin{equation*}
+    E = \frac{1}{2} \rho_\text{\ae} C_e^2 \cdot \frac{4}{3} \pi r_c^3.
+\end{equation*}
+
+We define the inertial mass from this energy via:
+\begin{equation*}
+    M_e = \frac{2E}{C_e^2} = \rho_\text{\ae} \cdot \frac{4}{3} \pi r_c^3.
+\end{equation*}
+
+If the electron is modeled as a trefoil knot or similar topological excitation, the mass becomes quantized by the linking number \( L_k \) of the knot:
+\begin{equation}
+    M_e = \frac{8\pi \rho_\text{\ae} r_c^3}{C_e} \cdot L_k.
+\end{equation}
+
+This explicitly shows that the mass depends on the \textbf{local vortex geometry and topology}, not only on the global æther stress.
+
+\subsection*{Summary}
+
+\begin{table}[H]
+    \centering
+    \footnotesize
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabular}{|l|l|l|}
+        \hline
+        \textbf{Derivation Type} & \textbf{Mass Formula} & \textbf{VAM Interpretation} \\
+        \hline
+        \makecell[l]{Force-Balance \\ from Æther Stress} &
+        \makecell[l]{\( M_e = \dfrac{2 F_{\text{max}} r_c}{c^2} \)} &
+        \makecell[l]{Mass arises from centrifugal resistance \\ against ætheric maximum force; \\ grounded in Planck tension and core radius.} \\
+        \hline
+        \makecell[l]{Topological Knot \\ Energy Density} &
+        \makecell[l]{\( M_e = \dfrac{8\pi \rho_\text{\ae} r_c^3}{C_e} \cdot L_k \)} &
+        \makecell[l]{Mass emerges from internal kinetic energy \\ of a topological vortex structure (e.g., trefoil knot); \\ quantized via linking number \(L_k\).} \\
+        \hline
+    \end{tabular}
+    \caption{Two independent VAM derivations of electron mass: from æther stress and from topological knot energy}
+\end{table}
+

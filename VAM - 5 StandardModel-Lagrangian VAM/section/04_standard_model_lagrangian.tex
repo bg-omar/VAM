@@ -13,6 +13,20 @@ While mathematically elegant, these terms are not derived from first physical pr
     \item Helicity and vorticity are conserved modulo reconnection events.
 \end{itemize}
 
+\subsection*{Remarks on Spacetime Treatment}
+
+In this model, the action integral is expressed as:
+\[
+    S = \int dt \int_{\mathbb{R}^3} \mathcal{L}(\vec{v}, \Phi, \rho_\text{\ae}, \dots) \, d^3x,
+\]
+reflecting a 3+1 decomposition with \textbf{absolute Newtonian time} and \textbf{Euclidean spatial geometry}.
+
+Unlike relativistic field theories defined on Minkowski space \( \mathbb{R}^{1,3} \), the VAM adopts a \textbf{non-relativistic ontology}, where time is globally ordered and external to field dynamics.
+
+This approach is consistent with established non-relativistic field theories, such as the Gross–Pitaevskii and hydrodynamic models for Bose–Einstein condensates, where space and time are decoupled and the Lagrangian formalism operates over \( \mathbb{R}^3 \times \mathbb{R} \)~\cite{Pethick2008BEC}.
+
+Relativistic invariance in this context is regarded as an \textbf{emergent symmetry} that may arise at large scales or in specific limits of vortex behavior.
+
 \subsection*{VAM-Reformulated Lagrangian}
 Each term in the SM Lagrangian maps to a mechanical analog:
 
@@ -30,6 +44,7 @@ Where:
     V(\phi) = -\frac{F_\text{max}}{r_c}|\phi|^2 + \lambda |\phi|^4
     \quad \text{and} \quad \mathcal{H}_\text{topo} = \int \vec{v} \cdot \vec{\omega} \, dV
 \]
+The full variational derivation of this Lagrangian—including Euler–Lagrange equations for velocity, scalar, and density fields—is provided in Appendix~\ref{sec:EL-derivation}.
 
 \subsection{Gauge Fields as Vorticity Structures}
 From Helmholtz’s theorem, the energy density in a vortex field is:
@@ -74,7 +89,7 @@ This replaces abstract Yukawa interactions with fluidic resistance to internal s
 \subsection{Higgs Field as Æther Compression}
 The standard Higgs potential $V(\phi) = -\mu^2|\phi|^2 + \lambda|\phi|^4$ becomes:
 \begin{equation}
-    V(\rho) = \frac{1}{2}K(\rho - \rho_0)^2 \quad\text{or}\quad V(\phi) = -\frac{F_\text{max}}{r_c} |\phi|^2 + \lambda |\phi|^4
+    V(\rho_\text{\ae}) = \frac{1}{2}K(\rho_\text{\ae} - \rho_0)^2 \quad\text{or}\quad V(\phi) = -\frac{F_\text{max}}{r_c} |\phi|^2 + \lambda |\phi|^4
 \end{equation}
 $K$ is the æther’s bulk modulus. The vacuum expectation value corresponds to equilibrium density, leading to spontaneous tension minima that stabilize particle structure.
 
@@ -127,7 +142,116 @@ Topological terms for the conservation of vortex fields helicity:
     \mathcal{H} = \int \vec{v}\cdot\vec{\omega}\, dV
 \]
 
+\begin{table}[H]
+    \centering
+    \footnotesize
+    \renewcommand{\arraystretch}{1.4}
+    \begin{tabular}{|l|l|l|l|}
+        \hline
+        \textbf{SM Term} & \textbf{Mathematical Form} & \textbf{VAM Analog} & \textbf{Fluid-Dynamic Interpretation} \\
+        \hline
+        \makecell[l]{Fermion Kinetic \\ Term} &
+        $\bar{\psi}(i\gamma^\mu D_\mu)\psi$ &
+        $\rho_\text{\ae} \vec{v}^2$ &
+        \makecell[l]{Kinetic energy of topological vortex knot (fermion)} \\
+        \hline
+        \makecell[l]{Gauge Field \\ Kinetic Term} &
+        $-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}$ &
+        $\rho_\text{\ae} (\vec{v} \cdot \nabla \times \vec{v})$ &
+        \makecell[l]{Swirl helicity (fluid analog of gauge field energy)} \\
+        \hline
+        Fermion Mass Term &
+        $m\bar{\psi}\psi$ &
+        $\rho_{core} C_e^2$ &
+        \makecell[l]{Core pressure from tangential circulation of vortex} \\
+        \hline
+        \makecell[l]{Higgs Field \\ Kinetic Term} &
+        $\frac{1}{2}(\partial_\mu \phi)^2$ &
+        $\frac{1}{2}(\nabla \phi)^2$ &
+        \makecell[l]{Elastic strain in scalar potential field of Æther} \\
+        \hline
+        Higgs Potential &
+        $V(\phi) = -\mu^2\phi^2 + \lambda \phi^4$ &
+        $\lambda \phi^4 (1 - \phi^2/F_{\text{max}}^2)$ &
+        \makecell[l]{Compressibility-induced pressure potential} \\
+        \hline
+        Yukawa Coupling &
+        $y\bar{\psi}\phi\psi$ &
+        $\rho_\text{\ae} \phi$ &
+        \makecell[l]{Topological mass coupling via scalar compression} \\
+        \hline
+        Gauge Coupling &
+        $D_\mu = \partial_\mu - igA_\mu$ &
+        $\vec{v} + \vec{A}_{\text{swirl}}$ &
+        \makecell[l]{Swirl-mediated interaction velocity} \\
+        \hline
+        QCD Term &
+        $G_{\mu\nu}^a G^{\mu\nu}_a$ &
+        -- &
+        \makecell[l]{Conservation of angular momentum in \\ trichiral vortex flows} \\
+        \hline
+        EM Coupling &
+        $q\bar{\psi}\gamma^\mu A_\mu \psi$ &
+        $\Gamma \cdot \chi$ &
+        \makecell[l]{Charge as circulation magnitude and chirality} \\
+        \hline
+        Chiral Asymmetry &
+        -- &
+        Knot handedness &
+        \makecell[l]{Topological chirality determines weak \\ interaction selectivity} \\
+        \hline
+    \end{tabular}
+    \caption{Comparison of Standard Model Lagrangian terms with their VAM fluid-dynamic analogs.}
+    \label{tab:SMtoVAM}
+\end{table}
+
+
 \subsection*{Supporting Experimental and Theoretical Observations}
 The VAM is consistent with experimentally and theoretically confirmed phenomena such as vortex stretching, helicity conservation and mass-inertia couplings \cite{batchelor1953,vinen2002,bewley2008,moffatt1969,kleckner2013,scheeler2014,bartlett1986}.
 
 This reformulation offers a physically intelligible and topologically rich counterpart to the Standard Model—one grounded in measurable fluid properties, rather than abstract gauge symmetries alone.
+
+\section{Boundary and Gauge Conditions in VAM}
+
+To ensure physical consistency, topological conservation, and a well-posed variational principle in the Vortex Æther Model (VAM), appropriate boundary and gauge conditions must be imposed on all dynamical fields. These conditions guarantee finite energy configurations, preserve topological structure, and define allowable transformations analogous to gauge freedom in field theory.
+
+\subsection{Boundary Conditions}
+
+The vortex and scalar fields in VAM are localized structures embedded in a compressible æther background. The following boundary conditions ensure that solutions are physically acceptable:
+
+\begin{align*}
+    \vec{v}(\vec{x}, t) &\rightarrow 0 \quad \text{as} \quad |\vec{x}| \rightarrow \infty && \text{(vanishing velocity)} \\
+    \rho(\vec{x}, t) &\rightarrow \rho_0 = \text{const.} && \text{(uniform background density)} \\
+    \phi(\vec{x}, t) &\rightarrow \phi_{\text{vac}} && \text{(vacuum scalar potential)} \\
+    \vec{\omega}(\vec{x}, t) &= \nabla \times \vec{v} \rightarrow 0 && \text{(localized vorticity)} \\
+    \int \vec{v} \cdot \vec{\omega} \, d^3x &< \infty && \text{(finite helicity integral)}
+\end{align*}
+
+Additionally, knotted vortex configurations must be closed, non-self-intersecting, and topologically quantized to ensure particle-like stability and mass conservation.
+
+\subsection{Gauge Conditions}
+
+Although VAM does not contain gauge fields in the traditional sense, several fluid-dynamic symmetries mirror the structure of gauge theories in the Standard Model. These “fluid gauges” can be expressed as follows:
+
+\begin{enumerate}
+    \item \textbf{Velocity Potential Gauge (Irrotational Decomposition):}
+    \[
+        \vec{v} = \nabla \psi + \nabla \times \vec{A}
+    \]
+    where $\psi$ is the scalar velocity potential and $\vec{A}$ is a swirl vector potential. The system is invariant under the transformation $\vec{A} \to \vec{A} + \nabla \chi$.
+
+    \item \textbf{Incompressibility Constraint (Coulomb Gauge Analog):}
+    \[
+        \nabla \cdot \vec{v} = 0
+    \]
+    which corresponds to a divergence-free æther flow, consistent with a near-incompressible medium and fluid analogs of gauge fixing.
+
+    \item \textbf{Topological Gauge Invariance:}
+    The identity of vortex particles is encoded in their knot topology (e.g., trefoil, figure-eight). Gauge transformations must preserve topological invariants such as linking number and helicity:
+    \[
+        \mathcal{H} = \int \vec{v} \cdot \vec{\omega} \, d^3x = \text{constant}
+    \]
+    These invariants act as topological charges analogous to electric or color charge.
+\end{enumerate}
+
+These boundary and gauge conditions collectively constrain the solution space of the VAM Lagrangian and ensure consistency with observed quantum behavior, mass conservation, and particle stability.

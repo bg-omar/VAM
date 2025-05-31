@@ -156,10 +156,10 @@ print(alpha**2 * A_0)
 print((e**2) / (4 * pi * varepsilon_0 * M_e * c**2))
 print((e**2) / (8 * pi * varepsilon_0 * F_max * R_c))
 
-print("\ne: ",e) ################################################
-print(math.sqrt(16 * pi * F_max * R_c**2) / (mu_0 * c**2)) ################################################
-print(math.sqrt(2 * alpha * h) / (mu_0 * c)) ################################################
-print(math.sqrt(4 * C_e * h) / (mu_0 * c**2)) ################################################
+print("\ne: ",e)
+print(math.sqrt(16 * pi * F_max * R_c**2 * varepsilon_0))
+print(math.sqrt((2 * alpha * h * varepsilon_0 * c) ))
+print(math.sqrt(4 * C_e * h * varepsilon_0))
 
 print("\nL_p: ",L_p) ###########################################
 print(math.sqrt(h * G / c**3)) ###########################################
@@ -223,6 +223,7 @@ print((pi * F_max * R_e**2) / C_e)
 print((96 * pi * F_max**2 * R_c**3 * A_0) / (h * c**2))
 print( 2*alpha * M_e * C_e**2 * R_c)
 
+
 Gamma = C_e * lambda_p
 print("\n Gamma = C_e * lambda_p: ", Gamma)
 
@@ -247,3 +248,18 @@ m_eff = (rho_ae * gamma**2 ) / (3 * math.pi * r_c * c**2)
 print("m_eff: ", m_eff)
 
 print(8 * math.pi * rho_ae * r_c* C_e * 3)
+print (h)
+
+# Fundamental VAM Constants
+M_e = 9.1093837015e-31    # kg
+C_e = 1.09384563e6        # m/s
+r_c = 1.40897017e-15      # m
+
+# Empirical Planck constant
+hbar_empirical = 1.054571817e-34  # J·s
+
+# Define proportionality constant
+kappa_vam = hbar_empirical / (M_e * C_e * r_c)
+
+# Print
+print("kappa_vam ≈", kappa_vam)

@@ -2,6 +2,39 @@
 
 In the Vortex Æther Model (VAM), mass is not a fundamental attribute but emerges from fluid motion—specifically the swirl dynamics and circulation of knotted vortex structures. This section derives the mass-energy relation, effective inertial mass, and corresponding Lagrangian term based purely on ætheric fluid mechanics.
 
+\subsection{Emergent Relativistic Limit from Æther Dynamics}
+
+In the Vortex Æther Model (VAM), the relativistic energy relation \( E = mc^2 \) arises not as an axiom, but as a natural consequence of the æther’s fluid dynamics. The key is the propagation speed of perturbations—both scalar and vectorial—within the medium.
+
+\paragraph{Speed of Sound Analogy.}
+In compressible fluids, the maximum propagation speed of pressure or scalar waves is given by:
+\[
+    c_s = \sqrt{\frac{\partial p}{\partial \rho}}.
+\]
+In the æther, this corresponds to the speed of longitudinal strain propagation. For small perturbations near the equilibrium density \( \rho_0 \), we can write:
+\[
+    c^2 = \left.\frac{d^2 V}{d\rho^2} \right|_{\rho_0} \cdot \frac{1}{\rho_0},
+\]
+where \( V(\rho) \) is the æther potential. This defines \( c \) as the \textbf{maximum signal speed}, similar to light speed in relativistic spacetime.
+
+\paragraph{Limiting Velocity for Vortex Motion.}
+Swirl propagation is limited by the maximum tangential velocity \( C_e \), tied to vortex stability:
+\[
+    \Gamma = 2\pi r_c C_e.
+\]
+However, long-range signal transmission (e.g., interactions between vortices) is constrained by the bulk medium. Thus, \( c \) acts as the \textbf{emergent limiting velocity} for field propagation and topological interactions.
+
+\paragraph{Lorentz Invariance as an Emergent Symmetry.}
+As shown in analog gravity systems \cite{barcelo2011}, effective Lorentz symmetry can emerge in low-energy excitations of superfluid systems. Similarly, the VAM supports Lorentz invariance as an emergent property of linearized vortex perturbations, especially in the deep infrared regime.
+
+\paragraph{Matching with Observed Constants.}
+To align with observed particle properties, the VAM allows:
+\[
+    \hbar_{\text{VAM}} = 2 m C_e a_0, \qquad E = m c^2, \qquad \text{and} \qquad \Gamma = \frac{h}{m}.
+\]
+These expressions relate observable constants to ætheric dynamics. Importantly, constants such as \( \hbar \), \( c \), and \( e \) are \textbf{inserted as axioms}, but \textbf{emerge from circulation, wave speed, and topological parameters} in the æther framework.
+
+
 \subsection{Kinetic Energy of a Vortex Knot}
 
 The kinetic energy of a localized vortex knot in an incompressible æther is given by:
@@ -17,10 +50,15 @@ Assuming a knot core with radius \( r_c \), the total kinetic energy becomes:
     E_\text{kin} \approx \frac{1}{2} \rho_\text{\ae} C_e^2 \cdot \frac{4}{3} \pi r_c^3.
 \]
 This naturally defines an effective inertial mass:
+
 \[
     m_\text{eff} = \rho_\text{\ae} \cdot \frac{4}{3} \pi r_c^3,
-    \qquad \Rightarrow \qquad E = \frac{1}{2} m_\text{eff} C_e^2.
 \]
+associated with the fluid's resistance to swirl acceleration. The local kinetic energy is:
+\[
+    E_{\text{kin}} = \frac{1}{2} m_\text{eff} C_e^2.
+\]
+Note that this expression describes mechanical energy from internal circulation. In the VAM framework, the total rest energy of the vortex object later aligns with \( E = m c^2 \), where \( c \) is the emergent relativistic limit derived from æther dynamics.
 
 \subsection{Circulation and Geometric Mass Emergence}
 
@@ -28,31 +66,42 @@ In vortex mechanics, circulation is conserved and fundamental. It is defined as:
 \begin{equation}
     \Gamma = \oint_{\partial S} \vec{v} \cdot d\vec{\ell} = 2\pi r_c C_e.
 \end{equation}
-This relation implies that any deformation in core radius \( r_c \) demands a reciprocal change in swirl velocity \( C_e \), preserving $\Gamma$ and enforcing inertial resistance.
+This implies that changes in core radius \( r_c \) require reciprocal changes in swirl velocity \( C_e \), enforcing inertial resistance.
 
-We now compute the full kinetic energy from this identity:
+We compute the kinetic energy:
 \begin{align}
     E &= \frac{1}{2} \rho_\text{\ae} \left( \frac{\Gamma}{2\pi r_c} \right)^2 \cdot \frac{4}{3} \pi r_c^3
-      = \frac{\rho_\text{\ae} \Gamma^2}{6\pi r_c}.
+    = \frac{\rho_\text{\ae} \Gamma^2}{6\pi r_c}.
 \end{align}
-Comparing with \( E = \frac{1}{2} m C_e^2 \), we extract the effective mass:
+Comparing with \( E = m c^2 \), we extract the effective inertial mass:
 \begin{equation}
-    m_\text{eff} = \frac{\rho_\text{\ae} \Gamma^2}{3\pi r_c C_e^2}.
+    m_\text{eff} = \frac{\rho_\text{\ae} \Gamma^2}{6\pi r_c c^2}.
 \end{equation}
-This demonstrates that mass is not an input parameter but a derived quantity—arising from æther density, core geometry, and topological circulation.
+This shows that mass is an emergent quantity—arising from vortex geometry and æther circulation, not inserted as a primitive parameter.
+
+Although \( C_e \) governs the local swirl velocity within the vortex core, the inertial energy scale aligns with the broader æther dynamics, where \( c \) defines the maximum speed of long-range signal propagation (e.g., strain waves).
+
+Thus, the relation \( E = m c^2 \) in VAM arises not from postulated spacetime symmetry, but from bulk æther behavior near equilibrium density. It provides a natural bridge between microscopic vortex circulation and macroscopic relativistic dynamics.
+
 
 \subsection{Lagrangian Mass Term in VAM}
 
-Given the above, the corresponding mass term for a fermion field $\psi_f$ is:
+Given the above, the corresponding mass term for a fermion field $\psi_f$ becomes:
 \begin{equation}
-    \mathcal{L}_\text{mass} = m_f C_e r_c \cdot \bar{\psi}_f \psi_f,
+    \mathcal{L}_\text{mass} = \hbar_{\text{VAM}} \cdot \bar{\psi}_f \psi_f,
 \end{equation}
-where \( \hbar_\text{VAM} = m_f C_e r_c \) acts as an emergent angular momentum scale. This replaces the conventional Yukawa interaction with a mechanical origin grounded in vortex dynamics.
+with
+\begin{equation}
+    \boxed{
+        \hbar_{\text{VAM}} = 2 m_f C_e a_0
+    }
+\end{equation}
+Here, \( a_0 \) is the Bohr ground-state radius, and the factor of 2 accounts for the angular momentum structure of vortex-bound states, possibly representing a double-cover topology or dual-swirl configuration.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.95\textwidth]{KnotThreadedPolarFlow.png}
-    \caption{Topological vortex knot with helicity axis and circulation scale \( \Gamma = 2\pi r_c C_e \). The axial outflow encodes the emergent time direction.}
-\end{figure}
+This identification ensures consistency with:
+\[
+    h = 4\pi m_e C_e a_0 \quad \Rightarrow \quad \hbar = 2 m_e C_e a_0,
+\]
+recovering the known Planck scale from æther dynamics.
 
-This unification of mass, energy, and time within the same geometric vortex structure lays the foundation for subsequent reformulation of spin, field interactions, and temporal flow in the next sections.
+This mass term replaces the abstract Yukawa interaction with a fluid-mechanical origin, grounded in vortex inertia and quantized swirl structure.

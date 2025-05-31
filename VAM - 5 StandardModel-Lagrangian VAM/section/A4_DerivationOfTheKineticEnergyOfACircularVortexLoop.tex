@@ -2,11 +2,11 @@
 
 We begin with the total action for the Vortex \AE ther Model (VAM), expressed as a spacetime integral over the Lagrangian density:
 \begin{equation}
-    S = \int d^4x \, \mathcal{L}[\rho, \vec{v}, \Phi, \vec{\omega}]
+    S = \int d^4x \, \mathcal{L}[\rho_\text{\ae}, \vec{v}, \Phi, \vec{\omega}]
 \end{equation}
 where the dynamical fields are:
 \begin{itemize}
-    \item $\rho(\vec{x}, t)$: local \AE ther density,
+    \item $\rho_\text{\ae}(\vec{x}, t)$: local \AE ther density,
     \item $\vec{v}(\vec{x}, t)$: flow velocity field,
     \item $\Phi(\vec{x}, t)$: swirl-induced gravitational potential,
     \item $\vec{\omega} = \nabla \times \vec{v}$: vorticity field.
@@ -15,14 +15,14 @@ where the dynamical fields are:
 \subsection*{Lagrangian Density}
 We propose the following effective Lagrangian density:
 \begin{equation}
-    \mathcal{L} = \frac{1}{2} \rho \vec{v}^{\,2} - \rho \Phi - U(\rho, \vec{\omega}) - V(\rho)
+    \mathcal{L} = \frac{1}{2} \rho_\text{\ae} \vec{v}^{\,2} - \rho_\text{\ae} \Phi - U(\rho_\text{\ae}, \vec{\omega}) - V(\rho_\text{\ae})
 \end{equation}
 with the terms interpreted as:
 \begin{itemize}
-    \item $\frac{1}{2} \rho \vec{v}^{\,2}$: kinetic energy of the \AE ther,
-    \item $\rho \Phi$: interaction energy with the swirl gravitational potential,
-    \item $U(\rho, \vec{\omega}) = \kappa \rho |\vec{\omega}|^2$: internal tension energy from vortex twist (with $\kappa$ a stiffness parameter),
-    \item $V(\rho)$: compressibility potential, defining pressure via $P = \rho \frac{\partial V}{\partial \rho} - V$.
+    \item $\frac{1}{2} \rho_\text{\ae} \vec{v}^{\,2}$: kinetic energy of the \AE ther,
+    \item $\rho_\text{\ae} \Phi$: interaction energy with the swirl gravitational potential,
+    \item $U(\rho_\text{\ae}, \vec{\omega}) = \kappa \rho_\text{\ae} |\vec{\omega}|^2$: internal tension energy from vortex twist (with $\kappa$ a stiffness parameter),
+    \item $V(\rho_\text{\ae})$: compressibility potential, defining pressure via $P = \rho_\text{\ae} \frac{\partial V}{\partial \rho_\text{\ae}} - V$.
 \end{itemize}
 
 \subsection*{Euler--Lagrange Field Equations}
@@ -31,20 +31,20 @@ Applying the Euler--Lagrange formalism to each field $f$:
     \frac{\partial}{\partial t} \left( \frac{\partial \mathcal{L}}{\partial \dot{f}} \right) + \nabla \cdot \left( \frac{\partial \mathcal{L}}{\partial (\nabla f)} \right) - \frac{\partial \mathcal{L}}{\partial f} = 0
 \end{equation}
 
-\subsubsection*{Density Field $\rho$}
+\subsubsection*{Density Field $\rho_\text{\ae}$}
 \begin{equation}
-    \frac{\partial \mathcal{L}}{\partial \rho} = \frac{1}{2} \vec{v}^{\,2} - \Phi - \kappa |\vec{\omega}|^2 - \frac{\partial V}{\partial \rho}
+    \frac{\partial \mathcal{L}}{\partial \rho_\text{\ae}} = \frac{1}{2} \vec{v}^{\,2} - \Phi - \kappa |\vec{\omega}|^2 - \frac{\partial V}{\partial \rho}
 \end{equation}
 This defines a local Bernoulli-type condition incorporating swirl-induced internal energy.
 
 \subsubsection*{Velocity Field $\vec{v}$}
 The variation with respect to $\vec{v}$ yields:
 \begin{equation}
-    \frac{\delta S}{\delta \vec{v}} = \rho \vec{v} - \nabla \times \left( \frac{\partial U}{\partial \vec{\omega}} \right) = 0
+    \frac{\delta S}{\delta \vec{v}} = \rho_\text{\ae}\vec{v} - \nabla \times \left( \frac{\partial U}{\partial \vec{\omega}} \right) = 0
 \end{equation}
 Leading to the momentum equation:
 \begin{equation}
-    \rho \left( \partial_t \vec{v} + (\vec{v} \cdot \nabla)\vec{v} \right) = -\nabla P + \rho \nabla \Phi + \nabla \cdot \left( \kappa \nabla \vec{\omega} \right)
+    \rho_\text{\ae}\left( \partial_t \vec{v} + (\vec{v} \cdot \nabla)\vec{v} \right) = -\nabla P + \rho_\text{\ae}\nabla \Phi + \nabla \cdot \left( \kappa \nabla \vec{\omega} \right)
 \end{equation}
 Here, $\frac{d}{dt}$ is the material (convective) derivative.
 

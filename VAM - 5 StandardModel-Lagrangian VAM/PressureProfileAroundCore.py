@@ -43,7 +43,7 @@ plt.tight_layout()
 
 # Draw vortex core + spherical shell
 fig2, ax2 = plt.subplots(figsize=(6, 6))
-core = patches.Circle((0, 0), radius=1.5, color='red', label='Vortex Core')
+core = patches.Circle((0, 0), radius=.5, color='red', label='Vortex Core')
 bubble = patches.Circle((0, 0), radius=5, fill=False, linestyle='--', linewidth=2, label='Æther Equilibrium Shell')
 ax2.add_patch(core)
 ax2.add_patch(bubble)
@@ -111,14 +111,14 @@ z_eq = np.zeros_like(phi)
 # Plot 3D trefoil knot inside spherical shell with equilibrium circle
 fig = plt.figure(figsize=(10, 8))
 ax = fig.add_subplot(111, projection='3d')
-ax.plot3D(x_knot_scaled, y_knot_scaled, z_knot_scaled, color='red', lw=0.5, label='Trefoil Knot (core, ~1.4*10^-15 m radius)')
+ax.plot3D(x_knot_scaled, y_knot_scaled, z_knot_scaled, color='red', lw=0.5, label='Trefoil Knot (core, $\\sim 1.4 \\times 10^-15$ m radius)')
 
-ax.plot3D(x_eq, y_eq, z_eq, color='navy', linestyle='--', lw=1.5, label='Equilibrium Radius (Bubble Shell ~1*10^-11 m)')
+ax.plot3D(x_eq, y_eq, z_eq, color='navy', linestyle='--', lw=1.5, label='Bohr Ground State Radius (Bubble Shell $\\sim 1\\times 10^-11$ m)')
 ax.plot3D(x_zoom, y_zoom, z_zoom, color='crimson', lw=1.5, label='Zoomed Trefoil Knot')
 # Æther shell
-ax.plot_surface(xs, ys, zs, color='lightblue', alpha=0.1, edgecolor='none')
+#ax.plot_surface(xs, ys, zs, color='lightblue', alpha=0.1, edgecolor='none')
 # Horn torus flow (R = r = a_0)
-ax.plot_surface(x_torus, y_torus, z_torus, color='purple', alpha=0.05, linewidth=0)
+ax.plot_surface(x_torus, y_torus, z_torus, color='purple', alpha=0.05, linewidth=0, label='Bubble Shell $\\sim 1\\times 10^-10$ m')
 
 # Zoom indicator lines (arrows from small to large)
 idx1, idx2 = 100, 900  # Two opposing points on the knot

@@ -16,8 +16,8 @@ This analogy suggests that electromagnetic and Yang–Mills interactions corresp
 
 To formulate a VAM-based perturbation theory:
 \begin{enumerate}
-    \item Linearize the Euler–Lagrange equations derived from \( \mathcal{L}[\rho, \vec{v}, \Phi, \omega] \) around a background vortex configuration (e.g., a stationary trefoil).
-    \item Identify propagating modes: \( \delta \vec{v}, \delta \Phi, \delta \rho \), and decompose them into plane-wave or vortex-harmonic modes.
+    \item Linearize the Euler–Lagrange equations derived from \( \mathcal{L}[\rho_\text{\ae}, \vec{v}, \Phi, \omega] \) around a background vortex configuration (e.g., a stationary trefoil).
+    \item Identify propagating modes: \( \delta \vec{v}, \delta \Phi, \delta \rho_\text{\ae} \), and decompose them into plane-wave or vortex-harmonic modes.
     \item Extract interaction vertices from the nonlinear terms in \( \mathcal{L} \), yielding an effective diagrammatic expansion.
 \end{enumerate}
 This yields a VAM-based analog to Feynman rules, with topological æther excitations—“vortexons”—mediating interactions akin to gauge bosons in standard QFT.
@@ -28,7 +28,7 @@ In conventional QFT, vacuum polarization emerges from virtual pair fluctuations.
 \begin{equation}
     \Pi^{\mu\nu}_{\text{vac}}(q^2) \sim \langle 0 | T\{J^\mu(x) J^\nu(0)\} | 0 \rangle
     \quad \longleftrightarrow \quad
-    \delta \rho(\vec{x}, t) \, \delta \vec{v}(\vec{x}, t)
+    \delta \rho_\text{\ae}(\vec{x}, t) \, \delta \vec{v}(\vec{x}, t)
 \end{equation}
 This suggests that ætheric fluctuations under external fields encode an effective vacuum polarization tensor, with geometry-dependent screening behavior.
 
@@ -40,7 +40,7 @@ The fine-structure constant \( \alpha \) evolves with energy in QED:
 \end{equation}
 In VAM, this may be mirrored by scale-dependent vorticity dynamics:
 \begin{equation}
-    \alpha_{\text{VAM}}(r) = \frac{\Gamma^2}{8\pi^2 r^2 \rho_\ae c^2}
+    \alpha_{\text{VAM}}(r) = \frac{\Gamma^2}{8\pi^2 r^2 \rho_\text{\ae} c^2}
     \quad \Rightarrow \quad
     \frac{d\alpha_{\text{VAM}}}{d \log r} \neq 0
 \end{equation}
@@ -50,7 +50,7 @@ Thus, the coupling “runs” due to changing swirl geometry, compressibility, a
 
 A consistent quantum extension of VAM may emerge via a path integral over vortex field configurations:
 \begin{equation}
-    Z = \int \mathcal{D}[\vec{v}, \rho, \Phi] \, e^{i S[\rho, \vec{v}, \Phi, \omega]}
+    Z = \int \mathcal{D}[\vec{v}, \rho_\text{\ae}, \Phi] \, e^{i S[\rho_\text{\ae}, \vec{v}, \Phi, \omega]}
 \end{equation}
 with gauge-fixing-like constraints such as:
 \begin{align*}
