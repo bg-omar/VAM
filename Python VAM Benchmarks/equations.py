@@ -263,3 +263,14 @@ kappa_vam = hbar_empirical / (M_e * C_e * r_c)
 
 # Print
 print("kappa_vam ≈", kappa_vam)
+
+
+"0-Einsteins Æther.pdf"
+"1-Time_Dilation_in_3D_Superfluid_Æther_Model.pdf"
+"2-Swirl_Clocks_and_Vorticity-Induced_Gravity.pdf"
+"3-Benchmarking_Vortex_Æther_Model_vs_General_Relativity.pdf"
+"4-Torus_Knots_as_Elements_Periodic_Table.pdf"
+"5-StandardModel-Lagrangian VAM.pdf"
+"6-Core_Foundations_VAM.pdf"
+"7-Philosophical_Depth_Companion.pdf"
+"8-Engineering_Gravity_Superluminal_Communication_and_LENR_with_VAM.pdf"

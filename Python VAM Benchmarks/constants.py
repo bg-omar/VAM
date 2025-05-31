@@ -1,4 +1,6 @@
 import math
+from pylatex import Document, Section, Tabular, NoEscape, Package
+
 
 class PhysicalConstant:
     def __init__(self, latex, value, unit, quantity, uncertainty):
@@ -13,8 +15,8 @@ class PhysicalConstant:
 # Dictionary of physical constants
 constants_dict = {
     "C_e": PhysicalConstant(r"C_e", 1093845.63, "m s^-1", "Vortex-Tangential-Velocity", "exact"),
-    "rho_ae_A": PhysicalConstant(r"\rho^\text{core}_\text{\ae}",  3.8934358266918687e+18, "kg m^-3", "Æther Core Density", "exact"),
-    "rho_ae_V": PhysicalConstant(r"\rho^\text{free}_\text{\ae}",  7.0e-7, "kg m^-3", "Æther Vacuum Density", "exact"),
+    "rho_ae_A": PhysicalConstant(r"\rho_\text{\ae}^\text{core}",  3.8934358266918687e+18, "kg m^-3", "Æther Core Density", "exact"),
+    "rho_ae_V": PhysicalConstant(r"\rho_\text{\ae}^\text{free}",  7.0e-7, "kg m^-3", "Æther Vacuum Density", "exact"),
     "F_max": PhysicalConstant(r"F_\text{max}", 29.053507, "N", "Maximum force", "exact"),
     "r_c": PhysicalConstant(r"r_c", 1.40897017e-15, "m", "Vortex-Core radius", "exact"),
     "F_Coulomb": PhysicalConstant(r"F_\text{Coulomb}", 29.053507, "N", "Maximum Coulomb Force", "exact"),
@@ -36,7 +38,7 @@ constants_dict = {
     "T_p": PhysicalConstant(r"T_p", 1.416784e32, "K", "Planck temperature", "1.1e-5"),
     "e": PhysicalConstant(r"e", 1.602176634e-19, "C", "Elementary charge", "exact"),
     "R_": PhysicalConstant(r"R_\infty", 10973731.568157, "m^-1", "Rydberg constant", "1.1e-12"),
-    "A_0": PhysicalConstant(r"A_0", 5.29177210903e-11, "m", "Bohr radius", "1.6e-10"),
+    "a_0": PhysicalConstant(r"a_0", 5.29177210903e-11, "m", "Bohr radius", "1.6e-10"),
     "M_e": PhysicalConstant(r"M_e", 9.1093837015e-31, "kg", "Electron mass", "3.1e-10"),
     "M_pr": PhysicalConstant(r"M_{proton}", 1.67262192369e-27, "kg", "Proton mass", "3.1e-10"),
     "M_n": PhysicalConstant(r"M_{neutron}", 1.67492749804e-27, "kg", "Neutron mass", "5.1e-10"),
@@ -87,7 +89,7 @@ t_p = constants_dict["t_p"].value # Planck time (s)
 T_p = constants_dict["T_p"].value # Planck Temperatuur (s)
 e = constants_dict["e"].value
 R_ = constants_dict["R_"].value
-A_0 = constants_dict["A_0"].value # Bohr radius (m)
+a_0 = constants_dict["a_0"].value # Bohr radius (m)
 M_e = constants_dict["M_e"].value # Electron mass (kg)
 M_pr = constants_dict["M_pr"].value
 M_n = constants_dict["M_n"].value
@@ -106,3 +108,40 @@ fR_ = constants_dict["fR_"].value
 sigma = constants_dict["sigma"].value
 b = constants_dict["b"].value
 pi = math.pi
+
+
+# Create a LaTeX document
+doc = Document("physical_constants_latex")
+
+doc.append(NoEscape(r"""
+\begin{table}[H]
+    \centering
+    \footnotesize
+    \raggedright
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{|p{1.5cm}|p{6cm}|p{2.5cm}|p{2cm}|p{2cm}|}
+        \hline
+        \textbf{Symbol} & \textbf{Quantity} & \textbf{Value} & \textbf{Unit} & \textbf{Uncertainty} \\
+        \hline
+"""))
+
+for const in constants_dict.values():
+    latex_clean = const.latex.replace(r"\ae", r"\text{\ae}")
+    row = rf"${latex_clean}$ & {const.quantity} & {const.value:.8e} & {const.unit.replace('Ω', r'\Omega')} & {const.uncertainty} \\ \hline"
+    doc.append(NoEscape(row))
+
+doc.append(NoEscape(r"""
+    \end{tabular}
+    \caption{Table of physical constants used in the Vortex Æther Model (VAM).}
+    \label{tab:physical_constants}
+\end{table}
+"""))
+
+latex_pdf_path = "physical_constants_latex.pdf"
+doc.packages.append(Package("float"))  # For [H]
+doc.packages.append(Package('fancyhdr'))
+doc.append(NoEscape(r"\small"))
+doc.preamble.append(NoEscape(r'\pagestyle{fancy}'))
+doc.preamble.append(NoEscape(r'\fancyhf{}'))
+doc.generate_pdf(latex_pdf_path.replace(".pdf", ""), clean_tex=False, compiler='pdflatex')
+
