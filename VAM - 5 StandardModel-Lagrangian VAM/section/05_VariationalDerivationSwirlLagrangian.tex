@@ -1,0 +1,81 @@
+\section{Variational Derivation of the Swirl Lagrangian}
+
+To rigorously support the Vortex Æther Model (VAM), we derive the swirl Lagrangian using a variational principle analogous to classical field theory. This establishes a formal path from æther vortex dynamics to field-theoretic particle analogs.
+
+\subsection{Field Structure and Helmholtz Decomposition}
+
+The æther velocity field $\mathbf{v}(\mathbf{x}, t)$ is decomposed via Helmholtz's theorem:
+
+\begin{equation}
+\mathbf{v} = \nabla \theta + \mathbf{A},
+\end{equation}
+
+where $\theta$ is a scalar potential (irrotational component), and $\mathbf{A}$ is the divergence-free vector potential representing swirl, with $\nabla \cdot \mathbf{A} = 0$. The vorticity field is:
+
+\begin{equation}
+\boldsymbol{\omega} = \nabla \times \mathbf{v} = \nabla \times \mathbf{A}.
+\end{equation}
+
+\subsection{Action Functional and Swirl Gauge Field}
+
+We define the action $S$ as:
+
+\begin{equation}
+S[\theta, \mathbf{A}] = \int d^4x \, \mathcal{L}_{\text{VAM}},
+\end{equation}
+
+where the Lagrangian density is:
+
+\begin{equation}
+\mathcal{L}_{\text{VAM}} = \frac{1}{2} \rho (\nabla \theta + \mathbf{A})^2 - \lambda (|\phi|^2 - F_{\text{max}}^2)^2 - \frac{1}{4} S_{\mu\nu} S^{\mu\nu} + \left( \frac{\rho_{\text{æ}} r_c^2}{C_e} \right) (\mathbf{v} \cdot \boldsymbol{\omega}).
+\end{equation}
+
+In this form:
+\begin{itemize}
+    \item The second term is a self-generated core potential representing stress from radial æther compression, replacing $\rho \Phi$.
+    \item $S_{\mu\nu} = \partial_\mu W_\nu - \partial_\nu W_\mu$ is the swirl field strength tensor, with $W_\mu = (\phi, \mathbf{A})$.
+    \item The final term is a helicity-density-based coupling, with $\rho_{\text{æ}}$ the æther density, $r_c$ the vortex core radius, and $C_e$ the swirl velocity (effective light speed).
+\end{itemize}
+
+\subsection{Euler-Lagrange Equations and Continuity}
+
+Varying the action with respect to $\theta$ recovers the continuity equation:
+
+\begin{equation}
+\partial_t \rho + \nabla \cdot (\rho \mathbf{v}) = 0.
+\end{equation}
+
+Variation with respect to $\mathbf{A}$ gives a generalized swirl equation of motion:
+
+\begin{equation}
+\rho \mathbf{v} - \nabla \cdot \left( \frac{\partial \mathcal{L}_{\text{swirl}}}{\partial (\nabla \mathbf{A})} \right) + \left( \frac{\rho_{\text{æ}} r_c^2}{C_e} \right) \boldsymbol{\omega} = 0.
+\end{equation}
+
+This coupling of vorticity to mass-like topological terms gives rise to effective inertial behavior.
+
+\subsection{Mass from Topology and Helicity}
+
+The helicity density $h = \mathbf{v} \cdot \boldsymbol{\omega}$ is interpreted as a local "spin clock rate" of vortex knots. Integrated over a topologically linked region, it yields:
+
+\begin{equation}
+m_{\text{eff}} \sim \left( \frac{\rho_{\text{æ}} r_c^2}{C_e} \right) \int_V \mathbf{v} \cdot \boldsymbol{\omega} \, d^3x.
+\end{equation}
+
+This expression ties particle mass directly to topological properties such as twist, writhe, and linking number of the vortex core.
+
+\subsection{Outlook: Quantization Path}
+
+The swirl gauge field admits canonical quantization via:
+
+\begin{align}
+\Pi^\mu &= \frac{\partial \mathcal{L}}{\partial (\partial_0 W_\mu)}, \\
+[W_\mu(\mathbf{x}), \Pi^\nu(\mathbf{x}')] &= i \delta^\nu_\mu \delta^3(\mathbf{x} - \mathbf{x}'),
+\end{align}
+
+and path integral representation:
+
+\begin{equation}
+Z = \int \mathcal{D}[W_\mu] \exp\left(i \int d^4x \, \mathcal{L}_{\text{VAM}}\right).
+\end{equation}
+
+This establishes a formal pathway to embedding the Vortex Æther Model in a quantum field-theoretic setting, while preserving its topological and hydrodynamic origins.
