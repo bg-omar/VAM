@@ -110,38 +110,38 @@ b = constants_dict["b"].value
 pi = math.pi
 
 
-# Create a LaTeX document
-doc = Document("physical_constants_latex")
-
-doc.append(NoEscape(r"""
-\begin{table}[H]
-    \centering
-    \footnotesize
-    \raggedright
-    \renewcommand{\arraystretch}{1.2}
-    \begin{tabular}{|p{1.5cm}|p{6cm}|p{2.5cm}|p{2cm}|p{2cm}|}
-        \hline
-        \textbf{Symbol} & \textbf{Quantity} & \textbf{Value} & \textbf{Unit} & \textbf{Uncertainty} \\
-        \hline
-"""))
-
-for const in constants_dict.values():
-    latex_clean = const.latex.replace(r"\ae", r"\text{\ae}")
-    row = rf"${latex_clean}$ & {const.quantity} & {const.value:.8e} & {const.unit.replace('Ω', r'\Omega')} & {const.uncertainty} \\ \hline"
-    doc.append(NoEscape(row))
-
-doc.append(NoEscape(r"""
-    \end{tabular}
-    \caption{Table of physical constants used in the Vortex Æther Model (VAM).}
-    \label{tab:physical_constants}
-\end{table}
-"""))
-
-latex_pdf_path = "physical_constants_latex.pdf"
-doc.packages.append(Package("float"))  # For [H]
-doc.packages.append(Package('fancyhdr'))
-doc.append(NoEscape(r"\small"))
-doc.preamble.append(NoEscape(r'\pagestyle{fancy}'))
-doc.preamble.append(NoEscape(r'\fancyhf{}'))
-doc.generate_pdf(latex_pdf_path.replace(".pdf", ""), clean_tex=False, compiler='pdflatex')
-
+# # Create a LaTeX document
+# doc = Document("physical_constants_latex")
+#
+# doc.append(NoEscape(r"""
+# \begin{table}[H]
+#     \centering
+#     \footnotesize
+#     \raggedright
+#     \renewcommand{\arraystretch}{1.2}
+#     \begin{tabular}{|p{1.5cm}|p{6cm}|p{2.5cm}|p{2cm}|p{2cm}|}
+#         \hline
+#         \textbf{Symbol} & \textbf{Quantity} & \textbf{Value} & \textbf{Unit} & \textbf{Uncertainty} \\
+#         \hline
+# """))
+#
+# for const in constants_dict.values():
+#     latex_clean = const.latex.replace(r"\ae", r"\text{\ae}")
+#     row = rf"${latex_clean}$ & {const.quantity} & {const.value:.8e} & {const.unit.replace('Ω', r'\Omega')} & {const.uncertainty} \\ \hline"
+#     doc.append(NoEscape(row))
+#
+# doc.append(NoEscape(r"""
+#     \end{tabular}
+#     \caption{Table of physical constants used in the Vortex Æther Model (VAM).}
+#     \label{tab:physical_constants}
+# \end{table}
+# """))
+#
+# latex_pdf_path = "physical_constants_latex.pdf"
+# doc.packages.append(Package("float"))  # For [H]
+# doc.packages.append(Package('fancyhdr'))
+# doc.append(NoEscape(r"\small"))
+# doc.preamble.append(NoEscape(r'\pagestyle{fancy}'))
+# doc.preamble.append(NoEscape(r'\fancyhf{}'))
+# doc.generate_pdf(latex_pdf_path.replace(".pdf", ""), clean_tex=False, compiler='pdflatex')
+#

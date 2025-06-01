@@ -41,7 +41,7 @@ Each term in the SM Lagrangian maps to a mechanical analog:
 
 Where:
 \[
-    V(\phi) = -\frac{F_\text{max}}{r_c}|\phi|^2 + \lambda |\phi|^4
+    V(\phi) = -\frac{F^{\text{\ae}}_{\text{max}}}{r_c}|\phi|^2 + \lambda |\phi|^4
     \quad \text{and} \quad \mathcal{H}_\text{topo} = \int \vec{v} \cdot \vec{\omega} \, dV
 \]
 The full variational derivation of this Lagrangian—including Euler–Lagrange equations for velocity, scalar, and density fields—is provided in Appendix~\ref{sec:EL-derivation}.
@@ -89,7 +89,7 @@ This replaces abstract Yukawa interactions with fluidic resistance to internal s
 \subsection{Higgs Field as Æther Compression}
 The standard Higgs potential $V(\phi) = -\mu^2|\phi|^2 + \lambda|\phi|^4$ becomes:
 \begin{equation}
-    V(\rho_\text{\ae}) = \frac{1}{2}K(\rho_\text{\ae} - \rho_0)^2 \quad\text{or}\quad V(\phi) = -\frac{F_\text{max}}{r_c} |\phi|^2 + \lambda |\phi|^4
+    V(\rho_\text{\ae}) = \frac{1}{2}K(\rho_\text{\ae} - \rho_0)^2 \quad\text{or}\quad V(\phi) = -\frac{F^{\text{\ae}}_{\text{max}}}{r_c} |\phi|^2 + \lambda |\phi|^4
 \end{equation}
 $K$ is the æther’s bulk modulus. The vacuum expectation value corresponds to equilibrium density, leading to spontaneous tension minima that stabilize particle structure.
 
@@ -98,6 +98,34 @@ $K$ is the æther’s bulk modulus. The vacuum expectation value corresponds to 
     \mathcal{H}_\text{topo} = \int \vec{v} \cdot \vec{\omega} \, dV
 \end{equation}
 This term tracks conservation of topological linkage and orientation. It becomes significant in processes involving particle transmutation, confinement, or decay.
+
+\section{Helicity as a Chern--Simons Analog}
+
+The helicity density term in the Vortex Æther Model (VAM),
+\begin{equation}
+\mathcal{L}_{\text{helicity}} = \lambda\, \vec{v} \cdot \vec{\omega},
+\end{equation}
+serves a central role in encoding the topological complexity of vortex configurations. Here, $\vec{\omega} = \nabla \times \vec{v}$ is the local vorticity field, and $\lambda$ is a coupling constant dependent on the æther's inertial density. However, this term is not merely phenomenological—it possesses a deep connection with topological field theory, specifically the Chern--Simons action.
+
+In 3D gauge theories, the Abelian Chern--Simons action is given by:
+\begin{equation}
+S_{\text{CS}} = \int d^3x\, \epsilon^{ijk} A_i \partial_j A_k = \int \vec{A} \cdot (\nabla \times \vec{A})\, d^3x,
+\end{equation}
+which is formally analogous to the helicity integral in fluid dynamics:
+\begin{equation}
+\mathcal{H} = \int \vec{v} \cdot \vec{\omega}\, d^3x.
+\end{equation}
+
+In this analogy, the velocity field $\vec{v}$ plays the role of a gauge potential, and vorticity $\vec{\omega}$ becomes the field strength. This correspondence suggests that helicity is a conserved, quantized topological invariant under the transformation:
+\begin{equation}
+\theta(\vec{x}) \rightarrow \theta(\vec{x}) + \alpha(\vec{x}) \quad \Rightarrow \quad \vec{v} \rightarrow \vec{v} + \nabla \alpha,
+\end{equation}
+mirroring a $U(1)$ gauge transformation in QED.
+
+Because the Chern--Simons term is not gauge invariant under large gauge transformations, its quantization ensures that the helicity integral remains invariant up to $2\pi n$ in units of a coupling constant. This provides a natural framework for explaining the quantized linking number $L_k$ of vortex knots in the VAM as a topological charge.
+
+Thus, $\vec{v} \cdot \vec{\omega}$ is not merely a dynamical term, but encodes the fluid analog of a gauge-theoretic topological invariant \cite{moffatt1969degree, jackiw1990chern, verlinde2021qft}.
+
 
 \subsection{Emergent Constants from Fluid Analogs}
 Derivations of $\hbar_{\text{VAM}}$ and charge coupling follow:
@@ -134,7 +162,7 @@ Mass as inertia from circulation, where the fermion mass is determined by circul
 
 Pressure and stress potential of æther condensate, where the pressure balance is described by the stress field:
 \[
-    V(\phi) = -\frac{F_\text{max}}{r_c}|\phi|^2 + \lambda|\phi|^4
+    V(\phi) = -\frac{F^{\text{\ae}}_{\text{max}}}{r_c}|\phi|^2 + \lambda|\phi|^4
 \]
 
 Topological terms for the conservation of vortex fields helicity:
@@ -172,7 +200,7 @@ Topological terms for the conservation of vortex fields helicity:
         \hline
         Higgs Potential &
         $V(\phi) = -\mu^2\phi^2 + \lambda \phi^4$ &
-        $\lambda \phi^4 (1 - \phi^2/F_{\text{max}}^2)$ &
+        $\lambda \phi^4 (1 - \phi^2/F^{\text{\ae}}_{\text{max}}^2)$ &
         \makecell[l]{Compressibility-induced pressure potential} \\
         \hline
         Yukawa Coupling &
@@ -210,3 +238,29 @@ Topological terms for the conservation of vortex fields helicity:
 The VAM is consistent with experimentally and theoretically confirmed phenomena such as vortex stretching, helicity conservation and mass-inertia couplings \cite{batchelor1953,vinen2002,bewley2008,moffatt1969,kleckner2013,scheeler2014,bartlett1986}.
 
 This reformulation offers a physically intelligible and topologically rich counterpart to the Standard Model—one grounded in measurable fluid properties, rather than abstract gauge symmetries alone.
+
+\section{Quantized Swirl Fields via Mode Expansion}
+
+In conventional quantum field theory (QFT), the quantization of fields arises from harmonic mode expansions that map classical field solutions to quantum operators. Each normal mode of the field is associated with a pair of creation and annihilation operators, leading to a discrete energy spectrum. Inspired by this formalism, we propose an analogous quantization framework for the Vortex Æther Model (VAM), in which the fluid velocity field $\vec{v}(\vec{x}, t)$ is expanded in a basis of knotted vortex modes.
+
+We define the swirl field operator as:
+\begin{equation}
+\vec{v}(\vec{x}, t) = \sum_n \left[ \vec{v}_n(\vec{x})\, a_n e^{-i\omega_n t} + \vec{v}_n^*(\vec{x})\, a_n^\dagger e^{i\omega_n t} \right],
+\end{equation}
+where $a_n$ and $a_n^\dagger$ denote the annihilation and creation operators for the $n$-th vortex mode, and $\omega_n$ is the angular frequency associated with the core circulation and knot topology.
+
+Each $\vec{v}_n(\vec{x})$ represents a quantized topological excitation of the æther, corresponding to distinct vortex knot configurations or harmonics. These excitations can be labeled by their helicity, circulation quantum $\Gamma_n$, and winding number $L_k$, akin to quantized angular momentum states in quantum mechanics.
+
+This expansion justifies the discrete energy spectrum observed in vortex-based particle models. For example, the energy of a vortex excitation can be defined analogously to a harmonic oscillator:
+\begin{equation}
+E_n = \hbar_{\text{VAM}} \omega_n = \rho_{\ae} \Gamma_n r_c^2 \omega_n,
+\end{equation}
+with $\hbar_{\text{VAM}}$ interpreted as a fluid-circulation-based quantum of action:
+\begin{equation}
+\hbar_{\text{VAM}} \equiv \rho_{\ae} \Gamma_n r_c^2.
+\end{equation}
+
+This formulation is aligned with canonical quantization procedures in QFT \cite{verlinde2021qft}, and also with the formal mode expansions of collective excitations in superfluid systems \cite{pethick2002bose} and knotted vortex models \cite{kleckner2013creation}. It enables a rigorous interpretation of particles as quantized, topologically distinct excitations of the swirl field.
+
+This framework can also extend to include internal excitation spectra of vortex cores, thereby suggesting a natural pathway for encoding flavor states and even mixing matrices in terms of mode-coupled vortex families.
+

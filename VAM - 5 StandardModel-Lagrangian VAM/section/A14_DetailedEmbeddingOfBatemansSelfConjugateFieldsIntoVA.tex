@@ -1,0 +1,95 @@
+%! Author = mr
+%! Date = 6/1/25
+\section{Detailed Embedding of Bateman's Self-Conjugate Fields into VAM}
+\label{appendix:bateman_vam}
+
+\subsection{Bateman's Complex Electromagnetic Field}
+
+Bateman defines a complexified electromagnetic field:\cite{bateman1915aether}
+\begin{equation}
+    \vec{M} = \vec{H} + i\vec{E},
+\end{equation}
+where $\vec{H}$ and $\vec{E}$ are the magnetic and electric field vectors, respectively.
+
+The field is said to be \textit{self-conjugate} when:
+\begin{equation}
+    \vec{M} \cdot \vec{M} = 0. \label{eq:bateman_self_conj}
+\end{equation}
+Expanding this yields:\cite{bateman1915aether}
+\begin{align}
+    \vec{M} \cdot \vec{M} &= (\vec{H} + i\vec{E}) \cdot (\vec{H} + i\vec{E}) \\
+    &= \vec{H} \cdot \vec{H} - \vec{E} \cdot \vec{E} + 2i \vec{H} \cdot \vec{E}.
+\end{align}
+Thus, the self-conjugacy constraint implies:
+\begin{align}
+    |\vec{H}|^2 &= |\vec{E}|^2, \label{eq:bateman_balance} \\
+    \vec{H} \cdot \vec{E} &= 0. \label{eq:bateman_orthogonal}
+\end{align}
+
+\subsection{VAM Reinterpretation: Vorticity-Velocity Duality}
+
+In the Vortex Æther Model (VAM), we reinterpret:\cite{iskandarani2025swirlgravity}
+\begin{align*}
+    \vec{H} &\equiv \vec{\omega} = \nabla \times \vec{v}, \\
+    \vec{E} &\equiv \vec{v}_\perp \quad \text{(swirl velocity orthogonal to core)}.
+\end{align*}
+
+Hence, Eqs.~\eqref{eq:bateman_balance}--\eqref{eq:bateman_orthogonal} become:
+\begin{align}
+    |\vec{\omega}|^2 &= |\vec{v}_\perp|^2, \label{eq:vam_balance} \\
+    \vec{\omega} \cdot \vec{v}_\perp &= 0. \label{eq:vam_orthogonal}
+\end{align}
+This represents a helicity-orthogonal vortex tube, where energy is stored in a balanced tangential shell around a vorticity core.
+
+\subsection{Pressure and Time Dilation Consequences}
+
+The VAM pressure due to swirl is:\cite{iskandarani2025swirlgravity}
+\begin{equation}
+    P_\text{vortex} = \frac{1}{2} \rho_\text{\ae} |\vec{\omega}|^2 = \frac{1}{2} \rho_\text{\ae} |\vec{v}_\perp|^2,
+\end{equation}
+where $\rho_\text{\ae}$ is the local \ae{}ther density. Substituting into the VAM time dilation expression yields:
+\begin{align}
+    dt_\text{local} &= dt_\infty \sqrt{1 - \frac{|\vec{\omega}|^2}{c^2}} \\
+    &= dt_\infty \sqrt{1 - \frac{2P_\text{vortex}}{\rho_\text{\ae} c^2}}. \label{eq:bateman_vam_dilation}
+\end{align}
+
+This recovers the gravitational-like redshift derived from local rotational pressure alone.
+
+\subsection{Parametric Field Construction \`a la Bateman}
+
+Bateman proposes a general class of null fields:\cite{bateman1915aether}
+\begin{equation}
+    \vec{M} = \nabla \phi \times \nabla \chi, \label{eq:bateman_crossgrad}
+\end{equation}
+where $\phi$ and $\chi$ are scalar functions. We choose:
+\begin{align}
+    \phi(x,y) &= \arg(x + i y), \\
+    \chi(z,t) &= z - C_e t.
+\end{align}
+Then:
+\begin{align}
+    \nabla \phi &= \left(\frac{-y}{x^2 + y^2}, \frac{x}{x^2 + y^2}, 0\right), \\
+    \nabla \chi &= (0, 0, 1), \\
+    \vec{M} &= \left(\frac{x}{x^2 + y^2}, \frac{y}{x^2 + y^2}, 0\right).
+\end{align}
+This is a purely toroidal swirl field with singularity at $r=0$.
+
+\subsection{Embedding into VAM}
+
+Interpreting $\vec{M} = \vec{H} + i\vec{E}$:
+\begin{align*}
+    \vec{\omega} &= \Re(\vec{M}) = \left(\frac{x}{r^2}, \frac{y}{r^2}, 0\right), \\
+    \vec{v}_\perp &= \Im(\vec{M}) = 0.
+\end{align*}
+To construct nontrivial self-conjugate solutions, we generalize $\phi$ and $\chi$ with knot embeddings, e.g.:\cite{faddeev1997stable, arrayas2017knots}
+\begin{align}
+    \phi &= \arg[(x^2 + y^2 + z^2)^2 + a(x^2 - y^2) + bxy], \\
+    \chi &= z - C_e t.
+\end{align}
+These yield knotted vortex filaments whose vorticity lines are null and structured. When superposed, they form stable mass-energy cores in the VAM framework.
+
+\subsection{Conclusion}
+
+Bateman's self-conjugate fields, when reinterpreted through the VAM lens, correspond to helicity-balanced vortex filaments with fixed pressure-energy structure. These are compatible with VAM's gravitational time dilation, mass generation, and ætheric structure principles.
+
+

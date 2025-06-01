@@ -2,7 +2,7 @@
 
 The Vortex Æther Model (VAM) proposes a fundamental shift in how physical quantities are derived and interpreted. Rather than relying on constants introduced purely for dimensional self-consistency (as in Planck units), VAM defines a small set of physically grounded parameters that emerge from the topological and fluid-dynamical behavior of a compressible æther medium. These constants—accessible through theoretical analysis and analog systems—serve as the natural units for describing mass, energy, charge, and time.
 
-The five central æther parameters are: the core swirl velocity $C_e$, vortex radius $r_c$, local æther density $\rho_\text{\ae}$, circulation quantum $\kappa$, and maximum transmissible force $F_\text{max}^{\text{vam}}$. Each of these is inferred from known or measurable features of matter and vortex dynamics:
+The five central æther parameters are: the core swirl velocity $C_e$, vortex radius $r_c$, local æther density $\rho_\text{\ae}$, circulation quantum $\kappa$, and maximum transmissible force $F^{\text{\ae}}_{\text{max}}^{\text{vam}}$. Each of these is inferred from known or measurable features of matter and vortex dynamics:
 
 - \textbf{Swirl Velocity $C_e$}: Estimated from simulations of stable quantized vortices in Bose–Einstein condensates (BECs), where core rotation frequencies yield swirl velocities on the order of $10^6$ m/s \cite{Pethick2008BEC, Kleckner2013KnottedVortices}.
 
@@ -12,7 +12,7 @@ The five central æther parameters are: the core swirl velocity $C_e$, vortex ra
 
 - \textbf{Circulation Quantum $\kappa$}: Defined analogously to superfluid helium and atomic BECs, where circulation is quantized in integer multiples of $\kappa = h/m$ \cite{Donnelly1991QuantizedVortices}.
 
-- \textbf{Maximum Force $F_\text{max}^{\text{vam}}$}: Derived from the stress that can be transmitted through a coherent æther core of radius $r_c$ with swirl momentum $C_e \rho_\text{\ae}$.
+- \textbf{Maximum Force $F^{\text{\ae}}_{\text{max}}$}: Derived from the stress that can be transmitted through a coherent æther core of radius $r_c$ with swirl momentum $C_e \rho_\text{\ae}$.
 
 Together, these quantities form a \textbf{natural unit system} grounded in topological fluid structures. Unlike the abstract Planck units—formed from $\hbar$, $G$, and $c$—the VAM parameters are mechanistic and measurable. The following table summarizes how VAM reconstructs key physical constants from æther parameters:
 
@@ -26,7 +26,7 @@ Together, these quantities form a \textbf{natural unit system} grounded in topol
         \hline
         $\hbar_\text{VAM}$ & $m_e C_e r_c$ & Angular impulse from vortex circulation (Planck analog) \\
         \hline
-        $c$ & $\sqrt{\dfrac{2 F_\text{max} r_c}{m_e}}$ & Effective wave speed in æther; signal propagation limit \\
+        $c$ & $\sqrt{\dfrac{2 F^{\text{\ae}}_{\text{max}} r_c}{m_e}}$ & Effective wave speed in æther; signal propagation limit \\
         \hline
         $\alpha$ & $\dfrac{2 C_e}{c}$ & Fine-structure constant from swirl-to-light-speed ratio \\
         \hline
@@ -34,7 +34,7 @@ Together, these quantities form a \textbf{natural unit system} grounded in topol
         \hline
         $\Gamma$ & $2\pi r_c C_e$ & Total circulation per core; linked to $h/m$ \\
         \hline
-        $v$ & $\sqrt{\dfrac{F_\text{max} r_c^3}{C_e^2}}$ & Higgs-like vacuum amplitude as æther compression scale \\
+        $v$ & $\sqrt{\dfrac{F^{\text{\ae}}_{\text{max}} r_c^3}{C_e^2}}$ & Higgs-like vacuum amplitude as æther compression scale \\
         \hline
     \end{tabular}
     \caption{Derived constants and coupling strengths in the Vortex Æther Model (VAM), based on æther geometry and dynamics.}
@@ -52,4 +52,29 @@ As one illustration, consider the rest mass $M$ of a particle in VAM. Rather tha
 where $L_k$ is the helicity or linking number of the vortex knot. The full derivation appears in Appendix~\ref{sec:derivation-of-the-kinetic-energy-of-a-circular-vortex-loop}.
 
 Thus, VAM replaces dimensionally convenient but ontologically opaque constants with experimentally accessible and fluid-dynamically derived quantities.
+
+\section{Running Coupling Constants from Æther Density}
+
+In quantum field theory, coupling constants such as the fine-structure constant $\alpha$ are not fixed values, but evolve with energy scale due to vacuum polarization effects. This renormalization group flow is typically expressed as:
+\begin{equation}
+\alpha(k^2) = \frac{\alpha_0}{1 - \Pi(k^2)},
+\end{equation}
+where $\Pi(k^2)$ represents the vacuum polarization at momentum scale $k$.
+
+In the Vortex Æther Model (VAM), the æther density $\rho_{\ae}(\vec{x})$ plays an analogous role to the polarization field of the quantum vacuum. Variations in local swirl intensity, helicity, or vortex density deform the underlying fluid structure and change the effective constants governing interactions.
+
+Accordingly, we propose that the effective fine-structure constant in VAM becomes a function of local ætheric parameters:
+\begin{equation}
+\alpha(\vec{x}) = \frac{e^2}{4\pi \varepsilon_0(\vec{x}) \hbar c(\vec{x})} = \alpha_0 \cdot f(\rho_{\ae}(\vec{x}), \, |\vec{\omega}(\vec{x})|),
+\end{equation}
+where the function $f$ encapsulates how local swirl energy and æther pressure alter fundamental constants.
+
+This is especially relevant near highly curved swirl structures or massive vortex cores, where internal æther strain is maximal. In such regions, variations in $\rho_{\ae}$ and $\vec{\omega}$ may result in measurable shifts in constants like:
+\begin{equation}
+c_{\text{eff}}(\vec{x}) \propto \sqrt{\frac{B(\vec{x})}{\rho_{\ae}(\vec{x})}}, \quad \varepsilon_0(\vec{x}) \sim \frac{1}{\rho_{\ae}(\vec{x}) C_e^2},
+\end{equation}
+with $B(\vec{x})$ representing the local bulk modulus of the æther and $C_e$ a swirl-speed parameter.
+
+This formulation provides a fluid-mechanical analog to the renormalization group flow of QED and predicts spatially varying constants in strong gravitational or swirl-vorticity environments, potentially testable through high-precision astrophysical observations \cite{verlinde2016emergent, shapiro2004variation, uzan2011varying}.
+
 

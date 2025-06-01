@@ -138,13 +138,13 @@ print("\nM_e: ", M_e)
 print((2 * F_max * R_c) / c**2)
 
 # Formulas translated into Python
-print("\nA_0: ",A_0)
+print("\na_0: ",a_0)
 print(((c**2 * R_c) / (2 * C_e**2)))
 print(((F_max * R_c**2) / (M_e * C_e**2)))
 print(((4 * pi * varepsilon_0 * hbar**2) / (M_e * e**2)))
 print(((h) / (4 * pi * M_e * C_e)))
 
-print("\nR_squared", A_0**2)
+print("\nR_squared", a_0**2)
 print((h) / (4 * pi**2 * f_c * M_e * alpha**2))
 print((c**2 * R_c) / (2 * pi * f_c * C_e * alpha**2))
 print(((4 * pi * F_max * R_c**2) / (C_e)) * (1 /(4 * pi**2 * M_e * f_c * alpha**2)))
@@ -152,7 +152,7 @@ print(((4 * pi * F_max * R_c**2) / (C_e)) * (1 /(4 * pi**2 * M_e * f_c * alpha**
 print("\nR_e: ",R_e)
 print((e**2) / (4 * pi * varepsilon_0 * M_e * c**2))
 print(2 * R_c)
-print(alpha**2 * A_0)
+print(alpha**2 * a_0)
 print((e**2) / (4 * pi * varepsilon_0 * M_e * c**2))
 print((e**2) / (8 * pi * varepsilon_0 * F_max * R_c))
 
@@ -170,7 +170,7 @@ print("\nalpha_g: ",alpha_g)
 print((2 * F_max * C_e * t_p**2) / ((2 * F_max * R_c**2) / C_e))
 print((C_e**2 * t_p**2) / (R_c**2))
 print((F_max * 2 * C_e * t_p**2) / h)  ###########################################
-print((F_max * t_p**2) / (A_0 * M_e))
+print((F_max * t_p**2) / (a_0 * M_e))
 print((C_e * c**2 * t_p**2 * M_e) / (h * R_c)) ###########################################
 print((C_e**2 * L_p**2) / (R_c**2 * c**2))
 
@@ -181,6 +181,7 @@ print((F_max * alpha * (c * t_p)**2) / (M_e**2))
 print((C_e * c * L_p**2) / (R_c * M_e))
 print((alpha_g * c**3 * R_c) / (C_e * M_e))
 print((C_e * c**5 * t_p**2) / (2 * F_max * R_c**2))
+print((c**4) / (4 * F_GRmax))
 
 print("\nalpha: ", alpha)
 print((h / (4 * pi * R_c))) ###########################################
@@ -218,9 +219,9 @@ print(((8 * math.pi * rho_ae * r_c**3) / C_e)  * math.pi)#######################
 
 
 print("\nh: ",h)
-print(4 * pi * M_e * C_e * A_0)
+print(4 * pi * M_e * C_e * a_0)
 print((pi * F_max * R_e**2) / C_e)
-print((96 * pi * F_max**2 * R_c**3 * A_0) / (h * c**2))
+print((96 * pi * F_max**2 * R_c**3 * a_0) / (h * c**2))
 print( 2*alpha * M_e * C_e**2 * R_c)
 
 
@@ -265,12 +266,3 @@ kappa_vam = hbar_empirical / (M_e * C_e * r_c)
 print("kappa_vam ≈", kappa_vam)
 
 
-"0-Einsteins Æther.pdf"
-"1-Time_Dilation_in_3D_Superfluid_Æther_Model.pdf"
-"2-Swirl_Clocks_and_Vorticity-Induced_Gravity.pdf"
-"3-Benchmarking_Vortex_Æther_Model_vs_General_Relativity.pdf"
-"4-Torus_Knots_as_Elements_Periodic_Table.pdf"
-"5-StandardModel-Lagrangian VAM.pdf"
-"6-Core_Foundations_VAM.pdf"
-"7-Philosophical_Depth_Companion.pdf"
-"8-Engineering_Gravity_Superluminal_Communication_and_LENR_with_VAM.pdf"

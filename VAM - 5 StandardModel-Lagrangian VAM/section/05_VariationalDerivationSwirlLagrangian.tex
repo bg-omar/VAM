@@ -27,7 +27,7 @@ S[\theta, \mathbf{A}] = \int d^4x \, \mathcal{L}_{\text{VAM}},
 where the Lagrangian density is:
 
 \begin{equation}
-\mathcal{L}_{\text{VAM}} = \frac{1}{2} \rho (\nabla \theta + \mathbf{A})^2 - \lambda (|\phi|^2 - F_{\text{max}}^2)^2 - \frac{1}{4} S_{\mu\nu} S^{\mu\nu} + \left( \frac{\rho_{\text{æ}} r_c^2}{C_e} \right) (\mathbf{v} \cdot \boldsymbol{\omega}).
+\mathcal{L}_{\text{VAM}} = \frac{1}{2} \rho (\nabla \theta + \mathbf{A})^2 - \lambda (|\phi|^2 - F^{\text{\ae}}_{\text{max}}^2)^2 - \frac{1}{4} S_{\mu\nu} S^{\mu\nu} + \left( \frac{\rho_{\text{æ}} r_c^2}{C_e} \right) (\mathbf{v} \cdot \boldsymbol{\omega}).
 \end{equation}
 
 In this form:
@@ -79,3 +79,33 @@ Z = \int \mathcal{D}[W_\mu] \exp\left(i \int d^4x \, \mathcal{L}_{\text{VAM}}\ri
 \end{equation}
 
 This establishes a formal pathway to embedding the Vortex Æther Model in a quantum field-theoretic setting, while preserving its topological and hydrodynamic origins.
+
+\section{Canonical Commutators and Swirl Quantization}
+
+To formulate a consistent quantum field theory from the Vortex Æther Model (VAM), it is essential to specify canonical commutation relations between fundamental fluid observables. In standard quantum field theory, canonical quantization imposes:
+\begin{equation}
+[\phi(x), \pi(y)] = i \delta(x - y),
+\end{equation}
+where $\phi$ is a field and $\pi$ its conjugate momentum.
+
+We propose that a similar structure exists in the VAM, where the swirl potential $\theta(\vec{x})$ and the æther density $\rho_{\ae}(\vec{x})$ form a canonical pair:
+\begin{equation}
+[\theta(\vec{x}), \rho_{\ae}(\vec{y})] = i \delta^3(\vec{x} - \vec{y}),
+\end{equation}
+implying an uncertainty relation between vortex phase and æther mass density, akin to the number-phase relation in Bose fluids.
+
+Alternatively, one may define canonical brackets between the velocity and vorticity fields:
+\begin{equation}
+[v_i(\vec{x}), \omega_j(\vec{y})] \sim i \epsilon_{ijk} \partial_k \delta^3(\vec{x} - \vec{y}),
+\end{equation}
+consistent with the Lie algebra structure of vector fields under the Helmholtz decomposition.
+
+This structure leads to a Hamiltonian formalism for VAM fluid dynamics:
+\begin{equation}
+\mathcal{H}[\theta, \rho_{\ae}] = \int d^3x \left[ \frac{1}{2} \rho_{\ae}(\vec{x})\, |\nabla \theta(\vec{x})|^2 + V(\rho_{\ae}) \right],
+\end{equation}
+where $V(\rho_{\ae})$ represents the potential energy density of the æther medium, potentially including self-interaction or compressibility terms.
+
+The formal identification of conjugate variables and commutators in the VAM allows quantization of vortex excitations through standard Fock space methods, in close analogy with the quantized phonon and roton spectra of superfluid helium systems \cite{fetter1971nonuniform, stone2000superfluidity, verlinde2021qft}.
+
+
