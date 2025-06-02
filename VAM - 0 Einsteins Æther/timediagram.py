@@ -37,8 +37,8 @@ plt.axis('off')
 plt.tight_layout()
 import os
 script_name = os.path.splitext(os.path.basename(__file__))[0]
-filename = f"{script_name}.pdf"
-plt.savefig(filename, format="pdf", bbox_inches="tight")
+# filename = f"{script_name}.pdf"
+# plt.savefig(filename, format="pdf", bbox_inches="tight")
 filename = f"{script_name}.png"
 plt.savefig(filename, dpi=150)  # Save image with high resolution
 plt.tight_layout()
