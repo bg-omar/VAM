@@ -1,0 +1,83 @@
+%! Author = Omar Iskandarani
+%! Title = Torusknopen als Model voor Elementen in het Vortex-Æther Model
+%! Date = May 19, 2025
+%! Affiliation = Independent Researcher, Groningen, The Netherlands
+%! License = CC-BY 4.0
+%! ORCID = 0009-0006-1686-3961
+
+\documentclass[a4paper, aps,preprint,superscriptaddress, 12pt]{revtex4}
+\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage{bookmark}
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{makecell}
+\usepackage{tabularx}
+\usepackage[font=footnotesize]{caption}
+\usetikzlibrary{arrows.meta}
+\usepackage{pgfplots}
+\usepackage[none]{hyphenat}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage[utf8]{inputenc} % Remove if using XeLaTeX or LuaLaTeX
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{physics}
+\usepackage{natbib}
+\usepackage{url}
+\usepackage{multirow}
+\usepackage{subcaption}
+\usepackage{siunitx}
+\usepackage{listings}
+\pgfplotsset{compat=1.18}
+\renewcommand{\arraystretch}{1.5}
+\renewcommand{\floatpagefraction}{.8}
+\sloppy
+
+\begin{document}
+    \author{Omar Iskandarani}
+    \title{Torusknopen als Model voor Elementen in het Vortex-Æther Model}
+
+    \date{\today}
+    \affiliation{Onafhankelijk onderzoeker, Groningen, The Nederland}
+    \thanks{ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961}}
+    \email{info@omariskandarani.com}
+
+    \begin{abstract}
+        In dit artikel wordt een alternatieve representatie van chemische elementen voorgesteld binnen het kader van het Vortex-Æther Model (VAM), waarin materie niet bestaat uit puntdeeltjes of quarks, maar uit stabiele, topologisch verankerde vortexstructuren in een continuüm van superfluïde æther. Elk element wordt gemodelleerd als een torusknoop $T(p,q)$, waarvan de heliciteit direct gerelateerd is aan massa (via vortexenergie) en lading (via chirale oriëntatie).
+
+        Waterstof wordt bijvoorbeeld geassocieerd met de trefoilknoop $T(2,3)$, terwijl zwaardere elementen corresponderen met knopen van toenemende complexiteit of samengestelde knoopconfiguraties. Vanuit deze structuur ontstaat een natuurlijke periodiciteit, analoog aan elektronenschillen, maar gebaseerd op topologische capaciteit. Splitsing en fusieprocessen van kernen worden binnen VAM geïnterpreteerd als knoopevoluties of herverbindingsprocessen.
+
+        Het model levert verklaringen voor ladingkwantisatie, isotopische stabiliteit, bindingsenergie en het bestaan van limieten aan kernmassa, en biedt tevens nieuwe invalshoeken voor fenomenen als quarkconfinement, spin, en massa-hiërarchie. De resultaten tonen dat de topologie van vortexknopen potentieel een verenigend raamwerk biedt waarin klassieke en kwantummechanische eigenschappen van elementen emergent zijn uit fluïdumdynamica.
+    \end{abstract}
+    
+    \maketitle
+
+    \input{sections/00_basis}
+    \input{sections/01_inleiding}
+    \input{sections/02_elemententorusknopen}
+    \input{sections/03_massa_en_lading}
+    \input{sections/04_stabiliteit-knoopstructuren}
+    \input{sections/05_fusiesplijting}
+    \input{sections/06_Periodiciteit}
+    \input{sections/07_samengesteldeknopen_satelieten}
+    \input{sections/08_vergelijkingstandaardmodel}
+    \input{sections/09_KnotEvolution}
+    \input{sections/10_ColorCodedFigures}
+    \input{sections/11_FormalKnotWithInvariants}
+    \input{sections/12_MassHierarchyfromVortexEnergy}
+    \input{sections/13_GaugeSymmetrandGroupTheoreticEmbeddinginVAM}
+    \input{sections/14_GaugeInteractionRulesandVortexDynamics}
+    \input{sections/15_TestablePredictionsfromVortexTopology}
+    \input{sections/16_EntropyÆtherPressureandSwellingBoundariesinVAM}
+
+
+    \appendix \label{sec:Part-6}
+    \input{sections/appendix_afleiding_massa}\label{appendix:Afleiding_massa}
+    \input{sections/appendix_afleiding_massa_2}\label{appendix:Afleiding_massa_2}
+
+    \bibliography{4-Torus_Knots_as_Elements_Periodic_Table}
+    \bibliographystyle{unsrt}
+
+\end{document}
