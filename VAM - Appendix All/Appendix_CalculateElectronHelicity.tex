@@ -1,14 +1,62 @@
-\subsection*{Derivation of the Helicity Coupling Constant \( \gamma \) from First Principles}
+%! Author = mr
+%! Date = 6/5/25
+%! Author = Omar Iskandarani
+%! Title = Benchmarking the Vortex Æther Model vs General Relativity
+%! Date = May 23, 2025
+%! Affiliation = Independent Researcher, Groningen, The Netherlands
+%! License = CC-BY 4.0
+%! ORCID = 0009-0006-1686-3961
+
+% Benchmarking the Vortex Æther Model vs General Relativity
+\documentclass[a4paper, aps,preprint,superscriptaddress, 12pt]{revtex4}
+\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage{bookmark}
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{makecell}
+\usepackage{tabularx}
+\usepackage[font=footnotesize]{caption}
+\usetikzlibrary{arrows.meta}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage[none]{hyphenat}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{physics}
+\usepackage{natbib}
+\usepackage{url}
+\usepackage{multirow}
+\usepackage{subcaption}
+\usepackage{siunitx}
+\usepackage{listings}
+\renewcommand{\arraystretch}{1.5}
+\renewcommand{\floatpagefraction}{.8}
+\sloppy
+
+\begin{document}
+    \author{Omar Iskandarani}
+    \title{Derivation of the Helicity Coupling Constant \( \gamma \) from First Principles}
+    \date{\today}
+    \affiliation{Independent Researcher, Groningen, The Netherlands}
+    \thanks{ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961}}
+    \email{info@omariskandarani.com}
+
+
 
 \section*{Step 1: The Helicity Integral in Fluid Dynamics}
 
-In fluid mechanics, the kinetic helicity H\mathcal{H}H of a velocity field v⃗\vec{v}v is defined as:
+In fluid mechanics, the kinetic helicity $\mathcal{H}$ of a velocity field ⃗$\vec{v}$ is defined as:
 
 
-$\boxed{
+\[\boxed{
     \mathcal{H} = \int_V \vec{v} \cdot \vec{\omega} \, dV
 }
-\tag{1}$
+\tag{1}\]
 
 
 where:
@@ -16,8 +64,8 @@ where:
 
 \begin{itemize}
 
-\item \vec{\omega} = \nabla \times \vec{v}  is the vorticity
-\item H\mathcal{H}H measures the degree of linkage and twist of vortex lines
+\item $\vec{\omega} = \nabla \times \vec{v}$  is the vorticity
+\item $\mathcal{H}$ measures the degree of linkage and twist of vortex lines
 \item It is a topological invariant in ideal (non-viscous) flows
 
 \end{itemize}
@@ -27,30 +75,30 @@ where:
 \section*{Step 2: VAM Interpretation — Helicity as Source of Mass}
 
 We now postulate:
-In VAM, the helicity density v⃗⋅ω⃗\vec{v} \cdot \vec{\omega}v⋅ω is not just a fluid descriptor, but contributes directly to mass density.
+In VAM, the helicity density $\vec{v} \cdot \vec{\omega}$ is not just a fluid descriptor, but contributes directly to mass density.
 So define the helicity-induced mass:
 
-$$ M_{\text{helicity}} = \alpha' \cdot \rho_\ae C_e r_c^3 \cdot \mathcal{H}_{\text{norm}}(p,q)
-\tag{2} $$
+\[ M_{\text{helicity}} = \alpha' \cdot \rho_\text{\ae} C_e r_c^3 \cdot \mathcal{H}_{\text{norm}}(p,q)
+\tag{2} \]
 
 
 Where:
 
 
 \begin{itemize}
-\item \alpha' is a dimensional constant (to be matched later),
-\item \mathcal{H}_{\text{norm}}(p,q) is a dimensionless topological helicity factor based on knot/link geometry.
+\item $\alpha'$ is a dimensional constant (to be matched later),
+\item $\mathcal{H}_{\text{norm}}(p,q)$ is a dimensionless topological helicity factor based on knot/link geometry.
 \end{itemize}
 
 
 
 In the Vortex \AE{}ther Model (VAM), we propose that the inertial mass of a vortex knot arises from both its geometrical swirl length and its internal topological twist, expressed through helicity. The total mass of a torus knot \( T(p,q) \) is modeled as:
 \[
-    M(p,q) = \frac{8\pi \rho_\ae r_c^3}{C_e} \cdot \left( \sqrt{p^2 + q^2} + \gamma pq \right)
+    M(p,q) = \frac{8\pi \rho_\text{\ae} r_c^3}{C_e} \cdot \left( \sqrt{p^2 + q^2} + \gamma pq \right)
 \]
 where:
 \begin{itemize}
-    \item \( \rho_\ae \) is the æther density,
+    \item \( \rho_\text{\ae} \) is the æther density,
     \item \( r_c \) is the vortex core radius,
     \item \( C_e \) is the tangential swirl velocity,
     \item \( \gamma \) encodes the coupling between helicity and inertial mass,
@@ -64,7 +112,7 @@ We now derive \( \gamma \) from first principles by calibrating the above formul
 
 We define the constant prefactor:
 \[
-    \text{Const} = \frac{8\pi \rho_\ae r_c^3}{C_e}
+    \text{Const} = \frac{8\pi \rho_\text{\ae} r_c^3}{C_e}
 \]
 
 For the trefoil knot \( T(2,3) \), we have:
@@ -79,7 +127,7 @@ Solving for \( \gamma \) from the known electron mass:
 
 Substituting the physical values:
 \[
-    \rho_\ae = 3.893 \times 10^{18} \, \text{kg/m}^3, \quad
+    \rho_\text{\ae} = 3.893 \times 10^{18} \, \text{kg/m}^3, \quad
     r_c = 1.40897 \times 10^{-15} \, \text{m}, \quad
     C_e = 1.09384563 \times 10^6 \, \text{m/s}
 \]
@@ -95,25 +143,25 @@ This result confirms that \( \gamma \) can be derived directly from vortex energ
 
 In the helicity-based VAM mass formula:
 \[
-    M_{\text{helicity}} = \alpha' \cdot \rho_\ae r_c^3 \cdot \mathcal{H}_{\text{norm}}(p,q)
+    M_{\text{helicity}} = \alpha' \cdot \rho_\text{\ae} r_c^3 \cdot \mathcal{H}_{\text{norm}}(p,q)
 \]
 \( \alpha' \) is introduced as a normalization constant ensuring dimensional consistency.
 
 We analyze the units:
 \begin{itemize}
-    \item \( [\rho_\ae] = \si{kg.m^{-3}} \)
+    \item \( [\rho_\text{\ae}] = \si{kg.m^{-3}} \)
     \item \( [C_e] = \si{m.s^{-1}} \)
     \item \( [r_c^3] = \si{m^3} \)
     \item \( [\mathcal{H}_{\text{norm}}] = 1 \) (dimensionless)
 \end{itemize}
 Thus,
 \[
-    [\rho_\ae C_e r_c^3] = \si{kg.m.s^{-1}} \Rightarrow [\alpha'] = \si{s.m^{-1}}
+    [\rho_\text{\ae} C_e r_c^3] = \si{kg.m.s^{-1}} \Rightarrow [\alpha'] = \si{s.m^{-1}}
 \]
 
 To match the previously established VAM mass formula:
 \[
-    M(p, q) = \frac{8\pi \rho_\ae r_c^3}{C_e} \left( \sqrt{p^2 + q^2} + \gamma pq \right)
+    M(p, q) = \frac{8\pi \rho_\text{\ae} r_c^3}{C_e} \left( \sqrt{p^2 + q^2} + \gamma pq \right)
 \]
 we identify:
 \[
@@ -147,6 +195,7 @@ Thus, \( C_e^2 \) is fundamental to scaling rotational energy into inertial and 
 
 \begin{table}[H]
     \centering
+    \footnotesize
     \renewcommand{\arraystretch}{1.3}
     \begin{tabular}{|l|l|l|}
         \hline
@@ -156,10 +205,12 @@ Thus, \( C_e^2 \) is fundamental to scaling rotational energy into inertial and 
         $\frac{F_{\text{max}}}{C_e^2}$ & Max force per swirl energy unit & Force–mass–energy coupling \\
         $\frac{1}{2} \rho v^2 / C_e^2$ & Energy density to mass conversion & Inertial mass from kinetic field \\
         $\frac{\omega^2}{C_e^2}$ & Time dilation correction & Vortex-clock slowdown \\
-        $\frac{8\pi \rho_\ae r_c^3}{C_e}$ & VAM prefactor & Total mass contribution per vortex \\
+        $\frac{8\pi \rho_\text{\ae} r_c^3}{C_e}$ & VAM prefactor & Total mass contribution per vortex \\
         \hline
     \end{tabular}
-    \caption{Representative appearances of \( C_e^2 \) in core VAM expressions.}
+    \caption{Representative appearances of \( C_e^2 \) in core VAM expressions.}\label{tab:table}
 \end{table}
 
-This repeated structure strongly suggests that \( C_e^2 \) is the natural **conversion scale** between swirl dynamics and inertial/gravitational observables — analogous to the role played by \( c^2 \) in general relativity.
+This repeated structure strongly suggests that \( C_e^2 \) is the natural \textbf{conversion scale} between swirl dynamics and inertial/gravitational observables — analogous to the role played by \( c^2 \) in general relativity.
+
+\end{document}

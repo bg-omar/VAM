@@ -1,0 +1,351 @@
+%! Author = Omar Iskandarani
+%! Date = 2025-06-01
+%! Title = Glossary of Vorticity, Helicity, and Rotational Flow Terms
+
+\documentclass[a4paper, aps,preprint,superscriptaddress, 12pt]{revtex4}
+\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage[T1]{fontenc}%
+\usepackage[utf8]{inputenc}%
+\usepackage{lmodern}%
+\usepackage{textcomp}%
+\usepackage{lastpage}%
+\usepackage{float}%
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}%
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{physics}
+
+\fancyhf{}%
+\begin{document}
+    \title{Glossary of Vorticity, Helicity, and Rotational Flow Terms}
+    \author{Omar Iskandarani}
+    \date{June 2025}
+    \affiliation{Independent Researcher, Groningen, The Netherlands}
+    \thanks{ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961}}
+    \email{info@omariskandarani.com}
+
+    % Abstract
+    \begin{abstract}
+        This glossary summarizes key concepts in rotational fluid dynamics, both in classical fluid mechanics and within the framework of the Vortex \AE{}ther Model (VAM). Each term is defined with relevant physical context and mathematical expressions.
+    \end{abstract}
+
+    \maketitle
+
+    \section*{Constants and Quantities}
+    \small%
+
+\begin{table}[H]
+    \centering
+    \footnotesize
+    % \raggedright % removed to match style guide
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabular}{|l|l|l|l|l|}
+        \hline
+        \textbf{Symbol} & \textbf{Quantity} & \textbf{Value} & \textbf{Unit} & \textbf{Uncertainty} \\
+        \hline
+        %
+        $C_e$ & Vortex-Tangential-Velocity & 1.09384563e+06 & m s^-1 & unknown \\ \hline%
+        $\rho_\text{\ae}^\text{core}$ & Æther Core Density & 3.89343583e+18 & kg m^-3 & unknown \\ \hline%
+        $\rho_\text{\ae}$ & Æther Vacuum Density & 7.00000000e-07 & kg m^-3 & unknown \\ \hline%
+        $F_\text{\ae}^{\max}$ & Maximum force & 29.0535070 & N & unknown \\ \hline%
+        $F_\text{gr}^{\max}$ & Maximum Universal Force & 3.02563891e+43 & N & unknown \\ \hline%
+        $\gamma$ & Helicity-Mass coupling constant & \approx 0.005901  &  & unknown \\ \hline%
+        $r_c$ & Vortex-Core radius & 1.40897017e-15 & m & exact \\ \hline%
+        $c$ & Speed of light in vacuum & 2.99792458e+08 & m s^-1 & exact \\ \hline%
+        $G$ & Newtonian constant of gravitation & 6.67430000e-11 & m^3 kg^-1 s^-2 & 2.2e-5 \\ \hline%
+        $h$ & Planck constant & 6.62607015e-34 & J Hz^-1 & exact \\ \hline%
+        $\alpha$ & Fine-structure constant & 7.29735256e-03 &  & 1.6e-10 \\ \hline%
+        $R_e$ & Classical electron radius & 2.81794033e-15 & m & 1.3e-24 \\ \hline%
+        $\alpha_g$ & Gravitational coupling constant & 1.75180000e-45 &  & exact \\ \hline%
+        $\mu_0$ & Vacuum magnetic permeability & 1.25663706e-06 & N A^-2 & exact \\ \hline%
+        $\varepsilon_0$ & Vacuum electric permittivity & 8.85418782e-12 & F m^-1 & exact \\ \hline%
+        $Z_0$ & Characteristic impedance of vacuum & 3.76730313e+02 & \Omega & 1.6e-10 \\ \hline%
+        $\hbar$ & Reduced Planck constant & 1.05457182e-34 & J s & exact \\ \hline%
+        $L_p$ & Planck length & 1.61625500e-35 & m & 1.1e-5 \\ \hline%
+        $M_p$ & Planck mass & 2.17643400e-08 & kg & 1.1e-5 \\ \hline%
+        $t_p$ & Planck time & 5.39124700e-44 & s & 1.1e-5 \\ \hline%
+        $T_p$ & Planck temperature & 1.41678400e+32 & K & 1.1e-5 \\ \hline%
+        $q_p$ & Planck charge & 1.87554596e-18 & C & exact \\ \hline%
+        $E_p$ & Planck energy & 1.95600000e+09 & J & exact \\ \hline%
+    \end{tabular}
+    \caption{Physical constants used in the Vortex Æther Model (VAM).}
+    \label{tab:physical_constants1}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \footnotesize
+    % \raggedright % removed to match style guide
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabular}{|l|l|l|l|l|}
+        \hline
+        \textbf{Symbol} & \textbf{Quantity} & \textbf{Value} & \textbf{Unit} & \textbf{Uncertainty} \\
+        \hline
+        %
+        $e$ & Elementary charge & 1.60217663e-19 & C & exact \\ \hline%
+        $R_\infty$ & Rydberg constant & 1.09737316e+07 & m^-1 & 1.1e-12 \\ \hline%
+        $a_0$ & Bohr radius & 5.29177211e-11 & m & 1.6e-10 \\ \hline%
+        $M_e$ & Electron mass & 9.10938370e-31 & kg & 3.1e-10 \\ \hline%
+        $M_{proton}$ & Proton mass & 1.67262192e-27 & kg & 3.1e-10 \\ \hline%
+        $M_{neutron}$ & Neutron mass & 1.67492750e-27 & kg & 5.1e-10 \\ \hline%
+        $k_B$ & Boltzmann constant & 1.38064900e-23 & J K^-1 & exact \\ \hline%
+        $R$ & Gas constant & 8.31446262e+00 & J mol^-1 K^-1 & exact \\ \hline%
+        $\frac{1}{\alpha}$ & Fine structure constant reciprocal & 1.37035999e+02 &  & 1.6e-10 \\ \hline%
+        $f_c$ & Compton frequency of the electron & 1.23558996e+20 & m & 1.0e-10 \\ \hline%
+        $\Omega_c$ & Compton angular frequency of the electron & 7.76344071e+20 & m & 1.0e-10 \\ \hline%
+        $\lambda_c$ & Compton wavelength of the electron & 2.42631024e-12 & m & 1.0e-10 \\ \hline%
+        $\Phi_0$ & Magnetic flux quantum & 2.06783385e-15 & Wb & exact \\ \hline%
+        $\varphi$ & Golden ratio (Fibonacci constant) & 1.61803399e+00 &  & 7.3e-22 \\ \hline%
+        $eV$ & Electron volt & 1.60217663e-19 & J & exact \\ \hline%
+        $G_F$ & Fermi coupling constant & 1.16637870e-05 & GeV^-2 & 6e-12 \\ \hline%
+        $\lambda_{proton}$ & Proton Compton wavelength & 1.32140986e-15 & m & 4e-25 \\ \hline%
+
+        $ER_\infty$ & Rydberg energy (in joules) & 2.17987236e-18 & J & 1.1e-12 \\ \hline%
+        $fR_\infty$ & Rydberg frequency & 3.28984196e+15 & Hz & 1.1e-12 \\ \hline%
+        $\sigma$ & Stefan-Boltzmann constant & 5.67037442e-08 & W m^-2 K^-4 & exact \\ \hline%
+        $b$ & Wien displacement constant & 2.89777196e-03 & m K & exact \\ \hline%
+        $k_e$ & Coulomb constant & 8.98755179e+09 & N m^2 C^-2 & exact \\ \hline%
+
+    \end{tabular}
+    \caption{Physical constants used in the Vortex Æther Model (VAM).}
+    \label{tab:physical_constants}
+\end{table}
+%
+
+
+    \section*{Glossary}
+
+
+
+
+    \section*{Local Rotation Concepts (Directly related to Vorticity)}
+
+    \textbf{Angular Velocity Vector \( \boldsymbol{\Omega} \)} \\
+    Describes the instantaneous rotation rate of a fluid element. \\
+    Related to vorticity by:
+    \[
+        \boldsymbol{\omega} = 2 \boldsymbol{\Omega}
+    \]
+    \textit{Role:} Connects fluid kinematics to rigid-body rotation analogy.
+
+    \medskip
+    \textbf{Curl of Velocity \( \boldsymbol{\omega} = \nabla \times \vec{v} \)} \\
+    This is the formal definition of vorticity. \\
+    \textit{Tensorial Form:} Antisymmetric part of the velocity gradient.
+
+    \section*{Twisting and Linking (Helicity-related Quantities)}
+
+    \textbf{Kinetic Helicity \( H = \int \vec{v} \cdot \boldsymbol{\omega} \, dV \)} \\
+    Scalar, conserved in ideal flows (incompressible, inviscid). \\
+    Measures alignment between flow velocity and vorticity. \\
+    Positive/Negative values indicate right/left-handed twist.
+
+    \medskip
+    \textbf{Magnetic Helicity \( H_m = \int \vec{A} \cdot \vec{B} \, dV \)} \\
+    Analogue of kinetic helicity for magnetohydrodynamics (MHD). \\
+    Where \( \vec{B} = \nabla \times \vec{A} \) is the magnetic field.
+
+    \medskip
+    \textbf{Cross Helicity \( H_c = \int \vec{v} \cdot \vec{B} \, dV \)} \\
+    Measures alignment of velocity and magnetic field in MHD. \\
+    Shows dynamic coupling between flow and magnetic field lines.
+
+    \medskip
+    \textbf{Relative Helicity} \\
+    Normalized form of helicity to compare twistedness independent of flow strength:
+    \[
+        H_{\text{rel}} = \frac{\int \vec{v} \cdot \boldsymbol{\omega} \, dV}
+        {\left( \int |\vec{v}|^2 dV \right)^{1/2}
+            \left( \int |\boldsymbol{\omega}|^2 dV \right)^{1/2}}
+    \]
+
+    \section*{Flow Structure Types (Swirl \& Vorticity-related)}
+
+    \textbf{Spiral Vortex / Swirl Flow} \\
+    Flow pattern with both radial and tangential components. \\
+    Described often in cylindrical coordinates as:
+    \[
+        \vec{v}(r,\theta,z) = v_r(r,z) \, \hat{r} + v_\theta(r,z) \, \hat{\theta} + v_z(r,z) \, \hat{z}
+    \]
+    Appears in tornadoes, hurricanes, and swirl combustors.
+
+    \medskip
+    \textbf{Rankine Vortex} \\
+    A model vortex with solid-body rotation inside a core and irrotational flow outside:
+    \[
+        \omega(r) =
+        \begin{cases}
+            \text{constant}, & r < r_c \\
+            0, & r > r_c
+        \end{cases}
+    \]
+
+    \medskip
+    \textbf{Burgers Vortex} \\
+    A steady solution to Navier-Stokes that balances vorticity diffusion and stretching:
+    \[
+        \omega(r) = \omega_0 e^{-a r^2}
+    \]
+    Useful in modeling turbulence and vortex stretching.
+
+    \medskip
+    \textbf{Vortex Sheet} \\
+    Surface with discontinuous tangential velocity but continuous normal component. \\
+    Idealization of shear layers.
+
+    \medskip
+    \textbf{Vortex Filament / Line} \\
+    Line-like structure where vorticity is concentrated (mathematically a delta function). \\
+    Central to Biot–Savart law and Kelvin's circulation theorem.
+
+    \section*{Derived Quantities \& Diagnostics}
+
+    \textbf{Q-Criterion} \\
+    Identifies vortices by comparing strain and rotation:
+    \[
+        Q = \frac{1}{2} \left( \| \boldsymbol{\Omega} \|^2 - \| \mathbf{S} \|^2 \right)
+    \]
+    where \( \mathbf{S} \) is the rate-of-strain tensor and \( \boldsymbol{\Omega} \) is the rotation tensor.
+
+    \medskip
+    \textbf{Vorticity Magnitude \( |\boldsymbol{\omega}| \)} \\
+    Scalar field used to visualize rotation intensity.
+
+    \medskip
+    \textbf{Enstrophy \( E = \frac{1}{2} \int |\boldsymbol{\omega}|^2 \, dV \)} \\
+    Analogous to energy, but for rotation. \\
+    Important in 2D turbulence where it is approximately conserved.
+
+    \medskip
+    \textbf{Circulation \( \Gamma = \oint_{\mathcal{C}} \vec{v} \cdot d\vec{l} \)} \\
+    Line integral of velocity around a closed curve. \\
+    Related to vorticity via Stokes' theorem:
+    \[
+        \Gamma = \iint_S \boldsymbol{\omega} \cdot \hat{n} \, dA
+    \]
+
+    \section*{In VAM-Specific Context}
+
+    \textbf{Swirl Clock Time Rate} \\
+    Local time evolution determined by:
+    \[
+        d\tau = dt \sqrt{1 - \frac{|\boldsymbol{\omega}|^2}{C_e^2}}
+    \]
+    Corresponds to time dilation via rotation in VAM.
+
+    \medskip
+    \textbf{Swirl Lagrangian} \\
+    Includes helicity or knottedness:
+    \[
+        \mathcal{L}_{\text{swirl}} = \lambda \vec{v} \cdot (\nabla \times \vec{v}) = \lambda \vec{v} \cdot \boldsymbol{\omega}
+    \]
+
+    \medskip
+    \textbf{Topological Charge / Linking Number} \\
+    Quantifies the entanglement of vortex tubes:
+    \[
+        H = \sum_i \Gamma_i^2 \, \text{Lk}_i
+    \]
+    Related to the Hopf invariant in field theory.
+
+
+    \subsection*{Vorticity $\boldsymbol{\omega}$}
+    The curl of the velocity field:
+    \[ \boldsymbol{\omega} = \nabla \times \mathbf{v} \]
+    It describes the local spinning motion of a fluid parcel. In VAM, vorticity modulates local time and governs pressure differentials.
+
+    \subsection*{Relative Vorticity}
+    Vorticity measured relative to a rotating frame. Important in geophysical flows and rotating reference systems in æther dynamics.
+
+    \subsection*{Angular Velocity Vector $\boldsymbol{\Omega}$}
+    Describes the solid-body rotation rate of a fluid element, related to vorticity via:
+    \[ \boldsymbol{\omega} = 2\boldsymbol{\Omega} \]
+
+    \subsection*{Vortex Tube}
+    A bundle of vortex lines forming a tubular region of concentrated vorticity. Vortex tubes can evolve into knotted structures in VAM.
+
+    \subsection*{Vortex Line}
+    A curve everywhere tangent to the vorticity vector field. These lines illustrate the direction and connectivity of local rotational motion.
+
+    \subsection*{Vortex Stretching}
+    Occurs when a vortex tube is elongated by the flow. In 3D, this process increases the magnitude of vorticity, conserving angular momentum.
+
+    \subsection*{Helicity $H$}
+    A scalar defined as:
+    \[ H = \int \mathbf{v} \cdot \boldsymbol{\omega} \, dV \]
+    It measures the extent to which velocity and vorticity are aligned. It is a topological invariant in ideal fluids and central to vortex knot theory in VAM.
+
+    \subsection*{Kinetic Helicity Density}
+    The pointwise scalar product:
+    \[ h = \mathbf{v} \cdot \boldsymbol{\omega} \]
+    Gives the local density of helicity, whose integral over a volume is total helicity.
+
+    \subsection*{Cross Helicity}
+    Used in magnetohydrodynamics (MHD):
+    \[ H_c = \int \mathbf{v} \cdot \mathbf{B} \, dV \]
+    Measures the alignment between fluid velocity and magnetic field.
+
+    \subsection*{Magnetic Helicity}
+    Another MHD quantity:
+    \[ H_m = \int \mathbf{A} \cdot \mathbf{B} \, dV \]
+    where $\mathbf{B} = \nabla \times \mathbf{A}$. It quantifies the linkage of magnetic field lines.
+
+    \subsection*{Swirl}
+    A qualitative term indicating rotational flow. In cylindrical coordinates, the azimuthal component $v_\theta$ is often referred to as the swirl velocity.
+
+    \subsection*{Swirl Clock}
+    In VAM, a clock governed by the internal angular frequency $\omega_0$ of a vortex core. Time dilation is given by:
+    \[ d\tau = dt \sqrt{1 - \frac{\omega^2}{C_e^2}} \]
+
+    \subsection*{Swirl Lagrangian}
+    A field Lagrangian incorporating helicity terms:
+    \[ \mathcal{L}_{\text{swirl}} = \lambda (\mathbf{v} \cdot \boldsymbol{\omega}) \]
+    This encapsulates the topological and dynamical behavior of swirl fields in VAM.
+
+    \subsection*{Rotation}
+    A general term describing angular motion in fluids, encompassing both local (vorticity) and global (rigid body) rotations.
+
+    \subsection*{Circulation $\Gamma$}
+    Defined by:
+    \[ \Gamma = \oint_{\mathcal{C}} \mathbf{v} \cdot d\mathbf{l} \]
+    Measures the total rotation around a closed loop. Stokes’ theorem connects it to surface-integrated vorticity.
+
+    \subsection*{Enstrophy $\mathcal{E}$}
+    A quadratic measure of rotational intensity:
+    \[ \mathcal{E} = \frac{1}{2} \int |\boldsymbol{\omega}|^2 \, dV \]
+    Important in turbulence analysis and vortex conservation.
+
+    \subsection*{Q-Criterion}
+    A scalar diagnostic for vortex identification:
+    \[ Q = \frac{1}{2}(||\boldsymbol{\Omega}||^2 - ||\mathbf{S}||^2) \]
+    where $\mathbf{S}$ is the strain-rate tensor. Positive $Q$ indicates vortex-dominated regions.
+
+    \subsection*{Rankine Vortex}
+    A model vortex with solid-body rotation inside a core ($r < r_c$) and irrotational flow outside ($r > r_c$). Simplified but useful for teaching.
+    \[ \omega(r) =
+    \begin{cases}
+        \text{constant}, & r < r_c \\
+        0, & r > r_c
+    \end{cases}
+    \]
+
+    \subsection*{Burgers Vortex}
+    A steady-state vortex model balancing stretching and viscous diffusion:
+    \[ \omega(r) = \omega_0 e^{-a r^2} \]
+    Frequently used in studies of turbulent vortex dynamics.
+
+    \subsection*{Topological Charge}
+    Quantifies the entanglement or linkage of vortex lines. In VAM, this relates to conserved quantities such as helicity and can be described using the Hopf invariant.
+
+    \section*{References}
+    \begin{itemize}[leftmargin=1.5em]
+        \item G.K. Batchelor, \textit{An Introduction to Fluid Dynamics}, Cambridge University Press, 1967.
+        \item H.K. Moffatt, "The degree of knottedness of tangled vortex lines", \textit{J. Fluid Mech.}, vol. 35, 1969, pp. 117–129. doi:10.1017/S0022112069000991
+        \item H.K. Moffatt and A. Tsinober, "Helicity and singular structures in fluid dynamics", \textit{Ann. Rev. Fluid Mech.}, vol. 24, 1992, pp. 281–312. doi:10.1146/annurev.fl.24.010192.001433
+    \end{itemize}
+
+\end{document}

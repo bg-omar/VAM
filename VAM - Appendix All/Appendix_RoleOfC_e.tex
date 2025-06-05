@@ -1,0 +1,96 @@
+%! Author = mr
+%! Date = 6/5/2025
+% Preamble
+\documentclass[11pt]{article}
+
+% Packages
+\usepackage{amsmath}
+
+% Document
+\begin{document}
+
+
+\section*{Appendix: The Role of \( C_e^2 \) in VAM Dynamics}
+
+In the Vortex \AE{}ther Model (VAM), the constant \( C_e \) --- the core tangential swirl velocity --- plays a role analogous to the speed of light \( c \) in relativity. It governs the scale at which internal vortex motion couples to inertial effects, mass, and time evolution. Its square, \( C_e^2 \), appears throughout the theory as a natural denominator wherever kinetic, energetic, or gravitational effects emerge.
+
+\subsection*{1. Interpretation of \( C_e^2 \)}
+
+\begin{itemize}
+    \item \textbf{Inertia Coupling:} Swirl-induced mass depends on energy-like terms normalized by \( C_e^2 \), mirroring \( E = mc^2 \) in special relativity.
+    \item \textbf{Time Dilation:} Local time is modified by swirl velocity as:
+    \[ d\tau = dt \cdot \sqrt{1 - \frac{\omega^2 r^2}{C_e^2}} \]
+
+    \item \textbf{Swirl Mass Generation:} Energy per unit volume from vortex motion (\( \sim \frac{1}{2} \rho v^2 \)) is converted to mass via \( C_e^2 \).
+
+    \item \textbf{Gravitational Coupling:} Appears in the VAM expression for \( G \), derived from vortex coupling:
+    \[ G \sim \frac{C_e c^5 t_p^2}{2 F_{\text{max}} r_c^2} \]
+\end{itemize}
+
+Thus, \( C_e^2 \) is fundamental to scaling rotational energy into inertial and gravitational analogues in the VAM framework.
+
+\subsection*{2. Table of Expressions Involving \( C_e^2 \)}
+
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabular}{|l|l|l|}
+        \hline
+        \textbf{Expression} & \textbf{Physical Meaning} & \textbf{VAM Role} \\
+        \hline
+        $\frac{r_c}{C_e^2}$ & Core radius over swirl velocity squared & Temporal inertia scaling \\
+        $\frac{F_{\text{max}}}{C_e^2}$ & Max force per swirl energy unit & Force–mass–energy coupling \\
+        $\frac{1}{2} \rho v^2 / C_e^2$ & Energy density to mass conversion & Inertial mass from kinetic field \\
+        $\frac{\omega^2 r^2}{C_e^2}$ & Time dilation correction & Vortex-clock slowdown \\
+        $\frac{8\pi \rho_\ae r_c^3}{C_e}$ & VAM prefactor & Total mass contribution per vortex \\
+        \hline
+    \end{tabular}
+    \caption{Representative appearances of \( C_e^2 \) in core VAM expressions.}
+\end{table}
+
+\subsection*{3. Symbolic Equivalence \( C_e^2 \leftrightarrow c^2 \)}
+
+VAM exhibits a direct analogue to relativistic dynamics where \( C_e^2 \) plays the same role as \( c^2 \):
+
+\paragraph{Time Dilation Analogy:}
+\begin{align*}
+    \text{Special Relativity:}\quad & d\tau = dt \cdot \sqrt{1 - \frac{v^2}{c^2}} \\
+    \text{VAM Swirl Clock:}\quad & d\tau = dt \cdot \sqrt{1 - \frac{v_{\text{swirl}}^2}{C_e^2}}, \quad v_{\text{swirl}} = \omega r
+\end{align*}
+
+\paragraph{Mass-Energy Equivalence:}
+\begin{align*}
+    \text{Relativity:}\quad & E = mc^2 \\
+    \text{VAM:}\quad & E = m C_e^2 \Rightarrow m = \frac{\frac{1}{2} \rho v^2}{C_e^2}
+\end{align*}
+
+\paragraph{Gravitational Redshift Analogy:}
+\begin{align*}
+    \text{GR:}\quad & g_{tt} \approx 1 + \frac{2\Phi}{c^2} \\
+    \text{VAM:}\quad & g_{tt}^{\text{eff}} \approx 1 - \frac{v^2}{C_e^2}
+\end{align*}
+
+\paragraph{Summary Equivalence Table:}
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{Quantity} & \textbf{Relativistic (GR)} & \textbf{VAM Equivalent} \\
+        \hline
+        Limiting speed & \( c \) & \( C_e \) \\
+        Mass-energy conversion & \( E = mc^2 \) & \( E = m C_e^2 \) \\
+        Time dilation & \( \sqrt{1 - v^2/c^2} \) & \( \sqrt{1 - v^2/C_e^2} \) \\
+        Gravitational potential scaling & \( \Phi/c^2 \) & \( v^2/C_e^2 \) \\
+        \hline
+    \end{tabular}
+    \caption{Mapping of relativistic quantities to their vortex-based analogues in VAM.}
+\end{table}
+
+\noindent
+We conclude that:
+\[
+    \boxed{C_e^2 \longleftrightarrow c^2}
+\]
+This symbolic equivalence formalizes the deep analogy between relativistic spacetime curvature and the VAM framework of swirl-induced gravitational behavior.
+\end{document}
