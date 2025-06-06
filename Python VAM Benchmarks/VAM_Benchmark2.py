@@ -240,7 +240,7 @@ gamma = G * rho_ae**2     # m^5/s^2
 kappa = C_e * r_c         # m^2/s
 alpha = (r_c**2) / (C_e**2)  # s^2
 Omega_k = C_e / r_c       # rad/s
-Radius = A_0
+Radius = a_0
 # Equation 1: Heuristic time dilation
 t_ratio_heuristic = 1 / (1 + alpha * Omega_k**2)
 
