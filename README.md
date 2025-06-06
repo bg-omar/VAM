@@ -64,6 +64,22 @@ Visual tools (coming soon) for:
 
 > Because if you can’t visualize your theory, is it even real?
 
+## 📝 Equation Extraction
+
+Run the helper script to harvest equations from each VAM paper and convert them
+into Python-friendly expressions.  `VAM - 2 Swirl Clocks` was processed first,
+and running the tool again will generate JSON files for the other folders
+(including the English translation in `VAM - 1 TimeDilation/TimeDilation`):
+
+```bash
+python tools/extract_equations.py
+```
+
+The Swirl Clocks equations are stored in `out/extracted_equations.json`.  All
+other VAM directories produce their own JSON files inside `out/equations/`, with
+names derived from the directory titles (spaces replaced with underscores).
+These files can be imported in tests or further analysis.
+
 ---
 
 ## ⚠️ Disclaimer
