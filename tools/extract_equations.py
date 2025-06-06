@@ -57,18 +57,43 @@ def extract_equations(tex_path: Path, mapping: dict) -> dict:
 
 
 def main():
-    base = Path('VAM - 2 Swirl Clocks/Swirl_Clocks')
     constants_path = Path('Python VAM Benchmarks/constants.py')
     mapping = build_constant_mapping(constants_path)
-    all_eqs = {}
-    for tex in base.rglob('*.tex'):
-        eqs = extract_equations(tex, mapping)
-        all_eqs.update(eqs)
-    out_path = Path('out/extracted_equations.json')
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-    with out_path.open('w', encoding='utf-8') as f:
-        json.dump(all_eqs, f, indent=2)
-    print(f'Extracted {len(all_eqs)} equations to {out_path}')
+
+    translation_dirs = {
+        'VAM - 1 TimeDilation': 'TimeDilation',
+        'VAM - 2 Swirl Clocks': 'Swirl_Clocks',
+    }
+
+    out_root = Path('out/equations')
+    out_root.mkdir(parents=True, exist_ok=True)
+
+    vam_bases = [p for p in Path('.').iterdir() if p.is_dir() and p.name.startswith('VAM -')]
+    total = 0
+    for base in vam_bases:
+        if base.name.startswith('VAM - 2'):
+            # Swirl Clocks already extracted
+            continue
+
+        sub = translation_dirs.get(base.name)
+        search_dir = base / sub if sub else base
+
+        all_eqs: dict[str, str] = {}
+        for tex in search_dir.rglob('*.tex'):
+            eqs = extract_equations(tex, mapping)
+            all_eqs.update(eqs)
+
+        if not all_eqs:
+            continue
+
+        safe_name = re.sub(r'[\s/]', '_', base.name)
+        out_path = out_root / f'{safe_name}.json'
+        with out_path.open('w', encoding='utf-8') as f:
+            json.dump(all_eqs, f, indent=2)
+        print(f'Extracted {len(all_eqs)} equations from {search_dir} to {out_path}')
+        total += len(all_eqs)
+
+    print(f'Total equations extracted: {total}')
 
 
 if __name__ == '__main__':
