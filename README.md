@@ -64,6 +64,18 @@ Visual tools (coming soon) for:
 
 > Because if you can’t visualize your theory, is it even real?
 
+## 📝 Equation Extraction
+
+Run the helper script to harvest every equation from the Swirl Clocks paper and
+convert them into Python-friendly expressions:
+
+```bash
+python tools/extract_equations.py
+```
+
+The resulting `extracted_equations.json` is written to the `out/` directory and
+can be imported in tests or further analysis.
+
 ---
 
 ## ⚠️ Disclaimer
