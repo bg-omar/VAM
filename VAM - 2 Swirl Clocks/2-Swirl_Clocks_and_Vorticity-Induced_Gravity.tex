@@ -6,50 +6,116 @@
 %! ORCID = 0009-0006-1686-3961
 %! DOI = 10.5281/zenodo.15566336
 
-\documentclass[a4paper, aps,preprint,superscriptaddress, 12pt]{revtex4}
+% --------------------
+% VAM LaTeX Template
+% Inspired by your revtex4 setup, but with flexibility for publication
+% --------------------
+\documentclass[a4paper,12pt]{article} % Switched from revtex4 for full control
+
+% --------------------
+% Page Geometry
+% --------------------
 \usepackage[a4paper, margin=2cm]{geometry}
-\usepackage{bookmark}
-\usepackage{float}
+
+% --------------------
+% Language, Encoding, Fonts
+% --------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+
+% --------------------
+% Colors, Graphics, Diagrams
+% --------------------
+\usepackage{graphicx}
 \usepackage{tikz}
-\usepackage{makecell}
-\usepackage{tabularx}
-\usepackage[font=footnotesize]{caption}
-\usetikzlibrary{arrows.meta}
+\usetikzlibrary{arrows.meta, positioning}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
-\usepackage[none]{hyphenat}
-\usepackage{array}
-\usepackage{amsmath}
-\usepackage{booktabs}
-\usepackage[utf8]{inputenc}
-\usepackage{amssymb}
-\usepackage{graphicx}
-\usepackage{hyperref}
-\usepackage{physics}
-\usepackage{natbib}
-\usepackage{url}
-\usepackage{multirow}
-\usepackage{subcaption}
+\usepackage{xcolor}
+
+% --------------------
+% Math and Physics
+% --------------------
+\usepackage{amsmath, amssymb, physics}
 \usepackage{siunitx}
-\usepackage{listings}
+
+% --------------------
+% Tables and Figures
+% --------------------
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{array, tabularx, makecell, multirow}
 \renewcommand{\arraystretch}{1.5}
 \renewcommand{\floatpagefraction}{.8}
+\usepackage[font=footnotesize]{caption}
+\usepackage{subcaption}
+
+% --------------------
+% Code and Listings
+% --------------------
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily\footnotesize, breaklines=true}
+
+% --------------------
+% TOC Customization
+% --------------------
+\usepackage{tocloft}
+\setcounter{tocdepth}{2} % Only show sections and subsections
+\renewcommand{\cftsecfont}{\bfseries}
+\renewcommand{\cftsubsecfont}{\itshape}
+\renewcommand{\cftsecleader}{\cftdotfill{.}}
+\renewcommand{\contentsname}{\centering \Huge\textbf{Contents}}
+
+% --------------------
+% Links and Metadata
+% --------------------
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  urlcolor=blue,
+  pdftitle={The Vortex Æther Model},
+  pdfauthor={Omar Iskandarani},
+  pdfkeywords={vorticity, gravity, æther, fluid dynamics, time dilation, VAM}
+}
+\usepackage{bookmark} % PDF bookmarks
+
+% --------------------
+% Bibliography
+% --------------------
+\usepackage[numbers]{natbib} % Or switch to biblatex if preferred
+
+% --------------------
+% Line and Hyphenation
+% --------------------
+\usepackage[none]{hyphenat}
 \sloppy
+
+% --------------------
+% Document Starts Here
+% --------------------
 
 
 \begin{document}
-\email{info@omariskandarani.com}
-\author{Omar Iskandarani}
 \title{
-    Swirl Clocks and Vorticity-Induced Gravity:\\
-    Reformulating Relativity in a Structured Vortex Æther\\
-    \textnormal{\normalsize A Topological Fluid Mechanics Approach to Time Dilation, Mass, and Gravitation}
+  \textbf{Swirl Clocks and Vorticity-Induced Gravity}\\[0.5em]
+  \large Reformulating Relativity in a Structured Vortex Æther\\
+  \normalsize A Topological Fluid Mechanics Approach to Time Dilation, Mass, and Gravitation
+\noindent\thanks{\textbf{Keywords:} \textit{time dilation, superfluid æther, Vortex Æther Model, vortex dynamics, emergent time, fluid spacetime, special relativity, analog gravity, 3D vortex structures, quantized circulation, relativistic effects, topological matter, fluid mechanics, vortex clocks}}
+}
+
+\author{
+  Omar Iskandarani\\
+  \small Independent Researcher, Groningen, The Netherlands
+  \thanks{\texttt{info@omariskandarani.com}}
+  \thanks{ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961} \quad DOI: \href{https://doi.org/10.5281/zenodo.15566336}{10.5281/zenodo.15566336} \quad License: \href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}}
 }
 
 \date{\today}
-\affiliation{Independent Researcher, Groningen, The Netherlands}
-\thanks{ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961} — \footnotesize DOI: \href{https://doi.org/10.5281/zenodo.15566336}{10.5281/zenodo.15566336}  — Licensed under \href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}.}
-\keywords{time dilation, superfluid æther, Vortex Æther Model, vortex dynamics, emergent time, fluid spacetime, special relativity, Lorentz factor, analog gravity, 3D vortex structures, quantized circulation, relativistic effects, topological matter, fluid mechanics, vortex clocks}
+\maketitle
 
 
 
@@ -69,8 +135,9 @@
     The model reproduces Newtonian limits and frame-dragging as emergent phenomena and forms a testable, topologically sound alternative to classical gravity models. This approach is consistent with previous analog gravity programs~\cite{barcelo2011analogue,volovik2009universe}, but provides a fundamental hydrodynamical and node-oriented gravity framework.
 \end{abstract}
 
-\maketitle
 
+\newpage
+\tableofcontents
 \input{Swirl_Clocks/00_Introduction}
 \input{Swirl_Clocks/01_Time_Dilation_from_Vortex_Dynamics}
 \input{Swirl_Clocks/02_entropy}

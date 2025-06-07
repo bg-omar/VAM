@@ -4,6 +4,12 @@
 %! Affiliation = Independent Researcher, Groningen, The Netherlands
 %! License = CC-BY 4.0
 %! ORCID = 0009-0006-1686-3961
+%        \part \chapter \section \subsection \subsubsection  \paragraph  \subparagraph\
+
+
+
+
+
 
 \documentclass[a4paper, aps,preprint,superscriptaddress, 12pt]{revtex4}
 \usepackage[a4paper, margin=2cm]{geometry}
@@ -14,72 +20,110 @@
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{physics}
+\usepackage{tocloft}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{etoolbox} % Ensure etoolbox is loaded
+\usepackage{lmodern}  % Better font rendering
+\usepackage{setspace} % Optional line spacing control
+\setcounter{tocdepth}{2}
+
+% -----------------------------
+% TOC Title Format
+\renewcommand{\contentsname}{\centering \Huge\textbf{Contents}\vspace{1em}}
+
+% -----------------------------
+% Reduce spacing and font size
+\renewcommand{\cftbeforesecskip}{0pt} % Vertical space between entries
+\renewcommand{\cftsecfont}{\small\color{blue!70!black}}  % Font style
+\renewcommand{\cftsecpagefont}{\small\color{gray!90!black}} % Page # font
+
+\renewcommand{\cftsubsecfont}{\small\itshape\color{gray!70!black}}
+\renewcommand{\cftsubsecpagefont}{\small\color{gray!50!black}}
+
+\renewcommand{\cftsecindent}{0pt}
+\renewcommand{\cftsubsecindent}{1.5em}
+\renewcommand{\cftsecnumwidth}{2em}
+\renewcommand{\cftsubsecnumwidth}{3em}
+
+% -----------------------------
+% Optional: Remove dot leaders (for compactness)
+\renewcommand{\cftsecleader}{\cftdotfill{0}}
+\renewcommand{\cftsubsecleader}{\cftdotfill{0}}
+
+% -----------------------------
+% Optional: Adjust line spacing
+\let\oldtoc\tableofcontents
+\renewcommand{\tableofcontents}{
+  \begingroup
+  \setstretch{1.0}
+  \oldtoc
+  \endgroup
+}
 
 \begin{document}
 
 \author{Omar Iskandarani}
-\title{The Vortex Æther Model: Unifying Gravity, Electromagnetism, and Quantum Physics under a 3D, Non-Relativistic, vortex framework}
-\date{\today}
-\affiliation{Independent Researcher, Groningen, The Netherlands}
-\thanks{ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961}}
-\email{info@omariskandarani.com}
+    \title{The Vortex Æther Model: Unifying Gravity, Electromagnetism, and Quantum Physics under a 3D, Non-Relativistic, vortex framework}
+    \date{\today}
+    \affiliation{Independent Researcher, Groningen, The Netherlands}
+    \thanks{ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961}}
+    \email{info@omariskandarani.com}
 
-%%% Abstract
-\begin{abstract}
-    The Vortex Æther Model (VAM) introduces a unified, non-relativistic theoretical framework wherein gravity, electromagnetism, and quantum phenomena arise from structured vorticity within an inviscid superfluid-like Æther. Unlike General Relativity, which depends on four-dimensional spacetime curvature, VAM proposes that stable vortex knots in three-dimensional Euclidean space generate fundamental forces and quantized states through fluid dynamics and vortex topology. Central to this model is absolute universal time, where observed time dilation results from vortex-induced local energy gradients rather than relativistic effects. VAM yields experimentally testable predictions, including superfluid analogs of frame-dragging, magnetic fields in electrically neutral fluids, and atomic-scale quantization phenomena akin to those observed in helium II. Fundamental constants such as the vortex-core tangential velocity $C_e$ and the Coulomb barrier radius $r_c$ anchor core rotation speeds and interaction strengths, providing explicit testable parameters for experimental verification.
-\end{abstract}
+    %%% Abstract
+    \begin{abstract}
+        The Vortex Æther Model (VAM) introduces a unified, non-relativistic theoretical framework wherein gravity, electromagnetism, and quantum phenomena arise from structured vorticity within an inviscid superfluid-like Æther. Unlike General Relativity, which depends on four-dimensional spacetime curvature, VAM proposes that stable vortex knots in three-dimensional Euclidean space generate fundamental forces and quantized states through fluid dynamics and vortex topology. Central to this model is absolute universal time, where observed time dilation results from vortex-induced local energy gradients rather than relativistic effects. VAM yields experimentally testable predictions, including superfluid analogs of frame-dragging, magnetic fields in electrically neutral fluids, and atomic-scale quantization phenomena akin to those observed in helium II. Fundamental constants such as the vortex-core tangential velocity $C_e$ and the Coulomb barrier radius $r_c$ anchor core rotation speeds and interaction strengths, providing explicit testable parameters for experimental verification.
+    \end{abstract}
 
-\maketitle
-%% Introduction
-\input{000_Introduction}
+    \maketitle
+    \tableofcontents
 
-%% Part I - Foundational Considerations
-\section*{Part I: Foundational Considerations}\label{sec:Part-1}
-\input{010_History}
-\input{020_SuperfluidLikeÆther}
-\input{030_FineStructureConstant}
+    %% Introduction
+    \input{000_Introduction}
 
-%% Part II - MathematicalFormalism
-\section*{Part II: Mathematical Formalism}\label{sec:Part-2}
-\input{040_MaxForceVAM}
-\input{050_SwirlVelocityConstant}
-\input{060_DerivationVAMFieldEquation}
-\input{070_MaxwellEquivalentsVorticity}
-\input{080_ElectrostaticChargeElectricFieldsVAM}
-\input{085_ElectroVortexDynamics}
-\input{090_MachInspiredScalar}
-\input{100_PhotonVortexDipole}
-\input{110_PhotonVortexDipoleGravitationalCoupling}
-\input{120_PhotonsDipoles}
-\input{130_HeatTheoryVAM}
+    %% Part I - Foundational Considerations
+    \newpage \section*{Part I: Foundational Considerations}\label{sec:Part-1} \input{010_History}
+    \newpage \input{020_SuperfluidLikeÆther}
+    \newpage \input{030_FineStructureConstant}
 
-
-%% Part III - Applications and Implications
-\section*{Part III: Applications and Implications}\label{sec:Part-3}
-\input{135_toy_model}
-\input{140_ElectronToroidalVortex}
-\input{145_MeisnerEffect}
-\input{146_DerivationElectrostatic}
-\input{147_VAMvsEHD}
-\input{150_DiscussionOutlook}
+    %% Part II - MathematicalFormalism
+    \newpage \section*{Part II: Mathematical Formalism}\label{sec:Part-2} \input{040_MaxForceVAM}
+    \newpage \newpage{050_SwirlVelocityConstant}
+    \newpage \newpage{060_DerivationVAMFieldEquation}
+    \newpage \newpage{070_MaxwellEquivalentsVorticity}
+    \newpage \newpage{080_ElectrostaticChargeElectricFieldsVAM}
+    \newpage \newpage{085_ElectroVortexDynamics}
+    \newpage \newpage{090_MachInspiredScalar}
+    \newpage \newpage{100_PhotonVortexDipole}
+    \newpage \newpage{110_PhotonVortexDipoleGravitationalCoupling}
+    \newpage \newpage{120_PhotonsDipoles}
+    \newpage \newpage{130_HeatTheoryVAM}
 
 
-%% Appendices
-\appendix \label{sec:Part-4}
-\input{A1_DetailedDerivationSwirlVelocityConstant}\label{appendix:1}
-\input{A2_PoissonLikeEquationVorticityGravity}\label{appendix:2}
-\input{A3_MaxwellVAMIndexForm}\label{appendix:maxwell_appendix}
-\input{A4_TimeDilationLocalTimeEquations}\label{appendix:TimeDilation}
-\input{A5_Relation_QM_VAM}\label{appendix:5}
-\input{A6_KnotTheoryConnections}\label{appendix:6}
-\input{A7_DerivationFineStructureConstant}\label{appendix:alpha}
-\input{A8_DerivationÆthericWave}\label{appendix:8}
-\input{A9_DerivationVortexSwellingFormula}\label{appendix:9}
-\input{A10_DerivationWaveEquation}\label{appendix:10}
-\input{A11_DerivationGravitationalModification}\label{appendix:11}
+    %% Part III - Applications and Implications
+    \newpage \section*{Part III: Applications and Implications}\label{sec:Part-3} \input{135_toy_model}
+    \newpage \newpage{140_ElectronToroidalVortex}
+    \newpage \newpage{145_MeisnerEffect}
+    \newpage \newpage{146_DerivationElectrostatic}
+    \newpage \newpage{147_VAMvsEHD}
+    \newpage \newpage{150_DiscussionOutlook}
 
-%% References
-\bibliography{../references}
-\bibliographystyle{unsrt}
+
+    %% Appendices
+    \newpage \appendix \label{sec:Part-4} \input{A1_DetailedDerivationSwirlVelocityConstant}\label{appendix:1}
+    \newpage \newpage{A2_PoissonLikeEquationVorticityGravity}\label{appendix:2}
+    \newpage \newpage{A3_MaxwellVAMIndexForm}\label{appendix:maxwell_appendix}
+    \newpage \newpage{A4_TimeDilationLocalTimeEquations}\label{appendix:TimeDilation}
+    \newpage \newpage{A5_Relation_QM_VAM}\label{appendix:5}
+    \newpage \newpage{A6_KnotTheoryConnections}\label{appendix:6}
+    \newpage \newpage{A7_DerivationFineStructureConstant}\label{appendix:alpha}
+    \newpage \newpage{A8_DerivationÆthericWave}\label{appendix:8}
+    \newpage \newpage{A9_DerivationVortexSwellingFormula}\label{appendix:9}
+    \newpage \newpage{A10_DerivationWaveEquation}\label{appendix:10}
+    \newpage \newpage{A11_DerivationGravitationalModification}\label{appendix:11}
+
+    %% References
+    \bibliography{../references}
+    \bibliographystyle{unsrt}
 
 \end{document}
