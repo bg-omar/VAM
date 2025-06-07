@@ -19,7 +19,7 @@ This repository includes the following key documents:
   Proposes an alternative mechanism for gravity based on Bernoulli-like pressure gradients in rotating æther.
 
 - **Benchmarking Vortex Æther Model vs General Relativity**  
-  Numerical tests comparing VAM predictions with known GR results in extreme scenarios.
+  Numerical tests comparing VAM predictions with known GR results in extreme scenarios. 
 
 - **Standard Model Lagrangian in VAM**  
   A bold attempt to reconstruct quantum field theory from first principles using vortex topologies.
