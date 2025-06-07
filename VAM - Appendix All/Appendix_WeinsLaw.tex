@@ -1,0 +1,119 @@
+\section{Wien's Displacement Law and the Vortex \text{\ae}ther Model (VAM)}
+
+\subsection{Classical Wien's Displacement Law}
+
+The classical \textbf{Wien displacement law} relates the wavelength of peak emission \( \lambda_{\text{max}} \) of a blackbody to its temperature \( T \) as follows:
+
+\begin{equation}
+\boxed{
+\lambda_{\text{max}} T = b
+}
+\qquad \text{with } b = 2.897771955 \times 10^{-3}~\text{m·K}
+\label{eq:wien-law}
+\end{equation}
+
+This expression is derived by maximizing the Planck radiation function \( B(\lambda, T) \) with respect to \( \lambda \).
+
+\subsection{VAM Interpretation: Vortex–Temperature Coupling}
+
+Within the framework of the \textbf{Vortex \text{\ae}ther Model (VAM)}, thermal radiation arises from rotational kinetic energy in localized vortex structures. We propose that temperature emerges from vortex energy density in the superfluid \text{\ae}ther medium.
+
+Let:
+
+\begin{itemize}
+  \item \( \rho_\text{\ae} \): local \text{\ae}ther density
+  \item \( |\vec{\omega}| \): local vorticity magnitude
+  \item \( V_{\text{cell}} \): coarse-grained vortex core volume
+\end{itemize}
+
+Then the rotational kinetic energy density is:
+
+\begin{equation}
+U_{\text{rot}} = \frac{1}{2} \rho_\text{\ae} |\vec{\omega}|^2
+\end{equation}
+
+We define temperature through this energy density:
+
+\begin{equation}
+k_B T \sim \frac{1}{2} \rho_\text{\ae} |\vec{\omega}|^2 V_{\text{cell}}
+\quad \Rightarrow \quad
+T \sim \frac{\rho_\text{\ae} |\vec{\omega}|^2 V_{\text{cell}}}{2 k_B}
+\label{eq:vam-temperature}
+\end{equation}
+
+\subsection{Peak Wavelength from Vorticity Frequency}
+
+Assume a vortex core emits radiation due to its oscillation at frequency \( \nu \sim |\vec{\omega}| \), and use \( \lambda = c/\nu \), giving:
+
+\begin{equation}
+\lambda_{\text{peak}} \sim \frac{c}{|\vec{\omega}|}
+\end{equation}
+
+Substituting from Eq.~\eqref{eq:vam-temperature}, we find:
+
+\begin{equation}
+|\vec{\omega}| \sim \sqrt{ \frac{2 k_B T}{\rho_\text{\ae} V_{\text{cell}}} }
+\quad \Rightarrow \quad
+\boxed{
+\lambda_{\text{peak}} \sim \frac{c}{\sqrt{ \dfrac{2 k_B T}{\rho_\text{\ae} V_{\text{cell}}} }}
+}
+\label{eq:vam-lambda}
+\end{equation}
+
+Thus, the VAM prediction is:
+
+\begin{equation}
+\boxed{
+\lambda_{\text{peak}} \propto \frac{c}{\sqrt{T}}
+}
+\end{equation}
+
+This deviates from the classical linear inverse law \( \lambda_{\text{peak}} \sim 1/T \), implying a slower shift in wavelength with increasing temperature.
+
+\subsection{Reconciliation with Empirical Wien Constant}
+
+To reconcile this with observations, define a new effective constant:
+
+\begin{equation}
+\lambda_{\text{peak}} = \frac{c}{\sqrt{ \dfrac{2 k_B T}{\rho_\text{\ae} V_{\text{cell}}} }} 
+= \left( \frac{c \sqrt{\rho_\text{\ae} V_{\text{cell}}}}{\sqrt{2 k_B}} \right) T^{-1/2}
+\equiv b' T^{-1/2}
+\end{equation}
+
+Comparing:
+
+\begin{equation}
+\lambda_{\text{peak}} = b' T^{-1/2}
+\qquad \text{(VAM)}
+\end{equation}
+
+\begin{equation}
+\lambda_{\text{peak}} = b T^{-1}
+\qquad \text{(Planck)}
+\end{equation}
+
+\subsection{Future VAM Research Directions}
+
+\begin{itemize}
+    \item Derive a full VAM analogue of Planck's Law using quantized vortex mode densities.
+    \item Define a vortex-based entropy function \( S_{\text{vortex}} \) and use a partition function formalism.
+    \item Test the predicted deviation \( \lambda_{\text{peak}} \propto T^{-1/2} \) with astrophysical blackbody spectra.
+\end{itemize}
+
+\subsection*{References}
+
+\begin{thebibliography}{9}
+
+\bibitem{Planck1901}
+M.~Planck,
+\newblock \emph{On the Law of Distribution of Energy in the Normal Spectrum},
+\newblock Annalen der Physik \textbf{309}(3), 553–563 (1901),
+\newblock \href{https://doi.org/10.1002/andp.19013090310}{doi:10.1002/andp.19013090310}.
+
+\bibitem{Wien1893}
+W.~Wien,
+\newblock \emph{On the Laws of the Emission of Radiation},
+\newblock Annalen der Physik \textbf{294}(8), 662–669 (1893),
+\newblock \href{https://doi.org/10.1002/andp.18932940806}{doi:10.1002/andp.18932940806}.
+
+\end{thebibliography}

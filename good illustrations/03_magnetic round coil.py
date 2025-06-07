@@ -208,6 +208,10 @@ def set_labels(ax, elev, azim):
     ax.set_ylabel("Y")
     ax.set_zlabel("Z")
     ax.legend()
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+filename = f"{script_name}.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
 
 
 
@@ -336,4 +340,9 @@ for ax, (elev, azim), title in zip(axes.flatten(), view_angles, titles):
     set_labels(ax, elev, azim)
     rgb += 1
 plt.tight_layout()
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+filename = f"{script_name}2.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+
 plt.show()

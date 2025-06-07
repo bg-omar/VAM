@@ -64,6 +64,10 @@ for turn in range(num_turns):
 fig = plt.figure(figsize=(14, 14))
 ax = fig.add_subplot(111, projection='3d')
 plt.axis('equal')
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+filename = f"{script_name}1.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
 
 
 import matplotlib

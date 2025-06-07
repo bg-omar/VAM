@@ -64,6 +64,11 @@ plt.legend()
 plt.grid(True)
 plt.tight_layout()
 
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+filename = f"{script_name}.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -96,4 +101,9 @@ plt.ylabel("Amplitude")
 plt.legend()
 plt.grid(True)
 plt.tight_layout()
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+filename = f"{script_name}2.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+
 plt.show()

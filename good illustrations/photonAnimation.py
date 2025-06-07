@@ -1,6 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
+import matplotlib
+matplotlib.use('TkAgg')  # Ensure it uses Tkinter backend
 
 # Simulation Parameters
 wavelength = 0.5        # Wavelength of vortex irrotational envelope (in arbitrary units)

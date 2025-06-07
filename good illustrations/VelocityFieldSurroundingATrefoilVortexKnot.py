@@ -1,6 +1,9 @@
 import numpy as np
+import os
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
+import matplotlib
+matplotlib.use('TkAgg')  # Ensure it uses Tkinter backend
 
 # Create a torus knot (trefoil) as the central vortex structure
 phi = np.linspace(0, 2 * np.pi, 300)
@@ -72,4 +75,9 @@ ax.set_zlabel('$z$')
 ax.set_title('3D Velocity Field Surrounding a Trefoil Vortex Knot')
 ax.legend()
 plt.tight_layout()
-plt.show()
+# ✅ Get the script filename dynamically
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+# ✅ **Create a Folder for Saving Frames**
+filename = f"{script_name}.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+

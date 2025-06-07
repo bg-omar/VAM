@@ -96,6 +96,10 @@ for pos, m in zip(coil_positions, coil_moments):
 
 # Extract vectors
 BX, BY, BZ = B_total[..., 0], B_total[..., 1], B_total[..., 2]
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+filename = f"{script_name}3.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
 
 # Plot
 fig = plt.figure(figsize=(10, 8))
@@ -114,6 +118,10 @@ ax.set_xlabel("X")
 ax.set_ylabel("Y")
 ax.set_zlabel("Z")
 plt.tight_layout()
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+filename = f"{script_name}.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
 
 # Re-run necessary imports after state reset
 import numpy as np
@@ -184,5 +192,10 @@ ax.set_ylim(-span, span)
 ax.set_zlim(-span, span)
 ax.set_box_aspect([1, 1, 1])
 plt.tight_layout()
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+filename = f"{script_name}2.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+
 plt.show()
 
