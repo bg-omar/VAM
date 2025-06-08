@@ -68,7 +68,7 @@ def main():
     out_root = Path('out/equations')
     out_root.mkdir(parents=True, exist_ok=True)
 
-    vam_bases = [p for p in Path('.').iterdir() if p.is_dir() and p.name.startswith('VAM -')]
+    vam_bases = [p for p in Path('../tools').iterdir() if p.is_dir() and p.name.startswith('VAM -')]
     total = 0
     for base in vam_bases:
         if base.name.startswith('VAM - 2'):
