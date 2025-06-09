@@ -49,5 +49,9 @@ axes[1].set_ylabel(r"$\omega_{n0}(r)$ (Vorticity Wavefunction)")
 axes[1].set_title("VAM Radial Vorticity Equivalent of Schrödinger Wavefunctions")
 axes[1].legend()
 axes[1].grid()
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+filename = f"{script_name}2.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
 
 plt.show()

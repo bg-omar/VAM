@@ -68,6 +68,10 @@ ax.set_xlim(-4, 4)
 ax.set_ylim(-4, 4)
 ax.set_zlim(-4, 4)
 
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+filename = f"{script_name}.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
 
 ##################################################################
 
@@ -125,6 +129,11 @@ ax.set_xlim(-4, 4)
 ax.set_ylim(-4, 4)
 ax.set_zlim(-4, 4)
 
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+filename = f"{script_name}2.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+
 ######################################################
 
 num_helix_turns = 3  # Number of turns of the spiral
@@ -166,6 +175,10 @@ ax.set_ylabel("Y")
 ax.set_zlabel("Z")
 ax.set_title('Torus with 36 Helical Spirals')
 ax.set_box_aspect([1, 1, 1])  # Ensures 1:1:1 aspect ratio
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+filename = f"{script_name}3.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
 
 # Create multiple subplots for different views
 fig, axes = plt.subplots(1, 3, figsize=(15, 5), subplot_kw={'projection': '3d'})
@@ -206,6 +219,10 @@ for ax, (elev, azim), title in zip(axes, view_angles, titles):
     ax.set_box_aspect([1, 1, 1])  # Ensures 1:1:1 aspect ratio
     ax.set_title(title)
 
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+filename = f"{script_name}4.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
 
 ######################################################
 
@@ -290,6 +307,10 @@ for ax, (elev, azim), title in zip(axes, view_angles, titles):
     ax.set_title(title)
 
 
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+filename = f"{script_name}5.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
 
 
 # Create multiple subplots for different views
@@ -335,4 +356,10 @@ for ax, (elev, azim), title in zip(axes, view_angles, titles):
 
 
 plt.tight_layout()
+
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+filename = f"{script_name}6.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+
 plt.show()

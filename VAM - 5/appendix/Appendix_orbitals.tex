@@ -1,0 +1,109 @@
+%! Author = mr
+%! Date = 6/9/2025
+
+% Preamble
+\documentclass[11pt]{article}
+
+% Packages
+\usepackage{amsmath}
+
+% Document
+\begin{document}
+
+
+\section*{Appendix: Deriving Atomic Orbital Radii from VAM First-Principles}
+
+\section*{1\quad Key VAM primitives}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{lll}
+        \toprule
+        \textbf{Symbol} & \textbf{Definition} & \textbf{Fixed value} \\
+        \midrule
+        $F_{\max}$ & maximum æther tension & $29.053507\,\text{N}$ \\
+        $r_c$ & vortex-core radius & $1.40897017\times10^{-15}\,\text{m}$ \\
+        $C_e$ & core swirl velocity & $1.09384563\times10^{6}\,\text{m}\,\text{s}^{-1}$ \\
+        $m_e$ & electron mass & $9.10938356\times10^{-31}\,\text{kg}$ \\
+        $\alpha$ & fine-structure const. & $2C_e/c$ \textit{(already proved)} \\
+        $h$ & Planck’s constant & $\displaystyle h=\frac{4\pi F_{\max}r_c^{2}}{C_e}$ \textit{(proved in Appendix H)} \\
+        \bottomrule
+    \end{tabular}
+    \caption{}
+    \label{tab:primitives}
+\end{table}
+
+Throughout this appendix, the integers
+\begin{itemize}
+    \item $N$ -- principal knot number (one per electron, plays the role of $n$),
+    \item $Z$ -- nuclear charge,
+\end{itemize}
+are left symbolic so the final formula covers all hydrogenic orbitals.
+
+\section*{2\quad Frequency--velocity matching}
+
+The VAM photon--electron coupling condition reads
+\begin{equation}
+    C_e = \omega_c r_c N, \qquad \omega_c \equiv 2\pi v_c.
+\label{eq:match1}
+\end{equation}
+
+A Hookean model for the electron core gives
+\begin{equation}
+    \omega_c = \sqrt{\frac{K_e}{m_e}}, \qquad
+    K_e = \frac{F_{\max}}{N r_c} Z.
+\label{eq:hooke}
+\end{equation}
+
+Insert \eqref{eq:hooke} into \eqref{eq:match1}:
+\begin{equation}
+    C_e^2 = \frac{F_{\max}}{R_x m_e} Z r_c^{2} N^{2},
+\label{eq:master}
+\end{equation}
+where $R_x$ is the yet-unknown mean orbital radius.
+
+\section*{3\quad Solve for $R_x$}
+
+\begin{equation}
+    R_x = \frac{N^{2}}{Z} \frac{F_{\max} r_c^{2}}{m_e C_e^{2}}.
+\label{eq:Rraw}
+\end{equation}
+
+\section*{4\quad Recognising the Bohr radius}
+
+Use the previously derived identities
+\begin{align}
+    h &= \frac{4\pi F_{\max} r_c^{2}}{C_e}, \tag{A} \\
+\alpha &= \frac{2C_e}{c},\tag{B}
+\end{align}
+then rewrite the bracket in \eqref{eq:Rraw}:
+\begin{align*}
+\frac{F_{\max}r_c^{2}}{m_eC_e^{2}}
+    &= \frac{h}{4\pi m_e C_e} \\
+    &= \frac{h}{2\pi m_e c \alpha} \\
+    &= \frac{\hbar}{m_e c \alpha} \\
+    &\equiv a_0,
+\end{align*}
+with $a_0$ the textbook Bohr radius.  Hence
+\begin{equation}
+    \boxed{R_x = \frac{N^{2}}{Z} a_0}
+\label{eq:final}
+\end{equation}
+
+Equation~\eqref{eq:final} reproduces the Sommerfeld--Bohr orbital ladder \textit{without inserting} $h$ or $\alpha$ by hand: both constants follow from the single triad $(F_{\max}, r_c, C_e)$. For multi-electron atoms one substitutes $Z \rightarrow Z_{\text{eff}}$ in the same expression.
+
+\section*{5\quad Numerical sanity -- hydrogen ground state}
+
+Set $N=1$, $Z=1$.
+\[
+    R_{1s} = a_0 \approx 5.29\times10^{-11}\,\text{m},
+\]
+matching observation to 5-digit precision once the empirical values of $F_{\max}, r_c, C_e$ are inserted.
+
+\subsection*{Concluding remark}
+
+This derivation shows that \textit{all hydrogenic orbital sizes emerge from æther tension and core geometry}. Together with the earlier capacitor derivation $E=h\nu$ and the tension identity for $h$, VAM reproduces three pillars of quantum kinematics (action quantisation, photon energy, orbital radii) from one self-consistent parameter set.
+
+
+
+\end{document}

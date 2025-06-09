@@ -1,0 +1,86 @@
+
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{physics}
+\usepackage{hyperref}
+\usepackage{lmodern}
+\usepackage{titlesec}
+\usepackage{xcolor}
+
+\geometry{margin=2.5cm}
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
+
+\title{Snapshot: Vortex \ae ther Model\\
+\large Dipolar Shells, Superfluid Phases, and Pressure Equilibria}
+\author{Omar Iskandarani}
+\date{June 06, 2025}
+
+\begin{document}
+\maketitle
+
+\section{Two-Phase \ae ther Hypothesis}
+We propose that physical space consists of a superfluid \ae ther phase and a non-superfluid knot-core phase. The outer region behaves like inviscid superfluid flow, while the inner region (the knot core of a vortex ring or trefoil) manifests mass and charge.
+
+In perfect superfluid conditions (like in Helium-4 below 2.17 K), vortex cores are topologically stable and exhibit quantized circulation. Viscosity is zero, and classical irrotational outer flow does not emerge unless boundary constraints force reconnection.
+
+\section{Dipolar Torus Pressure Field}
+The source–sink structure of a toroidal vortex ring creates a dipolar pressure field. We model this as:
+
+\[
+p(x) = \sum_{n=1}^{\infty} (-1)^n \cdot \frac{1}{2^n}
+\]
+
+This series approximates how opposing pressure lobes decay radially with alternating sign, forming a spherical pressure equilibrium zone—a natural \ae ther "bubble" defining atomic boundary.
+
+\subsection{Bernoulli Formulation}
+The pressure from an irrotational field is approximated by:
+
+\[
+p(\vec{r}) = p_\infty - \frac{1}{2} \rho_\text{\ae} |\vec{v}(\vec{r})|^2
+\]
+
+\subsection{Biot–Savart Falloff}
+For circulation \( \Gamma \), pressure decays as:
+
+\[
+p(r) = p_\infty - \frac{\rho_\text{\ae} \Gamma^2}{8\pi^2 r^2}
+\]
+
+Setting a threshold \( p = p_\text{core} \) defines the effective vortex pressure shell radius:
+
+\[
+r = \sqrt{ \frac{\rho_\text{\ae} \Gamma^2}{8\pi^2 (p_\infty - p_\text{core})} }
+\]
+
+\section{Wave–Vortex Duality and Atomic Shells}
+The document \textit{"Wave–Vortex Dualiteit"} reinforces the view that the merging of wavefronts from two cores produces a boundary of identity loss—interpreted here as the shell of an atom. These boundaries form from pressure gradient cancellation and represent the energetic cutoff of vortex influence.
+
+\section{Lagrangians Used}
+
+\subsection{Gross–Pitaevskii Lagrangian (for Superfluid Phase)}
+\[
+\mathcal{L}_\text{GP} = \frac{i\hbar}{2} \left( \psi^* \partial_t \psi - \psi \partial_t \psi^* \right)
+- \frac{\hbar^2}{2m} |\nabla \psi|^2 - \frac{g}{2} |\psi|^4
+\]
+
+\subsection{VAM Swirl Field Lagrangian}
+\[
+\mathcal{L}_\text{VAM} = \frac{1}{2} \rho_\text{\ae} \left( \partial_t \vec{S} \right)^2
+- \frac{1}{2} C_e^2 \left( \nabla \cdot \vec{S} \right)^2
+- \frac{\lambda}{4} (\vec{S} \cdot \vec{S})^2
+\]
+
+This models excitations and torsional solitons in the superfluid \ae ther medium.
+
+\section{Future Work}
+\begin{itemize}
+\item Derive numerical estimates of bubble shell radius using \( C_e \), \( \Gamma \), and \( F_{\text{max}} \)
+\item Investigate torsional shockwave propagation through the swirl field
+\item Use field overlap to model particle interactions as vortex interference
+\end{itemize}
+
+\end{document}

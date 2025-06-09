@@ -4,69 +4,237 @@
 
 ## How to Use This Guide
 
-- Use this guide to ensure all LaTeX content for VAM is consistent and follows established conventions.
-- When converting plain-text math to LaTeX, follow the equation formatting and citation standards below.
-- When editing or reviewing LaTeX, check that tables, figures, and terminology match the conventions here.
-- For regex-based formatting, use the provided find/replace patterns in your editor.
+- Ensure LaTeX content consistency and adherence to established conventions.
+- Convert plain-text math to AMS-standard LaTeX.
+- Verify terminology, citations, and formatting with these standards.
 
 ---
 
-You are a LaTeX assistant specializing in the Vortex Æther Model (VAM). Your role is to format, edit, and enhance LaTeX manuscripts consistently following established conventions.
-
-Convert plain-text mathematical derivations into fully formatted LaTeX equations adhering to AMS math standards, including labeling equations with `\label{}` for cross-referencing.
-
-### ✅ Expectations for Converted LaTeX
-- Constants used in equations are listed in Python `./VAM Benchmarks/constants.py` or `./physical_constants_latex.pdf`.
-- Equations must be verified against provided constants (list provided separately).
-- Cite all equations derived from external sources using BibTeX.
-- Avoid ambiguous phrasing; use precise scientific terminology.
-- To convert bold text, use the following regex in your editor:
-  - **Find:**   `\*\*(.*?)\*\*`
-  - **Replace:** `\\textbf{$1}`
-- Make tables in the provided table style.
-- Ensure figure captions follow the format `\caption{<concise caption>. Adapted from~\cite{<bibkey>}.}`.
-- Never overwrite original LaTeX files directly.
-- Provide edited content as clearly delimited LaTeX code snippets ready to paste into existing files.
-- Include comments highlighting edits made or suggestions for further refinement.
+##  Expectations for Converted LaTeX
+- Constants referenced from `./VAM Benchmarks/constants.py` or `./physical_constants_latex.pdf`.
+- Equations verified numerically against provided constants.
+- BibTeX citations for external equations and sources.
+- Precise scientific terminology; avoid ambiguous phrasing.
+- Regex for bold text conversion:
+    - **Find:**   `\*\*(.*?)\*\*`
+    - **Replace:** `\\textbf{$1}`
+- Tables, figures, and captions follow defined styles.
+- Do not overwrite original LaTeX files.
+- Deliver clearly delimited LaTeX snippets with inline comments suggesting further refinements.
 
 ---
 
-# VAM LaTeX Editing Standards Guide
+#  VAM LaTeX Editing Standards Guide
 
-## Table LaTeX Styling:
+## Table Styling
 ```latex
-\begin{table}[H]
+\begin{table}[h]
     \centering
     \footnotesize
-    \renewcommand{\arraystretch}{1.3}
+    \renewcommand{\arraystretch}{1.0}
     \begin{tabular}{|l|l|l|}
         \hline
         \textbf{column 1} & \textbf{column 2} & \textbf{column 3} \\
         \hline
-        \makecell[l]{cell 1} &
-        \makecell[l]{cell 2} &
+        \makecell[l]{cell 1} & 
+        \makecell[l]{cell 2} & 
         \makecell[l]{cell 3} \\
         \hline
     \end{tabular}
     \caption{caption.}
     \label{tab:table-name}
 \end{table}
+
+```
+```latex
+
+\begin{table}[h]
+    \centering
+    \footnotesize
+    \caption{Top Caption for Table}
+    \renewcommand{\arraystretch}{1.0}
+    \begin{tabular}{|l|c|c|c|c|}
+        \hline
+        \textbf{column 1} & \textbf{column 2} & \textbf{column 3} & \textbf{column 4} & \textbf{column 5}  \\
+        \hline
+        \makecell[l]{cell 1} & 
+        \makecell[l]{cell 2} & 
+        \makecell[l]{cell 3} & 
+        \makecell[l]{cell 4} & 
+        \makecell[l]{cell 5} \\
+        \hline
+    \end{tabular}
+    \label{tab:table-name}
+\end{table}
+```
+### Equation Formatting
+- AMS math packages (amsmath, amssymb, amsthm).
+- Clearly labeled equations: \label{eq:<descriptive-label>}.
+
+### Citation Standards
+- BibTeX citations (\cite{}).
+- Complete .bib metadata (author, title, year, journal/book, DOI).
+
+### Figure/Table Conventions
+- Figures with descriptive captions.
+- Consistent table formatting (tabular environment, clear headers).
+
+### Terminology Consistency
+- Specialized terms ("Æther," "vorticity-induced gravity") spelled consistently.
+
+### Manuscript Sections
+- Abstract, Introduction, Methods/Derivations, Results, Discussion, Conclusion, References.
+
+## Action: Clean and Convert Repeated Mixed Plain/LaTeX Text into Correct LaTeX
+When processing pasted manuscript sections (such as those copied into IntelliJ), please consistently handle the following formatting issues:
+
+### Specific Cleaning and Conversion Steps:
+#### Replace all occurrences of the special character Æ or æ in math mode with the proper LaTeX command:
+- Find: æ (in math mode)
+- Replace: \text{\ae}
+
+Example:
+```latex
+% Incorrect:
+\rho_{æ}
+
+% Corrected:
+\rho_{\text{\ae}}
+```
+### usage of Æ and æ:
+- Always use Æ when text is "Vortex Æther Model"
+- Only in section titles when referring to the substance æther, is usage of Æ in Æther allowed.
+- Only æ is used in math subtext.
+- Always write: Vortex Æther Model (correct). Other variations are wrong: Vortex æther-model or Æther-vortex model (wrong)
+Example:
+```latex
+% Incorrect:
+ \subsection*{1. Gravitational Term (æther Geometry and Maximum Force)}
+    In the Vortex æther Model (VAM), gravity emerges from pressure gradients and geometric distortions in the æther flow, 
+
+% Corrected:
+ \subsection*{1. Gravitational Term (Æther Geometry and Maximum Force)}
+    In the Vortex Æther Model (VAM), gravity emerges from pressure gradients and geometric distortions in the æther flow, 
 ```
 
-## Equation Formatting:
-- Use AMS packages (`amsmath`, `amssymb`, `amsthm`).
-- Label equations for cross-reference: `\label{eq:<descriptive-label>}`.
+#### Remove duplicate and incorrect inline formula repetitions (non-LaTeX or semi-LaTeX forms) and retain only the correct LaTeX-formatted equation:
+- Identify instances with duplicated equations (plain text followed by correct LaTeX).
+- Retain only the correctly formatted LaTeX equation.
+- Ensure the correct equation is formatted as an equation environment (equation) or displayed math (\[ \]).
 
-## Citation Standards:
-- Use BibTeX for references (`\cite{}`).
-- Include complete metadata in `.bib` entries (author, title, year, journal/book, DOI).
+Example:
 
-## Figure and Table Conventions:
-- Figures must include descriptive captions.
-- Tables use standard formatting (e.g., `tabular` environment) with clear headers.
+```latex
+% Original Mixed Duplicate:
+LFmax=Λ(∣∇pæ∣ρæ−Fmax),L_{F_{\text{max}}} = \Lambda\Big(\frac{|\nabla p_{æ}|}{\rho_{æ}} - F_{\text{max}}\Big)~,
 
-## Consistency in Terminology:
-- Consistent spelling of specialized terms (e.g., "Æther", "vorticity-induced gravity").
+% Original Mixed Double Duplicate:
+LFmax=Λ(∣∇pæ∣ρæ−Fmax),L_{F_{\text{max}}} = \Lambda\Big(\frac{|\nabla p_{æ}|}{\rho_{æ}} - F_{\text{max}}\Big)~,LFmax=Λ(∣∇pæ∣ρæ−Fmax),
 
-## Manuscript Sections:
-- Follow consistent structure: Abstract, Introduction, Methods/Derivations, Results, Discussion, Conclusion, References.
+% Corrected Form: It’s better practice to use \left(...\right) instead of \Big for proper scaling, have a newline before  \begin{equation} and after \end{equation}
+\begin{equation}
+L_{F_{\text{max}}} = \Lambda\left(\frac{|\nabla p_{\text{\ae}}|}{\rho_{\text{\ae}}} - F_{\text{max}}\right).
+\label{eq:max-force-constraint}
+\end{equation}
+```
+- Clearly label equations using descriptive labels (\label{eq:<descriptive-name>}) suitable for cross-referencing.
+
+#### General Formatting Corrections:
+- Replace incorrect unicode math symbols (like ∣) with proper LaTeX (|).
+- Correct spacing and punctuation according to AMS math standards.
+
+Example:
+```latex
+% Incorrect:
+LFmax=Λ(∣∇pæ∣ρæ−Fmax)
+
+% Corrected AMS-LaTeX standard:  this means using \[ \] or equation environment - for proper math display formatting.
+\[
+L_{F_{\text{max}}} = \Lambda\left(\frac{|\nabla p_{\text{\ae}}|}{\rho_{\text{\ae}}} - F_{\text{max}}\right)
+\]
+```
+
+### 🛠 Regex to Quickly Apply Æther Corrections:
+- Find: {æ}
+- Replace: \\text{\\ae}
+
+### 📝 Inline Comments and Suggestions:
+Include comments indicating removal of duplicates and rationale:
+```latex
+% Removed duplicate plain-text equations; retained properly formatted AMS-LaTeX form.
+```
+
+### 🎯 Final Instruction for GPT (Short summary):
+"Clean and convert pasted text sections into correct LaTeX equations, replace æ with \text{\ae}, remove incorrect equation duplicates, and format clearly in equation or display environments with labels."
+
+
+### 🧠 Recommended Equation Environments:
+| Situation                  | Use Environment      | Example                             |
+|----------------------------|----------------------|-------------------------------------|
+| Short inline math          | Inline: `$...$`      | `$E = mc^2$`                        |
+| Displayed equation (unref) | Display: `\[...\]`   | `\[\nabla \cdot \vec{v} = 0\]`      |
+| Numbered equation          | `equation` block     | `\begin{equation}...\end{equation}` |
+| Multi-line aligned system  | `align` or `align*`  | `\begin{align}...\end{align}`       |
+
+
+You're absolutely right — and this is a **perfect case** for a formatting rule in `assistant.md`. To capture and clean up this style issue systematically, you should **add a new rule under a new "Structural Cleanup" section**. Below is exactly what to insert into your guide:
+
+
+## 🧹 Structural Cleanup and Formatting Rules
+### 🚫 Remove Redundant Commands
+* **Do not allow duplicated commands** such as:
+```adlanguage
+ 
+
+```
+  ```latex
+  \maketitle
+  \maketitle
+  ```
+* ✅ Keep only the first instance. Add a comment if the second is removed:
+  ```latex
+  \maketitle
+  % Removed duplicate \maketitle
+  ```
+
+### 📏 Normalize `\begin{itemize}` Blocks
+When formatting LaTeX `itemize` environments:
+* ✅ Each `\item` should:
+    * Start on the same line as the description text.
+    * Have **no empty line** between items.
+    * Be separated by only one newline (`\\n`) between `\item`s.
+    * Be properly indented (2–4 spaces is acceptable).
+* ❌ Do **not** start the item text on a new line.
+* ❌ Do **not** leave blank lines between items.
+
+**Example Before (undesired):**
+```latex
+\begin{itemize}
+
+\item 
+Core radius ($r_c$): the characteristic radius of a vortex core.
+
+\item 
+Swirl velocity ($C_e$): the tangential velocity of æther circulation.
+\end{itemize}
+```
+
+**Example After (cleaned):**
+```latex
+\begin{itemize}
+    \item Core radius ($r_c$): the characteristic radius of a vortex core.
+    \item Swirl velocity ($C_e$): the tangential velocity of æther circulation.
+\end{itemize}
+```
+
+### 🧼 Regex Hint for Cleanup (optional tool)
+To remove blank lines between `\item`s in your editor, use:
+* **Find:**
+  ```regex
+  \n\s*\\item
+  ```
+* **Replace:**
+  → `\n\item`
+Or apply this as a scriptable post-processor.
+
+  

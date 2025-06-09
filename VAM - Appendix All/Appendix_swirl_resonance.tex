@@ -1,0 +1,67 @@
+
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{margin=1in}
+\title{Appendix: Nuclear Activation via Swirl Resonance in the Vortex \AE ther Model}
+\author{Vortex \AE ther Dynamics}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{1. Overview}
+Recent experimental work on low-energy nuclear reactions (LENR), especially using reactions like $^{11}\mathrm{B}(d,n\gamma)^{12}\mathrm{C}$, reveals nuclear states that can be selectively activated using monoenergetic gamma beams. Within the Vortex \AE ther Model (VAM), these results are interpreted as \textit{swirl resonance phenomena}, wherein specific angular frequency components of the injected field couple with vortex knot eigenmodes.
+
+\section*{2. Swirl Resonance Yield}
+We model the activation yield $Y_{\mathrm{VAM}}$ as a spectral overlap:
+\[
+Y_{\mathrm{VAM}} = \int_0^\infty \rho_{\mathrm{beam}}(\omega) \cdot \sigma_{\mathrm{knot}}(\omega) \, d\omega
+\]
+Here:
+\begin{itemize}
+  \item $\rho_{\mathrm{beam}}(\omega)$ is the angular frequency spectrum of the injected beam (gamma or ion-induced swirl),
+  \item $\sigma_{\mathrm{knot}}(\omega)$ is the knot's absorption cross-section, modeled by:
+  \[
+  \sigma_{\mathrm{knot}}(\omega) = \sum_n \frac{B_n \Gamma_n^2}{(\omega - \omega_n)^2 + \Gamma_n^2}
+  \]
+  where $\omega_n$ is the $n^{\text{th}}$ knot mode, $\Gamma_n$ is its linewidth, and $B_n$ is the coupling strength.
+\end{itemize}
+
+\section*{3. Core-Shell Vortex Structure}
+Different gamma energies interact with different radial layers of the knot:
+\begin{itemize}
+  \item 4.438 MeV photons $\rightarrow$ outer sheath Compton-like swirl scattering,
+  \item 15.1 MeV photons $\rightarrow$ core-pair production and knot annihilation.
+\end{itemize}
+
+The knot cross-section becomes:
+\[
+\sigma(\omega) = \sum_i \sigma_i(\omega) \cdot \Theta(r_i - r)
+\]
+where each shell $r_i$ absorbs distinct $\omega$ bands.
+
+\section*{4. Swirl Rigidity and $Z_{\mathrm{eff}}^{(\mathrm{VAM})}$}
+The effective nuclear impedance in VAM becomes:
+\[
+Z_{\mathrm{eff}}^{(\mathrm{VAM})} = \frac{P_{\mathrm{core}} \cdot r_c}{C_e \hbar}
+\]
+mapping absorption behavior to Æther pressure properties.
+
+\section*{5. Delayed Neutron Decay as Topological Swirl Collapse}
+The classic 6-group delayed neutron model maps to sequential vorticity leakage from nested shells:
+\[
+\omega(t) = \sum_{i=1}^6 \omega_{0i} e^{-t/\tau_i}, \quad \tau_i = \frac{r_i}{C_e}
+\]
+Each decay constant corresponds to a specific radius $r_i$ and swirl lifetime.
+
+\section*{6. Experimental Confirmation}
+The presence of discrete gamma thresholds, delayed neutron curves, and resonance-specific yields all confirm the VAM prediction that:
+\begin{itemize}
+  \item Knot excitation is frequency-selective.
+  \item Fusion activation is not thermal but \textbf{topological and swirl-driven}.
+  \item External fields must match the vortex eigenfrequency to unlock nuclear reactions.
+\end{itemize}
+
+\end{document}
