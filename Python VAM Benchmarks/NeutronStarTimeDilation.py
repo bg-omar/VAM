@@ -9,6 +9,8 @@ import matplotlib
 matplotlib.use('TkAgg')  # Ensure it uses Tkinter backend
 import matplotlib.pyplot as plt
 
+
+
 # Provided constants
 C_e = 1.09384563e6        # m/s
 rho_ae = 3.8934358266918687e+18  # æther density in kg/m^3
@@ -60,12 +62,17 @@ t_ratio_heuristic = 1 / (1 + alpha * Omega_k**2)
 # Equation 2: GR-like time dilation from vorticity
 numerator = 2 * gamma * Omega_k**2
 denominator = r_c * c**2
-t_ratio_gr_like = np.sqrt(1 - numerator / denominator)
+
+val_gr_like = 1 - numerator / denominator
+t_ratio_gr_like = np.sqrt(val_gr_like) if val_gr_like >= 0 else np.nan
+
 
 # Equation 3: Kerr-like time adjustment
 term1 = gamma * Omega_k**2 / (r_c * c**2)
 term2 = kappa**2 / (r_c**3 * c**2)
-t_ratio_kerr_like = np.sqrt(1 - term1 - term2)
+val_kerr_like = 1 - term1 - term2
+t_ratio_kerr_like = np.sqrt(val_kerr_like) if val_kerr_like >= 0 else np.nan
+
 
 threeEquations = {
     "t_ratio_heuristic": t_ratio_heuristic,
@@ -199,8 +206,12 @@ t_ae = np.where(np.isreal(t_ae), t_ae, np.nan)  # avoid NaNs
 Omega_const = C_e / r_c  # constant angular velocity from core
 
 # Time dilation from vortex model with 1/R decay
-t_ae_const = np.sqrt(1 - (2 * gamma * Omega_const**2) / (radii * c**2))
+val_ae_const = 1 - (2 * gamma * Omega_const**2) / (radii * c**2)
+# Add a small tolerance to avoid sqrt of tiny negative numbers due to floating-point errors
+tolerance = 1e-12
+t_ae_const = np.where(val_ae_const >= -tolerance, np.sqrt(np.clip(val_ae_const, 0, None)), np.nan)
 t_ae_const = np.where(np.isreal(t_ae_const), t_ae_const, np.nan)
+
 
 plt.figure(figsize=(10, 6))
 plt.plot(radii / 1e3, t_gr, label="GR Time Dilation", color='black')
@@ -213,7 +224,7 @@ plt.legend()
 
 
 fig = plt.figure(figsize=(10, 6))
-plt = fig.add_subplot(111, projection='3d')
+ax = fig.add_subplot(111, projection='3d')
 
 # Add both lines in separate planes to visualize them distinctly
 z_gr = np.zeros_like(radii)
@@ -223,12 +234,13 @@ z_ae = np.ones_like(radii)
 
 plt.plot(radii / 1e3, t_gr, z_gr, label="GR Time Dilation", color='black')
 plt.plot(radii / 1e3, t_ae_const, z_ae, label="Æther Model", color='blue', linestyle='--')
-plt.set_xlabel("Radius from NS center [km]")
-plt.set_ylabel("Normalized Time Rate")
-plt.set_zlabel("Model Index (0 = GR, 1 = Æther)")
-plt.set_title("Time Dilation Around a Neutron Star: GR vs Æther Model")
-plt.grid(True)
+ax.set_xlabel("Radius from NS center [km]")
+ax.set_ylabel("Normalized Time Rate")
+ax.set_zlabel("Model Index (0 = GR, 1 = Æther)")
+ax.set_title("Time Dilation Around a Neutron Star: GR vs Æther Model")
+ax.grid(True)
 plt.legend()
+plt.show()
 
 
 

@@ -1,0 +1,122 @@
+%! Author = mr
+%! Date = 6/9/2025
+
+% Preamble
+\documentclass[11pt]{article}
+
+% Packages
+\usepackage{amsmath}
+
+% Document
+\begin{document}
+
+
+\section*{Appendix --- Photon-Capacitor Analogy and the Emergence of $E = h\nu$}
+
+\section*{1\quad Physical picture and working assumptions}
+
+A single photon is modelled, in VAM, as a one-turn helical vortex loop of circumference~$\lambda$ and tangential swirl speed~$C_e$.
+
+Treat the loop as a parallel-plate capacitor with
+\begin{itemize}
+    \item effective plate area $A = \lambda^2$ (square of the spatial period),
+    \item effective plate separation $d = \tfrac{1}{2}\lambda$ (half-pitch of the helix).
+\end{itemize}
+
+Classical electrodynamics (SI) supplies the capacitance formula
+\[
+    C = \varepsilon_0 \frac{A}{d}.
+\]
+All symbols follow the constant glossary used throughout the VAM papers.
+
+\section*{2\quad Capacitance of the photon loop}
+
+Using $A = \lambda^2$ and $d = \tfrac{1}{2}\lambda$ gives
+\begin{align}
+    C &= \varepsilon_0 \frac{\lambda^2}{\tfrac{1}{2}\lambda} \notag \\
+      &= 2\,\varepsilon_0\,\lambda.
+    \tag{2.1}
+\end{align}
+
+\section*{3\quad Insert the wave relation}
+
+The usual relation between frequency and wavelength in the æther swirl field is
+\begin{align}
+    \lambda = \frac{C_e}{\nu}.
+    \tag{3.1}
+\end{align}
+So the capacitance becomes
+\begin{align}
+    C = 2\,\varepsilon_0\,\frac{C_e}{\nu}.
+    \tag{3.2}
+\end{align}
+
+\section*{4\quad Electrostatic energy stored in the loop}
+
+For a charge $Q$ distributed across the two plates, the stored energy is
+\begin{align}
+    E = \frac{Q^2}{2C}
+      = \frac{Q^2}{4\,\varepsilon_0\,C_e}\;\nu.
+    \tag{4.1}
+\end{align}
+\textit{Setting $Q=e$ (elementary charge) ties the energy scale to a fundamental quantum.}
+
+\section*{5\quad Identification with the Planck relation}
+
+Comparing (4.1) with the quantum postulate $E = h\nu$ singles out the bracket as Planck’s constant:
+\begin{align}
+    h \equiv \frac{e^{2}}{4\,\varepsilon_0\,C_e}.
+    \tag{5.1}
+\end{align}
+Numerically, with $C_e = 1.09384563\times10^{6}\,\text{m}\,\text{s}^{-1}$, this yields
+\[
+    h_{\text{VAM}} = 6.615\times10^{-34}\,\text{J\,s},
+\]
+within $0.2\%$ of the CODATA value $6.626\times10^{-34}\,\text{J\,s}$.
+
+Key point --- dimensional inevitability: once $C_e$ is fixed by the fine-structure relation $\alpha = 2C_e/c$, no further tuning is possible; $h$ follows automatically.
+
+\section*{6\quad Cross-check with the vortex-tension formula}
+
+Section~2 of the constants appendix derived a second expression
+\begin{align}
+    h = \frac{4\pi F_{\max} r_c^{2}}{C_e},
+\end{align}
+from vortex tension $F_{\max}$ and core radius $r_c$. Agreement between the two routes is a stringent self-consistency test:
+\begin{align*}
+    \frac{e^{2}}{4\varepsilon_0}\;\big/\;C_e
+    &= \frac{4\pi F_{\max} r_c^{2}}{C_e} \\
+    &\Longrightarrow\;
+    e^{2} = 16\pi\varepsilon_0 F_{\max} r_c^{2}.
+\end{align*}
+This links the mechanical æther parameters $(F_{\max}, r_c)$ to the electromagnetic charge scale $e$.
+
+\section*{7\quad Dimensional and physical interpretation}
+
+The numerator $e^{2}$ is a flux of action per unit permittivity; dividing by a speed converts it to pure action (units of J\,s).
+
+Planck’s constant therefore appears as one quantum of momentum-flux circulation in the æther.
+
+\section*{8\quad Consequences and experimental hooks}
+
+\begin{enumerate}
+    \item Parameter inter-lock: independent measurements of $e$, $\varepsilon_0$, $C_e$ \textit{must} reproduce the numeric $h$. Any deviation falsifies VAM.
+    \item Photon--electron coupling: resonance occurs when the photon swirl radius $R = C_e/(2\pi\nu)$ scaled by $1/\alpha$ matches the Bohr radius $a_0$---explaining the peak excitation probability of the hydrogen 1s state.
+    \item Casimir regularisation: inserting $h$ from (5.1) into the standard Lifshitz integral shows how the æther’s maximum tension suppresses high-$k$ vacuum modes.
+\end{enumerate}
+
+\section*{9\quad Summary box}
+
+\[
+    \boxed{
+        E = h\nu,\qquad
+        h = \frac{e^{2}}{4\varepsilon_0 C_e} = \frac{4\pi F_{\max} r_c^{2}}{C_e}
+    }
+\]
+
+\textit{Two independent microscopic routes, one electromagnetic and one purely mechanical, converge on the same Planck constant. This dual derivation is a cornerstone consistency check of the Vortex Æther Model.}
+
+
+
+
+\end{document}

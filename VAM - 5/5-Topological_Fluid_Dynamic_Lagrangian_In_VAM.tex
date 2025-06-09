@@ -1,0 +1,129 @@
+%! Author = Omar Iskandarani
+%! Title = Swirl Clocks and Vorticity-Induced Gravity
+%! Date = May 23, 2025
+%! Affiliation = Independent Researcher, Groningen, The Netherlands
+%! License = CC-BY 4.0
+%! ORCID = 0009-0006-1686-3961
+%! DOI = 10.5281/zenodo.15566336
+
+
+\documentclass[a4paper,12pt]{article}
+
+% Page Geometry
+\usepackage[a4paper, margin=2cm]{geometry}
+
+% Language, Encoding, Fonts
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+
+% Colors, Graphics, Diagrams
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{xcolor}
+
+% Math and Physics
+\usepackage{amsmath, amssymb, physics}
+\usepackage{siunitx}
+
+% Tables and Figures
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{array, tabularx, makecell, multirow}
+\renewcommand{\arraystretch}{1.5}
+\renewcommand{\floatpagefraction}{.8}
+\usepackage[font=footnotesize]{caption}
+\usepackage{subcaption}
+
+% Code and Listings
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily\footnotesize, breaklines=true}
+
+% TOC Customization
+\usepackage{tocloft}
+\setcounter{tocdepth}{4}
+\renewcommand{\cftsecfont}{\bfseries}
+\renewcommand{\cftsubsecfont}{\itshape}
+\renewcommand{\cftsecleader}{\cftdotfill{5}}
+\renewcommand{\contentsname}{\centering \Huge\textbf{Contents}}
+
+% Links and Metadata
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue,
+    pdftitle={The Vortex Æther Model},
+    pdfauthor={Omar Iskandarani},
+    pdfkeywords={vorticity, gravity, æther, fluid dynamics, time dilation, VAM}
+}
+\usepackage{bookmark} % PDF bookmarks
+
+% Bibliography
+\usepackage[numbers]{natbib} % Or switch to biblatex if preferred
+
+% Line and Hyphenation
+\usepackage[none]{hyphenat}
+\usepackage{amsfonts}
+
+\sloppy
+
+
+\begin{document}
+
+
+    \author{
+        Omar Iskandarani\\
+        \small Independent Researcher, Groningen, The Netherlands
+        \thanks{\texttt{info@omariskandarani.com}}
+        \thanks{ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961} \quad DOI: \href{https://doi.org/10.5281/zenodo.15566336}{10.5281/zenodo.15566336} \quad License: \href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}}
+        \noindent\thanks{\textbf{Keywords:} \textit{time dilation, superfluid æther, Vortex Æther Model, vortex dynamics, emergent time, fluid spacetime, special relativity, analog gravity, 3D vortex structures, quantized circulation, relativistic effects, topological matter, fluid mechanics, vortex clocks, knot theory, mass generation, swirl gravity, topological quantum field theory, Gross--Pitaevskii, Biot--Savart, Standard Model unification, periodic table topology}}
+    }
+
+    \title{
+        \textbf{Topological \& Fluid-Dynamic Lagrangian in the Vortex Æther Model}\\[0.5em]
+        \large Reformulating ... \\
+        \normalsize A Topological ...
+    }
+    \date{\today}
+
+    \maketitle
+
+    \begin{abstract}
+        We present a unified topological-fluid framework grounded in the Vortex Æther Model (VAM), aimed at deriving the inertial mass of Standard Model (SM) particles and constructing a Lagrangian that incorporates electromagnetism, gravity, and extensions toward the strong and weak nuclear forces. Mass is modeled not as an intrinsic property, but as an emergent effect of quantized vorticity, knot topology, and ætheric swirl energy. Building upon prior derivations using the maximum ætheric force $F_{\max}$, vortex core radius $r_c$, Planck time $t_p$, and tangential swirl velocity $C_e$, we propose a family of mass formulas indexed by topological invariants such as the linking number $L_k$ and torus knot parameters $(p,q)$.
+
+        We explore how trefoil ($T(2,3)$), figure-eight, and higher-order knots encode distinct energy densities and pressure equilibria in an incompressible superfluid medium, allowing quantitative predictions of the masses of the electron, proton, neutron, and neutral knot candidates. The vortex-induced Lagrangians include both Bernoulli and Biot--Savart dynamics, extended by spontaneous symmetry-breaking terms suggestive of Yang--Mills gauge structure. Finally, we propose a knot-periodic correspondence model where elemental families (e.g., reactive nonmetals, noble gases) emerge from quantized toroidal knot classes, providing a new topological lens on the periodic table.
+    \end{abstract}
+
+    \newpage
+        \input{sections/1-introduction}
+        \input{sections/2-vortex-æther-model}
+        \input{sections/3-vortex-mass-formula}
+        \input{sections/4-topological-vortex-lagrangian}
+
+        \section{Conclusion}
+        
+        The Vortex Æther Model provides a comprehensive ontological framework in which a single Lagrangian can describe gravity, electromagnetism, and nuclear forces through fluid-dynamical terms. We outlined how each fundamental interaction is captured: gravity via æther density and maximum force constraints, electromagnetism via swirl gauge fields (with $L_{\text{swirl}}$ mirroring Maxwell's equations), the strong force via topological link invariants confining multi-vortex systems, and the weak force via rare reconnection events in vortices analogous to flavor-changing decays.
+        
+        A central achievement of this model is the derivation of a mass formula for particles that uses geometric and topological inputs instead of arbitrary parameters. By tying mass to circulation ($\Gamma$), core size ($r_c$), swirl speed ($C_e$), and linking numbers ($Lk$), VAM explains the masses of the electron, proton, and neutron to striking accuracy. The electron emerges as a fundamental trefoil vortex, and nucleons as triply knotted systems whose slight topological differences account for neutron vs proton stability. The model even predicts the possibility of an undiscovered neutral hadron X with neutron-like mass, should a fully interlinked vortex triad exist.
+        
+        Finally, we explored how knotted vortex structures could conceptually map onto atomic structure and the periodic table. While speculative, the exercise shows that VAM's topology might naturally encode valence and reactivity: knots with ``open links'' seek partners (reactive atoms), whereas fully self-linked knots are inert (noble gases). This hints at a deep topological principle underlying not just particle physics but chemistry as well -- an exciting avenue for future research.
+        
+        In summary, the topological-fluid Lagrangian of VAM unifies physical laws by replacing points and fields with loops and knots of a pervasive æther. It offers intuitive explanations (e.g.\ why no free magnetic monopoles -- they'd be breakages in vortex lines, which don't occur in closed loops), and generates concrete predictions (mass spectra, possible new states). As our understanding of knotted fluids advances -- aided by both mathematics and laboratory vortex experiments -- VAM stands out as a bold candidate for a ``theory of everything'' grounded in the tangible reality of fluid motion.
+
+
+
+
+    \appendix
+    \input{./appendix/Appendix_all}
+
+    \bibliographystyle{unsrt}
+    \bibliography{../references}
+
+
+\end{document}
