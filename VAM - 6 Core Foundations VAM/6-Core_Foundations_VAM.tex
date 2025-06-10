@@ -9,73 +9,93 @@
 
 
 
+\documentclass[a4paper,12pt]{article}
 
-
-\documentclass[a4paper, aps,preprint,superscriptaddress, 12pt]{revtex4}
+% Page Geometry
 \usepackage[a4paper, margin=2cm]{geometry}
-\usepackage{array}
-\usepackage{booktabs}
-\usepackage{amsmath}
-\usepackage{amssymb}
+
+% Language, Encoding, Fonts
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+
+% Colors, Graphics, Diagrams
 \usepackage{graphicx}
-\usepackage{hyperref}
-\usepackage{physics}
-\usepackage{tocloft}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
 \usepackage{xcolor}
-\usepackage{titlesec}
-\usepackage{etoolbox} % Ensure etoolbox is loaded
-\usepackage{lmodern}  % Better font rendering
-\usepackage{setspace} % Optional line spacing control
-\setcounter{tocdepth}{2}
 
-% -----------------------------
-% TOC Title Format
-\renewcommand{\contentsname}{\centering \Huge\textbf{Contents}\vspace{1em}}
+% Math and Physics
+\usepackage{amsmath, amssymb, physics}
+\usepackage{siunitx}
 
-% -----------------------------
-% Reduce spacing and font size
-\renewcommand{\cftbeforesecskip}{0pt} % Vertical space between entries
-\renewcommand{\cftsecfont}{\small\color{blue!70!black}}  % Font style
-\renewcommand{\cftsecpagefont}{\small\color{gray!90!black}} % Page # font
+% Tables and Figures
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{array, tabularx, makecell, multirow}
+\renewcommand{\arraystretch}{1.5}
+\renewcommand{\floatpagefraction}{.8}
+\usepackage[font=footnotesize]{caption}
+\usepackage{subcaption}
 
-\renewcommand{\cftsubsecfont}{\small\itshape\color{gray!70!black}}
-\renewcommand{\cftsubsecpagefont}{\small\color{gray!50!black}}
+% Code and Listings
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily\footnotesize, breaklines=true}
 
-\renewcommand{\cftsecindent}{0pt}
-\renewcommand{\cftsubsecindent}{1.5em}
-\renewcommand{\cftsecnumwidth}{2em}
-\renewcommand{\cftsubsecnumwidth}{3em}
+% TOC Customization
+\usepackage{tocloft}
+\setcounter{tocdepth}{4}
+\renewcommand{\cftsecfont}{\bfseries}
+\renewcommand{\cftsubsecfont}{\itshape}
+\renewcommand{\cftsecleader}{\cftdotfill{5}}
+\renewcommand{\contentsname}{\centering \Huge\textbf{Contents}}
 
-% -----------------------------
-% Optional: Remove dot leaders (for compactness)
-\renewcommand{\cftsecleader}{\cftdotfill{0}}
-\renewcommand{\cftsubsecleader}{\cftdotfill{0}}
-
-% -----------------------------
-% Optional: Adjust line spacing
-\let\oldtoc\tableofcontents
-\renewcommand{\tableofcontents}{
-  \begingroup
-  \setstretch{1.0}
-  \oldtoc
-  \endgroup
+% Links and Metadata
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue,
+    pdftitle={The Vortex Æther Model},
+    pdfauthor={Omar Iskandarani},
+    pdfkeywords={vorticity, gravity, æther, fluid dynamics, time dilation, VAM}
 }
+\usepackage{bookmark} % PDF bookmarks
+
+% Bibliography
+\usepackage[numbers]{natbib} % Or switch to biblatex if preferred
+
+% Line and Hyphenation
+\usepackage[none]{hyphenat}
+\usepackage{amsfonts}
+
+
+\sloppy
+
 
 \begin{document}
 
-\author{Omar Iskandarani}
+
     \title{The Vortex Æther Model: Unifying Gravity, Electromagnetism, and Quantum Physics under a 3D, Non-Relativistic, vortex framework}
     \date{\today}
-    \affiliation{Independent Researcher, Groningen, The Netherlands}
-    \thanks{ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961}}
-    \email{info@omariskandarani.com}
-
+    \author{
+        Omar Iskandarani\\
+        \small Independent Researcher, Groningen, The Netherlands
+        \thanks{\texttt{info@omariskandarani.com}}
+        \thanks{ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961} \quad DOI: \href{https://doi.org/10.5281/zenodo.15566336}{10.5281/zenodo.15566336} \quad License: \href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}}
+        \noindent\thanks{\textbf{Keywords:} \textit{time dilation, superfluid æther, Vortex Æther Model, vortex dynamics, emergent time, fluid spacetime, special relativity, analog gravity, 3D vortex structures, quantized circulation, relativistic effects, topological matter, fluid mechanics, vortex clocks, knot theory, mass generation, swirl gravity, topological quantum field theory, Gross--Pitaevskii, Biot--Savart, Standard Model unification, periodic table topology}}
+    }
+    \maketitle
     %%% Abstract
     \begin{abstract}
         The Vortex Æther Model (VAM) introduces a unified, non-relativistic theoretical framework wherein gravity, electromagnetism, and quantum phenomena arise from structured vorticity within an inviscid superfluid-like Æther. Unlike General Relativity, which depends on four-dimensional spacetime curvature, VAM proposes that stable vortex knots in three-dimensional Euclidean space generate fundamental forces and quantized states through fluid dynamics and vortex topology. Central to this model is absolute universal time, where observed time dilation results from vortex-induced local energy gradients rather than relativistic effects. VAM yields experimentally testable predictions, including superfluid analogs of frame-dragging, magnetic fields in electrically neutral fluids, and atomic-scale quantization phenomena akin to those observed in helium II. Fundamental constants such as the vortex-core tangential velocity $C_e$ and the Coulomb barrier radius $r_c$ anchor core rotation speeds and interaction strengths, providing explicit testable parameters for experimental verification.
     \end{abstract}
 
-    \maketitle
+\newpage
     \tableofcontents
 
     %% Introduction

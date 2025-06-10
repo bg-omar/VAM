@@ -1,18 +1,10 @@
 %! Author = mr
 %! Date = 6/9/2025
 
-% Preamble
-\documentclass[11pt]{article}
 
-% Packages
-\usepackage{amsmath}
+\section{Deriving $G = \dfrac{F_{\max}\,\alpha\,(c\,t_{\mathrm{P}})^{2}}{m_{\mathrm{e}}^{2}}$}
 
-% Document
-\begin{document}
-
-\section*{Appendix – Deriving $G = \dfrac{F_{\max}\,\alpha\,(c\,t_{\mathrm{P}})^{2}}{m_{\mathrm{e}}^{2}}$}
-
-\subsection*{1\quad Prerequisites and fundamental relations}
+\subsection{Prerequisites and fundamental relations}
 
 \begin{table}[h]
     \centering
@@ -51,7 +43,7 @@ We employ three identities already proven in earlier appendices:
     \end{equation}
 \end{enumerate}
 
-\subsection*{2\quad Algebraic elimination of $\hbar$}
+\subsection{Algebraic elimination of $\hbar$}
 
 Re-express $\hbar$ from (3):
 \begin{equation}
@@ -67,7 +59,7 @@ Solve for $G$:
     G = \frac{c^{5} t_{\mathrm{P}}^{2} C_{\mathrm{e}}}{4\pi F_{\max} r_{\mathrm{c}}^{2}}. \tag{5}
 \end{equation}
 
-\subsection*{3\quad Eliminate $C_{\mathrm{e}}$ and $r_{\mathrm{c}}$}
+\subsection{Eliminate $C_{\mathrm{e}}$ and $r_{\mathrm{c}}$}
 
 Using (1) to substitute $C_{\mathrm{e}} = \tfrac{1}{2}\alpha c$ and the geometric identity $r_{\mathrm{c}} = \tfrac{\alpha\hbar}{2m_{\mathrm{e}}c}$ (from $\omega_{\mathrm{c}} r_{\mathrm{c}} = C_{\mathrm{e}}$ with $\omega_{\mathrm{c}} = 2\pi c/\lambda_{\mathrm{C}}$), equation~(5) becomes
 \begin{align*}
@@ -79,7 +71,7 @@ Cancelling the factors of $2\pi$ arising from $\hbar = 2\pi\hbar$ gives the comp
     \boxed{\displaystyle G = F_{\max}\,\alpha\,\frac{(c t_{\mathrm{P}})^{2}}{m_{\mathrm{e}}^{2}}}. \tag{6}
 \end{equation}
 
-\subsection*{4\quad Numerical verification}
+\subsection{Numerical verification}
 
 Substituting the constants from Table~\ref{tab:constants}:
 \begin{align*}
@@ -89,41 +81,6 @@ Substituting the constants from Table~\ref{tab:constants}:
 \end{align*}
 matching the 2018 CODATA value to $3\times10^{-5}\,\%$.
 
-\subsection*{5\quad Interpretation}
+\subsection{Interpretation}
 
 Equation~(6) shows that once the æther’s maximal tensile stress $F_{\max}$ and core scale $r_{\mathrm{c}}$ fix Planck’s constant, Newton’s constant is not free: it follows from the \textit{same} parameters via the Planck-time identity.
-
-
-\bigskip
-
-
-
-### References
-
-
-@article{Iskandarani2025a,
-  author  = {Omar Iskandarani},
-  title   = {Swirl Clocks and Vorticity-Induced Gravity},
-  year    = {2025},
-  journal = {arXiv preprint},
-  note    = {Appendix A}
-}
-
-@misc{CODATA2018,
-  author       = {Mohr, P.~and Taylor, B.~and Newell, D.},
-  title        = {CODATA recommended values of the fundamental physical constants: 2018},
-  howpublished = {NIST reference on constants},
-  year         = {2019}
-}
-
-@article{Planck1899,
-  author  = {Planck, M.},
-  title   = {Natürliche Maßeinheiten},
-  journal = {Sitzungsberichte der Königlich-Preußischen Akademie der Wissenschaften},
-  year    = {1899},
-  pages   = {440--467}
-}
-
-
-
-\end{document}

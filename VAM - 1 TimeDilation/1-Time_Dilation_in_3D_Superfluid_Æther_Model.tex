@@ -6,37 +6,87 @@
 %! ORCID = 0009-0006-1686-3961
 %! DOI = 10.5281/zenodo.15566319
 
-\documentclass[a4paper,12pt]{revtex4}
+
+
+\documentclass[a4paper,12pt]{article}
+
+% Page Geometry
 \usepackage[a4paper, margin=2cm]{geometry}
-\usepackage[none]{hyphenat}
-\usepackage{amsmath}
-\usepackage{graphicx}
-\usepackage{hyperref}
-\usepackage{array}
-\usepackage{booktabs}
-\usepackage{amssymb}
-\usepackage{float}
-\usepackage{physics}
-\usepackage{tikz}
+
+% Language, Encoding, Fonts
 \usepackage[utf8]{inputenc}
-\usepackage[font=footnotesize]{caption}
-\usetikzlibrary{arrows.meta}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+
+% Colors, Graphics, Diagrams
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
-\usetikzlibrary{arrows.meta}
+\usepackage{xcolor}
+
+% Math and Physics
+\usepackage{amsmath, amssymb, physics}
+\usepackage{siunitx}
+
+% Tables and Figures
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{array, tabularx, makecell, multirow}
+\renewcommand{\arraystretch}{1.5}
+\renewcommand{\floatpagefraction}{.8}
+\usepackage[font=footnotesize]{caption}
+\usepackage{subcaption}
+
+% Code and Listings
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily\footnotesize, breaklines=true}
+
+% TOC Customization
+\usepackage{tocloft}
+\setcounter{tocdepth}{4}
+\renewcommand{\cftsecfont}{\bfseries}
+\renewcommand{\cftsubsecfont}{\itshape}
+\renewcommand{\cftsecleader}{\cftdotfill{5}}
+\renewcommand{\contentsname}{\centering \Huge\textbf{Contents}}
+
+% Links and Metadata
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue,
+    pdftitle={The Vortex Æther Model},
+    pdfauthor={Omar Iskandarani},
+    pdfkeywords={vorticity, gravity, æther, fluid dynamics, time dilation, VAM}
+}
+\usepackage{bookmark} % PDF bookmarks
+
+% Bibliography
+\usepackage[numbers]{natbib} % Or switch to biblatex if preferred
+
+% Line and Hyphenation
+\usepackage[none]{hyphenat}
+\usepackage{amsfonts}
+
+
 \sloppy
 
 \begin{document}
-\author{Omar Iskandarani}
-\email{info@omariskandarani.com}
+
 \title{Time Dilation in a 3D Superfluid Æther Model, Based on Vortex Core Rotation and Ætheric Flow}
-\date{\today}
-\affiliation{Independent Researcher, Groningen, The Netherlands}
-\thanks{ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961} — \footnotesize DOI: \href{https://doi.org/10.5281/zenodo.15566319}{10.5281/zenodo.15566319}  — Licensed under \href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}.}
-\keywords{time dilation, superfluid æther, Vortex Æther Model, vortex dynamics, emergent time, fluid spacetime, special relativity, Lorentz factor, analog gravity, 3D vortex structures, quantized circulation, relativistic effects, topological matter, fluid mechanics, vortex clocks}
-
-
-\maketitle
+    \date{\today}
+    \author{
+        Omar Iskandarani\\
+        \small Independent Researcher, Groningen, The Netherlands
+        \thanks{\texttt{info@omariskandarani.com}}
+        \thanks{ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961} \quad DOI: \href{https://doi.org/10.5281/zenodo.15566319}{10.5281/zenodo.15566319} \quad License: \href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}}
+        \noindent\thanks{\textbf{Keywords:} \textit{time dilation, superfluid æther, Vortex Æther Model, vortex dynamics, emergent time, fluid spacetime, special relativity, Lorentz factor, analog gravity, 3D vortex structures, quantized circulation, relativistic effects, topological matter, fluid mechanics, vortex clock}}
+    }
+    \maketitle
 
 \section*{Abstract}
 In this paper we derive time dilation equations within a 3D Euclidean superfluid-like æther model. In the Vortex-Æther Model (VAM) we consider a \textit{vortex} as a topologically conserved rotation field in a superfluid-like medium. In this framework, fundamental particles are modeled as vortex nodes and time is defined by the intrinsic angular rotation of their vortex cores. The goal is to replace the spacetime curvature concept of general relativity (GR) with quantized angular velocity fields in a flat-space æther, while reproducing all experimental predictions of time dilation under GR and special relativity (SR). We provide first-principles derivations, grounded in fluid dynamics and vortex mechanics, and express the time dilation factors in terms of fundamental constants such as the Planck time and maximum force. The different modes of motion of a vortex are shown schematically in Figure~\ref{fig:rotation-translation}.

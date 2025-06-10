@@ -1,19 +1,10 @@
 %! Author = mr
 %! Date = 6/9/2025
 
-% Preamble
-\documentclass[11pt]{article}
 
-% Packages
-\usepackage{amsmath}
+\section{Deriving Atomic Orbital Radii from VAM First-Principles}
 
-% Document
-\begin{document}
-
-
-\section*{Appendix: Deriving Atomic Orbital Radii from VAM First-Principles}
-
-\section*{1\quad Key VAM primitives}
+\subsection{Key VAM primitives}
 
 \begin{table}[h]
     \centering
@@ -40,7 +31,7 @@ Throughout this appendix, the integers
 \end{itemize}
 are left symbolic so the final formula covers all hydrogenic orbitals.
 
-\section*{2\quad Frequency--velocity matching}
+\subsection{frequency--velocity matching}
 
 The VAM photon--electron coupling condition reads
 \begin{equation}
@@ -62,14 +53,14 @@ Insert \eqref{eq:hooke} into \eqref{eq:match1}:
 \end{equation}
 where $R_x$ is the yet-unknown mean orbital radius.
 
-\section*{3\quad Solve for $R_x$}
+\subsection{Solve for $R_x$}
 
 \begin{equation}
     R_x = \frac{N^{2}}{Z} \frac{F_{\max} r_c^{2}}{m_e C_e^{2}}.
 \label{eq:Rraw}
 \end{equation}
 
-\section*{4\quad Recognising the Bohr radius}
+\subsection{Recognising the Bohr radius}
 
 Use the previously derived identities
 \begin{align}
@@ -92,7 +83,7 @@ with $a_0$ the textbook Bohr radius.  Hence
 
 Equation~\eqref{eq:final} reproduces the Sommerfeld--Bohr orbital ladder \textit{without inserting} $h$ or $\alpha$ by hand: both constants follow from the single triad $(F_{\max}, r_c, C_e)$. For multi-electron atoms one substitutes $Z \rightarrow Z_{\text{eff}}$ in the same expression.
 
-\section*{5\quad Numerical sanity -- hydrogen ground state}
+\subsection{Numerical sanity -- hydrogen ground state}
 
 Set $N=1$, $Z=1$.
 \[
@@ -100,10 +91,7 @@ Set $N=1$, $Z=1$.
 \]
 matching observation to 5-digit precision once the empirical values of $F_{\max}, r_c, C_e$ are inserted.
 
-\subsection*{Concluding remark}
+\subsection{Concluding remark}
 
 This derivation shows that \textit{all hydrogenic orbital sizes emerge from æther tension and core geometry}. Together with the earlier capacitor derivation $E=h\nu$ and the tension identity for $h$, VAM reproduces three pillars of quantum kinematics (action quantisation, photon energy, orbital radii) from one self-consistent parameter set.
 
-
-
-\end{document}

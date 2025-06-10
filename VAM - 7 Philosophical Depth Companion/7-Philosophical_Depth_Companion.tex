@@ -6,95 +6,84 @@
 %! ORCID = 0009-0006-1686-3961
 
 
-% -----------------------------
-% VAM Monograph/Book Template (KOMA-Script)
-% Based on scrreprt for beautiful long-form formatting
-% -----------------------------
-\documentclass[12pt, a4paper, oneside]{scrreprt} % Use 'twoside' for print-ready
+\documentclass[a4paper,12pt]{article}
 
-% -----------------------------
-% Page Layout and Fonts
-% -----------------------------
-\usepackage[a4paper, margin=2.5cm]{geometry}
-\usepackage{setspace}
-\onehalfspacing
-\usepackage[T1]{fontenc}
+% Page Geometry
+\usepackage[a4paper, margin=2cm]{geometry}
+
+% Language, Encoding, Fonts
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage[english]{babel}
 
-% -----------------------------
-% Math, Units, Physics
-% -----------------------------
-\usepackage{amsmath, amssymb, physics, siunitx}
-
-% -----------------------------
-% Graphics, Plots, and Figures
-% -----------------------------
+% Colors, Graphics, Diagrams
 \usepackage{graphicx}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta, positioning}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
+\usepackage{xcolor}
 
-% -----------------------------
-% Table and Figure Styling
-% -----------------------------
+% Math and Physics
+\usepackage{amsmath, amssymb, physics}
+\usepackage{siunitx}
+
+% Tables and Figures
 \usepackage{float}
 \usepackage{booktabs}
 \usepackage{array, tabularx, makecell, multirow}
-\usepackage[font=small,labelfont=bf]{caption}
+\renewcommand{\arraystretch}{1.5}
+\renewcommand{\floatpagefraction}{.8}
+\usepackage[font=footnotesize]{caption}
 \usepackage{subcaption}
 
-% -----------------------------
-% Code Listings
-% -----------------------------
+% Code and Listings
 \usepackage{listings}
-\lstset{basicstyle=\ttfamily\small, breaklines=true}
+\lstset{basicstyle=\ttfamily\footnotesize, breaklines=true}
 
-% -----------------------------
-% Colors and Links
-% -----------------------------
-\usepackage{xcolor}
+% TOC Customization
+\usepackage{tocloft}
+\setcounter{tocdepth}{4}
+\renewcommand{\cftsecfont}{\bfseries}
+\renewcommand{\cftsubsecfont}{\itshape}
+\renewcommand{\cftsecleader}{\cftdotfill{5}}
+\renewcommand{\contentsname}{\centering \Huge\textbf{Contents}}
+
+% Links and Metadata
 \usepackage{hyperref}
 \hypersetup{
-  colorlinks=true,
-  linkcolor=blue,
-  citecolor=purple,
-  urlcolor=teal,
-  pdftitle={The Vortex Æther Model},
-  pdfauthor={Omar Iskandarani},
-  pdfkeywords={vorticity, gravity, æther, fluid dynamics, time dilation, VAM}
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue,
+    pdftitle={The Vortex Æther Model},
+    pdfauthor={Omar Iskandarani},
+    pdfkeywords={vorticity, gravity, æther, fluid dynamics, time dilation, VAM}
 }
-\usepackage{bookmark}
+\usepackage{bookmark} % PDF bookmarks
 
-% -----------------------------
-% TOC and Heading Customization
-% -----------------------------
-\setcounter{tocdepth}{2}  % Chapters, sections, and subsections only
-\RedeclareSectionCommand[beforeskip=-2ex plus -1ex minus -.2ex, afterskip=1.2ex plus .2ex]{section}
-\RedeclareSectionCommand[beforeskip=-1.5ex plus -1ex minus -.2ex, afterskip=0.8ex plus .2ex]{subsection}
-
-% -----------------------------
 % Bibliography
-% -----------------------------
-\usepackage[numbers,sort&compress]{natbib}
+\usepackage[numbers]{natbib} % Or switch to biblatex if preferred
 
-% -----------------------------
-% Start Document
-% -----------------------------
+% Line and Hyphenation
+\usepackage[none]{hyphenat}
+\usepackage{amsfonts}
+
+\sloppy
 
 \begin{document}
 
-    \title{\Huge The Vortex Æther Model:  \\ \large A Unified Vorticity Framework for Gravity, Electromagnetism, and Quantum Phenomena}
-
-    \author{\textsc{Omar Iskandarani}}
-    \affiliation{Independent Researcher, Groningen, The Netherlands}
-    \thanks{ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961}}
-    \email{info@omariskandarani.com}
-
+    \title{The Vortex Æther Model: A Unified Vorticity Framework for Gravity, Electromagnetism, and Quantum Phenomena}
     \date{\today}
-\frontmatter
+    \author{
+        Omar Iskandarani\\
+        \small Independent Researcher, Groningen, The Netherlands
+        \thanks{\texttt{info@omariskandarani.com}}
+        \thanks{ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961} \quad DOI: \href{https://doi.org/10.5281/zenodo.15566336}{10.5281/zenodo.15566336} \quad License: \href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}}
+        \noindent\thanks{\textbf{Keywords:} \textit{time dilation, superfluid æther, Vortex Æther Model, vortex dynamics, emergent time, fluid spacetime, special relativity, analog gravity, 3D vortex structures, quantized circulation, relativistic effects, topological matter, fluid mechanics, vortex clocks, knot theory, mass generation, swirl gravity, topological quantum field theory, Gross--Pitaevskii, Biot--Savart, Standard Model unification, periodic table topology}}
+    }
+    \maketitle
     \begin{abstract}
          This collection of papers present the Vortex Æther Model (VAM), a novel framework in which gravity and electromagnetism emerge from vorticity interactions within an inviscid, superfluid-like medium. Unlike traditional relativity, which relies on spacetime curvature, VAM posits that fundamental forces arise from structured vortex dynamics. This paper explores the theoretical basis of this model, its connection to quantum mechanics and fluid dynamics, and its testable predictions. VAM offers a new perspective on the fundamental nature of the universe. . We propose that both hydrogenic wavefunctions and gravitational fields in VAM are governed by exponentially decaying vortex structures, establishing a deep correspondence between atomic orbitals and large-scale gravitational interactions. Unlike conventional approaches relying on curved spacetime or intrinsic mass, VAM suggests that mass, energy, and time emerge from structured ætheric vorticity, reinforcing a purely three-dimensional Euclidean framework.
 
@@ -102,10 +91,10 @@
 
         This work further examines implications such as mass-energy equivalence as an emergent property of vorticity, black holes as large-scale quantum vortex states, and time dilation as a direct consequence of vortex confinement rather than a separate spacetime dimension. The conclusions challenge conventional models of particle physics and cosmology, suggesting that all known interactions may ultimately be reformulated within a vorticity-based framework. Experimental validation is proposed through comparisons with superfluid analogs and controlled vortex confinement studies, aiming to solidify VAM as a testable and predictive theory of fundamental physics.
     \end{abstract}
-    \tableofcontents
 
 
-\mainmatter
+   \newpage \tableofcontents
+
     \newpage \input{001_introduction}
     \newpage \chapter{Part I}\label{sec:part-1}   \input{010_extension_physics}
     \newpage \input{020_History}
@@ -164,7 +153,6 @@
     \newpage \input{700_temp_swelling}
     \newpage \input{250_eqs}
 
-\backmatter
     \bibliographystyle{unsrtnat}
     \bibliography{../references}
 

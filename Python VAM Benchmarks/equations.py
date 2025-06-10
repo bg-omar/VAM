@@ -161,7 +161,7 @@ print(math.sqrt(16 * pi * F_max * R_c**2 * varepsilon_0))
 print(math.sqrt((2 * alpha * h * varepsilon_0 * c) ))
 print(math.sqrt(4 * C_e * h * varepsilon_0))
 
-print("\nL_p: ",L_p) ###########################################
+print("\nL_p: ",L_p)
 print(math.sqrt(h * G / c**3)) ###########################################
 print(math.sqrt((alpha_g * h * R_c) / (C_e * M_e))) ###########################################
 print(math.sqrt((h * t_p**2 * C_e * c**2) / (2 * F_max * R_c**2))) ###########################################
@@ -169,10 +169,10 @@ print(math.sqrt((h * t_p**2 * C_e * c**2) / (2 * F_max * R_c**2))) #############
 print("\nalpha_g: ",alpha_g)
 print((2 * F_max * C_e * t_p**2) / ((2 * F_max * R_c**2) / C_e))
 print((C_e**2 * t_p**2) / (R_c**2))
-print((F_max * 2 * C_e * t_p**2) / h)  ###########################################
+print((C_e**2 * L_p**2) / (R_c**2 * c**2))
 print((F_max * t_p**2) / (a_0 * M_e))
 print((C_e * c**2 * t_p**2 * M_e) / (h * R_c)) ###########################################
-print((C_e**2 * L_p**2) / (R_c**2 * c**2))
+print((F_max * 2 * C_e * t_p**2) / h)  ###########################################
 
 print("\nG: ",G)
 print((C_e * c**3 * L_p**2) / (2 * F_max * R_c**2))
@@ -184,7 +184,6 @@ print((C_e * c**5 * t_p**2) / (2 * F_max * R_c**2))
 print((c**4) / (4 * F_GRmax))
 
 print("\nalpha: ", alpha)
-print((h / (4 * pi * R_c))) ###########################################
 print((C_e * e**2) / (8 * pi * varepsilon_0 * R_c**2 * c * F_max))
 print((h / (4 * pi * R_c))) ###########################################
 print((lambda_c * R_c) / (2 * C_e)) ###########################################
@@ -215,14 +214,11 @@ print((M_e * C_e**2) /  R_c) ###########################################
 print((mu_v / (4 * math.pi)) * ((mu_v * omega) ** 2 / r_c**2))###########################################
 print((mu_v / (4 * math.pi)) * ((mu_v * (2 * C_e / r_c)) ** 2 / r_c**2))###########################################
 
-print(((8 * math.pi * rho_ae * r_c**3) / C_e)  * math.pi)###########################################
-
-
 print("\nh: ",h)
 print(4 * pi * M_e * C_e * a_0)
 print((pi * F_max * R_e**2) / C_e)
 print((96 * pi * F_max**2 * R_c**3 * a_0) / (h * c**2))
-print( 2*alpha * M_e * C_e**2 * R_c)
+print( 2*alpha * M_e * C_e**2 * R_c)###########################################
 
 
 Gamma = C_e * lambda_p
@@ -230,6 +226,7 @@ print("\n Gamma = C_e * lambda_p: ", Gamma)
 
 print("\nR_infinity: ",R_)
 print((C_e**3) / (pi * R_c * c**3))
+
 print((Gamma**3)*(pi * R_c * c**3))
 
 E_vortex = (1/2) *  rho_ae * Gamma**2 * R_c
@@ -265,4 +262,28 @@ kappa_vam = hbar_empirical / (M_e * C_e * r_c)
 # Print
 print("kappa_vam ≈", kappa_vam)
 
+print("Electron Mass: ", M_e)
+print(((8 * math.pi * rho_ae * r_c**3) / C_e)  * 3)
 
+print("Proton Mass: ", M_pr)
+print(((8 * math.pi * rho_ae * r_c**3 * C_e) / c) * 1.618033988749895)  # Using the golden ratio
+
+
+# Derived Planck constant formula from vortex dynamics:
+hbar_vortex = math.sqrt((2 * M_e * F_max * r_c**3) / (5 * lambda_c * C_e))
+print("hbar (from vortex dynamics):", hbar_vortex)
+
+
+lhs=(F_max * r_c**3) / (5 * lambda_c * C_e)
+rhs= (hbar**2) / (2 * M_e )
+print("Left-hand side (LHS):", lhs)
+print("Right-hand side (RHS):", rhs)
+
+# Schrödinger equation from vortex dynamics (operator form):
+# i * hbar * dψ/dt = - (F_max * r_c**3) / (5 * lambda_c * C_e) * ∇²ψ + Vψ
+# This can be implemented as a function for a given ψ, V, and spatial operator (Laplacian):
+
+def schrodinger_rhs(psi, V, laplacian_psi, hbar=hbar_vortex):
+    """Right-hand side of the Schrödinger equation from vortex dynamics."""
+    coeff = (F_max * r_c**3) / (5 * lambda_c * C_e)
+    return -1j * (coeff * laplacian_psi + V * psi) / hbar
