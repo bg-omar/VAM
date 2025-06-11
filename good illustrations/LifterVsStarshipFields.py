@@ -65,6 +65,14 @@ strength = np.exp(-((R - 1)**2 + Z**2))  # ring-shaped confinement around radius
 U = -strength * np.sin(Theta)  # X-component of vortex
 V = strength * np.cos(Theta)   # Y-component
 W = np.zeros_like(U)           # No vertical motion in this simplified shell
+# ✅ Get the script filename dynamically and save as pdf
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+# filename = f"{script_name}.pdf"
+# plt.savefig(filename, format="pdf", bbox_inches="tight")
+filename = f"{script_name}.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+plt.tight_layout()
 
 # 3D vector field plot (quiver)
 fig = plt.figure(figsize=(12, 8))
@@ -81,5 +89,13 @@ ax.set_xlim([-2, 2])
 ax.set_ylim([-2, 2])
 ax.set_zlim([-1, 1])
 ax.set_box_aspect([1,1,0.5])
+plt.tight_layout()
+# ✅ Get the script filename dynamically and save as pdf
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+# filename = f"{script_name}.pdf"
+# plt.savefig(filename, format="pdf", bbox_inches="tight")
+filename = f"{script_name}3.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
 plt.tight_layout()
 plt.show()

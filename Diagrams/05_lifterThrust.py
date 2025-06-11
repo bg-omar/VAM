@@ -40,7 +40,15 @@ plt.title('Thrust vs Voltage – Glass Shielded Lifter')
 plt.legend()
 plt.grid(True)
 plt.tight_layout()
-
+# ✅ Get the script filename dynamically and save as pdf
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+# filename = f"{script_name}.pdf"
+# plt.savefig(filename, format="pdf", bbox_inches="tight")
+filename = f"{script_name}.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+plt.tight_layout()
+plt.show()
 
 # Re-import modules after code execution reset
 
@@ -86,6 +94,14 @@ plt.ylabel('Thrust (g)')
 plt.title('Thrust vs Voltage – VAM Model with Æther Constants')
 plt.legend()
 plt.grid(True)
+plt.tight_layout()
+# ✅ Get the script filename dynamically and save as pdf
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+# filename = f"{script_name}.pdf"
+# plt.savefig(filename, format="pdf", bbox_inches="tight")
+filename = f"{script_name}2.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
 plt.tight_layout()
 plt.show()
 

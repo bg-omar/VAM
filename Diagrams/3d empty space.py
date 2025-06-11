@@ -36,4 +36,12 @@ ax.set_zlim(-10,10)
 ax.plot([-10, 10], [0, 0], [0, 0], 'r-', linewidth=2)  # X-axis line
 ax.plot([0, 0], [-10, 10], [0, 0], 'g-', linewidth=2)  # Y-axis line
 ax.plot([0, 0], [0, 0], [-10, 10], 'b-', linewidth=2)  # Z-axis line
+# ✅ Get the script filename dynamically and save as pdf
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+# filename = f"{script_name}.pdf"
+# plt.savefig(filename, format="pdf", bbox_inches="tight")
+filename = f"{script_name}.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+plt.tight_layout()
 plt.show()

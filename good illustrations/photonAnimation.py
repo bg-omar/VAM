@@ -41,7 +41,14 @@ def animate(t):
 ani = animation.FuncAnimation(fig, animate, frames=np.linspace(0, 2*np.pi, 100),
                               init_func=init, blit=True, interval=60)
 
-plt.show()
+# ✅ Get the script filename dynamically and save as pdf
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+# filename = f"{script_name}.pdf"
+# plt.savefig(filename, format="pdf", bbox_inches="tight")
+filename = f"{script_name}.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+plt.tight_layout()
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -87,9 +94,15 @@ def animate_flow():
         return quiver,
 
     ani = animation.FuncAnimation(fig, update, frames=60, interval=100, blit=False)
+    import os
+    script_name = os.path.splitext(os.path.basename(__file__))[0]
+    filename = f"{script_name}.pdf"
 
-    # Save as MP4 or show
-    ani.save("vorticial_flow_animation.mp4", writer='ffmpeg', fps=10)
+    ani.save(filename, writer='ffmpeg', fps=10)
+    # ✅ Get the script filename dynamically and save as pdf
+
+
+    plt.tight_layout()
     plt.show()
 
 # === Main ===

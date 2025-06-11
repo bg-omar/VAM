@@ -10,79 +10,77 @@ import matplotlib.animation as animation
 from mpl_toolkits.mplot3d import Axes3D
 from datetime import datetime
 
-# # Create export folder if it doesn't exist
-# export_folder = "export"
-# if not os.path.exists(export_folder):
-#     os.makedirs(export_folder)
-#
-# # Generate a unique filename using timestamp
-# timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-# filename = f"{export_folder}/torus_rotation_{timestamp}.gif"
-#
-# # Set up the figure and 3D axis
-# fig = plt.figure(figsize=(7, 7))
-# ax = fig.add_subplot(111, projection='3d')
-#
-# # Define torus parameters
-# R = 2.0  # Major radius
-# r = 0.9 * R  # Minor radius
-#
-# # Define the toroidal grid
-# theta = np.linspace(0, 2 * np.pi, 100)
-# phi = np.linspace(0, 2 * np.pi, 100)
-# theta, phi = np.meshgrid(theta, phi)
-#
-# # Compute torus coordinates
-# X = (R + r * np.cos(phi)) * np.cos(theta)
-# Y = (R + r * np.cos(phi)) * np.sin(theta)
-# Z = r * np.sin(phi)
-#
-# # Define the helical coil
-#
-# num_helix_turns = 1
-# helix_theta = np.linspace(0, 36 * np.pi, 72 * num_helix_turns)
-#
-# winding_ratio = 3 / (4 * np.pi)  # Ensures exactly 12 windings through the torus
-# helix_phi = winding_ratio * helix_theta
-#
-# # Compute helix coordinates
-# helix_x = (R + r * np.cos(helix_phi)) * np.cos(helix_theta)
-# helix_y = (R + r * np.cos(helix_phi)) * np.sin(helix_theta)
-# helix_z = r * np.sin(helix_phi)
-#
-# # Function to update the frame
-# def update(frame):
-#     ax.clear()
-#     ax.view_init(elev=20, azim=frame * 3)  # Rotate by 3 degrees per frame
-#
-#     # Plot torus
-#     ax.plot_surface(X, Y, Z, rstride=5, cstride=5, color='lightblue', alpha=0.08, edgecolor='k')
-#
-#     # Plot helical coil
-#     ax.plot(helix_x, helix_y, helix_z, 'r-', linewidth=2)
-#
-#     # Set limits and labels
-#     ax.set_xlim(-4, 4)
-#     ax.set_ylim(-4, 4)
-#     ax.set_zlim(-4, 4)
-#     ax.set_xlabel("X")
-#     ax.set_ylabel("Y")
-#     ax.set_zlabel("Z")
-#     ax.set_title("Rotating Torus with Helical Coil")
-#     ax.set_box_aspect([1, 1, 1])
-#
-# # Create the animation
-# num_frames = 120  # Number of frames for smooth rotation
-# ani = animation.FuncAnimation(fig, update, frames=num_frames, interval=50)
-#
-# # Save the animation with a unique name
-# ani.save(filename, writer='pillow', fps=20)
-#
-# print(f"Animation saved as: {filename}")
-#
-# plt.tight_layout()
-# plt.show()
-#
+
+
+# Set up the figure and 3D axis
+fig = plt.figure(figsize=(7, 7))
+ax = fig.add_subplot(111, projection='3d')
+
+# Define torus parameters
+R = 2.0  # Major radius
+r = 0.9 * R  # Minor radius
+
+# Define the toroidal grid
+theta = np.linspace(0, 2 * np.pi, 100)
+phi = np.linspace(0, 2 * np.pi, 100)
+theta, phi = np.meshgrid(theta, phi)
+
+# Compute torus coordinates
+X = (R + r * np.cos(phi)) * np.cos(theta)
+Y = (R + r * np.cos(phi)) * np.sin(theta)
+Z = r * np.sin(phi)
+
+# Define the helical coil
+
+num_helix_turns = 1
+helix_theta = np.linspace(0, 36 * np.pi, 72 * num_helix_turns)
+
+winding_ratio = 3 / (4 * np.pi)  # Ensures exactly 12 windings through the torus
+helix_phi = winding_ratio * helix_theta
+
+# Compute helix coordinates
+helix_x = (R + r * np.cos(helix_phi)) * np.cos(helix_theta)
+helix_y = (R + r * np.cos(helix_phi)) * np.sin(helix_theta)
+helix_z = r * np.sin(helix_phi)
+
+# Function to update the frame
+def update(frame):
+    ax.clear()
+    ax.view_init(elev=20, azim=frame * 3)  # Rotate by 3 degrees per frame
+
+    # Plot torus
+    ax.plot_surface(X, Y, Z, rstride=5, cstride=5, color='lightblue', alpha=0.08, edgecolor='k')
+
+    # Plot helical coil
+    ax.plot(helix_x, helix_y, helix_z, 'r-', linewidth=2)
+
+    # Set limits and labels
+    ax.set_xlim(-4, 4)
+    ax.set_ylim(-4, 4)
+    ax.set_zlim(-4, 4)
+    ax.set_xlabel("X")
+    ax.set_ylabel("Y")
+    ax.set_zlabel("Z")
+    ax.set_title("Rotating Torus with Helical Coil")
+    ax.set_box_aspect([1, 1, 1])
+
+# Create the animation
+num_frames = 120  # Number of frames for smooth rotation
+ani = animation.FuncAnimation(fig, update, frames=num_frames, interval=50)
+
+# ✅ Get the script filename dynamically and save as pdf
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+# filename = f"{script_name}.pdf"
+# plt.savefig(filename, format="pdf", bbox_inches="tight")
+filename = f"{script_name}.gif"
+
+
+# Save the animation with a unique name
+ani.save(filename, writer='pillow', fps=20)
+
+print(f"Animation saved as: {filename}")
+
 
 
 
@@ -228,5 +226,12 @@ for ax, (elev, azim), title in zip(axes.flatten(), view_angles, titles):
     ax.set_box_aspect([1, 1, 1])  # Ensures 1:1:1 aspect ratio
     ax.set_title(title)
 plt.tight_layout()
+# ✅ Get the script filename dynamically and save as pdf
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+# filename = f"{script_name}.pdf"
+# plt.savefig(filename, format="pdf", bbox_inches="tight")
+filename = f"{script_name}2.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+plt.tight_layout()
 plt.show()
-

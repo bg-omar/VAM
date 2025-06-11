@@ -80,7 +80,15 @@ ax.plot(cap_X_mirror, cap_Y_mirror, cap_Z_mirror_shifted, color='blue', linewidt
 # Draw the updated base circles at z = -1 and z = 1
 ax.plot(base_X, base_Y, base_Z_bottom, color='darkblue', linewidth=2)  # Bottom base (South pole)
 ax.plot(base_X, base_Y, base_Z_top, color='red', linewidth=2)  # Top base (North pole)
-
+# ✅ Get the script filename dynamically and save as pdf
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+# filename = f"{script_name}.pdf"
+# plt.savefig(filename, format="pdf", bbox_inches="tight")
+filename = f"{script_name}1.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+plt.tight_layout()
+plt.show()
 
 fig = plt.figure(figsize=(8, 8))
 ax = fig.add_subplot(111, projection='3d')
@@ -135,4 +143,12 @@ ax.set_ylabel("Y-axis")
 ax.set_zlabel("Z-axis")
 ax.set_title("Mirrored Magnetic Spherical Domes: Top South Pole Arrows Upward Inward")
 
+# ✅ Get the script filename dynamically and save as pdf
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+# filename = f"{script_name}.pdf"
+# plt.savefig(filename, format="pdf", bbox_inches="tight")
+filename = f"{script_name}.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+plt.tight_layout()
 plt.show()

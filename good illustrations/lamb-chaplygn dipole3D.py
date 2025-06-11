@@ -85,6 +85,14 @@ mask = X_grid**2 + Y_grid**2 > R**2
 U_x_interp[mask] = np.nan
 U_y_interp[mask] = np.nan
 Psi_interp[mask] = np.nan
+# ✅ Get the script filename dynamically and save as pdf
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+# filename = f"{script_name}.pdf"
+# plt.savefig(filename, format="pdf", bbox_inches="tight")
+filename = f"{script_name}.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+plt.tight_layout()
 
 # Create figure
 fig, ax = plt.subplots(figsize=(7, 7))
@@ -144,6 +152,14 @@ mask = R_eval > R
 Psi_interp[mask] = np.nan
 U_x_interp[mask] = np.nan
 U_y_interp[mask] = np.nan
+# ✅ Get the script filename dynamically and save as pdf
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+# filename = f"{script_name}.pdf"
+# plt.savefig(filename, format="pdf", bbox_inches="tight")
+filename = f"{script_name}2.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+plt.tight_layout()
 
 # Create figure
 fig, ax = plt.subplots(figsize=(7, 7))
@@ -173,4 +189,12 @@ cbar = plt.colorbar(contour)
 cbar.set_label(r'Stream Function $\Psi$')
 
 # Show the plot
+# ✅ Get the script filename dynamically and save as pdf
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+# filename = f"{script_name}.pdf"
+# plt.savefig(filename, format="pdf", bbox_inches="tight")
+filename = f"{script_name}3.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+plt.tight_layout()
 plt.show()

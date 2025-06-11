@@ -38,4 +38,12 @@ ax.plot([-5, 5], [0, 0], [0, 0], 'r-', alpha=0.5, linewidth=2)  # X-axis line
 ax.quiver(0, -5, 0, 0, 10, 0, color='g', linewidth=2,  alpha=0.5,arrow_length_ratio=0.2)  # Y-axis line
 ax.plot([0, 0], [0, 0], [-5, 5], 'b-',  alpha=0.5,linewidth=2)  # Z-axis line
 
+# ✅ Get the script filename dynamically and save as pdf
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+# filename = f"{script_name}.pdf"
+# plt.savefig(filename, format="pdf", bbox_inches="tight")
+filename = f"{script_name}.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+plt.tight_layout()
 plt.show()

@@ -67,6 +67,15 @@ for i in range(num_labels):
     index = i * len(helix_theta) // num_labels
     ax.text(helix_x[index], helix_y[index], 0, str(i + 1), color='black', fontsize=12, ha='center', va='center')
 
+# ✅ Get the script filename dynamically and save as pdf
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+# filename = f"{script_name}.pdf"
+# plt.savefig(filename, format="pdf", bbox_inches="tight")
+filename = f"{script_name}1.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+plt.tight_layout()
+
 # Create multiple subplots for different views
 fig, axes = plt.subplots(1, 3, figsize=(15, 5), subplot_kw={'projection': '3d'})
 
@@ -101,5 +110,13 @@ for ax, (elev, azim), title in zip(axes, view_angles, titles):
     ax.set_box_aspect([1, 1, 1])  # Ensures 1:1:1 aspect ratio
     ax.set_title(title)
 
+plt.tight_layout()
+# ✅ Get the script filename dynamically and save as pdf
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+# filename = f"{script_name}.pdf"
+# plt.savefig(filename, format="pdf", bbox_inches="tight")
+filename = f"{script_name}.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
 plt.tight_layout()
 plt.show()

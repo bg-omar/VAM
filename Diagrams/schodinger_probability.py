@@ -10,7 +10,7 @@ n = 3  # Principal quantum number (modify as needed)
 # Define radial wavefunction R_n0(r)
 def radial_wavefunction(n, r):
     """Computes the radial wavefunction for the nth s-orbital (ℓ=0)."""
-    prefactor = np.sqrt((2 / (n * a0))**3 * np.math.factorial(n - 1) / (2 * n * np.math.factorial(n)))
+    prefactor = np.sqrt((2 / (n * a0))**3 * np.emath.factorial(n - 1) / (2 * n * np.emath.factorial(n)))
     rho = 2 * r / (n * a0)  # Scaled radius
     laguerre_poly = genlaguerre(n - 1, 2)(rho)  # Associated Laguerre polynomial
     return prefactor * np.exp(-rho / 2) * laguerre_poly

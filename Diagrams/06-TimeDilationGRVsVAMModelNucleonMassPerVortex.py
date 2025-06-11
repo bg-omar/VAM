@@ -44,11 +44,15 @@ plt.grid(True)
 plt.legend()
 plt.tight_layout()
 
-# ✅ Get the script filename dynamically
+# ✅ Get the script filename dynamically and save as pdf
+import os
 script_name = os.path.splitext(os.path.basename(__file__))[0]
-timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-filename = f"{script_name}1.png"
+# filename = f"{script_name}.pdf"
+# plt.savefig(filename, format="pdf", bbox_inches="tight")
+filename = f"{script_name}.png"
 plt.savefig(filename, dpi=150)  # Save image with high resolution
+plt.tight_layout()
+
 
 # Create 3D plot to show both curves clearly
 fig = plt.figure(figsize=(10, 6))

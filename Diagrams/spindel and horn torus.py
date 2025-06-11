@@ -37,6 +37,14 @@ ax.set_zlim(-10, 10)
 
 # Adjust the view angle
 ax.view_init(30, 30)
+# ✅ Get the script filename dynamically and save as pdf
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+# filename = f"{script_name}.pdf"
+# plt.savefig(filename, format="pdf", bbox_inches="tight")
+filename = f"{script_name}.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+plt.tight_layout()
 
 ######################################################################################################
 
@@ -75,6 +83,14 @@ ax.set_zlim(-10, 10)
 
 # Adjust the view angle
 ax.view_init(30, 30)
+# ✅ Get the script filename dynamically and save as pdf
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+# filename = f"{script_name}.pdf"
+# plt.savefig(filename, format="pdf", bbox_inches="tight")
+filename = f"{script_name}2.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+plt.tight_layout()
 
 ######################################################################################################
 
@@ -126,6 +142,14 @@ ax.set_zlim(-15, 15)
 # Adjust the view angle
 ax.view_init(30, 30)
 
+# ✅ Get the script filename dynamically and save as pdf
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+# filename = f"{script_name}.pdf"
+# plt.savefig(filename, format="pdf", bbox_inches="tight")
+filename = f"{script_name}3.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+plt.tight_layout()
 plt.show()
 
 

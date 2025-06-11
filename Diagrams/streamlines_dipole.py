@@ -1,36 +1,44 @@
-# import numpy as np
-# import matplotlib.pyplot as plt
-#
-# # Rooster
-# x = np.linspace(-2, 2, 500)
-# y = np.linspace(-2, 2, 500)
-# X, Y = np.meshgrid(x, y)
-# R = np.sqrt(X**2 + Y**2)
-#
-# # Parameters
-# eps = 1e-2  # om singulariteit te vermijden
-# cutoff = 0.2  # straal van vortexkern
-#
-# # Velden
-# U = 1 + (X**2 - Y**2) / (R**4 + eps)
-# V = (2*X*Y) / (R**4 + eps)
-#
-# # Set binnenste kern op 0
-# U[R < cutoff] = 0
-# V[R < cutoff] = 0
-#
-# # Plot
-# plt.figure(figsize=(5,5))
-# plt.streamplot(X, Y, U, V, color='black', linewidth=0.8, density=1.5)
-# plt.gca().add_patch(plt.Circle((0, 0), cutoff, fill=False, color='black', linewidth=1))
-# plt.xlim(-2, 2)
-# plt.ylim(-2, 2)
-# plt.xlabel('$x/R$')
-# plt.ylabel('$y/R$')
-# plt.gca().set_aspect('equal')
-# plt.tight_layout()
-#
-# plt.savefig("streamlines_dipole.png", dpi=300)
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Rooster
+x = np.linspace(-2, 2, 500)
+y = np.linspace(-2, 2, 500)
+X, Y = np.meshgrid(x, y)
+R = np.sqrt(X**2 + Y**2)
+
+# Parameters
+eps = 1e-2  # om singulariteit te vermijden
+cutoff = 0.2  # straal van vortexkern
+
+# Velden
+U = 1 + (X**2 - Y**2) / (R**4 + eps)
+V = (2*X*Y) / (R**4 + eps)
+
+# Set binnenste kern op 0
+U[R < cutoff] = 0
+V[R < cutoff] = 0
+
+# Plot
+plt.figure(figsize=(5,5))
+plt.streamplot(X, Y, U, V, color='black', linewidth=0.8, density=1.5)
+plt.gca().add_patch(plt.Circle((0, 0), cutoff, fill=False, color='black', linewidth=1))
+plt.xlim(-2, 2)
+plt.ylim(-2, 2)
+plt.xlabel('$x/R$')
+plt.ylabel('$y/R$')
+plt.gca().set_aspect('equal')
+plt.tight_layout()
+
+# ✅ Get the script filename dynamically and save as pdf
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+# filename = f"{script_name}.pdf"
+# plt.savefig(filename, format="pdf", bbox_inches="tight")
+filename = f"{script_name}1.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+plt.tight_layout()
+plt.show()
 #
 
 import numpy as np
@@ -65,5 +73,12 @@ ax.set_ylabel("y")
 ax.set_aspect('equal')
 
 plt.grid(True)
-plt.savefig("streamlines_dipole.png", dpi=300)
+# ✅ Get the script filename dynamically and save as pdf
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+# filename = f"{script_name}.pdf"
+# plt.savefig(filename, format="pdf", bbox_inches="tight")
+filename = f"{script_name}.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+plt.tight_layout()
 plt.show()

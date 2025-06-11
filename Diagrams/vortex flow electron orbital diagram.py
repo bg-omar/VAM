@@ -55,7 +55,15 @@ axes[2].set_title('3d Orbital (Higher Vortex Mode)')
 
 # Display figure
 plt.tight_layout()
-plt.show()
+# ✅ Get the script filename dynamically and save as pdf
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+# filename = f"{script_name}.pdf"
+# plt.savefig(filename, format="pdf", bbox_inches="tight")
+filename = f"{script_name}.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+plt.tight_layout()
+
 
 # Define grid and initial conditions
 N = 64  # Grid size
@@ -93,4 +101,12 @@ ax.streamplot(x, y, ux, uy, color='b', density=2)
 ax.set_title("Vortex-Induced Velocity Field in VAM")
 ax.set_xlabel("X")
 ax.set_ylabel("Y")
+# ✅ Get the script filename dynamically and save as pdf
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+# filename = f"{script_name}.pdf"
+# plt.savefig(filename, format="pdf", bbox_inches="tight")
+filename = f"{script_name}2.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+plt.tight_layout()
 plt.show()

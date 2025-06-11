@@ -22,4 +22,12 @@ plt.xlabel("X-axis (Vortex Radius)")
 plt.ylabel("Y-axis (Vortex Circulation)")
 plt.title("Structured Vortex Excitations in Magnetic Field Formation")
 plt.grid(True)
+# ✅ Get the script filename dynamically and save as pdf
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+# filename = f"{script_name}.pdf"
+# plt.savefig(filename, format="pdf", bbox_inches="tight")
+filename = f"{script_name}.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+plt.tight_layout()
 plt.show()

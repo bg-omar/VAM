@@ -126,6 +126,14 @@ def update(frame):
 
 # **Run the animation**
 ani = animation.FuncAnimation(fig, update, frames=time_steps, interval=50, blit=False)
+# ✅ Get the script filename dynamically and save as pdf
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+# filename = f"{script_name}.pdf"
+# plt.savefig(filename, format="pdf", bbox_inches="tight")
+filename = f"{script_name}2.png"
+
+ani.save(filename, writer='pillow', fps=20)
 
 # **Ensure Matplotlib Keeps the Window Open**
 plt.show(block=True)

@@ -73,6 +73,14 @@ def main_sim():
                 ring[-1] = ring[0]
 
     ani = FuncAnimation(fig, update, frames=nsteps + 1, interval=50)
+    # ✅ Get the script filename dynamically and save as pdf
+    import os
+    script_name = os.path.splitext(os.path.basename(__file__))[0]
+    # filename = f"{script_name}.pdf"
+    # plt.savefig(filename, format="pdf", bbox_inches="tight")
+    filename = f"{script_name}.png"
+    plt.savefig(filename, dpi=150)  # Save image with high resolution
+    plt.tight_layout()
     plt.show()
 
 if __name__ == "__main__":

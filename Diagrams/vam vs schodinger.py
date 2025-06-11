@@ -49,6 +49,14 @@ v_theta_2s[R < Rc] = 0  # Suppress swirl inside Rc
 
 # Convert to Cartesian coordinates for plotting
 Z_2s = v_theta_2s  # Swirl amplitude for 2s orbital
+# ✅ Get the script filename dynamically and save as pdf
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+# filename = f"{script_name}.pdf"
+# plt.savefig(filename, format="pdf", bbox_inches="tight")
+filename = f"{script_name}.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+plt.tight_layout()
 
 # Create 3D plot with both 1s and 2s orbitals and marked nodes
 fig = plt.figure(figsize=(8, 6))
@@ -86,6 +94,14 @@ v_theta_4s[R < Rc] = 0  # Suppress swirl inside Rc
 # Convert to Cartesian coordinates for plotting
 Z_3s = v_theta_3s  # Swirl amplitude for 3s orbital
 Z_4s = v_theta_4s  # Swirl amplitude for 4s orbital
+# ✅ Get the script filename dynamically and save as pdf
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+# filename = f"{script_name}.pdf"
+# plt.savefig(filename, format="pdf", bbox_inches="tight")
+filename = f"{script_name}2.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+plt.tight_layout()
 
 # Create figure
 fig = plt.figure(figsize=(8, 6))
@@ -149,7 +165,15 @@ Z_sch_1s = normalize(Z_sch_1s)
 Z_sch_2s = normalize(Z_sch_2s)
 Z_sch_3s = normalize(Z_sch_3s)
 Z_sch_4s = normalize(Z_sch_4s)
-
+# ✅ Get the script filename dynamically and save as pdf
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+# filename = f"{script_name}.pdf"
+# plt.savefig(filename, format="pdf", bbox_inches="tight")
+filename = f"{script_name}3.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+plt.tight_layout()
+plt.show()
 # Create figure with two subplots: VAM (left) vs Schrödinger (right)
 fig = plt.figure(figsize=(14, 6))
 
@@ -217,10 +241,18 @@ def schrodinger_wavefunction(r, n):
     laguerre_poly = genlaguerre(n - 1, 2)(rho)  # Associated Laguerre polynomial
     return prefactor * np.exp(-rho / 2) * laguerre_poly
 
-Z_sch_1s_raw = schrodinger_wavefunction(R, a0, 1)
-Z_sch_2s_raw = schrodinger_wavefunction(R, a0, 2)
-Z_sch_3s_raw = schrodinger_wavefunction(R, a0, 3)
-Z_sch_4s_raw = schrodinger_wavefunction(R, a0, 4)
+Z_sch_1s_raw = schrodinger_wavefunction(R, a0)
+Z_sch_2s_raw = schrodinger_wavefunction(R, a0)
+Z_sch_3s_raw = schrodinger_wavefunction(R, a0)
+Z_sch_4s_raw = schrodinger_wavefunction(R, a0)
+# ✅ Get the script filename dynamically and save as pdf
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+# filename = f"{script_name}.pdf"
+# plt.savefig(filename, format="pdf", bbox_inches="tight")
+filename = f"{script_name}4.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+plt.tight_layout()
 
 # Create figure with two subplots: VAM (left) vs Schrödinger (right)
 fig = plt.figure(figsize=(14, 6))
@@ -264,4 +296,12 @@ ax2.set_zlabel(r'Probability Amplitude')
 ax2.set_title(r'Schrödinger QM Interpretation of s Orbitals')
 
 # Show plot
+# ✅ Get the script filename dynamically and save as pdf
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+# filename = f"{script_name}.pdf"
+# plt.savefig(filename, format="pdf", bbox_inches="tight")
+filename = f"{script_name}.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+plt.tight_layout()
 plt.show()

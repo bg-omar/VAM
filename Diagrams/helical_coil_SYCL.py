@@ -163,4 +163,12 @@ ax.set_ylabel("Y")
 ax.set_zlabel("Z")
 ax.set_box_aspect([1, 1, 1])  # Ensures 1:1:1 aspect ratio2
 ax.set_title("Magnetic & Electric Field Visualization (Intel Arc A770)")
+# ✅ Get the script filename dynamically and save as pdf
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+# filename = f"{script_name}.pdf"
+# plt.savefig(filename, format="pdf", bbox_inches="tight")
+filename = f"{script_name}.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+plt.tight_layout()
 plt.show()
