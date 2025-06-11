@@ -1,0 +1,94 @@
+
+
+
+
+\section{Introduction}
+
+In the Standard Model (SM), neutrino oscillations arise from a mismatch between flavor and mass eigenstates, mediated by the complex-valued PMNS matrix \cite{pontecorvo1957inverse, mns1962neutrino}. Time-reversal (T) asymmetry and CP violation are embedded via a complex phase \( \delta_{CP} \). In contrast, the Vortex \AE ther Model (VAM) proposes a classical foundation: particle states are stable or metastable topological vortex knots in a Euclidean \ae ther. Local time is not fundamental but emergent, governed by vortex energy density via the swirlclock relation \cite{VAM2025}.
+
+\section{Swirlclock Dynamics in Chiral Vortices}
+
+In VAM, each vortex knot carries swirl energy:
+\begin{equation}
+U_\text{vortex} = \frac{1}{2} \rho_\text{\ae} |\vec{\omega}|^2
+\end{equation}
+which controls the local flow of time:
+\begin{equation}
+dt = dt_\infty \sqrt{1 - \frac{U_\text{vortex}}{U_\text{max}}}
+\end{equation}
+
+The swirlclock phase for a given vortex is:
+\begin{equation}
+\theta_i(t) = \int_0^t \Omega_i \, dt_i = \Omega_i t_\infty \sqrt{1 - \frac{U_i}{U_\text{max}}}
+\end{equation}
+where \( \Omega_i = \frac{C_e}{r_c} e^{-r_i/r_c} \) is the effective angular velocity of mass eigenstate \( i \), and \( r_c \) is the vortex core radius. The vortex energy density is further defined as:
+\begin{equation}
+U_i = \frac{1}{2} \rho_\text{\ae} \left( \frac{\Gamma_i}{\pi r_c^2} \right)^2
+\end{equation}
+with \( \Gamma_i \) denoting the circulation of the \( i \)-th vortex knot.
+
+For neutrinos, we postulate:
+\begin{itemize}
+\item \( \nu_1 \): slightly right-precessing amphichiral knot
+\item \( \nu_2 \): left-precessing knot (swirlclock lag)
+\item \( \nu_3 \): high-twist chiral knot (lowest clock rate)
+\end{itemize}
+
+\section{Swirlclock-Based Neutrino Oscillations}
+
+We define the flavor state as a superposition of mass eigenstates:
+\begin{equation}
+|\nu_\alpha(t)\rangle = \sum_i U_{\alpha i}^* e^{-i\theta_i(t)} |\nu_i\rangle
+\end{equation}
+
+The oscillation probability from flavor \( \alpha \) to \( \beta \) becomes:
+\begin{equation}
+P(\nu_\alpha \rightarrow \nu_\beta) = \left| \sum_i U_{\alpha i}^* U_{\beta i} e^{-i\theta_i(t)} \right|^2
+\end{equation}
+
+Time-reversal asymmetry emerges from the interference of swirlclock phases:
+\begin{equation}
+A_T(\alpha, \beta) = P(\nu_\alpha \rightarrow \nu_\beta) - P(\nu_\beta \rightarrow \nu_\alpha) \approx 4 \sum_{i<j} \Im(U_{\alpha i}^* U_{\beta i} U_{\alpha j} U_{\beta j}^*) \sin(\Delta \theta_{ij})
+\end{equation}
+where
+\begin{equation}
+\Delta \theta_{ij}(t) = \theta_i(t) - \theta_j(t)
+\end{equation}
+
+\section{Derivation of the Swirlclock Phase Lag}
+
+We begin by expressing the angular velocity of each vortex knot state \( i \) as:
+\begin{equation}
+\Omega_i = \frac{C_e}{r_c} e^{-r_i / r_c}
+\end{equation}
+where \( C_e \) is the vortex tangential velocity and \( r_c \) the core radius.
+
+Next, the vorticity energy is given by:
+\begin{equation}
+U_i = \frac{1}{2} \rho_\text{\ae} |\vec{\omega}_i|^2 = \frac{1}{2} \rho_\text{\ae} \left( \frac{\Gamma_i}{\pi r_c^2} \right)^2
+\end{equation}
+using the identity \( |\vec{\omega}| = \Gamma_i / (\pi r_c^2) \), where \( \Gamma_i \) is the circulation.
+
+Substituting \( \Omega_i \) and \( U_i \) into the phase integral gives:
+\begin{equation}
+\theta_i(t) = \Omega_i t_\infty \sqrt{1 - \frac{U_i}{U_\text{max}}} = \frac{C_e t_\infty}{r_c} e^{-r_i / r_c} \sqrt{1 - \frac{\rho_\text{\ae} \Gamma_i^2}{2 \pi^2 r_c^4 U_\text{max}}}
+\end{equation}
+
+Therefore, the swirlclock phase difference between eigenstates \( i \) and \( j \) becomes:
+\begin{equation}
+\Delta \theta_{ij}(t) = \theta_i(t) - \theta_j(t) = \frac{C_e t_\infty}{r_c} \left[
+e^{-r_i/r_c} \sqrt{1 - \frac{\rho_\text{\ae} \Gamma_i^2}{2 \pi^2 r_c^4 U_\text{max}}} -
+e^{-r_j/r_c} \sqrt{1 - \frac{\rho_\text{\ae} \Gamma_j^2}{2 \pi^2 r_c^4 U_\text{max}}}
+\right]
+\end{equation}
+
+This is the physically grounded replacement for the arbitrary complex phase \( \delta_{CP} \) in the Standard Model.
+
+\section{Geometric Origin of T-Violation}
+
+The final expression for \( \Delta \theta_{ij} \) shows that T-asymmetry emerges naturally from differences in circulation, spatial decay length, and precession rates of topological knots. This formulation provides a clear link between observable oscillation asymmetry and underlying geometric swirl structure, bypassing the need for quantum mechanical CP violation parameters.
+
+\section{Summary}
+
+Neutrino oscillations and T-violation in the Standard Model can be reinterpreted in the Vortex \AE ther Model as interference of swirlclock phases associated with chiral vortex knots. The geometric origin of time-asymmetry connects directly to vortex energy and helicity, offering a classical, topological alternative to quantum field-theoretic CP phases. Future work includes mapping swirlclock interference against experimental parameters and generalizing this framework to baryogenesis and cosmological T-asymmetry.
+

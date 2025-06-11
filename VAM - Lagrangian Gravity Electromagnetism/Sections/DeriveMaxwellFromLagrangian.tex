@@ -1,0 +1,55 @@
+\section{Unifying Gravity and Electromagnetism in the Vortex Æther Model}
+
+We define a unified Lagrangian density $\mathcal{L}_\text{VAM}$ based on the vorticity structure of an incompressible, inviscid æther. The fundamental field is the æther velocity $\vec{v}(\vec{x}, t)$, with associated vorticity $\vec{\omega} = \nabla \times \vec{v}$, circulation $\Gamma = \oint \vec{v} \cdot d\vec{\ell}$, and helicity $H = \int \vec{v} \cdot \vec{\omega} \, d^3x$ \cite{moffatt1969degree, arnold1998topological}.
+
+We propose the Lagrangian:
+
+\begin{equation}
+\label{eq:L_VAM}
+\mathcal{L}_\text{VAM} =
+\underbrace{\frac{1}{2} \rho_\text{\ae} |\vec{v}|^2}_{\text{Kinetic}} -
+\underbrace{\frac{1}{2} \rho_\text{\ae} \lambda_g |\vec{\omega}|^2}_{\text{Gravitational potential}} +
+\underbrace{\frac{\alpha_e}{2} (\vec{v} \cdot \vec{\omega})^2}_{\text{Electromagnetic helicity}} -
+\underbrace{V(\vec{\omega})}_{\text{Topological self-potential}},
+\end{equation}
+
+where:
+\begin{itemize}
+    \item $\lambda_g$ is the gravitational coupling,
+    \item $\alpha_e$ corresponds to an electromagnetic helicity coupling (linked to the fine-structure constant),
+    \item $V(\vec{\omega})$ is a self-interaction potential supporting topological solitons \cite{faddeev1997stable, babaev2002knotted}.
+\end{itemize}
+
+From the Euler--Lagrange equations for the vector field $\vec{v}$, we derive the dynamical field equation:
+
+\begin{equation}
+\label{eq:VAM_dynamics}
+\rho_\text{\ae} \frac{d \vec{v}}{dt} =
+\rho_\text{\ae} \lambda_g \nabla \times \vec{\omega}
++ \alpha_e (\vec{v} \cdot \vec{\omega}) \vec{\omega}
+- \nabla V(\vec{\omega}),
+\end{equation}
+
+interpreted term-by-term as:
+\begin{itemize}
+    \item $\rho_\text{\ae} \frac{d \vec{v}}{dt}$: Ætheric inertial response,
+    \item $\nabla \times \vec{\omega}$: vorticity tension (analogous to $\nabla \times \vec{B}$),
+    \item $(\vec{v} \cdot \vec{\omega}) \vec{\omega}$: helicity-induced charge and current analog,
+    \item $\nabla V(\vec{\omega})$: topological mass, charge, or confinement potential.
+\end{itemize}
+
+This yields a fluid-dynamical analog of Maxwell's equations, in which:
+
+\begin{align}
+\nabla \cdot \vec{\omega} &= 0, \label{eq:divB} \\
+\nabla \times \vec{v} &= \vec{\omega}, \label{eq:curlE} \\
+\nabla \times \vec{\omega} &= \vec{J}_\text{eff}, \label{eq:ampere}
+\end{align}
+
+where $\vec{J}_\text{eff} = \alpha_e (\vec{v} \cdot \vec{\omega}) \vec{\omega}$ acts as an effective source current \cite{yakovenko2021fluid, finn2020helicity}.
+
+\vspace{1em}
+\noindent
+This formulation embeds both gravitational and electromagnetic dynamics in the same incompressible æther Lagrangian. Gravity arises from pressure gradients induced by vorticity (as in Bernoulli's equation), while electromagnetism emerges from the helicity structure of chiral vortex knots. Mass, charge, and spin correspond to topologically quantized excitations in this vorticity field.
+
+
