@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" id="68444c05-2aa5-47b0-a236-1340c65f3f8d" name="Changes" comment="Refactor file structure for clarity; rename files and update paths; add hybrid time dilation function and visualization enhancements">
+    <list default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" id="68444c05-2aa5-47b0-a236-1340c65f3f8d" name="Changes" comment="Add new references to bibliography; update LaTeX document structure and abstract">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 1 TimeDilation/1-Time_Dilation_in_3D_Superfluid_Æther_Model.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 1 TimeDilation/1-Time_Dilation_in_3D_Superfluid_Æther_Model.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/1-Time_Dilation_in_3D_Superfluid_Æther_Model.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/1-Time_Dilation_in_3D_Superfluid_Æther_Model.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/references.bib" beforeDir="false" afterPath="$PROJECT_DIR$/references.bib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 0 Einsteins Æther/0-Einsteins Æther.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 0 Einsteins Æther/0-Einsteins Æther.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 0 Einsteins Æther/2_æther.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 0 Einsteins Æther/2_æther.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/0-Einsteins Æther.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/0-Einsteins Æther.pdf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="false" />
@@ -373,6 +373,18 @@
       </texify-bibtex>
       <method v="2" />
     </configuration>
+    <configuration name="0-Einsteins Æther bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler>BIBTEX</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/VAM - 0 Einsteins Æther/0-Einsteins Æther.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
+        <latex-distribution>MIKTEX</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
     <configuration name="1-Time_Dilation_in_3D_Superfluid_Æther_Model bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify-bibtex>
         <compiler>BIBTEX</compiler>
@@ -519,7 +531,7 @@
       <workItem from="1749680016831" duration="3044000" />
       <workItem from="1749713780332" duration="17650000" />
       <workItem from="1749746186866" duration="7283000" />
-      <workItem from="1749753850267" duration="2420000" />
+      <workItem from="1749753850267" duration="6012000" />
     </task>
     <task id="LOCAL-00001" summary="some small tests">
       <created>1739958944014</created>
@@ -857,15 +869,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749611543494</updated>
     </task>
-    <task id="LOCAL-00049" summary="Refactor file structure for clarity; rename files and update paths; add hybrid time dilation function and visualization enhancements">
+    <task id="LOCAL-00050" summary="Add new references to bibliography; update LaTeX document structure and abstract">
       <option name="closed" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
-      <created>1749754116292</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
+      <created>1749756762385</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
       <option name="project" value="LOCAL" />
-      <updated>1749754116292</updated>
+      <updated>1749756762386</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -900,7 +912,6 @@
     <ignored-roots>
       <path value="$USER_HOME$/projects/VAMcore" />
     </ignored-roots>
-    <MESSAGE value="Nederlandse Versie: &quot;Tijdsdilatatie in een 3D Superfluïde Æther Model, Gebaseerd op Wervel kernrotatie en ætherische Stroom&quot;" />
     <MESSAGE value="Hernoem LaTeX-bestanden en update import statements voor consistentie" />
     <MESSAGE value="Hernoem LaTeX-bestanden, update bestandslocaties en pas bibliografie aan voor consistentie" />
     <MESSAGE value="Vertaal sectietitel 'Introduction' naar 'Introductie' in 01_introductie.tex" />
@@ -925,7 +936,8 @@
     <MESSAGE value="Rename files for clarity and consistency; update import paths and fix typographical errors in LaTeX documents" />
     <MESSAGE value="Dynamically save plot images as PNG files with high resolution" />
     <MESSAGE value="Refactor file structure for clarity; rename files and update paths; add hybrid time dilation function and visualization enhancements" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor file structure for clarity; rename files and update paths; add hybrid time dilation function and visualization enhancements" />
+    <MESSAGE value="Add new references to bibliography; update LaTeX document structure and abstract" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add new references to bibliography; update LaTeX document structure and abstract" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
   <component name="XDebuggerManager">
