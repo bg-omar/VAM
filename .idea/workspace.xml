@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" id="68444c05-2aa5-47b0-a236-1340c65f3f8d" name="Changes" comment="Add new LaTeX document for Vortex Æther Model; include title page, abstract, and detailed particle mapping">
-      <change afterPath="$PROJECT_DIR$/VAM - Appendix All/Appendix_ColdFusion.tex" afterDir="false" />
+    <list default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" id="68444c05-2aa5-47b0-a236-1340c65f3f8d" name="Changes" comment="Add new appendix for Vortex Æther Model; derive resonance frequency for vortex knots and propose experimental realization strategy">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TopologicalConstructionStandardModelParticlesVAM.tex" beforeDir="false" afterPath="$PROJECT_DIR$/TopologicalConstructionStandardModelParticlesVAM.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 0 Einsteins Æther/0-Einsteins Æther.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 0 Einsteins Æther/0-Einsteins Æther.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/0-Einsteins Æther.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/0-Einsteins Æther.pdf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="false" />
@@ -161,6 +157,7 @@
     "LaTeX.GR_in_3d.executor": "Run",
     "LaTeX.LagrangianGravityElectromagnetism.executor": "Run",
     "LaTeX.Tijdsdilatatie.executor": "Run",
+    "LaTeX.TopologicalConstructionStandardModelParticlesVAM.executor": "Run",
     "LaTeX.VAM-AssumptionsInconsistenciesAndPredictedPhenomena.executor": "Run",
     "LaTeX.VAM.executor": "Run",
     "LaTeX.VAM_Gravity_LERN_ftl.executor": "Run",
@@ -512,7 +509,7 @@
       <workItem from="1749746186866" duration="7283000" />
       <workItem from="1749753850267" duration="8035000" />
       <workItem from="1749766454472" duration="921000" />
-      <workItem from="1749768122881" duration="2413000" />
+      <workItem from="1749768122881" duration="3266000" />
     </task>
     <task id="LOCAL-00001" summary="some small tests">
       <created>1739958944014</created>
@@ -850,15 +847,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749611543494</updated>
     </task>
-    <task id="LOCAL-00052" summary="Add new LaTeX document for Vortex Æther Model; include title page, abstract, and detailed particle mapping">
+    <task id="LOCAL-00053" summary="Add new appendix for Vortex Æther Model; derive resonance frequency for vortex knots and propose experimental realization strategy">
       <option name="closed" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
-      <created>1749767212989</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
+      <created>1749771388099</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
       <option name="project" value="LOCAL" />
-      <updated>1749767212989</updated>
+      <updated>1749771388100</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -893,7 +890,6 @@
     <ignored-roots>
       <path value="$USER_HOME$/projects/VAMcore" />
     </ignored-roots>
-    <MESSAGE value="Vertaal sectietitel 'Introduction' naar 'Introductie' in 01_introductie.tex" />
     <MESSAGE value="Hernoem LaTeX-bestanden en update bestandslocaties voor consistentie; vertaal sectietitel 'Introduction' naar 'Introductie' in 01_introductie.tex" />
     <MESSAGE value="Update terminology from &quot;vortex&quot; to &quot;wervel&quot; for consistency; improve clarity in multiple sections of LaTeX documents" />
     <MESSAGE value="Refactor LaTeX documents and Python scripts; update matplotlib version, improve clarity, and add visualizations for torus knots and vortex structures" />
@@ -918,7 +914,8 @@
     <MESSAGE value="Add new references to bibliography; update LaTeX document structure and abstract" />
     <MESSAGE value="Update LaTeX document structure; enhance formatting and add title page for clarity" />
     <MESSAGE value="Add new LaTeX document for Vortex Æther Model; include title page, abstract, and detailed particle mapping" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add new LaTeX document for Vortex Æther Model; include title page, abstract, and detailed particle mapping" />
+    <MESSAGE value="Add new appendix for Vortex Æther Model; derive resonance frequency for vortex knots and propose experimental realization strategy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add new appendix for Vortex Æther Model; derive resonance frequency for vortex knots and propose experimental realization strategy" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
   <component name="XDebuggerManager">
