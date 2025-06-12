@@ -1,0 +1,525 @@
+%! Author = Omar Iskandarani
+%! Title = Swirl Clocks and Vorticity-Induced Gravity
+%! Date = May 23, 2025
+%! Affiliation = Independent Researcher, Groningen, The Netherlands
+%! License = CC-BY 4.0
+%! ORCID = 0009-0006-1686-3961
+%! DOI = 10.5281/zenodo.15566336
+
+
+\documentclass[a4paper,12pt]{article}
+
+% Page Geometry
+\usepackage[a4paper, margin=2cm]{geometry}
+
+% Language, Encoding, Fonts
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+
+% Colors, Graphics, Diagrams
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{xcolor}
+
+% Math and Physics
+\usepackage{amsmath, amssymb, physics}
+\usepackage{siunitx}
+
+% Tables and Figures
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{array, tabularx, makecell, multirow}
+\renewcommand{\arraystretch}{1.5}
+\renewcommand{\floatpagefraction}{.8}
+\usepackage[font=footnotesize]{caption}
+\usepackage{subcaption}
+
+% Code and Listings
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily\footnotesize, breaklines=true}
+
+% TOC Customization
+\usepackage{tocloft}
+\setcounter{tocdepth}{4}
+\renewcommand{\cftsecfont}{\bfseries}
+\renewcommand{\cftsubsecfont}{\itshape}
+\renewcommand{\cftsecleader}{\cftdotfill{5}}
+\renewcommand{\contentsname}{\centering \Huge\textbf{Contents}}
+
+% Links and Metadata
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue,
+    pdftitle={The Vortex Æther Model},
+    pdfauthor={Omar Iskandarani},
+    pdfkeywords={vorticity, gravity, æther, fluid dynamics, time dilation, VAM}
+}
+\usepackage{bookmark} % PDF bookmarks
+
+% Bibliography
+\usepackage[numbers]{natbib} % Or switch to biblatex if preferred
+\usepackage[backend=biber,style=phys]{biblatex}
+\addbibresource{../references.bib}
+
+
+% Line and Hyphenation
+\usepackage[none]{hyphenat}
+\usepackage{amsfonts}
+\usepackage{sectsty}
+\sectionfont{\Large\bfseries\sffamily}
+\subsectionfont{\large\bfseries\sffamily}
+\usepackage{newtxtext,newtxmath}
+\usepackage[scaled=0.95]{inconsolata} % for a clean monospace font
+\usepackage{mathrsfs}
+
+\sloppy
+
+\begin{document}
+
+    \begin{titlepage}
+        \thispagestyle{empty}
+        \centering
+        \vspace*{2cm}
+        {\Huge\bfseries Topological \& Fluid-Dynamic Lagrangian in the Vortex Æther Model \par}
+        \vspace{0.5cm}
+        {\Large Based on Vortex Core Rotation and Ætheric Flow \par}
+        \vspace{2cm}
+        {\Large\itshape Omar Iskandarani\par}
+        \vspace{0.5cm}
+        \textit{Independent Researcher, Groningen, The Netherlands} \\
+        ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961} \\
+        DOI: \href{https://doi.org/10.5281/zenodo.15566319}{10.5281/zenodo.15566319} \\
+        \vfill
+        {\large \today\par}
+
+
+        \begin{abstract}
+            This document presents a Lagrangian formulation for the Vortex Æther Model (VAM), focusing on the topological and fluid-dynamic aspects of particle interactions. It introduces a path-integral approach to quantize vorticity, linking it to gauge theory and relativity corrections. The model posits that particles like electrons and protons are represented as vortex knots in an incompressible æther, with their dynamics governed by a Lagrangian that incorporates both topological stability and fluid flow characteristics.
+        \end{abstract}
+
+    \end{titlepage}
+
+    \newpage
+
+\chapter*{Gauge Field Topologies (Photon, Gluon, W/Z)}
+
+In VAM the gauge fields emerge from structured vortex flows in the æther.  A photon is realized as a self-sustaining toroidal vortex ring carrying circulation (Fig. 1).  In particular, the Maxwell term $-\tfrac14 F_{\mu\nu}F^{\mu\nu}$ maps to a fluid helicity term: one finds an effective Lagrangian density $\sim\rho_{æ},\vec{v}\cdot(\nabla\times \vec{v})$file-3t91w2lonlaml1gmdbf5yd.  Physically this represents the swirl helicity of a vortex – the invariant $H=\int \vec{v}\cdot\vec{\omega},dV$ with $\vec{\omega}=\nabla\times\vec{v}$file-mxyfzk5zegpal6wgjcm1by.  A \textit{massless} photon corresponds to a dipole-like vortex ring with zero net helicity but nonzero circulationfile-mxyfzk5zegpal6wgjcm1by.  Its gauge symmetry U(1) is thus reinterpreted as conservation of global circulation in the æther.
+
+
+A gluon in SU(3) is modeled by three intertwined vortex tubes (a “color bundle”) whose triple linking encodes color charge.  The gluonic kinetic term $-\frac14G^a_{\mu\nu}G^{a\mu\nu}$ is mapped to the conservation of angular momentum in a 3-vortex flowfile-3t91w2lonlaml1gmdbf5ydfile-mxyfzk5zegpal6wgjcm1by.  Concretely, non-Abelian field lines arise from the mutual twisting of three vortex “strands”; color charge corresponds to topological linking (e.g. Hopf or torus knots)file-mxyfzk5zegpal6wgjcm1by.  The SU(3) symmetry becomes an emergent invariance under cyclic permutation of the three linked vortices.
+
+
+The weak SU(2) sector (W/Z bosons) appears as twisted vortex braids with spontaneous symmetry breaking.  The W and Z bosons are massive vortex excitations whose mass comes from æther compression (see below).  Their gauge fields arise from asymmetries in vortex swirl that couple to chirality.  In VAM one can define topological operators (e.g. chirality flips and twist-additions) that close into an SU(2) algebrafile-3t91w2lonlaml1gmdbf5yd.  The SU(2) gauge coupling corresponds to exchanging twist between braid strands.  Weak parity violation is interpreted as a handedness preference: only one sense of vortex twist (“left-handed”) actively couples to the weak condensatefile-navjqxjljtfafv42q9stcw.  For example, terms like
+
+Lweak∼−λ ∣ω⃗⋅(∇×ω⃗)∣2\mathcal{L}_{\rm weak} \sim -\lambda\,|\vec{\omega}\cdot(\nabla\times\vec{\omega})|^2Lweak​∼−λ∣ω⋅(∇×ω)∣2
+
+penalize tightly twisted vortices and enable chirality-changing reconnections at high energyfile-navjqxjljtfafv42q9stcw, mimicking W-boson exchange.
+
+
+The Higgs field appears as a scalar strain field ϕ describing local æther compression.  Its potential
+
+V(ϕ)=−Fmaxæ ∣φ∣2rc+λ∣φ∣4V(ϕ)=-F_{\text{max}}^{æ}\,\frac{|\varphi|^2}{r_c} + \lambda|\varphi|^4V(ϕ)=−Fmaxæ​rc​∣φ∣2​+λ∣φ∣4
+
+encodes the pressure balance in the ætherfile-3t91w2lonlaml1gmdbf5yd.  In the SM $V(H)=-\mu^2|H|^2+\lambda|H|^4$ is replaced in VAM by an elastic potential for the æther (Table VIIfile-3t91w2lonlaml1gmdbf5yd).  Spontaneous symmetry breaking occurs when a knot-induced pressure drop forces $ϕ\neq0$, without requiring an abstract Higgs field.
+
+
+Table 1: VAM mapping for gauge-sector terms. Each SM gauge term is paired with its æther-fluid analogfile-3t91w2lonlaml1gmdbf5ydfile-mxyfzk5zegpal6wgjcm1by.
+
+
+\begin{table}
+    \centering
+    \begin{tabular}{lll}
+        \toprule
+        \textbf{SM Gauge Term} & \textbf{VAM Analog} & \textbf{Interpretation} \\
+        \midrule
+        $-\tfrac14 F_{\mu\nu}F^{\mu\nu}$ (Maxwell) & $\tfrac12\rho_{æ},\vec{v}\cdot(\nabla\times\vec{v})$file-3t91w2lonlaml1gmdbf5yd & Swirl helicity density (photon as dipole vortex ring) \\
+        $-\tfrac14 G^a_{\mu\nu}G^{a\mu\nu}$ (QCD) & Conservation of angular momentum in 3-vortex flowfile-3t91w2lonlaml1gmdbf5yd & Interlinked color vortices (e.g. Hopf link) give gluons \\
+        SU(2) Gauge + Higgs & Twisted æther braids + strain field & W/Z as massive vortex braids; Higgs = æther strain ϕ \\
+        EM coupling $q\barψγ·Aψ$ & Circulation $Γ$ times knot chirality & Electric charge = net helicity (circulation)file-mxyfzk5zegpal6wgjcm1by \\
+        Weak chirality (parity) & Knot handedness & Only one twist direction couples (chiral vortex interactions)file-navjqxjljtfafv42q9stcw \\
+        SM Fermion Term & VAM Analog & Interpretation \\
+        Dirac kinetic $\barψ iγ^μ∂_μψ$ & $\tfrac12\rho_{æ} & \vec{v} \\
+        Mass term $m\barψψ$ & $\rho_{core},C_e^2$file-3t91w2lonlaml1gmdbf5yd & Core swirl pressure (mass from vorticity inertia) \\
+        Electric coupling $q\barψγ·Aψ$ & Circulation × knot chiralityfile-3t91w2lonlaml1gmdbf5yd & Charge from net circulation (helicity) in knot \\
+        Weak doublet coupling & Vortex chirality states & Left-handed vs right-handed twist of vortex \\
+        SM Term & VAM Analog & Interpretation \\
+        $m\barψψ$ (Dirac mass) & $\rho_{core}C_e^2,\barψψ$file-3t91w2lonlaml1gmdbf5yd & Core swirl pressure (mass from vortex) \\
+        $y\barψϕψ$ (Yukawa) & $\rho_{æ},ϕ,\barψψ$file-3t91w2lonlaml1gmdbf5yd & Vortex-induced compression (topological mass) \\
+        Higgs kinetic $(∂ϕ)^2$ & Elastic strain energy of ætherfile-3t91w2lonlaml1gmdbf5yd & Æther’s internal elasticity \\
+        Higgs potential $-μ^2ϕ^2+λϕ^4$ & $\lambdaϕ^4(1-ϕ^2/F_{æ}^{max})$file-3t91w2lonlaml1gmdbf5yd & Compressibility-driven symmetry breaking \\
+        \bottomrule
+    \end{tabular}
+    \caption{}
+    \label{tab:}
+\end{table}
+
+
+
+
+
+\textit{Fig. 1: A photon as a toroidal vortex ring in the æther, carrying circulation Γ and propagating at speed cfile-mxyfzk5zegpal6wgjcm1by. (Illustration: idealized torus with swirl.)}
+
+
+\chapter*{Knotted Fermions}
+
+In VAM every fermion is a stable knotted vortex.  For example, an electron is a trefoil knot $T(2,3)$ carrying charge and spin from its topologyfile-mxyfzk5zegpal6wgjcm1by.  Its spin-½ arises because the trefoil has a $3$-fold self-linking (corresponding to a half-integer rotation for a π-turn).  A neutrino corresponds to a “null knot” with zero net helicityfile-mxyfzk5zegpal6wgjcm1by, explaining its neutrality and chiral couplings.  Baryons are linked composites: the proton is three intertwined unknots with net positive helicityfile-mxyfzk5zegpal6wgjcm1by, while the neutron is a Borromean ring set (three loops with zero total helicity)file-mxyfzk5zegpal6wgjcm1by.  The SM spinor fields $ψ_f$ thus represent topological vortex knots in the æther.
+
+
+In fluid terms, a moving fermion is a localized vortex with core radius $r_c$ and swirl speed $C_e$.  Its Dirac kinetic term $\barψ iγ^μD_μ ψ$ maps to the vortex kinetic energy density.  Concretely, one identifies
+
+ψˉiγμ∂μψ  ⟺  12ρæ ∣v⃗∣2,\barψ iγ^μ∂_μ ψ \;\Longleftrightarrow\; \tfrac12\rho_{æ}\,|\vec{v}|^2,ψˉ​iγμ∂μ​ψ⟺21​ρæ​∣v∣2,
+
+so that a fermion’s motion carries fluid kinetic energyfile-3t91w2lonlaml1gmdbf5yd.  A mapping table for fermionic terms is given below.
+
+
+\begin{table}
+    \centering
+    \begin{tabular}{lll}
+        \toprule
+        \textbf{SM Fermion Term} & \textbf{VAM Analog} & \textbf{Interpretation} \\
+        \midrule
+        Dirac kinetic $\barψ iγ^μ∂_μψ$ & $\tfrac12\rho_{æ} & \vec{v} \\
+        Mass term $m\barψψ$ & $\rho_{core},C_e^2$ & Core swirl pressure (mass from vorticity inertia) \\
+        Electric coupling $q\barψγ·Aψ$ & Circulation × knot chirality & Charge from net circulation (helicity) in knot \\
+        Weak doublet coupling & Vortex chirality states & Left-handed vs right-handed twist of vortex \\
+        \bottomrule
+    \end{tabular}
+    \caption{}
+    \label{tab:}
+\end{table}
+
+
+
+
+
+
+For example, using Kelvin’s circulation theorem one shows the vortex’s circulation is $\Gamma=2\pi r_cC_e$ and its kinetic energy $E=\frac12\rho_{æ}(\Gamma/(2\pi r_c))^2\cdot\frac{4}{3}\pi r_c^3=\frac{\rho_{æ}\Gamma^2}{6\pi r_c}$.  Comparing to $E=mc^2$ yields an emergent mass
+
+meff=ρæ Γ26π rc c2 ,m_{\rm eff}=\frac{\rho_{æ}\,\Gamma^2}{6\pi\,r_c\,c^2}\,, meff​=6πrc​c2ρæ​Γ2​,
+
+demonstrating that inertial mass arises from vortex geometryfile-3t91w2lonlaml1gmdbf5ydfile-3t91w2lonlaml1gmdbf5yd.  In this way, the electron mass appears not via an arbitrary Yukawa coupling but from the swirling æther pressure of its knotfile-3t91w2lonlaml1gmdbf5ydfile-3t91w2lonlaml1gmdbf5yd.  The mapping replaces $m\barψψ$ by a fluid term $\rho_{core}C_e^2\barψψ$ (cf. Table VII).
+
+
+\chapter*{Helicity Mass Mechanisms}
+
+Helicity and vorticity lie at the heart of charge and mass in VAM.  Electric charge $q$ is proportional to the knot’s total helicity $H=\int\vec{v}\cdot\vec{\omega},dV$file-mxyfzk5zegpal6wgjcm1by.  In particular one finds $q\sim \Gamma,\mathrm{sgn}(H)$, so that the electron’s negative charge is tied to its negative helicityfile-mxyfzk5zegpal6wgjcm1by.  Similarly, spin comes from the knot class (e.g. a trefoil knot has topological spin-½file-mxyfzk5zegpal6wgjcm1by).  The Yukawa coupling $y\barψϕψ$ (fermion–scalar mass term) is interpreted as a topological coupling: it arises when a vortex knot compresses the local æther (changing $ϕ$)file-3t91w2lonlaml1gmdbf5yd.  In VAM one replaces $y\barψϕψ$ by a term $\rho_{æ}ϕ,\barψψ$ – the fermion gains mass from the local fluid pressure $ϕ$ (Table VIIfile-3t91w2lonlaml1gmdbf5yd).
+
+
+The Higgs field $ϕ$ itself is the æther’s strain field.  Its potential
+
+V(ϕ)=−Fæmaxrc∣ϕ∣2+λ∣ϕ∣4V(ϕ)=-\frac{F_{æ}^{max}}{r_c}|ϕ|^2 + \lambda|ϕ|^4V(ϕ)=−rc​Fæmax​​∣ϕ∣2+λ∣ϕ∣4
+
+arises from the Bernoulli pressure due to a vortex knotfile-3t91w2lonlaml1gmdbf5yd.  Thus symmetry breaking occurs when strong vortex swirl ($C_e$ large) reduces the local pressure $P$ below ambient, forcing $ϕ\neq0$file-3t91w2lonlaml1gmdbf5yd.  Unlike the SM Higgs, this $ϕ$ has a mechanical origin.  At equilibrium $dV/dϕ=0$ gives a nonzero vacuum $\langleϕ\rangle\propto\sqrt{F_{æ}^{max}/(\lambda r_c)}$file-3t91w2lonlaml1gmdbf5yd – a static æther compression.
+
+
+Table 2: VAM mapping for mass-generating terms. Fluid analogs of SM mass terms, showing helicity/pressure originfile-3t91w2lonlaml1gmdbf5ydfile-3t91w2lonlaml1gmdbf5yd:
+
+
+
+\begin{table}
+    \centering
+    \begin{tabular}{lll}
+        \toprule
+        \textbf{SM Term} & \textbf{VAM Analog} & \textbf{Interpretation} \\
+        \midrule
+        $m\barψψ$ (Dirac mass) & $\rho_{core}C_e^2,\barψψ$ & Core swirl pressure (mass from vortex) \\
+        $y\barψϕψ$ (Yukawa) & $\rho_{æ},ϕ,\barψψ$ & Vortex-induced compression (topological mass) \\
+        Higgs kinetic $(∂ϕ)^2$ & Elastic strain energy of æther & Æther’s internal elasticity \\
+        Higgs potential $-μ^2ϕ^2+λϕ^4$ & $\lambdaϕ^4(1-ϕ^2/F_{æ}^{max})$ & Compressibility-driven symmetry breaking \\
+        \bottomrule
+    \end{tabular}
+    \caption{}
+    \label{tab:}
+\end{table}
+
+
+
+
+
+\chapter*{Vorticity Interactions}
+
+All SM interactions map to ætheric vorticity couplings.  Gauge covariant derivatives $D_μ=\partial_μ -igA_μ$ become effective swirl velocities: a charged particle sees the local fluid flow $\vec{v}+\vec{A}_{\rm swirl}$file-3t91w2lonlaml1gmdbf5yd.  In the fermion kinetic term, one can write
+
+ψˉγμDμψ  ⟺  ρæ v⃗⋅v⃗swirl ,\barψγ^μD_μψ \;\Longleftrightarrow\; \rho_{æ}\,\vec{v}\cdot\vec{v}_{\rm swirl}\,, ψˉ​γμDμ​ψ⟺ρæ​v⋅vswirl​,
+
+so that minimal coupling is just advection by the swirl field.
+
+
+Strong (color) interactions arise from the linking of three vortex strands.  In particular, the nonabelian field strength in SU(3) corresponds to local curvature of a triple-vortex bundle.  Gluon exchange is thus the exchange of twist among the three linked tubesfile-mxyfzk5zegpal6wgjcm1by.  This naturally encodes color confinement: three-vortex bound states (baryons) are stable knots, while isolated single-vortex excitations (color charges) do not propagate freely.
+
+
+Weak interactions, as noted, require topology change.  In VAM these are mediated by rare high-energy reconnection events.  One can introduce higher-order terms in the Lagrangian that break helicity conservation only at large vortex curvature.  For example:
+
+
+\mathcal{L}'_{\rm weak}=-\eta\,|\nabla^2\vec{v}|^2\,,$$
+which are negligible for gentle twists but activate when $\omega$ is tightly wound:contentReference[oaicite:46]{index=46}.  Physically, a very twisted vortex loop (energy $E\sim 1/r_c$) can “snap” and reattach, analogous to a W/Z exchange changing particle identity:contentReference[oaicite:47]{index=47}.  Because only one chirality of twist couples to these terms, this reproduces the SM’s left-handed weak currents:contentReference[oaicite:48]{index=48}.
+
+**Table 3: VAM mapping for interaction terms.** Fluid analogs of SM interaction terms and higher-order corrections:contentReference[oaicite:49]{index=49}:contentReference[oaicite:50]{index=50}:
+
+| SM Interaction           | VAM Analog                                       | Interpretation                                 |
+|--------------------------|--------------------------------------------------|-----------------------------------------------|
+| Gauge coupling $D_μ=∂_μ-igA_μ$ | $\vec{v} + \vec{A}_{\rm swirl}$:contentReference[oaicite:51]{index=51} | Particle advection by vortex-induced flow     |
+| Yukawa interaction $y\barψϕψ$ | $\rho_{æ}\,ϕ\,\barψψ$:contentReference[oaicite:52]{index=52}       | Mass coupling via local æther compression     |
+| Non-abelian self-coupling | Multi-vortex linking (triple-strand twist):contentReference[oaicite:53]{index=53} | Color SU(3) from linked vortex flow           |
+| Weak vertex (W/Z exchange) | Helicity-torsion term $|\omega·(∇×\omega)|^2$:contentReference[oaicite:54]{index=54} | Vortex reconnections (high-curvature topology changes) |
+| Chiral projector $(1-\gamma^5)$ | Knot handedness selection                  | Only one vortex twist direction participates:contentReference[oaicite:55]{index=55} |
+
+# Quantum Corrections from Swirl Energy
+
+Higher-order quantum effects in the SM (loops, Lamb shift, g–2) arise in VAM from ætheric field fluctuations.  The electron’s **anomalous magnetic moment** is obtained by its self-interaction of circulation: one finds
+$$\mu_{\rm VAM}=q_e C_e r_c^2,\qquad
+\Delta g_{\rm VAM}=\frac{\rho_{æ}\,r_c^2 c}{4\pi}\,,$$
+so that with proper parameter choices this reproduces the SM $g-2$ series:contentReference[oaicite:56]{index=56}.  Likewise the **Lamb shift** comes from local vorticity fluctuations around the proton.  In place of vacuum polarization, VAM predicts
+$$\Delta E_{\rm VAM}\approx \frac{\rho_{æ}C_e^2}{8\pi}\ln\frac{r_c}{\lambda_c},$$
+with $\lambda_c$ the electron Compton wavelength:contentReference[oaicite:57]{index=57}.  This has the same parametric form as the QED result, and can match experiment by choosing $\rho_{æ}$ accordingly.
+
+Importantly, VAM makes testable predictions.  For example, if atomic orbitals are knotted vortices then analog knotted vortex states should be observable in superfluid helium:contentReference[oaicite:58]{index=58}.  VAM predicts that applying intense magnetic fields or vorticity to an atom would perturb its spectrum: “spectroscopic anomalies” might appear under controlled vortex fields:contentReference[oaicite:59]{index=59}.  One concrete proposal is to measure the electron $g$-factor in the presence of a macroscopic vortex lattice (e.g. rotating superfluid):contentReference[oaicite:60]{index=60}.  Likewise, probing hydrogen-like ions in a swirling BEC could reveal slight shifts in transition frequencies:contentReference[oaicite:61]{index=61}:contentReference[oaicite:62]{index=62}.  Such experiments could distinguish VAM from standard QFT.
+
+Classical vortex physics underpins all these correspondences: Kelvin’s vortex-atom idea:contentReference[oaicite:63]{index=63} and Helmholtz’s vortex theorems:contentReference[oaicite:64]{index=64} motivate the topological picture.  The æther density $\rho_{æ}$, circulation quantum $\Gamma$, and swirl velocity $C_e$ replace Planck units, with
+$$\hbar_{\rm VAM}=2m_eC_e a_0,\quad \alpha=2C_e/c$$
+emerging from vortex geometry:contentReference[oaicite:65]{index=65}:contentReference[oaicite:66]{index=66}.  In summary, every SM Lagrangian term finds an analog in VAM: kinetic energies become fluid kinetic or swirl energies, couplings become vorticity linkings, and potential terms become æther pressure fields.  This topological reformulation offers new insights (knotted electrons, toroidal photons) and leads to experimental signatures (fluid analogs, vorticity-induced shifts) testable by modern precision and analog experiments:contentReference[oaicite:67]{index=67}:contentReference[oaicite:68]{index=68}.
+
+**Sources:** VAM definitions and mappings are drawn from the VAM benchmarks:contentReference[oaicite:69]{index=69}:contentReference[oaicite:70]{index=70}.  Classical fluid references (Kelvin 1867; Helmholtz 1858) underlie the topology:contentReference[oaicite:71]{index=71}:contentReference[oaicite:72]{index=72}, while modern vortex/Knot theory is reviewed in:contentReference[oaicite:73]{index=73}:contentReference[oaicite:74]{index=74}.  Experimental tests of knotted vortex phenomena are discussed in:contentReference[oaicite:75]{index=75}:contentReference[oaicite:76]{index=76}.
+
+
+
+\chapter*{Topological Construction of Standard Model Particles in the VAM}
+\section*{Introduction}
+In the Vortex Æther Model (VAM), space is a continuous inviscid fluid whose stable \textit{vortex knots} represent elementary particlesfile-3t91w2lonlaml1gmdbf5yd. Mass, charge, and spin emerge from conserved fluid quantities: circulation, helicity, and knot topology. This idea echoes Kelvin’s 19th-century vortex-atom hypothesis, where “matter [is] nodal vorticity structures in an ideal fluid”file-9n3nwwvhanz55dv1j7xjeb. Modern studies (Ranada, Kholodenko et al.) also show Maxwellian and Yang–Mills fields admit \textit{knotted} solutions whose topology encodes charge and massfile-14astqf7ixzfu3p1dgb7azfile-14astqf7ixzfu3p1dgb7az. VAM explicitly adopts these concepts: charged vortex filaments (e.g. Hopf-linked loops) carry electric charge, while higher-genus knots encode quantized helicity and inertiafile-14astqf7ixzfu3p1dgb7azfile-3t91w2lonlaml1gmdbf5yd. We here develop a detailed mapping between all Standard Model (SM) particles and fluid vortex topologies, and derive the associated field properties.
+
+\section*{Methodology (VAM Field Principles)}
+VAM postulates a compressible, superfluid æther obeying continuum fluid mechanics. Key principles include conservation of mass and vorticity, incompressible Euler equations, and a Bernoulli-like pressure relationfile-3t91w2lonlaml1gmdbf5ydfile-3t91w2lonlaml1gmdbf5yd. In particular, vortex circulation $\Gamma=\oint_C\mathbf{v}\cdot d\boldsymbol{\ell}$ is quantized and conserved, and mass arises from the kinetic energy of swirling fluidfile-3t91w2lonlaml1gmdbf5ydfile-emqmb5nnn8sjdumxrzzgmj. Vorticity is defined by
+ω  =  ∇×v,ω=∇×v,
+and helicity $H=\int_V \mathbf{v}\cdot\boldsymbol{\omega},dV$ is a topological invariantfile-emqmb5nnn8sjdumxrzzgmjfile-emqmb5nnn8sjdumxrzzgmj. Fluid pressure satisfies a Bernoulli relation:
+P=P0−12ρa∣v∣2,P=P0​−21​ρa​∣v∣2,
+so strong swirl reduces local pressurefile-3t91w2lonlaml1gmdbf5yd. These equations imply an ætheric “Poisson” gravity: $\nabla^2\Phi_v \propto -\rho_a|\boldsymbol{\omega}|^2$, yielding emergent gravity from vorticity gradientsfile-3t91w2lonlaml1gmdbf5yd. We employ these field relations (continuity, Euler, vorticity) along with vortex topology to compute circulation, energy density and mass for each knot modelfile-emqmb5nnn8sjdumxrzzgmjfile-liyzhsqms9nmshbzsdnxfc.
+
+\section*{Particle–Topology Map}
+According to VAM, every SM fermion or boson corresponds to a specific vortex knot or link. Observable properties (charge, spin, chirality) follow from the knot’s topology. For example, the electron is modeled as a right-handed trefoil torus knot $T(2,3)$ with linking number $L_k=3$file-3t91w2lonlaml1gmdbf5ydfile-3t91w2lonlaml1gmdbf5yd. Its chirality (right- vs left-handed) corresponds to knot handedness, its charge $-1$ emerges from quantized circulation, and its spin $1/2$ arises from the knot’s swirl pattern. By contrast, a neutrino may correspond to a simpler loop or Hopf link with net zero charge; we treat it as an unknotted loop (no self-linking) of definite helicity (left-handed for active neutrinos). Table 1 summarizes the proposed topologies, invariants, and quantum numbers of each SM particle. This mapping is guided by the fact that higher linking or knot complexity corresponds to greater mass and quantum numbersfile-3t91w2lonlaml1gmdbf5ydfile-3t91w2lonlaml1gmdbf5yd.
+
+\begin{table}
+        \centering
+        \begin{tabular}{lllllll}
+            \toprule
+            \textbf{Particle} & \textbf{Knot Type} & \textbf{Invariants (Linking/Helicity)} & \textbf{Chirality} & \textbf{Charge} & \textbf{Spin} & \textbf{Special Properties} \\
+            \midrule
+            Electron (e⁻) & Trefoil $T(2,3)$ & Self-linking $L_k=3$, helicity ≠0file-3t91w2lonlaml1gmdbf5yd & Right-handed & –1 & 1/2 & Massive fermion, \textit{vortex knot}, finite core \\
+            Neutrino (ν) & Simple loop / Hopf & $L_k=0$ (neutral), helicity nonzero & Left-handed & 0 & 1/2 & Nearly massless, minimal knot (helicity node) \\
+            Up quark (u) & Torus knot $T(2,5)$ or 2-link & $L_k=5$ (or two-loop link) & Both handed & +2/3 & 1/2 & Color triplet, fractional charge \\
+            Down quark (d) & Torus knot $T(2,7)$ or 3-link & $L_k=7$ & Both handed & –1/3 & 1/2 & Color triplet, heavier than $u$ \\
+            Charm (c) & Torus knot $T(3,4)$ & $L_k=12$ (example) & Both handed & +2/3 & 1/2 & Second-generation heavy quark \\
+            Strange (s) & Torus knot $T(3,5)$ & $L_k=15$ & Both handed & –1/3 & 1/2 & Second-generation, moderate mass \\
+            Top (t) & Torus knot $T(3,7)$ & $L_k=21$ (beyond pq=15) & Both handed & +2/3 & 1/2 & Heaviest quark, very tight knot \\
+            Bottom (b) & Torus knot $T(4,5)$ & $L_k=20$ (beyond pq=15) & Both handed & –1/3 & 1/2 & Heavy quark, large knot radius \\
+            Photon (γ) & Linked vortex dipole & Hopf link ($L_k=1$) & N/A (no mass) & 0 & 1 & Massless gauge boson, long-range field \\
+            W⁺/W⁻ boson & Vortex dipole (2-link) & $L_k=1$ (charged link) & N/A & ±1 & 1 & Charged massive boson, short-range weak \\
+            Z boson & Vortex ring (untwisted) & $L_k=0$ (neutral) & N/A & 0 & 1 & Neutral massive boson (Z⁰), weak force \\
+            Gluons (8) & 3-linked unknots & Color helicity configsfile-3t91w2lonlaml1gmdbf5yd & N/A & 0 & 1 & Massless color gauge bosons, confined \\
+            Higgs (H) & Trivial vortex ring & $L_k=0$ & N/A & 0 & 0 & Scalar massive field (symmetry breaking) \\
+            Knot $T(p,q)$ & $pq$ & Used for SM? & Stability (VAM) & Potential Role & null & null \\
+            $T(2,3)$ & 6 & Yes (electron) & Stable (low energy) & Electron, muon, tau (families) & null & null \\
+            $T(2,5)$ & 10 & Yes (up quark) & Stable & Up/charm/top quarks & null & null \\
+            $T(2,7)$ & 14 & Yes (down quark) & Metastable & Down/strange/bottom quarks & null & null \\
+            $T(3,4)$ & 12 & — (maybe neutrino) & Stable & Neutrinos, heavy leptons & null & null \\
+            $T(3,5)$ & 15 & — (maybe s-quark) & Marginal & Heavy fermions or dark candidates & null & null \\
+            $T(4,5)$ & 20 & No & Unstable (VAM) & Possibly absent or new state & null & null \\
+            \textit{Others} & >15 & No & (Not in SM) & Dark sector/inflaton analogs & null & null \\
+            \bottomrule
+        \end{tabular}
+        \caption{All Particles from SM}
+        \label{tab:}
+    \end{table}
+
+
+
+
+\textit{Table 1:} Hypothesized vortex topologies for SM particles. Each particle’s charge, spin, and chirality emerge from the knot/link structurefile-3t91w2lonlaml1gmdbf5ydfile-3t91w2lonlaml1gmdbf5yd. (For example, the electron’s knot has three internal twists, giving it quantized helicity and mass; the photon is a neutral linked vortex dipolefile-3t91w2lonlaml1gmdbf5yd.)
+
+\section*{Vortex Field Derivations}
+For each particle’s knot, we compute the fluid field properties. Vorticity is $\boldsymbol{\omega}=\nabla\times\mathbf{v}$file-emqmb5nnn8sjdumxrzzgmj, and circulation around the core is $\Gamma=\oint_C\mathbf{v}\cdot d\boldsymbol{\ell}$file-emqmb5nnn8sjdumxrzzgmj. These determine charge (via quantized $\Gamma$) and magnetic moment. The pressure in the æther follows Bernoulli’s principle:
+P(r)=P∞−12ρa∣v(r)∣2,P(r)=P∞​−21​ρa​∣v(r)∣2,
+so strong swirl ($|\mathbf{v}|\sim C_e$) depresses pressurefile-3t91w2lonlaml1gmdbf5yd. For a vortex core of angular velocity $\omega$ and density $\rho_a$, the kinetic energy density is
+u=12ρa∣v∣2=12ρaω2u=21​ρa​∣v∣2=21​ρa​ω2
+(e.g.\ $\omega = 2C_e/r_c$ for a solid-body core)file-liyzhsqms9nmshbzsdnxfc. Integrating over the core gives the inertial energy $E=\int u,dV$, so the vortex “mass” is
+M=Ec2.M=c2E​.
+In VAM, one finds
+E=8π3ρaCe2rc Lk,M=8πρaCe2rc3c2 Lk,E=38π​ρa​Ce2​rc​Lk​,M=3c28πρa​Ce2​rc​​Lk​,
+where $L_k$ is the knot’s linking numberfile-liyzhsqms9nmshbzsdnxfcfile-3t91w2lonlaml1gmdbf5yd. These formulas show how higher-link knots carry more energy (mass) than simpler ones, consistent with heavier particles. (Above, $C_e$ is the swirl velocity and $r_c$ the core radius.) All VAM core equations – continuity, Euler, and Poisson gravity – can be written in analogy to field theory; e.g.\ helicity $H=\int \mathbf{v}\cdot\boldsymbol{\omega},dV$ is dual to a Chern–Simons termfile-emqmb5nnn8sjdumxrzzgmj.
+
+\section*{Predictive Topology Catalog (Appendix)}
+VAM allows us to classify all torus knots $T(p,q)$ of complexity $p!q\le15$. Up to this bound, the distinct knots are $T(2,3),T(2,5),T(2,7),T(3,4),T(3,5)$ (and their mirrors). Table 2 lists these and their stability. We mark those used for SM particles above. Notably, $T(3,5)$ (linking 15) and $T(3,4)$ (12) are relatively simple and could correspond to neutrinos or heavy quarks. Any remaining torus knots (e.g. $T(4,5)$ with $pq=20$) lie just beyond SM mapping and might represent \textit{new} sectors (e.g. dark matter or inflaton analogs). Stability in VAM requires balanced swirl/tension (see [2], [47]): generally low-$p,q$ torus knots are stable, while very high-$L_k$ states tend to break into multiple vortices. For example, iterated Hopf links or figure-eight knots (not torus knots) could produce exotic charges or spin states. These candidates form an extended “periodic table” of vortex matter.
+
+
+
+\begin{table}
+    \centering
+    \begin{tabular}{lllll}
+        \toprule
+        \textbf{Knot $T(p,q)$} & \textbf{$pq$} & \textbf{Used for SM?} & \textbf{Stability (VAM)} & \textbf{Potential Role} \\
+        \midrule
+        $T(2,3)$ & 6 & Yes (electron) & Stable (low energy) & Electron, muon, tau (families) \\
+        $T(2,5)$ & 10 & Yes (up quark) & Stable & Up/charm/top quarks \\
+        $T(2,7)$ & 14 & Yes (down quark) & Metastable & Down/strange/bottom quarks \\
+        $T(3,4)$ & 12 & — (maybe neutrino) & Stable & Neutrinos, heavy leptons \\
+        $T(3,5)$ & 15 & — (maybe s-quark) & Marginal & Heavy fermions or dark candidates \\
+        $T(4,5)$ & 20 & No & Unstable (VAM) & Possibly absent or new state \\
+        \textit{Others} & >15 & No & (Not in SM) & Dark sector/inflaton analogs \\
+        \bottomrule
+    \end{tabular}
+    \caption{}
+    \label{tab:}
+\end{table}
+
+
+
+\textit{Table 2:} Torus knots $T(p,q)$ up to $pq\le15$ (complexity), indicating known SM assignments and VAM stability. VAM stability requires balanced Bernoulli pressure and vortex tensionfile-liyzhsqms9nmshbzsdnxfcfile-3t91w2lonlaml1gmdbf5yd. Many low-$p,q$ knots correspond to SM fermions (with increasing $L_k$ for heavier generations), whereas more complex knots (especially links or non-torus knots) might underlie new physics (dark matter, inflationary fields, etc.). For instance, the figure-eight knot or higher links could yield neutral, scalar excitations beyond the Higgs.
+
+\section*{Discussion and Experimental Signatures}
+This vortex framework reproduces the SM gauge symmetries as emergent constraints on circulation and braiding. In VAM, $U(1)_Y$ (electromagnetism) corresponds to global swirl orientation: a circular but untwisted æther flow has a conserved phase (hypercharge)file-3t91w2lonlaml1gmdbf5ydfile-3t91w2lonlaml1gmdbf5yd. $SU(2)_L$ arises from two-state chirality of vortices: left- vs right-handed knots behave as a doublet, and $W^\pm$ exchange corresponds to twisting/bifurcating between these statesfile-3t91w2lonlaml1gmdbf5ydfile-3t91w2lonlaml1gmdbf5yd. $SU(3)_C$ (color) emerges from three helicity axes of a multi-vortex systemfile-3t91w2lonlaml1gmdbf5yd: three stable swirl alignments (red, green, blue) and gluon exchange is realized by vortex reconnections or twist-transfer. In fact, VAM shows that gauge transformations are simply deformations that preserve a knot’s topology (linking number and helicity). Thus the abstract Lie groups of the SM are “implemented” by vortex-braiding operations in fluid spacefile-3t91w2lonlaml1gmdbf5yd.
+
+ Experimentally, VAM predicts subtle deviations from point-particle physics. For example, internal vortex structure could produce tiny form-factor effects (e.g. electron substructure) or modify dispersion at high energies. Vacuum birefringence in strong magnetic fields might be interpreted as æther vorticity effects on photon propagation. The existence of knot-dependent “families” suggests possible new resonances: e.g. excited torus-knot states of the electron or quarks could appear as heavy copies (fourth-generation fermions) or dark-sector analogs. Fluid analog experiments (e.g. knotted superfluid vortices) could directly test stability of these configurationsfile-3t91w2lonlaml1gmdbf5ydfile-14astqf7ixzfu3p1dgb7az. In sum, VAM offers concrete, testable mechanisms: gauge bosons as fluid excitations, particle mass from fluid pressure, and neutrino helicity from vortex chirality. Confirming any such signatures (e.g. via precision spectroscopy, high-field QED tests, or condensed-matter vortex analogs) would support this emergent-fluid view of particle physics.
+
+\section*{Appendix: Torus Knot Classification}
+To systematize the topological catalog, we list all torus knots $T(p,q)$ with $2\le p<q$, $\gcd(p,q)=1$, and $pq\le15$. Table 2 above highlights those, with notes on VAM energy stability. In general, knots with small $L_k=p,q$ and low genus are energetically favored; higher-$p,q$ knots require more ætheric energy to maintain and may be unstable or metastable. Non-torus knotted links (Hopf, chain links, figure-eight) can also exist in VAM, corresponding to multi-particle bound states or exotic bosons. VAM stability conditions come from balancing Bernoulli pressure and maximum æther stressfile-3t91w2lonlaml1gmdbf5ydfile-liyzhsqms9nmshbzsdnxfc; these favor the simplest knots for observed particles. Unassigned knots (e.g. $T(3,5)$, $T(4,5)$, etc.) could be dark matter candidates or inflaton-analogs, but they remain speculative until matched to new data.
+
+\section*{Emergent Gauge Symmetries}
+The SM gauge group $SU(3)\times SU(2)\times U(1)$ finds a natural home in the fluid picturefile-3t91w2lonlaml1gmdbf5ydfile-3t91w2lonlaml1gmdbf5yd. U(1) phase invariance is literally the arbitrariness of global swirl angle; $SU(2)$ is realized by swaps of left/right knot chirality via reconnection; and $SU(3)$ by cyclic permutations of three-color helicity axes. Remarkably, VAM shows that imposing topological invariance (preserving linking number/helicity) is equivalent to gauge invariance. Therefore, the photon’s $U(1)$ symmetry and the weak and strong non-Abelian groups are not put in by hand but emerge from fluid circulation constraints and braid group identities of knotted vortices. This topological origin suggests new selection rules: for example, only configurations preserving total helicity are allowed, potentially explaining charge quantization and anomaly cancellations.
+
+\section*{References}
+\begin{enumerate}
+\item Definition of vorticity and helicity in fluid mechanicsfile-emqmb5nnn8sjdumxrzzgmjfile-emqmb5nnn8sjdumxrzzgmj.
+
+
+\item VAM model of vortex energy and mass (Appendix: Helicity as mass)file-liyzhsqms9nmshbzsdnxfcfile-liyzhsqms9nmshbzsdnxfc.
+
+
+\item VAM electron helicity and mass derivationfile-3t91w2lonlaml1gmdbf5yd.
+
+
+\item VAM Standard Model Lagrangian, postulates, and gauge mappingfile-3t91w2lonlaml1gmdbf5ydfile-3t91w2lonlaml1gmdbf5yd.
+
+
+\item Kholodenko et al., \textit{Optical knots and contact geometry} (review of fluid knotted fields)file-14astqf7ixzfu3p1dgb7azfile-14astqf7ixzfu3p1dgb7az.
+
+
+\item VAM theoretical foundations (Swirl Clocks paper)file-3t91w2lonlaml1gmdbf5yd.
+
+
+\item VAM pressure and confinement (VAM Higgs/compression)file-3t91w2lonlaml1gmdbf5yd.
+
+
+\item Gauge symmetry as fluid invariance and topological conservationfile-3t91w2lonlaml1gmdbf5yd.
+
+
+\end{enumerate}
+
+
+
+
+
+Citations
+\href{file://file-3t91w2lonlaml1gmdbf5yd%23:~:text=rather%20than%20assuming%20discrete%20point,quantum%20%EF%BF%BDelds,%20vam%20postulates%20a/}{4-StandardModel-Lagrangian VAM.pdf
+
+
+file://file-3t91w2LonLAML1GmdbF5YD
+}\href{file://xn--file-9n3nwwvhanz55dv1j7xjeb%23:~:text=energy%20constraints%20and%20kelvins%20vortex,maximum%20force%20constraints,%20the%20relation-gy58f/}{7-Philosophical_Depth_Companion.pdf
+
+
+file://file-9N3nWWvHaNz55dV1j7XJEB
+}\href{file://file-14astqf7ixzfu3p1dgb7az%23:~:text=some%20time%20ago%20ranada%20,type%20calculations/}{Optical knots and contact geometry II.pdf
+
+
+file://file-14aSTqF7iXZFu3p1dgB7az
+}\href{file://file-14astqf7ixzfu3p1dgb7az%23:~:text=electric%20and%20magnetic%20charges%20can,described%20in%20a%20number%20of/}{Optical knots and contact geometry II.pdf
+
+
+file://file-14aSTqF7iXZFu3p1dgB7az
+}\href{file://file-3t91w2lonlaml1gmdbf5yd%23:~:text=strong%20swirl%20velocity%20ce%20and,due%20to%20the%20bernoulli%20e%EF%BF%BDect/}{4-StandardModel-Lagrangian VAM.pdf
+
+
+file://file-3t91w2LonLAML1GmdbF5YD
+}\href{file://file-3t91w2lonlaml1gmdbf5yd%23:~:text=1,euclidean,%20incompressible%20and%20inviscid/}{4-StandardModel-Lagrangian VAM.pdf
+
+
+file://file-3t91w2LonLAML1GmdbF5YD
+}\href{file://file-emqmb5nnn8sjdumxrzzgmj%23:~:text=b/}{Appendix_CalculateKnotHelicity.pdf
+
+
+file://file-EmqMB5nnN8SJDuMxRzzGMJ
+}\href{file://file-emqmb5nnn8sjdumxrzzgmj%23:~:text=%EF%BF%BD%20v%E2%83%97/}{Appendix_CalculateKnotHelicity.pdf
+
+
+file://file-EmqMB5nnN8SJDuMxRzzGMJ
+}\href{file://file-emqmb5nnn8sjdumxrzzgmj%23:~:text=h%20=/}{Appendix_CalculateKnotHelicity.pdf
+
+
+file://file-EmqMB5nnN8SJDuMxRzzGMJ
+}\href{file://file-liyzhsqms9nmshbzsdnxfc%23:~:text=consider%20the%20rotational%20energy%20density,of%20a%20vortex%20core/}{Appendix_CalculateNeucleusMass.pdf
+
+
+file://file-LiYzHsqms9NmsHbzSDNXFc
+}\href{file://file-3t91w2lonlaml1gmdbf5yd%23:~:text=if%20the%20electron%20is%20modeled,topological%20excitation,%20the%20mass%20becomes/}{4-StandardModel-Lagrangian VAM.pdf
+
+
+file://file-3t91w2LonLAML1GmdbF5YD
+}\href{file://file-3t91w2lonlaml1gmdbf5yd%23:~:text=in%20the%20standard%20model,%20su,mediated%20transitions/}{4-StandardModel-Lagrangian VAM.pdf
+
+
+file://file-3t91w2LonLAML1GmdbF5YD
+}\href{file://file-liyzhsqms9nmshbzsdnxfc%23:~:text=the%20mass%20is%20obtained%20by,m%20=%20e%2Fc2/}{Appendix_CalculateNeucleusMass.pdf
+
+
+file://file-LiYzHsqms9NmsHbzSDNXFc
+}\href{file://file-3t91w2lonlaml1gmdbf5yd%23:~:text=in%20vam,%20this%20acquires%20a,direct%20physical%20interpretation/}{4-StandardModel-Lagrangian VAM.pdf
+
+
+file://file-3t91w2LonLAML1GmdbF5YD
+}\href{file://file-3t91w2lonlaml1gmdbf5yd%23:~:text=%EF%BF%BD%20charge%20assignment:%20the%20hypercharge,or/}{4-StandardModel-Lagrangian VAM.pdf
+
+
+file://file-3t91w2LonLAML1GmdbF5YD
+}\href{file://file-3t91w2lonlaml1gmdbf5yd%23:~:text=%EF%BF%BD%20swirl%20interpretation:%20left,vortices%20are%20dynamically%20and%20structurally/}{4-StandardModel-Lagrangian VAM.pdf
+
+
+file://file-3t91w2LonLAML1GmdbF5YD
+}\href{file://file-3t91w2lonlaml1gmdbf5yd%23:~:text=(e.g.,%20up/}{4-StandardModel-Lagrangian VAM.pdf
+
+
+file://file-3t91w2LonLAML1GmdbF5YD
+}\href{file://file-3t91w2lonlaml1gmdbf5yd%23:~:text=%EF%BF%BD%20swirl%20interpretation:%20left,vortices%20are%20dynamically%20and%20structurally/}{4-StandardModel-Lagrangian VAM.pdf
+
+
+file://file-3t91w2LonLAML1GmdbF5YD
+}\href{file://file-14astqf7ixzfu3p1dgb7az%23:~:text=in%20solving%20the%20moffatt%20conjecture,the%20iterated%20torus%20knots%20and/}{Optical knots and contact geometry II.pdf
+
+
+file://file-14aSTqF7iXZFu3p1dgB7az
+}\href{file://xn--file-3t91w2lonlaml1gmdbf5yd%23:~:text=in%20this%20framework,%20constants%20such,for%20example,%20%20is%20shown-3d8e/}{4-StandardModel-Lagrangian VAM.pdf
+
+
+file://file-3t91w2LonLAML1GmdbF5YD
+}
+
+All Sources
+\href{https://chatgpt.com/g/g-p-684b390b92d08191ba21cfd8003ecf08-sm-lagrangian-vam/c/4-StandardModel-Lagrangian%20VAM.pdf}{4-Standa...n VAM.pdf
+}\href{https://chatgpt.com/g/g-p-684b390b92d08191ba21cfd8003ecf08-sm-lagrangian-vam/c/7-Philosophical_Depth_Companion.pdf}{7-Philos...anion.pdf
+}\href{https://chatgpt.com/g/g-p-684b390b92d08191ba21cfd8003ecf08-sm-lagrangian-vam/c/Optical%20knots%20and%20contact%20geometry%20II.pdf}{Optical ...ry II.pdf
+}\href{https://chatgpt.com/g/g-p-684b390b92d08191ba21cfd8003ecf08-sm-lagrangian-vam/c/Appendix_CalculateKnotHelicity.pdf}{Appendix...icity.pdf
+}\href{https://chatgpt.com/g/g-p-684b390b92d08191ba21cfd8003ecf08-sm-lagrangian-vam/c/Appendix_CalculateNeucleusMass.pdf}{Appendix...sMass.pdf
+}
+
+
+
+
+
+
+
+\end{document}
