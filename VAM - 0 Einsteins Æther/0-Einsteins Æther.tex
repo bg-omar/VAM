@@ -69,6 +69,19 @@
 \usepackage{bookmark} % PDF bookmarks
 
 
+\usepackage[most]{tcolorbox}
+\tcbuselibrary{listings, breakable, skins}
+
+\newtcolorbox{vamprinciple}[1][]{
+    enhanced,
+    breakable,
+    colback=blue!5!white,
+    colframe=blue!60!black,
+    fonttitle=\bfseries,
+    title=Hybrid Gravitational Coupling in the Vortex Æther Model,
+    coltitle=black,
+    #1
+}
 
 
 % Line and Hyphenation
@@ -108,7 +121,16 @@
         \vspace{1.5cm}
 
         \begin{abstract}
-            This paper re-examines the æther concept through the lens of Einstein's evolving views and contrasts them with a contemporary framework: the Vortex Æther Model (VAM). Contrary to popular belief, Einstein did not abolish the æther but redefined it as a non-mechanical, structured medium bearing the physical properties of space itself. We trace his development from the 1905 rejection of the luminiferous æther to his 1920 declaration that \grqq space without æther is unthinkable.\textquotedblright{} The discussion then transitions to VAM, which models gravity, inertia, and time as emergent from quantized vorticity in an incompressible superfluid æther. Using topological vortex structures and conserved circulation, VAM formalizes Einstein's late æther view into a mathematically rigorous and experimentally testable framework.
+
+                This paper re-examines the concept of the æther through the evolving lens of Einstein’s philosophical reflections, culminating in a structured reinterpretation via the Vortex Æther Model (VAM). Contrary to the popular view that Einstein abolished the æther, his post-1920 writings explicitly reinstate it as a necessary medium — one that possesses field-like properties but lacks mechanical motion. We trace this conceptual evolution from the 1905 rejection of the luminiferous æther to the 1924 Einstein–Cartan correspondence, highlighting a shift toward a non-material, yet physically active, substrate.
+
+                Building on this foundation, the VAM proposes a physically structured æther modeled as an incompressible, inviscid superfluid, in which gravity and inertia arise from quantized circulation of knotted vortex filaments. Vorticity replaces curvature as the geometric substrate of gravitation, and conserved angular momentum within the æther gives rise to time dilation, mass-energy equivalence, and inertial response. The model introduces effective mass \( M_{\text{eff}}(r) \) derived from localized vortex energy, and a rotational potential \( \Omega \) governing swirl-based gravitational analogs.
+
+                This philosophical groundwork prepares the reader for later VAM developments, such as the formal time dilation equation in \textit{Swirl Clocks and Vorticity-Induced Gravity}~\cite{iskandarani2025swirl}, and the topological Lagrangians developed for vortex–knot matter. These works explore how localized æther structure encodes relativistic and quantum phenomena in a deterministic, experimentally testable framework — one that reframes the legacy of Einstein’s æther not as an outdated relic, but as a cornerstone of modern fluid-theoretic physics.
+
+                \textbf{Author’s Note:} This work is not intended as a neutral historical analysis, but as a conceptual bridge framing VAM as a modern realization of Einstein’s late æther philosophy.
+
+
             To reconcile VAM predictions across physical scales, we introduce a hybrid gravitational coupling function \( \mu(r) \), which smoothly interpolates between the vortex-derived gravitational constant \( G_{\text{swirl}} \) at quantum scales and classical Newtonian gravity at macroscopic distances. This resolves key discrepancies in subatomic and stellar regimes, ensuring consistency with both millimeter-scale laboratory tests and astrophysical observations. The resulting time-dilation law incorporates scale-dependent \( G_{\text{hybrid}}(r) \) and \( M_{\text{hybrid}}(r) \), unifying local vortex energetics with large-scale gravitational phenomenology.
 
         \end{abstract}
@@ -116,8 +138,6 @@
         \vspace{1em}
         \noindent\textbf{Keywords:} \textit{æther, Einstein, Vortex Æther Model, vorticity, time dilation, topological matter, fluid dynamics, Helmholtz, Kelvin, Maxwell}
 
-        \vspace{2em}
-        \noindent\textbf{Author's Note:} This paper is not intended as a neutral historical account, but as a conceptual lens framing the Vortex Æther Model (VAM) as a modern realization of ideas latent in Einstein's late philosophy.
 
     \end{titlepage}
 
