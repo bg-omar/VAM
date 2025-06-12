@@ -66,39 +66,52 @@
 
 % Bibliography
 \usepackage[numbers]{natbib} % Or switch to biblatex if preferred
+\usepackage[backend=biber,style=phys]{biblatex}
+\addbibresource{../references.bib}
+
 
 % Line and Hyphenation
 \usepackage[none]{hyphenat}
 \usepackage{amsfonts}
-
+\usepackage{sectsty}
+\sectionfont{\Large\bfseries\sffamily}
+\subsectionfont{\large\bfseries\sffamily}
+\usepackage{newtxtext,newtxmath}
+\usepackage[scaled=0.95]{inconsolata} % for a clean monospace font
+\usepackage{mathrsfs} % for fancy \mathscr fonts
 \sloppy
-
 
 \begin{document}
 
+    \begin{titlepage}
+        \thispagestyle{empty}
+        \centering
+        \vspace*{2cm}
+        {\Huge\bfseries Topological \& Fluid-Dynamic Lagrangian in the Vortex Æther Model \par}
+        \vspace{0.5cm}
+        {\Large Based on Vortex Core Rotation and Ætheric Flow \par}
+        \vspace{2cm}
+        {\Large\itshape Omar Iskandarani\par}
+        \vspace{0.5cm}
+        \textit{Independent Researcher, Groningen, The Netherlands} \\
+        ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961} \\
+        DOI: \href{https://doi.org/10.5281/zenodo.15566319}{10.5281/zenodo.15566319} \\
+        \vfill
+        {\large \today\par}
 
-    \author{
-        Omar Iskandarani\\
-        \small Independent Researcher, Groningen, The Netherlands
-        \thanks{\texttt{info@omariskandarani.com}}
-        \thanks{ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961} \quad DOI: \href{https://doi.org/10.5281/zenodo.15566336}{10.5281/zenodo.15566336} \quad License: \href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}}
-        \noindent\thanks{\textbf{Keywords:} \textit{time dilation, superfluid æther, Vortex Æther Model, vortex dynamics, emergent time, fluid spacetime, special relativity, analog gravity, 3D vortex structures, quantized circulation, relativistic effects, topological matter, fluid mechanics, vortex clocks, knot theory, mass generation, swirl gravity, topological quantum field theory, Gross--Pitaevskii, Biot--Savart, Standard Model unification, periodic table topology}}
-    }
-
-    \title{
-        \textbf{Topological \& Fluid-Dynamic Lagrangian in the Vortex Æther Model}\\[0.5em]
-        \large Reformulating ... \\
-        \normalsize A Topological ...
-    }
-    \date{\today}
-
-    \maketitle
 
     \begin{abstract}
         We present a unified topological-fluid framework grounded in the Vortex Æther Model (VAM), aimed at deriving the inertial mass of Standard Model (SM) particles and constructing a Lagrangian that incorporates electromagnetism, gravity, and extensions toward the strong and weak nuclear forces. Mass is modeled not as an intrinsic property, but as an emergent effect of quantized vorticity, knot topology, and ætheric swirl energy. Building upon prior derivations using the maximum ætheric force $F_{\max}$, vortex core radius $r_c$, Planck time $t_p$, and tangential swirl velocity $C_e$, we propose a family of mass formulas indexed by topological invariants such as the linking number $L_k$ and torus knot parameters $(p,q)$.
 
         We explore how trefoil ($T(2,3)$), figure-eight, and higher-order knots encode distinct energy densities and pressure equilibria in an incompressible superfluid medium, allowing quantitative predictions of the masses of the electron, proton, neutron, and neutral knot candidates. The vortex-induced Lagrangians include both Bernoulli and Biot--Savart dynamics, extended by spontaneous symmetry-breaking terms suggestive of Yang--Mills gauge structure. Finally, we propose a knot-periodic correspondence model where elemental families (e.g., reactive nonmetals, noble gases) emerge from quantized toroidal knot classes, providing a new topological lens on the periodic table.
     \end{abstract}
+
+  \end{titlepage}
+
+
+
+
+
 
     \newpage
         \input{sections/1-introduction}

@@ -18,4 +18,6 @@ self_helicity = N * (Gamma**2) * SL_k
 mutual_helicity = sum([2 * Gamma**2 * Lk_ij for _ in range(N * (N - 1) // 2)])
 total_helicity = self_helicity + mutual_helicity
 
-self_helicity, mutual_helicity, total_helicity
+print(self_helicity)
+print(mutual_helicity)
+print(total_helicity)

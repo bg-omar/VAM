@@ -47,5 +47,31 @@ ensures agreement with GR~\cite{iskandarani2025VAM2}.
 \subsection*{Suppression at Quantum Scales}
 To explain negligible gravity for elementary particles, VAM introduces a scale-dependent suppression factor $\mu(r)$, effective below $r^* \sim 10^{-3}$ m. This prevents excessive gravity from quantum-scale vortices while preserving agreement with Newtonian/GR gravity down to millimeter tests~\cite{adelberger2003tests}.
 
+\subsection{Hybridization of Gravitational Coupling for Macroscopic Regimes}
+
+To resolve inconsistencies in the VAM time-dilation predictions for macroscopic systems such as neutron stars, we introduce a transition function \(\mu(r)\) that smoothly interpolates between vortex-induced gravity at short distances and classical Newtonian gravity at large distances:
+\[
+    \mu(r) = \exp\left(-\frac{r^2}{R_0^2}\right), \quad R_0 \sim 10^{-12} \, \mathrm{m}.
+\]
+
+The hybrid gravitational constant and effective mass are defined as:
+\begin{align*}
+    G_{\text{hybrid}}(r) &= \mu(r) \, G_{\text{swirl}} + (1 - \mu(r)) \, G, \\
+    M_{\text{hybrid}}(r) &= \mu(r) \, M_{\text{eff}}^{\text{VAM}}(r) + (1 - \mu(r)) \, M,
+\end{align*}
+where \(M\) is the object's empirical mass and \(M_{\text{eff}}^{\text{VAM}}\) is the vorticity-induced mass derived from the æther distribution and $G_{\text{swirl}} = \frac{C_e c^5 t_p^2}{2 F_{\max} r_c^2}$ is the gravitational coupling derived from vortex-induced energy limits in the æther.
+
+
+This function smoothly returns $G_{\text{swirl}}$ at quantum vortex scales, and classical $G$ at stellar radii.
+
+The modified time-dilation equation becomes:
+\begin{equation}
+    \frac{d\tau}{dt} = \sqrt{1 - \frac{2 G_{\text{hybrid}}(r) \, M_{\text{hybrid}}(r)}{r c^2} - \frac{C_e^2}{c^2} e^{-r/r_c} - \frac{\Omega^2}{c^2} e^{-r/r_c}}.
+    \label{eq:hybrid_time_dilation}
+\end{equation}
+
+This hybrid formulation provides a predictive path to test the VAM deviation in upcoming high-precision timing experiments on pulsars or compact binaries.
+
+
 \subsection*{Conclusion}
 VAM matches GR's gravitational time dilation in weak and strong fields by assigning appropriate ætheric swirl velocities. Deviations are avoided by tuning $\beta$ and applying scale suppression $\mu(r)$, making VAM experimentally indistinguishable from GR for time dilation.

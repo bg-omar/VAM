@@ -34,7 +34,7 @@ r_t = 2.8179403227e-15   # Classical electron radius (m) or use Compton waveleng
 omega = 1e23  # Typical vorticity (1/s), refine if needed
 
 # Calculate Æther Density
-rho_æther = (M_e * c**2) / (pi**2 * A_0 * R_e**2 * omega**2)
+rho_æther = (M_e * c**2) / (pi**2 * a_0 * R_e**2 * omega**2)
 
 # Print result
 print(f"Æther Density (ρ_æ): {rho_æther:.3e} kg/m³")
@@ -43,7 +43,7 @@ lambda_C_p = h / (M_pr * c)  # Proton Compton wavelength (m)
 # Compute Proton Compton Angular Frequency
 omega_C_p = c / lambda_C_p  # Proton Compton angular frequency (1/s)
 # Calculate Æther Density using toroidal formula
-rho_æther = (M_e * c**2) / (pi**2 * A_0 * R_e**2 * omega_C_p**2)
+rho_æther = (M_e * c**2) / (pi**2 * a_0 * R_e**2 * omega_C_p**2)
 
 rho_æther2 = (M_e * c**2) / (pi**2 * R_c * R_c**2 * (c/lambda_c)**2)
 # Print results
@@ -98,13 +98,13 @@ def calculate_charge_circulation(m_æther, alpha, c, hbar, h, epsilon_0):
     e_derived = k * Gamma_1
     return e_derived
 
-def calculate_coulomb_force(e_known, epsilon_0, A_0):
+def calculate_coulomb_force(e_known, epsilon_0, a_0):
     """Calculate Coulomb force at the Bohr radius."""
-    return (1 / (4 * np.pi * epsilon_0)) * (e_known**2 / A_0**2)
+    return (1 / (4 * np.pi * epsilon_0)) * (e_known**2 / a_0**2)
 
-def calculate_vortex_force(m_æther, alpha, c, hbar, Gamma_1, A_0):
+def calculate_vortex_force(m_æther, alpha, c, hbar, Gamma_1, a_0):
     """Calculate vortex-induced force."""
-    return (m_æther**2 * alpha * c / hbar) * (Gamma_1**2 / A_0**2)
+    return (m_æther**2 * alpha * c / hbar) * (Gamma_1**2 / a_0**2)
 
 def calculate_max_force_scaling(c, G, alpha, L_p, R_c_values):
     """Calculate max force scaling as a function of vortex core radius."""
@@ -115,9 +115,9 @@ m_æther = 7.0e-7  # Estimated Æther mass density in kg/m³
 
 # Compute values
 e_derived = calculate_charge_circulation(m_æther, alpha, c, hbar, h, varepsilon_0)
-F_Coulomb_derived = calculate_coulomb_force(e, varepsilon_0, A_0)
+F_Coulomb_derived = calculate_coulomb_force(e, varepsilon_0, a_0)
 Gamma_1 = h / m_æther
-F_Vortex = calculate_vortex_force(m_æther, alpha, c, hbar, Gamma_1, A_0)
+F_Vortex = calculate_vortex_force(m_æther, alpha, c, hbar, Gamma_1, a_0)
 F_max_scaling = calculate_max_force_scaling(c, G, alpha, L_p, R_c)
 
 # Display results

@@ -1,3 +1,20 @@
+# Re-import required libraries after kernel reset
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib
+
+matplotlib.use('TkAgg')  # Ensure it uses Tkinter backend
+# ✅ Get the script filename dynamically and save as pdf
+import os
+
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+# Save with incrementing filename if file exists, restart count on rerun
+base_filename = f"{script_name}.png"
+filename = base_filename
+count = 1
+
+
+
 # Visualize a null-knot or vortex ring with zero net helicity – candidate for neutrino model
 # We'll make a twisted but non-chiral closed loop to represent a "null" knot configuration
 
@@ -25,4 +42,10 @@ ax.set_ylabel("y")
 ax.set_zlabel("z")
 ax.grid(True)
 plt.tight_layout()
+while os.path.exists(filename):
+    filename = f"{script_name}_{count}.png"
+    count += 1
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+
 plt.show()
+

@@ -9,7 +9,14 @@
 %! Date = 2025-06-01
 
 
-\documentclass[a4paper, aps,preprint,superscriptaddress, 12pt]{revtex4}
+% \documentclass[a4paper, aps,preprint,superscriptaddress, 12pt]{revtex4}{standalone}
+
+\documentclass[class=article, crop=false]{standalone}
+\usepackage[subpreambles=true]{standalone}
+\usepackage{import}
+\usepackage{blindtext}
+
+
 \usepackage[a4paper, margin=2cm]{geometry}
 \usepackage[T1]{fontenc}%
 \usepackage[utf8]{inputenc}%

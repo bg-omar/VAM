@@ -6,8 +6,6 @@
 %! ORCID = 0009-0006-1686-3961
 %! DOI = 10.5281/zenodo.15566319
 
-
-
 \documentclass[a4paper,12pt]{article}
 
 % Page Geometry
@@ -67,73 +65,88 @@
 
 % Bibliography
 \usepackage[numbers]{natbib} % Or switch to biblatex if preferred
+\usepackage[backend=biber,style=phys]{biblatex}
+\addbibresource{../references.bib}
+
 
 % Line and Hyphenation
 \usepackage[none]{hyphenat}
 \usepackage{amsfonts}
-
-
+\usepackage{sectsty}
+\sectionfont{\Large\bfseries\sffamily}
+\subsectionfont{\large\bfseries\sffamily}
+\usepackage{newtxtext,newtxmath}
+\usepackage[scaled=0.95]{inconsolata} % for a clean monospace font
+\usepackage{mathrsfs} % for fancy \mathscr fonts
 \sloppy
 
 \begin{document}
 
-\title{Time Dilation in a 3D Superfluid Æther Model, Based on Vortex Core Rotation and Ætheric Flow}
-    \date{\today}
-    \author{
-        Omar Iskandarani\\
-        \small Independent Researcher, Groningen, The Netherlands
-        \thanks{\texttt{info@omariskandarani.com}}
-        \thanks{ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961} \quad DOI: \href{https://doi.org/10.5281/zenodo.15566319}{10.5281/zenodo.15566319} \quad License: \href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}}
-        \noindent\thanks{\textbf{Keywords:} \textit{time dilation, superfluid æther, Vortex Æther Model, vortex dynamics, emergent time, fluid spacetime, special relativity, Lorentz factor, analog gravity, 3D vortex structures, quantized circulation, relativistic effects, topological matter, fluid mechanics, vortex clock}}
-    }
-    \maketitle
+    \begin{titlepage}
+        \thispagestyle{empty}
+        \centering
+        \vspace*{2cm}
+        {\Huge\bfseries Time Dilation in a 3D Superfluid Æther Model \par}
+        \vspace{0.5cm}
+        {\Large Based on Vortex Core Rotation and Ætheric Flow \par}
+        \vspace{2cm}
+        {\Large\itshape Omar Iskandarani\par}
+        \vspace{0.5cm}
+        \textit{Independent Researcher, Groningen, The Netherlands} \\
+        ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961} \\
+        DOI: \href{https://doi.org/10.5281/zenodo.15566319}{10.5281/zenodo.15566319} \\
+        \vfill
+        {\large \today\par}
 
-\section*{Abstract}
-In this paper we derive time dilation equations within a 3D Euclidean superfluid-like æther model. In the Vortex-Æther Model (VAM) we consider a \textit{vortex} as a topologically conserved rotation field in a superfluid-like medium. In this framework, fundamental particles are modeled as vortex nodes and time is defined by the intrinsic angular rotation of their vortex cores. The goal is to replace the spacetime curvature concept of general relativity (GR) with quantized angular velocity fields in a flat-space æther, while reproducing all experimental predictions of time dilation under GR and special relativity (SR). We provide first-principles derivations, grounded in fluid dynamics and vortex mechanics, and express the time dilation factors in terms of fundamental constants such as the Planck time and maximum force. The different modes of motion of a vortex are shown schematically in Figure~\ref{fig:rotation-translation}.
 
-\begin{figure}[H]
+    \section*{Abstract}
+    In this paper we derive time dilation equations within a 3D Euclidean superfluid-like æther model. In the Vortex-Æther Model (VAM) we consider a \textit{vortex} as a topologically conserved rotation field in a superfluid-like medium. In this framework, fundamental particles are modeled as vortex nodes and time is defined by the intrinsic angular rotation of their vortex cores. The goal is to replace the spacetime curvature concept of general relativity (GR) with quantized angular velocity fields in a flat-space æther, while reproducing all experimental predictions of time dilation under GR and special relativity (SR). We provide first-principles derivations, grounded in fluid dynamics and vortex mechanics, and express the time dilation factors in terms of fundamental constants such as the Planck time and maximum force. The different modes of motion of a vortex are shown schematically in Figure~\ref{fig:rotation-translation}.
+
+    \begin{figure}[H]
         \centering
         \begin{tikzpicture}[scale=1.1, >=Stealth, every node/.style={font=\small}]
             % First: Pure Rotation
-                \node at (-3,2.5) {Rotatie};
-                \draw[thick] (-3,1) circle (1);
-                \draw[->, red, thick] (-4,1) -- (-4,2.2) node[left] {$R\omega = v_t$};
-                \draw[->, red, thick] (-3,2) -- (-1.8,2) node[right] {$v_t$};
-                \draw[->, red, thick] (-3,0) -- (-4.2,0) node[left] {$v_t$};
-                \draw[->, red, thick] (-2,1) -- (-2,-0.2) node[below] {$v_t$};
+            \node at (-3,2.5) {Rotation};
+            \draw[thick] (-3,1) circle (1);
+            \draw[->, red, thick] (-4,1) -- (-4,2.2) node[left] {$R\omega = v_t$};
+            \draw[->, red, thick] (-3,2) -- (-1.8,2) node[right] {$v_t$};
+            \draw[->, red, thick] (-3,0) -- (-4.2,0) node[left] {$v_t$};
+            \draw[->, red, thick] (-2,1) -- (-2,-0.2) node[below] {$v_t$};
 
             % Second: Pure Translation
-                \node at (1,2.5) {Translatie};
-                \draw[thick] (1,1) circle (1);
-                \draw[->, blue, thick] (0,1) -- (1.2,1);
-                \draw[->, blue, thick] (2,1) -- (3.2,1) node[right] {$v_{cm}$};
-                \draw[->, blue, thick] (1,0) -- (2.2,0);
-                \draw[->, blue, thick] (1,2) -- (2.2,2);
+            \node at (1,2.5) {Translation};
+            \draw[thick] (1,1) circle (1);
+            \draw[->, blue, thick] (0,1) -- (1.2,1);
+            \draw[->, blue, thick] (2,1) -- (3.2,1) node[right] {$v_{cm}$};
+            \draw[->, blue, thick] (1,0) -- (2.2,0);
+            \draw[->, blue, thick] (1,2) -- (2.2,2);
 
             % Third: Combined Motion
-                \node at (5.5,2.5) {Combinatie};
-                \draw[thick] (5.5,1) circle (1);
-                \draw[->, thick, purple] (5.5,2) -- (7.2,2) node[right] {$2v_{cm}$};
-                \draw[->, thick, purple] (5.5,1) -- (6.7,1) node[right] {$v_{cm}$};
-                \filldraw[purple] (5.5,0) circle (2pt);
-                \node at (5.3,-0.3) {$0$};
+            \node at (5.5,2.5) {Combination};
+            \draw[thick] (5.5,1) circle (1);
+            \draw[->, thick, purple] (5.5,2) -- (7.2,2) node[right] {$2v_{cm}$};
+            \draw[->, thick, purple] (5.5,1) -- (6.7,1) node[right] {$v_{cm}$};
+            \filldraw[purple] (5.5,0) circle (2pt);
+            \node at (5.3,-0.3) {$0$};
         \end{tikzpicture}
         \caption{Schematic representation of three modes of motion of a vortex in the æther model. \textbf{(Left)} Pure rotation with local tangential velocity $v_t = R\omega$. \textbf{(Middle)} Translation with velocity $v_\text{cm}$ without internal rotation. \textbf{(Right)} Combining both leads to a relative velocity that differs over the vortex circumference: $v_\text{rel} = v_t + v_\text{cm}$.}
         \label{fig:rotation-translation}
-\end{figure}
+    \end{figure}
 
-\input{TimeDilation/1_introduction}
-\input{TimeDilation/2_superfluid_æther_framework}
-\input{TimeDilation/3_vortex_clocks}
-\input{TimeDilation/4_special_relativity}
-\input{TimeDilation/5_gravitational_time_dilation}
-\input{TimeDilation/6_combined_effects}
-\input{TimeDilation/7_conclusion}
+  \end{titlepage}
+    \input{TimeDilation/1_introduction}
+    \input{TimeDilation/2_superfluid_æther_framework}
+    \input{TimeDilation/3_vortex_clocks}
+    \input{TimeDilation/4_special_relativity}
+    \input{TimeDilation/5_gravitational_time_dilation}
+    \input{TimeDilation/6_combined_effects}
+    \input{TimeDilation/7_conclusion}
 
-\appendix \label{sec:Part-6}
-\input{TimeDilation/appendix_A}
-\input{TimeDilation/appendix_B}
+    \appendix \label{sec:Part-6}
+    \input{TimeDilation/appendix_A}
+    \input{TimeDilation/appendix_B}
 
-        \bibliographystyle{unsrt}
-        \bibliography{../references}
+
+    \printbibliography
+
 \end{document}

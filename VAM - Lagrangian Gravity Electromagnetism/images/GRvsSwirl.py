@@ -1,5 +1,18 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib
+
+matplotlib.use('TkAgg')  # Ensure it uses Tkinter backend
+# ✅ Get the script filename dynamically and save as pdf
+import os
+
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+# Save with incrementing filename if file exists, restart count on rerun
+base_filename = f"{script_name}.png"
+filename = base_filename
+count = 1
 
 # Constants (user-defined)
 C_e = 1093845.63            # vortex tangential velocity [m/s]
@@ -26,9 +39,15 @@ plt.figure(figsize=(8, 6))
 plt.loglog(r_vals, np.abs(Phi_r), label="VAM Swirl Potential", linewidth=2)
 plt.loglog(r_vals, np.abs(Phi_GR), '--', label="GR Schwarzschild Potential", linewidth=2)
 plt.xlabel("Radial distance $r$ [m]")
-plt.ylabel("Potential $|\Phi(r)|$ [J/kg]")
+plt.ylabel("Potential $|\\Phi(r)|$ [J/kg]")
 plt.title("Benchmark 9: VAM vs GR Gravitational Potential")
 plt.legend()
 plt.grid(True, which="both", ls=":")
 plt.tight_layout()
+while os.path.exists(filename):
+    filename = f"{script_name}_{count}.png"
+    count += 1
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+
 plt.show()
+

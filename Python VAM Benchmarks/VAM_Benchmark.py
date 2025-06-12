@@ -421,6 +421,51 @@ for obj in objects:
 df_vam_final = pd.DataFrame(vam_final_results)
 tools.display_dataframe_to_user(name="VAM Refined and Quantized Time Dilation Models", dataframe=df_vam_final)
 
+def vam_adjusted_time_hybrid(r, omega=0, mass=None):
+    """
+    Hybrid time dilation function that reduces to GR for large systems (e.g., neutron stars)
+    and uses full VAM for small vortex-bound structures (e.g., electrons).
+    """
+    # Smooth transition function μ(r): 1 at small r, 0 at large r
+    R0 = 1e-12  # transition scale (m)
+    mu = math.exp(- (r / R0)**2)
+
+    # Choose mass
+    if mass is None:
+        raise ValueError("Mass must be specified for hybrid calculation.")
+
+    # Compute effective mass
+    M_eff_vam = 4 * math.pi * rho_ae * rc**3 * (2 - (2 + r / rc) * math.exp(-r / rc))
+    M_eff = mu * M_eff_vam + (1 - mu) * mass
+
+    # Hybrid G: transition from G_swirl to Newton G
+    G_local = mu * G_swirl_corrected() + (1 - mu) * G
+
+    # Vorticity and frame drag decay with radius
+    swirl_term = (Ce**2 / c**2) * math.exp(-r / rc)
+    omega_term = (omega**2 / c**2) * math.exp(-r / rc)
+
+    # Time dilation expression
+    term = 1 - (2 * G_local * M_eff) / (r * c**2) - swirl_term - omega_term
+
+    return math.sqrt(term) if term > 1e-12 else float('nan')
 
 
+vam_hybrid_results = []
+for obj in objects:
+    r = obj["radius"]
+    omega = obj["omega"]
+    m = obj["mass"]
+    dtau_dt = vam_adjusted_time_hybrid(r, omega=omega, mass=m)
+    Obs = observations[obj["name"]]["Obs dτ/dt"]
+    vam_hybrid_results.append({
+        "Object": obj["name"],
+        "Radius (m)": r,
+        "Ω (rad/s)": omega,
+        "VAM dτ/dt (Hybrid)": dtau_dt,
+        "Obs dτ/dt": Obs
+    })
+
+df_hybrid = pd.DataFrame(vam_hybrid_results)
+tools.display_dataframe_to_user(name="VAM Time Dilation Benchmark (Hybrid G and M)", dataframe=df_hybrid)
 

@@ -1,3 +1,17 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib
+
+matplotlib.use('TkAgg')  # Ensure it uses Tkinter backend
+# ✅ Get the script filename dynamically and save as pdf
+import os
+
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+# Save with incrementing filename if file exists, restart count on rerun
+base_filename = f"{script_name}.png"
+filename = base_filename
+count = 1
+
 # Visualize a qualitative breakdown of SM fields as vortex structures in a conceptual diagram
 # We'll create a chart showing mapping from SM particles to topological vortex classes
 
@@ -29,4 +43,10 @@ for i, (p, m) in enumerate(zip(particles, vam_models)):
 
 ax.set_title("Benchmark 10: Standard Model Particles as VAM Topological Structures", fontsize=14)
 plt.tight_layout()
+while os.path.exists(filename):
+    filename = f"{script_name}_{count}.png"
+    count += 1
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+
 plt.show()
+
