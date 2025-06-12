@@ -4,51 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" id="68444c05-2aa5-47b0-a236-1340c65f3f8d" name="Changes" comment="Dynamically save plot images as PNG files with high resolution">
-      <change afterPath="$PROJECT_DIR$/Python VAM Benchmarks/GR_VS_VAM.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ScanCropperAligner.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM - Appendix All/Appendixes.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM - Appendix All/CropCircles.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM - Appendix All/HarmonicResonance.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/references_case-harmonizer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/references_cleaner_keep_best_entry.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spinner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/VAM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/VAM.iml" afterDir="false" />
+    <list default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" id="68444c05-2aa5-47b0-a236-1340c65f3f8d" name="Changes" comment="Refactor file structure for clarity; rename files and update paths; add hybrid time dilation function and visualization enhancements">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Benchmarks/C_e.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python VAM Benchmarks/C_e.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Benchmarks/CalculateHelicityForKnots.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python VAM Benchmarks/CalculateHelicityForKnots.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Benchmarks/GR_Benchmark.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python VAM Benchmarks/GR_Benchmark.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Benchmarks/VAM_Benchmark.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python VAM Benchmarks/VAM_Benchmark.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Benchmarks/physical_constants_latex.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Python VAM Benchmarks/physical_constants_latex.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VAM - 1 TimeDilation/1-Time_Dilation_in_3D_Superfluid_Æther_Model.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 1 TimeDilation/1-Time_Dilation_in_3D_Superfluid_Æther_Model.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 1 TimeDilation/TimeDilation/2_superfluid_æther_framework.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 1 TimeDilation/TimeDilation/2_superfluid_æther_framework.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 3 Benchmarking Relativity/sections/02_time_dilation.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 3 Benchmarking Relativity/sections/02_time_dilation.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 5/5-Topological_Fluid_Dynamic_Lagrangian_In_VAM.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 5/5-Topological_Fluid_Dynamic_Lagrangian_In_VAM.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 5/appendix/Appendix_all.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 5/appendix/Appendix_all.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 5/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 5/images/constants.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 5/plotknots.png" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 5/images/plotknots.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 5/plotknots.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 5/images/plotknots.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 5/plotknots2.png" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 5/images/plotknots2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 5/plotknots3.png" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 5/images/plotknots3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 6 Core Foundations VAM/050_SwirlVelocityConstant.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 6 Core Foundations VAM/050_SwirlVelocityConstant.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - Appendix All/Appendix_OriginC_eFmax_r_C.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Appendix All/sections/Appendix_OriginC_eFmax_r_C.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - Appendix All/Appendix_RoleOfC_e.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Appendix All/sections/Appendix_RoleOfC_e.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/LagrangianGravityElectromagnetism.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/LagrangianGravityElectromagnetism.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/Sections/DeriveMaxwellFromLagrangian.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/Sections/05_DeriveMaxwellFromLagrangian.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/Sections/GravityAndElectromagnetismUnification.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/Sections/04_GravityAndElectromagnetismUnification.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/Sections/SwirlclockInducedTimeAsymmetry.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/Sections/01_SwirlclockInducedTimeAsymmetry.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/Sections/SwirlclockInterference andTimeReversalAsymmetryNeutrinoOscillations.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/Sections/02_SwirlclockInterferenceTimeReversalAsymmetryNeutrino.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/Sections/TopologicalOriginOfCharge.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/Sections/03_TopologicalOriginOfCharge.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images/GRvsSwirl.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images/GRvsSwirl.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images/sumSM.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images/sumSM.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images/unknotNeutrino.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images/unknotNeutrino.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/1-Time_Dilation_in_3D_Superfluid_Æther_Model.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/1-Time_Dilation_in_3D_Superfluid_Æther_Model.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/5-Topological_Fluid_Dynamic_Lagrangian_In_VAM.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/5-Topological_Fluid_Dynamic_Lagrangian_In_VAM.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/Appendix_5D_vortex_aether_model.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/Appendix_ExplanationsFoundationalPhysicsAnomalies.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/Appendix_X-FilesExplanationsFoundationalPhysicsAnomalies.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/Appendix_swirl_resonance_summary_cited.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/LagrangianGravityElectromagnetism.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/LagrangianGravityElectromagnetism.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/appendix_BlackBody2.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/references.bib" beforeDir="false" afterPath="$PROJECT_DIR$/references.bib" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,6 +58,9 @@
     </option>
     <option name="currentCommit" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
     <option name="onto" value="0d85797c6bb54c6deb68eace01c41df37f466c17" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="555b6964-47f0-437f-9dd7-a7c1d5f50a3d" />
   </component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
@@ -386,7 +348,7 @@
       <recent name="C:\Users\mr\IdeaProjects\VAM\VAM - Lagrangian Gravity Electromagnetism" />
     </key>
   </component>
-  <component name="RunManager" selected="BibTeX.1-Time_Dilation_in_3D_Superfluid_Æther_Model bibliography">
+  <component name="RunManager">
     <configuration default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify-bibtex>
         <compiler />
@@ -413,47 +375,11 @@
     </configuration>
     <configuration name="1-Time_Dilation_in_3D_Superfluid_Æther_Model bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify-bibtex>
-        <compiler>BIBER</compiler>
-        <compiler-path />
-        <compiler-arguments />
-        <envs />
-        <main-file />
-        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
-        <latex-distribution>MIKTEX</latex-distribution>
-      </texify-bibtex>
-      <method v="2" />
-    </configuration>
-    <configuration name="2_superfluid_æther_framework bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-bibtex>
-        <compiler>BIBER</compiler>
-        <compiler-path />
-        <compiler-arguments />
-        <envs />
-        <main-file />
-        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
-        <latex-distribution>MIKTEX</latex-distribution>
-      </texify-bibtex>
-      <method v="2" />
-    </configuration>
-    <configuration name="5-Topological_Fluid_Dynamic_Lagrangian_In_VAM bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-bibtex>
         <compiler>BIBTEX</compiler>
         <compiler-path />
         <compiler-arguments />
         <envs />
-        <main-file>$PROJECT_DIR$/VAM - 5/5-Topological_Fluid_Dynamic_Lagrangian_In_VAM.tex</main-file>
-        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
-        <latex-distribution>MIKTEX</latex-distribution>
-      </texify-bibtex>
-      <method v="2" />
-    </configuration>
-    <configuration name="Appendix_all bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-bibtex>
-        <compiler>BIBTEX</compiler>
-        <compiler-path />
-        <compiler-arguments />
-        <envs />
-        <main-file>$PROJECT_DIR$/VAM - 5/appendix/Appendix_all.tex</main-file>
+        <main-file>$PROJECT_DIR$/VAM - 1 TimeDilation/1-Time_Dilation_in_3D_Superfluid_Æther_Model.tex</main-file>
         <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
         <latex-distribution>MIKTEX</latex-distribution>
       </texify-bibtex>
@@ -486,8 +412,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-b26f3e71634d-JavaScript-PY-251.26094.141" />
-        <option value="bundled-python-sdk-9f8e2b94138c-36ea0e71a18c-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.26094.141" />
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.26094.121" />
+        <option value="bundled-js-predefined-d6986cc7102b-b26f3e71634d-JavaScript-IU-251.26094.121" />
       </set>
     </attachedChunks>
   </component>
@@ -593,6 +519,7 @@
       <workItem from="1749680016831" duration="3044000" />
       <workItem from="1749713780332" duration="17650000" />
       <workItem from="1749746186866" duration="7283000" />
+      <workItem from="1749753850267" duration="2420000" />
     </task>
     <task id="LOCAL-00001" summary="some small tests">
       <created>1739958944014</created>
@@ -930,7 +857,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749611543494</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Refactor file structure for clarity; rename files and update paths; add hybrid time dilation function and visualization enhancements">
+      <option name="closed" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
+      <created>1749754116292</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1749754116292</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -960,11 +895,11 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <ignored-roots>
       <path value="$USER_HOME$/projects/VAMcore" />
     </ignored-roots>
-    <MESSAGE value="Update æther model documentation; correct section titles, add experimental references, and remove commented caption in Python script" />
     <MESSAGE value="Nederlandse Versie: &quot;Tijdsdilatatie in een 3D Superfluïde Æther Model, Gebaseerd op Wervel kernrotatie en ætherische Stroom&quot;" />
     <MESSAGE value="Hernoem LaTeX-bestanden en update import statements voor consistentie" />
     <MESSAGE value="Hernoem LaTeX-bestanden, update bestandslocaties en pas bibliografie aan voor consistentie" />
@@ -989,7 +924,8 @@
     <MESSAGE value="Rename files for clarity and consistency; update constants and add new LaTeX documents for Vortex Æther Model" />
     <MESSAGE value="Rename files for clarity and consistency; update import paths and fix typographical errors in LaTeX documents" />
     <MESSAGE value="Dynamically save plot images as PNG files with high resolution" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dynamically save plot images as PNG files with high resolution" />
+    <MESSAGE value="Refactor file structure for clarity; rename files and update paths; add hybrid time dilation function and visualization enhancements" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor file structure for clarity; rename files and update paths; add hybrid time dilation function and visualization enhancements" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
   <component name="XDebuggerManager">

@@ -63,10 +63,7 @@
 }
 \usepackage{bookmark} % PDF bookmarks
 
-% Bibliography
-\usepackage[numbers]{natbib} % Or switch to biblatex if preferred
-\usepackage[backend=biber,style=phys]{biblatex}
-\addbibresource{../references.bib}
+
 
 
 % Line and Hyphenation
@@ -77,7 +74,11 @@
 \subsectionfont{\large\bfseries\sffamily}
 \usepackage{newtxtext,newtxmath}
 \usepackage[scaled=0.95]{inconsolata} % for a clean monospace font
-\usepackage{mathrsfs} % for fancy \mathscr fonts
+\usepackage{mathrsfs}
+% Bibliography
+\usepackage[numbers]{natbib} % Or switch to biblatex if preferred
+
+
 \sloppy
 
 \begin{document}
@@ -99,8 +100,12 @@
         {\large \today\par}
 
 
-    \section*{Abstract}
-    In this paper we derive time dilation equations within a 3D Euclidean superfluid-like æther model. In the Vortex-Æther Model (VAM) we consider a \textit{vortex} as a topologically conserved rotation field in a superfluid-like medium. In this framework, fundamental particles are modeled as vortex nodes and time is defined by the intrinsic angular rotation of their vortex cores. The goal is to replace the spacetime curvature concept of general relativity (GR) with quantized angular velocity fields in a flat-space æther, while reproducing all experimental predictions of time dilation under GR and special relativity (SR). We provide first-principles derivations, grounded in fluid dynamics and vortex mechanics, and express the time dilation factors in terms of fundamental constants such as the Planck time and maximum force. The different modes of motion of a vortex are shown schematically in Figure~\ref{fig:rotation-translation}.
+
+    \begin{abstract}
+
+        In this paper we derive time dilation equations within a 3D Euclidean superfluid-like æther model. In the Vortex-Æther Model (VAM) we consider a \textit{vortex} as a topologically conserved rotation field in a superfluid-like medium. In this framework, fundamental particles are modeled as vortex nodes and time is defined by the intrinsic angular rotation of their vortex cores. The goal is to replace the spacetime curvature concept of general relativity (GR) with quantized angular velocity fields in a flat-space æther, while reproducing all experimental predictions of time dilation under GR and special relativity (SR). We provide first-principles derivations, grounded in fluid dynamics and vortex mechanics, and express the time dilation factors in terms of fundamental constants such as the Planck time and maximum force. The different modes of motion of a vortex are shown schematically in Figure~\ref{fig:rotation-translation}.
+
+    \end{abstract}
 
     \begin{figure}[H]
         \centering
@@ -146,7 +151,6 @@
     \input{TimeDilation/appendix_A}
     \input{TimeDilation/appendix_B}
 
-
-    \printbibliography
-
+    \bibliography{../references}
+    \bibliographystyle{unsrt}
 \end{document}
