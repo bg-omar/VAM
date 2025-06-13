@@ -1,0 +1,98 @@
+% vamstyle.sty
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{vamstyle}[2025/06/13 VAM unified style]
+
+\newif\ifvamdraft
+% Uncomment the next line to enable draft mode:
+% \vamdrafttrue
+
+\ifvamdraft
+  \RequirePackage{showframe} % shows margins for debugging
+\fi
+
+\RequirePackage{ifthen}
+\newboolean{vamstyleloaded}
+\ifthenelse{\boolean{vamstyleloaded}}{}{\setboolean{vamstyleloaded}{true}
+
+\RequirePackage[a4paper, margin=2cm]{geometry}
+
+% -- Fonts and Language --
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[english]{babel}
+\RequirePackage{mathpazo}           % or newtxtext/newtxmath
+\RequirePackage[scaled=0.95]{inconsolata}
+\RequirePackage{helvet}
+
+% Math and Physics
+\RequirePackage{amsmath, amssymb, mathrsfs, physics}
+\RequirePackage{siunitx}
+\sisetup{per-mode=symbol}
+
+% -- Tables and Figures --
+\RequirePackage{graphicx, float, booktabs}
+\RequirePackage{array, tabularx, multirow, makecell}
+\RequirePackage[font=footnotesize, labelfont=bf]{caption}
+\RequirePackage{subcaption}
+% Safe wide table environment (auto-fit to text width)
+\newcolumntype{Y}{>{\centering\arraybackslash}X} % Like 'X' but centered
+\newenvironment{tighttable}[1][] % optional argument = caption
+  {\begin{table}[H]\centering\renewcommand{\arraystretch}{1.3}
+   \begin{tabularx}{\textwidth}{#1}}
+  {\end{tabularx}\end{table}}
+% Force fit large tables without changing layout
+\RequirePackage{etoolbox}
+\newcommand{\fitbox}[2][\linewidth]{\makebox[#1]{\resizebox{#1}{!}{#2}}}
+
+% Graphics and Diagrams
+\RequirePackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
+\RequirePackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\RequirePackage{xcolor}
+
+% -- Code Listings --
+\RequirePackage{listings}
+\lstset{basicstyle=\ttfamily\footnotesize, breaklines=true}
+
+% TOC Customization
+\RequirePackage{tocloft}
+\setcounter{tocdepth}{2}
+\renewcommand{\cftsecfont}{\bfseries}
+\renewcommand{\cftsubsecfont}{\itshape}
+\renewcommand{\cftsecleader}{\cftdotfill{.}}
+\renewcommand{\contentsname}{\centering \Huge\textbf{Contents}}
+
+% Section Fonts
+\RequirePackage{sectsty}
+\sectionfont{\Large\bfseries\sffamily}
+\subsectionfont{\large\bfseries\sffamily}
+
+% Bibliography
+\RequirePackage[numbers]{natbib}
+
+% PDF Links and Metadata
+\RequirePackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue,
+    pdftitle={The Vortex Æther Model},
+    pdfauthor={Omar Iskandarani},
+    pdfkeywords={vorticity, gravity, æther, fluid dynamics, time dilation, VAM}
+}
+\urlstyle{same}
+\RequirePackage{bookmark}
+
+% Line Breaking and Style
+\RequirePackage[none]{hyphenat}
+\sloppy
+
+
+
+
+
+\endinput
+}
+% -- End of vamstyle.sty --

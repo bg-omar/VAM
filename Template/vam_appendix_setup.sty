@@ -1,0 +1,18 @@
+% vamappendixsetup.sty
+
+\newcommand{\VAMtitlepage}{
+  \begin{titlepage}
+    \thispagestyle{empty}
+    \centering
+    \vspace*{2cm}
+    {\Huge\bfseries \appendixtitle \par}
+    \vspace{1cm}
+    {\Large\itshape \appendixauthor \par}
+    \vspace{0.5cm}
+    {\small \appendixaffil \par}
+    ORCID: \href{https://orcid.org/\appendixorcid}{\appendixorcid} \\
+    DOI: \href{https://doi.org/\appendixdoi}{\appendixdoi} \\
+    \vfill
+    {\large \today \par}
+  \end{titlepage}
+}

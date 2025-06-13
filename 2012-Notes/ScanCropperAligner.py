@@ -1,35 +1,22 @@
 from PIL import Image
-import numpy as np
 import os
 from fpdf import FPDF
 import cv2
 import numpy as np
 from PIL import Image
 from matplotlib import pyplot as plt
+import matplotlib
+matplotlib.use('TkAgg')  # Ensure it uses Tkinter backend
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
 
+retest_images = [
+    "Scan_20250611 (4).png",
+    "Scan_20250611 (5).png",
+    "Scan_20250611 (6).png"
+]
 
-def edge_crop(image_path, padding=10):
-    img = Image.open(image_path).convert("RGB")
-    img_cv = np.array(img)
-    img_gray = cv2.cvtColor(img_cv, cv2.COLOR_RGB2GRAY)
-
-    edges = cv2.Canny(img_gray, threshold1=50, threshold2=150)
-    contours, _ = cv2.findContours(edges, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-
-    if not contours:
-        return img
-
-    largest_contour = max(contours, key=cv2.contourArea)
-    x, y, w, h = cv2.boundingRect(largest_contour)
-
-    x0 = max(x - padding, 0)
-    y0 = max(y - padding, 0)
-    x1 = min(x + w + padding, img.width)
-    y1 = min(y + h + padding, img.height)
-
-    return img.crop((x0, y0, x1, y1))
-
-def smart_crop_gray_background(image_path, brightness_threshold=230, border=10):
+def smart_crop_gray_background(image_path, brightness_threshold=42, border=5):
     """Crop image by removing light-gray/gradient background, keeping main notebook content."""
     img = Image.open(image_path).convert("RGB")
     img_np = np.array(img)
@@ -54,22 +41,8 @@ def smart_crop_gray_background(image_path, brightness_threshold=230, border=10):
 
     return img.crop((x0, y0, x1, y1))
 
-def export_pdf(image_paths, output_pdf="notebook_cleaned.pdf"):
-    """Export list of image paths to a single PDF after smart cropping."""
-    pdf = FPDF(unit="pt")
-    for i, path in enumerate(image_paths):
-        cropped = smart_crop_gray_background(path)
-        img_rgb = cropped.convert("RGB")
-        temp_path = f"temp_crop_{i}.jpg"
-        img_rgb.save(temp_path)
-        pdf.add_page(format=[cropped.width, cropped.height])
-        pdf.image(temp_path, 0, 0)
-        os.remove(temp_path)
-    pdf.output(output_pdf)
-    print(f"✅ Exported to {output_pdf}")
 
-
-def final_balanced_crop(image_path, final_width=1700, final_height=2400, v_threshold=240, density_thresh=10):
+def final_balanced_crop(image_path, final_width=1800, final_height=1400, v_threshold=100, density_thresh=10):
     """
     Refined notebook crop:
     - Crops to fixed width & height
@@ -109,25 +82,22 @@ def final_balanced_crop(image_path, final_width=1700, final_height=2400, v_thres
 
 # Apply final balanced crop
 final_crops = [final_balanced_crop(path) for path in retest_images]
+# Apply crop again
+retested_crops = [smart_crop_gray_background(path) for path in retest_images]
 
 # Display results
-fig, axs = plt.subplots(1, len(final_crops), figsize=(16, 6))
-for ax, img in zip(axs, final_crops):
+# fig, axs = plt.subplots(1, len(final_crops), figsize=(16, 6))
+# for ax, img in zip(axs, final_crops):
+#     ax.imshow(img)
+#     ax.axis("off")
+# plt.tight_layout()
+
+
+
+# Show actual output crops
+fig, axs = plt.subplots(1, len(retested_crops), figsize=(16, 6))
+for ax, img in zip(axs, retested_crops):
     ax.imshow(img)
     ax.axis("off")
-plt.tight_layout()
-plt.show()
-
-# Example usage:
-# image_list = ["Scan_20250611 (4).png", "Scan_20250611 (5).png", "Scan_20250611 (6).png"]
-# export_pdf(image_list)
-# Apply edge-based cropping to the same test images
-edge_crops = [edge_crop(path) for path in retest_images]
-
-# Show results
-fig, axs = plt.subplots(1, len(edge_crops), figsize=(16, 6))
-for ax, im in zip(axs, edge_crops):
-    ax.imshow(im)
-    ax.axis('off')
 plt.tight_layout()
 plt.show()

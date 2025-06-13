@@ -1,0 +1,53 @@
+%! Author = Omar Iskandarani
+%! Date = 2025-06-13
+
+% === Metadata ===
+\newcommand{\appendixtitle}{Appendix: 2nd Appendix}
+\newcommand{\appendixauthor}{Omar Iskandarani}
+\newcommand{\appendixaffil}{Independent Researcher, Groningen, The Netherlands}
+\newcommand{\appendixdoi}{10.5281/zenodo.15566319}
+\newcommand{\appendixorcid}{0009-0006-1686-3961}
+
+\ifdefined\standalonechapter\else
+  % Standalone mode
+  \documentclass[12pt]{article}
+  \usepackage[a4paper, margin=2cm]{geometry}
+  \usepackage{ifthen} % we can use it safely now
+  \usepackage{import}
+  \usepackage{subfiles}
+  \usepackage{hyperref}
+  \usepackage{graphicx}
+  \usepackage{amsmath, amssymb, physics}
+  \usepackage{siunitx}
+  \usepackage{tikz}
+  \usepackage{booktabs}
+  \usepackage{caption}
+  \usepackage{array, tabularx}
+  \usepackage{listings}
+  \usepackage{bookmark}
+  \usepackage{newtxtext,newtxmath}
+  \usepackage[scaled=0.95]{inconsolata}
+  \usepackage{mathrsfs}
+  \input{../vam_appendix_setup.sty}
+  \begin{document}
+\fi
+
+% === Title page ===
+\ifdefined\standalonechapter\else
+  \VAMtitlepage
+\fi
+
+% ============= Begin of content ============
+\section*{\appendixtitle}
+This is the second appendix of the document.
+It contains additional information that supports the main text but is not essential for understanding the core concepts.
+
+
+
+% ============== End of content =============
+
+\ifdefined\standalonechapter\else
+    \bibliographystyle{unsrt}
+    \bibliography{../../references}
+    \end{document}
+\fi
