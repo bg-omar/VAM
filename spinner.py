@@ -44,7 +44,7 @@ segment_length = TOTAL_POINTS // SEG_PARTS
 # Initialize the Line3DCollection with an empty set of segments.
 # We'll update its segments and scalar array (for the colormap) in each frame.
 lc = Line3DCollection([], cmap='Blues', linewidth=2)
-ax.add_collection3d(lc)
+ax.Line3DCollection(lc)
 
 
 # Animation update function

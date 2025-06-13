@@ -1,5 +1,14 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib
+from mpl_toolkits.mplot3d.art3d import Line3DCollection
+
+# Use TkAgg backend
+matplotlib.use('TkAgg')
+
+import os
+
+script_name = os.path.splitext(os.path.basename(__file__))[0]
 
 # Physical constants
 G = 6.67430e-11  # Gravitational constant (m^3/kg/s^2)
@@ -33,5 +42,14 @@ plt.grid(True)
 plt.legend()
 
 plt.tight_layout()
-plt.savefig("vam_gravity_model.png", dpi=300)
+
+# Show the plot
+# ✅ Get the script filename dynamically and save as pdf
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+# filename = f"{script_name}.pdf"
+# plt.savefig(filename, format="pdf", bbox_inches="tight")
+filename = f"{script_name}.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+plt.tight_layout()
 plt.show()
