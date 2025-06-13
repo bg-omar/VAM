@@ -1,0 +1,136 @@
+%! Author = Omar Iskandarani
+%! Title = Einstein and the Æther: A Philosophical Foundation for the Vortex Æther Model (VAM)
+%! Date = May 23, 2025
+%! Affiliation = Independent Researcher, Groningen, The Netherlands
+%! License = CC-BY 4.0
+%! ORCID = 0009-0006-1686-3961
+%! DOI = 10.5281/zenodo.15566101
+
+\documentclass[a4paper,12pt]{article}
+
+% Page Geometry
+\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+% Language, Encoding, Fonts
+
+\usepackage{lmodern}
+\usepackage[english]{babel}
+
+% Colors, Graphics, Diagrams
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{xcolor}
+
+\usepackage{amssymb}
+
+\usepackage{physics}
+
+\usepackage[font=footnotesize]{caption}
+% Math and Physics
+\usepackage{amsmath, amssymb, physics}
+\usepackage{siunitx}
+
+% Tables and Figures
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{array, tabularx, makecell, multirow}
+\renewcommand{\arraystretch}{1.5}
+\renewcommand{\floatpagefraction}{.8}
+
+\usepackage{subcaption}
+
+% Code and Listings
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily\footnotesize, breaklines=true}
+
+% TOC Customization
+\usepackage{tocloft}
+\setcounter{tocdepth}{4}
+\renewcommand{\cftsecfont}{\bfseries}
+\renewcommand{\cftsubsecfont}{\itshape}
+\renewcommand{\cftsecleader}{\cftdotfill{5}}
+\renewcommand{\contentsname}{\centering \Huge\textbf{Contents}}
+
+% Links and Metadata
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue,
+    pdftitle={The Vortex Æther Model},
+    pdfauthor={Omar Iskandarani},
+    pdfkeywords={vorticity, gravity, æther, fluid dynamics, time dilation, VAM}
+}
+\usepackage{bookmark} % PDF bookmarks
+
+
+\usepackage[most]{tcolorbox}
+\tcbuselibrary{listings, breakable, skins}
+
+\newtcolorbox{vamprinciple}[1][]{
+    enhanced,
+    breakable,
+    colback=blue!5!white,
+    colframe=blue!60!black,
+    fonttitle=\bfseries,
+    title=Hybrid Gravitational Coupling in the Vortex Æther Model,
+    coltitle=black,
+    #1
+}
+
+
+% Line and Hyphenation
+\usepackage[none]{hyphenat}
+\usepackage{amsfonts}
+\usepackage{sectsty}
+\sectionfont{\Large\bfseries\sffamily}
+\subsectionfont{\large\bfseries\sffamily}
+\usepackage{newtxtext,newtxmath}
+\usepackage[scaled=0.95]{inconsolata} % for a clean monospace font
+\usepackage{mathrsfs}
+% Bibliography
+
+\begin{document}
+
+
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{|l|c|l|p{7cm}|}
+            \hline
+            \textbf{Name} & \textbf{Symbol} & \textbf{Type} & \textbf{Description and Role} \\
+            \hline
+            Chronos-time & $\tau$ & Relative / Measurable & Sequential time; proper time experienced by localized systems in motion through the æther. Core for modeling time dilation. \\
+            \hline
+            Aithēr-time & $\mathcal{N}$ & Absolute / Universal & The invariant universal present; a metaphysical and ontological background for all temporal flow. \\
+            \hline
+            Swirl Clock & $\circlearrowleft$ or $S(t)$ & Local / Cyclical & Internal clock-like rhythm of a vortex knot. Tracks phase, rotation, or identity shift through time. \\
+            \hline
+            Kairos Moment & $\mathbb{K}$ & Threshold / Emergent & The qualitative, transformational moment when a system undergoes critical phase alignment or collapse. \\
+            \hline
+            Æther Frame & $\Xi_0$ & Reference Frame & Hypothetical inertial frame where the æther medium is at rest. Used for symmetry-breaking and baseline flow analysis. \\
+            \hline
+            Vortex Proper Time & $T_v$ & Derived / Topological & Time internal to the closed knot or vortex loop. Emerges from geodesic paths and twist topology. \\
+            \hline
+            Now-Point & $\nu_0$ & Local Event / Temporal Slice & Precise location in spacetime where a point in the æther intersects the universal present. Useful in field causality. \\
+            \hline
+        \end{tabular}
+        \caption{Temporal constructs used in the Vortex Æther Model. These notations distinguish between measurable time, absolute background time, internal vortex phase, and field-causality moments.}
+        \label{tab:VAM_time}
+    \end{table}
+
+    \begin{align}
+        \text{(1) Vortex Proper Time Evolution:}\\
+        \quad & \dv{\tau}{\mathcal{N}} = \gamma^{-1}(\vec{v}) \\
+        \text{(2) Swirl Clock Gradient:}\\ \quad & \nabla S(t) = \frac{\partial \vec{S}}{\partial \mathcal{N}} + \omega(\tau) \hat{n} \\
+        \text{(3) Field Tensor Modulation (Æther-relative):} \\\quad & F^{\mu\nu}(\Xi_0) = \partial^\mu A^\nu - \partial^\nu A^\mu + \phi(\circlearrowleft) \delta^{\mu\nu} \\
+        \text{(4) Ætheric Causality Surface:}\\ \quad & \Sigma_{\nu_0} = \{ x^\mu \ | \ \tau(x) = \mathcal{N} \} \\
+        \text{(5) VAM Energy Conservation in Æther Frame:}\\ \quad & \dv{E}{\mathcal{N}} + \nabla \cdot \vec{J} = \mathbb{K}(\vec{x}, \tau)
+    \end{align}
+
+
+\end{document}

@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" id="68444c05-2aa5-47b0-a236-1340c65f3f8d" name="Changes" comment="Add new appendix for Vortex Æther Model; derive resonance frequency for vortex knots and propose experimental realization strategy">
+    <list default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" id="68444c05-2aa5-47b0-a236-1340c65f3f8d" name="Changes" comment="Update workspace configuration; modify task summaries and adjust work item durations for Vortex Æther Model">
+      <change afterPath="$PROJECT_DIR$/VAM - Appendix All/NewNowNotations.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - Appendix All/Appendix_ColdFusion.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Appendix All/Appendix_ColdFusion.tex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="false" />
@@ -156,6 +158,7 @@
     "LaTeX.DerivationElectrostatic.executor": "Run",
     "LaTeX.GR_in_3d.executor": "Run",
     "LaTeX.LagrangianGravityElectromagnetism.executor": "Run",
+    "LaTeX.NewNowNotations.executor": "Run",
     "LaTeX.Tijdsdilatatie.executor": "Run",
     "LaTeX.TopologicalConstructionStandardModelParticlesVAM.executor": "Run",
     "LaTeX.VAM-AssumptionsInconsistenciesAndPredictedPhenomena.executor": "Run",
@@ -373,29 +376,6 @@
       </texify-bibtex>
       <method v="2" />
     </configuration>
-    <configuration default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify>
-        <compiler>PDFLATEX</compiler>
-        <compiler-path />
-        <sumatra-path />
-        <pdf-viewer>SUMATRA</pdf-viewer>
-        <viewer-command />
-        <compiler-arguments />
-        <envs />
-        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
-        <before-run-command />
-        <main-file />
-        <output-path>{projectDir}/out</output-path>
-        <auxil-path>{projectDir}/auxil</auxil-path>
-        <compile-twice>false</compile-twice>
-        <output-format>PDF</output-format>
-        <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>false</has-been-run>
-        <bib-run-config>[]</bib-run-config>
-        <makeindex-run-config>[]</makeindex-run-config>
-      </texify>
-      <method v="2" />
-    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -510,6 +490,8 @@
       <workItem from="1749753850267" duration="8035000" />
       <workItem from="1749766454472" duration="921000" />
       <workItem from="1749768122881" duration="3266000" />
+      <workItem from="1749771806337" duration="96000" />
+      <workItem from="1749772152029" duration="2317000" />
     </task>
     <task id="LOCAL-00001" summary="some small tests">
       <created>1739958944014</created>
@@ -847,15 +829,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749611543494</updated>
     </task>
-    <task id="LOCAL-00053" summary="Add new appendix for Vortex Æther Model; derive resonance frequency for vortex knots and propose experimental realization strategy">
+    <task id="LOCAL-00054" summary="Update workspace configuration; modify task summaries and adjust work item durations for Vortex Æther Model">
       <option name="closed" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
-      <created>1749771388099</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
+      <created>1749771873822</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
       <option name="project" value="LOCAL" />
-      <updated>1749771388100</updated>
+      <updated>1749771873823</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -890,7 +872,6 @@
     <ignored-roots>
       <path value="$USER_HOME$/projects/VAMcore" />
     </ignored-roots>
-    <MESSAGE value="Hernoem LaTeX-bestanden en update bestandslocaties voor consistentie; vertaal sectietitel 'Introduction' naar 'Introductie' in 01_introductie.tex" />
     <MESSAGE value="Update terminology from &quot;vortex&quot; to &quot;wervel&quot; for consistency; improve clarity in multiple sections of LaTeX documents" />
     <MESSAGE value="Refactor LaTeX documents and Python scripts; update matplotlib version, improve clarity, and add visualizations for torus knots and vortex structures" />
     <MESSAGE value="Rename appendices for clarity; add new sections on gravitational fields, time dilation, and vortex dynamics in the Vortex Æther Model" />
@@ -915,7 +896,8 @@
     <MESSAGE value="Update LaTeX document structure; enhance formatting and add title page for clarity" />
     <MESSAGE value="Add new LaTeX document for Vortex Æther Model; include title page, abstract, and detailed particle mapping" />
     <MESSAGE value="Add new appendix for Vortex Æther Model; derive resonance frequency for vortex knots and propose experimental realization strategy" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add new appendix for Vortex Æther Model; derive resonance frequency for vortex knots and propose experimental realization strategy" />
+    <MESSAGE value="Update workspace configuration; modify task summaries and adjust work item durations for Vortex Æther Model" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update workspace configuration; modify task summaries and adjust work item durations for Vortex Æther Model" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
   <component name="XDebuggerManager">
