@@ -30,15 +30,20 @@
   \usepackage{mathrsfs}
   \input{../vam_appendix_setup.sty}
   \begin{document}
+
+  % === Title page ===
+  \titlepageOpen
+
+  \begin{abstract}
+      Abstracts are not typically included in appendices, but for standalone it is needed.
+  \end{abstract}
+
+  \titlepageClose
 \fi
 
-% === Title page ===
-\ifdefined\standalonechapter\else
-  \VAMtitlepage
-\fi
 
 % ============= Begin of content ============
-\section*{\appendixtitle}
+\section{\appendixtitle}
 This is the second appendix of the document.
 It contains additional information that supports the main text but is not essential for understanding the core concepts.
 

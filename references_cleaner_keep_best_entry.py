@@ -3,7 +3,7 @@ from collections import defaultdict
 from pathlib import Path
 
 INPUT_BIB = "references.bib"
-OUTPUT_BIB = "references_cleaned.bib"
+OUTPUT_BIB = "references.bib"
 
 def normalize_key(key):
     return re.sub(r'[^a-z0-9]', '', key.lower())

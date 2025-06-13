@@ -3,13 +3,13 @@ from pathlib import Path
 from difflib import SequenceMatcher
 from collections import defaultdict
 
-DRY_RUN = True   # Toggle this to True for testing
+DRY_RUN = False   # Toggle this to True for testing
 BACKUP_BIB = True
 BACKUP_TEX = True
 DELETE_REDUNDANT_KEYS = False  # Only if you're confident they're identical
 
 
-bib_path = "references_cleaned.bib"
+bib_path = "references.bib"
 tex_root = Path(".")
 
 def backup_file(path: Path):

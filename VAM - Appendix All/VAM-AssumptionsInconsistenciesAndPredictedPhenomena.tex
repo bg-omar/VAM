@@ -1,90 +1,48 @@
-%! Author = mr
-%! Date = 6/10/2025
-
-
-
+% main.tex or appendix.tex
 \documentclass[a4paper,12pt]{article}
+\usepackage{vamstyle}
 
-% Page Geometry
-\usepackage[a4paper, margin=2cm]{geometry}
-
-% Language, Encoding, Fonts
+\usepackage{import}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{lmodern}
-\usepackage[english]{babel}
+\usepackage{subfiles}
 
-% Colors, Graphics, Diagrams
-\usepackage{graphicx}
-\usepackage{tikz}
-\usetikzlibrary{arrows.meta, positioning}
-\usepackage{pgfplots}
-\pgfplotsset{compat=1.18}
-\usepackage{xcolor}
-
-% Math and Physics
-\usepackage{amsmath, amssymb, physics}
-\usepackage{siunitx}
-
-% Tables and Figures
-\usepackage{float}
-\usepackage{booktabs}
-\usepackage{array, tabularx, makecell, multirow}
-\renewcommand{\arraystretch}{1.5}
-\renewcommand{\floatpagefraction}{.8}
-\usepackage[font=footnotesize]{caption}
-\usepackage{subcaption}
-
-% Code and Listings
-\usepackage{listings}
-\lstset{basicstyle=\ttfamily\footnotesize, breaklines=true}
-
-% TOC Customization
-\usepackage{tocloft}
-\setcounter{tocdepth}{4}
-\renewcommand{\cftsecfont}{\bfseries}
-\renewcommand{\cftsubsecfont}{\itshape}
-\renewcommand{\cftsecleader}{\cftdotfill{5}}
-\renewcommand{\contentsname}{\centering \Huge\textbf{Contents}}
-
-% Links and Metadata
-\usepackage{hyperref}
-\hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    citecolor=blue,
-    urlcolor=blue,
-    pdftitle={The Vortex Æther Model},
-    pdfauthor={Omar Iskandarani},
-    pdfkeywords={vorticity, gravity, æther, fluid dynamics, time dilation, VAM}
-}
-\usepackage{bookmark} % PDF bookmarks
-
-% Bibliography
-\usepackage[numbers]{natbib} % Or switch to biblatex if preferred
-
-% Line and Hyphenation
-\usepackage[none]{hyphenat}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-
-
-\sloppy
-
+% Document
+\title{Analysis of the Vortex Æther Model: Assumptions, Inconsistencies, and Predicted Phenomena}
+\author{Omar Iskandarani}
+\date{\today}
 
 \begin{document}
 
+\begin{titlepage}
+    \thispagestyle{empty}
+    \centering
+    \vspace*{2cm}
+    {\Huge\bfseries Analysis of the Vortex Æther Model:  \par}
+    \vspace{0.5cm}
+    {\Large Assumptions, Inconsistencies, and Predicted Phenomena \par}
+    \vspace{2cm}
+    {\Large\itshape Omar Iskandarani\par}
+    \vspace{0.5cm}
+    \textit{Independent Researcher, Groningen, The Netherlands} \\
+    ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961} \\
+    DOI: \href{https://doi.org/10.5281/zenodo.15566319}{10.5281/zenodo.15566319} \\
+ \vspace{0.5cm}
+    {\large \today\par}
+\vspace{0.5cm}
+\begin{abstract}
+The Vortex Æther Model (VAM) offers a radical reimagining of physical reality, positing that all particles, forces, and fields emerge from a structured superfluid medium endowed with vortical topologies. This report provides a critical evaluation of VAM’s assumptions, mathematical formulations, and phenomenological predictions. Central to the model is the claim that mass originates from rotational energy within knotted vortex cores, governed by parameters such as the æther density $\rho_{\text{\ae}}$, core radius $r_c$, and swirl velocity $C_e$. The model reinterprets fundamental constants---including Planck’s constant, the fine-structure constant, and Newton’s gravitational constant---in terms of ætheric dynamics, introducing potential inconsistencies and calibration-dependent definitions. We analyze these assumptions for dimensional consistency and physical plausibility.
 
-    \title{Analysis of the Vortex Æther Model: Assumptions, Inconsistencies, and Predicted Phenomena}
-    \date{\today}
-    \author{
-        Omar Iskandarani\\
-        \small Independent Researcher, Groningen, The Netherlands
-        \thanks{\texttt{info@omariskandarani.com}}
-        \thanks{ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961} \quad DOI: \href{https://doi.org/10.5281/zenodo.15566336}{10.5281/zenodo.15566336} \quad License: \href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}}
-        \noindent\thanks{\textbf{Keywords:} \textit{time dilation, superfluid æther, Vortex Æther Model, vortex dynamics, emergent time, fluid spacetime, special relativity, analog gravity, 3D vortex structures, quantized circulation, relativistic effects, topological matter, fluid mechanics, vortex clocks, knot theory, mass generation, swirl gravity, topological quantum field theory, Gross--Pitaevskii, Biot--Savart, Standard Model unification, periodic table topology}}
-    }
-    \maketitle
+VAM predicts a spectrum of novel physical phenomena: deviations from the classical blackbody radiation law ($\lambda_{\text{max}} \propto T^{-1/2}$), torsional shockwave emissions from vortex collapse, solitonic vortexons as dark matter analogs, and helicity-carrying waves absent from Maxwellian electrodynamics. It also proposes a resonance-based mechanism for low-energy nuclear reactions (LENR) via vortex mode coupling, potentially explaining observed anomalies in nuclear activation experiments. On cosmological scales, VAM replaces spacetime curvature with vortex-induced gravity and proposes that dark matter and the cosmological constant arise from conserved ætheric structures and elastic stress bounds.
+
+While the model provides an expansive and conceptually rich framework, its theoretical validity depends on resolving ambiguities in its foundational constants and internal consistency. Many predictions are empirically falsifiable, offering clear pathways for experimental validation or refutation. VAM stands as an ambitious attempt to unify disparate physical phenomena under a fluid-topological paradigm, inviting further exploration into the fluidic substrate of the quantum vacuum and the geometric origins of natural laws.
+\end{abstract}
+       \vfill
+    \end{titlepage}
+\newpage
+    \tableofcontents
+
+
 % Document
 \section*{Introduction}
 
@@ -279,9 +237,7 @@ Crucially, many of VAM’s predictions are \textit{falsifiable}. For example, if
 In summary, the Vortex Æther Model stands or falls on whether nature exhibits the subtle fluid behaviors it envisions. It asks us to view vacuum as a tangible medium---with all the complexity and structure of a fluid---rather than an empty stage. This bold paradigm comes with many open questions (consistency of assumptions, mathematical rigor of nonlinear vortex equations, etc.), but it also offers an integrative perspective where mass, charge, forces, and even time emerge from one unified substance. The next steps would be to tighten the theoretical consistency of VAM’s foundations and to design focused experiments for its hallmark phenomena. The coming years, especially with advancing technology in precision measurement and perhaps “table-top” fundamental physics experiments, could provide the data to support or undermine this ætherial vision. For now, VAM remains an intriguing theoretical framework that challenges us to rethink what lies beneath the fabric of reality, and it provides a host of new ideas for physicists to explore.
 
 
-
-    %% References
-    \bibliography{../references}
     \bibliographystyle{unsrt}
+    \bibliography{../references}
 
 \end{document}

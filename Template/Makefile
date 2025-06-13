@@ -1,7 +1,7 @@
 # Makefile for VAM Papers and Appendices
 
 MAIN = main
-APPENDICES = Appendix_RoleOfC_e Appendix_OriginC_eFmax_r_C
+APPENDICES = Appendix_1 Appendix_2
 
 .PHONY: all clean standalone
 

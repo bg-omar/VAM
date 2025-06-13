@@ -1,0 +1,161 @@
+\section*{Main Section 1}
+
+\begin{table}[H]
+    \centering
+    \footnotesize
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabular}{|l|l|S[scientific-notation = true] |l|l|}
+        \hline
+        \textbf{Symbol} & \textbf{Quantity} & \textbf{Value} & \textbf{Unit} & \textbf{Uncertainty} \\
+        \hline
+        $C_e$ & Vortex-Tangential Velocity & 1.09384563e6 & \si{\meter\per\second}  & \footcite{vam2025-Ce} \\ \hline
+        $\rho_\text{\ae}^{\text{core}}$ & Æther Core Density & 3.89343583e18 & \si{\kilogram\per\meter^3} & \textdagger \\ \hline
+        $\rho_\text{\ae}$ & Æther Vacuum Density & 7.0e-7 & \si{\kilogram\per\meter^3} & \textdagger \\ \hline
+        $F_\text{\ae}^{\max}$ & Maximum Æther Force & 29.053507 & \si{\newton} & \textdagger \\ \hline
+        $F_\text{gr}^{\max}$ & Maximum Gravitational Force & 3.02563891e43 & \si{\newton} & \textdagger \\ \hline
+        $\gamma$ & Helicity-Mass Coupling Constant & 5.901e-3 & (dimensionless) & \textdagger \\ \hline
+        $r_c$ & Vortex-Core Radius & 1.40897017e-15 & \si{\meter} & exact \\ \hline
+        $c$ & Speed of Light & 2.99792458e8 & \si{\meter\per\second} & exact \\ \hline
+        $G$ & Newtonian Gravitational Constant & 6.67430e-11 & \si{\meter^3\per\kilogram\per\second\squared} & \footcite{codata2022-G} \\ \hline
+        $h$ & Planck Constant & 6.62607015e-34 & \si{\joule\second} & exact \\ \hline
+        $\alpha$ & Fine-Structure Constant & 7.29735256e-3 & (dimensionless) &  \footcite{codata2022-alpha} \\ \hline
+        $R_e$ & Classical Electron Radius & 2.81794033e-15 & \si{\meter} & $1.3 \times 10^{-24}$ \\ \hline
+        $\alpha_g$ & Gravitational Coupling Constant & 1.7518e-45 & (dimensionless) & exact \\ \hline
+        $\mu_0$ & Vacuum Magnetic Permeability & 1.25663706e-6 & \si{\newton\per\ampere\squared} & exact \\ \hline
+        $\varepsilon_0$ & Vacuum Electric Permittivity & 8.85418782e-12 & \si{\farad\per\meter} & exact \\ \hline
+        $Z_0$ & Vacuum Impedance & 3.76730313e2 & \si{\ohm} & $1.6 \times 10^{-10}$ \\ \hline
+        $\hbar$ & Reduced Planck Constant & 1.05457182e-34 & \si{\joule\second} & exact \\ \hline
+        $L_p$ & Planck Length & 1.616255e-35 & \si{\meter} & $1.1 \times 10^{-5}$ \\ \hline
+        $M_p$ & Planck Mass & 2.176434e-8 & \si{\kilogram} & $1.1 \times 10^{-5}$ \\ \hline
+        $t_p$ & Planck Time & 5.391247e-44 & \si{\second} & $1.1 \times 10^{-5}$ \\ \hline
+        $T_p$ & Planck Temperature & 1.416784e32 & \si{\kelvin} & $1.1 \times 10^{-5}$ \\ \hline
+        $q_p$ & Planck Charge & 1.87554596e-18 & \si{\coulomb} & exact \\ \hline
+        $E_p$ & Planck Energy & 1.956e9 & \si{\joule} & exact \\ \hline
+    \end{tabular}
+    \caption{Core constants in the Vortex Æther Model (VAM) and classical physics. \textdagger\ indicates VAM-defined constants with theoretical precision.}
+    \label{tab:vam_core_constants}
+\end{table}
+
+
+\begin{table}[H]
+    \centering
+    \footnotesize
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabular}{|l|l|S[scientific-notation = true] |l|l|}
+        \hline
+        \textbf{Symbol} & \textbf{Quantity} & \textbf{Value} & \textbf{Unit} & \textbf{Uncertainty} \\
+        \hline
+        $e$ & Elementary Charge & 1.60217663e-19 & \si{\coulomb} & exact \\ \hline
+        $R_\infty$ & Rydberg Constant & 1.09737316e7 & \si{\per\meter} & $1.1 \times 10^{-12}$ \\ \hline
+        $a_0$ & Bohr Radius & 5.29177211e-11 & \si{\meter} & $1.6 \times 10^{-10}$ \\ \hline
+        $M_e$ & Electron Mass & 9.10938370e-31 & \si{\kilogram} & $3.1 \times 10^{-10}$ \\ \hline
+        $M_{proton}$ & Proton Mass & 1.67262192e-27 & \si{\kilogram} & $3.1 \times 10^{-10}$ \\ \hline
+        $M_{neutron}$ & Neutron Mass & 1.67492750e-27 & \si{\kilogram} & $5.1 \times 10^{-10}$ \\ \hline
+        $k_B$ & Boltzmann Constant & 1.380649e-23 & \si{\joule\per\kelvin} & exact \\ \hline
+        $R$ & Gas Constant & 8.31446262 & \si{\joule\per\mole\per\kelvin} & exact \\ \hline
+        $\frac{1}{\alpha}$ & Fine Structure Constant Reciprocal & 137.035999 & (dimensionless) & $1.6 \times 10^{-10}$ \\ \hline
+        $f_c$ & Electron Compton Frequency & 1.23558996e20 & \si{\hertz} & $1.0 \times 10^{-10}$ \\ \hline
+        $\Omega_c$ & Electron Compton Angular Frequency & 7.76344071e20 & \si{\radian\per\second} & $1.0 \times 10^{-10}$ \\ \hline
+        $\lambda_c$ & Compton Wavelength (electron) & 2.42631024e-12 & \si{\meter} & $1.0 \times 10^{-10}$ \\ \hline
+        $\lambda_{proton}$ & Compton Wavelength (proton) & 1.32140986e-15 & \si{\meter} & $4 \times 10^{-25}$ \\ \hline
+        $\Phi_0$ & Magnetic Flux Quantum & 2.06783385e-15 & \si{\weber} & exact \\ \hline
+        $\varphi$ & Golden Ratio & 1.61803399 & (dimensionless) & $7.3 \times 10^{-22}$ \\ \hline
+        $eV$ & Electron Volt & 1.60217663e-19 & \si{\joule} & exact \\ \hline
+        $G_F$ & Fermi Coupling Constant & 1.1663787e-5 & \si{\giga\electronvolt^{-2}} & $6 \times 10^{-12}$ \\ \hline
+        $ER_\infty$ & Rydberg Energy & 2.17987236e-18 & \si{\joule} & $1.1 \times 10^{-12}$ \\ \hline
+        $fR_\infty$ & Rydberg Frequency & 3.28984196e15 & \si{\hertz} & $1.1 \times 10^{-12}$ \\ \hline
+        $\sigma$ & Stefan–Boltzmann Constant & 5.67037442e-8 & \si{\watt\per\meter\squared\per\kelvin^4} & exact \\ \hline
+        $b$ & Wien Displacement Constant & 2.89777196e-3 & \si{\meter\kelvin} & exact \\ \hline
+        $k_e$ & Coulomb Constant & 8.98755179e9 & \si{\newton\meter\squared\per\coulomb\squared} & exact \\ \hline
+    \end{tabular}
+    \caption{Quantum and particle-scale constants relevant for VAM and atomic physics.}
+    \label{tab:quantum_constants}
+\end{table}
+
+
+
+\documentclass[12pt]{article}
+\usepackage{amsmath,amsfonts}
+\usepackage{graphicx}
+\usepackage{cite}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+
+\title{The Density of the Æther: A Modern Derivation within the Vortex Æther Model}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This article refines previous estimates of the Æther's density, $\rho_{\text{\ae}}$, in the Vortex Æther Model (VAM). Integrating findings from quantum vortex dynamics, superfluid helium, gravitomagnetic frame-dragging, and cosmological vacuum energy, we propose constrained ranges for $\rho_{\text{\ae}}^{\text{(fluid)}}$ and $\rho_{\text{\ae}}^{\text{(energy)}}$ and examine their implications across scales.
+\end{abstract}
+
+\section{Introduction}
+
+In VAM, the Æther is a structured, inviscid medium supporting vorticity and energy transfer. Two key densities are defined:
+\begin{itemize}
+    \item $\rho_{\text{\ae}}^{\text{(fluid)}}$: mass density akin to a classical fluid.
+    \item $\rho_{\text{\ae}}^{\text{(energy)}}$: energy density stored in vorticity.
+\end{itemize}
+
+\section{Vorticity and Energy Density}
+
+The vorticity energy density is:
+\[
+U_{\text{vortex}} = \frac{1}{2} \rho_{\text{\ae}}^{\text{(energy)}} |\vec{\omega}|^2
+\]
+with
+\[
+|\vec{\omega}| = \sqrt{\omega_x^2 + \omega_y^2 + \omega_z^2}
+\]
+
+\section{Quantum Anchoring of Vorticity}
+
+To ground the model in fundamental physics, we define vorticity using the fine-structure constant $\alpha$ and Compton angular frequency $\omega_C$:
+\[
+|\vec{\omega}| = \alpha \cdot \omega_C = \alpha \cdot \frac{m_e c^2}{\hbar}
+\]
+
+Given $R_c = \frac{1}{2} r_e$, the density becomes:
+\[
+\rho_{\text{\ae}}^{\text{(fluid)}} = \frac{2 m_e c^2}{\left(\alpha \cdot \frac{m_e c^2}{\hbar}\right)^2 R_c^3} \approx 7 \times 10^{-7} \text{ kg m}^{-3}
+\]
+
+\section{Experimental and Theoretical Support}
+
+Empirical support includes superfluid helium vortex dynamics~\cite{jackson2021}, frame-dragging analogs in vortex fields~\cite{paris2015}, and superconductive gravitational coupling~\cite{santiago2011}.
+
+\section{Vacuum Energy Context}
+
+\[
+\rho_{\text{vacuum}} = \frac{\Lambda c^2}{8 \pi G} \sim 5 \times 10^{-9} \text{ kg m}^{-3}
+\]
+
+\section{Physical Implications}
+
+\paragraph{Pressure Gradients}
+\[
+\Delta P = -\frac{\rho_{\text{\ae}}^{\text{(fluid)}}}{2} \nabla |\vec{\omega}|^2
+\]
+
+\paragraph{Refractive Index Shifts}
+\[
+\Delta n = \frac{\rho_{\text{\ae}}^{\text{(energy)}} |\vec{\omega}|^2}{c^2}
+\]
+
+\paragraph{Vortex Mass}
+\[
+M_{\text{vortex}} = \int_V \frac{\rho_{\text{\ae}}^{\text{(energy)}}}{2} |\vec{\omega}|^2 \, dV
+\]
+
+\section{Conclusion}
+
+Using quantum constants to define Æther properties bridges microscopic and cosmological theories. The refined value of $\rho_{\text{\ae}}^{\text{(fluid)}}$ supports both theoretical elegance and experimental plausibility.
+
+\bibliographystyle{unsrt}
+\bibliography{aether_refs}
+
+\end{document}

@@ -1,0 +1,114 @@
+%! Author = Omar Iskandarani
+%! Date = 2025-06-13
+
+% === Metadata ===
+\newcommand{\appendixtitle}{The Density of the Æther: A Modern Derivation within the Vortex Æther Model}
+\newcommand{\appendixauthor}{Omar Iskandarani}
+\newcommand{\appendixaffil}{Independent Researcher, Groningen, The Netherlands}
+\newcommand{\appendixdoi}{10.5281/zenodo.15566319}
+\newcommand{\appendixorcid}{0009-0006-1686-3961}
+
+\ifdefined\standalonechapter\else
+  % Standalone mode
+  \documentclass[12pt]{article}
+  \usepackage[a4paper, margin=2cm]{geometry}
+  \usepackage{ifthen} % we can use it safely now
+  \usepackage{import}
+  \usepackage{subfiles}
+  \usepackage{hyperref}
+  \usepackage{graphicx}
+  \usepackage{amsmath, amssymb, physics}
+  \usepackage{siunitx}
+  \usepackage{tikz}
+  \usepackage{booktabs}
+  \usepackage{caption}
+  \usepackage{array, tabularx}
+  \usepackage{listings}
+  \usepackage{bookmark}
+  \usepackage{newtxtext,newtxmath}
+  \usepackage[scaled=0.95]{inconsolata}
+  \usepackage{mathrsfs}
+  \input{../vam_appendix_setup.sty}
+  \begin{document}
+
+  % === Title page ===
+  \titlepageOpen
+
+  \begin{abstract}
+      This article refines previous estimates of the Æther's density, $\rho_{\text{\ae}}$, in the Vortex Æther Model (VAM). Integrating findings from quantum vortex dynamics, superfluid helium, gravitomagnetic frame-dragging, and cosmological vacuum energy, we propose constrained ranges for $\rho_{\text{\ae}}^{\text{(fluid)}}$ and $\rho_{\text{\ae}}^{\text{(energy)}}$ and examine their implications across scales.
+  \end{abstract}
+
+  \titlepageClose
+\fi
+
+% ============= Begin of content ============
+
+\section{Introduction}
+
+In VAM, the Æther is a structured, inviscid medium supporting vorticity and energy transfer. Two key densities are defined:
+\begin{itemize}
+    \item $\rho_{\text{\ae}}^{\text{(fluid)}}$: mass density akin to a classical fluid.
+    \item $\rho_{\text{\ae}}^{\text{(energy)}}$: energy density stored in vorticity.
+\end{itemize}
+
+\section{Vorticity and Energy Density}
+
+The vorticity energy density is:
+\[
+U_{\text{vortex}} = \frac{1}{2} \rho_{\text{\ae}}^{\text{(energy)}} |\vec{\omega}|^2
+\]
+with
+\[
+|\vec{\omega}| = \sqrt{\omega_x^2 + \omega_y^2 + \omega_z^2}
+\]
+
+\section{Quantum Anchoring of Vorticity}
+
+To ground the model in fundamental physics, we define vorticity using the fine-structure constant $\alpha$ and Compton angular frequency $\omega_C$:
+\[
+|\vec{\omega}| = \alpha \cdot \omega_C = \alpha \cdot \frac{m_e c^2}{\hbar}
+\]
+
+Given $R_c = \frac{1}{2} r_e$, the density becomes:
+\[
+\rho_{\text{\ae}}^{\text{(fluid)}} = \frac{2 m_e c^2}{\left(\alpha \cdot \frac{m_e c^2}{\hbar}\right)^2 R_c^3} \approx 7 \times 10^{-7} \text{ kg m}^{-3}
+\]
+
+\section{Experimental and Theoretical Support}
+
+Empirical support includes superfluid helium vortex dynamics~\cite{jackson2021}, frame-dragging analogs in vortex fields~\cite{paris2015}, and superconductive gravitational coupling~\cite{santiago2011}.
+
+\section{Vacuum Energy Context}
+
+\[
+\rho_{\text{vacuum}} = \frac{\Lambda c^2}{8 \pi G} \sim 5 \times 10^{-9} \text{ kg m}^{-3}
+\]
+
+\section{Physical Implications}
+
+\paragraph{Pressure Gradients}
+\[
+\Delta P = -\frac{\rho_{\text{\ae}}^{\text{(fluid)}}}{2} \nabla |\vec{\omega}|^2
+\]
+
+\paragraph{Refractive Index Shifts}
+\[
+\Delta n = \frac{\rho_{\text{\ae}}^{\text{(energy)}} |\vec{\omega}|^2}{c^2}
+\]
+
+\paragraph{Vortex Mass}
+\[
+M_{\text{vortex}} = \int_V \frac{\rho_{\text{\ae}}^{\text{(energy)}}}{2} |\vec{\omega}|^2 \, dV
+\]
+
+\section{Conclusion}
+
+Using quantum constants to define Æther properties bridges microscopic and cosmological theories. The refined value of $\rho_{\text{\ae}}^{\text{(fluid)}}$ supports both theoretical elegance and experimental plausibility.
+
+% ============== End of content =============
+
+\ifdefined\standalonechapter\else
+    \bibliographystyle{unsrt}
+    \bibliography{../../references}
+    \end{document}
+\fi

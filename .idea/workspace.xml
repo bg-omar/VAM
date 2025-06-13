@@ -5,18 +5,87 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68444c05-2aa5-47b0-a236-1340c65f3f8d" name="Changes" comment="Add new document for Vortex Æther Model; introduce temporal notations and theoretical foundations">
-      <change afterPath="$PROJECT_DIR$/Template/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Template/sections/appendix_1.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Template/sections/appendix_2.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Template/sections/main_1.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Template/vam_appendix_setup.sty" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Template/vammain.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Template/vamstyle.sty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM - 1 TimeDilation/TimeDilation/appendix_C.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM - Appendix All/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM - Appendix All/XX-APPENDIX_BUNDLE.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM - Appendix All/images/Swirl-ModulatedGaugeFieldTensor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM - Appendix All/images/SwirlClockInterference.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM - Appendix All/sections/appendix_0.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM - Appendix All/sections/appendix_1.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM - Appendix All/sections/appendix_2.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM - Appendix All/sections/appendix_3.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM - Appendix All/sections/appendix_4.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM - Appendix All/sections/appendix_x.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM - Appendix All/sections/main_1.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM - Appendix All/vam_appendix_setup.sty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM - Appendix All/vamstyle.sty" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ScanCropperAligner.py" beforeDir="false" afterPath="$PROJECT_DIR$/2012-Notes/ScanCropperAligner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 7 Philosophical Depth Companion/530_vorticity_derivation.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 7 Philosophical Depth Companion/530_FundamentalEquationsOfVortexDynamics.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 7 Philosophical Depth Companion/7-Philosophical_Depth_Companion.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 7 Philosophical Depth Companion/7-Philosophical_Depth_Companion.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAMstyle.sty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Diagrams/TimeConstruct.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Appendix All/images/TimeConstruct.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Template/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/sections/appendix_1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Template/sections/appendix_1.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/sections/appendix_2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Template/sections/appendix_2.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/vam_appendix_setup.sty" beforeDir="false" afterPath="$PROJECT_DIR$/Template/vam_appendix_setup.sty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 0 Einsteins Æther/1_intro.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 0 Einsteins Æther/1_intro.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 0 Einsteins Æther/3_conclusion.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 0 Einsteins Æther/3_conclusion.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 0 Einsteins Æther/appendix_2_kelvin_and_the_knot_æther_critique.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 0 Einsteins Æther/appendix_2_kelvin_and_the_knot_æther_critique.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 1 TimeDilation/1-Time_Dilation_in_3D_Superfluid_Æther_Model.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 1 TimeDilation/1-Time_Dilation_in_3D_Superfluid_Æther_Model.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 1 TimeDilation/TimeDilation/2_superfluid_æther_framework.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 1 TimeDilation/TimeDilation/2_superfluid_æther_framework.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 1 TimeDilation/TimeDilation/3_vortex_clocks.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 1 TimeDilation/TimeDilation/3_vortex_clocks.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 1 TimeDilation/TimeDilation/4_special_relativity.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 1 TimeDilation/TimeDilation/4_special_relativity.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 1 TimeDilation/TimeDilation/5_gravitational_time_dilation.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 1 TimeDilation/TimeDilation/5_gravitational_time_dilation.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 1 TimeDilation/TimeDilation/6_combined_effects.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 1 TimeDilation/TimeDilation/6_combined_effects.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 1 TimeDilation/TimeDilation/appendix_A.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 1 TimeDilation/TimeDilation/appendix_A.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 1 TimeDilation/TimeDilation/appendix_B.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 1 TimeDilation/TimeDilation/appendix_B.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 2 Swirl Clocks/Swirl_Clocks/appendix_08_Integration_of_Clausius_Heat_Theory.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 2 Swirl Clocks/Swirl_Clocks/appendix_08_Integration_of_Clausius_Heat_Theory.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 2 Swirl Clocks/WervelKlokken/appendix_08_Integration_of_Clausius_Heat_Theory.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 2 Swirl Clocks/WervelKlokken/appendix_08_Integration_of_Clausius_Heat_Theory.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 3 Benchmarking Relativity/sections/14_resolved_Challenges.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 3 Benchmarking Relativity/sections/14_resolved_Challenges.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 3 Benchmarking Relativity/sections/Appendix_BeamSwirlInteractionSpectrum.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 3 Benchmarking Relativity/sections/Appendix_BeamSwirlInteractionSpectrum.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 3 Benchmarking Relativity/sections/Appendix_VortexÆtherModelsQuantumSpinAnalogs.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 3 Benchmarking Relativity/sections/Appendix_VortexÆtherModelsQuantumSpinAnalogs.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 4 StandardModel-Lagrangian VAM/section/03_natural_æther_constants.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 4 StandardModel-Lagrangian VAM/section/03_natural_æther_constants.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 4 StandardModel-Lagrangian VAM/section/04_standard_model_lagrangian.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 4 StandardModel-Lagrangian VAM/section/04_standard_model_lagrangian.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 4 StandardModel-Lagrangian VAM/section/05_VariationalDerivationSwirlLagrangian.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 4 StandardModel-Lagrangian VAM/section/05_VariationalDerivationSwirlLagrangian.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 4 StandardModel-Lagrangian VAM/section/10_MappingVAM_SwirlGroups.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 4 StandardModel-Lagrangian VAM/section/10_MappingVAM_SwirlGroups.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 4 StandardModel-Lagrangian VAM/section/A12_DerivationGravitationalConstant.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 4 StandardModel-Lagrangian VAM/section/A12_DerivationGravitationalConstant.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 4 StandardModel-Lagrangian VAM/section/A14_DetailedEmbeddingOfBatemansSelfConjugateFieldsIntoVA.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 4 StandardModel-Lagrangian VAM/section/A14_DetailedEmbeddingOfBatemansSelfConjugateFieldsIntoVA.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 6 Core Foundations VAM/130_HeatTheoryVAM.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 6 Core Foundations VAM/130_HeatTheoryVAM.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 6 Core Foundations VAM/146_DerivationElectrostatic.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 6 Core Foundations VAM/146_DerivationElectrostatic.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 7 Philosophical Depth Companion/020_History.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 7 Philosophical Depth Companion/020_History.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 7 Philosophical Depth Companion/025_Maxwell_Electromagnetic_field_theory_and_VAM.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 7 Philosophical Depth Companion/025_Maxwell_Electromagnetic_field_theory_and_VAM.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 7 Philosophical Depth Companion/060_derivation_æther_desity.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 7 Philosophical Depth Companion/060_derivation_æther_desity.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 7 Philosophical Depth Companion/070_observation_on_light_particle.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 7 Philosophical Depth Companion/070_observation_on_light_particle.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 7 Philosophical Depth Companion/080_riged_body.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 7 Philosophical Depth Companion/080_riged_body.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 7 Philosophical Depth Companion/100_derevation_Gswirl.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 7 Philosophical Depth Companion/100_derevation_Gswirl.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 7 Philosophical Depth Companion/110_VAM_reformulation_GR.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 7 Philosophical Depth Companion/110_VAM_reformulation_GR.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 7 Philosophical Depth Companion/200_path_Integral_gauge_relativity.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 7 Philosophical Depth Companion/200_path_Integral_gauge_relativity.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 7 Philosophical Depth Companion/210_bragg.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 7 Philosophical Depth Companion/210_bragg.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 9 -Torus_Knots_as_Elements_Periodic_Table/sections/01_inleiding.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 9 -Torus_Knots_as_Elements_Periodic_Table/sections/01_inleiding.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 9 -Torus_Knots_as_Elements_Periodic_Table/sections/11_FormalKnotWithInvariants.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 9 -Torus_Knots_as_Elements_Periodic_Table/sections/11_FormalKnotWithInvariants.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - Appendix All/Appendix_beam_swirl_interaction.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Appendix All/Appendix_beam_swirl_interaction.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - Appendix All/Appendix_physical_constants_latex.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Appendix All/Appendix_physical_constants_latex.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - Appendix All/Appendixes.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - Appendix All/BeamSwirl.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Appendix All/images/BeamSwirl.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - Appendix All/HarmonicResonance.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Appendix All/images/HarmonicResonance.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - Appendix All/HarmonicResonance4.png" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Appendix All/images/HarmonicResonance4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - Appendix All/NewNowNotations.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Appendix All/sections/Appendix_ÆthericNow.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - Appendix All/TimeConstruct.png" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Appendix All/images/TimeConstruct.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - Appendix All/VAM-AssumptionsInconsistenciesAndPredictedPhenomena.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Appendix All/VAM-AssumptionsInconsistenciesAndPredictedPhenomena.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - Appendix All/sections/Appendix_OriginC_eFmax_r_C.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - Appendix All/sections/Appendix_RoleOfC_e.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - Appendix All/vam_swirl_yield_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Appendix All/images/vam_swirl_yield_plot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - Appendix All/vam_time_response_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Appendix All/images/vam_time_response_plot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - Appendix All/vam_time_response_zoom_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Appendix All/images/vam_time_response_zoom_plot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - Appendix All/vam_warp_refs.bib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/Sections/01_SwirlclockInducedTimeAsymmetry.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/Sections/01_SwirlclockInducedTimeAsymmetry.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/Sections/02_SwirlclockInterferenceTimeReversalAsymmetryNeutrino.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/Sections/02_SwirlclockInterferenceTimeReversalAsymmetryNeutrino.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/Sections/04_GravityAndElectromagnetismUnification.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/Sections/04_GravityAndElectromagnetismUnification.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/Sections/05_DeriveMaxwellFromLagrangian.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/Sections/05_DeriveMaxwellFromLagrangian.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/1-Time_Dilation_in_3D_Superfluid_Æther_Model.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/1-Time_Dilation_in_3D_Superfluid_Æther_Model.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/Appendix_OriginC_eFmax_r_C.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/VAM-AssumptionsInconsistenciesAndPredictedPhenomena.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/VAM-AssumptionsInconsistenciesAndPredictedPhenomena.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/references.bib" beforeDir="false" afterPath="$PROJECT_DIR$/references.bib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/references_case-harmonizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/references_case-harmonizer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/references_cleaned.bib" beforeDir="false" afterPath="$PROJECT_DIR$/references_cleaned.bib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/references_cleaner_keep_best_entry.py" beforeDir="false" afterPath="$PROJECT_DIR$/references_cleaner_keep_best_entry.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="false" />
@@ -89,6 +158,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
     <option name="sortByType" value="true" />
     <option name="sortKey" value="BY_TYPE" />
   </component>
@@ -116,8 +186,10 @@
     "BibTeX.GR_in_3d bibliography.executor": "Run",
     "BibTeX.LagrangianGravityElectromagnetism bibliography.executor": "Run",
     "BibTeX.VAM-AssumptionsInconsistenciesAndPredictedPhenomena bibliography.executor": "Run",
+    "BibTeX.XX-APPENDIX_BUNDLE bibliography.executor": "Run",
     "BibTeX.appendix_1 bibliography.executor": "Run",
     "BibTeX.appendix_2 bibliography.executor": "Run",
+    "BibTeX.appendix_3 bibliography.executor": "Run",
     "BibTeX.main bibliography.executor": "Run",
     "BibTeX.vam-standalone bibliography.executor": "Run",
     "BibTeX.vammain bibliography.executor": "Run",
@@ -165,6 +237,7 @@
     "LaTeX.Appendix_beam_swirl_interaction.executor": "Run",
     "LaTeX.Appendix_deriveFmax.executor": "Run",
     "LaTeX.Appendix_derivingGravitationalConstant.executor": "Run",
+    "LaTeX.Appendix_ÆthericNow.executor": "Run",
     "LaTeX.Appendixes.executor": "Run",
     "LaTeX.CropCircles.executor": "Run",
     "LaTeX.DerivationElectrostatic.executor": "Run",
@@ -176,8 +249,10 @@
     "LaTeX.VAM-AssumptionsInconsistenciesAndPredictedPhenomena.executor": "Run",
     "LaTeX.VAM.executor": "Run",
     "LaTeX.VAM_Gravity_LERN_ftl.executor": "Run",
+    "LaTeX.XX-APPENDIX_BUNDLE.executor": "Run",
     "LaTeX.appendix_1.executor": "Run",
     "LaTeX.appendix_2.executor": "Run",
+    "LaTeX.appendix_3.executor": "Run",
     "LaTeX.appendix_3_jamesclerckmaxwell_on_æther.executor": "Run",
     "LaTeX.appendix_afleiding_massa.executor": "Run",
     "LaTeX.main.executor": "Run",
@@ -256,8 +331,10 @@
     "Python.SimulatedStarshipCoilPulsedVortexThrust.executor": "Run",
     "Python.Starship-3phase-27x3points.executor": "Run",
     "Python.Starship-MultiLayer-3phase-27x3points.executor": "Run",
+    "Python.SwirlClockInterference.executor": "Run",
     "Python.SwirlVSGauge.executor": "Run",
     "Python.ThrustVsVoltage.executor": "Run",
+    "Python.TimeConstruct.executor": "Run",
     "Python.TimeDilationCore.executor": "Run",
     "Python.VAM_Benchmark.executor": "Run",
     "Python.VAM_Benchmark2.executor": "Run",
@@ -322,6 +399,7 @@
     "Python.vortex_2d.executor": "Run",
     "Python.vortex_3d.executor": "Run",
     "Python.vorticity_field.executor": "Run",
+    "Python.ÆthericNow.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -331,7 +409,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/mr/IdeaProjects/VAM/Template",
+    "last_opened_file_path": "C:/Users/mr/IdeaProjects/VAM/VAM - Appendix All/sections",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -354,33 +432,21 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mr\IdeaProjects\VAM\VAM - Appendix All\sections" />
+      <recent name="C:\Users\mr\IdeaProjects\VAM\VAM - Appendix All" />
       <recent name="C:\Users\mr\IdeaProjects\VAM\Template" />
       <recent name="C:\Users\mr\IdeaProjects\VAM\VAM - Lagrangian Gravity Electromagnetism\Appendix" />
       <recent name="C:\Users\mr\IdeaProjects\VAM\VAM - 5" />
-      <recent name="C:\Users\mr\IdeaProjects\VAM\tools" />
-      <recent name="C:\Users\mr\IdeaProjects\VAM\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mr\IdeaProjects\VAM\VAM - Appendix All\images" />
+      <recent name="C:\Users\mr\IdeaProjects\VAM\VAM - Appendix All\sections" />
       <recent name="C:\Users\mr\IdeaProjects\VAM\Template" />
       <recent name="C:\Users\mr\IdeaProjects\VAM\Template\sections" />
       <recent name="C:\Users\mr\IdeaProjects\VAM\2012-Notes" />
-      <recent name="C:\Users\mr\IdeaProjects\VAM" />
-      <recent name="C:\Users\mr\IdeaProjects\VAM\VAM - Appendix All\sections" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="0-Einsteins Æther bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-bibtex>
-        <compiler>BIBTEX</compiler>
-        <compiler-path />
-        <compiler-arguments />
-        <envs />
-        <main-file>$PROJECT_DIR$/VAM - 0 Einsteins Æther/0-Einsteins Æther.tex</main-file>
-        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
-        <latex-distribution>MIKTEX</latex-distribution>
-      </texify-bibtex>
-      <method v="2" />
-    </configuration>
     <configuration name="1-Time_Dilation_in_3D_Superfluid_Æther_Model bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify-bibtex>
         <compiler>BIBTEX</compiler>
@@ -388,6 +454,30 @@
         <compiler-arguments />
         <envs />
         <main-file>$PROJECT_DIR$/VAM - $GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$ TimeDilation/1-Time_Dilation_in_3D_Superfluid_Æther_Model.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
+        <latex-distribution>MIKTEX</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration name="2_superfluid_æther_framework bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler>BIBTEX</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/VAM - $GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$ TimeDilation/TimeDilation/2_superfluid_æther_framework.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
+        <latex-distribution>MIKTEX</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration name="VAM-AssumptionsInconsistenciesAndPredictedPhenomena bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler>BIBTEX</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/VAM - Appendix All/VAM-AssumptionsInconsistenciesAndPredictedPhenomena.tex</main-file>
         <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
         <latex-distribution>MIKTEX</latex-distribution>
       </texify-bibtex>
@@ -405,49 +495,13 @@
       </texify-bibtex>
       <method v="2" />
     </configuration>
-    <configuration name="appendix_1 bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+    <configuration name="appendix_3 bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify-bibtex>
         <compiler>BIBTEX</compiler>
         <compiler-path />
         <compiler-arguments />
         <envs />
-        <main-file>$PROJECT_DIR$/Template/sections/appendix_1.tex</main-file>
-        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
-        <latex-distribution>MIKTEX</latex-distribution>
-      </texify-bibtex>
-      <method v="2" />
-    </configuration>
-    <configuration name="appendix_2 bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-bibtex>
-        <compiler>BIBTEX</compiler>
-        <compiler-path />
-        <compiler-arguments />
-        <envs />
-        <main-file>$PROJECT_DIR$/Template/sections/appendix_2.tex</main-file>
-        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
-        <latex-distribution>MIKTEX</latex-distribution>
-      </texify-bibtex>
-      <method v="2" />
-    </configuration>
-    <configuration name="vam-standalone bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-bibtex>
-        <compiler>BIBTEX</compiler>
-        <compiler-path />
-        <compiler-arguments />
-        <envs />
-        <main-file>$PROJECT_DIR$/Template/sections/vam-standalone.tex</main-file>
-        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
-        <latex-distribution>MIKTEX</latex-distribution>
-      </texify-bibtex>
-      <method v="2" />
-    </configuration>
-    <configuration name="vammain bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-bibtex>
-        <compiler>BIBTEX</compiler>
-        <compiler-path />
-        <compiler-arguments />
-        <envs />
-        <main-file>$PROJECT_DIR$/Template/vammain.tex</main-file>
+        <main-file>$PROJECT_DIR$/VAM - Appendix All/sections/appendix_3.tex</main-file>
         <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
         <latex-distribution>MIKTEX</latex-distribution>
       </texify-bibtex>
@@ -570,7 +624,7 @@
       <workItem from="1749771806337" duration="96000" />
       <workItem from="1749772152029" duration="2317000" />
       <workItem from="1749776302234" duration="116000" />
-      <workItem from="1749815914522" duration="13950000" />
+      <workItem from="1749815914522" duration="30349000" />
     </task>
     <task id="LOCAL-00001" summary="some small tests">
       <created>1739958944014</created>
@@ -915,7 +969,7 @@
       <option name="project" value="LOCAL" />
       <updated>1749776329875</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1015,16 +1069,18 @@
     <SUITE FILE_PATH="coverage/VAM$LifterVsStarshipFields.coverage" NAME="LifterVsStarshipFields Coverage Results" MODIFIED="1749609458663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
     <SUITE FILE_PATH="coverage/VAM$GR_VS_VAM.coverage" NAME="GR_VS_VAM Coverage Results" MODIFIED="1749660854141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python VAM Benchmarks" />
     <SUITE FILE_PATH="coverage/VAM$09_CombinedTimeDilationSurface.coverage" NAME="09-CombinedTimeDilationSurface Coverage Results" MODIFIED="1745247952265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation" />
+    <SUITE FILE_PATH="coverage/VAM$TimeConstruct.coverage" NAME="TimeConstruct Coverage Results" MODIFIED="1749849823274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Appendix All/images" />
     <SUITE FILE_PATH="coverage/VAM$photonAnimation.coverage" NAME="photonAnimation Coverage Results" MODIFIED="1749609576454" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
     <SUITE FILE_PATH="coverage/VAM$blackbody_vs_vortexwavevelocity.coverage" NAME="blackbody_vs_vortexwavevelocity Coverage Results" MODIFIED="1742553117664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
     <SUITE FILE_PATH="coverage/VAM$spindel_and_horn_torus.coverage" NAME="spindel and horn torus Coverage Results" MODIFIED="1749608595123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
     <SUITE FILE_PATH="coverage/VAM$torus.coverage" NAME="torus Coverage Results" MODIFIED="1749608118040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
     <SUITE FILE_PATH="coverage/VAM$0_UraniumKnoop.coverage" NAME="0_UraniumKnoop Coverage Results" MODIFIED="1747702791519" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Periodic Table/sections" />
-    <SUITE FILE_PATH="coverage/VAM$references_cleaner_keep_best_entry.coverage" NAME="references_cleaner_keep_best_entry Coverage Results" MODIFIED="1749681933820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/VAM$references_cleaner_keep_best_entry.coverage" NAME="references_cleaner_keep_best_entry Coverage Results" MODIFIED="1749841453346" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/VAM$new.coverage" NAME="new Coverage Results" MODIFIED="1749285296330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
     <SUITE FILE_PATH="coverage/VAM$1s2soorbitals.coverage" NAME="1s2soorbitals Coverage Results" MODIFIED="1749609121712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
     <SUITE FILE_PATH="coverage/VAM$schodinger_probability3D.coverage" NAME="schodinger_probability3D Coverage Results" MODIFIED="1749606881974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
     <SUITE FILE_PATH="coverage/VAM$vortex_2d.coverage" NAME="vortex_2d Coverage Results" MODIFIED="1749607553278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
+    <SUITE FILE_PATH="coverage/VAM$ÆthericNow.coverage" NAME="ÆthericNow Coverage Results" MODIFIED="1749842685308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Appendix All" />
     <SUITE FILE_PATH="coverage/VAM$helical_coil.coverage" NAME="helical_coil Coverage Results" MODIFIED="1749608990369" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
     <SUITE FILE_PATH="coverage/VAM$swirltorus_rgb_differences.coverage" NAME="swirltorus rgb differences Coverage Results" MODIFIED="1749608272584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
     <SUITE FILE_PATH="coverage/VAM$WaveFunctionVAM_QM.coverage" NAME="WaveFunctionVAM_QM Coverage Results" MODIFIED="1742313811347" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
@@ -1067,6 +1123,7 @@
     <SUITE FILE_PATH="coverage/VAM$2_elementenTorusknopen.coverage" NAME="2_elementenTorusknopen Coverage Results" MODIFIED="1747694441072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Periodic Table/sections" />
     <SUITE FILE_PATH="coverage/VAM$5_BaanRondMassa.coverage" NAME="5-BaanRondMassa Coverage Results" MODIFIED="1745168701306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation" />
     <SUITE FILE_PATH="coverage/VAM$ESHFieldLines.coverage" NAME="ESHFieldLines Coverage Results" MODIFIED="1749609051585" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
+    <SUITE FILE_PATH="coverage/VAM$SwirlClockInterference.coverage" NAME="SwirlClockInterference Coverage Results" MODIFIED="1749847587335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Appendix All/images" />
     <SUITE FILE_PATH="coverage/VAM$06_TimeDilationGRVsVAMModelNucleonMassPerVortex.coverage" NAME="06-TimeDilationGRVsVAMModelNucleonMassPerVortex Coverage Results" MODIFIED="1749607244842" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
     <SUITE FILE_PATH="coverage/VAM$vam_vs_schodinger.coverage" NAME="vam vs schodinger Coverage Results" MODIFIED="1749607915447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
     <SUITE FILE_PATH="coverage/VAM$NeutronStarTimeDilation.coverage" NAME="NeutronStarTimeDilation Coverage Results" MODIFIED="1749629623385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python VAM Benchmarks" />
@@ -1104,7 +1161,7 @@
     <SUITE FILE_PATH="coverage/VAM$1_vortexknopen.coverage" NAME="1_vortexknopen Coverage Results" MODIFIED="1747696697172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Periodic Table/sections" />
     <SUITE FILE_PATH="coverage/VAM$plotknots.coverage" NAME="plotknots Coverage Results" MODIFIED="1749567566335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - 5" />
     <SUITE FILE_PATH="coverage/VAM$vamBindings.coverage" NAME="vamBindings Coverage Results" MODIFIED="1749046543592" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../../../workspace/projects/vamcore" />
-    <SUITE FILE_PATH="coverage/VAM$references_case_harmonizer.coverage" NAME="references_case-harmonizer Coverage Results" MODIFIED="1749682281658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/VAM$references_case_harmonizer.coverage" NAME="references_case-harmonizer Coverage Results" MODIFIED="1749841469817" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/VAM$torusspirals.coverage" NAME="torusspirals Coverage Results" MODIFIED="1749608095542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
     <SUITE FILE_PATH="coverage/VAM$vorticity_field.coverage" NAME="vorticity_field Coverage Results" MODIFIED="1742905754172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
     <SUITE FILE_PATH="coverage/VAM$swirltorus.coverage" NAME="swirltorus Coverage Results" MODIFIED="1749284228611" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />

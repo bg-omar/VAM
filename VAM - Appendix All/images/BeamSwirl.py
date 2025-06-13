@@ -107,12 +107,6 @@ plt.savefig('vam_time_response_plot.png')
 
 
 
-
-
-
-
-
-
 # Create zoomed-in plot for the central part of the response
 zoom_range = (t > -5e-15) & (t < 5e-15)
 

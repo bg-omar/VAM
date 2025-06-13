@@ -1,50 +1,48 @@
-
-% ============================================================================
-% Keystone Derivations in the Vortex Æther Model (VAM)
-% Compact appendix (≈2pages) collecting the one‑liner relations that pin
-% Planck's constant, the Bohr radius, photon energy and Newton's constant to 
-% the three æther primitives  (F_max, r_c, C_e).
-% -----------------------------------------------------------------------------
 %! Author = Omar Iskandarani
-%! Date = 2025-06-01
+%! Date = 2025-06-13
 
+% === Metadata ===
+\newcommand{\appendixtitle}{Keystone Constant Relations in VAM}
+\newcommand{\appendixauthor}{Omar Iskandarani}
+\newcommand{\appendixaffil}{Independent Researcher, Groningen, The Netherlands}
+\newcommand{\appendixdoi}{10.5281/zenodo.15566319}
+\newcommand{\appendixorcid}{0009-0006-1686-3961}
 
-% \documentclass[a4paper, aps,preprint,superscriptaddress, 12pt]{revtex4}{standalone}
+\ifdefined\standalonechapter\else
+  % Standalone mode
+  \documentclass[12pt]{article}
+  \usepackage[a4paper, margin=2cm]{geometry}
+  \usepackage{ifthen} % we can use it safely now
+  \usepackage{import}
+  \usepackage{subfiles}
+  \usepackage{hyperref}
+  \usepackage{graphicx}
+  \usepackage{amsmath, amssymb, physics}
+  \usepackage{siunitx}
+  \usepackage{tikz}
+  \usepackage{booktabs}
+  \usepackage{caption}
+  \usepackage{array, tabularx}
+  \usepackage{listings}
+  \usepackage{bookmark}
+  \usepackage{newtxtext,newtxmath}
+  \usepackage[scaled=0.95]{inconsolata}
+  \usepackage{mathrsfs}
+  \input{../vam_appendix_setup.sty}
+  \begin{document}
 
-\documentclass[class=article, crop=false]{standalone}
-\usepackage[subpreambles=true]{standalone}
-\usepackage{import}
-\usepackage{blindtext}
+  % === Title page ===
+  \titlepageOpen
 
+  \begin{abstract}
+      Abstracts are not typically included in appendices, but for standalone it is needed.
+  \end{abstract}
 
-\usepackage[a4paper, margin=2cm]{geometry}
-\usepackage[T1]{fontenc}%
-\usepackage[utf8]{inputenc}%
-\usepackage{lmodern}%
-\usepackage{textcomp}%
-\usepackage{lastpage}%
-\usepackage{float}%
-\usepackage{fancyhdr}
+  \titlepageClose
+\fi
 
-\pagestyle{fancy}%
-\usepackage{amsmath,amssymb}
-\usepackage{graphicx}
-\usepackage{hyperref}
-\usepackage{enumitem}
-\usepackage{physics}
-
-\fancyhf{}%
-\begin{document}
-    \title{Keystone Derivations in the Vortex Æther Model (VAM)}
-    \author{Omar Iskandarani}
-    \date{June 2025}
-    \affiliation{Independent Researcher, Groningen, The Netherlands}
-    \thanks{ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961}}
-    \email{info@omariskandarani.com}
-
-    \section*{Appendix A  \\  Keystone Constant Relations in VAM}
-    \addcontentsline{toc}{section}{Appendix A  –  Keystone Constant Relations}
-
+% ============= Begin of content ============
+\section{\appendixtitle}
     Throughout the main text we defined the three primitive æther parameters
     \begin{equation}
     F_{\max}, \qquad r_c, \qquad C_e,
@@ -60,7 +58,7 @@
     numerics of Tab.~1.
 
     % -----------------------------------------------------------------------------
-    \subsection*{A.1\, Planck's Constant from Æther Tension}
+    \subsection{Planck's Constant from Æther Tension}
     A photon of Compton frequency \(\nu_e\) wraps two half‑wavelength
     helical arcs (\(n=2\)) around the electron vortex. Matching
     angular momenta and adopting a Hookean core gives
@@ -72,7 +70,7 @@
     see Sec.~3.1.
 
     % -----------------------------------------------------------------------------
-    \subsection*{A.2\, Photon Energy: \(E=h\nu\)}
+    \subsection{Photon Energy: \(E=h\nu\)}
     Treating the helical photon as a parallel‑plate capacitor of plate area
     \(A=\lambda^{2}\) and spacing \(d=\lambda/2\) yields
     \begin{align}
@@ -85,7 +83,7 @@
     \(\alpha=2C_e/c\).
 
     % -----------------------------------------------------------------------------
-    \subsection*{A.3\, Bohr (or Sommerfeld) Radius}
+    \subsection{Bohr (or Sommerfeld) Radius}
     Combining Eq.~\eqref{eq:h} with \(\alpha=2C_e/c\) gives
     \begin{equation}
         a_0 = \frac{\hbar}{m_e c\alpha}
@@ -97,7 +95,7 @@
     \(r_{n}=n^{2}a_0/Z\) scaling with no further parameters.
 
     % -----------------------------------------------------------------------------
-    \subsection*{A.4\, Newton's Constant}
+    \subsection{Newton's Constant}
     Eliminating \(\hbar\) between Eq.~\eqref{eq:h} and the Planck‑time
     identity \(t_P^{2}=\hbar G/c^{5}\) yields
     \begin{equation}
@@ -110,7 +108,7 @@
     measurements within the quoted CODATA uncertainty.
 
     % -----------------------------------------------------------------------------
-    \subsection*{A.5\, Consequences}
+    \subsection{Consequences}
     A single triad \((F_{\max},r_c,C_e)\)
     locks \(\hbar,a_0,h\nu,\) and \(G\).
     Any independent experimental change to one of the three primitives would
@@ -125,6 +123,16 @@
     t_P=5.391247\times10^{-44}\,\text{s}.\)
 
     % ============================================================================
-\end{document}
 
 The author first encountered the capacitor-wavelength derivation in a 2011 YouTube clip attributed to Lane Davis~\cite{lan}. 's 2010 PDF later provided the written source used here.
+
+% ============== End of content =============
+
+% === Bibliography (only for standalone) ===
+\ifdefined\standalonechapter
+  % Being imported from main.tex — do nothing
+\else
+    \bibliographystyle{unsrt}
+    \bibliography{../../references}
+    \end{document}
+\fi
