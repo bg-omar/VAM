@@ -1,43 +1,75 @@
+\subsection*{Temporal Ontology in the Vortex Æther Model}
 
-\section*{Scale-dependent æther density in the Vortex Æther Model (VAM)}
+Before deriving explicit time dilation relations, we summarize the key modes of time present in VAM, which reflect different physical aspects of vortex structures and æther flow. These temporal quantities appear in various field equations and define how duration and simultaneity are treated in the model.
 
-VAM uses a scale-dependent æther density: locally very high ($\sim10^{18}$ kg/m³) for core stability and macroscopically low ($\sim10^{-7}$ kg/m³) to allow inertia-free propagation of interactions. The high density in vortex cores locally enhances the vortex velocity and thus the time dilation significantly, while macroscopically it offers minimal resistance to propagation of effects.
+\begin{center}
+    \begin{tcolorbox}[colback=gray!10, colframe=black, width=0.9\textwidth, sharp corners=southwest, boxrule=0.5pt]
+        \textbf{Ætheric Time Modes — Quick Overview}
+        \vspace{0.5em}
+        \begin{tabular}{@{}p{1.5cm}p{5.2cm}p{6cm}@{}}
+            \(\mathcal{N}\)     & \textbf{Aithēr-Time}         & Absolute causal background \\
+            \(\nu_0\)           & \textbf{Now-Point}           & Localized universal present \\
+            \(\tau\)            & \textbf{Chronos-Time}        & Measured time in the æther \\
+            \(S(t)\)            & \textbf{Swirl Clock}         & Internal vortex phase memory \\
+            \(T_v\)             & \textbf{Vortex Proper Time}  & Circulation-based duration \\
+            \(\mathbb{K}\)      & \textbf{Kairos Moment}       & Topological transition point \\
+        \end{tabular}
+    \end{tcolorbox}
+    \captionof{table}{\textbf{Ætheric Time Modes in the Vortex Æther Model}}
+    \label{tab:ÆtherTimeModes}
+\end{center}
+These distinct time concepts clarify how local and global phenomena are distinguished within VAM, providing a basis for the derivation of time dilation below.
+
+\section*{Scale-dependent Æther Densities in VAM}
 
 
-In the Vortex Æther Model (VAM), the æther is considered to be a superfluid, inviscid continuum with constant density within macroscopic regions, but with a \emph{scale-dependent structure} around vortex nodes. This structure requires a high local density near the core for stability, and a sparse ætheron large scales to allow free propagation of signals (such as light).
+The Vortex Æther Model distinguishes between two conceptually distinct densities:
 
-\subsection*{1. Core Regime}
+\begin{itemize}
+    \item \textbf{Æther Fluid Density} \(\rho_{\text{\ae}}^{\text{(fluid)}}\) — a constant background value (\(\sim 7 \times 10^{-7}\, \mathrm{kg/m^3}\)) that governs wave propagation and inertial resistance at macroscopic scales.
+    \item \textbf{Æther Energy Density} \(\rho_{\text{\ae}}^{\text{(energy)}}(r)\) — a radially decaying field around vortex cores responsible for storing rotational energy and generating topological stability.
+\end{itemize}
 
-The density in the core approaches:
+The energy density is high near vortex cores (\(\sim 10^{18}\, \mathrm{kg/m^3}\)) and decays exponentially toward the fluid density background on macroscopic scales.
+
+
+\subsection*{1. Fluid Density: Constant Background}
+
+The æther fluid density is taken to be approximately:
 \begin{equation}
-    \rho_\text{\ae}(r \to 0) \sim \SI{3.89e18}{kg/m^3},
+    \rho_{\text{\ae}}^{\text{(fluid)}} \approx \SI{7e-7}{kg/m^3},
 \end{equation}
-required to ensure topological stability of the vortex core. This value follows from energetic arguments:
+based on matching vortex energetics with known quantum properties and allowing for inertia-free propagation of signals in the far field.
+
+\subsection*{2. Energy Density: Core-Localized}
+
+In contrast, the energy density near a vortex core satisfies:
 \begin{equation}
-    E_{\text{vortex}} = \frac{1}{2} \rho_\text{\ae} \Omega^2 r_c^5 \quad\Rightarrow\quad \rho_\text{\ae} \sim \frac{2 E}{\Omega^2 r_c^5},
+    \rho_{\text{\ae}}^{\text{(energy)}}(r \to 0) \sim \SI{3.89e18}{kg/m^3},
 \end{equation}
-where \( \Omega = \frac{C_e}{r_c} \) is the core rotation, with \( C_e \approx \SI{1.094e6}{m/s} \) and \( r_c \approx \SI{1.409e-15}{m} \).
-
-\subsection*{2. Transition regime}
-
-For distances larger than the core, but smaller than the macroscale, an exponential decay holds:
+which is necessary to stabilize the core topology. This follows from the vortex energy expression:
 \begin{equation}
-    \rho_\text{\ae}(r) = \rho_\text{far} + (\rho_\text{core} - \rho_\text{far}) e^{-r/r_*},
+    E_{\text{vortex}} = \frac{1}{2} \rho_{\text{\ae}}^{\text{(energy)}} \Omega^2 r_c^5
+    \quad\Rightarrow\quad
+    \rho_{\text{\ae}}^{\text{(energy)}} \sim \frac{2E}{\Omega^2 r_c^5},
 \end{equation}
-where \( r_* \sim \SI{1e-12}{m} \) is the characteristic transition scale. This value is motivated by the range of vortex influences (as in EM interactions).
+where \( \Omega = \frac{C_e}{r_c} \), with \( C_e \approx \SI{1.093845e6}{m/s} \) and \( r_c \approx \SI{1.40897e-15}{m} \).
 
-\subsection*{3. Macroscopic Regime}
+\subsection*{3. Transition Profile}
 
-For \( r \gg r_* \), \( \rho_\text{\ae} \) asymptotically reaches a constant value:
+The energy density transitions exponentially to the macroscopic background:
 \begin{equation}
-    \rho_\text{far} \sim \SI{1e-7}{kg/m^3},
+    \rho_{\text{\ae}}^{\text{(energy)}}(r) =
+    \rho_{\text{\ae}}^{\text{(fluid)}} +
+    \left(\rho_{\text{core}} - \rho_{\text{\ae}}^{\text{(fluid)}}\right)
+    e^{-r/r_*},
 \end{equation}
-which results in free propagation of signals without noticeable inertia. This simulates a vacuum-like behavior.
+where \( r_* \sim \SI{1e-12}{m} \) represents the characteristic decay scale of vortex influence.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.85\textwidth]{images/00_scaleDependentÆtherDensity}
-    \caption{The æther density decreases exponentially from the vortex core and asymptotically approaches a constant value on the macroscale.}
+    \caption{Energy density in the æther decreases exponentially from the vortex core and asymptotically reaches the macroscopic fluid density.}
     \label{fig:vortexfields2}
 \end{figure}
 
@@ -45,20 +77,36 @@ which results in free propagation of signals without noticeable inertia. This si
     \centering
     \begin{tabular}{|c|c|c|l|}
         \hline
-        Regime & Distance $r$ & $\rho_\text{\ae}(r)$ & Physical interpretation \\
+        Regime & Distance $r$ & $\rho_{\text{\ae}}^{\text{(energy)}}(r)$ & Interpretation \\
         \hline
-        Core & $r < 10^{-14}$ m & $\sim 10^{18}$ kg/m$^3$ & Vortex stability \& inertia \\
-        Transition & $10^{-14} - 10^{-11}$ m & Exponentially decreasing & Swirl extinction \& mass interaction \\
-        Macroscopic & $r > 10^{-11}$ m & $\sim 10^{-7}$ kg/m$^3$ & Free æther without mass drag \\
+        Core & $r < 10^{-14}$ m & $\sim 10^{18}$ kg/m$^3$ & Topological vortex energy \\
+        Transition & $10^{-14}$–$10^{-11}$ m & Exponentially decreasing & Energy storage / swirl gradient \\
+        Macroscopic & $r > 10^{-11}$ m & $\sim 10^{-7}$ kg/m$^3$ & Baseline fluid density \\
         \hline
     \end{tabular}
-    \caption{Behavior of the æther density at different scales.}
+    \caption{Behavior of the æther energy density across regimes. The fluid density remains constant.}
 \end{table}
 
+\begin{tcolorbox}[colback=blue!3, colframe=black!70, sharp corners=southwest, title=Æther Density Types in VAM]
+    \begin{itemize}
+        \item \textbf{Fluid Density} \(\rho_{\text{\ae}}^{\text{(fluid)}} \sim \SI{7e-7}{kg/m^3}\): constant across all scales; governs inertia and wave propagation.
+        \item \textbf{Energy Density} \(\rho_{\text{\ae}}^{\text{(energy)}}(r)\): concentrated around vortex cores; provides topological stability; decays exponentially:
+        \[
+            \rho_{\text{\ae}}^{\text{(energy)}}(r) = \rho_{\text{\ae}}^{\text{(fluid)}} + \left(\rho_{\text{core}} - \rho_{\text{\ae}}^{\text{(fluid)}}\right) e^{-r/r_*}
+        \]
+    \end{itemize}
+\end{tcolorbox}
 
-\section{Time dilation from vortex dynamics}
 
-We consider an invisible, irrotational superfluid æther with stable topological vortex nodes. Absolute time $t_\text{abs}$ flows at a constant rate, while local clocks may experience a lower rate due to pressure gradients and nodal energetics. The Vortex Æther Model assumes that the rate at which time flows in the local frame (near the node) depends on the internal angular frequency $\Omega_k$. In this section, we derive time dilation analogues, inspired by the predictions of general relativity (GR), based solely on pressure and vorticity gradients in the fluid.
+\section{Layered Time Dilation from Swirl Dynamics}
+
+In the Vortex Æther Model (VAM), time unfolds through multiple physical layers, as summarized earlier in the Ætheric Time Modes (see Table~\ref{tab:ÆtherTimeModes}). Absolute time \(\mathcal{N}\) flows uniformly across the æther, while localized structures such as vortex knots experience time differently — through internal swirl clocks \(S(t)\), vortex proper time \(T_v\), and observer-perceived time \(\tau\).
+
+
+We consider an invisible, irrotational superfluid æther hosting stable, knotted vortex structures. The absolute time \(\mathcal{N}\) flows uniformly across the entire medium, but clocks embedded within vortex regions experience slowed progression, governed by the local vortex velocity field \(v_\varphi(r)\).
+
+This yields a distinction between the global time \(\tau\), the local swirl clock \(S(t)\), and the vortex proper time \(T_v\), each tracing different aspects of duration. The essence of time dilation in VAM is the reduction in local clock rate as a function of rotational energy density and internal circulation of the æther.
+
 
 \begin{figure}[htbp]
     \centering
@@ -69,7 +117,7 @@ We consider an invisible, irrotational superfluid æther with stable topological
 
 In the Vortex Æther Model (VAM), time dilation does not arise from the curvature of spacetime, but from local vortex dynamics. Each particle of matter in VAM is a vortex-node structure whose internal rotation (\textit{swirl}) influences the local clock frequency.
 
-The fundamental link between local vortex velocity and local time measurement follows from the Bernoulli-like relation for pressure reduction in flow fields. The local clock frequency is related to the vortex tangential velocity $v_{\phi}(r)$ by the formula:
+The fundamental link between local vortex velocity and local time measurement follows from the Bernoulli-like relation for pressure reduction in flow fields. This local time $\tau$ is distinct from both the global causal time $\mathcal{N}$ and the far-field observer’s external time $\bar{t}$. The dilation arises from the slowdown of $\tau$ relative to both $\bar{t}$ and $\mathcal{N}$ as rotational energy increases. See Equation~\eqref{eq:vortex_time_explicit} and the generalized frequency-based dilation formula $\frac{d\tau}{d\bar{t}} = \omega_{\text{obs}}/\omega_0$.  The local clock frequency is related to the vortex tangential velocity $v_{\phi}(r)$ by the formula:
 \begin{equation}\label{eq:vortex_time_dilation}
 \frac{d\tau}{dt} = \sqrt{1 - \frac{v_{\phi}^2(r)}{c^2}}
 \end{equation}
@@ -91,6 +139,71 @@ To visualize the outer behavior of time dilation predicted by the heuristic vort
     }
     \label{fig:HeuristicTimeDilation}
 \end{figure}
+
+
+To formalize the distinct temporal flows in the Vortex Æther Model (VAM), we define the following expressions for time accumulation:
+
+\begin{align}
+    S(t) &= \int_0^t \Omega(r(t'))\, dt'
+    && \text{(Swirl Clock: internal phase accumulation)} \\
+    T_v &= \oint \frac{dl}{v_\varphi(r)}
+    && \text{(Vortex proper time: loop integral over local swirl speed)} \\
+    \frac{d\tau}{dt} &= \sqrt{1 - \frac{v_\varphi^2(r)}{c^2}}
+    && \text{(Time dilation from tangential vortex flow)}
+\end{align}
+
+Here, \(\Omega(r) = \frac{C_e}{r_c} e^{-r/r_c}\) is the local swirl angular velocity, and \(v_\varphi(r) = C_e e^{-r/r_c}\) the tangential velocity in the æther vortex.
+
+If the swirl is stable and constant at radius \(r\), the swirl clock becomes periodic:
+\[
+    S(t) = \Omega(r) t \bmod 2\pi
+\]
+encoding a persistent memory of internal vortex phase.
+
+\begin{tcolorbox}[colback=gray!5, colframe=black!70, sharp corners=southwest, title=Temporal Phase vs. Duration]
+    While \(T_v\) measures elapsed duration along the vortex loop (akin to proper time), the swirl clock \(S(t)\) accumulates internal phase, encoding rotational memory modulo full revolutions. This distinction mirrors that between a watch counting seconds and a gyroscope preserving orientation — both describe time, but with fundamentally different informational content. In systems with quantized circulation, such as knotted vortex cores, \(S(t)\) may serve as a persistent state variable marking phase-locked synchronization with external æther flows.
+\end{tcolorbox}
+
+
+\noindent
+These temporal flows distinguish between the \emph{absolute æther time} (\(\mathcal{N}\)), the \emph{external observer’s clock} (\(\tau\)), and the \emph{internal vortex timing} (\(S(t)\), \(T_v\)). Their interaction forms the backbone of time dilation and causality in the VAM — not as a deformation of spacetime, but as a direct expression of circulation, angular momentum, and vortex topology.
+
+\medskip
+To relate Chronos-Time $\tau$ to externally measured coordinate time $\bar{t}$, we introduce a frequency ratio expression based on the local swirl profile:
+
+\begin{equation}
+    \frac{d\tau}{d\bar{t}} = \frac{\omega_{\text{obs}}}{\omega_0}
+    \quad \text{(Chronos vs. External Clock Time)}
+\end{equation}
+
+We define the observed angular frequency as:
+\[
+    \omega_{\text{obs}}(r) = \Omega(r) = \frac{C_e}{r_c} e^{-r/r_c}, \quad \text{and} \quad \omega_0 = \Omega(0) = \frac{C_e}{r_c}
+\]
+
+so that:
+\[
+    \frac{d\tau}{d\bar{t}} = e^{-r/r_c}
+\]
+
+This result shows that local vortex clocks experience exponential slowing relative to external time $\bar{t}$ as they approach the core. It expresses time dilation purely through internal vortex angular dynamics in the æther.
+
+\begin{tcolorbox}[colback=gray!7, colframe=black!60, sharp corners=southwest, title=Frequency-Based Time Flow Interpretation]
+    In VAM, the clock slowdown factor $e^{-r/r_c}$ emerges naturally from the angular velocity decay of the vortex. This replaces the gravitational redshift of General Relativity with a swirl-based causal delay, aligning $\tau$ with rotational frame evolution and $\bar{t}$ with the external æther rest frame.
+\end{tcolorbox}
+
+\begin{equation}
+    \fbox{
+        \(
+        \frac{d\tau}{d\bar{t}} = e^{-r/r_c}
+        \)}
+    \quad \text{where } \Omega(r) = \frac{C_e}{r_c} e^{-r/r_c}
+\end{equation}
+
+\begin{tcolorbox}[colback=red!3, colframe=black!80, sharp corners=southwest, title=Kairos Bifurcations in Temporal Flow]
+    A Kairos Moment $\mathbb{K}$ occurs when vortex structure or energy density transitions cause a discontinuity in $T_v$ or $S(t)$. These are irreversible from the ætheric viewpoint and may represent causal branching, event horizons, or topological recombinations. They do not merely slow time — they reshape its structure.
+\end{tcolorbox}
+
 
 \subsection{Derivation from vortex hydrodynamics}
 
@@ -118,7 +231,22 @@ This explicitly expresses the time dilation in fundamental vortex parameters.
   \label{fig:radial_time_dilation}
 \end{figure}
 
-\subsection{Comparison with general relativity}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{From} & \textbf{To} & \textbf{Conversion Formula} \\
+        \hline
+        $\bar{t}$ & $\tau$ & $\frac{d\tau}{d\bar{t}} = \omega_{\text{obs}} / \omega_0$ \\
+        $\bar{t}$ & $T_v$ & $T_v = \oint \frac{dl}{v_\varphi(r)}$ \\
+        $\tau$ & $S(t)$ & $S(t) = \int \Omega(r(t))\, d\tau$ \\
+        $\mathcal{N}$ & $T_v$ & $T_v = \int_0^{\mathcal{N}} \chi(r) \, d\mathcal{N}$ (if using \textit{general time-chirality function}) \\
+        \hline
+    \end{tabular}
+    \caption{Sample conversions between Temporal Ontology layers in VAM}
+\end{table}
+
+\subsection{GR vs VAM: Temporal Flow and Causality}
 
 For comparison, in general relativity (GR), gravitational time dilation arises from spacetime curvature, expressed by the Schwarzschild metric~\cite{schutz2009first}:
 \begin{equation}\label{eq:GRtime}
@@ -131,10 +259,10 @@ The similarities and differences are immediately apparent: GR's gravitational ti
     \centering
     \includegraphics[width=0.7\linewidth]{images/02-RadialProfileOfLocalTimeDilation_Vortex-Induced_Time_Well}
     \caption{Comparison of VAM (vortex dynamics) and GR time dilation, as a function of distance to vortex core and Schwarzschild radius.}
-    \label{fig:vergelijking_VAMGR}
+    \label{fig:compare_VAMGR}
 \end{figure}
 
-In Figure~\ref{fig:vergelijking_VAMGR} we see that VAM time dilation is functionally comparable to GR prediction at sufficient distance. At decreasing distance (near vortex core or Schwarzschild radius) differences arise due to vortex-specific effects and topological node structures.
+In Figure~\ref{fig:compare_VAMGR} we see that VAM time dilation is functionally comparable to GR prediction at sufficient distance. At decreasing distance (near vortex core or Schwarzschild radius) differences arise due to vortex-specific effects and topological node structures.
 
 In summary, the VAM replaces spacetime curvature with eddy dynamics, while preserving measurable time dilation effects consistent with established experimental results such as Hafele–Keating~\cite{hafele1972around}, but from a fundamentally different physical explanation.
 
