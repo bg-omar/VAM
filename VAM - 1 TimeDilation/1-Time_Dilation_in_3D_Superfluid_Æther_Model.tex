@@ -4,102 +4,26 @@
 %! Affiliation = Independent Researcher, Groningen, The Netherlands
 %! License = CC-BY 4.0
 %! ORCID = 0009-0006-1686-3961
-%! DOI = 10.5281/zenodo.15566319
+%! DOI = 10.5281/zenodo.15669795
 
 \documentclass[a4paper,12pt]{article}
+\usepackage{vamstyle}
+\usepackage[most]{tcolorbox}
 
-% Page Geometry
-\usepackage[a4paper, margin=2cm]{geometry}
-
-% Language, Encoding, Fonts
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
-\usepackage[english]{babel}
-
-% Colors, Graphics, Diagrams
-\usepackage{graphicx}
-\usepackage{tikz}
-\usetikzlibrary{arrows.meta, positioning}
-\usepackage{pgfplots}
-\pgfplotsset{compat=1.18}
-\usepackage{xcolor}
-
-% Math and Physics
-\usepackage{amsmath, amssymb, physics}
-\usepackage{siunitx}
-
-% Tables and Figures
-\usepackage{float}
-\usepackage{booktabs}
-\usepackage{array, tabularx, makecell, multirow}
-\renewcommand{\arraystretch}{1.5}
-\renewcommand{\floatpagefraction}{.8}
-\usepackage[font=footnotesize]{caption}
-\usepackage{subcaption}
-
-% Code and Listings
-\usepackage{listings}
-\lstset{basicstyle=\ttfamily\footnotesize, breaklines=true}
-
-% TOC Customization
-\usepackage{tocloft}
-\setcounter{tocdepth}{4}
-\renewcommand{\cftsecfont}{\bfseries}
-\renewcommand{\cftsubsecfont}{\itshape}
-\renewcommand{\cftsecleader}{\cftdotfill{5}}
-\renewcommand{\contentsname}{\centering \Huge\textbf{Contents}}
-
-% Links and Metadata
-\usepackage{hyperref}
-\hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    citecolor=blue,
-    urlcolor=blue,
-    pdftitle={The Vortex Æther Model},
-    pdfauthor={Omar Iskandarani},
-    pdfkeywords={vorticity, gravity, æther, fluid dynamics, time dilation, VAM}
+\title{Time Dilation in a 3D Superfluid Æther Model\\  Based on Vortex Core Rotation and Ætheric Flow }
+\author{
+    Omar Iskandarani\thanks{
+        Independent Researcher, Groningen, The Netherlands.\\
+        Email: \texttt{info@omariskandarani.com}\\
+        ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961}\\
+        DOI: \href{https://doi.org/10.5281/zenodo.15669902}{10.5281/zenodo.15669795}
+    }
 }
-\usepackage{bookmark} % PDF bookmarks
+\date{\today}
 
-
-
-
-% Line and Hyphenation
-\usepackage[none]{hyphenat}
-\usepackage{amsfonts}
-\usepackage{sectsty}
-\sectionfont{\Large\bfseries\sffamily}
-\subsectionfont{\large\bfseries\sffamily}
-\usepackage{newtxtext,newtxmath}
-\usepackage[scaled=0.95]{inconsolata} % for a clean monospace font
-\usepackage{mathrsfs}
-% Bibliography
-\usepackage[numbers]{natbib} % Or switch to biblatex if preferred
-
-
-\sloppy
 
 \begin{document}
-
-    \begin{titlepage}
-        \thispagestyle{empty}
-        \centering
-        \vspace*{2cm}
-        {\Huge\bfseries Time Dilation in a 3D Superfluid Æther Model \par}
-        \vspace{0.5cm}
-        {\Large Based on Vortex Core Rotation and Ætheric Flow \par}
-        \vspace{2cm}
-        {\Large\itshape Omar Iskandarani\par}
-        \vspace{0.5cm}
-        \textit{Independent Researcher, Groningen, The Netherlands} \\
-        ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961} \\
-        DOI: \href{https://doi.org/10.5281/zenodo.15566319}{10.5281/zenodo.15566319} \\
-        \vfill
-        {\large \today\par}
-
-
+    \maketitle
 
     \begin{abstract}
 
@@ -137,8 +61,20 @@
         \caption{Schematic representation of three modes of motion of a vortex in the æther model. \textbf{(Left)} Pure rotation with local tangential velocity $v_t = R\omega$. \textbf{(Middle)} Translation with velocity $v_\text{cm}$ without internal rotation. \textbf{(Right)} Combining both leads to a relative velocity that differs over the vortex circumference: $v_\text{rel} = v_t + v_\text{cm}$.}
         \label{fig:rotation-translation}
     \end{figure}
+    \vfill
 
-  \end{titlepage}
+    \newpage
+
+
+
+
+
+
+
+
+
+
+
     \input{TimeDilation/1_introduction}
     \input{TimeDilation/2_superfluid_æther_framework}
     \input{TimeDilation/3_vortex_clocks}

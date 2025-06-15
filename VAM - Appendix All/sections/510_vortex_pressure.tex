@@ -1,0 +1,138 @@
+%! Author = Omar Iskandarani
+%! Date = 2025-06-13
+
+% === Metadata ===
+\newcommand{\appendixtitle}{Appendix: Vortex Pressure, Stress, and Vorticity}
+\newcommand{\appendixauthor}{Omar Iskandarani}
+\newcommand{\appendixaffil}{Independent Researcher, Groningen, The Netherlands}
+\newcommand{\appendixdoi}{10.5281/zenodo.15566319}
+\newcommand{\appendixorcid}{0009-0006-1686-3961}
+
+\ifdefined\standalonechapter\else
+% Standalone mode
+\documentclass[12pt]{article}
+\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage{ifthen} % we can use it safely now
+\usepackage{import}
+\usepackage{subfiles}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amsmath, amssymb, physics}
+\usepackage{siunitx}
+\usepackage{tikz}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{array, tabularx}
+\usepackage{listings}
+\usepackage{bookmark}
+\usepackage{newtxtext,newtxmath}
+\usepackage[scaled=0.95]{inconsolata}
+\usepackage{mathrsfs}
+\input{../vam_appendix_setup.sty}
+\begin{document}
+
+    % === Title page ===
+    \titlepageOpen
+
+    \begin{abstract}
+        Abstracts are not typically included in appendices, but for standalone it is needed.
+    \end{abstract}
+
+    \titlepageClose
+    \fi
+
+% ============= Begin of content ============
+    \section{\appendixtitle}
+
+
+    \subsection*{Vortex Pressure Relations}
+    In a constantly rotating vortex tube, the pressure at the axis of rotation is $P_0$. The pressure at the vortex edge $P_1$ is given by:
+    \begin{equation*}
+        P_1 = P_0 + \frac{1}{2} \rho c^2,
+    \end{equation*}
+    where $\rho$ is the density and $c$ the tangential velocity at the vortex edge. The central axis of rotation can also be interpreted as the center of gravity within the vortex.
+
+    The pressure parallel to the axes is:
+    \begin{equation*}
+        P_2 = P_0 + \frac{1}{4} \rho c^2.
+    \end{equation*}
+
+    For multiple parallel vortex tubes forming a medium with pressure $P_2$ along the axes and pressure $P_1$ in a perpendicular direction, we obtain:
+    \begin{equation*}
+        P_1 - P_2 = \frac{1}{4} \rho c^2.
+    \end{equation*}
+    For an irrotational vortex where $N$ depends on the angular frequency and density distribution:
+    \begin{equation*}
+        P_1 - P_2 = N \rho c^2.
+    \end{equation*}
+
+    \subsection*{Stress Tensor Components}
+    Defining the direction cosines of vortex tubes relative to the coordinate axes $(x, y, z)$ as $l, m, n$, we express the normal and tangential stresses:
+    \begin{align}
+        P_{xx} &= \rho c^2 l^2 - P_1, & P_{yz} &= \rho c^2 m n, \\
+        P_{yy} &= \rho c^2 m^2 - P_1, & P_{zx} &= \rho c^2 n l, \\
+        P_{zz} &= \rho c^2 n^2 - P_1, & P_{xy} &= \rho c^2 l m.
+    \end{align}
+
+    Velocity components are given by:
+    \begin{equation*}
+        u = c l, \quad v = c m, \quad w = c n.
+    \end{equation*}
+    Rewriting the stress tensor:
+    \begin{align}
+        P_{xx} &= \rho u^2 - P_1, & P_{yz} &= \rho v w, \\
+        P_{yy} &= \rho v^2 - P_1, & P_{zx} &= \rho u w, \\
+        P_{zz} &= \rho w^2 - P_1, & P_{xy} &= \rho u v.
+    \end{align}
+
+    \subsection*{Equilibrium of Stresses and Force Components}
+    According to equilibrium laws, the forces in the $x$, $y$, and $z$ directions per unit volume satisfy:
+    \begin{align}
+        X &= \frac{d P_{xx}}{dx} + \frac{d P_{xy}}{dy} + \frac{d P_{xz}}{dz}, \\
+        Y &= \frac{d P_{yx}}{dx} + \frac{d P_{yy}}{dy} + \frac{d P_{yz}}{dz}, \\
+        Z &= \frac{d P_{zx}}{dx} + \frac{d P_{zy}}{dy} + \frac{d P_{zz}}{dz}.
+    \end{align}
+
+    Substituting stress tensor components and using the velocity relations:
+    \begin{equation*}
+        u \frac{du}{dx} + v \frac{dv}{dx} + w \frac{dw}{dx} = \frac{1}{2} \frac{d}{dx} (u^2 + v^2 + w^2),
+    \end{equation*}
+    we derive:
+    \begin{align}
+        X &= \frac{1}{2} \rho \frac{d}{dx} (u^2 + v^2 + w^2) + u \rho \left( \frac{du}{dx} + \frac{dv}{dy} + \frac{dw}{dz} \right) - v \rho (2 \zeta) + w \rho (2 \eta) - \frac{1}{\rho} \frac{dP_1}{dx}, \\
+        Y &= \frac{1}{2} \rho \frac{d}{dy} (c^2) + v \rho \left( \frac{du}{dx} + \frac{dv}{dy} + \frac{dw}{dz} \right) - w \rho (2 \xi) + u \rho (2 \zeta) - \frac{1}{\rho} \frac{dP_1}{dy}, \\
+        Z &= \frac{1}{2} \rho \frac{d}{dz} (c^2) + w \rho \left( \frac{du}{dx} + \frac{dv}{dy} + \frac{dw}{dz} \right) - u \rho (2 \eta) + v \rho (2 \xi) - \frac{1}{\rho} \frac{dP_1}{dz}.
+    \end{align}
+
+    \subsection*{Connection to Vorticity and Coriolis Acceleration}
+    Comparing with prior formulations, two additional accelerations emerge due to fluid rotation:
+    \begin{equation*}
+        \frac{1}{2} \rho \frac{d}{dx} (u^2 + v^2 + w^2),
+    \end{equation*}
+    which represents Coulomb acceleration, and:
+    \begin{equation*}
+        -v (2 \zeta) + w (2 \eta),
+    \end{equation*}
+    which corresponds to vorticity components along the $x$-axis. This term is recognized as the Coriolis acceleration.
+
+    \subsection*{Conclusion}
+    This derivation reveals the interplay between vortex pressure, stress tensors, and vorticity effects, including Coriolis and Coulomb accelerations. These results provide a basis for analyzing rotating fluid systems and their implications in Æther dynamics and vortex interactions.
+
+% === Bibliography (only for standalone) ===
+    \ifdefined\standalonechapter
+    % Being imported from main.tex — do nothing
+    \else
+    \bibliographystyle{unsrt}
+    \bibliography{../../references}
+    \end{document}
+    \fi
+
+
+    % === Bibliography (only for standalone) ===
+    \ifdefined\standalonechapter
+    % Being imported from main.tex — do nothing
+    \else
+    \bibliographystyle{unsrt}
+    \bibliography{../../references}
+    \end{document}
+    \fi

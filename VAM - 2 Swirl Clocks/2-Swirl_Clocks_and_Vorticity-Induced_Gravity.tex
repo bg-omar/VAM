@@ -6,138 +6,58 @@
 %! ORCID = 0009-0006-1686-3961
 %! DOI = 10.5281/zenodo.15566336
 
-% --------------------
-% VAM LaTeX Template
-% Inspired by your revtex4 setup, but with flexibility for publication
-% --------------------
-\documentclass[a4paper,12pt]{article} % Switched from revtex4 for full control
-
-% --------------------
-% Page Geometry
-% --------------------
-\usepackage[a4paper, margin=2cm]{geometry}
-
-% --------------------
-% Language, Encoding, Fonts
-% --------------------
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
-\usepackage[english]{babel}
-
-% --------------------
-% Colors, Graphics, Diagrams
-% --------------------
+\documentclass[a4paper,12pt]{article}
+\usepackage{vamstyle}
+\usepackage[most]{tcolorbox}
 \usepackage{graphicx}
-\usepackage{tikz}
-\usetikzlibrary{arrows.meta, positioning}
-\usepackage{pgfplots}
-\pgfplotsset{compat=1.18}
-\usepackage{xcolor}
+\usepackage{array}
 
-% --------------------
-% Math and Physics
-% --------------------
-\usepackage{amsmath, amssymb, physics}
-\usepackage{siunitx}
 
-% --------------------
-% Tables and Figures
-% --------------------
-\usepackage{float}
-\usepackage{booktabs}
-\usepackage{array, tabularx, makecell, multirow}
-\renewcommand{\arraystretch}{1.5}
-\renewcommand{\floatpagefraction}{.8}
-\usepackage[font=footnotesize]{caption}
-\usepackage{subcaption}
-
-% --------------------
-% Code and Listings
-% --------------------
-\usepackage{listings}
-\lstset{basicstyle=\ttfamily\footnotesize, breaklines=true}
-
-% --------------------
-% TOC Customization
-% --------------------
-\usepackage{tocloft}
-\setcounter{tocdepth}{2} % Only show sections and subsections
-\renewcommand{\cftsecfont}{\bfseries}
-\renewcommand{\cftsubsecfont}{\itshape}
-\renewcommand{\cftsecleader}{\cftdotfill{.}}
-\renewcommand{\contentsname}{\centering \Huge\textbf{Contents}}
-
-% --------------------
-% Links and Metadata
-% --------------------
-\usepackage{hyperref}
-\hypersetup{
-  colorlinks=true,
-  linkcolor=blue,
-  citecolor=blue,
-  urlcolor=blue,
-  pdftitle={The Vortex Æther Model},
-  pdfauthor={Omar Iskandarani},
-  pdfkeywords={vorticity, gravity, æther, fluid dynamics, time dilation, VAM}
+\title{Swirl Clocks and Vorticity-Induced Gravity\\  Reformulating Relativity in a Structured Vortex Æther\\  A Topological Fluid Mechanics Approach to Time Dilation, Mass, and Gravitation. }
+\author{
+    Omar Iskandarani\thanks{
+        Independent Researcher, Groningen, The Netherlands.\\
+        Email: \texttt{info@omariskandarani.com}\\
+        ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961}\\
+        DOI: \href{https://doi.org/10.5281/zenodo.15566336}{10.5281/zenodo.15566336}
+    }
 }
-\usepackage{bookmark} % PDF bookmarks
-
-% --------------------
-% Bibliography
-% --------------------
-\usepackage[numbers]{natbib} % Or switch to biblatex if preferred
-
-% --------------------
-% Line and Hyphenation
-% --------------------
-\usepackage[none]{hyphenat}
-\sloppy
-
-% --------------------
-% Document Starts Here
-% --------------------
+\date{\today}
 
 
 \begin{document}
-\title{
-  \textbf{Swirl Clocks and Vorticity-Induced Gravity}\\[0.5em]
-  \large Reformulating Relativity in a Structured Vortex Æther\\
-  \normalsize A Topological Fluid Mechanics Approach to Time Dilation, Mass, and Gravitation
-\noindent\thanks{\textbf{Keywords:} \textit{time dilation, superfluid æther, Vortex Æther Model, vortex dynamics, emergent time, fluid spacetime, special relativity, analog gravity, 3D vortex structures, quantized circulation, relativistic effects, topological matter, fluid mechanics, vortex clocks}}
-}
-
-\author{
-  Omar Iskandarani\\
-  \small Independent Researcher, Groningen, The Netherlands
-  \thanks{\texttt{info@omariskandarani.com}}
-  \thanks{ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961} \quad DOI: \href{https://doi.org/10.5281/zenodo.15566336}{10.5281/zenodo.15566336} \quad License: \href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}}
-}
-
-\date{\today}
-\maketitle
+    \maketitle
 
 
+    \begin{abstract}
+        This paper presents a fluid dynamical reformulation of general relativity using the Vortex Æther Model (VAM), wherein gravity and time dilation emerge from vorticity-induced pressure gradients in an incompressible, inviscid superfluid æther. Within a Euclidean space governed by an absolute Æther-Time $\mathcal{N}$, mass and inertia are modeled as topologically stable vortex knots. Geodesic motion is replaced by streamline alignment with conserved vorticity flux, and gravitational force arises from a Bernoulli potential:
 
-\begin{abstract}
-    This paper presents a fluid dynamical reformulation of general relativity using the Vortex Æther Model (VAM), in which gravity and time dilation arise from vorticity-induced pressure gradients in an incompressible, inviscid superfluid medium. Within a Euclidean space with absolute time, mass and inertia are represented as topologically stable vortex knots, with geodesic motion replaced by streamlines along conserved vorticity flux. Gravitational force is modeled as a Bernoulli potential in vortex fields, with an associated field equation:
-    \begin{equation*}
-        \nabla^2 \Phi_v(\vec{r}) = -\rho_\text{\ae} \|\boldsymbol{\omega}(\vec{r})\|^2
-    \end{equation*}
+        \begin{equation*}
+            \nabla^2 \Phi_v(\vec{r}) = -\rho_\text{\ae} \|\boldsymbol{\omega}(\vec{r})\|^2
+        \end{equation*}
 
-    and time dilation follows from local vortex energy:
-    \begin{equation*}
-        \frac{d\tau}{dt} = \sqrt{1 - \frac{C_e^2}{c^2} e^{-r/r_c} - \frac{2G_\text{swirl} M_\text{eff}(r)}{rc^2} - \beta \Omega^2}
-    \end{equation*}
+        Local time dilation is reinterpreted as a dynamical effect of swirl phase and vortex energy density. The measurable time $\tau$—termed Chronos-Time—is derived from proper velocity and swirl-induced energy:
 
-    VAM introduces a scale-dependent æther density: local (~$10^{18}\,\mathrm{kg/m^3}$) for core stability; macroscopic (~$10^{-7}\,\mathrm{kg/m^3}$) for inertia-free interaction. Thermodynamic consistency is achieved via Clausius entropy of vortex nodes, leading to an entropic interpretation of mass and time. Quantum phenomena such as the photoelectric effect and LENR are interpreted as resonances within vortex networks.
+        \begin{equation*}
+            \frac{d\tau}{dt} = \sqrt{1 - \frac{C_e^2}{c^2} e^{-r/r_c} - \frac{2G_\text{swirl} M_\text{eff}(r)}{rc^2} - \beta \Omega^2}
+        \end{equation*}
 
-    The model reproduces Newtonian limits and frame-dragging as emergent phenomena and forms a testable, topologically sound alternative to classical gravity models. This approach is consistent with previous analog gravity programs~\cite{barcelo2011analogue,volovik2009universe}, but provides a fundamental hydrodynamical and node-oriented gravity framework.
-\end{abstract}
+        The model introduces a multi-layered temporal structure, distinguishing $\mathcal{N}$ (absolute Æther-Time), $\tau$ (Chronos-Time), and $S(t)$ (Swirl Clock phase). A scale-dependent æther density governs transitions between high-density vortex cores and vacuum-like surroundings, leading to testable effects in rotating systems and low-energy nuclear interactions. Quantum phenomena such as the photoelectric effect and LENR are reinterpreted as swirl phase resonances across vortex networks.
+
+        VAM recovers Newtonian gravity and frame-dragging in appropriate limits and establishes a physically grounded, topologically invariant description of time and gravity. It builds upon analogue gravity frameworks~\cite{barcelo2011analogue,volovik2009universe}, but introduces a coherent, superfluid-based ontology of mass, causality, and time.
+    \end{abstract}
+
+
+
+
+    \vfill
+
 
 
 \newpage
 \tableofcontents
+\newpage
+
 \input{Swirl_Clocks/00_Introduction}
 \input{Swirl_Clocks/01_Time_Dilation_from_Vortex_Dynamics}
 \input{Swirl_Clocks/02_entropy}
@@ -164,6 +84,7 @@
     \input{Swirl_Clocks/appendix_10_SplitHelicity}
     \input{Swirl_Clocks/appendix_11_VAM_Lagrangian}
     \input{Swirl_Clocks/appendix_12_DerivationFineStructureConstant}
+    \input{Swirl_Clocks/appendix_13_ÆthericNow}
 
     \bibliography{../references}
     \bibliographystyle{unsrt}

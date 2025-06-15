@@ -1,0 +1,148 @@
+%! Author = Omar Iskandarani
+%! Date = 2025-06-13
+
+% === Metadata ===
+\newcommand{\appendixtitle}{Appendix: Movement of Free Æther Particles}
+\newcommand{\appendixauthor}{Omar Iskandarani}
+\newcommand{\appendixaffil}{Independent Researcher, Groningen, The Netherlands}
+\newcommand{\appendixdoi}{10.5281/zenodo.15566319}
+\newcommand{\appendixorcid}{0009-0006-1686-3961}
+
+\ifdefined\standalonechapter\else
+% Standalone mode
+\documentclass[12pt]{article}
+\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage{ifthen} % we can use it safely now
+\usepackage{import}
+\usepackage{subfiles}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amsmath, amssymb, physics}
+\usepackage{siunitx}
+\usepackage{tikz}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{array, tabularx}
+\usepackage{listings}
+\usepackage{bookmark}
+\usepackage{newtxtext,newtxmath}
+\usepackage[scaled=0.95]{inconsolata}
+\usepackage{mathrsfs}
+\input{../vam_appendix_setup.sty}
+\begin{document}
+
+    % === Title page ===
+    \titlepageOpen
+
+    \begin{abstract}
+        Abstracts are not typically included in appendices, but for standalone it is needed.
+    \end{abstract}
+
+    \titlepageClose
+    \fi
+
+% ============= Begin of content ============
+    \section{\appendixtitle}
+
+
+    \subsection*{Fundamental Assumptions}
+    The Æther is a homogeneous, incompressible, non-viscous medium. This implies that Æther consists of perfect solid spherical particles with a constant density $\rho$, ensuring mass per unit volume remains unchanged:
+    \begin{equation*}
+        \frac{d \rho}{d t} = 0.
+    \end{equation*}
+
+    A Cartesian coordinate system $(x, y, z)$ is adopted, fixed in absolute space. The Æther moves relative to this coordinate system, while all variables of interest are functions of $(x, y, z, t)$. The background space consists of three spatial dimensions and an absolute unidirectional time, devoid of relativistic time distortions.
+
+    Key variables include:
+    \begin{itemize}
+        \item Pressure $P$, where $P_{xx}$ represents normal stress in the $x$-direction.
+        \item Flow rate $U$ with vector components $(u, v, w)$ parallel to $(x, y, z)$, defined as:
+        \begin{equation*}
+            u = \frac{dx}{dt}, \quad v = \frac{dy}{dt}, \quad w = \frac{dz}{dt}.
+        \end{equation*}
+        \item External forces per unit volume $(X, Y, Z)$.
+    \end{itemize}
+
+    \subsection*{Equilibrium of Stress in Free Æther}
+    The external forces satisfy:
+    \begin{align}
+        X &= \frac{d P_{xx}}{dx} + \frac{d P_{xy}}{dy} + \frac{d P_{xz}}{dz}, \\
+        Y &= \frac{d P_{yx}}{dx} + \frac{d P_{yy}}{dy} + \frac{d P_{yz}}{dz}, \\
+        Z &= \frac{d P_{zx}}{dx} + \frac{d P_{zy}}{dy} + \frac{d P_{zz}}{dz}.
+    \end{align}
+
+    For irrotational free Æther, shear stresses vanish:
+    \begin{equation*}
+        P_{yz} = P_{xz} = P_{xy} = 0.
+    \end{equation*}
+    Thus, the force equations simplify to:
+    \begin{equation*}
+        X = \frac{d P_{xx}}{dx}, \quad Y = \frac{d P_{yy}}{dy}, \quad Z = \frac{d P_{zz}}{dz}.
+    \end{equation*}
+    The total stress potential satisfies:
+    \begin{equation*}
+        X dx + Y dy + Z dz = dV,
+    \end{equation*}
+    where $V$ represents the potential function.
+
+    Normal stresses in an incompressible medium manifest as:
+    \begin{align}
+        P_{xx} &= \rho u^2 - P_1, \\
+        P_{yy} &= \rho v^2 - P_1, \\
+        P_{zz} &= \rho w^2 - P_1.
+    \end{align}
+    Substituting these into the equilibrium equations yields the fundamental equations of free Æther particle motion:
+    \begin{align}
+        X &= \frac{du}{dt} + u \frac{du}{dx} + v \frac{du}{dy} + w \frac{du}{dz} + \frac{1}{\rho} \frac{dP}{dx}, \\
+        Y &= \frac{dv}{dt} + u \frac{dv}{dx} + v \frac{dv}{dy} + w \frac{dv}{dz} + \frac{1}{\rho} \frac{dP}{dy}, \\
+        Z &= \frac{dw}{dt} + u \frac{dw}{dx} + v \frac{dw}{dy} + w \frac{dw}{dz} + \frac{1}{\rho} \frac{dP}{dz}.
+    \end{align}
+    The continuity equation for an incompressible fluid is:
+    \begin{equation*}
+        0 = \frac{du}{dx} + \frac{dv}{dy} + \frac{dw}{dz}.
+    \end{equation*}
+
+    \subsection*{Velocity Potential and Irrotational Flow}
+    The velocity vector $U$ is expressed via the velocity potential $\varphi$:
+    \begin{equation*}
+        u = \frac{d \varphi}{dx}, \quad v = \frac{d \varphi}{dy}, \quad w = \frac{d \varphi}{dz}.
+    \end{equation*}
+    For free Æther, this leads to the Laplace equation:
+    \begin{equation*}
+        \frac{d^2 \varphi}{dx^2} + \frac{d^2 \varphi}{dy^2} + \frac{d^2 \varphi}{dz^2} = 0.
+    \end{equation*}
+
+    \subsection*{Vorticity and Circulation}
+    In an irrotational flow, the vorticity components satisfy:
+    \begin{equation*}
+        \frac{dw}{dy} - \frac{dv}{dz} = 0, \quad \frac{du}{dz} - \frac{dw}{dx} = 0, \quad \frac{dv}{dx} - \frac{du}{dy} = 0.
+    \end{equation*}
+    For a rotational Æther flow, these conditions modify to:
+    \begin{equation*}
+        \frac{dw}{dy} - \frac{dv}{dz} = 2 \xi, \quad \frac{du}{dz} - \frac{dw}{dx} = 2 \eta, \quad \frac{dv}{dx} - \frac{du}{dy} = 2 \zeta.
+    \end{equation*}
+    The vorticity vector is defined as:
+    \begin{equation*}
+        \vec{\omega} = 2 \zeta.
+    \end{equation*}
+    The circulation $\Gamma$ around an infinitesimal closed contour satisfies:
+    \begin{equation*}
+        \Gamma = \left(\frac{dv}{dx} - \frac{du}{dy}\right) dx dy.
+    \end{equation*}
+    The kinetic energy of a solid vortex is given by:
+    \begin{equation*}
+        E = \frac{1}{2} \rho \iiint (u^2 + v^2 + w^2) dx dy dz.
+    \end{equation*}
+    Since Æther is inviscid, solid vortices maintain constant rotation with the tangential velocity $c$ at the vortex edge given by:
+    \begin{equation*}
+        \vec{\omega} = \frac{c}{r}.
+    \end{equation*}
+    Thus, the energy simplifies to:
+    \begin{equation*}
+        E = \frac{1}{2} M c^2,
+    \end{equation*}
+    where $M$ is the vortex mass.
+
+    \subsection*{Conclusion}
+    The derived equations establish the fundamental motion of free Æther particles under the assumptions of incompressibility and inviscidity. The velocity potential framework ensures an irrotational flow, while vorticity dynamics provide insights into rotational effects. These derivations pave the way for further investigations into Æther-based fluid dynamics and their implications for physical interactions at various scales.
+
