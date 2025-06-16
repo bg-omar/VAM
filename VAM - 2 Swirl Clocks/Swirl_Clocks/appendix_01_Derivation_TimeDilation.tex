@@ -6,64 +6,120 @@ We present a unified time dilation formula derived from the Vortex \AE{}ther Mod
 \end{abstract}
 
 \section*{Introduction}
-In General Relativity (GR), time dilation is sourced by mass and rotation via the Schwarzschild and Kerr metrics, respectively. The Vortex \ae{}ther Model (VAM) replaces these with swirl-induced vorticity, æther density gradients, and circulation fields. We derive and present a unified time dilation expression that incorporates:
+
+In General Relativity (GR), time dilation arises from mass and angular momentum, expressed through the Schwarzschild and Kerr metrics. In contrast, the Vortex \ae{}ther Model (VAM) reformulates this effect in terms of vorticity, internal circulation, and local æther properties. Gravitational effects are no longer sourced by geometric curvature but by fluid-dynamic structures in an inviscid, rotational medium.
+
+This appendix derives a unified time dilation expression from first principles of vortex mechanics, incorporating:
 
 \begin{itemize}
-    \item Vortex-induced mass formation,
-    \item Frame-dragging via swirl angular velocity,
-    \item Bubble swelling dynamics mimicking thermodynamic gas laws,
-    \item Exponential decay of æther vorticity with distance,
-    \item Hybridization to classical GR at large $r$.
+    \item Vortex-induced mass generation through circulation,
+    \item Frame-dragging from swirl angular momentum,
+    \item Bubble-like volume expansion resembling thermodynamic gas laws,
+    \item Exponential decay of vorticity and pressure with distance,
+    \item Smooth hybridization with classical Newtonian gravity at large \( r \).
 \end{itemize}
 
-\subsection{Final VAM Time Dilation Equation}
-The unified time dilation equation in VAM becomes, expressed as the ratio between local Chronos-Time $\tau$ and global Aithēr-Time $\mathcal{N}$:
+\subsection{Unified Time Dilation in VAM}
+
+We define the time dilation factor between the local Chronos-Time \( \tau \) and the absolute Aithēr-Time \( \mathcal{N} \) as:
 
 \begin{equation}
-\boxed{
-\frac{d\tau}{d\mathcal{N}} = \sqrt{
-1
-- \frac{2 G_{\text{hybrid}}(r) M_{\text{hybrid}}(r)}{r c^2}
-- \frac{C_e^2}{c^2} e^{-r/r_c}
-- \frac{C_e^2}{r_c^2 c^2} e^{-r/r_c}
-}}
-\label{eq:final_vam_td}
+    \boxed{
+        \frac{d\tau}{d\mathcal{N}} = \sqrt{
+            1
+            - \frac{2 G_{\text{hybrid}}(r) M_{\text{hybrid}}(r)}{r c^2}
+            - \frac{C_e^2}{c^2} e^{-r/r_c}
+            - \frac{C_e^2}{r_c^2 c^2} e^{-r/r_c}
+        }}
+    \label{eq:final_vam_td}
 \end{equation}
-Here, $\tau$ is the local proper time tracked by a particle in the vortex region (Chronos-Time), and $\mathcal{N}$ is the background causal time of the æther (Aithēr-Time).
 
-$\frac{d\tau}{dt} = \sqrt{
-1
-- \frac{C_e^2}{c^2} e^{-r/r_c}
-- \frac{2G_\text{swirl} M_\text{eff}(r)}{r c^2}
-- \beta \Omega^2
-}$
+Here, \( \tau \) represents the measurable proper time experienced within the vortex region (Chronos-Time), and \( \mathcal{N} \) is the background causal time of the æther (Aithēr-Time). The individual terms encode swirl gravity, local pressure deficits, and rotational frame effects.
 
-Uses standard coordinate time $t$, not the universal Aithēr-Time $\mathcal{N}$.
+\subsection{Decomposition in Standard Coordinate Time}
 
-\subsection{Explanation of Terms}
+For interpretability, we restate equation~\eqref{eq:final_vam_td} using standard coordinate time \( t \), focusing on observable clock delay mechanisms:
 
-Each term represents a physical mechanism:
+\begin{equation}
+    \frac{d\tau}{dt} = \sqrt{
+        1
+        - \frac{C_e^2}{c^2} e^{-r/r_c}
+        - \frac{2 G_\text{swirl} M_\text{eff}(r)}{r c^2}
+        - \beta \Omega^2
+    }
+\end{equation}
+
+Each term reflects a distinct physical contribution:
 
 \begin{itemize}
-  \item \textbf{Term 1: Core rotation (local swirl)}
-  \[
-    \frac{C_e^2}{c^2} e^{-r/r_c}
-  \]
-  This term is derived from the intrinsic angular velocity $\Omega_\text{core}$ of the vortex core. The tangential velocity $C_e$ is the maximum swirl at the core boundary, and $r_c$ is the radius of the vortex core. The exponential factor $e^{-r/r_c}$ represents the decrease in influence at distance $r$ outside the core. This term represents the time delay due to local æther rotation.
+    \item \textbf{(1) Local Swirl — Core Rotation Delay}
+    \[
+        \frac{C_e^2}{c^2} e^{-r/r_c}
+    \]
+    This term originates from the vortex core's intrinsic angular motion. The core-edge tangential velocity \( C_e \) and characteristic decay scale \( r_c \) define an exponentially suppressed rotational influence. It models clock retardation from local æther swirl.
 
-  \item \textbf{Term 2: Gravitational field (vorticity-induced potential)}
-  \[
-    \frac{2 G_\text{swirl} M_\text{eff}(r)}{r c^2}
-  \]
-  This term mimics the classical gravitational redshift, but with an alternative gravitational constant $G_\text{swirl}$ that follows from æther parameters such as density and swirl force. The effective mass $M_\text{eff}(r)$ can be taken here as the æther vortex energy within radius $r$, instead of conventional mass. This term arises from the pressure deficit due to external swirl and replaces Newtonian gravity.
+    \item \textbf{(2) Vorticity-Induced Gravitation — Effective Swirl Mass}
+    \[
+        \frac{2 G_\text{swirl} M_\text{eff}(r)}{r c^2}
+    \]
+    Analogous to gravitational redshift, this term replaces classical mass with vorticity-derived effective mass \( M_\text{eff}(r) \), and Newton's \( G \) with a swirl-specific coupling \( G_\text{swirl} \). It captures the pressure gradient and inertial energy caused by surrounding flow.
 
-  \item \textbf{Term 3: Macroscopic rotation (frame-dragging)}
-  \[
-    \beta \Omega^2
-  \]
-  This term represents frame-dragging effects within a rotating vortex configuration (similar to the Kerr metric effect in GR). The factor $\Omega$ is the rotation rate of the macroscopic object (e.g. planet or neutron star), and $\beta$ is a coupling constant that depends on æther parameters. The term originates from circulation energy with $\Omega = \Gamma / (2\pi r^2)$ and $\Gamma = \oint \vec{v} \cdot d\vec{\ell}$, while the coupling factor $\beta = 1/c^2$ reflects ætheric inertial drag. This yields a rotational dilation term $\beta \Omega^2 \sim \frac{C_e^2}{r_c^2 c^2} e^{-r/r_c}$. This term causes additional local time delay due to circulation of the surrounding æther field.
-
+    \item \textbf{(3) Frame Dragging — Rotational Inertial Delay}
+    \[
+        \beta \Omega^2
+    \]
+    This term describes frame-dragging due to large-scale rotation of the entire vortex body, paralleling the Kerr effect.  The term originates from circulation energy with $\Omega = \Gamma / (2\pi r^2)$ and $\Gamma = \oint \vec{v} \cdot d\vec{\ell}$, while the coupling factor $\beta = 1/c^2$ reflects ætheric inertial drag. This yields a rotational dilation term $\beta \Omega^2 \sim \frac{C_e^2}{r_c^2 c^2} e^{-r/r_c}$. This term causes additional local time delay due to circulation of the surrounding æther field. contributes to local time dilation through rotational inertial coupling, with
+    \[
+        \beta \sim \frac{1}{c^2}, \quad \text{and} \quad \beta \Omega^2 \sim \frac{C_e^2}{r_c^2 c^2} e^{-r/r_c}.
+    \]
 \end{itemize}
+
+
+\subsection{Expanded Derivation: Rotational Energy as Time Delay Source}\label{sec:appendix:1:rot-energy}
+
+In this section, we derive the core rotation term in the time dilation formula from vortex mechanical energy. Instead of relying on relativistic spacetime curvature, the delay in local clock frequency is attributed to the rotational energy and resulting pressure deficit in the æther.
+
+\subsubsection{Energetic Derivation}
+A clock embedded in a rotating æther vortex experiences time delay proportional to the energy stored in its rotation:
+
+\begin{equation}
+    \frac{d\tau}{dt} = \left(1 + \frac{1}{2} \beta I \Omega^2 \right)^{-1},
+\end{equation}
+
+where \( I \) is the local moment of inertia and \( \Omega \) the angular velocity. The coupling coefficient \( \beta \) depends on æther parameters, specifically:
+
+\[
+    \beta = \frac{1}{c^2}, \quad I = m r^2 \Rightarrow \frac{1}{2} \beta I \Omega^2 = \frac{1}{2} \frac{r^2 \Omega^2}{c^2}
+\]
+
+\subsubsection{Hydrodynamic Perspective (Bernoulli Pressure Deficit)}
+
+We can alternatively derive this delay from Bernoulli’s law:
+
+\[
+    \frac{1}{2} \rho v^2 + p = \text{const}, \quad \Rightarrow \quad \Delta p = -\frac{1}{2} \rho \Omega^2 r^2
+\]
+
+Time dilation is assumed to follow enthalpy gradient (clock ticks slower in lower-pressure zones):
+
+\[
+    \frac{d\tau}{dt} \approx \frac{H_\text{ref}}{H_\text{loc}} \sim \left(1 + \frac{\Delta p}{\rho}\right)^{-1}
+    \Rightarrow \left(1 + \frac{1}{2} \beta I \Omega^2\right)^{-1}
+\]
+
+\subsubsection{Interpretation Across Domains}
+
+\begin{itemize}
+    \item \textbf{Mechanical:} Delay arises from angular kinetic energy.
+    \item \textbf{Hydrodynamic:} Vortex swirl reduces pressure, slowing time.
+    \item \textbf{Thermodynamic:} Entropy increase correlates with time delay.
+\end{itemize}
+
+This directly justifies the third term in the full VAM dilation expression:
+\[
+    \frac{d\tau}{d\mathcal{N}} = \sqrt{1 - \cdots - \beta \Omega^2}
+\]
+
 
 \subsection{Hybridization of Gravitational Coupling}
 
