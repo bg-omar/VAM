@@ -2,7 +2,7 @@
 %! Date = 2025-06-13
 
 % === Metadata ===
-\newcommand{\appendixtitle}{Appendix: 1st Appendix}
+\newcommand{\appendixtitle}{Appendix: Vorticity in Natural Coordinates}
 \newcommand{\appendixauthor}{Omar Iskandarani}
 \newcommand{\appendixaffil}{Independent Researcher, Groningen, The Netherlands}
 \newcommand{\appendixdoi}{10.5281/zenodo.15566319}
@@ -35,115 +35,79 @@
     \titlepageOpen
 
     \begin{abstract}
-        Abstracts are not typically included in appendices, but for standalone it is needed.
+        This section reformulates vorticity in natural (streamline-aligned) coordinates and reveals its intimate link with the local curvature and velocity of æther flow. By analyzing an æther particle at the core of a vortex, we derive a geometrically meaningful expression for vorticity, \(\vec{\omega} = V / R\), where \(R\) is the radius of curvature and \(V\) the swirl speed. This provides a direct physical interpretation of time in the Vortex Æther Model (VAM): experienced time is encoded in local rotational dynamics. The results establish a bridge between streamline geometry, rotation, and swirl-clock time dilation.
     \end{abstract}
+
 
     \titlepageClose
     \fi
 
 % ============= Begin of content ============
     \section{\appendixtitle}
-\subsection{Vorticity in Natural Coordinates}
+    \subsection{Vorticity in Natural Coordinates}
 
+    We define \( d\omega \) as the experienced time rate for atoms moving along natural coordinates in a vorticity field. Let us consider a central æther particle located at the core of a vortex, having no velocity potential. It satisfies:
 
-We use $d\omega$ to indicate the course of the experienced time of atoms in the natural coordinates of vorticity. We assume that there is one æther particle at the origin of the core vortex, which has no velocity potential and therefore satisfies the following equation:
+    \begin{equation}
+        \frac{\partial w}{\partial y} - \frac{\partial v}{\partial z} = 2\xi, \quad
+        \frac{\partial u}{\partial z} - \frac{\partial w}{\partial x} = 2\eta, \quad
+        \frac{\partial v}{\partial x} - \frac{\partial u}{\partial y} = 2\zeta.
+    \end{equation}
 
+    Since the æther particle remains fixed at the center, its local rotation is only about the \(Z\)-axis, leading to:
 
-\begin{equation*}
-\frac{d w}{d y}-\frac{d v}{d z}=2 \xi, \quad \frac{d u}{d z}-\frac{d w}{d x}=2 \eta, \quad \frac{d v}{d x}-\frac{d u}{d y}=2 \zeta.
-\end{equation*}
+    \begin{equation}
+        \xi = 0, \quad \eta = 0, \quad \zeta = \frac{1}{2} \left( \frac{\partial v}{\partial x} - \frac{\partial u}{\partial y} \right).
+    \end{equation}
 
+    We interpret this component of vorticity as the **rate of experienced time**, i.e., the swirl clock rate. It corresponds to the rotation of the vortex core.
 
-However, because the æther particle in question remains central, it acquires vorticity. For the particle in question, the following formula applies:
+    We now introduce stream-aligned coordinates with tangent and normal directions denoted by unit vectors:
+    \[
+        \hat{s} = (\cos \theta, \sin \theta), \quad
+        \hat{n} = (-\sin \theta, \cos \theta),
+    \]
+    so that:
+    \begin{align}
+        \hat{s}_x = \cos \theta, &\quad \hat{n}_x = -\sin \theta, \\
+        \hat{s}_y = \sin \theta, &\quad \hat{n}_y = \cos \theta.
+    \end{align}
 
+    If the velocity vector has magnitude \(V\), then:
+    \begin{equation}
+        u = V \cos \theta, \quad
+        v = V \sin \theta.
+    \end{equation}
 
-\begin{equation*}
-\xi=0, \quad \eta=0, \quad \zeta=\frac{1}{2}\left(\frac{d v}{d x}-\frac{d u}{d y}\right),
-\end{equation*}
+    Differentiating \(u\) and \(v\) gives:
+    \begin{align}
+        \frac{\partial v}{\partial x} &= \frac{\partial}{\partial x} (V \sin \theta) = \frac{\partial V}{\partial x} \sin \theta + V \frac{\partial \sin \theta}{\partial x}, \\
+        \frac{\partial u}{\partial y} &= \frac{\partial}{\partial y} (V \cos \theta) = \frac{\partial V}{\partial y} \cos \theta + V \frac{\partial \cos \theta}{\partial y}.
+    \end{align}
 
+    Then the vorticity in the \(z\)-direction is:
+    \begin{align}
+        \omega_z &= \frac{\partial v}{\partial x} - \frac{\partial u}{\partial y} \\
+        &= \frac{\partial V}{\partial x} \sin \theta - \frac{\partial V}{\partial y} \cos \theta
+        + V \left( \frac{\partial \sin \theta}{\partial x} - \frac{\partial \cos \theta}{\partial y} \right).
+    \end{align}
 
-which experiences the rotation of the core vortex in the form of vorticity about the $Z$-axis. We now obtain a vortex with a diameter of one æther particle from the origin, where we interpret the rotation $d\omega$ as the passage of experienced time for atoms, or the movement of clock hands according to the laws of general relativity.
+    Transforming to streamline coordinates, we get:
+    \begin{equation}
+        \vec{\omega} = -\frac{\partial V}{\partial \eta} + V \frac{\partial \theta}{\partial s}.
+    \end{equation}
 
+    Using the definition of the radius of curvature:
+    \begin{equation}
+        R = \frac{ds}{d\theta} = \left( \frac{d\theta}{ds} \right)^{-1},
+    \end{equation}
+    and assuming constant velocity \(dV = 0\), the vorticity simplifies to:
+    \begin{equation}
+        \boxed{\vec{\omega} = \frac{V}{R}}.
+    \end{equation}
 
-We first define the coordinates of $S$ along the flow with the normal $n$ directly proportional to it, with the vector units $\hat{s}$ and $\hat{n}$ consisting of $\hat{s}_x, \hat{s}_y$ and $\hat{n}_x, \hat{n}_y$ where:
+    This shows that **vorticity is proportional to the curvature of the flow path**, and hence the local rotation experienced by atoms. In VAM, this angular rotation governs the **rate of experienced time**, making \(\vec{\omega}\) the physical clock hand of the æther medium.
 
-
-\begin{equation*}
-\hat{s}_x=\cos (\theta), \quad \hat{n}_x=-\hat{s}_y,
-\end{equation*}
-\begin{equation*}
-\hat{s}_y=\sin (\theta), \quad \hat{n}_y=\hat{s}_x.
-\end{equation*}
-
-
-This changes the vector components $u$ and $v$ to:
-
-
-\begin{equation*}
-u=V \cos (\theta), \quad v=V \sin (\theta).
-\end{equation*}
-
-
-Differentiating $u$ and $v$ with respect to $x$ and $y$ gives:
-
-
-\begin{equation*}
-\frac{d v}{d x}=\frac{d}{d x} V \sin (\theta),
-\end{equation*}
-\begin{equation*}
-\frac{d u}{d y}=\frac{d}{d y} V \cos (\theta),
-\end{equation*}
-
-
-which can be rewritten as:
-
-
-\begin{equation*}
-\frac{d}{d x} V \sin (\theta) = \frac{d V}{d x} \sin (\theta) + \frac{d \sin (\theta)}{d x} V,
-\end{equation*}
-\begin{equation*}
-\frac{d}{d y} V \cos (\theta) = \frac{d V}{d y} \cos (\theta) + \frac{d \cos (\theta)}{d y} V.
-\end{equation*}
-
-
-Using the definition of vorticity:
-
-
-\begin{equation*}
-\vec{\omega} = \frac{d v}{d x} - \frac{d u}{d y},
-\end{equation*}
-
-
-and applying the natural coordinates, we obtain:
-
-
-\begin{equation*}
-\vec{\omega} = \frac{d V}{d x} \sin (\theta) - \frac{d V}{d y} \cos (\theta) + V\left(\frac{d \sin (\theta)}{d x} - \frac{d \cos (\theta)}{d y}\right).
-\end{equation*}
-
-
-From this, we conclude:
-
-
-\begin{equation*}
-\vec{\omega} = -\frac{d V}{d \eta} + V \frac{d \theta}{d s}.
-\end{equation*}
-
-
-We recall the radius of the vortex $R$ as:
-
-
-\begin{equation*}
-R = \frac{d s}{d \theta}.
-\end{equation*}
-
-
-Since we consider the vorticity to be constant, and since we interpret rotation as the passage of time for atoms, we impose $dV=0$, allowing us to rewrite the vorticity as:
-
-
-\begin{equation*}
-\vec{\omega} = \frac{V}{R}.
-\end{equation*}
 
 % === Bibliography (only for standalone) ===
 \ifdefined\standalonechapter

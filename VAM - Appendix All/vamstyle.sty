@@ -58,6 +58,8 @@
 \RequirePackage{pgfplots}
 \pgfplotsset{compat=1.18}
 \RequirePackage{xcolor}
+\RequirePackage[most]{tcolorbox}
+
 
 % -- Code Listings --
 \RequirePackage{listings}
@@ -77,8 +79,11 @@
 \subsectionfont{\large\bfseries\sffamily}
 
 % Bibliography
-\RequirePackage[backend=biber, style=phys]{biblatex}
-\addbibresource{../references.bib}
+%\RequirePackage[
+%    backend=biber,
+%    style=numeric,
+%    sorting=none
+%]{biblatex}
 
 % PDF Links and Metadata
 \RequirePackage{hyperref}
@@ -97,8 +102,6 @@
 % Line Breaking and Style
 \RequirePackage[none]{hyphenat}
 \sloppy
-
-
 
 
 

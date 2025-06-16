@@ -3,7 +3,7 @@
 %! Date = 2025-06-13
 
 % === Metadata ===
-\newcommand{\appendixtitle}{Appendix: Advanced Analysis of Fluid Vortex Dynamics and Æther Physics}
+\newcommand{\appendixtitle}{Appendix: Governing Equations of Vorticity in Æther Dynamics}
 \newcommand{\appendixauthor}{Omar Iskandarani}
 \newcommand{\appendixaffil}{Independent Researcher, Groningen, The Netherlands}
 \newcommand{\appendixdoi}{10.5281/zenodo.15566319}
@@ -36,7 +36,7 @@
     \titlepageOpen
 
     \begin{abstract}
-        Abstracts are not typically included in appendices, but for standalone it is needed.
+        This section presents the foundational equations governing vortex dynamics within an incompressible, inviscid fluid, reformulated for the Vortex Æther Model (VAM). Starting from the continuity and momentum equations, we derive vorticity transport laws, Poisson’s equation for scalar potential, and helicity conservation. Particular emphasis is placed on the role of absolute and relative vorticity, external forcing, and height-dependent flows. The resulting barotropic and potential vorticity formulations are essential for analyzing cyclogenesis, turbulence, and topologically conserved quantities in both classical and quantum æther systems. These expressions establish the theoretical infrastructure necessary for modeling swirl-based time dilation, wave-vortex coupling, and rotational energy gradients in vortex-bound matter.
     \end{abstract}
 
     \titlepageClose
@@ -46,6 +46,50 @@
     \section{\appendixtitle}
 
     The governing equations of vortex dynamics in an idealized fluid system constitute a fundamental framework in contemporary theoretical and applied physics. These equations, rigorously derived from foundational principles in classical mechanics and continuum physics, provide profound insights into a broad spectrum of physical phenomena. By integrating vorticity fields, energy dissipation mechanisms, and entropy dynamics, these formulations extend beyond conventional applications, enabling high-fidelity analyses of macroscopic fluid behaviors and their microscopic analogs within the context of Æther Physics. This synthesis offers an unparalleled theoretical foundation for examining complex interactions, bridging domains from geophysical fluid dynamics to quantum mechanical interpretations of turbulence.
+
+    \begin{table}[H]
+        \centering
+        \footnotesize
+        \renewcommand{\arraystretch}{1.4}
+        \begin{tabular}{|c|l|c|c|}
+            \hline
+            \textbf{Symbol} & \textbf{Description} & \textbf{Unit} & \textbf{VAM Interpretation} \\
+            \hline
+            $u, v, w$      & Velocity components in $x, y, z$ directions & $\mathrm{m/s}$ & Æther flow vector field \\
+            \hline
+            $\zeta$        & Relative vorticity $= \frac{\partial v}{\partial x} - \frac{\partial u}{\partial y}$ & $\mathrm{s}^{-1}$ & Local fluid rotation rate \\
+            \hline
+            $\zeta_a$      & Absolute vorticity $= \zeta + f$ & $\mathrm{s}^{-1}$ & Total vorticity (includes Coriolis) \\
+            \hline
+            $f$            & Coriolis parameter $= 2\omega \sin(\theta)$ & $\mathrm{s}^{-1}$ & Rotation due to background frame \\
+            \hline
+            $\omega$       & Planetary or core angular velocity & $\mathrm{rad/s}$ & Frame or vortex rotation rate \\
+            \hline
+            $\vec{\omega}$ & Vorticity vector field & $\mathrm{s}^{-1}$ & Curl of the velocity field: $\nabla \times \vec{v}$ \\
+            \hline
+            $R$            & Radius of curvature of streamlines & $\mathrm{m}$ & Local geometric curvature of vortex \\
+            \hline
+            $V$            & Tangential swirl velocity & $\mathrm{m/s}$ & Clock-hand velocity around vortex \\
+            \hline
+            $\Pi$          & Potential vorticity $= \frac{f_a + \zeta_r}{h}$ & $\mathrm{s}^{-1}$ & Conserved in barotropic VAM flows \\
+            \hline
+            $h$            & Column height (layer thickness) & $\mathrm{m}$ & Local æther depth in height-varying flows \\
+            \hline
+            $\psi$         & Streamfunction ($\zeta = \nabla^2 \psi$) & $\mathrm{m^2/s}$ & Encodes flow via level curves \\
+            \hline
+            $\phi$         & Scalar potential & $\mathrm{m^2/s^2}$ & Source-based potential (e.g. gravity) \\
+            \hline
+            $\mathcal{R}_x, \mathcal{R}_y$ & Forcing terms (e.g., turbulence, friction) & $\mathrm{m/s^2}$ & External interaction effects \\
+            \hline
+            $J(\psi, \nabla^2\psi)$ & Jacobian term & $\mathrm{m^2/s^3}$ & Nonlinear advection in 2D GFD \\
+            \hline
+            $H = \int \vec{v} \cdot \vec{\omega} \, dV$ & Helicity & $\mathrm{m^4/s^2}$ & Topological twist/linkage of vortex lines \\
+            \hline
+        \end{tabular}
+        \caption{Glossary of symbols used in VAM vortex dynamics equations.}
+        \label{tab:vam_vorticity_symbols}
+    \end{table}
+
 
     \subsection*{Fundamental Equations of Vortex Dynamics}
 
@@ -99,7 +143,7 @@
 
 
 \subsubsection*{Helicity and Topological Constraints}
-$h = \int \vec{v} \cdot \vec{\omega} \, dV$
+$H = \int \vec{v} \cdot \vec{\omega} \, dV$
  Helicity, a measure of the linkage and knottedness of vortex lines, serves as a conserved quantity in idealized flows. This conservation underpins the study of topological invariants in fluid mechanics and their extensions into quantum fluids and plasmas.
 
 

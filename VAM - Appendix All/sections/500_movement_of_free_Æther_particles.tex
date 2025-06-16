@@ -2,7 +2,7 @@
 %! Date = 2025-06-13
 
 % === Metadata ===
-\newcommand{\appendixtitle}{Appendix: Movement of Free Æther Particles}
+\newcommand{\appendixtitle}{Appendix: Fundamentals of Æther Fluid Motion and Vorticity}
 \newcommand{\appendixauthor}{Omar Iskandarani}
 \newcommand{\appendixaffil}{Independent Researcher, Groningen, The Netherlands}
 \newcommand{\appendixdoi}{10.5281/zenodo.15566319}
@@ -35,7 +35,7 @@
     \titlepageOpen
 
     \begin{abstract}
-        Abstracts are not typically included in appendices, but for standalone it is needed.
+        This appendix derives the foundational equations governing the motion of Æther as a non-viscous, incompressible fluid medium. Building on classical fluid mechanics, we define the stress equilibrium, velocity potential, and vorticity conditions within absolute space. These results form the hydrodynamic basis of the Vortex Æther Model (VAM), where rotational motion of knotted Æther regions gives rise to gravitational and inertial phenomena. The derived vorticity vector and circulation expressions connect directly to vortex-based energy quantization and time dilation in later VAM sections.
     \end{abstract}
 
     \titlepageClose
@@ -44,105 +44,122 @@
 % ============= Begin of content ============
     \section{\appendixtitle}
 
-
     \subsection*{Fundamental Assumptions}
-    The Æther is a homogeneous, incompressible, non-viscous medium. This implies that Æther consists of perfect solid spherical particles with a constant density $\rho$, ensuring mass per unit volume remains unchanged:
-    \begin{equation*}
+    The Æther is modeled as a homogeneous, incompressible, and inviscid fluid. This implies constant density:
+    \begin{equation}
         \frac{d \rho}{d t} = 0.
-    \end{equation*}
+    \end{equation}
 
-    A Cartesian coordinate system $(x, y, z)$ is adopted, fixed in absolute space. The Æther moves relative to this coordinate system, while all variables of interest are functions of $(x, y, z, t)$. The background space consists of three spatial dimensions and an absolute unidirectional time, devoid of relativistic time distortions.
+    We adopt a Cartesian coordinate system \((x, y, z)\) fixed in absolute space. The velocity field \(\vec{u} = (u, v, w)\) represents the local Æther flow:
+    \begin{equation}
+        u = \frac{dx}{dt}, \quad v = \frac{dy}{dt}, \quad w = \frac{dz}{dt}.
+    \end{equation}
 
-    Key variables include:
-    \begin{itemize}
-        \item Pressure $P$, where $P_{xx}$ represents normal stress in the $x$-direction.
-        \item Flow rate $U$ with vector components $(u, v, w)$ parallel to $(x, y, z)$, defined as:
-        \begin{equation*}
-            u = \frac{dx}{dt}, \quad v = \frac{dy}{dt}, \quad w = \frac{dz}{dt}.
-        \end{equation*}
-        \item External forces per unit volume $(X, Y, Z)$.
-    \end{itemize}
+    Let \(P\) denote pressure, and \((X, Y, Z)\) the external force per unit volume acting in each direction.
 
-    \subsection*{Equilibrium of Stress in Free Æther}
-    The external forces satisfy:
+    \subsection*{Stress Equilibrium in Free Æther}
+    The general stress equilibrium equations are:
     \begin{align}
-        X &= \frac{d P_{xx}}{dx} + \frac{d P_{xy}}{dy} + \frac{d P_{xz}}{dz}, \\
-        Y &= \frac{d P_{yx}}{dx} + \frac{d P_{yy}}{dy} + \frac{d P_{yz}}{dz}, \\
-        Z &= \frac{d P_{zx}}{dx} + \frac{d P_{zy}}{dy} + \frac{d P_{zz}}{dz}.
+        X &= \frac{\partial P_{xx}}{\partial x} + \frac{\partial P_{xy}}{\partial y} + \frac{\partial P_{xz}}{\partial z}, \\
+        Y &= \frac{\partial P_{yx}}{\partial x} + \frac{\partial P_{yy}}{\partial y} + \frac{\partial P_{yz}}{\partial z}, \\
+        Z &= \frac{\partial P_{zx}}{\partial x} + \frac{\partial P_{zy}}{\partial y} + \frac{\partial P_{zz}}{\partial z}.
     \end{align}
 
-    For irrotational free Æther, shear stresses vanish:
-    \begin{equation*}
-        P_{yz} = P_{xz} = P_{xy} = 0.
-    \end{equation*}
-    Thus, the force equations simplify to:
-    \begin{equation*}
-        X = \frac{d P_{xx}}{dx}, \quad Y = \frac{d P_{yy}}{dy}, \quad Z = \frac{d P_{zz}}{dz}.
-    \end{equation*}
-    The total stress potential satisfies:
-    \begin{equation*}
-        X dx + Y dy + Z dz = dV,
-    \end{equation*}
-    where $V$ represents the potential function.
+    Assuming irrotational flow, all shear stresses vanish:
+    \begin{equation}
+        P_{xy} = P_{xz} = P_{yz} = 0.
+    \end{equation}
 
-    Normal stresses in an incompressible medium manifest as:
+    Hence the simplified stress force equations become:
+    \begin{equation}
+        X = \frac{\partial P_{xx}}{\partial x}, \quad
+        Y = \frac{\partial P_{yy}}{\partial y}, \quad
+        Z = \frac{\partial P_{zz}}{\partial z}.
+    \end{equation}
+
+    The total force differential satisfies:
+    \begin{equation}
+        X\, dx + Y\, dy + Z\, dz = dV,
+    \end{equation}
+    where \(V\) is a scalar potential.
+
+    Normal stresses are related to flow and pressure:
     \begin{align}
-        P_{xx} &= \rho u^2 - P_1, \\
-        P_{yy} &= \rho v^2 - P_1, \\
-        P_{zz} &= \rho w^2 - P_1.
+        P_{xx} &= \rho u^2 - P, \\
+        P_{yy} &= \rho v^2 - P, \\
+        P_{zz} &= \rho w^2 - P.
     \end{align}
-    Substituting these into the equilibrium equations yields the fundamental equations of free Æther particle motion:
+
+    Substituting into the momentum equation yields:
     \begin{align}
-        X &= \frac{du}{dt} + u \frac{du}{dx} + v \frac{du}{dy} + w \frac{du}{dz} + \frac{1}{\rho} \frac{dP}{dx}, \\
-        Y &= \frac{dv}{dt} + u \frac{dv}{dx} + v \frac{dv}{dy} + w \frac{dv}{dz} + \frac{1}{\rho} \frac{dP}{dy}, \\
-        Z &= \frac{dw}{dt} + u \frac{dw}{dx} + v \frac{dw}{dy} + w \frac{dw}{dz} + \frac{1}{\rho} \frac{dP}{dz}.
+        X &= \frac{D u}{D t} + \frac{1}{\rho} \frac{\partial P}{\partial x}, \\
+        Y &= \frac{D v}{D t} + \frac{1}{\rho} \frac{\partial P}{\partial y}, \\
+        Z &= \frac{D w}{D t} + \frac{1}{\rho} \frac{\partial P}{\partial z},
     \end{align}
-    The continuity equation for an incompressible fluid is:
-    \begin{equation*}
-        0 = \frac{du}{dx} + \frac{dv}{dy} + \frac{dw}{dz}.
-    \end{equation*}
+    where the material derivative is:
+    \begin{equation}
+        \frac{D}{D t} = \frac{\partial}{\partial t} + \vec{u} \cdot \nabla.
+    \end{equation}
+
+    \subsection*{Continuity Equation}
+    For an incompressible fluid:
+    \begin{equation}
+        \nabla \cdot \vec{u} = \frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} + \frac{\partial w}{\partial z} = 0.
+    \end{equation}
 
     \subsection*{Velocity Potential and Irrotational Flow}
-    The velocity vector $U$ is expressed via the velocity potential $\varphi$:
-    \begin{equation*}
-        u = \frac{d \varphi}{dx}, \quad v = \frac{d \varphi}{dy}, \quad w = \frac{d \varphi}{dz}.
-    \end{equation*}
-    For free Æther, this leads to the Laplace equation:
-    \begin{equation*}
-        \frac{d^2 \varphi}{dx^2} + \frac{d^2 \varphi}{dy^2} + \frac{d^2 \varphi}{dz^2} = 0.
-    \end{equation*}
+    If the flow is irrotational, a scalar potential \(\varphi\) exists such that:
+    \begin{equation}
+        \vec{u} = \nabla \varphi.
+    \end{equation}
+    This leads to the Laplace equation:
+    \begin{equation}
+        \nabla^2 \varphi = 0.
+    \end{equation}
 
     \subsection*{Vorticity and Circulation}
-    In an irrotational flow, the vorticity components satisfy:
-    \begin{equation*}
-        \frac{dw}{dy} - \frac{dv}{dz} = 0, \quad \frac{du}{dz} - \frac{dw}{dx} = 0, \quad \frac{dv}{dx} - \frac{du}{dy} = 0.
-    \end{equation*}
-    For a rotational Æther flow, these conditions modify to:
-    \begin{equation*}
-        \frac{dw}{dy} - \frac{dv}{dz} = 2 \xi, \quad \frac{du}{dz} - \frac{dw}{dx} = 2 \eta, \quad \frac{dv}{dx} - \frac{du}{dy} = 2 \zeta.
-    \end{equation*}
-    The vorticity vector is defined as:
-    \begin{equation*}
-        \vec{\omega} = 2 \zeta.
-    \end{equation*}
-    The circulation $\Gamma$ around an infinitesimal closed contour satisfies:
-    \begin{equation*}
-        \Gamma = \left(\frac{dv}{dx} - \frac{du}{dy}\right) dx dy.
-    \end{equation*}
-    The kinetic energy of a solid vortex is given by:
-    \begin{equation*}
-        E = \frac{1}{2} \rho \iiint (u^2 + v^2 + w^2) dx dy dz.
-    \end{equation*}
-    Since Æther is inviscid, solid vortices maintain constant rotation with the tangential velocity $c$ at the vortex edge given by:
-    \begin{equation*}
-        \vec{\omega} = \frac{c}{r}.
-    \end{equation*}
-    Thus, the energy simplifies to:
-    \begin{equation*}
+    In irrotational flow, the vorticity vector vanishes:
+    \begin{equation}
+        \vec{\omega} = \nabla \times \vec{u} = 0.
+    \end{equation}
+
+    In rotational flow, the components become:
+    \begin{align}
+        \omega_x &= \frac{\partial w}{\partial y} - \frac{\partial v}{\partial z}, \\
+        \omega_y &= \frac{\partial u}{\partial z} - \frac{\partial w}{\partial x}, \\
+        \omega_z &= \frac{\partial v}{\partial x} - \frac{\partial u}{\partial y}.
+    \end{align}
+
+    The circulation \(\Gamma\) over an infinitesimal closed loop is:
+    \begin{equation}
+        \Gamma = \oint \vec{u} \cdot d\vec{l} = \iint (\nabla \times \vec{u}) \cdot \hat{n} \, dA.
+    \end{equation}
+
+    \subsection*{Energy of a Vortex}
+    The kinetic energy of a rotating vortex region is:
+    \begin{equation}
+        E = \frac{1}{2} \rho \iiint |\vec{u}|^2 \, dV.
+    \end{equation}
+
+    Assuming solid-body rotation and edge tangential velocity \(c\), the vorticity magnitude is:
+    \begin{equation}
+        |\vec{\omega}| = \frac{c}{r}.
+    \end{equation}
+
+    Then the vortex energy simplifies to:
+    \begin{equation}
         E = \frac{1}{2} M c^2,
-    \end{equation*}
-    where $M$ is the vortex mass.
+    \end{equation}
+    where \(M\) is the effective mass of the rotating Æther parcel.
 
     \subsection*{Conclusion}
-    The derived equations establish the fundamental motion of free Æther particles under the assumptions of incompressibility and inviscidity. The velocity potential framework ensures an irrotational flow, while vorticity dynamics provide insights into rotational effects. These derivations pave the way for further investigations into Æther-based fluid dynamics and their implications for physical interactions at various scales.
+    This appendix establishes the fluid-dynamic foundations of Æther theory under assumptions of incompressibility and inviscidity. It introduces the vorticity vector, velocity potential, and circulation as key constructs, which serve as a basis for gravitational analogs, time dilation, and vortex dynamics in the broader VAM framework.
 
+% === Bibliography (only for standalone) ===
+\ifdefined\standalonechapter
+% Being imported from main.tex — do nothing
+\else
+\bibliographystyle{unsrt}
+\bibliography{../../references}
+\end{document}
+\fi
