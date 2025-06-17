@@ -8,17 +8,7 @@
 
 \documentclass[a4paper,12pt]{article}
 \usepackage{vamstyle}
-\usepackage[most]{tcolorbox}
-\usepackage{graphicx}
-\usepackage{array}
-\usepackage{titling}
 
-\pretitle{\begin{center}\LARGE\bfseries}
-\posttitle{\par\end{center}\vskip 0.5em}
-\preauthor{\begin{center}\large}
-\postauthor{\end{center}}
-\predate{\begin{center}\small}
-\postdate{\end{center}}
 
 \title{Swirl Clocks and Vorticity-Induced Gravity\\[0.5em]
 \large Reformulating Relativity in a Structured Æther\\[0.5em]
@@ -82,19 +72,24 @@
 
 \newpage
 \appendix \label{sec:appendix}
+    \def\standalonechapter{false}
     \input{Swirl_Clocks/appendix_A_Derivation_TimeDilation}
-    \input{Swirl_Clocks/appendix_02_Derivation_GravitationalField}
-    \input{Swirl_Clocks/appendix_03_Newtonian_Limits}
-    \input{Swirl_Clocks/appendix_04_DynamicsVortexCirculationQuantization}
-    \input{Swirl_Clocks/appendix_05_TimeDilationVortexEnergyPressureGradients}
-    \input{Swirl_Clocks/appendix_06_ParameterTuningLimitBehavior}
-    \input{Swirl_Clocks/appendix_07_Foundations_Velocity_Fields_and_Energies}
-    \input{Swirl_Clocks/appendix_08_Integration_of_Clausius_Heat_Theory}
-    \input{Swirl_Clocks/appendix_09_TopologicalCharge}
-    \input{Swirl_Clocks/appendix_10_SplitHelicity}
-    \input{Swirl_Clocks/appendix_11_VAM_Lagrangian}
-    \input{Swirl_Clocks/appendix_12_DerivationFineStructureConstant}
-    \input{Swirl_Clocks/appendix_13_ÆthericNow}
+    \input{Swirl_Clocks/appendix_B_Derivation_Of_Gswirl}
+    \input{Swirl_Clocks/appendix_C_ExperimentalValidationOfVortexCoreTangientalVelocity}
+    \input{Swirl_Clocks/appendix_D_TemporalOntology}
+
+%    \input{Swirl_Clocks/appendix_02_Derivation_GravitationalField}
+%    \input{Swirl_Clocks/appendix_03_Newtonian_Limits}
+%    \input{Swirl_Clocks/appendix_04_DynamicsVortexCirculationQuantization}
+%    \input{Swirl_Clocks/appendix_05_TimeDilationVortexEnergyPressureGradients}
+%    \input{Swirl_Clocks/appendix_06_ParameterTuningLimitBehavior}
+%    \input{Swirl_Clocks/appendix_07_Foundations_Velocity_Fields_and_Energies}
+%    \input{Swirl_Clocks/appendix_08_Integration_of_Clausius_Heat_Theory}
+%    \input{Swirl_Clocks/appendix_09_TopologicalCharge}
+%    \input{Swirl_Clocks/appendix_10_SplitHelicity}
+%    \input{Swirl_Clocks/appendix_11_VAM_Lagrangian}
+%    \input{Swirl_Clocks/appendix_12_DerivationFineStructureConstant}
+
 
     \bibliography{../references}
     \bibliographystyle{unsrt}
