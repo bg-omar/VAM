@@ -4,20 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" id="68444c05-2aa5-47b0-a236-1340c65f3f8d" name="Changes" comment="Refine Vortex Æther Model documentation; enhance clarity of time dilation derivation, improve appendix references, and expand explanations of vortex-induced effects">
-      <change afterPath="$PROJECT_DIR$/VAM - 2 Swirl Clocks/Swirl_Clocks/appendix_B_Derivation_Of_Gswirl.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM - Appendix All/sections/550_kairos_moments_topological_transitions.tex" afterDir="false" />
+    <list default="true" id="68444c05-2aa5-47b0-a236-1340c65f3f8d" name="Changes" comment="Enhance Vortex Æther Model documentation; apply bold formatting for key concepts, add new appendix on split helicity decomposition, and clarify temporal structure in relation to vortex dynamics">
+      <change afterPath="$PROJECT_DIR$/VAM - 2 Swirl Clocks/Swirl_Clocks/derivation_of_ÆtherDensity.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/derivation_of_ÆtherDensity.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 2 Swirl Clocks/2-Swirl_Clocks_and_Vorticity-Induced_Gravity.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 2 Swirl Clocks/2-Swirl_Clocks_and_Vorticity-Induced_Gravity.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 2 Swirl Clocks/Swirl_Clocks/appendix_01_Derivation_TimeDilation.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 2 Swirl Clocks/Swirl_Clocks/appendix_A_Derivation_TimeDilation.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - Appendix All/XX-VorticityEquation.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Appendix All/XX-VorticityEquation.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - Appendix All/sections/500_movement_of_free_Æther_particles.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Appendix All/sections/500_movement_of_free_Æther_particles.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - Appendix All/sections/510_vortex_pressure.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Appendix All/sections/510_vortex_pressure.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - Appendix All/sections/520_vorticity_natural_coords.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Appendix All/sections/520_vorticity_natural_coords.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - Appendix All/sections/530_FundamentalEquationsOfVortexDynamics.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Appendix All/sections/530_FundamentalEquationsOfVortexDynamics.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - Appendix All/sections/540_relative_vorticity_2knots.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Appendix All/sections/540_relative_vorticity_2knots.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - Appendix All/vamstyle.sty" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Appendix All/vamstyle.sty" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/XX-VorticityEquation.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 2 Swirl Clocks/Swirl_Clocks/00_Introduction.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 2 Swirl Clocks/Swirl_Clocks/00_Introduction.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 2 Swirl Clocks/Swirl_Clocks/01_Time_Dilation_from_Vortex_Dynamics.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 2 Swirl Clocks/Swirl_Clocks/01_Time_Dilation_from_Vortex_Dynamics.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 2 Swirl Clocks/Swirl_Clocks/appendix_A_Derivation_TimeDilation.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 2 Swirl Clocks/Swirl_Clocks/appendix_A_Derivation_TimeDilation.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - 2 Swirl Clocks/WervelKlokken/00_Introductie.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 2 Swirl Clocks/WervelKlokken/00_Introductie.tex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="false" />
@@ -68,9 +63,6 @@
     <option name="currentCommit" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
     <option name="onto" value="0d85797c6bb54c6deb68eace01c41df37f466c17" />
   </component>
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="555b6964-47f0-437f-9dd7-a7c1d5f50a3d" />
-  </component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/bg-omar/VAM.git&quot;,
@@ -88,6 +80,10 @@
   <component name="ProjectId" id="2tD0dfUVaCR8QzGC1eMxiZGO4Sj" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="sortByType" value="true" />
+    <option name="sortKey" value="BY_TYPE" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
@@ -118,6 +114,7 @@
     "BibTeX.appendix_1 bibliography.executor": "Run",
     "BibTeX.appendix_2 bibliography.executor": "Run",
     "BibTeX.appendix_3 bibliography.executor": "Run",
+    "BibTeX.derivation_of_ÆtherDensity bibliography.executor": "Run",
     "BibTeX.main bibliography.executor": "Run",
     "BibTeX.vam-standalone bibliography.executor": "Run",
     "BibTeX.vammain bibliography.executor": "Run",
@@ -186,6 +183,7 @@
     "LaTeX.appendix_3.executor": "Run",
     "LaTeX.appendix_3_jamesclerckmaxwell_on_æther.executor": "Run",
     "LaTeX.appendix_afleiding_massa.executor": "Run",
+    "LaTeX.derivation_of_ÆtherDensity.executor": "Run",
     "LaTeX.main.executor": "Run",
     "LaTeX.sampleLatex.executor": "Run",
     "LaTeX.test_gnuplot.executor": "Run",
@@ -340,7 +338,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/mr/IdeaProjects/VAM/VAM - 2 Swirl Clocks/Swirl_Clocks",
+    "last_opened_file_path": "C:/Users/mr/IdeaProjects/VAM/VAM - 2 Swirl Clocks/images",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -349,7 +347,7 @@
     "project.structure.last.edited": "Problems",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "ts.external.directory.path": "C:\\Users\\Omar.Iskandarani\\AppData\\Local\\Programs\\IntelliJ IDEA Ultimate 2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
@@ -378,6 +376,76 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler />
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file />
+        <aux-dir />
+        <latex-distribution>PROJECT_SDK</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler />
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file />
+        <aux-dir />
+        <latex-distribution>PROJECT_SDK</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <sumatra-path />
+        <pdf-viewer>SUMATRA</pdf-viewer>
+        <viewer-command />
+        <compiler-arguments />
+        <envs />
+        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
+        <before-run-command />
+        <main-file />
+        <output-path>{projectDir}/out</output-path>
+        <auxil-path>{projectDir}/auxil</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>MIKTEX</latex-distribution>
+        <has-been-run>false</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
+    <configuration default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <sumatra-path />
+        <pdf-viewer>SUMATRA</pdf-viewer>
+        <viewer-command />
+        <compiler-arguments />
+        <envs />
+        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
+        <before-run-command />
+        <main-file />
+        <output-path>{projectDir}/out</output-path>
+        <auxil-path>{projectDir}/auxil</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>MIKTEX</latex-distribution>
+        <has-been-run>false</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
     <configuration name="0-Einsteins Æther bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify-bibtex>
         <compiler>BIBTEX</compiler>
@@ -396,7 +464,7 @@
         <compiler-path />
         <compiler-arguments />
         <envs />
-        <main-file />
+        <main-file>$PROJECT_DIR$/VAM - $GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$ TimeDilation/1-Time_Dilation_in_3D_Superfluid_Æther_Model.tex</main-file>
         <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
         <latex-distribution>MIKTEX</latex-distribution>
       </texify-bibtex>
@@ -462,7 +530,7 @@
       </texify-bibtex>
       <method v="2" />
     </configuration>
-    <configuration default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+    <configuration default="true" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify-bibtex>
         <compiler />
         <compiler-path />
@@ -474,13 +542,13 @@
       </texify-bibtex>
       <method v="2" />
     </configuration>
-    <configuration name="appendix_3 bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+    <configuration name="derivation_of_ÆtherDensity bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify-bibtex>
         <compiler>BIBTEX</compiler>
         <compiler-path />
         <compiler-arguments />
         <envs />
-        <main-file>$PROJECT_DIR$/VAM - Appendix All/sections/appendix_3.tex</main-file>
+        <main-file>$PROJECT_DIR$/VAM - 2 Swirl Clocks/Swirl_Clocks/derivation_of_ÆtherDensity.tex</main-file>
         <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
         <latex-distribution>MIKTEX</latex-distribution>
       </texify-bibtex>
@@ -490,14 +558,13 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.26094.121" />
         <option value="bundled-js-predefined-d6986cc7102b-b26f3e71634d-JavaScript-IU-251.26094.121" />
       </set>
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="false" transferred="false" />
   <component name="TaskManager">
-    <task active="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" id="Default" summary="Default task">
+    <task active="true" id="Default" summary="Default task">
       <changelist id="68444c05-2aa5-47b0-a236-1340c65f3f8d" name="Changes" comment="" />
       <created>1739871427489</created>
       <option name="number" value="Default" />
@@ -606,11 +673,9 @@
       <workItem from="1749815914522" duration="30452000" />
       <workItem from="1749862264748" duration="1591000" />
       <workItem from="1749944575984" duration="16281000" />
-      <workItem from="1750020730931" duration="7013000" />
-      <workItem from="1750060544682" duration="19294000" />
-      <workItem from="1750102975374" duration="5445000" />
-      <workItem from="1750108441624" duration="44000" />
-      <workItem from="1750109355536" duration="5376000" />
+      <workItem from="1750020730931" duration="6826000" />
+      <workItem from="1750157070302" duration="2833000" />
+      <workItem from="1750319574527" duration="6431000" />
     </task>
     <task id="LOCAL-00001" summary="some small tests">
       <created>1739958944014</created>
@@ -955,7 +1020,7 @@
       <option name="project" value="LOCAL" />
       <updated>1749776329875</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -989,7 +1054,6 @@
     <ignored-roots>
       <path value="$USER_HOME$/projects/VAMcore" />
     </ignored-roots>
-    <MESSAGE value="Update PDF metadata creation and modification dates for consistency" />
     <MESSAGE value="Update chapter title for clarity; adjust table formatting and improve text consistency in gravitational time dilation and perihelion precession sections" />
     <MESSAGE value="Add ISCO benchmarking section and update document structure; rename conclusion and resolved challenges sections" />
     <MESSAGE value="Update figure captions for clarity; modify section title in resolved challenges; add triple helix visualization script with dynamic filename generation for outputs" />
@@ -1014,7 +1078,8 @@
     <MESSAGE value="Rename &quot;0-Einsteins Æther&quot; files for consistency; update appendix structure and enhance temporal constructs in Vortex Æther Model documentation" />
     <MESSAGE value="Enhance Vortex Æther Model documentation; apply bold formatting for key concepts, refine temporal dynamics explanations, and reorganize experimental proposals for clarity" />
     <MESSAGE value="Refine Vortex Æther Model documentation; enhance clarity of time dilation derivation, improve appendix references, and expand explanations of vortex-induced effects" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refine Vortex Æther Model documentation; enhance clarity of time dilation derivation, improve appendix references, and expand explanations of vortex-induced effects" />
+    <MESSAGE value="Enhance Vortex Æther Model documentation; apply bold formatting for key concepts, add new appendix on split helicity decomposition, and clarify temporal structure in relation to vortex dynamics" />
+    <option name="LAST_COMMIT_MESSAGE" value="Enhance Vortex Æther Model documentation; apply bold formatting for key concepts, add new appendix on split helicity decomposition, and clarify temporal structure in relation to vortex dynamics" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
   <component name="XDebuggerManager">
