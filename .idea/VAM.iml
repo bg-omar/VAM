@@ -7,7 +7,12 @@
   </component>
   <component name="NewModuleRootManager">
     <exclude-output />
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/auxil" />
+      <excludeFolder url="file://$MODULE_DIR$/out" />
+      <excludeFolder url="file://$MODULE_DIR$/vambindings/.git.old" />
+      <excludeFolder url="file://$MODULE_DIR$/vambindings/extern" />
+    </content>
     <orderEntry type="jdk" jdkName="rConda" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Python 3.12 (VAM) interpreter library" level="application" />

@@ -1,0 +1,184 @@
+%! Author = Omar Iskandarani
+%! Title = Appendix: Lorentz Recovery Theorem in the Vortex Æther Model (VAM)
+%! Date = \today
+%! Affiliation = Independent Researcher, Groningen, The Netherlands
+%! License = CC-BY 4.0
+%! ORCID = 0009-0006-1686-3961
+%! DOI = 10.5281/zenodo.xxxxxxx
+
+% === Metadata ===
+\newcommand{\appendixtitle}{Appendix: Lorentz Recovery Theorem in the Vortex Æther Model (VAM)}
+\newcommand{\appendixdoi}{10.5281/zenodo.xxxxxxxx}
+
+
+\ifdefined\standalonechapter\else
+% Standalone mode
+\documentclass[11pt]{article}
+\input{../vamstyle.sty}
+\input{../vam_appendix_setup.sty}
+\begin{document}
+
+    % === Title page ===
+    \titlepageOpen
+
+    \begin{abstract}
+        We formally prove that the Vortex Æther Model (VAM), a fluid-dynamic theory with absolute time and Euclidean space, reproduces the Lorentz-invariant observables of Special Relativity in the low-vorticity limit. By analyzing vortex-based definitions of time, energy, and motion, we demonstrate that relativistic time dilation, length contraction, and invariant intervals emerge as limiting behaviors of the swirl field dynamics. This establishes the Lorentz Recovery Theorem and supports the physical viability of VAM as a realist alternative to spacetime curvature models.
+
+
+    \end{abstract}
+
+    \titlepageClose
+    \fi
+
+    \ifdefined\standalonechapter
+    \section{\appendixtitle}
+    \else
+    \fi
+% ============= Begin of content ============
+
+    \section{Axioms of the Vortex Æther Model}
+
+    \begin{description}
+        \item[\textbf{Axiom 1: Absolute Time}] The universal time coordinate \( \mathcal{N} \in \mathbb{R} \) defines causal flow. It is invariant and globally synchronized.
+
+        \item[\textbf{Axiom 2: Euclidean Space}] The spatial domain is flat \( \mathbb{R}^3 \), with an æther rest frame \( \Xi_0 \).
+
+        \item[\textbf{Axiom 3: Æther as Incompressible Superfluid}] The æther is modeled as an inviscid, incompressible continuum with constant density \( \rho_{\text{\ae}}^{\text{(fluid)}} \).
+
+        \item[\textbf{Axiom 4: Swirl Field Dynamics}] A vortex structure in the æther possesses tangential velocity \( \vec{v}_\theta = \vec{\omega} \times \vec{r} \), where \( \vec{\omega} \) is the local angular velocity.
+
+        \item[\textbf{Axiom 5: Time Dilation from Swirl Velocity}] Local proper time \( \tau \) is related to the universal time \( \mathcal{N} \) by:
+        \[
+            \frac{d\tau}{d\mathcal{N}} = \sqrt{1 - \frac{|\vec{v}_\theta|^2}{c^2}} \quad \text{where} \quad |\vec{v}_\theta| = |\vec{\omega}| r.
+        \]
+    \end{description}
+
+    \section{Key Definitions}
+
+    \textbf{Definition 1.} (Swirl Energy Density)
+    \[
+        U_{\text{vortex}} = \frac{1}{2} \rho_{\text{\ae}}^{\text{(energy)}} |\vec{\omega}|^2.
+    \]
+
+    \textbf{Definition 2.} (Swirl Clock Phase Gradient)
+    \[
+        \nabla S(t) = \frac{dS}{d\mathcal{N}} + \vec{\omega}(\tau) \cdot \hat{n},
+    \]
+    where \( \hat{n} \) is the local clock phase axis.
+
+    \textbf{Definition 3.} (Vortex Proper Time \( T_v \))
+    \[
+        T_v = \oint \frac{ds}{v_\text{phase}}.
+    \]
+
+    \section{Lemmas}
+
+    \subsection*{Lemma 1 (Emergent Time Dilation)}
+    For a rigid-body vortex with tangential velocity \( v = |\vec{\omega}| r \), we approximate:
+    \[
+        \frac{d\tau}{d\mathcal{N}} \approx \sqrt{1 - \frac{v^2}{c^2}},
+    \]
+    recovering the Lorentz gamma factor \( \gamma(v) \).
+
+    \subsection*{Lemma 2 (Length Contraction from Swirl Pressure)}
+    Translating bodies in the æther encounter front-back pressure asymmetry. Phase coherence is restored by a net contraction:
+    \[
+        L = L_0 \sqrt{1 - \frac{v^2}{c^2}}.
+    \]
+
+    \subsection*{Lemma 3 (Invariant Interval from Swirl Metric)}
+    Let \( ds^2 = C_e^2 dT_v^2 - dr^2 \). In the limit \( \omega \to 0 \), then \( T_v \to \tau \) and:
+    \[
+        ds^2 \to c^2 d\tau^2 - dr^2.
+    \]
+
+    \section{Theorem (Lorentz Recovery Theorem)}
+
+    \textbf{Statement.}
+    Let a vortex structure move with speed \( v \ll c \) through the æther. Then all first-order Lorentz-invariant observables of Special Relativity are recovered from swirl field dynamics:
+
+    \begin{itemize}
+        \item Time dilation: \( \tau = \mathcal{N} / \gamma(v) \)
+        \item Length contraction: \( L = L_0 / \gamma(v) \)
+        \item Invariant interval: \( ds^2 = c^2 d\tau^2 - dr^2 \)
+    \end{itemize}
+
+    \textbf{Proof.}
+    From Lemmas 1–3 and the limit \( |\vec{\omega}| \to v/r \), relativistic effects emerge from energy-phase relations and swirl kinematics. No spacetime curvature is required.
+
+    \section{Physical Interpretation}
+    Lorentz symmetry arises naturally from fluid kinematics. Internal swirl clocks and vortex-induced pressures account for relativistic observables as projections of ætheric dynamics.
+
+    \section{Conclusion}
+    This theorem shows that VAM is compatible with inertial relativistic effects. It forms a base for exploring deviations in extreme swirl regimes, where new physics may emerge.
+
+    \section{Limits of Lorentz Recovery: VAM Predictions Beyond SR}
+
+    While the Vortex Æther Model (VAM) successfully reproduces the Lorentz-invariant kinematics of Special Relativity (SR) in the low-swirl regime, it inherently departs from SR in high-vorticity or topologically nontrivial conditions. These deviations open the possibility of new physical predictions testable beyond the traditional relativistic domain.
+
+    \subsection{Swirl-Induced Lorentz Symmetry Breaking}
+
+    In the limit where the local swirl velocity \( |\vec{v}_\theta| \rightarrow c \), the dilation factor:
+    \[
+        \frac{d\tau}{d\mathcal{N}} = \sqrt{1 - \frac{v^2}{c^2}}
+    \]
+    approaches zero, and further increases in vorticity would violate this bound. Unlike SR, which prohibits \( v > c \) due to its geometric axiomatics, VAM predicts:
+
+    \begin{itemize}
+        \item Local time freezing (\( d\tau \to 0 \)) near strong vortex cores.
+        \item Breakdown of global synchronization due to turbulent phase scattering.
+        \item Direction-dependent phase propagation: an emergent \textbf{æther anisotropy}.
+    \end{itemize}
+
+    This reflects an effective violation of Lorentz invariance at high swirl densities, despite its preservation in the linear limit.
+
+    \subsection{Topological Transitions and Quantized Time Steps}
+
+    In regions where vortex knots undergo reconnection or topological phase transition, the proper time \( T_v \) becomes discontinuous or quantized. We define a swirl-topological phase jump \( \delta T_v \) as:
+    \[
+        \delta T_v = \oint_{\text{before}} \frac{ds}{v_\text{phase}} - \oint_{\text{after}} \frac{ds}{v'_\text{phase}}.
+    \]
+
+    Predicted consequences include:
+    \begin{itemize}
+        \item Discrete time shifts observable in interferometry (e.g., gravitational "blips").
+        \item Internal clock decoherence for topologically unstable particles.
+        \item High-energy scattering anomalies due to improper phase closure.
+    \end{itemize}
+
+    \subsection{Gravitational Emergence from Swirl Curvature}
+
+    Where General Relativity describes spacetime curvature, VAM substitutes \textbf{swirl curvature}:
+    \[
+        \mathcal{R}_{\text{swirl}} = \nabla \cdot (\vec{\omega} \times \vec{v}),
+    \]
+    which predicts gravitational anomalies not accounted for in the Einstein tensor. In particular:
+    \begin{itemize}
+        \item Frame-dragging emerges naturally from swirl induction.
+        \item Swirl field gradients generate gravitational redshift without tensor curvature.
+        \item Superluminal phase groupings (shock-swirl fronts) may emerge, violating the SR lightcone without violating causality in \( \mathcal{N} \)-time.
+    \end{itemize}
+
+    \subsection{Experimental Signatures Beyond SR}
+
+    Predictions specific to VAM (and incompatible with SR) include:
+    \begin{enumerate}
+        \item Anisotropic time dilation in rotating systems with internal swirl asymmetry.
+        \item Detectable phase delays in entangled photon experiments conducted near strong vorticity sources (e.g., acoustic metamaterials).
+        \item A breakdown of Lorentz invariance in ultra-high-frequency oscillators embedded in vortex-rich media.
+    \end{enumerate}
+
+    \subsection{Conclusion: Emergence and Beyond}
+
+    Lorentz symmetry is not fundamental in VAM, but emergent — much like temperature in statistical mechanics. Its limits are set by the topology and dynamics of the æther. Where vorticity is gentle, SR holds. But in swirl-rich, high-energy, or topologically unstable regions, new physics is not only permitted — it is inevitable.
+
+
+% ============== End of content =============
+
+% === Bibliography (only for standalone) ===
+    \ifdefined\standalonechapter\else
+    \bibliographystyle{unsrt}
+    \bibliography{../../references}
+\end{document}
+\fi
+

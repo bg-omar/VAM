@@ -1,253 +1,438 @@
-%! Author = mr
-%! Date = 6/1/25
+%! Author = Omar Iskandarani
+%! Title = ......
+%! Date = .....
+%! Affiliation = Independent Researcher, Groningen, The Netherlands
+%! License = CC-BY 4.0
+%! ORCID = 0009-0006-1686-3961
+%! DOI = 10.5281/zenodo.xxxxxxx
 
-\subsection{Entropy and Gravity: Verlinde's Thermodynamic Derivation in VAM}
+% === Metadata ===
+\newcommand{\appendixtitle}{Appendix: Derivation of Entropic Force in the Vortex \AE ther Model (VAM)}
+\newcommand{\appendixdoi}{10.5281/zenodo.xxxxxxxx}
 
-Verlinde \cite{verlinde2010emergent} proposes that gravity arises as an entropic force linked to information change across holographic screens. The central relation:
+
+\ifdefined\standalonechapter\else
+% Standalone mode
+\documentclass[11pt]{article}
+\input{vamstyle.sty}
+\input{vam_appendix_setup.sty}
+\begin{document}
+
+    % === Title page ===
+    \titlepageOpen
+
+
+\begin{abstract}
+
+This appendix explores the convergence of thermodynamic gravity, variable light speed theories, and gauge torsion with the Vortex Æther Model (VAM). By mapping Verlinde’s entropic force law to pressure gradients in swirling æther, we reinterpret inertia and gravitation as emergent phenomena from vorticity-induced entropy flows. The speed of light, rather than a fixed invariant, emerges as a density-dependent wave speed modulated by local ætheric swirl, offering a VAM explanation of cosmological horizon problems. We further connect torsion in gauge gravity theories to the antisymmetric vorticity tensor in the æther, grounding spacetime torsion in vortex topology. Experimental effects—including the Sagnac shift, Rømer delay, and Schwarzschild collapse—are rederived in fluid-dynamic terms. Finally, we extend the VAM framework to account for the cosmological evolution of physical constants and noncommutative black hole geometries as manifestations of vortex quantization and minimal circulation domains. This unified approach offers new fluid-based insights into the fundamental architecture of gravitational and quantum fields.
+
+\end{abstract}
+
+
+    \titlepageClose
+    \fi
+
+    \ifdefined\standalonechapter
+    \section{\appendixtitle}
+    \else
+    \fi
+% ============= Begin of content ============
+
+
+
+
+In this appendix, we derive a VAM-consistent analog of Verlinde's entropic force equation:
+\begin{equation}
+    F = T \frac{\Delta S}{\Delta x},
+\end{equation}
+and reinterpret all terms within the framework of vortex-based æther dynamics. The goal is to ground the entropic force in the structured vorticity fields of the Vortex \AE ther Model (VAM), using fundamental fluid variables such as local angular velocity $\Omega$, æther density $\rho_\text{\ae}$, and swirl-clock phase memory $S(t)$.
+
+\subsection*{1. Swirl Clock as Entropy}
+
+In VAM, the swirl clock $S(t)$ tracks the phase evolution of a vortex:
+\begin{equation}
+    S(t) = \int \Omega(r(t'))\, dt'.
+\end{equation}
+This acts as an angular-memory or identity phase. The entropy gradient in Verlinde's formulation becomes:
+\begin{equation}
+    \frac{\Delta S}{\Delta x} \sim \frac{d\Omega}{dx} \cdot \Delta t.
+\end{equation}
+This defines a local change in phase memory across a spatial distance $\Delta x$.
+
+\subsection*{2. Effective Temperature from Swirl Energy}
+
+We define an effective temperature as a thermal analogue of the local rotational energy per degree of freedom:
+\begin{equation}
+    T_\text{eff} = \frac{1}{2k_B} \rho_\text{\ae} \Omega^2 r^2.
+\end{equation}
+This connects the kinetic swirl energy to a thermodynamic-like quantity usable in the entropic force expression.
+
+\subsection*{3. Entropic Force in VAM}
+
+Substituting into the original equation:
+\begin{align}
+    F &= T_\text{eff} \cdot \frac{\Delta S}{\Delta x} \\
+      &= \left( \frac{1}{2k_B} \rho_\text{\ae} \Omega^2 r^2 \right) \cdot \left( \frac{d\Omega}{dx} \cdot \Delta t \right) \\
+      &\sim \frac{\rho_\text{\ae}}{2k_B} \Omega^2 r^2 \cdot \frac{d\Omega}{dx} \cdot \Delta t.
+\end{align}
+
+\subsection*{4. Comparison with Pressure Gradient Force}
+
+VAM models forces as arising from Bernoulli-type swirl pressure:
+\begin{equation}
+    F_\text{vortex} = -\nabla P = -\frac{1}{2} \rho_\text{\ae} \nabla |\vec{\omega}|^2.
+\end{equation}
+Letting $\vec{\omega} = \Omega(r) \hat{\theta}$, we compute:
+\begin{align}
+    F &\sim -\frac{1}{2} \rho_\text{\ae} \nabla (\Omega^2 r^2) \\
+      &= -\rho_\text{\ae} \left( \Omega \frac{d\Omega}{dr} r^2 + \Omega^2 r \right).
+\end{align}
+This matches the qualitative structure of the entropic force when $\frac{\Delta S}{\Delta x} \sim \frac{d\Omega}{dx}$.
+
+\subsection*{5. Final VAM Entropic Force Expression}
+
+We summarize the derived VAM-compatible expression as:
+\begin{equation}
+    F = \left( \frac{1}{2} \rho_\text{\ae} \Omega^2 r^2 \right) \cdot \left( \frac{d\Omega}{dx} \cdot \Delta t \right)
+\end{equation}
+or, in full gradient form:
+\begin{equation}
+    F = -\rho_\text{\ae} \left( \Omega \frac{d\Omega}{dr} r^2 + \Omega^2 r \right).
+\end{equation}
+This shows that entropy-driven forces emerge naturally from structured angular motion in the æther.
+
+\subsection*{6. Interpretation and Outlook}
+
+This derivation grounds Verlinde's concept of gravity as an entropic force in concrete fluid dynamics. Rather than invoking information bits on holographic screens, the VAM replaces them with physical vortex swirl memory $S(t)$ and energy gradients. This paves the way for testable predictions linking vorticity and inertia.
+
+Next steps may include:
+\begin{itemize}
+\item Deriving the vortex potential energy corresponding to this force.
+    \item Exploring entropy production during vortex reconnection events $K(x, \tau)$.
+\item Comparing with Unruh temperature analogs in accelerated vortex frames.
+\end{itemize}
+
+\section*{7. Entropy as Function of Vortex Area and Swirl Phase}
+
+To connect entropy with structured vorticity, we define entropy in VAM as a function of vortex energy per unit phase memory over the core area:
+\begin{equation}
+    \mathcal{S}(t) = \frac{1}{T} \cdot \frac{E_\text{vortex}(A_v)}{S(t)}
+\end{equation}
+where:
+\begin{itemize}
+    \item $E_\text{vortex} = \int_{A_v} \frac{1}{2} \rho_\text{\ae} \Omega^2 \, dA$
+    \item $S(t) = \int_0^t \Omega(t') \, dt'$
+    \item $A_v = \pi r_c^2$: vortex core area
+\end{itemize}
+
+
+Assuming cylindrical symmetry,
 
 \begin{equation}
-F = T \frac{\Delta S}{\Delta x},
+E_\text{vortex} = \frac{1}{2} \rho_\text{\ae} \int_0^{r_c} \Omega^2(r) \cdot 2\pi r \, dr
 \end{equation}
 
-can be mapped in VAM to ætheric pressure forces caused by swirl gradients. In Verlinde's approach, inertia also emerges from entropy change, similar to how VAM interprets inertial mass as arising from angular swirl resistance. The Unruh relation:
+So the entropy becomes:
 
 \begin{equation}
-\Delta S = 2\pi k_B \frac{mc}{\hbar} \Delta x,
-\end{equation}
-
-mirrors the energy storage due to tangential circulation in VAM knots. The holographic screen storing gravitational information finds a VAM equivalent in spherical vortex boundaries encoding helicity.
-
-Equipartition in Verlinde's formulation:
-
-\begin{equation}
-M c^2 = \frac{1}{2} N k_B T,
-\end{equation}
-
-can be reinterpreted as swirl energy contained within ætheric volume quanta. The acceleration field is then an emergent entropy pressure gradient over swirl-stretched æther.
-
-\begin{verbatim}
-@article{verlinde2010emergent,
-  author = {Verlinde, Erik P.},
-  title = {On the Origin of Gravity and the Laws of Newton},
-  journal = {Journal of High Energy Physics},
-  year = {2011},
-  volume = {2011},
-  number = {4},
-  pages = {29},
-  doi = {10.1007/JHEP04(2011)029},
-  archivePrefix = {arXiv},
-  eprint = {1001.0785},
-  primaryClass = {hep-th}
+\boxed{
+\mathcal{S}(t) = \frac{\rho_\text{\ae} \pi}{T} \cdot \frac{\int_0^{r_c} \Omega^2(r) r \, dr}{\int_0^t \Omega(t') dt'}
 }
-\end{verbatim}
+\end{equation}
 
-\begin{table}[h!]
+This gives a field-based entropy grounded in æther swirl dynamics, rather than microstate statistics.
+
+\subsection*{Interpretation}
+
+\begin{itemize}
+\item Numerator: Total stored energy in the vortex cross-section.
+\item Denominator: Accumulated swirl phase — the memory of angular identity.
+    \item $\mathcal{S}(t)$: Rotational entropy density, indicating information per phase per unit area.
+\end{itemize}
+
+This provides a vortex-theoretic alternative to Boltzmann entropy and supports future modeling of irreversible dynamics such as bifurcation (Kairos) events.
+
+\section*{8. Mapping Verlinde's Screen Bits to Vortex Topology}
+
+In Verlinde's framework, a holographic screen encodes information as discrete ``bits,'' with the number of bits scaling as:
+\begin{equation}
+N = \frac{A c^3}{G \hbar} \quad \Rightarrow \quad S = k_B N.
+\end{equation}
+
+In VAM, the screen corresponds to the vortex core surface, and bits are replaced by physical vortex characteristics:
+\begin{itemize}
+    \item \textbf{Bit} $\leftrightarrow$ \textbf{Winding number} $n \in \mathbb{Z}$
+    \item \textbf{Total bits} $\leftrightarrow$ $N_\text{vortex} = 2\pi n$
+    \item \textbf{Entropy} $\leftrightarrow$ $S = k_B \cdot H$: helicity quantization
+\end{itemize}
+
+The vortex helicity is given by:
+\begin{equation}
+H = \sum_i \Gamma_i^2 (\mathcal{T}^{(i)} + \mathcal{W}^{(i)})
+\end{equation}
+where $\Gamma_i = 2\pi n_i \kappa$ is circulation, and $\mathcal{T}, \mathcal{W}$ represent twist and writhe respectively.
+
+Thus, entropy becomes:
+\begin{equation}
+\boxed{
+S_\text{vortex} = k_B \sum n_i^2 (\mathcal{T}^{(i)} + \mathcal{W}^{(i)})
+}
+\end{equation}
+
+Each quantized swirl structure carries information via its topological configuration. This replaces Verlinde's flat screen with a knotted, rotating geometry storing information in winding and linking.
+
+\subsection*{Interpretation}
+\begin{itemize}
+\item Bits are \textit{phase loops}, not area pixels.
+    \item Helicity $H$ measures stored topological information.
+    \item $N_\text{bits}^{(\text{VAM})} = H / \hbar$ gives a quantized information count.
+\end{itemize}
+
+This mapping allows Verlinde's emergent gravity picture to be implemented with tangible fluid structures in the æther.
+
+\section*{9. Side-by-Side Comparison: Verlinde vs VAM}
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.3}
+\setlength{\tabcolsep}{10pt}
+\begin{tabular}{|c|p{6.2cm}|p{6.2cm}|}
+\hline
+\textbf{Concept} & \textbf{Verlinde} & \textbf{VAM (Vortex \AE ther Model)} \\
+\hline
+Information unit & Bit on holographic screen & Vortex winding number $n \in \mathbb{Z}$ \\
+\hline
+Screen area & $A = 4\pi r^2$ & Vortex core cross-section $A_v = \pi r_c^2$ \\
+\hline
+Total bits & $N = \frac{A c^3}{G \hbar}$ & $N = \sum_i 2\pi n_i$ from circulation $\Gamma_i$ \\
+\hline
+Entropy & $S = k_B N$ & $S = k_B \sum n_i^2 (\mathcal{T}^{(i)} + \mathcal{W}^{(i)})$ \\
+\hline
+Force law & $F = T \frac{\Delta S}{\Delta x}$ & $F = T_\text{eff} \cdot \frac{d\Omega}{dx} \cdot \Delta t$ \\
+\hline
+Temperature & $T = \frac{\hbar a}{2\pi c k_B}$ (Unruh) & $T_\text{eff} = \frac{1}{2k_B} \rho_\text{\ae} \Omega^2 r^2$ \\
+\hline
+Storage medium & Holographic surface & Toroidal vortex topology and swirl phase memory $S(t)$ \\
+\hline
+Underlying mechanism & Information displacement near screen & Vorticity-induced energy gradients in fluid æther \\
+\hline
+Quantization basis & Area-encoded bits & Circulation and helicity: $H = \sum \Gamma^2(\mathcal{T} + \mathcal{W})$ \\
+\hline
+\end{tabular}
+\caption{Comparison of core concepts and equations in Verlinde’s entropic gravity and the Vortex \AE ther Model.}
+\end{table}
+
+\section*{10. VAM Action for Global Swirl Field $S(x,t)$}
+
+Inspired by the JT gravity scalar field formulation $X(u,v)$, we define an analogous action in the Vortex \AE ther Model (VAM) based on the swirl clock phase field $S(x,t)$. This action governs how temporal structure and gravitational analogues emerge from vorticity phase memory.
+
+\subsection*{Field Definition}
+
+We define $S(x,t)$ as the swirl phase memory field, tracking accumulated rotation in the fluid æther. In 1D, this field determines:
+\begin{itemize}
+\item Temporal swirl energy via $\partial_t S$
+\item Spatial swirl pressure via $\partial_x S$
+\end{itemize}
+
+\subsection*{VAM Action Functional}
+
+We propose the following action:
+\begin{equation}
+\boxed{
+S_{\text{VAM}}[S] = \int dx \, dt \left[
+\frac{1}{2} \rho_{\text{\ae}} (\partial_t S)^2
+- \frac{1}{2} \rho_{\text{\ae}} C_e^2 (\partial_x S)^2
++ \Lambda \, \{ S(t), t \}
+\right]
+}
+\end{equation}
+
+\subsection*{Interpretation}
+\begin{itemize}
+\item $(\partial_t S)^2$: Kinetic energy of phase change (swirl clock ticking)
+\item $(\partial_x S)^2$: Spatial swirl gradient or vortex tension
+    \item $\{ S(t), t \}$: Schwarzian term—measures chaotic swirl deformation
+\item $C_e$: Core swirl speed constant
+\item $\Lambda$: Coupling constant for time chaos sensitivity
+\end{itemize}
+
+\subsection*{Equations of Motion}
+
+Variation of the action yields:
+\begin{equation}
+\rho_{\text{\ae}} (\partial_t^2 S - C_e^2 \partial_x^2 S) = - \Lambda \, \frac{d}{dt} \left[ \frac{S'''(t)}{S'(t)} - \frac{3}{2} \left( \frac{S''(t)}{S'(t)} \right)^2 \right]
+\end{equation}
+This shows that swirl dynamics in VAM can exhibit Schwarzian-instability when the clock phase becomes nonuniform.
+
+\subsection*{Toward 2D or 3D Generalization}
+
+In higher dimensions, the action can include:
+\begin{itemize}
+\item Laplacian terms: $|\nabla^2 S|^2$ for vortex tension
+\item Helicity-based terms: $\mathcal{H} = \vec{v} \cdot \vec{\omega}$
+\item Topological charges: Hopf index or linking number
+\end{itemize}
+
+This provides a vortex-dynamic variational basis for emergent gravity in the Vortex \AE ther framework, rooted in physical swirl phase evolution.
+
+\section*{11. Cosmological Evolution of Constants in VAM}
+
+Stanyukovich~\cite{stanyukovich2008evolution} proposed that fundamental constants—such as the gravitational constant $G$, the Planck constant $\hbar$, and the speed of light $c$—may evolve cosmologically through their dependence on scalar curvature $R$. In his approach, the Compton wavelength of a nucleon is expressed as:
+\begin{equation}
+\lambda^3 = \frac{2G\hbar}{c^2 H},
+\end{equation}
+where $H$ is the Hubble constant. This relation links microphysics (via $\lambda$) to large-scale structure.
+
+In the Vortex \AE ther Model (VAM), this suggests that physical constants emerge from the dynamical properties of the æther itself. Since $G$ in VAM is derived from circulation parameters and vortex interaction, it is plausible that the large-scale swirl configuration of the cosmos modifies the apparent values of these constants.
+
+The proposed scaling laws:
+\begin{align*}
+\hbar &\sim R, \\
+G &\sim R^{-1/2},
+\end{align*}
+can be recast in VAM as emergent constants from varying background swirl curvature:
+\begin{equation}
+G_\text{swirl} = \frac{C_e c^5 t_p^2}{2 F_\text{max} r_c^2} \cdot f(R),
+\end{equation}
+where $f(R)$ encodes global ætheric swirl modulation. This supports the view that constants are not fundamental, but phase-state parameters of the superfluid æther.
+
+\subsection*{Interpretation}
+\begin{itemize}
+\item Cosmological evolution of constants maps to large-scale swirl evolution in VAM.
+\item Constants such as $G$ and $\hbar$ emerge from collective topological vorticity structure.
+\item VAM provides a physical mechanism for Stanyukovich’s curvature-driven evolution.
+\end{itemize}
+
+
+\section*{12. Entropic Gravity, Variable Light Speed, and Torsion in the Vortex \AE ther Model (VAM)}
+
+\subsection{Unified Time Dilation as \AE theric Relative Motion}
+
+We adopt a general formula for local clock rate slowdown based on motion relative to the æther flow:
+\begin{equation}
+    \frac{d\tau}{dt} = \sqrt{1 - \frac{|\vec{u} - \vec{v}_g|^2}{c^2}}
+\end{equation}
+This equation captures both special and general relativistic time dilation in VAM. Whether arising from orbital motion or æther inflow due to gravitating mass, the mechanism is unified via effective swirl-relative velocity.
+
+\subsection{Entropic Gravity as Swirl-Induced Pressure Gradient}
+
+Verlinde's proposal~\cite{verlinde2010emergent} that gravity emerges from entropy gradients is mapped to swirl pressure in VAM. His force law:
+\begin{equation}
+    F = T \frac{\Delta S}{\Delta x}
+\end{equation}
+corresponds to ætheric pressure gradient forces due to swirl density change. The Unruh temperature and entropic displacement
+\begin{equation}
+    \Delta S = 2\pi k_B \frac{mc}{\hbar} \Delta x
+\end{equation}
+parallel the energy stored in vortex tangential rotation.
+
+Equipartition:
+\begin{equation}
+    M c^2 = \frac{1}{2} N k_B T
+\end{equation}
+is reinterpreted as the total swirl energy in quantized æther volume.
+
+\begin{table}[H]
 \centering
 \footnotesize
-\caption{Conceptual mapping: Verlinde's Entropic Gravity vs. VAM Vorticity Interpretation}
+\caption{Conceptual Correspondence: Verlinde's Entropic Gravity and VAM Swirl Interpretation}
 \begin{tabular}{|l|l|}
 \hline
-\textbf{Verlinde Principle} & \textbf{VAM Equivalent} \\
+        \textbf{Verlinde Concept} & \textbf{VAM Interpretation} \\
 \hline
-Entropic force from screen & Pressure gradient from swirl field \\
-Holographic boundary & Vortex surface encoding helicity \\
-Equipartition of energy & Swirl energy quantization in core \\
-Unruh effect temperature & Local rotation-induced kinetic temperature \\
-Inertial mass from $\Delta S$ & Mass from resistance to swirl displacement \\
+        Entropy gradient & Swirl-induced pressure drop \\
+        Holographic screen & Vortex boundary with helicity content \\
+        Equipartition energy & Core quantized swirl energy \\
+        Unruh effect & Kinetic swirl temperature \\
+        Inertial mass from $\Delta S$ & Swirl resistance to displacement \\
 \hline
 \end{tabular}
 \end{table}
 
-\subsection{Emergent Speed of Light and Local Time Slowdown in VAM}
+\subsection{Emergent Speed of Light from Swirl Density}
 
-Popescu \cite{popescu2008cvar} explores a cosmological model where the speed of light $c$ varies over time, resolving key issues such as the horizon problem. In the context of the Vortex Æther Model (VAM), we reinterpret this as a consequence of the local swirl energy density $\varepsilon_\text{swirl}$. In VAM, $c$ is not a universal invariant but emerges from pressure wave propagation through the æther:
-
+Popescu's suggestion of a varying speed of light~\cite{popescu2008cvar} is realized in VAM through swirl-density-dependent wave propagation:
 \begin{equation}
-    c^2 \propto \frac{\partial P}{\partial \rho_\ae} \sim \frac{F_\text{max}}{\rho_\ae}.
+    c^2 \propto \frac{\partial P}{\partial \rho_\ae} \sim \frac{F_\text{max}}{\rho_\ae}
+\end{equation}
+In dense vortex cores:
+\[
+    \rho_\ae \sim 10^{18}~\text{kg/m}^3, \quad c_\text{local} \ll c_\infty
+\]
+Time dilation follows from:
+\begin{equation}
+    dt_\text{local} = dt_\infty \sqrt{1 - \frac{|\vec{\omega}|^2}{c^2}}
 \end{equation}
 
-In vortex cores—such as those forming atomic structure—local æther density $\rho_\ae$ increases from interstitial values $\sim 7 \times 10^{-7} \,\mathrm{kg/m^3}$ to core densities $\sim 10^{18} \,\mathrm{kg/m^3}$, drastically slowing the effective local $c$. This directly impacts time dilation:
+\subsection{Gauge Torsion as \AE theric Vorticity}
 
+Minkevich’s gauge gravity~\cite{minkevich2008gauge} introduces torsion, which in VAM maps to æther swirl:
 \begin{equation}
-    dt_\text{local} = dt_\infty \sqrt{1 - \frac{|\vec{\omega}|^2}{c^2}}.
+    T^\lambda_{\mu\nu} \sim \epsilon^{\lambda}_{\ \mu\nu\sigma} \omega^\sigma
 \end{equation}
+This links Cartan torsion directly to vorticity in the æther. Conservation of helicity in VAM implies gauge-like invariance.
 
-Thus, in VAM, local time slows down not because of curvature (as in GR), but due to increased swirl energy reducing the effective propagation velocity $c$. The distinction between $c$ and the internal core swirl velocity $C_e$ (a constant in VAM) becomes essential: $C_e$ governs the internal clock of a particle, while $c$ emerges from the transmission speed of ætheric disturbances.
+\subsection{R\o mer Delay and \AE ther Propagation}
 
-\begin{verbatim}
-@article{popescu2008cvar,
-  author = {Popescu, Sandu},
-  title = {The Speed of Light May Not Be Constant},
-  journal = {The Abraham Zelmanov Journal},
-  year = {2008},
-  volume = {1},
-  pages = {167--170},
-  url = {http://www.zelmanov.org/archives/1092}
-}
-\end{verbatim}
-
-\subsection{Gauge Gravitation Theory and Torsion in VAM}
-
-Minkevich \cite{minkevich2008gauge} develops a gauge theory of gravitation in Riemann–Cartan spacetime, where torsion coexists with curvature and contributes directly to the dynamics of spacetime. Unlike General Relativity, which assumes a torsionless Levi-Civita connection, this approach uses independent metric and connection fields, introducing new gravitational degrees of freedom.
-
-In the VAM framework, this motivates a reinterpretation of torsion as an intrinsic manifestation of local æther swirl. The torsion tensor $T^\lambda_{\mu\nu}$, antisymmetric in its lower indices, naturally parallels the vorticity tensor in fluid dynamics:
-
-\begin{equation}
-T^\lambda_{\mu\nu} \sim \epsilon^{\lambda}_{\ \mu\nu\sigma} \omega^\sigma,
-\end{equation}
-
-where $\vec{\omega} = \nabla \times \vec{v}$ represents local ætheric rotation. Thus, the Cartan extension of spacetime may be interpreted within VAM not as additional geometry but as emergent from knotted vorticity structures.
-
-Gauge invariance under translations and Lorentz transformations further supports the topological robustness of vortex knots, aligning with the conservation of helicity in VAM. Torsion becomes a natural geometric encoding of angular momentum conservation and æther twist.
-
-\begin{verbatim}
-@article{minkevich2008gauge,
-  author = {Minkevich, A. V.},
-  title = {Gauge Approach to Gravitation and Regular Big Bang},
-  journal = {The Abraham Zelmanov Journal},
-  year = {2008},
-  volume = {1},
-  pages = {130--135},
-  url = {http://www.zelmanov.org/archives/1081}
-}
-\end{verbatim}
-
-
-\subsection{R\o mer's Observation of Light Delay}
-R\o mer's measurement of the finite speed of light based on the eclipses of Io offers early empirical support for the idea that light is mediated by a physical medium. In VAM, the propagation of light is reinterpreted as transmission of swirl pulses through structured vortex filaments.
-
+The historical measurement of finite light speed~\cite{roemer1676light} supports the VAM view of light as swirl-wave propagation:
 \begin{equation}
     \Delta t = \frac{L}{v_\text{swirl}} \approx \frac{L}{c}
 \end{equation}
 
-\subsection*{Citation}
-\begin{verbatim}
-@article{roemer1676light,
-  author = {Ole R\o mer},
-  title = {Demonstration touchant le mouvement de la lumi\`ere},
-  journal = {Journal des S\c{c}avans},
-  year = {1676},
-  pages = {233--236},
-  note = {Translated in Abraham Zelmanov Journal, Vol. 1, 2008}
-}
-\end{verbatim}
+\subsection{Sagnac Effect and Circulation in \AE ther}
 
-\subsection{Schwarzschild's Point-Mass Metric}
-The Schwarzschild solution for a point mass is reinterpreted in VAM as the limiting configuration of a vortex knot field, where the internal vorticity reaches critical pressure-depletion:
+In VAM, the Sagnac time shift arises from net circulation of the æther:
+\begin{equation}
+    \Delta t_\text{VAM} = \frac{4 \Gamma_\ae A}{C_e^2}, \quad \Gamma_\ae = \oint \vec{v} \cdot d\vec{l}
+\end{equation}
+This validates æther rotation detection.
+
+\subsection{Schwarzschild Collapse in VAM}
+
+Gravitational collapse corresponds to pressure depletion due to extreme swirl:
 \begin{equation}
     P(r) = P_\infty - \frac{1}{2} \rho_\ae \omega^2(r) = 0
 \end{equation}
-This defines the collapse radius:
+Implying a collapse radius:
 \begin{equation}
     R_\text{vam} = \left( \frac{2 F_{\text{max}}}{\rho_\ae \omega_0^2} \right)^{1/2}
 \end{equation}
 
-\subsection*{Citation}
-\begin{verbatim}
-@article{schwarzschild1916point,
-  author = {Karl Schwarzschild},
-  title = {On the Gravitational Field of a Point-Mass, According to Einstein's Theory},
-  journal = {Sitzungsberichte der K\"oniglich Preussischen Akademie der Wissenschaften},
-  year = {1916},
-  pages = {189--196},
-  note = {Translated in Abraham Zelmanov Journal, Vol. 1, 2008}
-}
-\end{verbatim}
+\subsection{Incompressible Swirl Equilibrium}
 
-\subsection{Schwarzschild's Incompressible Fluid Sphere}
-VAM treats a spherically symmetric vortex configuration as an incompressible ætheric fluid, with internal swirl balancing the gravitational compression. This replaces mass-energy curvature with pressure-gradient equilibrium:
+Spherical vortex equilibrium satisfies:
 \begin{equation}
     \nabla P = \rho_\ae \Omega^2(r) r = \frac{GM(r)}{r^2} \rho_\ae
 \end{equation}
+Replacing mass-curved spacetime with pressure-balanced æther swirl.
 
-\subsection*{Citation}
-\begin{verbatim}
-@article{schwarzschild1916sphere,
-  author = {Karl Schwarzschild},
-  title = {On the Gravitational Field of a Sphere of Incompressible Liquid},
-  journal = {Sitzungsberichte der K\"oniglich Preussischen Akademie der Wissenschaften},
-  year = {1916},
-  pages = {424--435},
-  note = {Translated in Abraham Zelmanov Journal, Vol. 1, 2008}
-}
-\end{verbatim}
+\subsection{Cosmological Evolution of Constants}
 
-\subsection{Sagnac Effect and Vortex Circulation}
-The Sagnac effect proves rotation relative to a physical medium. In VAM, the fringe shift arises from net circulation in a rotating æther:
+Following Stanyukovich~\cite{stanyukovich2008evolution}, physical constants evolve as:
 \begin{equation}
-    \Delta t_\text{VAM} = \frac{4 \Gamma_\ae A}{C_e^2}, \quad \Gamma_\ae = \oint \vec{v} \cdot d\vec{l}
+    \lambda^3 = \frac{2G\hbar}{c^2 H}, \quad \hbar \sim R, \quad G \sim R^{-1/2}
 \end{equation}
+VAM interprets this as variation of effective swirl parameters across cosmic curvature.
 
-\subsection*{Citation}
-\begin{verbatim}
-@article{sagnac1913ether,
-  author = {Georges Sagnac},
-  title = {The Luminiferous Ether is Detected as a Wind Effect Relative to the Ether Using a Uniformly Rotating Interferometer},
-  journal = {Comptes Rendus},
-  year = {1913},
-  pages = {708--710},
-  note = {Translated in Abraham Zelmanov Journal, Vol. 1, 2008}
-}
-\end{verbatim}
+\subsection{Noncommutative Black Holes and Swirl Quantization}
 
-\section*{Citation}
-\begingroup
-\renewcommand{\section}[2]{}%
-\begin{thebibliography}{9}
-
-\bibitem{clausius1865entropie}
-R. Clausius, \textit{\"Uber die mechanische Bedeutung des zweiten Hauptsatzes der W\"armetheorie},\ Annalen der Physik, 1865. Public domain. \\ \url{https://books.google.com/books?id=8Hc5AAAAcAAJ}
-
-\end{thebibliography}
-\endgroup
-
-
-\subsection{Evolution of Fundamental Constants and Planck Quantization}
-
-Kyril Stanyukovich's presentation \cite{stanyukovich2008evolution} offers a unique formulation where physical constants like $G$, $\hbar$, and $c$ evolve cosmologically through scalar curvature $R$. He deduces a fundamental relation from Bronstein's gravitational mass definition and Planck units:
-
+Tejeiro and Larrañaga~\cite{tejeiro2011noncomm} model black holes with noncommutative coordinates:
 \begin{equation}
-\lambda^3 = \frac{2G\hbar}{c^2 H},
+    [x^\mu, x^\nu] = i \theta^{\mu\nu}
 \end{equation}
-
-linking the Compton wavelength of the nucleon to cosmological parameters. The evolution of $\hbar \sim R$, $G \sim R^{-1/2}$ is proposed. This supports the view that rest-frame constants emerge from cosmological curvature, aligning with VAM where constants derive from ætheric curvature.
-
-\begin{verbatim}
-@article{stanyukovich2008evolution,
-  author = {Stanyukovich, Kyril P.},
-  title = {On the Evolution of the Fundamental Physical Constants},
-  journal = {The Abraham Zelmanov Journal},
-  year = {2008},
-  volume = {1},
-  pages = {118--123},
-  url = {http://www.zelmanov.org/archives/1074}
-}
-\end{verbatim}
-
-\subsection{Non-Commutative Geometry and Three-Dimensional BTZ-like Black Holes}
-
-Tejeiro and Larrañaga \cite{tejeiro2011noncomm} introduce a 3D black hole in AdS space using an anisotropic perfect fluid and Gaussian charge distribution inspired by non-commutative geometry:
-
+VAM analog: quantized vortex domains and minimal circulation zones:
 \begin{equation}
-[x^\mu, x^\nu] = i \theta^{\mu\nu}.
+    \rho(r) = \frac{M}{4\pi \theta} e^{-r^2/4\theta}
 \end{equation}
+indicating effective core smearing by finite vorticity resolution.
 
-They keep Einstein's field equations intact, modifying the energy-momentum tensor with a smeared matter density:
 
-\begin{equation}
-\rho(r) = \frac{M}{4\pi \theta} e^{-r^2/4\theta}.
-\end{equation}
+    % ============== End of content =============
 
-This leads to a solution with two horizons degenerating in the extremal limit. The idea of spacetime quantization via $\theta$ may find VAM equivalence in quantized vorticity zones or minimum æther circulation volumes.
+% === Bibliography (only for standalone) ===
+    \ifdefined\standalonechapter\else
+    \bibliographystyle{unsrt}
+    \bibliography{../references}
+\end{document}
+\fi
 
-\begin{verbatim}
-@article{tejeiro2011noncomm,
-  author = {Tejeiro, Juan M. and Larrañaga, Alexis},
-  title = {A Three-Dimensional Charged Black Hole Inspired by Non-Commutative Geometry},
-  journal = {The Abraham Zelmanov Journal},
-  year = {2011},
-  volume = {4},
-  pages = {28--34},
-  url = {http://www.zelmanov.org/archives/1236}
-}
-\end{verbatim}

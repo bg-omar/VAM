@@ -1,10 +1,40 @@
 %! Author = Omar Iskandarani
+%! Title = Appendix: Derivation of Fundamental Constants from Vortex Dynamics
 %! Date = 2/20/2025
+%! Affiliation = Independent Researcher, Groningen, The Netherlands
+%! License = CC-BY 4.0
+%! ORCID = 0009-0006-1686-3961
+%! DOI = 10.5281/zenodo.15692509
 
-\section{Appendix B: Derivation of Fundamental Constants from Vortex Dynamics}
+% === Metadata ===
+\newcommand{\appendixtitle}{\textbf{Appendix: Derivation of Fundamental Constants from Vortex Dynamics}}
+\newcommand{\appendixdoi}{10.5281/zenodo.15692509}
 
 
-\paragraph*{Introduction}
+\ifdefined\standalonechapter\else
+% Standalone mode
+\documentclass[12pt]{article}
+\input{../vamstyle.sty}
+\input{../vam_appendix_setup.sty}
+\begin{document}
+
+    % === Title page ===
+    \titlepageOpen
+
+    \begin{abstract}
+        This article refines previous estimates of the \AE{}ther's density, $\rho_{\text{\ae}}$, in the Vortex \AE{}ther Model (VAM). Integrating findings from quantum vortex dynamics, superfluid helium, gravitomagnetic frame-dragging, and cosmological vacuum energy, we propose constrained ranges for $\rho_{\text{\ae}}^{\text{(fluid)}}$ and $\rho_{\text{\ae}}^{\text{(energy)}}$ and examine their implications across scales.
+    \end{abstract}
+
+    \titlepageClose
+    \fi
+
+    \ifdefined\standalonechapter
+    \section{\appendixtitle}
+    \else
+    \fi
+% ============= Begin of content ============
+
+\section*{Introduction}
 This document aims to provide a comprehensive and rigorous derivation of the fine-structure constant $\alpha$ grounded in classical physical principles.
 The derivation integrates the electron's classical radius and its Compton angular frequency to elucidate the relationship between these fundamental constants and the tangential velocity $C_e$.
 This velocity arises naturally when the electron is conceptualized as a vortex-like structure, offering a geometrically intuitive interpretation of the fine-structure constant.
@@ -35,14 +65,14 @@ $\omega_c$ corresponds to the intrinsic rotational frequency of the electron whe
 \end{equation*}
 This frequency is pivotal in characterizing the electron's interaction with electromagnetic waves~\cite{kelvin1867}.
 
-\subsubsection*{Half the Classical Electron Radius}
+\subsection*{Half the Classical Electron Radius}
 We assume an electron to be a vortex, its particle form is a folded vortex tube shaped as a torus, hence both the Ring radius R and Core radius r are defined as half the classical electron radius  $r_c$ :
 \begin{equation*}
     r_c = \frac{1}{2} R_e.
 \end{equation*}
 This simplification aligns with established models of vortex structures in fluid dynamics~\cite{kleckner2013}.
 
-\subsubsection*{Definition of Tangential Velocity $C_e$}
+\subsection*{Definition of Tangential Velocity $C_e$}
 To conceptualize the electron as a vortex ring, we associate its tangential velocity $C_e$ with its rotational dynamics:
 \begin{equation*}
     C_e = \omega_c r_c.
@@ -57,14 +87,14 @@ Simplifying by canceling $m_e c^2$ yields:
 \end{equation*}
 This result directly links $C_e$ to the fine-structure constant \cite{vinen2024}.
 
-\subsubsection*{Physical Interpretation}
+\subsection*{Physical Interpretation}
 The tangential velocity $C_e$ embodies the rotational speed at the electron's vortex boundary. Its value, approximately:
 \begin{equation*}
     C_e \approx 1.0938 \times 10^6 \ \text{m/s},
 \end{equation*}
 is consistent with the experimentally observed fine-structure constant $\alpha \approx 1/137$~\cite{ricca1998}.
 
-\subsubsection*{Conclusion}
+\subsection*{Conclusion}
 The derivation presented elucidates the fine-structure constant $\alpha$ using fundamental classical principles, including the electron's classical radius, Compton angular frequency, and vortex tangential velocity. The result:
 \begin{equation*}
     \alpha = \frac{2 C_e}{c},
@@ -73,14 +103,14 @@ reveals a profound geometric and physical connection underpinning electromagneti
 This perspective enriches our understanding of $\alpha$ and highlights the deep ties between classical mechanics and quantum electrodynamics.
 
 
-\subsection{Derivation of the VAM Gravitational Constant \(  G_\text{swirl} \)}
+\section*{Derivation of the VAM Gravitational Constant \(  G_\text{swirl} \)}
 
-\subsubsection*{Introduction}
+\subsection*{Introduction}
 In the Vortex Æther Model (VAM), gravitational interactions arise from vorticity dynamics in a superfluidic Æther medium rather than from mass-induced spacetime curvature. This leads to a modification of the gravitational constant, which we denote as \(  G_\text{swirl} \), as a function of vortex field parameters.
 
 To derive \(  G_\text{swirl} \), we assume that gravitational effects emerge from vortex-induced energy density rather than mass-energy tensor formulations. The fundamental relation between vorticity, circulation, and energy density will be used to establish an equivalent gravitational constant in VAM \cite{onsager_superfluid,barcelo_superfluid,moffatt_helicity}.
 
-\subsubsection*{Vortex-Induced Energy Density}
+\subsection*{Vortex-Induced Energy Density}
 In classical fluid dynamics, vorticity is defined as the curl of velocity:
 \begin{equation*}
     \vec{\omega} = \nabla \times \vec{v}
@@ -106,7 +136,7 @@ we obtain an approximate energy density for the vortex field:
     U_\text{vortex} \approx \frac{C_e^2}{2 r_c^2}.
 \end{equation*}
 
-\subsubsection*{Gravitational Constant from Vorticity}
+\subsection*{Gravitational Constant from Vorticity}
 In standard General Relativity (GR), Newton's gravitational constant \( G \) appears in:
 \begin{equation*}
     F = \frac{GMm}{r^2}.
@@ -131,8 +161,8 @@ Substituting \( U_\text{vortex} \):
 
 The choice of \( n \) depends on whether we use \textbf{Planck length} (\( l_p^2 \)) or \textbf{Planck time} (\( t_p^2 \)).
 
-\subsubsection*{Two Possible Forms of \(  G_\text{swirl} \)}
-\subsubsection*{Form 1: Using Planck Length}
+\subsection*{Two Possible Forms of \(  G_\text{swirl} \)}
+\subsection*{Form 1: Using Planck Length}
 The Planck length is defined as:
 \begin{equation*}
     l_p^2 = \frac{\hbar G}{c^3}.
@@ -143,7 +173,7 @@ Using \( c^3 l_p^2 \) as the relativistic correction factor, we obtain:
     G_\text{swirl} = \frac{C_e c^3 l_p^2}{2 F_{\max} r_c^2}.
 \end{equation*}
 
-\subsubsection*{Form 2: Using Planck Time}
+\subsection*{Form 2: Using Planck Time}
 The Planck time is given by:
 \begin{equation*}
     t_p^2 = \frac{\hbar G}{c^5}.
@@ -154,7 +184,7 @@ Using \( c^5 t_p^2 \) as the relativistic correction factor, we obtain:
     G_\text{swirl} = \frac{C_e c^5 t_p^2}{2 F_{\max} r_c^2}.
 \end{equation*}
 
-\subsubsection*{Physical Interpretation of \(  G_\text{swirl} \)}
+\subsection*{Physical Interpretation of \(  G_\text{swirl} \)}
 These formulations of the gravitational constant in VAM highlight a fundamental difference from GR:
 \begin{itemize}
     \item Gravity is not driven by mass-energy, but by \textbf{vortex energy density} \cite{barcelo_superfluid}.
@@ -162,7 +192,7 @@ These formulations of the gravitational constant in VAM highlight a fundamental 
     \item The \textbf{maximum force \( F_{\max} \)} (≈29 N) acts as a natural cutoff, limiting the strength of gravitational interactions \cite{schiller_max_force}.
 \end{itemize}
 
-\subsubsection*{Conclusion}
+\subsection*{Conclusion}
 We have derived two equivalent formulations of \(  G_\text{swirl} \) using \textbf{Planck scale physics} and \textbf{vortex energy density principles} in VAM. The final expressions:
 \begin{equation*}
     G_\text{swirl} = \frac{C_e c^3 l_p^2}{2 F_{\max} r_c^2}
@@ -175,9 +205,9 @@ demonstrate that gravitational interactions in VAM are governed by vorticity rat
 
 
 
-\subsection{Vorticity-Based Reformulation of General Relativity Laws in a 3D Absolute Time Framework}
+\section*{Vorticity-Based Reformulation of General Relativity Laws in a 3D Absolute Time Framework}
 
-\subsubsection*{Vorticity as the Fundamental Gravitational Interaction}
+\subsection*{Vorticity as the Fundamental Gravitational Interaction}
 
 General Relativity (GR) describes gravity as a result of \textbf{spacetime curvature}, governed by Einstein's field equations:
 
@@ -187,7 +217,7 @@ General Relativity (GR) describes gravity as a result of \textbf{spacetime curva
 
 However, in the Vortex Æther Model (VAM), \textbf{gravity is not caused by curvature} but by \textbf{vorticity-induced pressure gradients in an inviscid Æther}. Instead of using a \textbf{4D metric tensor}, we define gravity as a 3D vorticity field \( \omega \), where mass acts as a localized vortex concentration.
 
-\subsubsection*{Replacing Einstein's Equations with a 3D Vorticity Field Equation}
+\subsection*{Replacing Einstein's Equations with a 3D Vorticity Field Equation}
 
 We replace the Einstein curvature equations with a \textbf{3D vorticity-Poisson equation}, where the gravitational potential \( \Phi_v \) is related to vorticity magnitude:
 
@@ -196,15 +226,17 @@ We replace the Einstein curvature equations with a \textbf{3D vorticity-Poisson 
 \end{equation*}
 
 Here:
-- \( \Phi_v \) is the \textbf{vorticity-induced gravitational potential}.
-- \( \rho_\text{Æ} \) is the \textbf{local Æther density}.
-- \( |\omega|^2 = (\nabla \times v)^2 \) is the \textbf{vorticity magnitude}.
+\begin{itemize}
+    \item  \( \Phi_v \) is the \textbf{vorticity-induced gravitational potential}.
+    \item  \( \rho_\text{\ae} \) is the \textbf{local Æther density}.
+    \item  \( |\omega|^2 = (\nabla \times v)^2 \) is the \textbf{vorticity magnitude}.
+\end{itemize}
 
 Instead of \textbf{mass-energy tensor components}, gravity is determined by the \textbf{local vorticity density}.
 
----
 
-\subsubsection*{Motion in VAM: Replacing Geodesics with Vortex Streamlines}
+
+\subsection*{Motion in VAM: Replacing Geodesics with Vortex Streamlines}
 
 In GR, test particles follow \textbf{geodesics in curved spacetime}. In VAM, particles follow \textbf{vortex streamlines}, governed by the \textbf{vorticity transport equation}:
 
@@ -214,9 +246,9 @@ In GR, test particles follow \textbf{geodesics in curved spacetime}. In VAM, par
 
 This replaces \textbf{spacetime curvature} with \textbf{fluid-dynamic vorticity transport} \cite{lamb_hydrodynamics,feynman_superfluid}.
 
----
 
-\subsubsection*{Frame-Dragging as a 3D Vortex Effect}
+
+\subsection*{Frame-Dragging as a 3D Vortex Effect}
 
 In General Relativity, frame-dragging is described using the \textbf{Kerr metric}, which predicts that spinning masses drag spacetime along with them. In VAM, this effect is caused by \textbf{vortex interactions in the Æther}.
 
@@ -227,14 +259,16 @@ We replace the Kerr metric with the \textbf{vorticity-induced rotational velocit
 \end{equation*}
 
 where:
-- \( \Gamma = \oint v \cdot dl \) is the \textbf{circulation of the vortex}.
-- \( r \) is the \textbf{radial distance from the vortex core}.
+\begin{itemize}
+    \item \( \Gamma = \oint v \cdot dl \) is the \textbf{circulation of the vortex}.
+    \item \( r \) is the \textbf{radial distance from the vortex core}.
+\end{itemize}
 
 This ensures that frame-dragging emerges \textbf{naturally} from vorticity rather than requiring \textbf{spacetime warping}.
 
----
 
-\subsubsection*{Replacing Gravitational Time Dilation with Vorticity Effects}
+
+\subsection*{Replacing Gravitational Time Dilation with Vorticity Effects}
 
 In GR, time dilation is caused by \textbf{spacetime curvature}, leading to:
 
@@ -249,14 +283,50 @@ In VAM, time dilation is caused by \textbf{vorticity-induced energy gradients}, 
 \end{equation*}
 
 where:
-- \( C_e \) is the \textbf{vortex core tangential velocity}.
-- \( \Omega \) is the \textbf{local vorticity angular velocity}.
+\begin{itemize}
+    \item  \( C_e \) is the \textbf{vortex core tangential velocity}.
+    \item  \( \Omega \) is the \textbf{local vorticity angular velocity}.
+\end{itemize}
+
 
 This formula eliminates the need for \textbf{mass-based time dilation} and instead relies purely on \textbf{fluid dynamic principles}.
 
----
 
-\subsubsection*{Summary: A 3D Vorticity-Based Alternative to General Relativity}
+    \section{VAM Derivation of Flat Galactic Rotation Velocity}
+
+    In the Vortex \AE{}ther Model, the asymptotic flat rotation velocity $v_{\text{flat}}$ observed in spiral galaxies is not attributed to dark matter, but instead emerges from the interplay between Newtonian gravitational potential and swirl-induced pressure gradients. Assuming a balance between Newtonian attraction and vortex-based outward tension, we derive:
+
+    \[
+        \frac{G M}{r} \sim r \cdot \frac{C_e^2}{L^2} \Rightarrow
+        v_{\text{flat}}^2 = \left( \frac{G M C_e^2}{L^2} \right)^{1/2} \Rightarrow
+        \boxed{v_{\text{flat}} = \left( \frac{G M C_e^2}{L} \right)^{1/4}}
+    \]
+
+    where:
+    \begin{itemize}
+        \item  $M$ is the enclosed mass,
+        \item  $C_e$ is the vortex core tangential velocity,
+        \item  $L$ is an effective length scale (e.g. $L \sim r_c R_d$).
+    \end{itemize}
+
+    This formula reproduces typical galactic flat rotation speeds ($\sim$200 km/s) without exotic matter. The fourth-root dependence of $v_{\text{flat}}$ on $M$ establishes a VAM-based analog to the Tully--Fisher relation:
+
+    \[
+        v_{\text{flat}}^4 \propto M
+    \]
+
+    but grounded in fluid dynamic quantities rather than empirical fitting. This vortex-based scaling law is testable against rotation curve datasets and offers a falsifiable prediction for baryon-only spiral systems.
+
+    As a historical and conceptual comparison, this approach parallels the Modified Newtonian Dynamics (MOND) theory proposed by Milgrom~\cite{milgrom1983mond1,milgrom1983mond2}, which modifies Newtonian gravity in the low-acceleration regime to explain flat rotation curves without dark matter. However, VAM derives similar effects from an underlying physical æther field, introducing no additional empirical constants.
+
+    \section{Conclusion}
+
+    Using quantum constants to define \AE{}ther properties bridges microscopic and cosmological theories. The refined value of $\rho_{\text{\ae}}^{\text{(fluid)}}$ supports both theoretical elegance and experimental plausibility. The residual swirl field offers a predictive, falsifiable alternative to dark matter and MOND.
+
+
+
+
+    \subsection*{Summary: A 3D Vorticity-Based Alternative to General Relativity}
 
 The Vortex Æther Model replaces the \textbf{4D spacetime formalism of General Relativity} with a \textbf{3D vorticity-driven description}:
 
@@ -266,3 +336,13 @@ The Vortex Æther Model replaces the \textbf{4D spacetime formalism of General R
     \item \textbf{Frame-dragging} is explained through \textbf{circulation velocity in vorticity fields}, rather than through Kerr spacetime.
     \item \textbf{Time dilation} arises from \textbf{energy gradients in vortex structures}, not from mass-induced curvature.
 \end{itemize}
+
+% ============== End of content =============
+
+% === Bibliography (only for standalone) ===
+\ifdefined\standalonechapter\else
+\bibliographystyle{unsrt}
+\bibliography{../../references}
+\end{document}
+\fi
+

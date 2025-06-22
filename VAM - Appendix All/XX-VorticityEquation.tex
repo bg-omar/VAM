@@ -1,31 +1,24 @@
-% main.tex or appendix.tex
-\documentclass[a4paper,12pt]{article}
-\usepackage{vamstyle}
+%! Author = Omar Iskandarani
+%! Title =  Governing Equations of Vorticity in Æther Dynamics
+%! Date = 6/20/2025
+%! Affiliation = Independent Researcher, Groningen, The Netherlands
+%! License = CC-BY 4.0
+%! ORCID = 0009-0006-1686-3961
+%! DOI = 10.5281/zenodo.15706547
+\newcommand{\appendixtitle}{ Governing Equations of Vorticity in Æther Dynamics }
+\newcommand{\appendixdoi}{10.5281/zenodo.15706547}
 
+
+\documentclass[a4paper,12pt]{article}
 \usepackage{import}
 \usepackage{subfiles}
-
-% Document
-\title{Full Paper}
-\author{Omar Iskandarani}
-\date{\today}
+\input{vamstyle.sty}
+\input{vam_appendix_setup.sty}
 
 \begin{document}
+\titlepageOpen
 
-\begin{titlepage}
-    \thispagestyle{empty}
-    \centering
-    \vspace*{2cm}
-    {\Huge\bfseries Governing Equations of Vorticity in Æther Dynamics \par}
-    \vspace{0.5cm}
-    {\Large\itshape Omar Iskandarani\par}
-    \vspace{0.5cm}
-    \textit{Independent Researcher, Groningen, The Netherlands} \\
-    ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961} \\
-    DOI: \href{https://doi.org/10.5281/zenodo.15566319}{10.5281/zenodo.15566319} \\
-    {\large \today\par}
-
-    \begin{abstract}
+        \begin{abstract}
         This document presents a mathematical treatment of vorticity and time structure within the framework of the Vortex Æther Model (VAM), a fluid-dynamic reformulation of gravitation and temporal evolution. It introduces the core vorticity equation in natural coordinates, derived from the dynamics of an incompressible, inviscid æther medium. By interpreting vorticity as a measure of atomic clock delay, we couple swirl energy to experienced time and obtain expressions for vorticity in terms of local velocity gradients and flow curvature.
 
         The appendices develop key substructures of VAM, including the topological and energetic conditions that trigger irreversible events, called Kairos moments, where the flow evolution becomes non-analytic. These singularities partition æther-time into epochs and correspond to phenomena such as vortex reconnection, swirl pressure rupture, or helicity discontinuities. Each temporal mode—Aithēr-Time (\( \mathcal{N} \)), Chronos-Time (\( \tau \)), Swirl Clock (\( S(t) \)), and Vortex Proper Time (\( T_v \))—is formally defined and related to physical vortex observables.
@@ -34,12 +27,15 @@
     \end{abstract}
 
 
-
-\end{titlepage}
-
-
-
-    \tableofcontents
+\titlepageClose
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.95\textwidth]{images/image_vortex}
+        \caption{Universal time dilation formula in the Vortex Æther Model. The clock rate decreases with increasing relative velocity~$|\vec{v}_{\mathrm{rel}}|$ with respect to the æther. At $|\vec{v}_{\mathrm{rel}}| = c$ time stops.}
+        \label{fig:TijdsvertragingRelatieveBeweging}
+    \end{figure}
+    \vfill
+%
 
 
 
