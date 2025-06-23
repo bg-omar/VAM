@@ -1,8 +1,6 @@
 // bindings/py_vam.cpp
 #include <pybind11/pybind11.h>
 
-
-
 namespace py = pybind11;
 
 // Forward declaration only!

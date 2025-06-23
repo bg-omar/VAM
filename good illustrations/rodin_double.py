@@ -20,7 +20,7 @@ R_ring = 0.75  # Major radius of the ring torus
 r_ring = 0.125  # Minor radius of the ring torus
 
 # Define parameters for the horn torus (R = 4r)
-R_horn = 1  # Major radius of the horn torus
+R_horn = 0.5  # Major radius of the horn torus
 r_horn = 1  # Minor radius of the horn torus
 
 # Define the grid for the tori
@@ -165,7 +165,7 @@ ax = fig.add_subplot(111, projection='3d')
 
 # Function to plot the Rodin coil and its variations
 def plot_rodin_coil():
-    R, r = 1, 1  # Set torus major and minor radii
+    R, r = 1.618, 1  # Set torus major and minor radii
     colors1 = ['crimson', 'darkred', 'gold']
     colors2 = ['dodgerblue', 'navy', 'darkorange']
 
@@ -173,13 +173,13 @@ def plot_rodin_coil():
     (x1, y1, z1), (x2, y2, z2), (x3, y3, z3) = generate_rodin_3phase(R, r)
     ax.plot(x1, y1, z1, color=colors1[0], linewidth=2, label="Phase 1")
     ax.plot(x2, y2, z2, color=colors1[1], linewidth=2, label="Phase 2")
-    # ax.plot(x3, y3, z3, color=colors1[2], linewidth=2, label="Phase 3")
+    ax.plot(x3, y3, z3, color=colors1[2], linewidth=2, label="Phase 3")
 
     # Plot 3-phase Rodin coil windings
     (x1, y1, z1), (x2, y2, z2), (x3, y3, z3) = generate_rodin_3phase(-R, r)
     ax.plot(x1, y1, z1, color=colors2[0], linewidth=2, label="Phase 1")
     ax.plot(x2, y2, z2, color=colors2[1], linewidth=2, label="Phase 2")
-    # ax.plot(x3, y3, z3, color=colors2[2], linewidth=2, label="Phase 3")
+    ax.plot(x3, y3, z3, color=colors2[2], linewidth=2, label="Phase 3")
 
     # Plot the ring torus in blue with 85% transparency
     # ax.plot_surface(X_ring, Y_ring, Z_ring, rstride=5, cstride=5, color='blue', alpha=0.15, edgecolor='k')

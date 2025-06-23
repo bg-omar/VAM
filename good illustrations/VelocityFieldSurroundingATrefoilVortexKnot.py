@@ -11,7 +11,7 @@ theta = 3 * phi  # Trefoil knot: (3, 2) type
 
 # Torus knot parameters
 R0 = 2  # major radius
-r0 = 0.5  # minor radius
+r0 = 3  # minor radius
 
 # Parametric equations for the trefoil knot
 X_knot = (R0 + r0 * np.cos(theta)) * np.cos(phi)
@@ -80,4 +80,4 @@ script_name = os.path.splitext(os.path.basename(__file__))[0]
 # ✅ **Create a Folder for Saving Frames**
 filename = f"{script_name}.png"
 plt.savefig(filename, dpi=150)  # Save image with high resolution
-
+plt.show()

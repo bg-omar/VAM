@@ -219,7 +219,7 @@ ax_field = fig_field.add_subplot(111, projection='3d')
 
 # Normalize Bmag for colormap scaling
 Bmag_flat = Bmag.flatten()
-colors = plt.cm.viridis((Bmag_flat - Bmag_flat.min()) / (Bmag_flat.ptp() + 1e-12))  # Colormap scaled to B magnitude
+colors = plt.cm.viridis((Bmag_flat - Bmag_flat.min()) / (Bmag_flat.np.ptp() + 1e-12))  # Colormap scaled to B magnitude
 
 # Flatten all arrays for quiver input
 Xf = X.flatten()

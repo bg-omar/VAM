@@ -7,24 +7,6 @@ matplotlib.use('TkAgg')  # Ensure it uses Tkinter backend
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d.art3d import Line3DCollection
 
-# premier_league
-# team
-# analyst
-# vibrant
-# asteroid
-# steel
-# vibrant2
-# forest
-# energy
-# turquoise
-# noir
-# red_blue
-# orange_purple
-# space_cadet
-# astro
-# skin
-# purples
-# green_blue
 
 gridsize = 1
 
@@ -208,11 +190,6 @@ def set_labels(ax, elev, azim):
     ax.set_ylabel("Y")
     ax.set_zlabel("Z")
     ax.legend()
-import os
-script_name = os.path.splitext(os.path.basename(__file__))[0]
-filename = f"{script_name}.png"
-plt.savefig(filename, dpi=150)  # Save image with high resolution
-
 
 
 

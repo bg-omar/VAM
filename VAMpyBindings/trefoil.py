@@ -9,8 +9,8 @@ from matplotlib.colors import TwoSlopeNorm
 from vambindings import VortexKnotSystem, biot_savart_velocity, compute_kinetic_energy
 
 # Simulated data for demonstration
-plotGridsize = 5
-n_vectors = 17
+plotGridsize = 50
+n_vectors = 9
 rho_ae = 7.0e-7
 rotation_axis = "z"
 pole_axis = "y"
@@ -78,7 +78,7 @@ fig = plt.figure(figsize=(10, 8))
 ax = fig.add_subplot(111, projection='3d')
 ax.quiver(points[:, 0], points[:, 1], points[:, 2],
           Vnorm[:, 0], Vnorm[:, 1], Vnorm[:, 2],
-          length=0.4, normalize=True, color=final_colors, alpha=0.75)
+          length=(plotGridsize/10), normalize=True, color=final_colors, alpha=0.75)
 
 ax.plot(positions[:, 0], positions[:, 1], positions[:, 2],
         color='red', linewidth=2, label='Trefoil Vortex Filament')

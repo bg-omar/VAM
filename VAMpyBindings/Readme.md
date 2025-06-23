@@ -79,7 +79,8 @@ git clone https://github.com/pybind/pybind11.git extern/pybind11
 
 ### 🔨 Build C++ Core
 ```bash
-"C:\Program Files\JetBrains\CLion\bin\cmake\win\x64\bin\cmake.exe" --build C:\workspace\projects\vamcore\cmake-build-debug --target vambindings -j 18
+"C:\Program Files\JetBrains\CLion\bin\cmake\win\x64\bin\cmake.exe" --build C:\Users\mr\IdeaProjects\VAM\vambindings\cmake-build-debug --target vambindings -j 18 
+
 "C:\Program Files\JetBrains\CLion\bin\cmake\win\x64\bin\cmake.exe"  -S . -B build
 "C:\Program Files\JetBrains\CLion\bin\cmake\win\x64\bin\cmake.exe" --build build
 ```
