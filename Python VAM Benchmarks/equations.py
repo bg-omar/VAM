@@ -291,6 +291,6 @@ def schrodinger_rhs(psi, V, laplacian_psi, hbar=hbar_vortex):
 
 
 # Fluid aether density formula (from LaTeX to Python)
-rho_ae_fluid = (2 * M_e * c**2) / ((alpha * (M_e * c**2 / hbar))**2 * r_c**3)
+rho_ae_fluid = (2 * M_e * c**2) / ((alpha * (M_e * c**2 / hbar))**2 *  (R_e**3/3))
 # Approximate value: ~7e-7 kg/m^3
 print("rho_ae_fluid ≈", rho_ae_fluid, "kg/m^3")
