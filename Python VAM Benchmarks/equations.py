@@ -287,3 +287,10 @@ def schrodinger_rhs(psi, V, laplacian_psi, hbar=hbar_vortex):
     """Right-hand side of the Schrödinger equation from vortex dynamics."""
     coeff = (F_max * r_c**3) / (5 * lambda_c * C_e)
     return -1j * (coeff * laplacian_psi + V * psi) / hbar
+
+
+
+# Fluid aether density formula (from LaTeX to Python)
+rho_ae_fluid = (2 * M_e * c**2) / ((alpha * (M_e * c**2 / hbar))**2 * r_c**3)
+# Approximate value: ~7e-7 kg/m^3
+print("rho_ae_fluid ≈", rho_ae_fluid, "kg/m^3")

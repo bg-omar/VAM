@@ -185,6 +185,11 @@ You're absolutely right — and this is a **perfect case** for a formatting rule
 * **Do not allow duplicated commands** such as:
 ```adlanguage
  
+ 
+ 
+ 
+​
+% -> \%
 
 ```
   ```latex
@@ -236,5 +241,3 @@ To remove blank lines between `\item`s in your editor, use:
 * **Replace:**
   → `\n\item`
 Or apply this as a scriptable post-processor.
-
-  

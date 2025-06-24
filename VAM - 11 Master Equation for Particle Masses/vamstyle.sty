@@ -59,7 +59,7 @@
 
 \newif\ifvamdraft
 % Uncomment the next line to enable draft mode:
-\vamdrafttrue
+% \vamdrafttrue
 
 \ifvamdraft
   \RequirePackage{showframe} % shows margins for debugging
@@ -146,17 +146,9 @@
 \sloppy
 
 
-\RequirePackage[most]{tcolorbox}
-\RequirePackage{titling}
-\RequirePackage{amssymb}
-\usetikzlibrary{arrows.meta, positioning, shapes.multipart}
-\RequirePackage{amsthm}
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{lemma}[theorem]{Lemma}
-\RequirePackage{booktabs}
-\RequirePackage{bm}
-\RequirePackage{subfiles}
-
+\usepackage[most]{tcolorbox}
+\usepackage{graphicx}
+\usepackage{titling}
 
 \pretitle{\begin{center}\LARGE\bfseries}
 \posttitle{\par\end{center}\vskip 0.5em}

@@ -1,33 +1,43 @@
-% main.tex or appendix.tex
+%! Author = Omar Iskandarani
+%! Title = ...
+%! Date = xx-xx-2025
+%! Affiliation = Independent Researcher, Groningen, The Netherlands
+%! License = CC-BY 4.0
+%! ORCID = 0009-0006-1686-3961
+%! DOI = 10.5281/zenodo.xxxxxxx
+
+% === Metadata ===
+\newcommand{\papertitle}{....}
+\newcommand{\paperdoi}{10.5281/zenodo.xxxxxxxx}
+
+
 \documentclass[a4paper,12pt]{article}
 \usepackage{vamstyle}
 
 \usepackage{import}
 \usepackage{subfiles}
 
-% Document
-\title{Full Paper}
-\author{Omar Iskandarani}
-\date{\today}
 
+\input{vamstyle.sty}
+\input{vam_appendix_setup.sty}
 \begin{document}
 
-\begin{titlepage}
-    \thispagestyle{empty}
-    \centering
-    \vspace*{2cm}
-    {\Huge\bfseries Time Dilation in a 3D Superfluid Æther Model \par}
-    \vspace{0.5cm}
-    {\Large Based on Vortex Core Rotation and Ætheric Flow \par}
-    \vspace{2cm}
-    {\Large\itshape Omar Iskandarani\par}
-    \vspace{0.5cm}
-    \textit{Independent Researcher, Groningen, The Netherlands} \\
-    ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961} \\
-    DOI: \href{https://doi.org/10.5281/zenodo.15566319}{10.5281/zenodo.15566319} \\
-    \vfill
-    {\large \today\par}
-\end{titlepage}
+    % === Title page ===
+    \titlepageOpen
+
+
+    \begin{abstract}
+
+    \end{abstract}
+
+    \titlepageClose
+    \fi
+
+    \ifdefined\standalonechapter
+    \section{\papertitle}
+    \else
+    \fi
+% ============= BEGIN of content ============
 
     \tableofcontents
 
@@ -38,6 +48,8 @@
     \def\standalonechapter{false}
     \subfile{sections/appendix_1.tex}  % Sets standalone=false
     \subfile{sections/appendix_2.tex}
+
+% ============= END of content ============
 
     \bibliographystyle{unsrt}
     \bibliography{../references}
