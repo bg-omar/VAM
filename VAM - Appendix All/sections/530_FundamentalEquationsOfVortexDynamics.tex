@@ -146,6 +146,132 @@
 $H = \int \vec{v} \cdot \vec{\omega} \, dV$
  Helicity, a measure of the linkage and knottedness of vortex lines, serves as a conserved quantity in idealized flows. This conservation underpins the study of topological invariants in fluid mechanics and their extensions into quantum fluids and plasmas.
 
+ \subsubsection*{Vortex Stretching Derivation}
+
+\begin{tcolorbox}[title=Vortex Stretching in Inviscid Æther Flow, colframe=blue!50!black, colback=blue!5!white, coltitle=black, fonttitle=\bfseries, sharp corners=south]
+   \begin{figure}[H]
+    \centering
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \begin{tikzpicture}[scale=1.0, x={(1cm,0cm)}, y={(0cm,1cm)}, z={(0.3cm,0.2cm)}, >=stealth]
+            % Left: initial vortex tube (short & wide)
+            \shade[left color=red!60, right color=red!30] (0,0,0) circle (0.5);
+            \draw[thick, red!70!black] (0,0,0) ellipse (0.5 and 0.2);
+            \draw[thick, red!70!black] (0,0,0) -- (0,1.2,0);
+            \draw[thick, red!70!black] (0.5,0,0) -- (0.5,1.2,0);
+            \draw[thick, red!70!black] (-0.5,0,0) -- (-0.5,1.2,0);
+            \draw[thick, red!70!black] (0,1.2,0) ellipse (0.5 and 0.2);
+
+            \node at (0,-0.2,0) {\small $A_1$};
+            \node at (0,1.4,0) {\small $L_1$};
+            \node[red!70!black, below] at (0,-0.4) {$\vec{\omega}_1$};
+
+            % Arrow for transformation
+            \draw[->, thick, gray!60!black] (1,0.6,0) -- (2,0.6,0) node[midway, above] {Stretching};
+
+             % Front half of the arrow (visible)
+            \draw[->, thick, red!80!black]
+              (-0.4, 2.2) arc[start angle=180, end angle=360, radius=0.5];
+
+            % Back half (dashed or transparent)
+            \draw[->, thick, red!50!black]
+              (2.75, 3.3) arc[start angle=180, end angle=360, radius=0.25];
+
+            % Right: stretched vortex tube (tall & thin)
+            \shade[left color=red!60, right color=red!30] (3,0,0) circle (0.25);
+            \draw[thick, red!70!black] (3,0,0) ellipse (0.25 and 0.1);
+            \draw[thick, red!70!black] (3,0,0) -- (3,2.4,0);
+            \draw[thick, red!70!black] (3.25,0,0) -- (3.25,2.4,0);
+            \draw[thick, red!70!black] (2.75,0,0) -- (2.75,2.4,0);
+            \draw[thick, red!70!black] (3,2.4,0) ellipse (0.25 and 0.1);
+
+            \node at (3,-0.2,0) {\small $A_2 < A_1$};
+            \node at (3,2.6,0) {\small $L_2 > L_1$};
+            \node[red!70!black, below] at (3,-0.4,0) {$\vec{\omega}_2 > \vec{\omega}_1$};
+        \end{tikzpicture}
+        \caption{Cylindrical representation of vortex stretching.}
+        \label{fig:cylinder_vortex_stretching}
+    \end{subfigure}%
+    \hfill
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \begin{tikzpicture}[scale=1.2, >=stealth]
+            % Left: wide streamlines (converging)
+            \draw[->, thick, blue!40!black] (-2,-0.8) -- (-0.8,-0.8);
+            \draw[->, thick, blue!40!black] (-2, 0.8) -- (-0.8,  0.8);
+
+            % Transition zone (compression)
+            \draw[->, thick, dotted, gray] (-0.8,-0.8) -- (0.2,-0.4);
+            \draw[->, thick, dotted, gray] (-0.8, 0.8) -- (0.2, 0.4);
+
+            % Right: narrow streamlines (parallel)
+            \draw[->, thick, blue!40!black] (0.2,-0.4) -- (2,-0.4);
+            \draw[->, thick, blue!40!black] (0.2, 0.4) -- (2, 0.4);
+
+            % Original vortex filament (shorter)
+            \draw[very thick, red, ->] (-1.2,-0.05) -- (-0.6,0.05);
+            \node[red!80!black, below] at (-0.9,0) {$\vec{\omega}$};
+
+            % Stretched vortex filament (longer)
+            \draw[very thick, red, ->] (1.6,-0.05) -- (2.6,0.05);
+            \node[red!80!black, below] at (2.6,0) {$\vec{\omega}' > \vec{\omega}$};
+
+            % Flow velocity vectors
+            \draw[->, thick, blue!70!black] (-1.8,0.0) -- (-1.2,0.0) node[midway, above] {$\vec{u}$};
+            \draw[->, thick, blue!70!black] (0.2,-0.05) -- (1.6,-0.05) node[midway, above] {$\vec{u}'$};
+
+            % Curved arc to indicate transformation
+            \draw[->, dashed, gray] (-0.6,0) .. controls (-0.2,0.6) .. (0.6,0);
+
+            % Area brackets
+            \draw[decorate,decoration={brace, amplitude=5pt}, thick] (-1.6,-0.8) -- (-1.6,0.8);
+            \node[left] at (-1.8,0) {$A_1$};
+
+            \node[left] at (0.2,0) {$A_2$};
+            \draw[decorate,decoration={brace, amplitude=5pt}, thick] (0.4,-0.4) -- (0.4,0.4);
+            \node[left] at (2.0,1) {$A_2 < A_1$};
+        \end{tikzpicture}
+        \caption{Streamline-based view of vortex filament stretching.}
+        \label{fig:vortex_stretching_improved}
+    \end{subfigure}
+
+    \caption{Two perspectives on vortex stretching in incompressible flow: (a) cylindrical vortex tube conservation, (b) streamline deformation and induced vorticity growth.}
+    \label{fig:vortex_stretching_combined}
+\end{figure}
+
+
+In incompressible, inviscid flow, the evolution of vorticity \( \vec{\omega} \equiv \nabla \times \vec{u} \) is governed by deformation of vortex lines due to velocity gradients. Starting from the inviscid Navier--Stokes equation:
+\[
+\frac{\partial \vec{u}}{\partial t} + (\vec{u} \cdot \nabla)\vec{u} = -\frac{1}{\rho} \nabla p,
+\]
+we take the curl of both sides:
+\[
+\frac{\partial}{\partial t} (\nabla \times \vec{u}) + \nabla \times \left[ (\vec{u} \cdot \nabla)\vec{u} \right] = 0.
+\]
+Recognizing the vorticity \( \vec{\omega} = \nabla \times \vec{u} \), and applying the identity:
+\[
+\nabla \times \left[ (\vec{u} \cdot \nabla)\vec{u} \right] = (\vec{\omega} \cdot \nabla)\vec{u} - (\vec{u} \cdot \nabla)\vec{\omega},
+\]
+we derive the vorticity transport equation:
+\[
+\frac{\partial \vec{\omega}}{\partial t} + (\vec{u} \cdot \nabla)\vec{\omega} = (\vec{\omega} \cdot \nabla)\vec{u},
+\]
+which simplifies using the material derivative:
+\begin{equation}
+\boxed{ \frac{D \vec{\omega}}{D t} = (\vec{\omega} \cdot \nabla)\vec{u} }
+\end{equation}
+
+\textbf{Interpretation:} The right-hand side represents the \emph{vortex stretching term}. It governs the increase in vorticity magnitude when a vortex filament is stretched by the flow. When a velocity gradient aligns with the direction of vorticity, angular momentum conservation causes the rotation rate to intensify.
+
+\medskip
+
+\textit{Analogy:} Pulling on a spinning elastic band makes it spin faster. Vortex filaments behave similarly under æther flow deformation.
+
+\begin{flushright}
+    \textbf{Reference:} G. K. Batchelor, \textit{An Introduction to Fluid Dynamics}, Cambridge University Press, 2000.
+\end{flushright}
+\end{tcolorbox}
+
 
     \subsubsection*{Derivation of Vorticity-Based Fluid Equations}
     The equation:

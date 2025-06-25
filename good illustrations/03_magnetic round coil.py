@@ -76,7 +76,7 @@ def get_coil(type = "helical"):
 
     # Define a helical spiral through the center hole
     num_helix_turns = 72  # Number of turns of the spiral
-    helix_theta = np.linspace(0, 2 * np.pi, points_per_turn*4)  # More resolution
+    helix_theta = np.linspace(0, num_turns*2 * np.pi, points_per_turn*4)  # More resolution
     helix_phi = num_helix_turns * helix_theta  # Wraps 3 times around r per full revolution of R
 
     # Compute torus coordinates
@@ -86,6 +86,9 @@ def get_coil(type = "helical"):
     x_helical_coil = 2 * R * np.cos(t)
     y_helical_coil = 2 * R * np.sin(t)
     z_helical_coil = np.linspace(-height / 2, height / 2, points_per_turn)
+    x_rodin_coil2 = (R + .5*r * np.cos(phi)) * np.cos(theta)
+    y_rodin_coil2 = (R + .5*r * np.cos(phi)) * np.sin(theta)
+    z_rodin_coil2 = .5*r * np.sin(phi)
     x_rodin_coil = (R + r * np.cos(phi)) * np.cos(theta)
     y_rodin_coil = (R + r * np.cos(phi)) * np.sin(theta)
     z_rodin_coil = r * np.sin(phi)
@@ -98,6 +101,10 @@ def get_coil(type = "helical"):
         x = x_rodin_coil
         y = y_rodin_coil
         z = z_rodin_coil
+    elif type == "rodin2":
+        x = x_rodin_coil2
+        y = y_rodin_coil2
+        z = z_rodin_coil2
     else:
         x = X_torus
         y = Y_torus
@@ -196,10 +203,10 @@ def set_labels(ax, elev, azim):
 # Create multiple subplots for different views
 fig, axes = plt.subplots(2, 2, figsize=(12, 12), subplot_kw={'projection': '3d'})
 view_angles = [
-    (0, 90),   # Top view
-    (0, 90),    # Side view
-    (0, 90),    # Angled view
-    (0, 90)    # Angled view
+    (50, 150),   # Top view
+    (50, 150),    # Side view
+    (50, 150),    # Angled view
+    (50, 150)    # Angled view
 ]
 rgb = 1
 titles = ["Rodin", "Helical", "Rodin", "Star-shaped"]
@@ -219,7 +226,7 @@ for ax, (elev, azim), title in zip(axes.flatten(), view_angles, titles):
 
     if rgb == 3:
         # Generate the coil
-        x_coil, y_coil, z_coil = get_coil("rodin")
+        x_coil, y_coil, z_coil = get_coil("rodin2")
     if rgb == 4:
         set_numers(ax, 9)
         # Define the base sequence for the star-shaped coil using only 9 points
