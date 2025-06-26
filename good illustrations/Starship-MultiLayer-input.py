@@ -8,7 +8,7 @@ matplotlib.use('TkAgg')  # Ensure it uses Tkinter backend
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
-coil_corners = 24
+coil_corners = 48
 next_corner = -1 + coil_corners / 2
 # Define parameters for multi-layer 3D coil
 num_layers = 1  # Number of layers in the coil

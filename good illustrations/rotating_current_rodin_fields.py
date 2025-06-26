@@ -57,7 +57,8 @@ X, Y, Z = np.meshgrid(x_range, y_range, z_range)
 def compute_biot_savart(coil_x, coil_y, coil_z, phase_shift):
     dL = np.gradient(np.array([coil_x, coil_y, coil_z]), axis=1)  # 🔥 Vectorized Coil Segment Calculation
     rx, ry, rz = X[..., np.newaxis] - coil_x, Y[..., np.newaxis] - coil_y, Z[..., np.newaxis] - coil_z
-    r3 = (rx**2 + ry**2 + rz**2)**(3/2) + 1e-9  # Avoid division by zero
+    r3 = np.clip((rx**2 + ry**2 + rz**2)**(3/2), 1e-9, None)
+    # Avoid division by zero
 
     # 🔥 Vectorized Cross Product Calculation
     dBx = np.sum(mu_0 * I * (dL[1] * rz - dL[2] * ry) / (4 * np.pi * r3), axis=-1)
@@ -150,18 +151,20 @@ def update(frame):
     if quiver_J2: quiver_J2.remove()
     if quiver_J3: quiver_J3.remove()
 
+
     # ✅ Quiver plots for Fields
     quiver_E = ax.quiver(X, Y, Z, Ex_t, Ey_t, Ez_t, length=0.15, color='b', normalize=True, label="E-Field", alpha=0.75, linewidth=1.25)
     quiver_B = ax.quiver(X, Y, Z, Bx_t, By_t, Bz_t, length=0.15, color='r', normalize=True, label="B-Field", alpha=0.75, linewidth=1.25)
 
     # ✅ **Current Density Arrows Flowing Along the Moving Coil**
-    quiver_J1 = ax.quiver(coil_1t[0], coil_1t[1], coil_1t[2], Jx_1t, Jy_1t, Jz_1t, color='k', length=0.1, label="J-Field Phase 1", alpha=1, linewidth=1.5)
-    quiver_J2 = ax.quiver(coil_2t[0], coil_2t[1], coil_2t[2], Jx_2t, Jy_2t, Jz_2t, color='c', length=0.15, label="J-Field Phase 2", alpha=1, linewidth=1.5)
-    quiver_J3 = ax.quiver(coil_3t[0], coil_3t[1], coil_3t[2], Jx_3t, Jy_3t, Jz_3t, color='m', length=0.15, label="J-Field Phase 3", alpha=1, linewidth=1.5)
-
+    # quiver_J1 = ax.quiver(coil_1t[0], coil_1t[1], coil_1t[2], Jx_1t, Jy_1t, Jz_1t, color='k', length=0.1, label="J-Field Phase 1", alpha=1, linewidth=1.5)
+    # quiver_J2 = ax.quiver(coil_2t[0], coil_2t[1], coil_2t[2], Jx_2t, Jy_2t, Jz_2t, color='c', length=0.15, label="J-Field Phase 2", alpha=1, linewidth=1.5)
+    # quiver_J3 = ax.quiver(coil_3t[0], coil_3t[1], coil_3t[2], Jx_3t, Jy_3t, Jz_3t, color='m', length=0.15, label="J-Field Phase 3", alpha=1, linewidth=1.5)
+    ax.scatter(X, Y, Z, c=np.sqrt(Bx_total**2 + By_total**2 + Bz_total**2), cmap='inferno', s=10)
     return quiver_E, quiver_B, quiver_J1, quiver_J2, quiver_J3
 
-
+handles, labels = ax.get_legend_handles_labels()
+ax.legend(handles, labels)
 ax.set_title("E, B, & J Fields of 3-Phase Rodin Coil")
 ani = animation.FuncAnimation(fig, update, frames=1000, interval=100, blit=False)
 plt.show()

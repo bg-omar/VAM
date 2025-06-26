@@ -10,8 +10,8 @@ from mpl_toolkits.mplot3d import Axes3D
 
 coil_corners = 18
 # Define parameters for multi-layer 3D coil
-num_layers = 4  # Number of layers in the coil
-layer_spacing = 0.1  # Distance between layers in the z-axis
+num_layers = 1  # Number of layers in the coil
+layer_spacing = 0.5  # Distance between layers in the z-axis
 
 total_corners = coil_corners * 1
 
@@ -39,6 +39,12 @@ positions_rotated = {i+1: (np.cos(angle), np.sin(angle)) for i, angle in enumera
 
 angles_rotated += rotation_angle
 
+# Function to compute a point's 3D coordinates based on index and segment
+def get_point_coords(index, i_frac=0.0, segment=1):
+    angle = angles_rotated[index % coil_corners] + ((2 * np.pi / coil_corners) * (segment - 1))
+    x, y = np.cos(angle), np.sin(angle)
+    z = layer_spacing * i_frac
+    return x, y, z
 
 # Function to generate multi-layer wire paths
 def generate_3d_wire(sequence, segment, z_layer, base_color, style, alpha=1.0):
@@ -81,7 +87,22 @@ for layer in range(num_layers):
     generate_3d_wire(sequence_A_backwards, 1, z_layer, 'red', '-', alpha=0.9)
 
 
+# Compute quiver arrows for start and end of forward sequence
+start_index = sequence_A_forward[0]
+end_index = sequence_A_forward[-1]
+x0, y0, z0 = get_point_coords(start_index, 0, 1)
+x1, y1, z1 = get_point_coords(sequence_A_forward[1], 1 / (len(sequence_A_forward) - 1), 1)
+dx0, dy0, dz0 = x1 - x0, y1 - y0, z1 - z0
 
+xN, yN, zN = get_point_coords(end_index, 1, 1)
+xN1, yN1, zN1 = get_point_coords(sequence_A_forward[-2], (len(sequence_A_forward) - 2) / (len(sequence_A_forward) - 1), 1)
+dxN, dyN, dzN = xN - xN1, yN - yN1, zN - zN1
+
+# Normalize directions
+norm_start = np.linalg.norm([dx0, dy0, dz0])
+norm_end = np.linalg.norm([dxN, dyN, dzN])
+ax.quiver(x0, y0, z0, dx0/norm_start, dy0/norm_start, dz0/norm_start, color='green', length=0.2, linewidth=2)
+ax.quiver(xN, yN, zN, dxN/norm_end, dyN/norm_end, dzN/norm_end, color='purple', length=0.2, linewidth=2)
 
 
 # Set plot title and display
