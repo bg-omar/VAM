@@ -130,7 +130,7 @@ vam_results = []
 for name, p, n, e in common_atoms:
     vam_kg = vam_mass(name, p, n, e)
     actual_kg = actual_masses_gmol[name] * 1e-3 / avogadro
-    rel_error = vam_kg[1] / actual_kg
+    rel_error = 100 *(( vam_kg[1] - actual_kg)/ actual_kg)
     vam_results.append((name, vam_kg, actual_kg, rel_error))
 
 # Convert to DataFrames

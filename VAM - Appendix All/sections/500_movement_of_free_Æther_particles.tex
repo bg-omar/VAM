@@ -2,7 +2,7 @@
 %! Date = 2025-06-13
 
 % === Metadata ===
-\newcommand{\papertitle}{Appendix: Fundamentals of Æther Fluid Motion and Vorticity}
+\newcommand{\papertitle}{Fundamentals of Æther Fluid Motion and Vorticity}
 \newcommand{\paperauthor}{Omar Iskandarani}
 \newcommand{\paperaffil}{Independent Researcher, Groningen, The Netherlands}
 \newcommand{\paperdoi}{10.5281/zenodo.15566319}
@@ -28,7 +28,7 @@
 \usepackage{newtxtext,newtxmath}
 \usepackage[scaled=0.95]{inconsolata}
 \usepackage{mathrsfs}
-\input{../vam_appendix_setup.sty}
+\input{../../vam_appendix_setup.sty}
 \begin{document}
 
     % === Title page ===
@@ -44,7 +44,7 @@
 % ============= Begin of content ============
     \section{\papertitle}
 
-    \subsection*{Fundamental Assumptions}
+    \subsection{Fundamental Assumptions}
     The Æther is modeled as a homogeneous, incompressible, and inviscid fluid. This implies constant density:
     \begin{equation}
         \frac{d \rho}{d t} = 0.
@@ -57,7 +57,7 @@
 
     Let \(P\) denote pressure, and \((X, Y, Z)\) the external force per unit volume acting in each direction.
 
-    \subsection*{Stress Equilibrium in Free Æther}
+    \subsection{Stress Equilibrium in Free Æther}
     The general stress equilibrium equations are:
     \begin{align}
         X &= \frac{\partial P_{xx}}{\partial x} + \frac{\partial P_{xy}}{\partial y} + \frac{\partial P_{xz}}{\partial z}, \\
@@ -101,7 +101,7 @@
         \frac{D}{D t} = \frac{\partial}{\partial t} + \vec{u} \cdot \nabla.
     \end{equation}
 
-    \subsection*{Continuity Equation}
+    \subsection{Continuity Equation}
     For an incompressible fluid:
     \begin{equation}
         \nabla \cdot \vec{u} = \frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} + \frac{\partial w}{\partial z} = 0.
@@ -117,7 +117,7 @@
         \nabla^2 \varphi = 0.
     \end{equation}
 
-    \subsection*{Vorticity and Circulation}
+    \subsection{Vorticity and Circulation}
     In irrotational flow, the vorticity vector vanishes:
     \begin{equation}
         \vec{\omega} = \nabla \times \vec{u} = 0.
@@ -135,7 +135,7 @@
         \Gamma = \oint \vec{u} \cdot d\vec{l} = \iint (\nabla \times \vec{u}) \cdot \hat{n} \, dA.
     \end{equation}
 
-    \subsection*{Energy of a Vortex}
+    \subsection{Energy of a Vortex}
     The kinetic energy of a rotating vortex region is:
     \begin{equation}
         E = \frac{1}{2} \rho \iiint |\vec{u}|^2 \, dV.

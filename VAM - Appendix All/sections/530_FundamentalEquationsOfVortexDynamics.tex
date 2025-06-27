@@ -3,7 +3,7 @@
 %! Date = 2025-06-13
 
 % === Metadata ===
-\newcommand{\papertitle}{Appendix: Governing Equations of Vorticity in Æther Dynamics}
+\newcommand{\papertitle}{Fundamental Equations of Vortex Dynamics}
 \newcommand{\paperauthor}{Omar Iskandarani}
 \newcommand{\paperaffil}{Independent Researcher, Groningen, The Netherlands}
 \newcommand{\paperdoi}{10.5281/zenodo.15566319}
@@ -29,7 +29,7 @@
 \usepackage{newtxtext,newtxmath}
 \usepackage[scaled=0.95]{inconsolata}
 \usepackage{mathrsfs}
-\input{../vam_appendix_setup.sty}
+\input{../../vam_appendix_setup.sty}
 \begin{document}
 
     % === Title page ===
@@ -45,7 +45,11 @@
 % ============= Begin of content ============
     \section{\papertitle}
 
-    The governing equations of vortex dynamics in an idealized fluid system constitute a fundamental framework in contemporary theoretical and applied physics. These equations, rigorously derived from foundational principles in classical mechanics and continuum physics, provide profound insights into a broad spectrum of physical phenomena. By integrating vorticity fields, energy dissipation mechanisms, and entropy dynamics, these formulations extend beyond conventional applications, enabling high-fidelity analyses of macroscopic fluid behaviors and their microscopic analogs within the context of Æther Physics. This synthesis offers an unparalleled theoretical foundation for examining complex interactions, bridging domains from geophysical fluid dynamics to quantum mechanical interpretations of turbulence.
+    The governing equations of vortex dynamics in an idealized fluid system constitute a fundamental framework in contemporary theoretical and
+    applied physics. These equations, rigorously derived from foundational principles in classical mechanics and continuum physics, provide
+    profound insights into a broad spectrum of physical phenomena. By integrating vorticity fields, energy dissipation mechanisms, and entropy dynamics, these formulations extend beyond conventional applications, enabling high-fidelity analyses of macroscopic fluid behaviors and their microscopic analogs within the context of Æther Physics. This synthesis offers an unparalleled theoretical foundation for examining complex interactions, bridging domains from geophysical fluid dynamics to quantum mechanical interpretations of turbulence. These expressions follow the classical geophysical fluid dynamics framework developed by Rossby~\cite{rossby1939}, in which potential vorticity and barotropic instabilities are central to wave–vortex interactions. (see also Pedlosky~\cite{pedlosky1987} for a modern exposition)
+
+
 
     \begin{table}[H]
         \centering
@@ -71,7 +75,7 @@
             \hline
             $V$            & Tangential swirl velocity & $\mathrm{m/s}$ & Clock-hand velocity around vortex \\
             \hline
-            $\Pi$          & Potential vorticity $= \frac{f_a + \zeta_r}{h}$ & $\mathrm{s}^{-1}$ & Conserved in barotropic VAM flows \\
+            $\Pi$          & Potential vorticity $= \frac{\zeta_a + \zeta_r}{h}$ & $\mathrm{s}^{-1}$ & Conserved in barotropic VAM flows \\
             \hline
             $h$            & Column height (layer thickness) & $\mathrm{m}$ & Local æther depth in height-varying flows \\
             \hline
@@ -91,7 +95,7 @@
     \end{table}
 
 
-    \subsection*{Fundamental Equations of Vortex Dynamics}
+    \subsection{Fundamental Equations of Vortex Dynamics}
 
     \subsubsection*{Continuity Equation}
     \begin{equation*}
@@ -113,21 +117,21 @@
     \end{align}
     Vorticity quantifies the local rotational characteristics of a fluid element and serves as a fundamental diagnostic parameter for analyzing turbulence, circulation, and eddy formation.
 
-    \subsection*{Absolute and Relative Vorticity}
+    \subsection{Absolute and Relative Vorticity}
     \begin{align}
-        \zeta_\text{Absolute} &= f_\text{atom} + \zeta_\text{relative} \\
-        f_\text{atom} &= 2 \omega \sin(\theta) \\
+        \zeta_\text{Absolute} &= \zeta_\text{atom} + \zeta_\text{relative} \\
+        \zeta_\text{atom} &= 2 \omega \sin(\theta) \\
         \zeta_{\text {relative }} &=\frac{d v}{d x}-\frac{d u}{d y}
     \end{align}
     Absolute vorticity incorporates planetary rotation effects through the Coriolis parameter and integrates them with local vorticity contributions.
 
     \subsubsection*{Energy-Entropy Relationship}
     \begin{equation*}
-        \Pi = \frac{f_a + \zeta_r}{h}
+        \Pi = \frac{\zeta_a + \zeta_r}{h}
     \end{equation*}
     This formulation establishes a bridge between vorticity dynamics and thermodynamic fluxes, providing a robust mechanism for quantifying entropy generation.
 
-    \subsection*{Poisson's Equation for Scalar Potential}
+    \subsection{Poisson's Equation for Scalar Potential}
     \begin{align}
         \nabla^2 \phi &= -4 \pi \rho \\
         \frac{\delta^2 \phi}{\delta x^2}+\frac{\delta^2 \phi}{\delta y^2}+\frac{\delta^2 \phi}{\delta z^2} &= -4 \pi \rho
@@ -146,9 +150,10 @@
 $H = \int \vec{v} \cdot \vec{\omega} \, dV$
  Helicity, a measure of the linkage and knottedness of vortex lines, serves as a conserved quantity in idealized flows. This conservation underpins the study of topological invariants in fluid mechanics and their extensions into quantum fluids and plasmas.
 
- \subsubsection*{Vortex Stretching Derivation}
+ \subsubsection{Vortex Stretching Derivation}
 
-\begin{tcolorbox}[title=Vortex Stretching in Inviscid Æther Flow, colframe=blue!50!black, colback=blue!5!white, coltitle=black, fonttitle=\bfseries, sharp corners=south]
+\begin{tcolorbox}[title=Vortex Stretching in Inviscid Æther Flow, colframe=blue!50!black, colback=blue!5!white, coltitle=white, fonttitle=\bfseries,
+    sharp corners=south]
    \begin{figure}[H]
     \centering
     \begin{subfigure}[t]{0.48\textwidth}
@@ -273,36 +278,48 @@ which simplifies using the material derivative:
 \end{tcolorbox}
 
 
-    \subsubsection*{Derivation of Vorticity-Based Fluid Equations}
-    The equation:
-    \begin{equation*}
-        \frac{d u}{d t}+u \frac{d u}{d \boldsymbol{x}}+v \frac{d u}{d y}-\zeta_{\text {atom}} v=-g \frac{d \eta}{d \boldsymbol{x}}+\mathcal{R}_x
-    \end{equation*}
-    is a form of the \textbf{momentum equation} for the velocity component $u$, incorporating vorticity, gravity effects, and external forcing terms.
+    \subsubsection{Derivation of Vorticity-Based Fluid Equations}
+    The equation for u:
+    \begin{equation}
+        \frac{d u}{d t}+u \frac{d u}{d \boldsymbol{x}}+v \frac{d u}{d y}-\zeta_{\text {atom}} v=-g \frac{d \eta}{d \boldsymbol{x}}+\mathcal{R}_x\label{eq:momentum_u}
+    \end{equation}
+
+    the equation for v:
+    \begin{equation}
+        \frac{d v}{d t}+u \frac{d v}{d x}+v \frac{d v}{d y}+\zeta_{\text {atom }} u=-g \frac{d \eta}{d y}+\mathcal{R}_v\label{eq:momentum_v}
+    \end{equation}
+    are a form of the \textbf{momentum equation} for the velocity components $u$ and $v$, incorporating vorticity, gravity effects, and external
+    forcing
+    terms.
 
     \begin{itemize}
         \item \textbf{Material Derivative} $\frac{d u}{d t}$: Represents the total derivative (substantial derivative) following a fluid parcel.
         \item \textbf{Convective Terms} $u \frac{d u}{dx} + v \frac{d u}{dy}$: Describe how velocity gradients impact acceleration.
-        \item \textbf{Vorticity Term} $-\zeta_\text{atom} v$: Arises from the influence of vorticity on velocity evolution.
+        \item \textbf{Vorticity Term} $-\zeta_\text{atom} u$: Arises from the influence of vorticity on velocity evolution.
         \item \textbf{Gravity-Induced Term} $-g \frac{d \eta}{d x}$: Represents pressure gradient due to gravity.
         \item \textbf{External Forcing Term} $\mathcal{R}_x$: Represents additional external forces such as resistive or turbulent effects.
     \end{itemize}
 
-    This equation is derived from the \textbf{Navier-Stokes Equations} under the assumption of an inviscid, incompressible fluid with rotational effects.
+    This equation is derived from the \textbf{Navier-Stokes Equations} under the assumption of an inviscid, incompressible fluid with rotational
+    effects.
+    We will from now on now use $\zeta_\text{atom} \rightarrow \zeta_\text{a} $
 
     \subsubsection*{Differentiation with Respect to $y$}
-    Differentiating the equation with respect to $y$:
-    \begin{align}
-        \frac{d}{dy} \left( \frac{d u}{d t} + u \frac{d u}{d x} + v \frac{d u}{d y} - \zeta_\text{atom} v \right) &= \frac{d}{dy} \left( - g \frac{d \eta}{d x} + \mathcal{R}_x \right)
-    \end{align}
+    Differentiating the equation ~\ref{eq:momentum_u} with respect to $y$:
+    \begin{equation*}
+        \frac{d}{dy} \left( \frac{d u}{d t} + u \frac{d u}{d x} + v \frac{d u}{d y} - \zeta_\text{a} v \right) &= \frac{d}{dy} \left( - g
+                                                                                                                                   \frac{d \eta}{d x} + \mathcal{R}_x \right)
+    \end{equation*}
     Expanding this:
     \begin{align}
         \frac{d^2 u}{d t d y}+\frac{d u}{d y} \frac{d u}{d x}+u \frac{d^2 u}{d x d y}+\frac{d v}{d y} \frac{d u}{d y}+v \frac{d^2 u}{d y^2}-\zeta_a \frac{d v}{d y}-\beta v=-g \frac{d^2 \eta}{d x d y}+\frac{d \mathcal{R}_x}{d y}
     \end{align}
 
-    Similarly, differentiating the equation for $v$:
+    Similarly, differentiating the equation~\ref{eq:momentum_v} for $v$ with respect to $x$:
     \begin{equation*}
-        \frac{d v}{d t}+u \frac{d v}{d x}+v \frac{d v}{d y}+\zeta_{\text {atom }} u=-g \frac{d \eta}{d y}+\mathcal{R}_v
+        \frac{d}{dx} \left( \frac{d v}{d t}+u \frac{d v}{d x}+v \frac{d v}{d y}+\zeta_{\text {a}} u \right) =  \frac{d}{dx} \left( -g
+                                                                                                                                 \frac{d \eta}{d y}+\mathcal{R}_v \right)
+        \label{eq:diff_v_to_x}
     \end{equation*}
     Differentiating with respect to $x$:
     \begin{align}
@@ -311,9 +328,11 @@ which simplifies using the material derivative:
 
     \subsubsection*{Combination of the Two Equations}
     By adding both derived equations, we get:
-    \begin{align}
+    \begin{eqbox}
+        \begin{equation}
         \frac{\delta \zeta}{\delta t}+\zeta \frac{d u}{d x}+u \frac{\delta \zeta}{\delta x}+\zeta \frac{d v}{d y}+v \frac{\delta \zeta}{\delta y}+\zeta_a\left(\frac{d u}{d x}+\frac{d v}{d y}\right)+\beta v=\frac{d \mathcal{R}_v}{d x}-\frac{d \mathcal{R}_x}{d y}
-    \end{align}
+        \end{equation}
+    \end{eqbox}
     which is a vorticity-based formulation of the original momentum equations.
 
     \subsubsection*{Representation of Forcing Terms}
@@ -326,20 +345,22 @@ which simplifies using the material derivative:
     \end{align}
     where $\tau_x^w, \tau_x^v, \tau_y^w, \tau_y^b$ represent the stress terms.
 
-    \subsubsection*{Final Vorticity Equation}
-    \begin{align}
+    \subsubsection{Final Vorticity Equation}
+    \begin{eqbox}
+        \begin{equation}
         \frac{D \zeta}{d t}-\frac{\zeta_r+\zeta_a}{h} \frac{D h}{d t}+\frac{D \zeta_a}{d t}=\frac{d R_u}{d x}-\frac{d R_x}{d y}
-    \end{align}
+        \end{equation}
+    \end{eqbox}
     This equation models higher-order vortex interactions, crucial for understanding turbulence, energy dissipation, and wave-vortex interactions.
 
     \subsubsection*{Conclusion}
     The derivation follows classical fluid dynamics principles and extends into turbulence modeling. These equations are significant in vortex dynamics, superfluid behavior, and atmospheric circulations. They also appear in various studies on vortex ring dynamics.
 
-    \subsubsection*{Governing Vorticity Transport Equation}
+    \subsection{Governing Vorticity Transport Equation}
     The fundamental vorticity equation is:
-    \begin{equation*}
+    \begin{equation}
         \frac{\partial \zeta}{\partial t} + u \frac{\partial \zeta}{\partial x} + v \frac{\partial \zeta}{\partial y} + \left( \zeta_r + \zeta_a \right) \left( \frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} \right) + \beta v = \frac{\partial \mathcal{R}_v}{\partial x} - \frac{\partial \mathcal{R}_x}{\partial y}
-    \end{equation*}
+    \end{equation}
     where:
     \begin{itemize}
         \item $\zeta$ is the \textbf{relative vorticity}.
@@ -348,49 +369,56 @@ which simplifies using the material derivative:
         \item $\mathcal{R}_x, \mathcal{R}_y$ are external forcing terms, such as frictional forces or turbulence-induced vorticity changes.
     \end{itemize}
 
-    \section*{Vorticity in Height-Dependent Flow}
+    \subsection{Vorticity in Height-Dependent Flow}
     \begin{equation*}
         \frac{D \zeta}{d t} - \frac{ \zeta_r + \zeta_a }{h}  \frac{D h}{d t} + \frac{D \zeta_a}{d t}  = \frac{\partial \mathcal{R}_y}{\partial x} - \frac{\partial \mathcal{R}_x}{\partial y}
     \end{equation*}
     This ensures vorticity conservation even in \textbf{variable-height flows}, such as oceanic or atmospheric circulations.
 
     \subsubsection*{Barotropic Vorticity Equation and Potential Vorticity}
-    \begin{equation*}
+    \begin{equation}
         D\left(\frac{\zeta_r+\zeta_a}{h}\right)=\frac{1}{h}\left(\frac{d R_y}{d x}-\frac{d R_x}{d y}\right)
-    \end{equation*}
+    \end{equation}
     The \textbf{Potential Vorticity (PV)} is conserved:
-    \begin{equation*}
-        \Pi = \frac{f_a+\zeta_r}{h}
-    \end{equation*}
+    \begin{equation}
+        \Pi = \frac{\zeta_a+\zeta_r}{h}
+    \end{equation}
     This is crucial for \textbf{understanding Rossby waves, planetary circulation, and stratified fluid dynamics}.
 
     \subsubsection*{Relationship to Streamfunction}
-    \begin{equation*}
-        \zeta = \nabla^2 \psi
-    \end{equation*}
+    \begin{equation}
+        \boxed{\zeta = \nabla^2 \psi}
+    \end{equation}
     The vorticity field is linked to the \textbf{streamfunction} through the Laplacian operator.
 
-    \subsubsection*{Absolute Vorticity and Coriolis Terms}
+    \subsubsection{Absolute Vorticity and Coriolis Terms}
     \begin{align}
         f &= 2 \omega, \quad \zeta=-\alpha \\
-        f_\text{atom} &= 2 \omega \sin (\theta) \\
-        \zeta_\text{Absolute} &= f_\text{atom }+\zeta_\text{relative}
+        \zeta_\text{atom} &= 2 \omega \sin (\theta) \\
+        \zeta_\text{Absolute} &= \zeta_\text{atom }+\zeta_\text{relative}
     \end{align}
     Absolute vorticity is the sum of relative vorticity and the Coriolis parameter.
 
-    \subsubsection*{Conservation of Vorticity}
+    \subsubsection{Conservation of Vorticity}
     \begin{equation*}
         \frac{D \zeta}{D t}=0=\frac{\partial \zeta}{\partial t}+u \cdot \nabla \zeta
     \end{equation*}
     In an inviscid flow, vorticity is conserved along streamlines.
 
-    \begin{equation*}
+    \begin{equation}
         \frac{\partial \zeta}{\partial t} + u \cdot \nabla(\zeta + f)=0
-    \end{equation*}
-    \begin{equation*}
+    \end{equation}
+
+    Where when the Coriolis term $\zeta_a$ is constant, and the equation simplifies to:
+
+    \begin{eqbox}
+    \begin{equation}
         \frac{\partial \zeta}{\partial t}+J(\psi, \nabla^2 \psi)=0
-    \end{equation*}
-    This is used in \textbf{geophysical fluid dynamics}, where the Jacobian term represents nonlinear advection of vorticity.
+    \end{equation}
+    \end{eqbox}
+
+    This is used in \textbf{geophysical fluid dynamics}, where $J(\psi, \nabla^2 \psi)$ is the Jacobian term representing nonlinear advection in
+    two-dimensional flows.
 
     \subsubsection*{Conclusion}
     These equations describe the \textbf{evolution of vorticity in a rotating fluid with height variations and external forcing effects}. They are foundational for:

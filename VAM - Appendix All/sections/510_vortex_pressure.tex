@@ -2,7 +2,7 @@
 %! Date = 2025-06-13
 
 % === Metadata ===
-\newcommand{\papertitle}{Appendix: Vortex Pressure, Stress, and Vorticity}
+\newcommand{\papertitle}{Vortex Pressure, Stress, and Vorticity}
 \newcommand{\paperauthor}{Omar Iskandarani}
 \newcommand{\paperaffil}{Independent Researcher, Groningen, The Netherlands}
 \newcommand{\paperdoi}{10.5281/zenodo.15566319}
@@ -28,7 +28,7 @@
 \usepackage{newtxtext,newtxmath}
 \usepackage[scaled=0.95]{inconsolata}
 \usepackage{mathrsfs}
-\input{../vam_appendix_setup.sty}
+\input{../../vam_appendix_setup.sty}
 \begin{document}
 
     % === Title page ===
@@ -46,7 +46,7 @@
     \section{\papertitle}
 
 
-    \subsection*{Vortex Pressure Relations}
+    \subsection{Vortex Pressure Relations}
     In a steadily rotating vortex tube, let the core pressure be \(P_0\). The pressure at the vortex edge \(P_1\) is:
     \begin{equation}
         P_1 = P_0 + \frac{1}{2} \rho c^2,
@@ -69,7 +69,7 @@
     \end{equation}
     with \(N\) a coefficient dependent on angular profile and vortex density.
 
-    \subsection*{Stress Tensor Components}
+    \subsection{Stress Tensor Components}
     Define vortex orientation via direction cosines \(l, m, n\) with respect to the \((x, y, z)\) axes.
 
     The full stress tensor becomes:
@@ -90,7 +90,7 @@
         P_{zz} &= \rho w^2 - P_1, & P_{zx} &= \rho w u, & P_{zy} &= \rho w v.
     \end{align}
 
-    \subsection*{Equilibrium of Stresses and Force Components}
+    \subsection{Equilibrium of Stresses and Force Components}
     The force per unit volume follows the momentum balance:
     \begin{align}
         X &= \frac{\partial P_{xx}}{\partial x} + \frac{\partial P_{xy}}{\partial y} + \frac{\partial P_{xz}}{\partial z}, \\
@@ -118,7 +118,7 @@
         - \frac{\partial P_1}{\partial z}.
     \end{align}
 
-    \subsection*{Connection to Vorticity and Coriolis Acceleration}
+    \subsection{Connection to Vorticity and Coriolis Acceleration}
     The terms involving:
     \begin{equation}
         \frac{1}{2} \rho \frac{\partial}{\partial x} (u^2 + v^2 + w^2)
