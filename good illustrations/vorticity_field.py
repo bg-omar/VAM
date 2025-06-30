@@ -277,55 +277,55 @@ def evolve_vortex(X_init, T_init, dt=0.01, steps=10, Gamma=1.0):
 X_evolved = evolve_vortex(X, T, dt=0.01, steps=10)
 T_evolved = compute_tangent(X_evolved)
 
-# Plot initial and evolved trefoil vortex
-fig = plt.figure(figsize=(12, 10))
-ax = fig.add_subplot(111, projection='3d')
-
-# Initial vortex (gray)
-ax.plot(X[:, 0], X[:, 1], X[:, 2], color='gray', linewidth=1.5, label='Initial Trefoil')
-
-# Evolved vortex (red)
-ax.plot(X_evolved[:, 0], X_evolved[:, 1], X_evolved[:, 2], color='red', linewidth=2.5, label='Evolved Trefoil')
-
-ax.set_title('Trefoil Vortex Evolution Under VAM Dynamics')
-ax.set_xlim(-plotGridsize, plotGridsize)
-ax.set_ylim(-plotGridsize, plotGridsize)
-ax.set_zlim(-plotGridsize, plotGridsize)
-
-ax.set_xlabel('x (m)')
-ax.set_ylabel('y (m)')
-ax.set_zlabel('z (m)')
-ax.legend()
-plt.tight_layout()
+# # Plot initial and evolved trefoil vortex
+# fig = plt.figure(figsize=(12, 10))
+# ax = fig.add_subplot(111, projection='3d')
+#
+# # Initial vortex (gray)
+# ax.plot(X[:, 0], X[:, 1], X[:, 2], color='gray', linewidth=1.5, label='Initial Trefoil')
+#
+# # Evolved vortex (red)
+# ax.plot(X_evolved[:, 0], X_evolved[:, 1], X_evolved[:, 2], color='red', linewidth=2.5, label='Evolved Trefoil')
+#
+# ax.set_title('Trefoil Vortex Evolution Under VAM Dynamics')
+# ax.set_xlim(-plotGridsize, plotGridsize)
+# ax.set_ylim(-plotGridsize, plotGridsize)
+# ax.set_zlim(-plotGridsize, plotGridsize)
+#
+# ax.set_xlabel('x (m)')
+# ax.set_ylabel('y (m)')
+# ax.set_zlabel('z (m)')
+# ax.legend()
+# plt.tight_layout()
+# # plt.show()
+#
+# # Optimize by reducing number of points and steps
+# # Sample fewer points along the knot
+# s_vals_light = np.linspace(0, 2 * np.pi, 150)
+# X_light = trefoil_knot(s_vals_light)
+# T_light = compute_tangent(X_light)
+#
+# # Evolve with fewer steps
+# X_evolved_light = evolve_vortex(X_light, T_light, dt=0.01, steps=5)
+# T_evolved_light = compute_tangent(X_evolved_light)
+#
+# # Plot initial and evolved vortex
+# fig = plt.figure(figsize=(12, 10))
+# ax = fig.add_subplot(111, projection='3d')
+#
+# # Initial vortex (gray)
+# ax.plot(X_light[:, 0], X_light[:, 1], X_light[:, 2], color='gray', linewidth=1.5, label='Initial Trefoil')
+#
+# # Evolved vortex (red)
+# ax.plot(X_evolved_light[:, 0], X_evolved_light[:, 1], X_evolved_light[:, 2], color='red', linewidth=2.5, label='Evolved Trefoil')
+#
+# ax.set_title('Optimized 3D Trefoil Vortex Evolution (VAM Dynamics)')
+# ax.set_xlim(-plotGridsize, plotGridsize)
+# ax.set_ylim(-plotGridsize, plotGridsize)
+# ax.set_zlim(-plotGridsize, plotGridsize)
+#
+# ax.set_xlabel('x (m)')
+# ax.set_ylabel('y (m)')
+# ax.set_zlabel('z (m)')
+# ax.legend()
 # plt.show()
-
-# Optimize by reducing number of points and steps
-# Sample fewer points along the knot
-s_vals_light = np.linspace(0, 2 * np.pi, 150)
-X_light = trefoil_knot(s_vals_light)
-T_light = compute_tangent(X_light)
-
-# Evolve with fewer steps
-X_evolved_light = evolve_vortex(X_light, T_light, dt=0.01, steps=5)
-T_evolved_light = compute_tangent(X_evolved_light)
-
-# Plot initial and evolved vortex
-fig = plt.figure(figsize=(12, 10))
-ax = fig.add_subplot(111, projection='3d')
-
-# Initial vortex (gray)
-ax.plot(X_light[:, 0], X_light[:, 1], X_light[:, 2], color='gray', linewidth=1.5, label='Initial Trefoil')
-
-# Evolved vortex (red)
-ax.plot(X_evolved_light[:, 0], X_evolved_light[:, 1], X_evolved_light[:, 2], color='red', linewidth=2.5, label='Evolved Trefoil')
-
-ax.set_title('Optimized 3D Trefoil Vortex Evolution (VAM Dynamics)')
-ax.set_xlim(-plotGridsize, plotGridsize)
-ax.set_ylim(-plotGridsize, plotGridsize)
-ax.set_zlim(-plotGridsize, plotGridsize)
-
-ax.set_xlabel('x (m)')
-ax.set_ylabel('y (m)')
-ax.set_zlabel('z (m)')
-ax.legend()
-plt.show()

@@ -94,7 +94,7 @@ f_focus = 1.0
 x_range = (-2, 2)
 y_range = (-2, 2)
 z_range = (-2, 2)
-X, Y, Z = np.meshgrid(np.linspace(*x_range, 9), np.linspace(*y_range, 9), np.linspace(*z_range, 5))
+X, Y, Z = np.meshgrid(np.linspace(*x_range, 11), np.linspace(*y_range, 11), np.linspace(*z_range, 11))
 
 # Orientation
 positions_focused, orientations_focused = compute_focused_dipole_orientations(num_magnets, f_focus, radius)
@@ -106,7 +106,7 @@ Bx_norm, By_norm, Bz_norm = Bx / magnitude, By / magnitude, Bz / magnitude
 # ========== Plotting ==========
 fig = plt.figure(figsize=(10, 8))
 ax = fig.add_subplot(111, projection='3d')
-ax.quiver(X, Y, Z, Bx_norm, By_norm, Bz_norm, length=0.25, normalize=True, color='blue', linewidth=0.5)
+ax.quiver(X, Y, Z, Bx_norm, By_norm, Bz_norm, length=0.15, normalize=True, color='blue', linewidth=0.25)
 
 for pos, ori, c in zip(positions_focused, orientations_focused, winding_colors):
     # draw_correctly_aligned_cube(ax, pos, ori, size=0.3)

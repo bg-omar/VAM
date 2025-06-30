@@ -2,77 +2,89 @@
 
 We begin with the total action for the Vortex \AE ther Model (VAM), expressed as a spacetime integral over the Lagrangian density:
 \begin{equation}
-    S = \int d^4x \, \mathcal{L}[\rho_\text{\ae}, \vec{v}, \Phi, \vec{\omega}]
+    S = \int d^4x \, \mathcal{L}[\rho_\text{\ae}^{\text{fluid}}, \vec{v}, \Phi, \vec{\omega}]
 \end{equation}
 where the dynamical fields are:
 \begin{itemize}
-    \item $\rho_\text{\ae}(\vec{x}, t)$: local \AE ther density,
+    \item $\rho_\text{\ae}^{\text{fluid}}(\vec{x}, t)$: local inertial æther density,
     \item $\vec{v}(\vec{x}, t)$: flow velocity field,
     \item $\Phi(\vec{x}, t)$: swirl-induced gravitational potential,
     \item $\vec{\omega} = \nabla \times \vec{v}$: vorticity field.
 \end{itemize}
 
-\subsection*{Lagrangian Density}
-We propose the following effective Lagrangian density:
+\subsection*{Clarifying the Æther Density \( \rho_\text{\ae} \)}
+
+\begin{table}[H]
+\centering
+\footnotesize
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|c|c|c|p{7.5cm}|}
+\hline
+\textbf{Symbol} & \textbf{Name} & \textbf{Units} & \textbf{Physical Role} \\
+\hline
+\( \rho_\text{\ae}^{\text{fluid}} \) & Fluid Density & \( \mathrm{kg/m}^3 \) & Governs inertial dynamics and kinetic energy of vortices. Used in \( \frac{1}{2} \rho v^2 \). Approx. \( 7 \times 10^{-7} \, \mathrm{kg/m^3} \). \\
+\hline
+\( \rho_\text{\ae}^{\text{energy}} \) & Energy Density & \( \mathrm{J/m}^3 \) & Represents internal field energy. Estimated from Planck tension bounds: \( \sim 3 \times 10^{35} \, \mathrm{J/m^3} \). \\
+\hline
+\( \rho_\text{\ae}^{\text{mass}} \) & Mass-Equivalent Density & \( \mathrm{kg/m}^3 \) & Enters gravitational terms via \( \rho = \rho_\text{\ae}^{\text{energy}}/c^2 \). Approx. \( 3 \times 10^{18} \, \mathrm{kg/m^3} \). \\
+\hline
+\end{tabular}
+\caption{Distinct æther densities used in VAM, depending on context.}
+\label{tab:ae_densities}
+\end{table}
+
+\subsection{Lagrangian Density}
+We propose the following effective Lagrangian:
 \begin{equation}
-    \mathcal{L} = \frac{1}{2} \rho_\text{\ae} \vec{v}^{\,2} - \rho_\text{\ae} \Phi - U(\rho_\text{\ae}, \vec{\omega}) - V(\rho_\text{\ae})
+    \mathcal{L} = \frac{1}{2} \rho_\text{\ae}^{\text{fluid}} \vec{v}^{\,2} - \rho_\text{\ae}^{\text{mass}} \Phi - U(\rho_\text{\ae}^{\text{fluid}}, \vec{\omega}) - V(\rho_\text{\ae}^{\text{fluid}})
 \end{equation}
-with the terms interpreted as:
+where:
 \begin{itemize}
-    \item $\frac{1}{2} \rho_\text{\ae} \vec{v}^{\,2}$: kinetic energy of the \AE ther,
-    \item $\rho_\text{\ae} \Phi$: interaction energy with the swirl gravitational potential,
-    \item $U(\rho_\text{\ae}, \vec{\omega}) = \kappa \rho_\text{\ae} |\vec{\omega}|^2$: internal tension energy from vortex twist (with $\kappa$ a stiffness parameter),
-    \item $V(\rho_\text{\ae})$: compressibility potential, defining pressure via $P = \rho_\text{\ae} \frac{\partial V}{\partial \rho_\text{\ae}} - V$.
+    \item $\frac{1}{2} \rho_\text{\ae}^{\text{fluid}} \vec{v}^{\,2}$: kinetic energy of the æther flow,
+    \item $\rho_\text{\ae}^{\text{mass}} \Phi$: gravitational swirl interaction,
+    \item $U(\rho_\text{\ae}^{\text{fluid}}, \vec{\omega}) = \kappa \rho_\text{\ae}^{\text{fluid}} |\vec{\omega}|^2$: vortex tension energy,
+    \item $V(\rho_\text{\ae}^{\text{fluid}})$: compressibility potential, with $P = \rho_\text{\ae}^{\text{fluid}} \frac{\partial V}{\partial \rho_\text{\ae}^{\text{fluid}}} - V$.
 \end{itemize}
 
-\subsection*{Euler--Lagrange Field Equations}
-Applying the Euler--Lagrange formalism to each field $f$:
+\subsection{Euler--Lagrange Field Equations}
 \begin{equation}
     \frac{\partial}{\partial t} \left( \frac{\partial \mathcal{L}}{\partial \dot{f}} \right) + \nabla \cdot \left( \frac{\partial \mathcal{L}}{\partial (\nabla f)} \right) - \frac{\partial \mathcal{L}}{\partial f} = 0
 \end{equation}
 
-\subsubsection*{Density Field $\rho_\text{\ae}$}
+\subsubsection*{Density Field \( \rho_\text{\ae}^{\text{fluid}} \)}
 \begin{equation}
-    \frac{\partial \mathcal{L}}{\partial \rho_\text{\ae}} = \frac{1}{2} \vec{v}^{\,2} - \Phi - \kappa |\vec{\omega}|^2 - \frac{\partial V}{\partial \rho}
+    \frac{\partial \mathcal{L}}{\partial \rho_\text{\ae}^{\text{fluid}}} = \frac{1}{2} \vec{v}^{\,2} - \kappa |\vec{\omega}|^2 - \frac{\partial V}{\partial \rho_\text{\ae}^{\text{fluid}}}
 \end{equation}
-This defines a local Bernoulli-type condition incorporating swirl-induced internal energy.
 
-\subsubsection*{Velocity Field $\vec{v}$}
-The variation with respect to $\vec{v}$ yields:
+\subsubsection{Velocity Field \( \vec{v} \)}
 \begin{equation}
-    \frac{\delta S}{\delta \vec{v}} = \rho_\text{\ae}\vec{v} - \nabla \times \left( \frac{\partial U}{\partial \vec{\omega}} \right) = 0
+    \frac{\delta S}{\delta \vec{v}} = \rho_\text{\ae}^{\text{fluid}} \vec{v} - \nabla \times \left( \frac{\partial U}{\partial \vec{\omega}} \right) = 0
 \end{equation}
-Leading to the momentum equation:
 \begin{equation}
-    \rho_\text{\ae}\left( \partial_t \vec{v} + (\vec{v} \cdot \nabla)\vec{v} \right) = -\nabla P + \rho_\text{\ae}\nabla \Phi + \nabla \cdot \left( \kappa \nabla \vec{\omega} \right)
+    \rho_\text{\ae}^{\text{fluid}} \left( \partial_t \vec{v} + (\vec{v} \cdot \nabla)\vec{v} \right) = -\nabla P + \rho_\text{\ae}^{\text{mass}} \nabla \Phi + \nabla \cdot \left( \kappa \nabla \vec{\omega} \right)
 \end{equation}
-Here, $\frac{d}{dt}$ is the material (convective) derivative.
 
-\subsubsection*{Swirl Potential $\Phi$}
+\subsubsection{Swirl Potential \( \Phi \)}
 \begin{equation}
-    \frac{\delta S}{\delta \Phi} = -\rho
+    \frac{\delta S}{\delta \Phi} = -\rho_\text{\ae}^{\text{mass}}
 \end{equation}
-leads to a Poisson-type gravitational equation:
 \begin{equation}
-    \nabla^2 \Phi = 4\pi G_{\mathrm{vam}} \rho
+    \nabla^2 \Phi = 4\pi G_{\mathrm{vam}} \rho_\text{\ae}^{\text{mass}}
 \end{equation}
-where $G_{\mathrm{vam}}$ is the vortex-derived gravitational coupling constant (cf. main text or Appendix E).
 
-\subsection*{Conservation Laws and Structure}
+\subsection{Conservation Laws and Structure}
 \begin{itemize}
-    \item \textbf{Conservation of Helicity:}
-    The action is invariant under relabeling of fluid elements, which via Noether's theorem implies helicity conservation:
+    \item \textbf{Conservation of Helicity:} From fluid relabelling symmetry:
     \[
         \frac{d}{dt} \int \vec{v} \cdot \vec{\omega} \, d^3x = 0
     \]
-    \item \textbf{Topological Stability:} In domains with knotted or linked vortex lines, boundary terms must be included in the variation to account for helicity flux or reconnection events.
-    \item \textbf{Pressure Response:} The compressibility potential $V(\rho)$ governs how density gradients produce internal restoring forces.
+    \item \textbf{Topological Stability:} Domains with knotted vortex lines require boundary terms or helicity flux conditions.
+    \item \textbf{Compressibility:} The functional \( V(\rho_\text{\ae}^{\text{fluid}}) \) governs internal pressure responses.
 \end{itemize}
 
 \subsection*{Interpretation and Extensions}
-This variational formulation shows that:
 \begin{itemize}
-    \item All dynamical laws of the VAM can be derived from a single fluid-based action principle.
-    \item Gravity, inertia, and internal vortex structure emerge coherently from the same Lagrangian.
-    \item This lays the groundwork for future quantum extensions via path-integral quantization of $\mathcal{L}$ or geometric quantization of vortex fields.
+    \item All fluid dynamics in VAM are derived from a single variational principle.
+    \item Proper distinction of \( \rho_\text{\ae} \) types ensures consistency between kinetic, gravitational, and field-theoretic effects.
+    \item Enables extension to quantum models via path-integral or Hamiltonian formalism.
 \end{itemize}

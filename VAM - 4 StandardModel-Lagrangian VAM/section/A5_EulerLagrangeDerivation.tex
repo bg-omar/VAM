@@ -2,14 +2,16 @@
 
 We now demonstrate how the VAM Lagrangian
 \[
-    \mathcal{L} = \frac{1}{2} \rho_\text{\ae}\, \vec{v}^2 + \gamma\, \vec{v} \cdot (\nabla \times \vec{v}) - \frac{1}{2} \rho_\text{\ae}\, (\nabla \Phi)^2 - V(\Phi)
+    \mathcal{L} = \frac{1}{2} \rho_\text{\ae}^{\text{fluid}}\, \vec{v}^2 + \gamma\, \vec{v} \cdot (\nabla \times \vec{v}) - \frac{1}{2} \rho_\text{\ae}^{\text{mass}}\, (\nabla \Phi)^2 - V(\Phi)
 \]
+
 yields the core dynamical equations of motion using variational calculus, following the standard fluid mechanics formalism developed by Salmon \cite{salmon1988}.
 
 The full set of dynamical equations thus arises from the variational principle:
 \[
-    \delta S = \delta \int d^4x\, \mathcal{L}[\vec{v}, \Phi, \rho_\text{\ae}] = 0.
+    \delta S = \delta \int d^4x\, \mathcal{L}[\vec{v}, \Phi, \rho_\text{\ae}^{\text{fluid}}, \rho_\text{\ae}^{\text{mass}}] = 0.
 \]
+
 
 \subsection*{Variation with respect to $\vec{v}$: Vortex Momentum Equation}
 
@@ -20,7 +22,7 @@ We apply the Euler--Lagrange equation:
 
 For the kinetic term:
 \[
-    \frac{\partial}{\partial v^i} \left( \frac{1}{2} \rho_\text{\ae}\, v^2 \right) = \rho_\text{\ae} v^i,
+  \frac{\partial}{\partial v^i} \left( \frac{1}{2} \rho_\text{\ae}^{\text{fluid}}\, v^2 \right) = \rho_\text{\ae}^{\text{fluid}} v^i,
     \quad \text{and} \quad
     \mathcal{L} \text{ does not depend explicitly on } \partial_j v^i.
 \]
@@ -35,7 +37,7 @@ which corresponds to the Moffatt helicity density \cite{moffatt1969}.
 Thus, the full momentum equation becomes:
 \begin{equation}
     \boxed{
-        \rho_\text{\ae}\, \frac{d \vec{v}}{dt} = - \nabla p + \gamma\, \nabla \times \vec{\omega}
+        \rho_\text{\ae}^{\text{fluid}}\, \frac{d \vec{v}}{dt} = - \nabla p + \gamma\, \nabla \times \vec{\omega}
     }
 \end{equation}
 
@@ -46,7 +48,7 @@ where \( \vec{\omega} = \nabla \times \vec{v} \) is the vorticity field.
 
 The scalar field terms are:
 \[
-    \mathcal{L}_\Phi = - \frac{1}{2} \rho_\text{\ae} (\nabla \Phi)^2 - V(\Phi).
+    \mathcal{L}_\Phi = - \frac{1}{2} \rho_\text{\ae}^{\text{mass}} (\nabla \Phi)^2 - V(\Phi)
 \]
 
 The Euler--Lagrange equation gives:
@@ -57,34 +59,36 @@ The Euler--Lagrange equation gives:
 Compute:
 \[
     \frac{\partial \mathcal{L}}{\partial \Phi} = -\frac{dV}{d\Phi}, \quad
-    \frac{\partial \mathcal{L}}{\partial (\partial_i \Phi)} = - \rho_\text{\ae}\, \partial^i \Phi,
+   \frac{\partial \mathcal{L}}{\partial (\partial_i \Phi)} = - \rho_\text{\ae}^{\text{mass}}\, \partial^i \Phi,
     \quad \Rightarrow \quad
-    \partial_i ( \rho_\text{\ae}\, \partial^i \Phi ) = \frac{dV}{d\Phi}.
+    \partial_i ( \rho_\text{\ae}^{\text{mass}}\, \partial^i \Phi ) = \frac{dV}{d\Phi}
 \]
 
 This yields a scalar field equation similar to those found in superfluid phase models \cite{khalatnikov2000}:
 
 \begin{equation}
     \boxed{
-        \nabla \cdot (\rho_\text{\ae} \nabla \Phi) = \frac{dV}{d\Phi}
+        \nabla \cdot (\rho_\text{\ae}^{\text{mass}} \nabla \Phi) = \frac{dV}{d\Phi}
     }
 \end{equation}
 
-\subsection*{Variation with respect to $\rho_\text{\ae}$: Pressure Balance}
+\subsection{Variation with respect to \(\rho_\text{\ae}^{\text{fluid}}\) and \(\rho_\text{\ae}^{\text{mass}}\): Energy Balance}
 
 Varying with respect to \( \rho_\text{\ae} \) gives:
 \[
-    \frac{\partial \mathcal{L}}{\partial \rho_\text{\ae}} = \frac{1}{2} v^2 - \frac{1}{2} (\nabla \Phi)^2,
+    \frac{\partial \mathcal{L}}{\partial \rho_\text{\ae}^{\text{fluid}}} = \frac{1}{2} v^2,
+    \qquad
+    \frac{\partial \mathcal{L}}{\partial \rho_\text{\ae}^{\text{mass}}} = -\frac{1}{2} (\nabla \Phi)^2
 \]
 
-yielding the condition:
+Combining yields the local energy balance:
 \begin{equation}
     \boxed{
         v^2 = (\nabla \Phi)^2
     }
 \end{equation}
 
-which represents a local energy balance between kinetic energy and strain potential.
+which expresses equilibrium between kinetic energy and field strain.
 
 \subsection*{Summary and Physical Context}
 
@@ -95,9 +99,10 @@ These variations demonstrate that the core dynamics of the VAM can be derived fr
         \hline
         Field & Resulting Equation & Physical Meaning \\
         \hline
-        $\vec{v}$ & $\rho_\text{\ae} \frac{d \vec{v}}{dt} = -\nabla p + \gamma\, \nabla \times \vec{\omega}$ & Momentum with helicity force \\
-        $\Phi$ & $\nabla \cdot (\rho_\text{\ae}\nabla \Phi) = \frac{dV}{d\Phi}$ & Scalar strain / wave equation \\
-        $\rho$ & $v^2 = (\nabla \Phi)^2$ & Energy density equilibrium \\
+       $\vec{v}$ & $\rho_\text{\ae}^{\text{fluid}} \frac{d \vec{v}}{dt} = -\nabla p + \gamma\, \nabla \times \vec{\omega}$ & Momentum with helicity force \\
+        $\Phi$ & $\nabla \cdot (\rho_\text{\ae}^{\text{mass}} \nabla \Phi) = \frac{dV}{d\Phi}$ & Scalar strain / wave equation \\
+        $\rho_\text{\ae}^{\text{fluid}},\, \rho_\text{\ae}^{\text{mass}}$ & $v^2 = (\nabla \Phi)^2$ & Energy density equilibrium \\
         \hline
     \end{tabular}
 \end{center}
+

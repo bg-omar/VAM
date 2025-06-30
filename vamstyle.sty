@@ -19,12 +19,10 @@
 \newcommand{\eVal}{\ensuremath{1.60217663 \times 10^{-19}}} % C
 % === Æther/VAM Constants ===
 \newcommand{\CeVal}{\ensuremath{1.09384563 \times 10^{6}}} % m/s
-\newcommand{\rhoEnergyVal}{\ensuremath{3.89343583 \times 10^{18}}} % J/m^3
-\newcommand{\rhoFluidVal}{\ensuremath{7.00000000 \times 10^{-7}}} % kg/m^3
+
 \newcommand{\FmaxVal}{\ensuremath{29.0535070}} % N
 \newcommand{\FmaxGRVal}{\ensuremath{3.02563891 \times 10^{43}}} % N
 \newcommand{\gammaVal}{\ensuremath{0.005901}} % dimensionless
-\newcommand{\rcVal}{\ensuremath{1.40897017 \times 10^{-15}}} % m
 \newcommand{\GVal}{\ensuremath{6.67430000 \times 10^{-11}}} % m^3/kg/s^2
 \newcommand{\hVal}{\ensuremath{6.62607015 \times 10^{-34}}} % J·Hz^-1
 % === Electromagnetic Vacuum Constants ===
@@ -55,7 +53,12 @@
 \newcommand{\kEVal}{\ensuremath{8.98755179 \times 10^{9}}} % N·m^2·C^-2
 
 
-
+\newcommand{\rhoMass}{\rho_\text{\ae}^{(\text{mass})}}% Mass-Equivalent Energy Density 3*10^{18} kg/m^3
+\newcommand{\rhoMassVal}{\ensuremath{3.89343583 \times 10^{18}}} % kg/m^3
+\newcommand{\rhoEnergy}{\rho_\text{\ae}^{(\text{energy})}} % Energy Density 3*10^{35} J/m^3
+\newcommand{\rhoEnergyVal}{\ensuremath{3.49924562 \times 10^{35}}} % J/m^3
+\newcommand{\rhoFluid}{\rho_\text{\ae}^{(\text{fluid})}}% Fluid Density 7*10^{-7} kg/m^3
+\newcommand{\rhoFluidVal}{\ensuremath{7.00000000 \times 10^{-7}}} % kg/m^3
 
 \newif\ifvamdraft
 % Uncomment the next line to enable draft mode:
@@ -110,6 +113,8 @@
 % -- Code Listings --
 \RequirePackage{listings}
 \lstset{basicstyle=\ttfamily\footnotesize, breaklines=true}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
 
 % TOC Customization
 \RequirePackage{tocloft}
@@ -146,12 +151,26 @@
 \RequirePackage[none]{hyphenat}
 \sloppy
 
-\usepackage{empheq}
-\usepackage[most]{tcolorbox}
-\usepackage{titling}
-\usepackage{amsmath,amsfonts}
-\usepackage{titlesec}
-\usepackage{enumitem}
+\RequirePackage{float}
+\RequirePackage{makecell}
+\RequirePackage{tabularx}
+\usetikzlibrary{arrows.meta}
+\pgfplotsset{compat=1.18}
+\RequirePackage{booktabs}
+\RequirePackage{amssymb}
+\RequirePackage{physics}
+\RequirePackage{url}
+\RequirePackage{multirow}
+\RequirePackage{lscape}
+\renewcommand{\arraystretch}{1.5}
+\renewcommand{\floatpagefraction}{.8}
+\sloppy
+\RequirePackage{empheq}
+\RequirePackage[most]{tcolorbox}
+\RequirePackage{titling}
+\RequirePackage{amsmath,amsfonts}
+\RequirePackage{titlesec}
+\RequirePackage{enumitem}
 
 \newtcolorbox{eqbox}{colback=blue!5!white, colframe=blue!75!black, boxrule=0.6pt, arc=4pt, left=6pt, right=6pt, top=4pt, bottom=4pt}
 

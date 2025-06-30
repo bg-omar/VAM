@@ -1,0 +1,107 @@
+\section{Helicity-Based Derivation of Electron Mass}
+
+\subsection*{Step 1: The Helicity Integral in Fluid Dynamics}
+
+In fluid mechanics, the kinetic helicity \( \mathcal{H} \) of a velocity field \( \vec{v} \) is defined as:
+\[
+\boxed{
+\mathcal{H} = \int_V \vec{v} \cdot \vec{\omega} \, dV
+}
+\tag{1}
+\]
+where \( \vec{\omega} = \nabla \times \vec{v} \) is the vorticity. Helicity measures the degree of linkage and twist of vortex lines, and is conserved in ideal (non-viscous) flows. In topological fluid mechanics, it plays an analogous role to charge or spin in field theory.
+
+\subsection*{Step 2: VAM Interpretation — Helicity as Source of Mass}
+
+In the Vortex Æther Model (VAM), we interpret helicity as directly contributing to inertial mass. The helicity density \( \vec{v} \cdot \vec{\omega} \) is reinterpreted as a source of mass density. We define a helicity-induced mass expression:
+\[
+M_{\text{helicity}} = \alpha' \cdot \rho_\text{\ae}^{\text{(mass)}} \cdot C_e \cdot r_c^3 \cdot \mathcal{H}_{\text{norm}}(p,q)
+\tag{2}
+\]
+where:
+\begin{itemize}
+    \item \( \alpha' \) is a helicity-to-mass scaling constant (inverse velocity),
+    \item \( \rho_\text{\ae}^{\text{(mass)}} \) is the mass-equivalent energy density of the æther\footnote{We define three distinct æther densities central to VAM:
+
+\begin{itemize}
+    \item \textbf{Fluid Density:} \( \rho_\text{\ae}^{\text{(fluid)}} \approx 7 \times 10^{-7} \, \text{kg/m}^3 \) — relevant for inertial dynamics and vortex energy.
+    \item \textbf{Energy Density:} \( \rho_\text{\ae}^{\text{(energy)}} \approx 3 \times 10^{35} \, \text{J/m}^3 \) — the æther’s maximum internal energy storage per volume.
+    \item \textbf{Mass-Equivalent Density:} \( \rho_\text{\ae}^{\text{(mass)}} = \rho_\text{\ae}^{\text{(energy)}} / c^2 \approx 3 \times 10^{18} \, \text{kg/m}^3 \) — used when applying relativistic energy–mass relations.
+\end{itemize}
+},
+    \item \( \mathcal{H}_{\text{norm}}(p,q) \) is a dimensionless topological factor based on the linking and twisting of torus knot \( T(p,q) \).
+\end{itemize}
+
+The total mass of a torus knot \( T(p,q) \) is modeled in VAM as:
+\[
+M(p,q) = \frac{8\pi \rho_\text{\ae}^{\text{(mass)}} r_c^3}{C_e} \cdot \left( \sqrt{p^2 + q^2} + \gamma pq \right)
+\tag{3}
+\]
+Here \( \gamma \) encodes the strength of helicity–mass coupling.
+
+\subsection*{Step 3: Calibrating \( \gamma \) with the Electron as a Trefoil Knot}
+
+Using the known electron mass:
+\[
+M_e^{\text{exp}} = 9.10938356 \times 10^{-31} \, \text{kg}
+\]
+and modeling it as a trefoil \( T(2,3) \) knot:
+\[
+\sqrt{p^2 + q^2} = \sqrt{13}, \quad pq = 6,
+\]
+we define:
+\[
+\text{Const} = \frac{8\pi \rho_\text{\ae}^{\text{(mass)}} r_c^3}{C_e}
+\]
+and solve:
+\[
+\gamma = \frac{M_e^{\text{exp}} / \text{Const} - \sqrt{13}}{6}
+\]
+
+Substituting:
+\[
+\rho_\text{\ae}^{\text{(mass)}} = 3.893 \times 10^{18} \, \text{kg/m}^3, \quad
+r_c = 1.40897 \times 10^{-15} \, \text{m}, \quad
+C_e = 1.09384563 \times 10^6 \, \text{m/s}
+\]
+yields:
+\[
+\boxed{\gamma \approx 0.005901}
+\]
+
+This value confirms that \( \gamma \) is a computable, universal helicity–mass coupling constant and can be used for predicting masses of other particles modeled as vortex knots.
+
+\subsection*{Dimensional Derivation of the Helicity Coupling Constant \( \alpha' \)}
+
+In equation (2), \( \alpha' \) is introduced to match dimensions. The composite quantity \( \rho_\text{\ae}^{\text{(mass)}} C_e r_c^3 \) has units of momentum:
+\[
+[\rho C_e r_c^3] = \text{kg·m·s}^{-1}
+\Rightarrow
+[\alpha'] = \frac{\text{kg}}{\text{kg·m·s}^{-1}} = \text{s/m}
+\]
+
+To match the prefactor of the full mass expression in (3), we identify:
+\[
+\boxed{\alpha' = \frac{8\pi}{C_e}}
+\]
+which confirms \( \alpha' \) as the swirl-to-mass conversion factor. A higher swirl velocity \( C_e \) implies a lower helicity contribution to mass — consistent with Bernoulli scaling.
+
+\subsection*{Summary of Constants and Calibration}
+
+\begin{table}[H]
+\centering
+\footnotesize
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|c|l|c|}
+\hline
+\textbf{Symbol} & \textbf{Meaning} & \textbf{Value or Note} \\
+\hline
+\( \rho_\text{\ae}^{\text{(mass)}} \) & Mass-equivalent æther density & \( 3.893 \times 10^{18} \, \text{kg/m}^3 \) \\
+\( r_c \) & Vortex core radius & \( 1.40897 \times 10^{-15} \, \text{m} \) \\
+\( C_e \) & Swirl velocity & \( 1.09384563 \times 10^6 \, \text{m/s} \) \\
+\( \alpha' \) & Helicity–mass conversion factor & \( \frac{8\pi}{C_e} \approx 2.3 \times 10^{-5} \, \text{s/m} \) \\
+\( \gamma \) & Trefoil helicity coupling coefficient & \( \boxed{0.005901} \) \\
+\hline
+\end{tabular}
+\caption{Key constants used in helicity-based derivation of electron mass.}
+\end{table}

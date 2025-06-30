@@ -1,56 +1,34 @@
 %! Author = Omar Iskandarani
 %! Title = A Topological Reformulation of the Standard Model via Vortex Æther Dynamics
-%! Date = May 23, 2025
+%! Date = June 17, 2025
 %! Affiliation = Independent Researcher, Groningen, The Netherlands
 %! License = CC-BY 4.0
 %! ORCID = 0009-0006-1686-3961
+%! DOI = 10.5281/zenodo.1577283
 
-\documentclass[a4paper, aps,preprint,superscriptaddress, 12pt]{revtex4}
-\usepackage[a4paper, margin=2cm]{geometry}
-\usepackage{bookmark}
-\usepackage{float}
-\usepackage{tikz}
-\usepackage{makecell}
-\usepackage{tabularx}
-\usepackage[font=footnotesize]{caption}
-\usetikzlibrary{arrows.meta}
-\usepackage{pgfplots}
-\pgfplotsset{compat=1.18}
-\usepackage[none]{hyphenat}
-\usepackage{array}
-\usepackage{amsmath}
-\usepackage{booktabs}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
+% === Metadata ===
+\newcommand{\papertitle}{\textbf{A Topological Reformulation of the Standard Model via Vortex Æther Dynamics}}
+\newcommand{\paperdoi}{10.5281/zenodo.1577283}
+
+
+\documentclass[12pt]{article}
 \usepackage{amssymb}
-\usepackage{graphicx}
-\usepackage{hyperref}
-\usepackage{physics}
-\usepackage{natbib}
-\usepackage{url}
-\usepackage{multirow}
-\usepackage{subcaption}
-\usepackage{siunitx}
-\usepackage{listings}
-\usepackage{lscape}
-\renewcommand{\arraystretch}{1.5}
-\renewcommand{\floatpagefraction}{.8}
-\sloppy
-
+\input{../vamstyle.sty}
+\input{../vam_appendix_setup.sty}
 \begin{document}
 
-\author{Omar Iskandarani}
-\title{A Topological Reformulation of the Standard Model via Vortex Æther Dynamics}
-\date{Mei 2025}
-\affiliation{Independent Researcher, Groningen, The Netherlands}
-\thanks{ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961}}
-\email{info@omariskandarani.com}
+    % === Title page ===
+    \titlepageOpen
 
-\begin{abstract}
-We present a reformulation of the Standard Model Lagrangian within the dimensional and topological framework of the Vortex Æther Model (VAM). In this approach, conventional quantum field terms are reinterpreted via fluid-mechanical analogs: particles correspond to knotted vortex excitations in a compressible æther, while interactions arise from swirl dynamics, circulation, and density fluctuations. The model replaces Planck-based constants with a complete set of natural units derived from mechanical quantities such as core radius (\(r_c\)), swirl velocity (\(C_e\)), and maximum æther force (\(F^\text{vam}_\text{max}\)). Coupling constants including \(\alpha\), \(\hbar\), and \(e\) emerge from vortex properties rather than being fundamental inputs. We show that gauge fields arise from swirl structure, fermionic behavior from knotted helicity propagation, and mass from internal topological tension rather than spontaneous symmetry breaking. The resulting Lagrangian is dimensionally self-consistent, with all dynamics and interactions geometrically and physically grounded. This framework provides a unified mechanical ontology for quantum fields and offers new insights into the origins of mass, charge, and time from first principles.
-\end{abstract}
+    \begin{abstract}
+        We present a reformulation of the Standard Model Lagrangian within the dimensional and topological framework of the Vortex Æther Model (VAM). In this approach, conventional quantum field terms are reinterpreted via fluid-mechanical analogs: particles correspond to knotted vortex excitations in a compressible æther, while interactions arise from swirl dynamics, circulation, and density fluctuations. The model replaces Planck-based constants with a complete set of natural units derived from mechanical quantities such as core radius (\(r_c\)), swirl velocity (\(C_e\)), and maximum æther force (\(F^\text{vam}_\text{max}\)). Coupling constants including \(\alpha\), \(\hbar\), and \(e\) emerge from vortex properties rather than being fundamental inputs. We show that gauge fields arise from swirl structure, fermionic behavior from knotted helicity propagation, and mass from internal topological tension rather than spontaneous symmetry breaking. The resulting Lagrangian is dimensionally self-consistent, with all dynamics and interactions geometrically and physically grounded. This framework provides a unified mechanical ontology for quantum fields and offers new insights into the origins of mass, charge, and time from first principles.
+    \end{abstract}
 
-    \maketitle
+    \titlepageClose
+
+    \tableofcontents
+    \newpage
+% ============= Begin of content ============
 
     \input{section/01_Introduction}
     \input{section/02_motivation}
@@ -69,20 +47,38 @@ We present a reformulation of the Standard Model Lagrangian within the dimension
     \input{section/15_outlookvam_qft}
 
     \appendix
-        \input{section/A1_MappingStandardModelTermsToVAMAnalogues}
-        \input{section/A2_NaturalUnitsAndConstantsInTheVortexÆtherModel}
-        \input{section/A3_ObservablePredictionsAndSimulationTargets}
+        \def\standalonechapter{false}
+        \newpage\chapter*{I: Mass Generation \& Particle Structure}
         \input{section/A4_DerivationOfTheKineticEnergyOfACircularVortexLoop}
         \input{section/A5_EulerLagrangeDerivation}
         \input{section/A6_ConstraintHandlingLagrangeMultipliersVAMLagrangian}
-        \input{section/A7_DerivingClassicalFluidAndFieldEquationsFromVAMLagrangian}
+        \input{section/Appendix_CalculateElectronHelicity}
+
+        \newpage\chapter*{II: Fundamental Constants (Derived Mechanically)}
+        \input{section/A2_NaturalUnitsAndConstantsInTheVortexÆtherModel}
         \input{section/A8_FineStructureConstant}
-        \input{section/A9_DerivingElectronMass}
         \input{section/A10_DerivationElementairyCharge}
         \input{section/A11_DerivationPlancksConstant}
         \input{section/A12_DerivationGravitationalConstant}
         \input{section/A13_DerivationGravitationalFineStructure}
+
+        \newpage\chapter*{III: Field Dynamics \& Quantization}
+
+        \input{section/A7_DerivingClassicalFluidAndFieldEquationsFromVAMLagrangian}
+
+        \newpage\chapter*{IV: Gauge Forces \& SM Analogues}
+        \input{section/A1_MappingStandardModelTermsToVAMAnalogues}
+
+        \newpage\chapter*{V: Foundational Extensions / Legacy Embeddings}
         \input{section/A14_DetailedEmbeddingOfBatemansSelfConjugateFieldsIntoVA}
+
+        \newpage\chapter*{VI: Experimental Predictions \& Simulation Pathways}
+        \input{section/A3_ObservablePredictionsAndSimulationTargets}
+
+        \newpage\chapter*{VII: Photon Inertia \& Quantum Vacuum Effects}
+        \input{section/appendix_EmergentInertialMassFromKnottedVortexHelicity}
+        \input{section/appendix_HyperbolicSuppressionInMassFormula}
+        \input{section/appendix_VAM_ReinterpretationVacuumRefractionAndPhotonScatteringExperiments}
 
     \bibliography{../references}
     \bibliographystyle{unsrt}

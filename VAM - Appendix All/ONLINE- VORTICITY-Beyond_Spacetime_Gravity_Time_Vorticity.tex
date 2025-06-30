@@ -1,5 +1,5 @@
 %! Author = Omar Iskandarani
-%! Title =  Governing Equations of Vorticity in Æther Dynamics
+%! Title =  Beyond Spacetime: A Fluid-Dynamic Theory of Gravity and Time from Vorticity
 %! Date = 6/20/2025
 %! Affiliation = Independent Researcher, Groningen, The Netherlands
 %! License = CC-BY 4.0
@@ -16,6 +16,12 @@
 \usepackage{amssymb}
 \usepackage{hyperref}
 \usetikzlibrary{arrows.meta, positioning, shapes.multipart}
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning}
+\tikzstyle{block} = [rectangle, draw, rounded corners, text centered, minimum height=2em, text width=4.5cm, fill=blue!5]
+\tikzstyle{arrow} = [thick, ->, >=Stealth]
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+\usetikzlibrary{arrows.meta, decorations.pathmorphing}
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}[theorem]{Lemma}
@@ -23,7 +29,12 @@
 \usepackage{array}
 \usepackage{bm}
 
-\title{ Governing Equations of Vorticity in Æther Dynamics \\[0.5em]}
+
+
+\title{
+    \textbf{Beyond Spacetime: A Fluid-Dynamic Theory of Gravity and Time from Vorticity}\\[0.5em]
+    \large A Mathematical Formulation of Temporal and Topological Dynamics in an Incompressible Æther Medium\\[0.5em]
+}
 \author{
     Omar Iskandarani\thanks{
         Independent Researcher, Groningen, The Netherlands.\\
@@ -43,15 +54,12 @@
     \begin{abstract}
         This document presents a mathematical treatment of vorticity and time structure within the framework of the Vortex Æther Model (VAM), a fluid-dynamic reformulation of gravitation and temporal evolution. It introduces the core vorticity equation in natural coordinates, derived from the dynamics of an incompressible, inviscid æther medium. By interpreting vorticity as a measure of atomic clock delay, we couple swirl energy to experienced time and obtain expressions for vorticity in terms of local velocity gradients and flow curvature.
 
-        The appendices develop key substructures of VAM, including the topological and energetic conditions that trigger irreversible events, called Kairos moments, where the flow evolution becomes non-analytic. These singularities partition æther-time into epochs and correspond to phenomena such as vortex reconnection, swirl pressure rupture, or helicity discontinuities. Each temporal mode—Aithēr-Time (\( \mathcal{N} \)), Chronos-Time (\( \tau \)), Swirl Clock (\( S(t) \)), and Vortex Proper Time (\( T_v \))—is formally defined and related to physical vortex observables.
+        The appendices develop key substructures of VAM, including the topological and energetic conditions that trigger irreversible events, called \textbf{Kairos moments}, where the flow evolution becomes non-analytic. These singularities partition æther-time into epochs and correspond to phenomena such as vortex reconnection, swirl pressure rupture, or helicity discontinuities. Each temporal mode—\textbf{Aithēr-Time} (\( \mathcal{N} \)), \textbf{Chronos-Time} (\( \tau \)), \textbf{Swirl Clock} (\( S(t) \)), and \textbf{Vortex Proper Time} (\( T_v \))—is formally defined and related to physical vortex observables.
 
         Altogether, this work formulates a temporally stratified æther theory with experimentally testable dynamics, replacing spacetime curvature with a framework in which time dilation and mass-energy interactions emerge from structured vorticity fields.
 
         The derivations build upon the classical foundations laid by Helmholtz's theory of vortex invariants~\cite{helmholtz1858integralsvortex}, Maxwell's fluid-based model of electromagnetic stress~\cite{maxwell1861pressure}, and subsequent developments in shear-layer vorticity and planetary flow dynamics~\cite{lamb1932, rossby1939}.
 
-
-
-.
 
     \end{abstract}
 
@@ -71,6 +79,7 @@
     \subfile{sections/530_FundamentalEquationsOfVortexDynamics.tex}
     \subfile{sections/540_relative_vorticity_2knots.tex}
     \subfile{sections/550_kairos_moments_topological_transitions.tex}
+    \subfile{sections/560_temporal_modes.tex}
 
     \bibliographystyle{unsrt}
     \bibliography{../references}

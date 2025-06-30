@@ -1,20 +1,38 @@
 \section{Natural Æther Constants and Dimensional Reformulation}
 
-The Vortex Æther Model (VAM) proposes a fundamental shift in how physical quantities are derived and interpreted. Rather than relying on constants introduced purely for dimensional self-consistency (as in Planck units), VAM defines a small set of physically grounded parameters that emerge from the topological and fluid-dynamical behavior of a compressible æther medium. These constants—accessible through theoretical analysis and analog systems—serve as the natural units for describing mass, energy, charge, and time.
+The Vortex Æther Model (VAM) proposes a fundamental shift in how physical quantities are derived and interpreted. Rather than relying on constants introduced purely for dimensional consistency (as in Planck units), VAM defines a small set of physically grounded parameters that emerge from the topological and fluid-dynamical behavior of a compressible æther medium. These parameters—accessible through theoretical analysis and analog systems—serve as the natural units for describing mass, energy, charge, and time.
 
-The five central æther parameters are: the core swirl velocity $C_e$, vortex radius $r_c$, local æther density $\rho_\text{\ae}$, circulation quantum $\kappa$, and maximum transmissible force $F^{\text{max}}_{\text{\ae}}^{\text{vam}}$. Each of these is inferred from known or measurable features of matter and vortex dynamics:
+The five core æther parameters are:
 
-- \textbf{Swirl Velocity $C_e$}: Estimated from simulations of stable quantized vortices in Bose–Einstein condensates (BECs), where core rotation frequencies yield swirl velocities on the order of $10^6$ m/s \cite{Pethick2008BEC,Kleckner2013KnottedVortices}.
+\begin{itemize}
+    \item \textbf{Swirl Velocity \( C_e \)}: The tangential velocity of vortex flow, typically around \( 10^6 \, \text{m/s} \), inferred from simulations of stable quantized vortices in Bose–Einstein condensates (BECs) \cite{Pethick2008BEC,Kleckner2013KnottedVortices}.
+    \item \textbf{Core Radius \( r_c \)}: The minimal confinement radius of stable topological knots, matched to the proton charge radius (\( \sim 1.4 \times 10^{-15} \, \text{m} \)).
+    \item \textbf{Æther Density \( \rho_\text{\ae} \)\footnote{The VAM framework distinguishes between three æther densities depending on context: fluid, energy, and mass-equivalent. See Table~\ref{tab:ae_densities_foot} for a breakdown of these definitions. A mismatch in interpretation leads to inconsistencies in field derivations.}}: This quantity appears in three distinct physical roles (see Table~\ref{tab:ae_densities_foot}).
+    \item \textbf{Circulation Quantum \( \kappa \)}: Defined analogously to superfluid systems, where circulation is quantized as \( \kappa = h/m \) \cite{Donnelly1991QuantizedVortices}.
+    \item \textbf{Maximum Force \( F^{\text{max}}_{\text{\ae}} \)}: The maximum stress transmissible through a coherent vortex core, tied to \( \rho_\text{\ae}^{\text{(energy)}} \), \( C_e \), and \( r_c \).
+\end{itemize}
 
-- \textbf{Core Radius $r_c$}: Chosen to align with the proton charge radius ($\sim 1.4 \times 10^{-15}$ m), representing the minimal stable spatial scale for confined topological knots.
+\vspace{0.5em}
 
-- \textbf{Æther Density $\rho_\text{\ae}$}: Inferred from energy densities consistent with hadronic binding and extreme states of nuclear matter, comparable to estimates from neutron star core equations of state \cite{Lattimer2016EOS}.
-
-- \textbf{Circulation Quantum $\kappa$}: Defined analogously to superfluid helium and atomic BECs, where circulation is quantized in integer multiples of $\kappa = h/m$ \cite{Donnelly1991QuantizedVortices}.
-
-- \textbf{Maximum Force $F^{\text{max}}_{\text{\ae}}$}: Derived from the stress that can be transmitted through a coherent æther core of radius $r_c$ with swirl momentum $C_e \rho_\text{\ae}$.
-
-Together, these quantities form a \textbf{natural unit system} grounded in topological fluid structures. Unlike the abstract Planck units—formed from $\hbar$, $G$, and $c$—the VAM parameters are mechanistic and measurable. The following table summarizes how VAM reconstructs key physical constants from æther parameters:
+Together, these quantities form a physically grounded unit system based on fluid geometry, not abstract spacetime constants. Table~\ref{tab:VAM_constants} summarizes how they reconstruct core constants of the Standard Model.
+\begin{table}[H]
+\centering
+\footnotesize
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|c|c|c|p{7.5cm}|}
+\hline
+\textbf{Symbol} & \textbf{Name} & \textbf{Units} & \textbf{Physical Role} \\
+\hline
+\( \rho_\text{\ae}^{\text{fluid}} \) & Fluid Density & \( \mathrm{kg/m}^3 \) & Governs inertial dynamics and kinetic energy of vortices. Used in \( \frac{1}{2} \rho v^2 \). Approx. \( 7 \times 10^{-7} \, \mathrm{kg/m^3} \). \\
+\hline
+\( \rho_\text{\ae}^{\text{energy}} \) & Energy Density & \( \mathrm{J/m}^3 \) & Represents internal energy stored in the æther field. Estimated from Planck-tension bounds: \( \sim 3 \times 10^{35} \, \mathrm{J/m^3} \). \\
+\hline
+\( \rho_\text{\ae}^{\text{mass}} \) & Mass-Equivalent Density & \( \mathrm{kg/m}^3 \) & Derived via \( \rho_\text{\ae}^{\text{energy}} / c^2 \). Used in gravitational coupling. Approx. \( 3 \times 10^{18} \, \mathrm{kg/m^3} \). \\
+\hline
+\end{tabular}
+\caption{Distinct æther densities used in VAM, depending on context and physical domain.}
+\label{tab:ae_densities_foot}
+\end{table}
 
 \begin{table}[H]
     \centering
@@ -24,57 +42,88 @@ Together, these quantities form a \textbf{natural unit system} grounded in topol
         \hline
         \textbf{Symbol} & \textbf{Expression} & \textbf{Interpretation} \\
         \hline
-        $\hbar_\text{VAM}$ & $m_e C_e r_c$ & Angular impulse from vortex circulation (Planck analog) \\
+        \( \hbar_{\text{VAM}} \) & \( m_e C_e r_c \) & Angular impulse from swirl core (Planck analog) \\
         \hline
-        $c$ & $\sqrt{\dfrac{2 F^{\text{max}}_{\text{\ae}} r_c}{m_e}}$ & Effective wave speed in æther; signal propagation limit \\
+        \( c \) & \( \sqrt{\frac{2 F^{\text{max}}_{\text{\ae}} r_c}{m_e}} \) & Signal speed as elastic wave limit of æther \\
         \hline
-        $\alpha$ & $\dfrac{2 C_e}{c}$ & Fine-structure constant from swirl-to-light-speed ratio \\
+        \( \alpha \) & \( \frac{2 C_e}{c} \) & Fine-structure constant from swirl-to-light ratio \\
         \hline
-        $e^2$ & $8\pi m_e C_e^2 r_c$ & Electromagnetic coupling as swirl energy flux through core \\
+        \( e^2 \) & \( 8\pi m_e C_e^2 r_c \) & Electromagnetic charge as swirl tension through core \\
         \hline
-        $\Gamma$ & $2\pi r_c C_e$ & Total circulation per core; linked to $h/m$ \\
+        \( \Gamma \) & \( 2\pi r_c C_e \) & Circulation per core — quantized as \( h/m \) \\
         \hline
-        $v$ & $\sqrt{\dfrac{F^{\text{max}}_{\text{\ae}} r_c^3}{C_e^2}}$ & Higgs-like vacuum amplitude as æther compression scale \\
+        \( v \) & \( \sqrt{\frac{F^{\text{max}}_{\text{\ae}} r_c^3}{C_e^2}} \) & Higgs-like amplitude from ætheric elasticity \\
         \hline
     \end{tabular}
-    \caption{Derived constants and coupling strengths in the Vortex Æther Model (VAM), based on æther geometry and dynamics.}
+    \caption{Derived constants and coupling strengths in VAM from vortex structure.}
     \label{tab:VAM_constants}
 \end{table}
 
-In contrast to Planck's formulation—which defines mass, time, and length from purely mathematical combinations—VAM's dimensional system arises from vortex geometry and dynamical flow. For instance, time is set by the core swirl frequency ($1/C_e$), length by $r_c$, and energy by the circulation-based helicity. These allow the Standard Model Lagrangian terms (mass, interaction strength, etc.) to be recast in explicitly mechanistic terms.
-
-As one illustration, consider the rest mass $M$ of a particle in VAM. Rather than emerging from a Higgs field coupling, $M$ results from the kinetic energy of circular vortex flow:
-
-\begin{equation}
-    \frac{1}{2} M c^2 = E_\text{kin} \Rightarrow M = \frac{\rho_\text{\ae} \Gamma^2}{L_k \pi r_c c^2}
-\end{equation}
-
-where $L_k$ is the helicity or linking number of the vortex knot. The full derivation appears in Appendix~\ref{sec:derivation-of-the-kinetic-energy-of-a-circular-vortex-loop}.
+As one illustrative result, the rest mass of a particle becomes:
+\[
+M = \frac{\rho_\text{\ae}^{\text{fluid}} \Gamma^2}{L_k \pi r_c C_e^2}
+\]
+with \( L_k \) as the linking number of the knot. The full derivation appears in Appendix~\ref{sec:derivation-of-the-kinetic-energy-of-a-circular-vortex-loop}.
 
 Thus, VAM replaces dimensionally convenient but ontologically opaque constants with experimentally accessible and fluid-dynamically derived quantities.
-
 \section{Running Coupling Constants from Æther Density}
 
-In quantum field theory, coupling constants such as the fine-structure constant $\alpha$ are not fixed values, but evolve with energy scale due to vacuum polarization effects. This renormalization group flow is typically expressed as:
+In conventional quantum field theory, coupling constants such as the fine-structure constant \( \alpha \) are not truly constant: they evolve with energy scale due to vacuum polarization effects. This scale dependence is governed by the renormalization group (RG) flow and often expressed as:
 \begin{equation}
 \alpha(k^2) = \frac{\alpha_0}{1 - \Pi(k^2)},
 \end{equation}
-where $\Pi(k^2)$ represents the vacuum polarization at momentum scale $k$.
+where \( \Pi(k^2) \) encodes virtual particle contributions to vacuum screening at energy scale \( k \).
 
-In the Vortex Æther Model (VAM), the æther density $\rho_{\ae}(\vec{x})$ plays an analogous role to the polarization field of the quantum vacuum. Variations in local swirl intensity, helicity, or vortex density deform the underlying fluid structure and change the effective constants governing interactions.
+\vspace{0.5em}
 
-Accordingly, we propose that the effective fine-structure constant in VAM becomes a function of local ætheric parameters:
+In the Vortex Æther Model (VAM), we reinterpret this phenomenon from first principles: rather than arising from quantum vacuum fluctuations, RG-like behavior is attributed to \textbf{variations in the local structure of the æther medium} — specifically its density, compressibility, and vorticity field.
+
+We therefore propose a spatially varying fine-structure constant, derived not from perturbative diagrams, but from fluid mechanics:
 \begin{equation}
-\alpha(\vec{x}) = \frac{e^2}{4\pi \varepsilon_0(\vec{x}) \hbar c(\vec{x})} = \alpha_0 \cdot f(\rho_{\ae}(\vec{x}), \, |\vec{\omega}(\vec{x})|),
+\alpha(\vec{x}) = \frac{e^2}{4\pi \varepsilon_0(\vec{x}) \hbar c_{\text{eff}}(\vec{x})} = \alpha_0 \cdot f\left( \rho_\text{\ae}(\vec{x}), \, |\vec{\omega}(\vec{x})| \right),
 \end{equation}
-where the function $f$ encapsulates how local swirl energy and æther pressure alter fundamental constants.
+where \( f \) is a function of the local æther density and vorticity magnitude. Here:
 
-This is especially relevant near highly curved swirl structures or massive vortex cores, where internal æther strain is maximal. In such regions, variations in $\rho_{\ae}$ and $\vec{\omega}$ may result in measurable shifts in constants like:
+\begin{itemize}
+    \item \( \rho_\text{\ae}(\vec{x}) \) refers to the \textbf{local fluid or energy density} of the æther,
+    \item \( \vec{\omega} = \nabla \times \vec{v} \) is the \textbf{local vorticity field},
+    \item \( c_{\text{eff}} \) is the \textbf{local signal speed}, analogous to a renormalized light speed.
+\end{itemize}
+
+This formulation introduces a direct mechanical analog to the renormalization of coupling constants in QED — but replaces abstract Feynman diagram sums with \textbf{fluid strain and energy flow} in a structured vortex medium.
+
+\vspace{0.5em}
+
+\textbf{Key relations governing the spatial variation include:}
 \begin{equation}
-c_{\text{eff}}(\vec{x}) \propto \sqrt{\frac{B(\vec{x})}{\rho_{\ae}(\vec{x})}}, \quad \varepsilon_0(\vec{x}) \sim \frac{1}{\rho_{\ae}(\vec{x}) C_e^2},
+    c_{\text{eff}}(\vec{x}) \propto \sqrt{ \frac{B(\vec{x})}{\rho_\text{\ae}(\vec{x})} }, \qquad
+    \varepsilon_0(\vec{x}) \sim \frac{1}{\rho_\text{\ae}(\vec{x}) C_e^2},
 \end{equation}
-with $B(\vec{x})$ representing the local bulk modulus of the æther and $C_e$ a swirl-speed parameter.
+where:
+- \( B(\vec{x}) \) is the \textbf{local bulk modulus} of the æther (its resistance to compression),
+- \( \rho_\text{\ae}(\vec{x}) \) determines both inertial and field strength response,
+- \( C_e \) remains the swirl velocity constant used for defining kinetic and electromagnetic scaling.
 
-This formulation provides a fluid-mechanical analog to the renormalization group flow of QED and predicts spatially varying constants in strong gravitational or swirl-vorticity environments, potentially testable through high-precision astrophysical observations \cite{verlinde2016emergent,shapiro2004variation,uzan2011varying}.
+\vspace{0.5em}
+
+\textbf{Physical interpretation:}
+\begin{itemize}
+    \item In regions of high vorticity or density (e.g., near a massive vortex core), the æther becomes more strained and stiffer, altering the effective permittivity \( \varepsilon_0 \) and wave propagation speed \( c_{\text{eff}} \).
+    \item These local changes deform the apparent strength of interactions — much like vacuum polarization in standard QFT — but are sourced from \textbf{fluid mechanics} rather than quantum fluctuations.
+    \item In this way, VAM replicates the core behavior of running couplings, but with a deterministic substrate.
+\end{itemize}
+
+\vspace{0.5em}
+
+\textbf{Experimental Implications:}
+This prediction suggests that \textbf{fundamental constants may vary measurably across spacetime} in regions of extreme vorticity, gravitational compression, or swirl torsion. This could be tested through:
+\begin{itemize}
+    \item High-precision atomic clocks near rotating bodies,
+    \item Astrophysical spectroscopy across varying galactic curvature,
+    \item Cosmological comparisons of α in high-redshift quasars \cite{shapiro2004variation, uzan2011varying},
+    \item Analog vortex simulations in BECs with variable density profiles.
+\end{itemize}
+
+This reinterpretation unifies the idea of renormalization with mechanical properties of the vacuum itself, extending the VAM framework into the regime of coupling evolution without relying on perturbative QFT assumptions — and placing it in conceptual alignment with entropic gravity theories such as Verlinde's \cite{verlinde2016emergent}.
 
 

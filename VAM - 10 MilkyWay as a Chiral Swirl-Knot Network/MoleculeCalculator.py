@@ -1,6 +1,9 @@
 import math
 import ace_tools_open as tools
 import pandas as pd
+
+from constants import a_0
+
 # Set pandas display options for full output
 pd.set_option("display.max_rows", None)
 pd.set_option("display.max_columns", None)
@@ -93,17 +96,14 @@ common_molecules = [
 # Actual atomic/molecular masses in g/mol from standard sources (converted to kg/molecule)
 # Actual masses for reference in g/mol (for both atoms and molecules)
 actual_masses_gmol = {
-    "H": 1.00784, "He": 4.002602, "C": 12.011, "N": 14.0067, "O": 15.999,
-    "Na": 22.989769, "Mg": 24.305, "Al": 26.9815385, "Si": 28.085, "P": 30.973762,
-    "S": 32.06, "Cl": 35.45, "K": 39.0983, "Ca": 40.078, "Fe": 55.845, "Cu": 63.546,
-    "Zn": 65.38, "Br": 79.904, "I": 126.90447, "Pb": 207.2,
+
     "H2O": 18.015, "CO2": 44.01, "O2": 31.9988, "N2": 28.0134, "CH4": 16.04,
     "C6H12O6": 180.16, "NH3": 17.0305, "HCl": 36.46, "C2H6": 30.07, "C2H4": 28.05,
     "C2H2": 26.04, "NaCl": 58.44, "C8H18": 114.23, "C6H6": 78.11, "CH3COOH": 60.052,
     "H2SO4": 98.079, "CaCO3": 100.0869, "C12H22O11": 342.30, "Caffeine": 194.19,
     "DNA Base (avg)": 6500.0  # very rough average base pair molar mass
 }
-def vam_mass(name, protons, neutrons, electrons, beta=0.06):
+def vam_mass_og(name, protons, neutrons, electrons, beta=0.06):
     total_knots = protons + neutrons + electrons
     V_knot = 2 * math.pi**2 * (2 * r_c) * r_c**2
     V_total = total_knots * V_knot
@@ -122,19 +122,19 @@ def vam_mass(name, protons, neutrons, electrons, beta=0.06):
 
 
 # Process all atoms and molecules
-atom_results = [vam_mass(name, Z, N, e) for name, Z, N, e in common_atoms]
-molecule_results = [vam_mass(name, Z, N, e) for name, Z, N, e in common_molecules]
+atom_results = [vam_mass_og(name, Z, N, e) for name, Z, N, e in common_atoms]
+molecule_results = [vam_mass_og(name, Z, N, e) for name, Z, N, e in common_molecules]
 
 # Compute VAM vs actual
-vam_results = []
+vam_results_og = []
 for name, p, n, e in common_atoms:
-    vam_kg = vam_mass(name, p, n, e)
+    vam_kg = vam_mass_og(name, p, n, e)
     actual_kg = actual_masses_gmol[name] * 1e-3 / avogadro
     rel_error = 100 *(( vam_kg[1] - actual_kg)/ actual_kg)
-    vam_results.append((name, vam_kg, actual_kg, rel_error))
+    vam_results_og.append((name, vam_kg, actual_kg, rel_error))
 
 # Convert to DataFrames
-df = pd.DataFrame(vam_results, columns=["Element", "VAM Mass (kg)", "Actual Mass (kg)", "Ratio (VAM/Actual)"])
+df = pd.DataFrame(vam_results_og, columns=["Element", "VAM Mass (kg)", "Actual Mass (kg)", "Ratio (VAM/Actual)"])
 tools.display_dataframe_to_user(name="VAM vs Actual Mass Table", dataframe=df)
 df_atoms = pd.DataFrame(atom_results, columns=["Atom", "VAM Mass (kg)"])
 df_molecules = pd.DataFrame(molecule_results, columns=["Molecule", "VAM Mass (kg)"])
@@ -150,7 +150,7 @@ combined["Actual Mass (kg)"] = combined["Actual Mass (kg)"] * 1e-3 / avogadro
 combined["% Difference"] = 100 * (combined["VAM Mass (kg)"] - combined["Actual Mass (kg)"]) / combined["Actual Mass (kg)"]
 
 
-# tools.display_dataframe_to_user(name="Top 20 Atom and Molecule Masses (VAM)", dataframe=df_atoms._append(df_molecules, ignore_index=True))
+tools.display_dataframe_to_user(name="Top 20 Atom and Molecule Masses (VAM)", dataframe=df_atoms._append(df_molecules, ignore_index=True))
 tools.display_dataframe_to_user(name="VAM vs Actual Mass with Error", dataframe=combined)
 
 # Extend common_atoms to all elements up to lead (Z=82)
@@ -214,7 +214,7 @@ actual_masses_gmol.update({
 
 
 # Recompute results for full list
-full_atom_results = [vam_mass(name, Z, N, e) for name, Z, N, e in full_common_atoms]
+full_atom_results = [vam_mass_og(name, Z, N, e) for name, Z, N, e in full_common_atoms]
 df_full_atoms = pd.DataFrame(full_atom_results, columns=["Name", "VAM Mass (kg)"])
 
 # Reindex starting from 1 and format the full-length scientific notation
@@ -242,6 +242,47 @@ C_e = 1.09384563e6  # m/s
 r_c = 1.40897017e-15  # m
 c = 299792458  # m/s
 
+
+
+# Mathematical expressions translated to Python functions
+# 𝐾 = knot number (e.g. torus winding count or twist number),
+# 𝑁 = number of vortex threads (vortex cores),
+# 𝑎 = ring major radius (loop center offset),
+# 𝑟 = ring tube radius (core radius),
+# 𝜇 = rotational angular momentum,
+# 𝐼 = impulse (linear or swirl momentum density × volume),
+# 𝑍 rings = ring layers or stackings per unit length.
+def tan_kelvin(I, N, mu, K, pi=math.pi):
+    # tan(phi) = sqrt( I**1.5 / (N * mu * K**0.5 * pi**0.5) )
+    return math.sqrt(I**(3/2) / (N * mu * K**0.5 * pi**0.5))
+
+def tan_phi_kelvin(a, N, r):
+    # tan(phi) = (2 * pi * a / N) * (1 / (2 * pi * r))
+    return (2 * math.pi * a / N) * (1 / (2 * math.pi * r))
+
+def I_impuls_ring(Z_rings, K, a):
+    # I_impuls = Z_rings * K * pi * a**2
+    return Z_rings * K * math.pi * a**2
+
+def mu_rot_momentum(K, N, r, a):
+    # mu_RotMomentum = K * N * pi * r**2 * a
+    return K * N * math.pi * r**2 * a
+
+def a_squared(I, K, pi=math.pi):
+    # a^2 = I / (K * pi)
+    return I / (K * pi)
+
+def r_squared(mu, N, K, I, pi=math.pi):
+    # r^2 = mu / (N * K * (1/2) * pi**(1/2) * I**(1/2))
+    return mu / (N * K * 0.5 * pi**0.5 * I**0.5)
+
+
+
+def tan_phi_formula_3(I, N, mu, K, Z_rings, pi=math.pi):
+    # tan(phi) = sqrt( (1/Z_rings) * I**1.5 / (N * mu * K**0.5 * pi**0.5) )
+    return math.sqrt((1/Z_rings) * I**(3/2) / (N * mu * K**0.5 * pi**0.5))
+
+
 # Volume per vortex
 def compute_vortex_volume(r_c):
     return 2 * math.pi**2 * (2 * r_c) * r_c**2
@@ -262,8 +303,24 @@ def vam_mass(name, protons, neutrons, electrons, beta=beta_default, kappa=1.0):
     E_electrons = energy_density * V_total_electron
     E_total_base = E_nucleons + E_electrons
 
+
+
+    # tan_phi = sqrt( I**1.5 / (N * mu * K**0.5 * math.pi**0.5) )
+    # where I = Z_rings * K * math.pi * a**2, etc.
+
+    # tan_phi_fit ≈ (math.exp((x - 2) / 3) - 1) / 0.8
+
+
+   #### Correction factor for electron suppression
+    tan_phi_values = (a_0)/(nucleons * r_c *0.5)
+    vam_errors = 3 * np.log(0.8 * tan_phi_values + 1) + 2
+    ftan =vam_errors /100
+    correction_factor = 1/ (1 + ftan)
+    xi = correction_factor
+
     # Coherence term xi from nucleon count
     xi = 1 + beta * math.log(nucleons)
+
 
     # Coupling term (assume dot(ω_i, ω_j)=1, d_ij = 2*r_c)
     omega_k = np.ones(nucleons)
@@ -284,14 +341,6 @@ def vam_mass(name, protons, neutrons, electrons, beta=beta_default, kappa=1.0):
     M_vam = amplification * E_total_corrected / c**2
     return name, M_vam
 
-# Test on Carbon-12
-name, M_vam = vam_mass("Carbon-12", 6, 6, 6)
-# Compare to actual
-M_actual = (12.0 / 6.02214076e23) * 1e-3
-error_percent = 100 * (M_vam - M_actual) / M_actual
-
-NA = 6.02214076e23
-actual_masses = {k: (v / NA) * 1e-3 for k, v in actual_masses_gmol.items()}
 
 # Compute VAM masses and compare
 vam_results = []
@@ -305,3 +354,6 @@ for name, p, n, e in full_common_atoms:
 df_vam = pd.DataFrame(vam_results, columns=["Name", "VAM Mass (kg)", "Actual Mass (kg)", "% Difference"])
 df_vam.index = df_vam.index + 1  # Start index at 1
 tools.display_dataframe_to_user(name="VAM vs Actual Masses", dataframe=df_vam)
+
+
+
