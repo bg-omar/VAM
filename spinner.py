@@ -13,14 +13,14 @@ script_name = os.path.splitext(os.path.basename(__file__))[0]
 
 # Adjustable resolution / total points for different knots
 TOTAL_POINTS = 500  # Change this for higher precision or larger knots
-SEG_PARTS = 2
+SEG_PARTS = 1
 # Parameter range for the trefoil knot; adjust the 4π for different scaling
 t = np.linspace(0, 4 * np.pi, TOTAL_POINTS)
 
 # Knot parameters
-p, q = 7, 1  # Trefoil knot parameters
-r = 1  # minor radius
-R = r * 2.618
+p, q = 5, 2  # Trefoil knot parameters
+r = 2  # minor radius
+R = r*.25
 # Parametric equations for the trefoil knot
 x = (R + r * np.cos(p * t)) * np.cos(q * t)
 y = (R + r * np.cos(p * t)) * np.sin(q * t)
@@ -43,8 +43,8 @@ segment_length = TOTAL_POINTS // SEG_PARTS
 
 # Initialize the Line3DCollection with an empty set of segments.
 # We'll update its segments and scalar array (for the colormap) in each frame.
-lc = Line3DCollection([], cmap='Blues', linewidth=2)
-ax.Line3DCollection(lc)
+lc = Line3DCollection([], cmap=plt.get_cmap('Blues'), linewidth=2)
+ax.add_collection(lc)
 
 
 # Animation update function
@@ -74,11 +74,11 @@ def update(frame):
 
 # Create animation: here we run frames from 0 to TOTAL_POINTS, looping the parameter
 ani = animation.FuncAnimation(fig, update, frames=TOTAL_POINTS, interval=20, blit=False)
-writer_mp4 = animation.FFMpegWriter(fps=60, extra_args=['-vcodec', 'libx264'])
-ani.save(f"{script_name}.mp4", writer=writer_mp4)
-
-
-writer_gif = animation.PillowWriter(fps=60)
-ani.save(f"{script_name}.gif", writer=writer_gif)
+# writer_mp4 = animation.FFMpegWriter(fps=60, extra_args=['-vcodec', 'libx264'])
+# ani.save(f"{script_name}.mp4", writer=writer_mp4)
+#
+#
+# writer_gif = animation.PillowWriter(fps=60)
+# ani.save(f"{script_name}.gif", writer=writer_gif)
 
 plt.show()

@@ -346,7 +346,7 @@ def vam_mass(name, protons, neutrons, electrons, beta=beta_default, kappa=1.0):
 vam_results = []
 for name, p, n, e in full_common_atoms:
     name, M_vam = vam_mass(name, p, n, e)
-    M_actual = actual_masses.get(name, None)
+    M_actual = actual_masses_gmol.get(name, None)
     if M_actual:
         diff = 100 * (M_vam - M_actual) / M_actual
         vam_results.append((name, M_vam, M_actual, diff))
@@ -354,6 +354,3 @@ for name, p, n, e in full_common_atoms:
 df_vam = pd.DataFrame(vam_results, columns=["Name", "VAM Mass (kg)", "Actual Mass (kg)", "% Difference"])
 df_vam.index = df_vam.index + 1  # Start index at 1
 tools.display_dataframe_to_user(name="VAM vs Actual Masses", dataframe=df_vam)
-
-
-

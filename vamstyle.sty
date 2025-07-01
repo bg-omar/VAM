@@ -2,14 +2,15 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{vamstyle}[2025/06/13 VAM unified style]
 
-\newcommand{\hbarVal}{\ensuremath{1.054571817 \times 10^{-34}}} % J·s
+% === Constants ===
+\newcommand{\hbarVal}{\ensuremath{1.054571817 \times 10^{-34}}} % J\cdot s
 \newcommand{\meVal}{\ensuremath{9.10938356 \times 10^{-31}}} % kg
 \newcommand{\cVal}{\ensuremath{2.99792458 \times 10^{8}}} % m/s
-\newcommand{\alphaVal}{\ensuremath{1 / 137.035999084}} % dimensionless
-\newcommand{\alphaGVal}{\ensuremath{1.75180000 \times 10^{-45}}} % dimensionless
-\newcommand{\reVal}{\ensuremath{2.8179403227 \times 10^{-15}}} % m (classical electron radius)
-\newcommand{\rcVal}{\ensuremath{1.40897017 \times 10^{-15}}} % m (Compton radius)
-\newcommand{\vacrho}{\ensuremath{5 \times 10^{-9}}} % kg/m^3 (vacuum energy density estimate)
+\newcommand{\alphaVal}{\ensuremath{1 / 137.035999084}} % unitless
+\newcommand{\alphaGVal}{\ensuremath{1.75180000 \times 10^{-45}}} % unitless
+\newcommand{\reVal}{\ensuremath{2.8179403227 \times 10^{-15}}} % m
+\newcommand{\rcVal}{\ensuremath{1.40897017 \times 10^{-15}}} % m
+\newcommand{\vacrho}{\ensuremath{5 \times 10^{-9}}} % kg/m^3
 \newcommand{\LpVal}{\ensuremath{1.61625500 \times 10^{-35}}} % m
 \newcommand{\MpVal}{\ensuremath{2.17643400 \times 10^{-8}}} % kg
 \newcommand{\tpVal}{\ensuremath{5.39124700 \times 10^{-44}}} % s
@@ -17,106 +18,107 @@
 \newcommand{\qpVal}{\ensuremath{1.87554596 \times 10^{-18}}} % C
 \newcommand{\EpVal}{\ensuremath{1.95600000 \times 10^{9}}} % J
 \newcommand{\eVal}{\ensuremath{1.60217663 \times 10^{-19}}} % C
-% === Æther/VAM Constants ===
-\newcommand{\CeVal}{\ensuremath{1.09384563 \times 10^{6}}} % m/s
 
+% === VAM/\ae ther Specific ===
+\newcommand{\CeVal}{\ensuremath{1.09384563 \times 10^{6}}} % m/s
 \newcommand{\FmaxVal}{\ensuremath{29.0535070}} % N
 \newcommand{\FmaxGRVal}{\ensuremath{3.02563891 \times 10^{43}}} % N
-\newcommand{\gammaVal}{\ensuremath{0.005901}} % dimensionless
+\newcommand{\gammaVal}{\ensuremath{0.005901}} % unitless
 \newcommand{\GVal}{\ensuremath{6.67430000 \times 10^{-11}}} % m^3/kg/s^2
-\newcommand{\hVal}{\ensuremath{6.62607015 \times 10^{-34}}} % J·Hz^-1
-% === Electromagnetic Vacuum Constants ===
-\newcommand{\muZeroVal}{\ensuremath{1.25663706 \times 10^{-6}}} % N·A^-2
-\newcommand{\epsilonZeroVal}{\ensuremath{8.85418782 \times 10^{-12}}} % F·m^-1
-\newcommand{\ZzeroVal}{\ensuremath{3.76730313 \times 10^{2}}} % Ohms
-% === Atomic and Thermodynamic Constants ===
-\newcommand{\RinfVal}{\ensuremath{1.09737316 \times 10^{7}}} % m^-1
-\newcommand{\aZeroVal}{\ensuremath{5.29177211 \times 10^{-11}}} % m
-\newcommand{\MeVal}{\ensuremath{9.10938370 \times 10^{-31}}} % kg
-\newcommand{\MprotonVal}{\ensuremath{1.67262192 \times 10^{-27}}} % kg
-\newcommand{\MneutronVal}{\ensuremath{1.67492750 \times 10^{-27}}} % kg
-\newcommand{\kBVal}{\ensuremath{1.38064900 \times 10^{-23}}} % J/K
-\newcommand{\RVal}{\ensuremath{8.31446262}} % J/(mol·K)
-% === Compton, Quantum, and Radiation Constants ===
-\newcommand{\fCVal}{\ensuremath{1.23558996 \times 10^{20}}} % Hz
-\newcommand{\OmegaCVal}{\ensuremath{7.76344071 \times 10^{20}}} % rad/s
-\newcommand{\lambdaCVal}{\ensuremath{2.42631024 \times 10^{-12}}} % m
-\newcommand{\PhiZeroVal}{\ensuremath{2.06783385 \times 10^{-15}}} % Wb
-\newcommand{\phiVal}{\ensuremath{1.61803399}} % dimensionless (golden ratio)
-\newcommand{\eVVal}{\ensuremath{1.60217663 \times 10^{-19}}} % J
-\newcommand{\GFVal}{\ensuremath{1.16637870 \times 10^{-5}}} % GeV^-2
-\newcommand{\lambdaProtonVal}{\ensuremath{1.32140986 \times 10^{-15}}} % m
-\newcommand{\ERinfVal}{\ensuremath{2.17987236 \times 10^{-18}}} % J
-\newcommand{\fRinfVal}{\ensuremath{3.28984196 \times 10^{15}}} % Hz
-\newcommand{\sigmaSBVal}{\ensuremath{5.67037442 \times 10^{-8}}} % W·m^-2·K^-4
-\newcommand{\WienVal}{\ensuremath{2.89777196 \times 10^{-3}}} % m·K
-\newcommand{\kEVal}{\ensuremath{8.98755179 \times 10^{9}}} % N·m^2·C^-2
+\newcommand{\hVal}{\ensuremath{6.62607015 \times 10^{-34}}} % J Hz^-1
 
+% === Electromagnetic ===
+\newcommand{\muZeroVal}{\ensuremath{1.25663706 \times 10^{-6}}}
+\newcommand{\epsilonZeroVal}{\ensuremath{8.85418782 \times 10^{-12}}}
+\newcommand{\ZzeroVal}{\ensuremath{3.76730313 \times 10^{2}}}
 
-\newcommand{\rhoMass}{\rho_\text{\ae}^{(\text{mass})}}% Mass-Equivalent Energy Density 3*10^{18} kg/m^3
-\newcommand{\rhoMassVal}{\ensuremath{3.89343583 \times 10^{18}}} % kg/m^3
-\newcommand{\rhoEnergy}{\rho_\text{\ae}^{(\text{energy})}} % Energy Density 3*10^{35} J/m^3
-\newcommand{\rhoEnergyVal}{\ensuremath{3.49924562 \times 10^{35}}} % J/m^3
-\newcommand{\rhoFluid}{\rho_\text{\ae}^{(\text{fluid})}}% Fluid Density 7*10^{-7} kg/m^3
-\newcommand{\rhoFluidVal}{\ensuremath{7.00000000 \times 10^{-7}}} % kg/m^3
+% === Atomic & Thermodynamic ===
+\newcommand{\RinfVal}{\ensuremath{1.09737316 \times 10^{7}}}
+\newcommand{\aZeroVal}{\ensuremath{5.29177211 \times 10^{-11}}}
+\newcommand{\MeVal}{\ensuremath{9.10938370 \times 10^{-31}}}
+\newcommand{\MprotonVal}{\ensuremath{1.67262192 \times 10^{-27}}}
+\newcommand{\MneutronVal}{\ensuremath{1.67492750 \times 10^{-27}}}
+\newcommand{\kBVal}{\ensuremath{1.38064900 \times 10^{-23}}}
+\newcommand{\RVal}{\ensuremath{8.31446262}}
 
+% === Compton, Quantum, Radiation ===
+\newcommand{\fCVal}{\ensuremath{1.23558996 \times 10^{20}}}
+\newcommand{\OmegaCVal}{\ensuremath{7.76344071 \times 10^{20}}}
+\newcommand{\lambdaCVal}{\ensuremath{2.42631024 \times 10^{-12}}}
+\newcommand{\PhiZeroVal}{\ensuremath{2.06783385 \times 10^{-15}}}
+\newcommand{\phiVal}{\ensuremath{1.61803399}}
+\newcommand{\eVVal}{\ensuremath{1.60217663 \times 10^{-19}}}
+\newcommand{\GFVal}{\ensuremath{1.16637870 \times 10^{-5}}}
+\newcommand{\lambdaProtonVal}{\ensuremath{1.32140986 \times 10^{-15}}}
+\newcommand{\ERinfVal}{\ensuremath{2.17987236 \times 10^{-18}}}
+\newcommand{\fRinfVal}{\ensuremath{3.28984196 \times 10^{15}}}
+\newcommand{\sigmaSBVal}{\ensuremath{5.67037442 \times 10^{-8}}}
+\newcommand{\WienVal}{\ensuremath{2.89777196 \times 10^{-3}}}
+\newcommand{\kEVal}{\ensuremath{8.98755179 \times 10^{9}}}
+
+% === \ae ther Densities ===
+\newcommand{\rhoMass}{\rho_\text{\ae}^{(\text{mass})}}
+\newcommand{\rhoMassVal}{\ensuremath{3.89343583 \times 10^{18}}}
+\newcommand{\rhoEnergy}{\rho_\text{\ae}^{(\text{energy})}}
+\newcommand{\rhoEnergyVal}{\ensuremath{3.49924562 \times 10^{35}}}
+\newcommand{\rhoFluid}{\rho_\text{\ae}^{(\text{fluid})}}
+\newcommand{\rhoFluidVal}{\ensuremath{7.00000000 \times 10^{-7}}}
+
+% === Draft Options ===
 \newif\ifvamdraft
-% Uncomment the next line to enable draft mode:
 % \vamdrafttrue
-
 \ifvamdraft
-  \RequirePackage{showframe} % shows margins for debugging
+\RequirePackage{showframe}
 \fi
 
+% === Load Once ===
 \RequirePackage{ifthen}
 \newboolean{vamstyleloaded}
 \ifthenelse{\boolean{vamstyleloaded}}{}{\setboolean{vamstyleloaded}{true}
 
+% === Page ===
 \RequirePackage[a4paper, margin=2cm]{geometry}
 
-% -- Fonts and Language --
+% === Fonts ===
 \RequirePackage[T1]{fontenc}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[english]{babel}
-\RequirePackage{mathpazo}           % or newtxtext/newtxmath
+\RequirePackage{textgreek}
+\RequirePackage{mathpazo}
 \RequirePackage[scaled=0.95]{inconsolata}
 \RequirePackage{helvet}
 
-% Math and Physics
+% === Math ===
 \RequirePackage{amsmath, amssymb, mathrsfs, physics}
 \RequirePackage{siunitx}
 \sisetup{per-mode=symbol}
 
-% -- Tables and Figures --
+% === Tables ===
 \RequirePackage{graphicx, float, booktabs}
 \RequirePackage{array, tabularx, multirow, makecell}
 \RequirePackage[font=footnotesize, labelfont=bf]{caption}
 \RequirePackage{subcaption}
-% Safe wide table environment (auto-fit to text width)
-\newcolumntype{Y}{>{\centering\arraybackslash}X} % Like 'X' but centered
-\newenvironment{tighttable}[1][] % optional argument = caption
-  {\begin{table}[H]\centering\renewcommand{\arraystretch}{1.3}
-   \begin{tabularx}{\textwidth}{#1}}
-  {\end{tabularx}\end{table}}
-% Force fit large tables without changing layout
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\newenvironment{tighttable}[1][]{\begin{table}[H]\centering\renewcommand{\arraystretch}{1.3}\begin{tabularx}{\textwidth}{#1}}{\end{tabularx}\end{table}}
 \RequirePackage{etoolbox}
 \newcommand{\fitbox}[2][\linewidth]{\makebox[#1]{\resizebox{#1}{!}{#2}}}
 
-% Graphics and Diagrams
+% === Graphics ===
 \RequirePackage{tikz}
-\usetikzlibrary{3d, calc}
-\usetikzlibrary{arrows.meta, positioning}
+\usetikzlibrary{3d, calc, arrows.meta, positioning}
 \RequirePackage{pgfplots}
 \pgfplotsset{compat=1.18}
 \RequirePackage{xcolor}
 
-% -- Code Listings --
+% === Code ===
 \RequirePackage{listings}
 \lstset{basicstyle=\ttfamily\footnotesize, breaklines=true}
+
+% === Theorems ===
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}[theorem]{Lemma}
 
-% TOC Customization
+% === TOC ===
 \RequirePackage{tocloft}
 \setcounter{tocdepth}{2}
 \renewcommand{\cftsecfont}{\bfseries}
@@ -124,55 +126,38 @@
 \renewcommand{\cftsecleader}{\cftdotfill{.}}
 \renewcommand{\contentsname}{\centering \Huge\textbf{Contents}}
 
-% Section Fonts
+% === Sections ===
 \RequirePackage{sectsty}
 \sectionfont{\Large\bfseries\sffamily}
 \subsectionfont{\large\bfseries\sffamily}
 
-% Bibliography
-\RequirePackage[numbers]{natbib}
+% === Bibliography ===
+%\RequirePackage[numbers]{natbib}
 
-% PDF Links and Metadata
+% === Links ===
 \RequirePackage{hyperref}
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
     citecolor=blue,
     urlcolor=blue,
-    pdftitle={The Vortex Æther Model},
+    pdftitle={The Vortex \AE ther Model},
     pdfauthor={Omar Iskandarani},
-    pdfkeywords={vorticity, gravity, æther, fluid dynamics, time dilation, VAM}
+    pdfkeywords={vorticity, gravity, \ae ther, fluid dynamics, time dilation, VAM}
 }
-
 \urlstyle{same}
 \RequirePackage{bookmark}
 
-% Line Breaking and Style
+% === Misc ===
 \RequirePackage[none]{hyphenat}
-\sloppy
-
-\RequirePackage{float}
-\RequirePackage{makecell}
-\RequirePackage{tabularx}
-\usetikzlibrary{arrows.meta}
-\pgfplotsset{compat=1.18}
-\RequirePackage{booktabs}
-\RequirePackage{amssymb}
-\RequirePackage{physics}
-\RequirePackage{url}
-\RequirePackage{multirow}
-\RequirePackage{lscape}
-\renewcommand{\arraystretch}{1.5}
-\renewcommand{\floatpagefraction}{.8}
 \sloppy
 \RequirePackage{empheq}
 \RequirePackage[most]{tcolorbox}
+\newtcolorbox{eqbox}{colback=blue!5!white, colframe=blue!75!black, boxrule=0.6pt, arc=4pt, left=6pt, right=6pt, top=4pt, bottom=4pt}
 \RequirePackage{titling}
-\RequirePackage{amsmath,amsfonts}
+\RequirePackage{amsfonts}
 \RequirePackage{titlesec}
 \RequirePackage{enumitem}
-
-\newtcolorbox{eqbox}{colback=blue!5!white, colframe=blue!75!black, boxrule=0.6pt, arc=4pt, left=6pt, right=6pt, top=4pt, bottom=4pt}
 
 \pretitle{\begin{center}\LARGE\bfseries}
 \posttitle{\par\end{center}\vskip 0.5em}
@@ -183,4 +168,3 @@
 
 \endinput
 }
-% -- End of vamstyle.sty --
