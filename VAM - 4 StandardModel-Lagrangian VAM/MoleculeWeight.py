@@ -48,44 +48,6 @@ M_e = 9.1093837015e-31  # kg
 beta_default = 0.06
 
 
-# ─── Lord Kelvin ────────────────────────────────────────────────────────────────
-# Mathematical expressions translated to Python functions
-# 𝐾 = knot number (e.g. torus winding count or twist number),
-# 𝑁 = number of vortex threads (vortex cores),
-# 𝑎 = ring major radius (loop center offset),
-# 𝑟 = ring tube radius (core radius),
-# 𝜇 = rotational angular momentum,
-# 𝐼 = impulse (linear or swirl momentum density × volume),
-# 𝑍 rings = ring layers or stackings per unit length.
-def tan_kelvin(I, N, mu, K, pi=math.pi):
-    # tan(phi) = sqrt( I**1.5 / (N * mu * K**0.5 * pi**0.5) )
-    return math.sqrt(I**(3/2) / (N * mu * K**0.5 * pi**0.5))
-
-def tan_phi_kelvin(a, N, r):
-    # tan(phi) = (2 * pi * a / N) * (1 / (2 * pi * r))
-    return (2 * math.pi * a / N) * (1 / (2 * math.pi * r))
-
-def I_impuls_ring(Z_rings, K, a):
-    # I_impuls = Z_rings * K * pi * a**2
-    return Z_rings * K * math.pi * a**2
-
-def mu_rot_momentum(K, N, r, a):
-    # mu_RotMomentum = K * N * pi * r**2 * a
-    return K * N * math.pi * r**2 * a
-
-def a_squared(I, K, pi=math.pi):
-    # a^2 = I / (K * pi)
-    return I / (K * pi)
-
-def r_squared(mu, N, K, I, pi=math.pi):
-    # r^2 = mu / (N * K * (1/2) * pi**(1/2) * I**(1/2))
-    return mu / (N * K * 0.5 * pi**0.5 * I**0.5)
-
-def tan_phi_formula_3(I, N, mu, K, Z_rings, pi=math.pi):
-    # tan(phi) = sqrt( (1/Z_rings) * I**1.5 / (N * mu * K**0.5 * pi**0.5) )
-    return math.sqrt((1/Z_rings) * I**(3/2) / (N * mu * K**0.5 * pi**0.5))
-# ─── Lord Kelvin ────────────────────────────────────────────────────────────────
-
 
 # Define function
 def compute_orbital_radius(N, Z):
@@ -96,7 +58,33 @@ def compute_orbital_radius(N, Z):
 def compute_vortex_volume(R_x, r_c):
     return 2 * math.pi**2 * R_x * r_c**2
 
+# Master VAM Mass Formula
+def vam_master_mass(n_knots, m_threads, s, V_list):
+    volume_sum = sum(V_list)
+    eta = (1 / m_threads)**(3/1)
+    xi = n_knots**(-1/phi)
+    tension = 1 / phi**s
+    energy_density = 0.5 * rho_core * C_e**2
+    M = (4 / alpha) * eta * xi * tension * volume_sum * energy_density / c**2
+    return M
 
+def vam_electron_mass_helicity(p=2, q=3):
+    """Calculate electron mass from helicity-based formula."""
+    sqrt_term = math.sqrt(p**2 + q**2)
+    # Suppression parameters
+    m = 1  # threads
+    n = 1  # single knot
+    s = 1  # golden renormalization index
+
+    # Derived suppression factor to replace γpq
+    eta = (1 / m) ** 1.5
+    xi = n ** (-1 / phi)
+    tension = 1 / phi ** s
+    V_torus = 4 * math.pi ** 2 * r_c ** 3  # canonical torus volume
+    A = eta * xi * tension * V_torus
+    factor = 8 * math.pi * rho_core * r_c**3 / C_e
+    M_e_helicity = factor * (sqrt_term + A)
+    return M_e_helicity
 
 # ─── Core VAM mass models ────────────────────────────────────────────────────
 def vam_mass_core(nucleons, electrons, beta=beta_default, kappa=1.0, m_threads = 1, eq=2):
@@ -282,22 +270,45 @@ def emoji_marker(diff):
     if diff == 0: icon = "●"
     return f"{diff:.2f}% {icon}"
 
-# Build rows
-rows = []
-for name, p, n, e, gmol in atoms_molecules:
-    m_act = gmol * 1e-3 / avogadro
-    _, m_vam = vam_mass(name, p, n, e)
-    diff = 100*(m_vam - m_act)/m_act
-    R_x = (e)*( (29.053507 * r_c**2)/(9.109e-31*(p+n)*C_e**2) )
-    rows.append((name, m_vam, m_act, diff, R_x))
+
 
 
 # --- Prepare DataFrame rows ---
 rows = []
 for name, p, n, e, gmol in atoms_molecules:
     m_act = gmol * 1e-3 / avogadro
-    basic_masses = [vam_mass_core(p+n, e, eq=eq) for eq in (0,1,2,3,4)]
 
+    # Create proton and neutron examples
+    V_torus = 2 * math.pi ** 2 * (2 * r_c) * r_c ** 2
+    V_u_topo = 2.8281  # knot 6_2
+    V_d_topo = 3.1639  # knot 7_4
+
+    # Proton: uud → 2x6_2 + 1x7_4
+    V_proton = [V_u_topo * V_torus, V_u_topo * V_torus, V_d_topo * V_torus]
+    M_proton = vam_master_mass(n_knots=3, m_threads=1, s=3, V_list=V_proton)
+
+    # Neutron: udd → 1x6_2 + 2x7_4
+    V_neutron = [V_u_topo * V_torus, V_d_topo * V_torus, V_d_topo * V_torus]
+    M_neutron = vam_master_mass(n_knots=3, m_threads=1, s=3, V_list=V_neutron)
+
+    # Actual masses
+    M_proton_actual = 1.67262192369e-27
+    M_neutron_actual = 1.67492749804e-27
+
+    # Compare
+    rel_proton = 100 * (M_proton - M_proton_actual) / M_proton_actual
+    rel_neutron = 100 * (M_neutron - M_neutron_actual) / M_neutron_actual
+    rel_electron = 100 * (vam_electron_mass_helicity() - M_e) / M_e
+    # Master VAM (Knot-based) model
+    nucleons = p + n
+    quark_knots = nucleons * 3  # Approx 3 quark-knots per nucleon
+    V_list = [V_u_topo * V_torus] * (2 * nucleons) + [V_d_topo * V_torus] * (1 * nucleons)  # 2U + 1D per nucleon
+
+    m_master = (p * M_proton) + (n * M_neutron) + (e * vam_electron_mass_helicity())
+    diff_master = 100 * (m_master - m_act) / m_act
+
+
+    basic_masses = [vam_mass_core(p+n, e, eq=eq) for eq in (0,1)]
     # Coupled model
     _, m_vam = vam_mass(name, p, n, e)
     diff_vam = 100 * (m_vam - m_act) / m_act
@@ -313,14 +324,17 @@ for name, p, n, e, gmol in atoms_molecules:
 
     diff_basic = [100 * (m - m_act) / m_act for m in basic_masses]
 
-    rows.append((name, *basic_masses, int_mass, m_act, *diff_basic, diff_int, diff_vam))
+    rows.append((name, *basic_masses, int_mass, m_master, m_act, *diff_basic, diff_int, diff_vam, diff_master))
+
+
+
 
 # --- Create DataFrame ---
 columns = (["Name"] +
-           [f"VAM Mass {eq}" for eq in (0,1,2,3,4)] +
-           ["VAM Mass_int", "Actual Mass (kg)"] +
-           [f"% Diff {eq}" for eq in (0,1,2,3,4)] +
-           ["% Diff_int", "% Diff"])
+           [f"VAM Mass {eq}" for eq in (0,1)] +
+           ["VAM Mass_int", "VAM Master", "Actual Mass (kg)"] +
+           [f"% Diff {eq}" for eq in (0,1)] +
+           ["% Diff_int", "% Diff", "% Diff Master"])
 
 df = pd.DataFrame(rows, columns=columns)
 
@@ -352,18 +366,18 @@ def mark_diff_with_dot(diff):
 
 
 # Format the % Diff columns with emojis
-for eq in (0,1,2,3,4):
+for eq in (0,1):
     df[f"% Diff {eq}"] = df[f"% Diff {eq}"].apply(mark_diff_with_dot)
 df["% Diff_int"] = df["% Diff_int"].apply(mark_diff_with_dot)
 df["% Diff"] = df["% Diff"].apply(mark_diff_with_dot)
-
+df["% Diff Master"] = df["% Diff Master"].apply(mark_diff_with_dot)
 # --- Reorder columns ---
 df = df[[
     "Name",
-    "% Diff 0", "% Diff", "% Diff 1", "% Diff 2", "% Diff 3", "% Diff 4",
+    "% Diff Master", "% Diff 0",  "% Diff", "% Diff 1",
     "Actual Mass (kg)",
-    "VAM Mass 0", "VAM Mass 1", "VAM Mass 2", "VAM Mass 3", "VAM Mass 4",
-    "VAM Mass_int",
+    "VAM Mass 0", "VAM Mass 1",
+    "VAM Mass_int", "VAM Master",
     "R_x (m)"
 ]]
 
@@ -375,9 +389,23 @@ tools.display_dataframe_to_user(
     dataframe=df
 )
 
+# --- Prepare LaTeX export ---
+include_names = {"Proton", "Neutron", "Electron (helicity)"} | set(name for name, *_ in atoms_molecules)
+latex_df = df[df["Name"].isin(include_names)][[
+    "Name", "VAM Master", "Actual Mass (kg)", "% Diff Master"
+]].rename(columns={
+    "Name": "Element"
+})
 
-
-
-
-
-
+# Export to LaTeX
+latex_code = latex_df.to_latex(
+    index=False,
+    escape=True,
+    float_format="%.3e",
+    column_format="|l|c|c|c|",
+    header=True,
+    longtable=True
+)
+# Save LaTeX to .tex file using UTF-8 encoding
+with open("vam_mass_table.tex", "w", encoding="utf-8") as f:
+    f.write(latex_code)
