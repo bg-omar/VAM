@@ -150,7 +150,7 @@ alpha = beta * lambda_0 * chi
 
 # Predictive VAM mass formula
 def vam_mass(p, q):
-    return alpha * rho_ae * C_e * r_c**3 * np.sqrt(p**2 + q**2)
+    return alpha * rhoMass * C_e * r_c**3 * np.sqrt(p ** 2 + q ** 2)
 
 # Knot types
 knot_list = [(2, 3), (4, 6), (6, 9), (12, 18), (18, 27), (20, 30), (24, 36), (40, 60)]
@@ -208,7 +208,7 @@ def symbolic_mass(p, q, gamma=0.05):
     # Full factor = swirl_length + topological_correction
     full_factor = swirl_length + topological_factor
     # VAM mass expression
-    return (8 * np.pi * rho_ae * r_c**3 / C_e) * full_factor
+    return (8 * np.pi * rhoMass * r_c ** 3 / C_e) * full_factor
 
 # Compute new symbolic masses
 symbolic_results = []
@@ -247,7 +247,7 @@ alpha = beta * lambda_0 * chi
 
 # Predictive VAM mass formula
 def vam_mass(p, q):
-    return alpha * rho_ae * C_e * r_c**3 * np.sqrt(p**2 + q**2)
+    return alpha * rhoMass * C_e * r_c**3 * np.sqrt(p ** 2 + q ** 2)
 
 results = []
 
@@ -274,7 +274,7 @@ def symbolic_mass(p, q, gamma=0.05):
     # Full factor = swirl_length + topological_correction
     full_factor = swirl_length + topological_factor
     # VAM mass expression
-    return (8 * np.pi * rho_ae * r_c**3 / C_e) * full_factor
+    return (8 * np.pi * rhoMass * r_c ** 3 / C_e) * full_factor
 
 # Compute new symbolic masses
 symbolic_results = []
@@ -382,7 +382,7 @@ def symbolic_mass(p, q, gamma=0.05):
     # Full factor = swirl_length + topological_correction
     full_factor = swirl_length + topological_factor
     # VAM mass expression
-    return (8 * np.pi * rho_ae * r_c**3 / C_e) * full_factor
+    return (8 * np.pi * rhoMass * r_c ** 3 / C_e) * full_factor
 
 # Compute new symbolic masses
 symbolic_results = []
@@ -431,7 +431,7 @@ def symbolic_mass(p, q, gamma=0.05):
     swirl_length = np.sqrt(p**2 + q**2)
     topological_factor = gamma * p * q
     full_factor = swirl_length + topological_factor
-    prefactor = 8 * np.pi * rho_ae * r_c**3 / C_e
+    prefactor = 8 * np.pi * rhoMass * r_c ** 3 / C_e
     return prefactor * full_factor
 
 # Total mass from three scaled trefoils
@@ -687,7 +687,7 @@ def mass_kelvin(n):
     return (C_e * c**3 * t_p**2) / (M_e * r_c) * (I**1.5 / (N * mu * K**0.5 * math.sqrt(math.pi))) * n
 
 def mass_empirical(L_k):
-    return (8 * math.pi * rho_ae * r_c**3 / C_e) * L_k
+    return (8 * math.pi * rhoMass * r_c ** 3 / C_e) * L_k
 
 # Benchmark results
 results = []
@@ -751,12 +751,12 @@ def symbolic_mass(p, q, gamma=gamma):
     swirl = np.sqrt(p**2 + q**2)
     helicity = gamma * p * q
     factor = swirl + helicity
-    prefactor = 8 * np.pi * rho_ae * r_c**3 / C_e
+    prefactor = 8 * np.pi * rhoMass * r_c ** 3 / C_e
     return prefactor * factor
 
 # Find best n for 3 × T(2n,3n) configuration to match proton and neutron
 def solve_triplet_mass_target(target_mass):
-    factor = target_mass * C_e / (8 * np.pi * rho_ae * r_c**3)
+    factor = target_mass * C_e / (8 * np.pi * rhoMass * r_c ** 3)
     # We solve: 3n(√13 + 6γn) = factor
     # → 6γn^2 + √13 n - factor/3 = 0
     a = 6 * gamma

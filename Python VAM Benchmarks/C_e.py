@@ -18,7 +18,7 @@ R_pr = 1.32140985539e-15  # Proton Compton wavelength (m)
 R_infinity = const.Rydberg  # Rydberg constant (1/m)
 
 # Compute v_v^2
-v_v_squared = 4 / (rho_ae * r_c**2)
+v_v_squared = 4 / (rhoMass * r_c ** 2)
 E_p = R_infinity * hbar * c
 
 # Compute v_v

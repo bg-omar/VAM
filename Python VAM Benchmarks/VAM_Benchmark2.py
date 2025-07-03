@@ -236,7 +236,7 @@ tools.display_dataframe_to_user(name="Extended GR Benchmark", dataframe=df.trans
 import numpy as np
 
 # Derived constants
-gamma = G * rho_ae**2     # m^5/s^2
+gamma = G * rhoMass ** 2     # m^5/s^2
 kappa = C_e * r_c         # m^2/s
 alpha = (r_c**2) / (C_e**2)  # s^2
 Omega_k = C_e / r_c       # rad/s

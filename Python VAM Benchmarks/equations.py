@@ -15,7 +15,7 @@ from constants import *
 r = r_c
 v = C_e
 Delta_t = 1
-mu_v = (rho_ae * r_c**2) / 4
+mu_v = (rhoMass * r_c ** 2) / 4
 omega = (2 * C_e) / r_c
 B_v = mu_v * omega
 
@@ -110,7 +110,7 @@ def circulation(v, C):
 
 # Vortex density
 def vortex_density(r):
-    return rho_ae * math.exp(-r / R_c)
+    return rhoMass * math.exp(-r / R_c)
 
 def M_effective(r):
     from scipy.integrate import quad
@@ -119,7 +119,7 @@ def M_effective(r):
     return result
 
 def M_effective2(r):
-    return 4 * math.pi * rho_ae * R_c**3 * (2 - (2 + r / R_c) * math.exp(-r / R_c))
+    return 4 * math.pi * rhoMass * R_c**3 * (2 - (2 + r / R_c) * math.exp(-r / R_c))
 
 
 t_adjusted = Delta_t * math.sqrt(1 - (2 * G * M_effective(r)) / (r * c**2) - (C_e**2 / c**2) * math.exp(-r / R_c) - (omega_magnitude**2 / c**2) * math.exp(-r / R_c))
@@ -194,8 +194,8 @@ print(R_e / 2)
 
 rho_ae = 4 * F_max / (math.pi * alpha**2 * c**2 * r_c**2)
 print("rho_ae: ", rho_ae)
-print("rho_ae_A: ", rho_ae_A)
-print("rho_ae_V: ", rho_ae_V)
+print("rho_ae_A: ", rhoEnergy)
+print("rho_ae_V: ", rhoFluid)
 
 print("\nF_Cmax: ",F_Cmax)
 print((c**4 / (4 * G)) * alpha * (R_c / L_p)**-2)

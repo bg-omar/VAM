@@ -15,12 +15,13 @@ class PhysicalConstant:
 # Dictionary of physical constants
 constants_dict = {
     "C_e": PhysicalConstant(r"C_e", 1093845.63, "m s^-1", "Vortex-Tangential-Velocity", "exact"),
-    "rho_ae_A": PhysicalConstant(r"\rho_\text{\ae}^\text{core}",  3.8934358266918687e+18, "kg m^-3", "Æther Core Density", "exact"),
-    "rho_ae_V": PhysicalConstant(r"\rho_\text{\ae}",  7.0e-7, "kg m^-3", "Æther Vacuum Density", "exact"),
-    "F_max": PhysicalConstant(r"F^\text{\ae}_\text{max}", 29.053507, "N", "Maximum force", "exact"),
+    "rhoMass": PhysicalConstant(r"\rho_\text{\ae}^\text{(mass)}",  3.8934358266918687e+18, "kg m^-3", "Æther Mass-Equivalent Density", "exact"),
+    "rhoFluid": PhysicalConstant(r"\rho_\text{\ae}^\text{(fluid)}",  7.0e-7, "kg m^-3", "Æther Fluid Vacuum Density", "exact"),
+    "rhoEnergy": PhysicalConstant(r"\rho_\text{\ae}^\text{(energy)}",  3.49924562e+35, "J m^-3", "Æther Energy Density", "exact"),
+    "F_max": PhysicalConstant(r"F_\text{\ae}^\text{max}", 29.053507, "N", "Maximum force", "exact"),
     "r_c": PhysicalConstant(r"r_c", 1.40897017e-15, "m", "Vortex-Core radius", "exact"),
     "F_Coulomb": PhysicalConstant(r"F_\text{Coulomb}", 29.053507, "N", "Maximum Coulomb Force", "exact"),
-    "F_GRmax": PhysicalConstant(r"F_\text{GRmax}", 3.0256389108455157e+43, "N", "Maximum Universal Force", "exact"),
+    "F_GRmax": PhysicalConstant(r"F_\text{gr}^\text{max}", 3.0256389108455157e+43, "N", "Maximum Universal Force", "exact"),
     "c": PhysicalConstant(r"c", 299792458, "m s^-1", "Speed of light in vacuum", "exact"),
     "G": PhysicalConstant(r"G", 6.67430e-11, "m^3 kg^-1 s^-2", "Newtonian constant of gravitation", "2.2e-5"),
     "h": PhysicalConstant(r"h", 6.62607015e-34, "J Hz^-1", "Planck constant", "exact"),
@@ -64,9 +65,9 @@ constants_dict = {
 C_e = constants_dict["C_e"].value # Vortex-Core Tangential Velocity (m/s)
 R_c = constants_dict["R_c"].value
 r_c = constants_dict["r_c"].value  # Coulomb barrier (m)
-rho_ae = constants_dict["rho_ae_A"].value
-rho_ae_A = constants_dict["rho_ae_A"].value
-rho_ae_V = constants_dict["rho_ae_V"].value
+rhoMass = constants_dict["rhoMass"].value
+rhoEnergy = constants_dict["rhoEnergy"].value
+rhoFluid = constants_dict["rhoFluid"].value
 F_max = constants_dict["F_max"].value
 varepsilon_0 = constants_dict["varepsilon_0"].value
 F_GRmax = constants_dict["F_GRmax"].value

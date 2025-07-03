@@ -21,7 +21,7 @@ J_earth = 7.07e33
 
 # Define the VAM gravitational coupling constant
 def Gswirl():
-    return alpha * rho_ae * Ce**2 / Fmax_vam
+    return alpha * rhoMass * Ce**2 / Fmax_vam
 
 # Simplified VAM time dilation formula (from the PDF)
 def vam_dtau_dt(r, omega=0):
@@ -29,12 +29,12 @@ def vam_dtau_dt(r, omega=0):
     return math.sqrt(term) if term > 0 else float('nan')
 
 def vam_effective_mass(r, Rc):
-    return 4 * math.pi * rho_ae * Rc**3 * (2 - (2 + r / Rc) * math.exp(-r / Rc))
+    return 4 * math.pi * rhoMass * Rc**3 * (2 - (2 + r / Rc) * math.exp(-r / Rc))
 
 def vam_adjusted_time(r, omega=0):
     Rc = rc  # Core radius
     M_eff = vam_effective_mass(r, Rc)
-    G_swirl = alpha * rho_ae * Ce**2 / Fmax_vam
+    G_swirl = alpha * rhoMass * Ce ** 2 / Fmax_vam
 
     term = 1 \
            - (2 * G * M_eff) / (r * c**2) \
@@ -293,12 +293,12 @@ tools.display_dataframe_to_user(name="GR vs VAM Orbital Time Dilation Comparison
 # Redefine VAM time dilation function using full adjusted expression from the user's equations
 
 def vam_effective_mass(r, Rc):
-    return 4 * math.pi * rho_ae * Rc**3 * (2 - (2 + r / Rc) * math.exp(-r / Rc))
+    return 4 * math.pi * rhoMass * Rc**3 * (2 - (2 + r / Rc) * math.exp(-r / Rc))
 
 def vam_adjusted_time(r, omega=0):
     Rc = rc  # Core radius
     M_eff = vam_effective_mass(r, Rc)
-    G_swirl = alpha * rho_ae * Ce**2 / Fmax_vam
+    G_swirl = alpha * rhoMass * Ce ** 2 / Fmax_vam
 
     term = 1 \
            - (2 * G_swirl * M_eff) / (r * c**2) \
@@ -371,10 +371,10 @@ tools.display_dataframe_to_user(name="VAM Time Dilation Benchmark (Corrected G_s
 
 # Updated vortex density and effective mass function
 def rho_vortex(r, Rc):
-    return rho_ae * math.exp(-r / Rc)
+    return rhoMass * math.exp(-r / Rc)
 
 def M_effective_refined(r, Rc):
-    return 4 * math.pi * rho_ae * Rc**3 * (2 - (2 + r / Rc) * math.exp(-r / Rc))
+    return 4 * math.pi * rhoMass * Rc**3 * (2 - (2 + r / Rc) * math.exp(-r / Rc))
 
 # Swirl angular velocity profile
 def omega_swirl(r):
@@ -395,7 +395,7 @@ def vortex_quantized_energy():
     h = 6.62607015e-34
     M_e = 9.1093837015e-31
     lambda_c = 2.42631023867e-12
-    return 0.5 * rho_ae * (h / (M_e * lambda_c))**2
+    return 0.5 * rhoMass * (h / (M_e * lambda_c))**2
 
 def vam_adjusted_quantized(r):
     U_vortex = vortex_quantized_energy()
@@ -435,7 +435,7 @@ def vam_adjusted_time_hybrid(r, omega=0, mass=None):
         raise ValueError("Mass must be specified for hybrid calculation.")
 
     # Compute effective mass
-    M_eff_vam = 4 * math.pi * rho_ae * rc**3 * (2 - (2 + r / rc) * math.exp(-r / rc))
+    M_eff_vam = 4 * math.pi * rhoMass * rc ** 3 * (2 - (2 + r / rc) * math.exp(-r / rc))
     M_eff = mu * M_eff_vam + (1 - mu) * mass
 
     # Hybrid G: transition from G_swirl to Newton G

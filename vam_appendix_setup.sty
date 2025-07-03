@@ -19,12 +19,13 @@
 % here comes abstract
 \newcommand{\titlepageClose}{
   \vfill
+  \raggedright % <-- fixes left alignment
   \null
   \begin{picture}(0,0)
   % Adjust position: (x,y) = (left, bottom)
-  \put(-200,-45){  % Shift 200pt left, 40pt down
+  \put(0,-45){  % Shift 200pt left, 40pt down
     \begin{minipage}[b]{0.7\textwidth}
-    \footnotesize % One step bigger than \tiny
+    \footnotesize % One step bigger than \tiny \scriptsize
     \renewcommand{\arraystretch}{1.0}
     \noindent\rule{\textwidth}{0.4pt} \\[0.5em]  % ← horizontal line
     \textsuperscript{\textbf{*}} Independent Researcher, Groningen, The Netherlands \\
