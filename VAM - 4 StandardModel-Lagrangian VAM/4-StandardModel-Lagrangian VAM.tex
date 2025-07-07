@@ -1,14 +1,14 @@
 %! Author = Omar Iskandarani
-%! Title = A Topological Reformulation of the Standard Model via Vortex Æther Dynamics
+%! Title = Knotted Gauge Fields: Rebuilding the Standard Model from Vortex Æther Dynamics
 %! Date = June 17, 2025
 %! Affiliation = Independent Researcher, Groningen, The Netherlands
 %! License = CC-BY 4.0
 %! ORCID = 0009-0006-1686-3961
-%! DOI = 10.5281/zenodo.1577283
+%! DOI = 10.5281/zenodo.15772833
 
 % === Metadata ===
-\newcommand{\papertitle}{\textbf{A Topological Reformulation of the Standard Model via Vortex Æther Dynamics}}
-\newcommand{\paperdoi}{10.5281/zenodo.1577283}
+\newcommand{\papertitle}{\textbf{Knotted Gauge Fields:}\\ Rebuilding the Standard Model from Vortex Æther Dynamics}
+\newcommand{\paperdoi}{10.5281/zenodo.15772833}
 
 
 \documentclass[12pt]{article}
@@ -24,6 +24,70 @@
         We present a reformulation of the Standard Model Lagrangian within the dimensional and topological framework of the Vortex Æther Model (VAM). In this approach, conventional quantum field terms are reinterpreted via fluid-mechanical analogs: particles correspond to knotted vortex excitations in a compressible æther, while interactions arise from swirl dynamics, circulation, and density fluctuations. The model replaces Planck-based constants with a complete set of natural units derived from mechanical quantities such as core radius (\(r_c\)), swirl velocity (\(C_e\)), and maximum æther force (\(F^\text{vam}_\text{max}\)). Coupling constants including \(\alpha\), \(\hbar\), and \(e\) emerge from vortex properties rather than being fundamental inputs. We show that gauge fields arise from swirl structure, fermionic behavior from knotted helicity propagation, and mass from internal topological tension rather than spontaneous symmetry breaking. The resulting Lagrangian is dimensionally self-consistent, with all dynamics and interactions geometrically and physically grounded. This framework provides a unified mechanical ontology for quantum fields and offers new insights into the origins of mass, charge, and time from first principles.
     \end{abstract}
 
+\begin{figure}[H]
+    \centering
+    \footnotesize
+    \scalebox{0.75}{
+        \begin{tikzpicture}[
+          box/.style = {draw, rounded corners, minimum width=2.0cm, minimum height=0.8cm, font=\small, align=center},
+          arrow/.style = {->, thick},   node distance=1.0cm and 1.5cm
+        ]
+            % Inputs
+            \node[box] (topology) {Knot Topology};
+            \node[box, right=of topology] (chirality) {Chirality};
+            \node[box, right=of chirality] (tension) {Tension};
+
+            % Swirl coupling
+            \node[box, below=of chirality, minimum width=5.5cm] (coupling) {Swirl Coupling Condition};
+
+            % Gravitational response
+            \node[box, below=of coupling] (grav) {Gravitational Response};
+
+            % Gravitational classes
+            \node[box, below left=1.3cm and 1.5cm of grav] (matter) {Chiral\\Leptons \& Quarks};
+            \node[box, below=2cm of grav] (boson) {Achiral + No Tension\\\(\rightarrow\) Bosons};
+            \node[box, below right=1.3cm and 1.7cm of grav] (dark) {Achiral + Tension\\\(\rightarrow\) Dark Energy Knots};
+
+            % Subclasses
+            \node[box, below=of matter, xshift=-1.1cm] (leptons) {Leptons\\(e\textsuperscript{--} = T(2,3))};
+            \node[box, below=of matter, xshift=+1.0cm] (quarks) {Quarks\\(6\textsubscript{2}, 7\textsubscript{4}, 8\textsubscript{19})};
+
+            \node[box, below=of boson, xshift=-2.1cm] (photon) {Photon\\(unknot)};
+            \node[box, below=of boson] (gluon) {Gluon\\(Hopf link)};
+            \node[box, below=of boson, xshift=+2.3cm] (zboson) {Z\textsuperscript{0}\\(neutral loop)};
+
+            \node[box, below=of dark] (darkex) {Example: \(4_{1}, 8_{17}\)\\ (achiral hyperbolic)};
+
+            % Arrows to coupling
+            \draw[arrow] (topology.south) -- ++(0,-0.5) -| (coupling.north west);
+            \draw[arrow] (chirality.south) -- (coupling.north);
+            \draw[arrow] (tension.south) -- ++(0,-0.5) -| (coupling.north east);
+
+            % Arrows down flow
+            \draw[arrow] (coupling.south) -- (grav.north);
+            \draw[arrow] (grav.south) -- (matter.north);
+            \draw[arrow] (grav.south) -- (boson.north);
+            \draw[arrow] (grav.south) -- (dark.north);
+
+            % Particle branches
+            \draw[arrow] (matter.south) -- (leptons.north);
+            \draw[arrow] (matter.south) -- (quarks.north);
+
+            \draw[arrow] (boson.south) -- (photon.north);
+            \draw[arrow] (boson.south) -- (gluon.north);
+            \draw[arrow] (boson.south) -- (zboson.north);
+
+            \draw[arrow] (dark.south) -- (darkex.north);
+        \end{tikzpicture}
+    }
+    \caption{Knot Classification by Swirl Coupling.
+        The flowchart visualizes how knot topology, chirality, and curvature tension determine gravitational behavior, and how this leads to specific particle subclasses:
+            \\ \textbf{Chiral knots} align with swirl fields and form matter: \textbf{leptons} (torus knots) and \textbf{quarks} (hyperbolic knots).
+            \\ \textbf{Achiral, tensionless} structures like unknots and Hopf links are \textbf{bosons}, passively guided by swirl tubes.
+            \\ \textbf{Achiral knots with tension} are expelled, forming \textbf{dark energy} candidates.
+    }
+\end{figure}
+
     \titlepageClose
 
     \tableofcontents
@@ -34,51 +98,58 @@
     \input{section/02_motivation}
     \input{section/03_natural_æther_constants}
     \input{section/04_standard_model_lagrangian}
-    \input{section/05_VariationalDerivationSwirlLagrangian}
-    \input{section/06_BoundaryGaugeConditions}
-    \input{section/07_TopologicalOriginsOfParticleProperties}
-    \input{section/08_MassAndInertiaFromVortexCirculation}
-    \input{section/09_PressureAndStressPotentialOfTheÆtherCondensate}
-    \input{section/10_MappingVAM_SwirlGroups}
-    \input{section/11_SwirlInducedTimeAndInVortexKnots}
-    \input{section/12_CorePressureMassAndTime}
-    \input{section/13_conclusionanddiscussion}
-    \input{section/14_EntropicSwirlGravity}
-    \input{section/15_outlookvam_qft}
+    \input{section/05_Emergent_Constants_from_Fluid_Analogs}
+    \input{section/06_VariationalDerivationSwirlLagrangian}
+    \input{section/07_CanonicalCommutatorsAndSwirlQuantization}
+    \input{section/08_BoundaryGaugeConditions}
+    \input{section/09_TopologicalOriginsOfParticleProperties}
+    \input{section/10_MassAndInertiaFromVortexCirculation}
+    \input{section/11_Knot_Taxonomy}
+    \input{section/12_HelicityInterferenceSuppressionTermFromVortexKnotPacking}
+    \input{section/13_DerivationOfBaryons}
+    \input{section/14_General_Mass_Formula}
+    \input{section/15_PressureAndStressPotentialOfTheÆtherCondensate}
+    \input{section/16_MappingVAM_SwirlGroups}
+    \input{section/17_SwirlOperatorAlgebraAndSU2}
+    \input{section/18_ExtentionSU3}
+    \input{section/19_SwirlInducedTimeAndInVortexKnots}
+    \input{section/20_CorePressureMassAndTime}
+    \input{section/21_conclusionanddiscussion}
+    \input{section/22_EntropicSwirlGravity}
+    \input{section/23_outlookvam_qft}
 
     \appendix
         \def\standalonechapter{false}
         \newpage\chapter*{I: Mass Generation \& Particle Structure}
-        \input{section/A4_DerivationOfTheKineticEnergyOfACircularVortexLoop}
-        \input{section/A5_EulerLagrangeDerivation}
-        \input{section/A6_ConstraintHandlingLagrangeMultipliersVAMLagrangian}
-        \input{section/Appendix_CalculateElectronHelicity}
+        \input{section/A1_DerivationOfTheKineticEnergyOfACircularVortexLoop}
+        \input{section/A2_EulerLagrangeDerivation}
+        \input{section/A3_ConstraintHandlingLagrangeMultipliersVAMLagrangian}
+        \input{section/A4_CalculateElectronHelicity}
 
         \newpage\chapter*{II: Fundamental Constants (Derived Mechanically)}
-        \input{section/A2_NaturalUnitsAndConstantsInTheVortexÆtherModel}
-        \input{section/A8_FineStructureConstant}
-        \input{section/A10_DerivationElementairyCharge}
-        \input{section/A11_DerivationPlancksConstant}
-        \input{section/A12_DerivationGravitationalConstant}
-        \input{section/A13_DerivationGravitationalFineStructure}
+        \input{section/A5_NaturalUnitsAndConstantsInTheVortexÆtherModel}
+        \input{section/A6_FineStructureConstant}
+        \input{section/A7_DerivationElementairyCharge}
+        \input{section/A8_DerivationPlancksConstant}
+        \input{section/A9_DerivationGravitationalConstant}
+        \input{section/A10_DerivationGravitationalFineStructure}
 
         \newpage\chapter*{III: Field Dynamics \& Quantization}
-
-        \input{section/A7_DerivingClassicalFluidAndFieldEquationsFromVAMLagrangian}
+        \input{section/A11_DerivingClassicalFluidAndFieldEquationsFromVAMLagrangian}
 
         \newpage\chapter*{IV: Gauge Forces \& SM Analogues}
-        \input{section/A1_MappingStandardModelTermsToVAMAnalogues}
+        \input{section/A12_MappingStandardModelTermsToVAMAnalogues}
 
         \newpage\chapter*{V: Foundational Extensions / Legacy Embeddings}
-        \input{section/A14_DetailedEmbeddingOfBatemansSelfConjugateFieldsIntoVA}
+        \input{section/A13_DetailedEmbeddingOfBatemansSelfConjugateFieldsIntoVA}
 
         \newpage\chapter*{VI: Experimental Predictions \& Simulation Pathways}
-        \input{section/A3_ObservablePredictionsAndSimulationTargets}
+        \input{section/A14_ObservablePredictionsAndSimulationTargets}
 
         \newpage\chapter*{VII: Photon Inertia \& Quantum Vacuum Effects}
-        \input{section/appendix_EmergentInertialMassFromKnottedVortexHelicity}
-        \input{section/appendix_HyperbolicSuppressionInMassFormula}
-        \input{section/appendix_VAM_ReinterpretationVacuumRefractionAndPhotonScatteringExperiments}
+        \input{section/A15_EmergentInertialMassFromKnottedVortexHelicity}
+        \input{section/A16_HyperbolicSuppressionInMassFormula}
+        \input{section/A17_VAM_ReinterpretationVacuumRefractionAndPhotonScatteringExperiments}
 
     \bibliography{../references}
     \bibliographystyle{unsrt}

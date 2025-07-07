@@ -1,0 +1,53 @@
+\section{Boundary and Gauge Conditions in VAM}
+
+To ensure physical consistency, topological conservation, and a well-posed variational principle in the Vortex \AE{}ther Model (VAM), appropriate boundary and gauge conditions must be imposed on all dynamical fields. These conditions guarantee finite energy configurations, preserve topological structure, and define allowable transformations analogous to gauge freedom in field theory.
+
+\subsection{Boundary Conditions}
+
+The vortex and scalar fields in VAM are localized structures embedded in a compressible \ae{}ther background. The following boundary conditions ensure that solutions are physically acceptable:
+
+\begin{align*}
+    \vec{v}(\vec{x}, t) &\rightarrow 0 \quad \text{as} \quad |\vec{x}| \rightarrow \infty && \text{(vanishing velocity)} \\
+    \rho(\vec{x}, t) &\rightarrow \rho_0 = \text{const.} && \text{(uniform background density)} \\
+    \phi(\vec{x}, t) &\rightarrow \phi_{\text{vac}} && \text{(vacuum scalar potential)} \\
+    \vec{\omega}(\vec{x}, t) &= \nabla \times \vec{v} \rightarrow 0 && \text{(localized vorticity)} \\
+    \int \vec{v} \cdot \vec{\omega} \, d^3x &< \infty && \text{(finite helicity integral)}
+\end{align*}
+
+Additionally, knotted vortex configurations must be closed, non-self-intersecting, and topologically quantized to ensure particle-like stability and mass conservation.
+
+\paragraph{Temporal Interpretation.}
+Each of the boundary conditions above has an implicit temporal dependence:
+\begin{itemize}
+    \item The limit $t \to \infty$ should be understood over global time $\mathcal{N}$.
+    \item The field decay and vacuum convergence occur over observer time $\tau$.
+    \item Helicity conservation $\int \vec{v} \cdot \vec{\omega}$ imposes invariance across swirl-phase time $S(t)$ and vortex time $T_v$.
+    \item Topological non-intersection conditions remain invariant under $\kappa$-type transitions (no bifurcation during standard evolution).
+\end{itemize}
+
+\subsection{Gauge Conditions}
+
+Although VAM does not contain gauge fields in the traditional sense, several fluid-dynamic symmetries mirror the structure of gauge theories in the Standard Model. These \grqq fluid gauges\textquotedblright{} can be expressed as follows:
+
+\begin{enumerate}
+    \item \textbf{Velocity Potential Gauge (Irrotational Decomposition):}
+    \[
+        \vec{v} = \nabla \psi + \nabla \times \vec{A}
+    \]
+    where $\psi$ is the scalar velocity potential and $\vec{A}$ is a swirl vector potential. The system is invariant under the transformation $\vec{A} \to \vec{A} + \nabla \chi$, which is interpreted as a local redefinition of internal swirl clock phase $\theta(\vec{x}, S(t))$.
+
+    \item \textbf{Incompressibility Constraint (Coulomb Gauge Analog):}
+    \[
+        \nabla \cdot \vec{v} = 0
+    \]
+    which corresponds to a divergence-free \ae{}ther flow, consistent with a near-incompressible medium and fluid analogs of gauge fixing. This constraint acts within the slice of constant proper time $\tau$.
+
+    \item \textbf{Topological Gauge Invariance:}
+    The identity of vortex particles is encoded in their knot topology (e.g., trefoil, figure-eight). Gauge transformations must preserve topological invariants such as linking number and helicity:
+    \[
+        \mathcal{H} = \int \vec{v} \cdot \vec{\omega} \, d^3x = \text{constant}
+    \]
+    These invariants act as topological charges analogous to electric or color charge. They remain invariant across evolution in $T_v$ and $S(t)$, and are disrupted only by $\kappa$-type bifurcations.
+\end{enumerate}
+
+These boundary and gauge conditions collectively constrain the solution space of the VAM Lagrangian and ensure consistency with observed quantum behavior, mass conservation, topological memory, and temporal layer invariance.

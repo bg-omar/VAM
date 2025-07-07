@@ -1,0 +1,73 @@
+\section{Hamiltonian Structure of VAM and Its Connection to Mass}
+
+The Vortex \AE ther Model (VAM) not only admits a Lagrangian formulation but also supports a Hamiltonian structure, which allows us to define total energy, conserved quantities, and derive the Master Formula for mass from first principles. This section presents the Hamiltonian density \( \mathcal{H}_\text{VAM} \) associated with the structured vorticity field, and connects it to the observed rest mass of knotted vortex excitations.
+
+\subsection{Hamiltonian Formulation of VAM and Connection to the Master Formula}
+
+The Hamiltonian density \( \mathcal{H}_\text{VAM} \) captures the total energy per unit volume of a vortex excitation in the æther. From the Lagrangian:
+\begin{equation}
+\mathcal{L}_\text{VAM} =
+\frac{1}{2} \rho_\text{\ae}^{(\text{fluid})} |\vec{v}|^2
+- \frac{1}{2} \rho_\text{\ae}^{(\text{energy})} \lambda_g |\vec{\omega}|^2
++ \frac{\alpha_e}{2} (\vec{v} \cdot \vec{\omega})^2
+- V(\vec{\omega}),
+\end{equation}
+we define the canonical momentum:
+\begin{equation}
+\vec{p} = \frac{\partial \mathcal{L}}{\partial \dot{\vec{v}}} = \rho_\text{\ae}^{(\text{fluid})} \vec{v},
+\end{equation}
+which yields the Hamiltonian density:
+\begin{equation}
+\mathcal{H}_\text{VAM} = \vec{p} \cdot \vec{v} - \mathcal{L}_\text{VAM}
+= \frac{1}{2} \rho_\text{\ae}^{(\text{fluid})} |\vec{v}|^2
++ \frac{1}{2} \rho_\text{\ae}^{(\text{energy})} \lambda_g |\vec{\omega}|^2
+- \frac{\alpha_e}{2} (\vec{v} \cdot \vec{\omega})^2
++ V(\vec{\omega}).
+\end{equation}
+
+\subsection*{Interpretation of Terms}
+\begin{itemize}
+    \item \( \frac{1}{2} \rho_\text{\ae}^{(\text{fluid})} |\vec{v}|^2 \): Bulk kinetic energy of æther flow.
+    \item \( \frac{1}{2} \rho_\text{\ae}^{(\text{energy})} \lambda_g |\vec{\omega}|^2 \): Swirl energy, source of gravity and time dilation.
+    \item \( -\frac{\alpha_e}{2} (\vec{v} \cdot \vec{\omega})^2 \): Energy cancellation due to helicity coupling (electromagnetism).
+    \item \( V(\vec{\omega}) \): Topological potential energy stabilizing vortex knots.
+\end{itemize}
+
+\subsection*{Total Vortex Mass–Energy}
+
+The total rest energy of a vortex configuration is:
+\begin{equation}
+E_\text{total} = \int_{\mathbb{R}^3} \mathcal{H}_\text{VAM}(\vec{x}) \, d^3x,
+\end{equation}
+which, in the non-relativistic limit, gives:
+\[
+M = \frac{1}{c^2} \int \mathcal{H}_\text{VAM} \, d^3x
+\]
+
+\subsection*{Connection to the Master Formula}
+
+If we assume:
+\begin{itemize}
+    \item A vortex knot with localized energy,
+    \item Dominance of swirl energy: \( \mathcal{H}_\text{VAM} \approx \frac{1}{2} \rho_\text{\ae}^{(\text{energy})} |\vec{v}|^2 \),
+    \item A quantized knot volume \( V = \sum_i V_i \),
+\end{itemize}
+then:
+\[
+M = \frac{1}{c^2} \cdot \left( \frac{1}{2} \rho_\text{\ae}^{(\text{energy})} C_e^2 \right) \cdot \sum_i V_i,
+\]
+and when including topological scaling factors \( \eta, \xi, \tau \), the full expression becomes:
+\[
+M = \eta \cdot \xi \cdot \tau \cdot \left( \sum_i V_i \right) \cdot \left( \frac{1}{2} \rho_\text{\ae}^{(\text{energy})} C_e^2 \right) / c^2
+\]
+which is precisely the **Master Formula**.
+
+\subsection*{Conclusion}
+
+The Hamiltonian density formalism in VAM directly links to:
+\begin{itemize}
+    \item The inertial and gravitational mass of particles,
+    \item Electromagnetic field energy via helicity,
+    \item Topological stabilization via knot energy,
+\end{itemize}
+and provides a rigorous fluid-dynamical foundation for the vortex-based Master Formula governing rest mass.

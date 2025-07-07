@@ -1,0 +1,107 @@
+\section{Swirl Operator Algebra, SU(2) Closure, and Resonant Knot States}
+
+To ground the Vortex \AE{}ther Model (VAM) in a physically realizable gauge framework, we introduce a set of non-abelian topological operations acting on structured vortex knots. These operators form the basis of a real, physically traceable algebraic structure that reproduces the essential features of the SU(2) Lie algebra — not as internal spinor space, but as embedded transformations of knotted energy across the causal æther manifold \( \mathcal{N} \).
+
+\subsection*{Topological Hilbert Structure in VAM}
+
+We define a knot state Hilbert space \( \mathcal{H}_K \), whose basis elements are labeled by discrete geometric features:
+\[
+|K\rangle = |T, C, L\rangle
+\]
+where:
+- \( T \in \mathbb{Z} \): twist number (torsion in $T_v$),
+- \( C = \pm 1 \): chirality (direction of local $S(t)$ swirl),
+- \( L \in \mathbb{Z} \): linking number (global entanglement over $\mathcal{N}$).
+
+\subsection*{Swirl Operator Set \(\{\mathcal{S}_i\}\)}
+
+We define three core operators representing physical transformations:
+
+\begin{align}
+\mathcal{S}_1 &: \text{Chirality Flip} \quad\rightarrow\quad \mathcal{S}_1 |T, C\rangle = |T, -C\rangle \\
+\mathcal{S}_2 &: \text{Twist Increment} \quad\rightarrow\quad \mathcal{S}_2 |T, C\rangle = |T+1, C\rangle \\
+\mathcal{S}_3 &: \text{Topological Mutation} \quad\rightarrow\quad \mathcal{S}_3 |K\rangle = |K'\rangle
+\end{align}
+
+Each of these operations corresponds to a discrete vortex transformation over vortex time \( T_v \), acting on the swirl phase field \( S(t) \). Chirality flips correspond to bifurcations in local swirl direction, while twist and mutation operators generate transitions through torsional strain and reconnection events.
+
+\subsection*{SU(2) Closure and Commutation Structure}
+
+By defining:
+\[
+T^i = \frac{1}{2} \mathcal{S}_i,
+\]
+we obtain the SU(2) Lie algebra:
+\[
+[T^i, T^j] = i \epsilon^{ijk} T^k
+\]
+
+This algebra holds when \( \mathcal{S}_i \) are represented as matrices on a two-state chirality basis:
+\begin{align}
+\mathcal{S}_1 &= \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, \quad
+\mathcal{S}_2 = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}, \quad
+\mathcal{S}_3 = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}
+\end{align}
+
+and generate:
+\begin{align}
+[\mathcal{S}_1, \mathcal{S}_2] &= 2i \mathcal{S}_3, \\
+[\mathcal{S}_2, \mathcal{S}_3] &= 2i \mathcal{S}_1, \\
+[\mathcal{S}_3, \mathcal{S}_1] &= 2i \mathcal{S}_2
+\end{align}
+
+\subsection*{Temporal Ontology Interpretation}
+
+\begin{itemize}
+  \item \( \mathcal{S}_1 \): transitions that reverse local chirality (\( C = \pm 1 \)), mapping to irreversible $\kappa$-events in the vortex timeline \( T_v \).
+  \item \( \mathcal{S}_2 \): phase-locked torsional increments that modify embedded twist along the vortex core, adjusting $S(t)$ coherence length.
+  \item \( \mathcal{S}_3 \): topological mutations that rewire knot structure across $\mathcal{N}$.
+\end{itemize}
+
+The full SU(2) structure therefore emerges from irreversible topological deformations tracked over \( T_v \), rather than abstract unitary evolution in a quantum state vector.
+
+\subsection*{Bound Vortex States and Swirl Resonance Modes}
+
+Composite vortex structures (e.g., baryons or molecular vortex states) are stabilized via standing swirl waves confined between knotted cores. These waves are physical excitations of the swirl phase \( S(t) \), bounded in space over a length \( L \) and oscillating in vortex proper time \( T_v \).
+
+We model these via a 1D scalar swirl field:
+\[
+\frac{\partial^2 \phi}{\partial t^2} - c_s^2 \frac{\partial^2 \phi}{\partial x^2} = 0
+\]
+with boundary conditions:
+\[
+\phi(0,t) = \phi(L,t) = 0
+\]
+yielding standing wave solutions:
+\[
+\phi_n(x,t) = A_n \sin\left( \frac{n\pi x}{L} \right) e^{i \omega_n t}, \quad
+\omega_n = \frac{n\pi c_s}{L}, \quad n \in \mathbb{Z}^+
+\]
+
+Each \( \omega_n \) defines a distinct resonance mode that:
+- Stabilizes composite states (vortex molecules),
+- Quantizes energy storage in the knotted structure,
+- Governs decay or de-excitation via swirl-mode emission,
+- Enforces confinement by restricting topologically allowed frequencies.
+
+\subsection*{Mapping Resonance Modes to Particle Families}
+
+\begin{table}[H]
+    \centering
+    \footnotesize
+    \renewcommand{\arraystretch}{1.4}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{Mode} \( n \) & \textbf{Swirl Frequency} \( \omega_n \) & \textbf{Knot Class} & \textbf{Physical Interpretation} \\
+        \hline
+        1 & \( \frac{\pi c_s}{L} \) & Hopfion doublet & Ground-state bosonic pair \\
+        2 & \( \frac{2\pi c_s}{L} \) & Trefoil triplet & Baryon resonance or meson core \\
+        3 & \( \frac{3\pi c_s}{L} \) & Triskelion braid & Higher generation fermionic bound \\
+        \hline
+    \end{tabular}
+    \caption{Quantized swirl resonance modes and associated knot-bound states in VAM.}
+\end{table}
+
+\subsection*{Conclusion}
+
+SU(2) algebra in VAM arises not from abstract gauge redundancy but from physically allowed transformations in knotted vortex topology, tracked across real temporal modes. Resonance spectra in swirl phase \( S(t) \), evolving over vortex time \( T_v \), define quantized particle-like states through real standing wave fields embedded in the æther’s causal network \( \mathcal{N} \). This connects Lie algebra, knot evolution, and emergent mass directly — without requiring quantum postulates.

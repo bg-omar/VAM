@@ -1,81 +1,102 @@
 \section{Introduction}\label{sec:inleiding}
 
-Despite the empirical success of the Standard Model (SM) of particle physics and General Relativity (GR), fundamental questions remain unresolved: What is the physical origin of mass? Why do gauge interactions exhibit their particular symmetries? What gives rise to natural constants such as $\hbar$, $e$, or $\alpha$ beyond dimensional convenience?
+Despite the empirical success of the Standard Model (SM) of particle physics and General Relativity (GR), fundamental questions remain unresolved: What is the physical origin of mass? Why do gauge interactions exhibit their particular symmetries? What gives rise to natural constants such as $\hbar$, $e$, or $\alpha$ beyond dimensional convenience? And what, ultimately, is the physical nature of time?
 
-Mainstream physics relies heavily on abstract mathematical formalisms—such as symmetry groups, Lagrangian terms, and quantum operators—that, while predictive, often obscure the underlying physical ontology. This paper proposes an alternative: the \emph{Vortex Æther Model} (VAM), a mechanistic, fluid-dynamic framework in which spacetime and all physical phenomena emerge from structured motion in a compressible, superfluid-like æther.
+Mainstream physics relies heavily on abstract mathematical formalisms—symmetry groups, Lagrangian operators, curved spacetimes—that, while predictive, often obscure the underlying ontology. This paper proposes an alternative: the \emph{Vortex Æther Model} (VAM), a fluid-mechanical framework in which all physical phenomena emerge from structured vorticity and pressure gradients within an incompressible, inviscid æther medium. Unlike GR, which interprets mass and gravity through geometry, VAM models them as dynamical properties of knotted vortex flows.
 
-In VAM, elementary particles are not point-like fields but stable, knotted vortex structures embedded in the æther. Observable properties such as mass, charge, spin, and flavor are reinterpreted as topological and dynamical characteristics—circulation strength, core radius, swirl helicity—of these vortex knots. Gauge and Higgs interactions are expressed as manifestations of fluid tension, reconnection, and swirl transfer.
+In this picture, elementary particles are not point-like excitations, but topologically stable vortex knots embedded in the æther. Observable properties—mass, charge, spin, and flavor—emerge from circulation, helicity, and core geometry. Gauge interactions arise from fluid tension and reconnection; symmetry breaking becomes a topological bifurcation. Crucially, time itself becomes layered: not a single scalar parameter, but a family of time modes shaped by internal rotation, circulation loops, and swirl phase gradients.
 
-Crucially, this is not merely a reformulation of mathematical symbols. The goal of VAM is to provide an \emph{ontological replacement} for conventional quantum field theory: a physically intuitive, testable substrate from which all constants and couplings emerge. Within this framework, the Standard Model is reconstructed from five physically meaningful ætheric quantities: swirl velocity $C_e$, core radius $r_c$, æther density $\rho_\text{\ae}$\footnote{The VAM framework distinguishes between three æther densities depending on context: fluid, energy, and mass-equivalent. See Table~\ref{tab:ae_densities_foot} for a breakdown of these definitions. A mismatch in interpretation leads to inconsistencies in field derivations.}, maximum force $F^{\text{max}}_{\text{\ae}}$, and circulation $\Gamma$.
+The full VAM temporal ontology, introduced in \cite{iskandarani2025swirlgravity}, distinguishes six fundamental time modes:
+\begin{itemize}
+    \item $\mathcal{N}$ — Aithēr-Time: global causal substrate of the æther;
+    \item $\nu_0$ — Now-Point: localized absolute simultaneity;
+    \item $\tau$ — Chronos-Time: proper time of observers embedded in the æther;
+    \item $S(t)$ — Swirl Clock: phase accumulation inside vortex knots;
+    \item $T_v$ — Vortex Proper Time: loop-integrated time along circulation paths;
+    \item $\bar{t}$ — External Clock Time: far-field coordinate time in laboratory instruments;
+    \item $\kappa$ — Kairos Moment: topological or energetic bifurcation in vortex evolution.
+\end{itemize}
 
-This paper presents a full reformulation of the Standard Model Lagrangian using these VAM-derived units and fields. Each term acquires a mechanical and geometric interpretation, leading to a unified description where quantum phenomena, gauge structures, and mass generation are consequences of vortex dynamics in an inviscid æther. A full field-theoretic derivation of the model dynamics is presented in Appendix~\ref{sec:EL-derivation}.
+Each of these time modes plays a role in how fields evolve, interact, and synchronize. In particular, the Swirl Clock $S(t)$ governs internal quantum phase evolution, while Chronos-Time $\tau$ tracks inertial dynamics. The appearance of mass, redshift, and even tunneling transitions (LENR) in VAM follows from modulations between these time layers.
 
-Historically, this effort revives foundational ideas from Kelvin's vortex-atom hypothesis and Maxwell's æther mechanics, updating them within a modern context informed by quantum fluids, superfluid analogs of gravity, and topological field theory. See, for example, Volovik's emergent gravity framework in helium II~\cite{Volovik2003UniverseInHelium}, Barceló et al.'s review of analog spacetime geometries~\cite{Barcelo2005AnalogueGravityReview}, and Kleckner and Irvine's experimental realization of knotted vortices~\cite{Kleckner2013KnottedVortices}. While this paper is designed to be standalone, these works contextualize the broader landscape of fluid-based physical models.
+This paper presents a full reformulation of the Standard Model Lagrangian using VAM field variables—swirl velocity $C_e$, core radius $r_c$, æther density $\rho_\text{\ae}$\footnote{VAM distinguishes between $\rho_\text{\ae}^{(\text{fluid})}$, $\rho_\text{\ae}^{(\text{energy})}$, and $\rho_\text{\ae}^{(\text{mass})}$. See Table~\ref{tab:ae_densities_foot}.}, maximum force $F^{\text{max}}_{\text{\ae}}$, and quantized circulation $\Gamma$—where every term is given a mechanical, topological, and temporal interpretation.
 
-By grounding the abstract structures of modern physics in vortex geometry, VAM aims to bridge the gap between formal theory and intuitive physical mechanisms—offering not only reinterpretation, but a re-foundation of particle physics itself.
+The goal of this reformulation is not symbolic substitution, but ontological grounding. Each coupling, interaction, and symmetry-breaking term is recast as a consequence of vortex topology evolving over the time modes of the æther. The resulting Lagrangian unifies quantum behavior, gauge fields, and mass generation as emergent properties of structured vorticity in a flat 3D fluid medium governed by absolute time.
 
-This work builds on a series of earlier papers developing the Vortex Æther Model (VAM). In \cite{iskandarani2025timedilation}, proper time was defined through internal angular motion of vortex cores, introducing the concept of \("\)swirl clocks\("\) as the microscopic origin of time dilation. This was extended in \cite{iskandarani2025swirlgravity}, which proposed that gradients in swirl clocks — arising from non-uniform vorticity — mimic gravitational curvature, including analogs to event horizons. The present work synthesizes these concepts into a variational field-theoretic framework, reformulating the Standard Model Lagrangian in terms of helicity, core structure, and topological æther dynamics.
+This work synthesizes and extends prior developments of the VAM framework. In \cite{iskandarani2025timedilation}, proper time was derived from angular momentum density within rotating vortex cores, yielding quantized time rates via Swirl Clocks. This was extended in \cite{iskandarani2025swirlgravity} to show that gravitational analogs—such as redshift and horizon effects—can be reproduced from swirl gradients in a flat æther. The present paper integrates these concepts into a coherent variational field theory, reconstructing the Standard Model Lagrangian through the lens of æther dynamics, helicity conservation, and temporal stratification.
 
 \subsection*{Postulates of the Vortex Æther Model}
+
 \begin{table}[h!]
     \centering
     \begin{tabular}{rl}
         \hline
         \textbf{1. Continuous Space} & Space is Euclidean, incompressible and inviscid. \\
         \textbf{2. Knotted Particles} & Matter consists of topologically stable vortex nodes. \\
-        \textbf{3. Vorticity} & The vortex circulation is conserved and quantized. \\
-        \textbf{4. Absolute Time} & Time flows uniformly throughout the æther. \\
-        \textbf{5. Local Time} & Time is locally slower due to pressure and vorticity gradients. \\
+        \textbf{3. Vorticity} & Vortex circulation is conserved and quantized. \\
+        \textbf{4. Absolute Time} & Time $\mathcal{N}$ flows uniformly across the æther. \\
+        \textbf{5. Local Time Modes} & $\tau$, $S(t)$, $T_v$ slow relative to $\mathcal{N}$ near vortex structures. \\
         \textbf{6. Gravity} & Emerges from vorticity-induced pressure gradients. \\
         \hline
-        \bottomrule
     \end{tabular}
     \caption{Postulates of the Vortex Æther Model (VAM).}
     \label{tab:postulates}
 \end{table}
 
-The postulates replace spacetime curvature with structured rotational flows and thus form the foundation for emergent mass, time, inertia, and gravity.
+\noindent These postulates replace spacetime curvature with structured rotation and circulation, forming the physical substrate for the emergence of mass, time, gauge interaction, and gravitation.
 
 \section*{Terminology and Classical Correspondence}
 
-We introduce several novel constructs to describe the vortex-based field framework. For clarity, Table~\ref{tab:vam_definitions} provides precise definitions and links to standard physics concepts.
+We introduce several novel constructs to describe the vortex-based field framework, each grounded in the layered temporal and topological ontology of the Vortex Æther Model (VAM). For clarity, Table~\ref{tab:vam_definitions} defines key quantities and maps them to their closest analogs in conventional physics. Notably, several of these constructs—such as the \emph{Swirl Clock}, \emph{Helicity Time}, and \emph{Swirl Horizon}—manifest distinct temporal modes in VAM’s time stratification.
 
 \begin{table}[H]
     \centering
     \scriptsize
-    \renewcommand{\arraystretch}{1.3}
+    \renewcommand{\arraystretch}{1.4}
     \begin{tabular}{|l|l|l|}
         \hline
         \textbf{Term} & \textbf{Definition in VAM} & \textbf{Analogy in Established Theory} \\
         \hline
-        \makecell[l]{Swirl Clock} &
-        \makecell[l]{Proper time defined by internal angular frequency \\ $\omega_0$ of a vortex core} &
+        \makecell[l]{Swirl Clock $S(t)$} &
+        \makecell[l]{Phase-based time mode defined by angular frequency $\omega_0$ \\ of a vortex core; stores internal rotational memory.} &
         \makecell[l]{Atomic clock (GR); spin-precession \\ in gyroscopes} \\
         \hline
         \makecell[l]{Swirl Lagrangian} &
-        \makecell[l]{Field Lagrangian including helicity term \\ $\lambda (\mathbf{v} \cdot \boldsymbol{\omega})$} &
+        \makecell[l]{Field Lagrangian including topological helicity term \\ $\lambda (\mathbf{v} \cdot \boldsymbol{\omega})$; evolves over $S(t)$ and $T_v$.} &
         \makecell[l]{Chern–Simons terms; \\ topological terms in QFT} \\
         \hline
         \makecell[l]{Helicity Time} &
-        \makecell[l]{Clock rate modulated by helicity density: \\ $d\tau \propto \mathbf{v} \cdot \boldsymbol{\omega}$} &
-        \makecell[l]{Phase evolution in rotating frames; \\ action-angle methods} \\
+        \makecell[l]{Clock rate modulated by helicity density: \\ $d\tau \propto \mathbf{v} \cdot \boldsymbol{\omega}$; affects $\tau$.} &
+        \makecell[l]{Phase evolution in rotating frames; \\ action-angle formalism} \\
         \hline
         \makecell[l]{Core Radius $r_c$} &
-        \makecell[l]{Characteristic radius of maximal vorticity \\ and core energy density} &
+        \makecell[l]{Characteristic radius of maximal vorticity and \\ exponential decay scale for pressure and energy.} &
         \makecell[l]{Healing length in BECs; \\ flux tube radius in QCD} \\
         \hline
         \makecell[l]{Swirl Speed $C_e$} &
-        \makecell[l]{Tangential speed of æther flow \\ at core radius} &
+        \makecell[l]{Maximal tangential speed of æther flow at core radius; \\ appears in all mass and time dilation formulas.} &
         \makecell[l]{Sound speed in superfluids; \\ Lorentz frame velocity} \\
         \hline
         \makecell[l]{Swirl Horizon} &
-        \makecell[l]{Boundary beyond which $\omega_{\text{obs}} \to 0$ \\ and clocks stall} &
-        \makecell[l]{GR event horizon; \\ ergosphere boundary (Kerr geometry)} \\
+        \makecell[l]{Boundary where observer swirl frequency $\omega_{\text{obs}} \to 0$; \\ vortex clocks stall ($d\tau/d\mathcal{N} \to 0$).} &
+        \makecell[l]{GR event horizon; \\ ergosphere boundary (Kerr)} \\
+        \hline
+        \makecell[l]{Aithēr-Time $\mathcal{N}$} &
+        \makecell[l]{Absolute causal background time of the æther; \\ universal evolution parameter for field action.} &
+        \makecell[l]{Newtonian universal time; \\ background foliation time} \\
+        \hline
+        \makecell[l]{Vortex Proper Time $T_v$} &
+        \makecell[l]{Loop-integrated circulation-based time: \\ $T_v = \oint \frac{dl}{v_\varphi(r)}$; governs vortex energy.} &
+        \makecell[l]{GR proper time on a closed path; \\ orbital period in $\tau$} \\
+        \hline
+        \makecell[l]{Kairos Moment $\kappa$} &
+        \makecell[l]{Irreversible topological bifurcation in vortex structure; \\ signals causal branch or LENR onset.} &
+        \makecell[l]{Quantum transition; \\ symmetry breaking point} \\
         \hline
     \end{tabular}
-    \caption{Key theoretical constructs in the Vortex Æther Model (VAM), mapped to classical and quantum analogs for interpretability.}
+    \caption{Key theoretical constructs in the Vortex Æther Model (VAM), mapped to classical and quantum analogs. Several terms represent distinct modes in VAM's temporal ontology.}
     \label{tab:vam_definitions}
 \end{table}
 
+These constructs provide an intuitive bridge between fluid mechanics, quantum field theory, and emergent spacetime phenomena. In the VAM framework, every interaction term in the Lagrangian evolves along one or more of the time modes listed above, and each conserved quantity—mass, charge, spin—emerges from circulation, helicity, and energy in the ætheric medium.
 
-These constructs provide an intuitive bridge between fluid mechanics, quantum field theory, and emergent spacetime phenomena, facilitating reinterpretation of the Standard Model Lagrangian in a vortex-based æther framework.

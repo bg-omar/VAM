@@ -1,25 +1,28 @@
 \section{Motivation}
 
-The Standard Model Lagrangian is one of the most successful constructs in modern physics, unifying electromagnetic, weak, and strong interactions within a renormalizable quantum field theory. Yet it remains structurally incomplete in a physical sense: its mass terms, symmetry groups, and coupling constants are introduced \textit{a priori}, without geometric or mechanical derivation.
+The Standard Model Lagrangian is one of the most successful constructs in modern physics, unifying electromagnetic, weak, and strong interactions within a renormalizable quantum field theory. Yet it remains structurally incomplete in a physical sense: its mass terms, symmetry groups, and coupling constants are introduced \textit{a priori}, without geometric, mechanical, or temporal derivation.
 
-For instance, the fine-structure constant $\alpha \approx 1/137$ appears as an empirical ratio with no explanation for its value. The elementary charge $e$ and Planck constant $\hbar$ are similarly inserted into the theory to match experimental outcomes, but have no origin within the theory's own framework. Even the Higgs vacuum expectation value (VEV), essential for mass generation, is externally imposed rather than derived.
+For example, the fine-structure constant $\alpha \approx 1/137$ enters as an unexplained ratio. The elementary charge $e$ and Planck constant $\hbar$ are calibrated to fit experimental results, but their physical origin—let alone their numerical values—remains opaque. Even the Higgs vacuum expectation value (VEV), central to mass generation, is imposed externally rather than derived from field dynamics. Most fundamentally, the Standard Model offers no physical basis for the structure or flow of time: quantum states evolve parametrically in $t$, but this time parameter lacks ontological grounding.
 
-The Vortex Æther Model (VAM) addresses these gaps by reconstructing the Standard Model from the ground up using topologically and mechanically grounded vortex structures. Rather than assuming discrete point particles and abstract quantum fields, VAM postulates a compressible, rotating æther medium in which all elementary particles are topologically stable vortex knots. Their observable properties—mass, charge, spin, and even local time—emerge from measurable fluidic parameters such as circulation strength, core radius, helicity, and swirl velocity.
+The Vortex Æther Model (VAM) addresses these gaps by reconstructing the Standard Model from the ground up using a topological fluid dynamic ontology. Rather than postulating discrete point particles and abstract quantum fields, VAM proposes a compressible, rotational æther in which all elementary particles are topologically stable vortex knots. Their observable properties—mass, charge, spin, flavor, and even local clock rate—emerge from conserved fluid quantities: circulation $\Gamma$, core radius $r_c$, helicity $H$, and swirl velocity $C_e$.
 
-In this framework, constants such as $\alpha$ and $\hbar$ are not arbitrary. For example, $\alpha$ is shown to emerge from the swirl geometry of the æther via the dimensionless ratio $\alpha = 2C_e / c$, while $\hbar$ is interpreted as a manifestation of quantized circulation within a vortex structure. These reconstructions offer not only physical intuition, but also potential explanations for why such constants take the values they do. A summary comparison is presented in Table~\ref{tab:SM_vs_VAM_constants}, contrasting key constants across both frameworks.
+In this framework, fundamental constants arise as fluid-dynamical ratios. The fine-structure constant becomes
+\[
+\alpha = \frac{2C_e}{c},
+\]
+emerging from swirl geometry. Planck’s constant $\hbar$ reflects quantized angular momentum stored in coherent vortex loops. Proper time $\tau$, phase time $S(t)$, and vortex loop time $T_v$ all emerge as layered expressions of temporal flow within the æther. The previously unexplained constants are now reinterpreted as invariants of structured vorticity under absolute time $\mathcal{N}$.
 
-This approach aligns with principles established in superfluid dynamics, topological field theory, and analog gravity systems. By expressing Standard Model terms in VAM units and connecting abstract constants to physical flow properties, the model opens pathways to new testable predictions—particularly regarding vacuum energy, neutrino mass generation, and mechanisms of quark confinement.
+A summary comparison is presented in Table~\ref{tab:SM_vs_VAM_constants}, contrasting key constants and assumptions between the Standard Model and the VAM reformulation.
 
-
+This approach builds on principles from superfluid dynamics, analog gravity, and topological field theory. By expressing Lagrangian terms in VAM-native variables and connecting abstract parameters to physically measurable flow structures, the model offers not only explanatory power but also new testable predictions—particularly regarding vacuum energy, neutrino flavor oscillations, and the confinement of color charge within knotted vortex domains.
 
 \subsection*{Unified Constants and Units in VAM}
 
-The table below summarizes the complete set of mechanical and topological quantities used throughout the Vortex Æther Model. These values form a self-contained replacement for Planck-based dimensional analysis.
-
+The table below summarizes the complete set of mechanical and topological quantities used throughout the Vortex Æther Model (VAM). These values form a self-contained replacement for Planck-based dimensional analysis and provide the physical substrate from which mass, charge, time, and coupling emerge.
 
 \begin{table}[H]
     \centering
-    \footnotesize
+    \scriptsize
     \renewcommand{\arraystretch}{1.3}
     \begin{tabular}{|l|l|l|l|}
         \hline
@@ -28,31 +31,31 @@ The table below summarizes the complete set of mechanical and topological quanti
 
         $C_e$ &
         — &
-        Core swirl velocity; sets intrinsic time rate of particles &
+        Core swirl velocity; sets intrinsic time rate and pressure scale &
         $1.09384563 \times 10^6$ m/s \\
         \hline
 
         $r_c$ &
         — &
-        Radius of vortex core; spatial extent of a particle &
+        Vortex core radius; spatial extent of knot energy &
         $1.40897017 \times 10^{-15}$ m \\
         \hline
 
-        $\rho_\text{\ae}$ &
+        $\rho_\text{\ae}^{(\text{energy})}$ &
         — &
-        Æther density; determines flow inertia and stress limits &
+        Æther energy density near the vortex core &
         $3.89343583 \times 10^{18}$ kg/m³ \\
         \hline
 
         $F^{\text{max}}_{\text{\ae}}$ &
-        $\pi r_c^2 C_e \rho_\text{\ae}$ &
-        Max transmissible force through æther (vortex core tension) &
+        $\pi r_c^2 \rho_\text{\ae} C_e^2$ &
+        Maximum vortex tension; ætheric force limit &
         $\sim 29.053507$ N \\
         \hline
 
         $\kappa$ &
         $\frac{\Gamma}{n}$ &
-        Quantum of circulation per vortex loop  quantized $\oint \vec{v} \cdot d\vec{\ell}$ &
+        Circulation quantum per vortex loop &
         $1.54 \times 10^{-9}$ m²/s \\
         \hline
 
@@ -64,49 +67,53 @@ The table below summarizes the complete set of mechanical and topological quanti
 
         $t_p$ &
         $\frac{r_c}{c}$ &
-        Fastest rotation cycle (Planck time analog) &
-        $\sim 5.391247 \times 10^{-44}$ s \\
+        Æther Planck time; minimal topological time unit &
+        $5.391247 \times 10^{-44}$ s \\
         \hline
 
         $\Gamma$ &
         $\oint \vec{v} \cdot d\vec{\ell}$ &
-        Total circulation; encodes angular momentum &
+        Total circulation; quantized vortex strength &
         (typical unit: m²/s) \\
         \hline
 
         $t$ &
         $dt \propto \frac{1}{\vec{v} \cdot \vec{\omega}}$ &
-        Local time rate derived from helicity field configuration &
+        Local time rate from helicity field ($\tau$ or $T_v$) &
         (unit: s) \\
         \hline
 
         $\mathcal{H}_\text{topo}$ &
         $\int \vec{v} \cdot \vec{\omega} \, dV$ &
-        Topological helicity; measures vortex alignment &
+        Helicity integral; topological charge in the æther &
         (unit: m³/s²) \\
         \hline
     \end{tabular}
-    \caption{Fundamental parameters in the Vortex Æther Model (VAM). These quantities form the physical and topological basis for mass, time, charge, and quantum behavior. Each is experimentally meaningful and derivable from ætheric flow geometry.}
+    \caption{Fundamental parameters in the Vortex Æther Model (VAM). These quantities replace Planck-scale dimensional primitives and form the mechanical basis for time dilation, mass generation, and gauge couplings in vortex-based field theory.}
     \label{tab:VAM_master_table}
 \end{table}
 
-
 \subsection*{Derived Couplings and Constants in VAM}
-From the core æther parameters introduced above, several familiar physical constants can be re-expressed as derived quantities. These include the Planck constant, the speed of light, the fine-structure constant, and the elementary charge—all reconstructed as emergent properties of swirl and circulation. Table~\ref{tab:VAM_master_table} summarizes these reformulations.
 
-Within VAM, the maximum vortex interaction force is derived explicitly from Planck-scale physics:
+From the core æther parameters introduced above, several familiar physical constants can be re-expressed as derived quantities. These include Planck’s constant $\hbar$, the speed of light $c$, the fine-structure constant $\alpha$, and the elementary charge $e$—all reconstructed as emergent properties of swirl geometry, vortex inertia, and quantized circulation.
+
+Within VAM, the maximum vortex interaction force is also derived from Planck-scale physics via:
+
 \begin{equation}
-    F^{\text{max}}_{\text{\ae}} = \alpha \left(\frac{c^4}{4G}\right)  \left(\frac{r_c}{l_p}\right)^{-2}\label{eq:FmaxVAMfromGR}
+    F^{\text{max}}_{\text{\ae}} = \alpha \left(\frac{c^4}{4G}\right)  \left(\frac{r_c}{\ell_p}\right)^{-2}
+    \label{eq:FmaxVAMfromGR}
 \end{equation}
 
-where $\frac{c^4}{4G}$ is the Maximum Force in nature $F^{\text{gr}}_\text{max}$, the stress limit of the æther found from General Relativity, and $l_p$ is the Planck Length.
+Here, $\frac{c^4}{4G}$ is the relativistic maximum force $F^{\text{GR}}_\text{max}$ predicted by General Relativity, and $\ell_p$ is the standard Planck length. The swirl-based force limit $F^{\text{max}}_{\text{\ae}}$ recovers this GR quantity when ætheric length scales reduce to $\ell_p$, and provides a vortex-mechanical interpretation otherwise.
+
+This relation anchors vortex tension in known gravitational constants while expressing it in terms of VAM-native units—showing how topological and dynamical fluid variables encode the same scale thresholds known from relativistic field theory.
 
 
 \subsection*{Comparative Origins of Constants: Standard Model vs. VAM}
 
-The re-expression of fundamental constants within VAM highlights a key philosophical and physical distinction: while the Standard Model treats quantities like $\alpha$, $\hbar$, and $e$ as empirical inputs, the Vortex Æther Model derives them from topological and geometric features of the æther flow.
+The re-expression of fundamental constants within VAM highlights a key philosophical and physical distinction: while the Standard Model treats quantities like $\alpha$, $\hbar$, and $e$ as empirical inputs, the Vortex Æther Model derives them from topological and geometric features of æther flow.
 
-The table below contrasts how key constants are introduced or derived in both frameworks.
+The table below contrasts how several key constants are introduced or derived in each framework.
 
 \begin{table}[H]
     \centering
@@ -116,39 +123,41 @@ The table below contrasts how key constants are introduced or derived in both fr
         \hline
         \textbf{Constant} & \textbf{Standard Model Treatment} & \textbf{VAM Derivation / Interpretation} \\
         \hline
+
         \makecell[l]{Fine-Structure \\ Constant $\alpha$} &
-        \makecell[l]{Empirical dimensionless constant \\ for EM interaction strength} &
-        \makecell[l]{Emerges from swirl ratio: \\ $\alpha = \frac{2 C_e}{c}$; purely geometric} \\
+        \makecell[l]{Empirical dimensionless constant \\ for electromagnetic interaction strength} &
+        \makecell[l]{Emerges from swirl ratio: \\ $\alpha = \frac{2 C_e}{c}$ \\ (purely geometric)} \\
         \hline
 
         \makecell[l]{Planck Constant \\ $\hbar$} &
-        \makecell[l]{Postulated quantum of action; \\ enters commutation rules} &
+        \makecell[l]{Postulated quantum of action; \\ enters commutation relations} &
         \makecell[l]{Circulation-induced impulse: \\ $\hbar \sim \rho_\text{\ae} \Gamma r_c^2$} \\
         \hline
 
         \makecell[l]{Elementary \\ Charge $e$} &
-        \makecell[l]{Input coupling in QED \\ with no internal structure} &
-        \makecell[l]{Swirl flux through vortex core: \\ $e \sim \rho_\text{\ae} C_e r_c^2$} \\
+        \makecell[l]{Input parameter in QED \\ with no internal structure} &
+        \makecell[l]{Swirl flux through core: \\ $e \sim \rho_\text{\ae} C_e r_c^2$} \\
         \hline
 
         \makecell[l]{Speed of \\ Light $c$} &
         \makecell[l]{Postulated invariant limit \\ in SR and GR} &
-        \makecell[l]{Calibration limit; \\ signal speed is $C_e < c$ \\ (Lorentz symmetry is emergent)} \\
+        \makecell[l]{Calibration limit; \\ signal speed $C_e < c$ \\ (Lorentz symmetry emergent)} \\
         \hline
 
         \makecell[l]{Higgs VEV \\ $v$} &
-        \makecell[l]{Free symmetry-breaking scale; \\ not derived internally} &
-        \makecell[l]{Ætheric tension amplitude: \\ $v \sim \sqrt{F^{\text{max}}_{\text{\ae}}/\rho_\text{\ae}}$} \\
+        \makecell[l]{Free symmetry-breaking scale \\ not derived from dynamics} &
+        \makecell[l]{Ætheric tension amplitude: \\ $v \sim \sqrt{F^{\text{max}}_{\text{\ae}} / \rho_\text{\ae}}$} \\
         \hline
 
     \end{tabular}
-    \caption{Ontological contrast between the Standard Model and the Vortex Æther Model regarding the origin of key physical constants. VAM replaces empirical insertions with mechanical derivations from swirl and æther geometry.}
+    \caption{Ontological contrast between the Standard Model and the Vortex Æther Model regarding the origin of fundamental constants. In VAM, constants arise as measurable outcomes of vortex geometry and æther dynamics.}
     \label{tab:SM_vs_VAM_constants}
 \end{table}
 
 \section*{Foundational Contrasts: Constants and Particles in VAM vs. SM}
 
-Beyond constants, the Standard Model also posits intrinsic properties of particles—mass, spin, charge, flavor—as axiomatic features of quantized fields. The Vortex Æther Model, by contrast, interprets these as emergent from topological and dynamic features of vortex structures in a rotating æther medium.
+Beyond constants, the Standard Model treats intrinsic properties of particles—mass, spin, charge, flavor—as axiomatic features of quantized fields. The Vortex Æther Model, by contrast, interprets these as emergent from topological and dynamical properties of vortex structures in a rotating æther medium.
+
 \begin{table}[H]
     \centering
     \footnotesize
@@ -157,35 +166,43 @@ Beyond constants, the Standard Model also posits intrinsic properties of particl
         \hline
         \textbf{Particle Property} & \textbf{Standard Model Interpretation} & \textbf{VAM Interpretation} \\
         \hline
-        \makecell[l]{Mass} &
+
+        \textbf{Mass} &
         \makecell[l]{Introduced via Higgs field \\ with arbitrary Yukawa couplings} &
-        \makecell[l]{Emergent from vortex inertia: \\ $m \propto \rho_\text{\ae} \Gamma / C_e$ \\ or tension within knotted core} \\
+        \makecell[l]{Emergent from vortex inertia: \\ $m \propto \rho_\text{\ae} \Gamma / C_e$ \\ or from core tension of knotted flow} \\
         \hline
-        \makecell[l]{Spin} &
-        \makecell[l]{Intrinsic angular momentum \\ ($\hbar/2$ for fermions)} &
-        \makecell[l]{Topological twist of vortex core \\ (e.g., Möbius loop linking)} \\
+
+        \textbf{Spin} &
+        \makecell[l]{Intrinsic angular momentum \\ (e.g., $\hbar/2$ for fermions)} &
+        \makecell[l]{Topological twist of vortex core; \\ Möbius or helical winding} \\
         \hline
-        \makecell[l]{Electric Charge} &
-        \makecell[l]{Coupling to $U(1)$ gauge field; \\ conserved via symmetry} &
-        \makecell[l]{Swirl flux through core: \\ $e \sim \rho_\text{\ae} C_e r_c^2$ \\ (sign from swirl handedness)} \\
+
+        \textbf{Electric Charge} &
+        \makecell[l]{Coupling to $U(1)$ gauge field; \\ conserved by symmetry} &
+        \makecell[l]{Swirl flux through core: \\ $e \sim \rho_\text{\ae} C_e r_c^2$ \\ (sign from handedness)} \\
         \hline
-        \makecell[l]{Flavor (Generations)} &
-        \makecell[l]{Empirically distinct; \\ no structural rationale} &
-        \makecell[l]{Knot complexity or higher-order \\ toroidal mode excitations} \\
+
+        \textbf{Flavor (Generations)} &
+        \makecell[l]{Three empirically distinct \\ generations; unexplained pattern} &
+        \makecell[l]{Knot complexity or higher-order \\ toroidal winding modes} \\
         \hline
-        \makecell[l]{Color Charge} &
-        \makecell[l]{$SU(3)$ triplet charges; \\ source of strong force} &
-        \makecell[l]{Filament braiding states or \\ phase twist between vortices} \\
+
+        \textbf{Color Charge} &
+        \makecell[l]{SU(3) triplet representation; \\ source of QCD confinement} &
+        \makecell[l]{Braided vortex filaments or \\ inter-knot phase entanglement} \\
         \hline
-        \makecell[l]{Antiparticles} &
+
+        \textbf{Antiparticles} &
         \makecell[l]{Charge-conjugated fields \\ with opposite quantum numbers} &
         \makecell[l]{Mirror vortices with opposite \\ helicity and circulation} \\
         \hline
-        \makecell[l]{Mixing (CKM/PMNS)} &
-        \makecell[l]{Unitary matrices for \\ mass eigenstate mixing} &
-        \makecell[l]{Oscillations from vortex coupling \\ or internal torsion precession} \\
+
+        \textbf{Mixing (CKM / PMNS)} &
+        \makecell[l]{Unitary matrices for flavor \\ oscillation in weak interaction} &
+        \makecell[l]{Torsional oscillations or \\ swirl phase coupling between knots} \\
         \hline
+
     \end{tabular}
-    \caption{Ontological contrast between the Standard Model and the Vortex Æther Model in explaining intrinsic particle properties. In VAM, each feature arises from topological structure and flow dynamics within the æther.}
+    \caption{Comparison of particle properties in the Standard Model and the Vortex Æther Model. VAM replaces axiomatic quantum numbers with vortex topologies, swirl geometry, and helicity dynamics in an absolute æther.}
     \label{tab:SM_vs_VAM_particles}
 \end{table}

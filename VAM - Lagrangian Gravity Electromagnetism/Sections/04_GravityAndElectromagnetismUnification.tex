@@ -1,53 +1,73 @@
 \section{Emergence of Gravity and Electromagnetism from Vorticity Fields in the Æther}
 
-In the Vortex Æther Model (VAM), both gravity and electromagnetism arise as macroscopic manifestations of structured vorticity within an incompressible, inviscid superfluid medium. Rather than postulating curved spacetime or abstract gauge fields, VAM replaces these constructs with physical, dynamical vortex structures and swirl-induced energy distributions.
+In the Vortex \AE ther Model (VAM), both gravity and electromagnetism arise as macroscopic manifestations of structured vorticity within an incompressible, inviscid superfluid medium. Rather than postulating curved spacetime or abstract gauge fields, VAM replaces these constructs with physical, dynamical vortex structures and swirl-induced energy distributions.
+
+
+\begin{table}
+    \centering
+    \begin{tabular}{lll}
+        \toprule
+        \textbf{Symbol} & \textbf{Meaning} & \textbf{Use Case} \\
+        \midrule
+          \(\rho_\text{\ae}^{(\text{fluid})}\) & Ambient æther fluid density & Bernoulli, pressure gradients, fluid inertia \\
+          \(\rho_\text{\ae}^{(\text{energy})}\) & Local vortex energy density & Vorticity stress, time dilation, Lagrangian gravity \\
+          \(\rho_\text{\ae}^{(\text{mass})}\) & Vortex core mass density & Used for defining \(\U_{\text{max}} = \rho_\text{mass} c^2\) \\
+        \bottomrule
+    \end{tabular}
+    \caption{}
+    \label{tab:densities}
+\end{table}
 
 \subsection{Gravitational Effects as Swirl Pressure Gradients}
 
-The gravitational field in VAM is derived from the pressure gradient induced by localized swirl energy,
+The gravitational field in VAM emerges from the pressure gradients caused by localized swirl energy:
 \begin{equation}
-\vec{g} = -\frac{1}{\rho_\text{\ae}} \nabla P_{\text{vortex}},
+\vec{g} = -\frac{1}{\rho_\text{\ae}^{(\text{fluid})}} \nabla \left( \frac{1}{2} \rho_\text{\ae}^{(\text{energy})} |\vec{\omega}|^2 \right),
 \end{equation}
-where $P_{\text{vortex}} \sim \frac{1}{2} \rho_\text{\ae} |\vec{\omega}|^2$ and $\vec{\omega} = \nabla \times \vec{v}$ is the vorticity field. Time dilation arises from swirl energy according to:
+where \( \vec{\omega} = \nabla \times \vec{v} \) is the vorticity field. Time dilation is governed by the local energy density:
 \begin{equation}
-dt = dt_\infty \sqrt{1 - \frac{U_{\text{vortex}}}{U_{\text{max}}}},
+dt = dt_\infty \sqrt{1 - \frac{U_{\text{vortex}}}{U_{\text{max}}}}, \qquad
+U_{\text{vortex}} = \frac{1}{2} \rho_\text{\ae}^{(\text{energy})} |\vec{\omega}|^2, \qquad
+U_{\text{max}} = \rho_\text{\ae}^{(\text{mass})} c^2.
 \end{equation}
-with $U_{\text{vortex}} = \frac{1}{2} \rho_\text{\ae} |\vec{\omega}|^2$ and $U_{\text{max}} = \rho_\text{\ae}^\text{core} c^2$. This reproduces the Schwarzschild time dilation in the weak-field limit \cite{MTW1973}.
+This reproduces the Schwarzschild time dilation in the weak-field limit \cite{MTW1973}.
 
-The gravitational constant emerges from core vortex parameters:
+The gravitational constant naturally arises from vortex core parameters:
 \begin{equation}
 G_\text{swirl} = \frac{C_e c^5 t_p^2}{2 F_{\text{max}} r_c^2},
 \end{equation}
-reproducing Newton's $G$ numerically using fundamental æther constants \cite{Iskandarani2025VAM}.
+reproducing Newton's \( G \) numerically from VAM constants \cite{Iskandarani2025VAM}.
 
 \subsection{Electromagnetism as Vortex Chirality and Biot–Savart Structure}
 
-Electric charge is identified with vortex helicity and chirality,
+Electric charge is identified with vortex helicity and circulation:
 \begin{equation}
-q \propto \Gamma \cdot \operatorname{sign}(H), \quad \text{with} \quad H = \int \vec{v} \cdot \vec{\omega} \, d^3x,
+q \propto \Gamma \cdot \operatorname{sign}(H), \qquad H = \int \vec{v} \cdot \vec{\omega} \, d^3x.
 \end{equation}
-and electromagnetic fields are expressions of the rotational structure of the æther:
+Electromagnetic fields correspond to geometric features of the æther flow:
 \begin{equation}
-\vec{E} \sim \nabla \cdot \vec{\omega}, \quad \vec{B} \sim \nabla \times \vec{v}.
+\vec{E} \sim \nabla \cdot \vec{\omega}, \qquad \vec{B} \sim \nabla \times \vec{v}.
 \end{equation}
-Photons emerge as stable toroidal vortex solitons with $H = 0$ and $\Gamma \neq 0$, propagating at $c$ as self-sustaining transverse waves \cite{Battye1998,Ranada1989}.
+Photons are modeled as toroidal vortex solitons with \( H = 0 \), \( \Gamma \neq 0 \), propagating at \( c \) as coherent transverse waves \cite{Battye1998,Ranada1989}.
 
 \subsection{Unified Interpretation}
 
-Under VAM, both forces are unified as different scale manifestations of the same underlying topological fluid dynamics:
+VAM unifies gravitational and electromagnetic interactions through topological fluid dynamics:
 \begin{itemize}
-  \item \textbf{Gravity} = large-scale vortex-induced pressure gradients.
-  \item \textbf{Electromagnetism} = local topological twisting and chirality in vortex knots.
-  \item \textbf{Time} = local phase of swirlclock; dilation is due to vortex energy.
-  \item \textbf{Charge} = topological helicity; conjugation = mirror knot.
+  \item \textbf{Gravity:} Swirl-induced pressure gradients on large scales.
+  \item \textbf{Electromagnetism:} Local vortex chirality and helicity.
+  \item \textbf{Time:} Swirlclock phase from rotational energy.
+  \item \textbf{Charge:} Helicity sign; antiparticles are mirror knots.
 \end{itemize}
 
-This fluid-mechanical reinterpretation restores classical ontology while explaining modern phenomena through vorticity fields in an absolute medium \cite{Iskandarani2025SwirlClocks}.
+This interpretation restores physical ontology to field theory, replacing abstract spacetime and gauge curvature with real, topological æther structures \cite{Iskandarani2025SwirlClocks}.
 
 \section{Unified Vorticity Lagrangian for Gravity and Electromagnetism}
 
-In the Vortex \AE{}ther Model (VAM), both gravitational and electromagnetic phenomena emerge from structured vorticity fields within an incompressible, inviscid superfluid \ae{}ther. Instead of postulating separate field tensors, we posit that all fundamental interactions are encoded in the dynamics of the \ae{}ther flow field $\vec{v}(\vec{x}, t)$ and its derived quantities: vorticity $\vec{\omega} = \nabla \times \vec{v}$ and helicity $H = \int \vec{v} \cdot \vec{\omega} \, d^3x$.
-
+In the Vortex \AE{}ther Model (VAM), both gravitational and electromagnetic phenomena emerge from structured vorticity fields within an incompressible, inviscid superfluid \ae{}ther. Instead of postulating separate field tensors, we posit that all fundamental interactions are encoded in the dynamics of the \ae{}ther flow field $\vec{v}(\vec{x}, t)$ and its derived quantities: vorticity $\vec{\omega}$ and helicity $H$.
+\[
+\vec{\omega} = \nabla \times \vec{v}, \qquad H = \int \vec{v} \cdot \vec{\omega} \, d^3x.
+\]
 \begin{table}[H]
 \centering
 \begin{tabular}{|l|l|l|}
@@ -62,61 +82,80 @@ Helicity & $H = \int \vec{v} \cdot \vec{\omega} \, d^3x$ & Measure of twist + li
 \end{tabular}
 \caption{Key quantities in the Vortex Æther Model.}
 \end{table}
-Assume: incompressible $\nabla \cdot \vec{v} = 0$ , irrotational background flow $\vec{v}_0$, all fields in flat Euclidean 3D space.
 
-\subsection{Proposed Lagrangian Density}
-We propose the following unified Lagrangian density:
+Assume incompressibility \( \nabla \cdot \vec{v} = 0 \), flat 3D Euclidean space, and inviscid flow.
+
+\subsection{Unified Lagrangian Density}
+
+We propose the following Lagrangian:
 \begin{equation}
 \mathcal{L}_{\text{VAM}} =
-\underbrace{\frac{1}{2} \rho_{\ae} |\vec{v}|^2}_{\text{Kinetic}}
-- \underbrace{\frac{1}{2} \rho_{\ae} \lambda_g |\vec{\omega}|^2}_{\text{Gravitational potential}}
+\underbrace{\frac{1}{2} \rho_\text{\ae}^{(\text{fluid})} |\vec{v}|^2}_{\text{Kinetic}}
+- \underbrace{\frac{1}{2} \rho_\text{\ae}^{(\text{energy})} \lambda_g |\vec{\omega}|^2}_{\text{Gravitational potential}}
 + \underbrace{\frac{\alpha_e}{2} (\vec{v} \cdot \vec{\omega})^2}_{\text{Electromagnetic helicity}}
-- \underbrace{V(\vec{\omega})}_{\text{Topological potential}}.
+- \underbrace{V(\vec{\omega})}_{\text{Topological stabilization}}.
 \end{equation}
 
-Where:
-$\lambda_g$: gravitational coupling scale
-$\alpha_e$: electromagnetic coupling (related to fine-structure constant)
-$V(\vec{\omega})$: nonlinear topological self-potential (supports knots, charge quantization)
+With:
+- \( \lambda_g \): gravitational coupling scale,
+- \( \alpha_e \): EM coupling (e.g., \( \sim \alpha \)),
+- \( V(\vec{\omega}) = \mu^2 |\vec{\omega}|^2 + \lambda |\vec{\omega}|^4 \): potential supporting knot solitons.
 
-\paragraph{Kinetic term} $\frac{1}{2} \rho_{\ae} |\vec{v}|^2$: This term defines the inertial energy of the local \ae{}ther flow. It preserves Galilean invariance and forms the baseline energy.
+\paragraph{Kinetic term}
+$\frac{1}{2} \rho_\text{\ae}^{(\text{fluid})} |\vec{v}|^2$:
+This term defines the inertial energy of the local \ae{}ther flow. It preserves Galilean invariance and forms the baseline energy of the incompressible fluid background.
 
-\paragraph{Gravitational potential term} $-\frac{1}{2} \rho_{\ae} \lambda_g |\vec{\omega}|^2$: The squared vorticity acts as an effective gravitational potential, with $\lambda_g$ encoding the coupling scale. This reflects the equivalence between Bernoulli pressure gradients and the gravitational field \cite{helmholtz1858integrals,batchelor2000introduction}.
+\paragraph{Gravitational potential term}
+$-\frac{1}{2} \rho_\text{\ae}^{(\text{energy})} \lambda_g |\vec{\omega}|^2$:
+The squared vorticity acts as an effective gravitational potential, with $\lambda_g$ encoding the gravitational coupling scale. This reflects the equivalence between swirl-induced Bernoulli pressure gradients and gravitational acceleration \cite{helmholtz1858integrals,batchelor2000introduction}.
 
-\paragraph{Electromagnetic helicity term} $+\frac{\alpha_e}{2} (\vec{v} \cdot \vec{\omega})^2$: Helicity is directly linked to topological charge and chirality. This term captures the emergence of electromagnetism as a coupling between flow and rotational twist \cite{moffatt1969degree,kato1990topological}.
+\paragraph{Electromagnetic helicity term}
+$+\frac{\alpha_e}{2} (\vec{v} \cdot \vec{\omega})^2$:
+Helicity is directly linked to topological charge and chirality. This term captures the emergence of electromagnetism as a coupling between bulk æther flow and localized rotational twist \cite{moffatt1969degree,kato1990topological}.
 
-\paragraph{Topological potential} $V(\vec{\omega})$: We include a scalar potential that stabilizes knotted configurations, analogous to the Higgs field, of the form:
+\paragraph{Topological potential}
+$V(\vec{\omega})$:
+We include a scalar potential that stabilizes knotted configurations, analogous to the Higgs mechanism, of the form:
 \begin{equation}
 V(\vec{\omega}) = \mu^2 |\vec{\omega}|^2 + \lambda |\vec{\omega}|^4.
 \end{equation}
-This structure supports quantized vortices with finite energy and enables spontaneous emergence of mass and charge via topological solitons \cite{ranada1990topological,arrayas2017knots}.
+This structure supports quantized vortex knots with finite energy and enables spontaneous emergence of effective mass and charge via topological solitons \cite{ranada1990topological,arrayas2017knots}.
 
 \subsection{Euler--Lagrange Equations}
+
 From the variational principle, the Euler--Lagrange equation for the \ae{}ther velocity field $\vec{v}$ is:
 \begin{equation}
-\frac{\partial \mathcal{L}}{\partial \vec{v}} - \frac{\partial}{\partial t} \left( \frac{\partial \mathcal{L}}{\partial \dot{\vec{v}}} \right) - \nabla \cdot \left( \frac{\partial \mathcal{L}}{\partial (\nabla \vec{v})} \right) = 0.
+\frac{\partial \mathcal{L}}{\partial \vec{v}}
+- \frac{\partial}{\partial t} \left( \frac{\partial \mathcal{L}}{\partial \dot{\vec{v}}} \right)
+- \nabla \cdot \left( \frac{\partial \mathcal{L}}{\partial (\nabla \vec{v})} \right) = 0.
 \end{equation}
 
 Substituting $\mathcal{L}_{\text{VAM}}$, we obtain equations of motion that resemble:
 \begin{equation}
-\rho_{\ae} \left( \frac{\partial \vec{v}}{\partial t} + (\vec{v} \cdot \nabla)\vec{v} \right) = - \nabla P + \lambda_g \rho_{\ae} (\nabla \times \vec{\omega}) - \alpha_e (\vec{v} \cdot \vec{\omega}) \nabla (\vec{v} \cdot \vec{\omega}) + \nabla \cdot \left( \frac{\partial V}{\partial \vec{\omega}} \right).
+\rho_\text{\ae}^{(\text{fluid})} \left( \frac{\partial \vec{v}}{\partial t} + (\vec{v} \cdot \nabla)\vec{v} \right)
+= - \nabla P
++ \lambda_g \rho_\text{\ae}^{(\text{energy})} (\nabla \times \vec{\omega})
+- \alpha_e (\vec{v} \cdot \vec{\omega}) \nabla (\vec{v} \cdot \vec{\omega})
++ \nabla \cdot \left( \frac{\partial V}{\partial \vec{\omega}} \right),
 \end{equation}
-Here, $P$ represents an effective pressure term ensuring incompressibility, and the remaining terms represent gravitational, electromagnetic, and topological forces.
+where $P$ represents the incompressibility-enforcing pressure, and the remaining terms describe gravitational, electromagnetic, and topological force densities.
 
 \subsection{Unification Summary Table}
+
 \begin{table}[H]
 \centering
+\renewcommand{\arraystretch}{1.3}
 \begin{tabular}{|l|l|l|}
 \hline
 \textbf{VAM Term} & \textbf{Physical Role} & \textbf{Standard Model Analogue} \\
 \hline
-$\frac{1}{2} \rho |\vec{v}|^2$ & Inertial/kinetic energy & Field kinetic term \\
-$-\frac{1}{2} \rho \lambda_g |\vec{\omega}|^2$ & Gravitational potential & Newtonian/GR potential $\Phi$ \\
-$\frac{\alpha_e}{2} (\vec{v} \cdot \vec{\omega})^2$ & EM helicity/topological charge & $F_{\mu\nu} F^{\mu\nu}$, $\vec{E}\cdot\vec{B}$ term \\
-$-V(\vec{\omega})$ & Soliton/topological mass & Higgs-like potential \\
+$\frac{1}{2} \rho_\text{\ae}^{(\text{fluid})} |\vec{v}|^2$ & Inertial/kinetic energy & Field kinetic term \\
+$-\frac{1}{2} \rho_\text{\ae}^{(\text{energy})} \lambda_g |\vec{\omega}|^2$ & Gravitational swirl energy & Newtonian potential or metric curvature \\
+$\frac{\alpha_e}{2} (\vec{v} \cdot \vec{\omega})^2$ & Topological charge (EM helicity) & $F_{\mu\nu}F^{\mu\nu}$, $\vec{E}\cdot\vec{B}$ term \\
+$-V(\vec{\omega})$ & Soliton/knot stability & Higgs-like symmetry breaking \\
 \hline
 \end{tabular}
-\caption{Correspondence between VAM Lagrangian terms and their classical field theory analogues.}
+\caption{Correspondence between VAM Lagrangian terms and their classical field theory counterparts.}
 \end{table}
 
 

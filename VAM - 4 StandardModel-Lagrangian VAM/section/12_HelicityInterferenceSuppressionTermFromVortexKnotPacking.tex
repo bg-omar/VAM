@@ -1,0 +1,95 @@
+\section{Helicity Interference Suppression Term from Vortex Knot Packing}
+
+In the Vortex \AE{}ther Model (VAM), mass arises from swirl energy stored in knotted structures within the incompressible \ae{}ther. For composite particles composed of multiple vortex cores (e.g., protons, nuclei), mutual interference between individual swirl fields reduces the net helicity, thereby suppressing effective inertial mass. This is a manifestation of decoherence in swirl clock phase \( S(t) \) and topological alignment over vortex time \( T_v \).
+
+\subsection*{From Naive Energy to Corrected Mass}
+
+We begin with a naive expression for mass derived from internal vortex energy:
+
+\[
+M_0 = \frac{1}{2} \rho_\text{\ae} C_e^2 V
+\]
+
+This raw energy must be amplified by appropriate coupling constants and then corrected for geometric interference and coherence losses. The evolution proceeds through the following stages:
+
+\begin{center}
+\begin{tabular}{|c|l|l|}
+\hline
+\textbf{Level} & \textbf{Formula} & \textbf{Interpretation} \\
+\hline
+0 & \( M_0 = \frac{1}{2} \rho_\text{\ae} C_e^2 V \) & Raw swirl energy \\
+1 & \( M_1 = \frac{4}{\alpha} \cdot M_0 \) & Electromagnetic scaling \\
+2 & \( M_2 = \frac{4}{\alpha \varphi} \cdot M_0 \) & Topological amplification (golden coupling) \\
+3 & \( M_3 = \frac{4}{\alpha \varphi} \cdot M_0 \cdot \xi(n) \cdot \varphi^{-s} \cdot \left( \frac{1}{m} \right)^{3/2} \) & Full coherence, torsion, threading correction \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection*{Coherence Suppression Term \( \xi(n) \)}
+
+To model the interference between \( n \) tightly packed knots, we define a suppression factor:
+
+\begin{equation}
+\boxed{
+\xi(n) = 1 - \beta \cdot \log(n)
+}
+\qquad \text{with } \beta \approx 0.06
+\end{equation}
+
+This logarithmic form reflects the sublinear growth of helicity interference due to angular misalignment and phase cancellation in densely packed composite vortex systems.
+
+In later refinements (Section~\ref{sec:master-mass-formula}), this empirical form is replaced by a golden-ratio derived suppression:
+
+\[
+\boxed{
+\xi(n) = n^{-1/\varphi}
+}
+\]
+
+which is exact, dimensionless, and derivable from the nested interference of swirl clocks in a knotted network.
+
+\paragraph{Temporal Ontology Interpretation:}
+\begin{itemize}
+\item  Misaligned swirl clocks \( S(t) \) among the constituent knots create destructive interference in the energy-bearing modes.
+\item  The more vortex cores interact within a composite knot, the more swirl phases decohere across \( T_v \).
+\item  This leads to a \textbf{nonlinear loss of mass energy}, modeled via \( \xi(n) \).
+\end{itemize}
+
+This suppression term, whether in logarithmic or golden-ratio form, plays a critical role in making mass additive only under specific topological alignment conditions. It is this interference that distinguishes tightly bound baryons from loosely coupled molecular structures in the VAM framework.
+
+\paragraph{Derivation (Temporal Ontology):}
+The total helicity of a multi-core knot system evolves over $T_v$ and is governed by cross-terms in the global action integral over $\mathcal{N}$:
+\begin{equation}
+\mathcal{H}_{\text{total}} = \sum_i \mathcal{H}_i + \sum_{i \neq j} \int_V \vec{v}_i \cdot (\nabla \times \vec{v}_j) \, dV
+\end{equation}
+
+Cross-helicity terms degrade $S(t)$ coherence between adjacent knots and are generally negative:
+\[
+\sum_{i \neq j} \mathcal{H}_{ij} \sim -\log(n)
+\]
+
+This gives an effective helicity:
+\[
+\mathcal{H}_{\text{eff}} \sim n - \log(n)
+\quad \Rightarrow \quad
+\xi(n) = \frac{\mathcal{H}_{\text{eff}}}{n} = 1 - \beta \log(n)
+\]
+
+with $\beta$ encoding the average interference per additional knot.
+
+\paragraph{Refined Mass Formula with Topological Correction:}
+\begin{equation}
+\boxed{
+M = \left( \frac{1}{\varphi} \right) \cdot \left( \frac{4}{\alpha} \right) \cdot \underbrace{\left(1 - \beta \log(n)\right)}_{\text{inter-knot interference}} \cdot \left( \frac{1}{2} \rho_\text{\ae} C_e^2 V \right)
+}
+\end{equation}
+
+\paragraph{Temporal Interpretation:}
+\begin{itemize}
+  \item $\frac{1}{\varphi}$: packing constraint from stable $T_v$ embedding.
+  \item $\frac{4}{\alpha}$: vortex–electromagnetic coupling, derived from $S(t)$ alignment.
+  \item $\xi(n)$: suppression of coherent swirl contribution due to $S(t)$ interference.
+  \item $\rho_\text{\ae} C_e^2 V$: raw swirl energy integrated over local observer frame $\tau$.
+\end{itemize}
+
+This correction accounts for known deviations (e.g., in He–Be systematics) and reveals a fluid-dynamic origin for inertial decoherence in the multi-knot domain of the Vortex \AE{}ther Model.

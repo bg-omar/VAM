@@ -1,0 +1,93 @@
+%! Author = Omar Iskandarani
+%! Title = Swirl Clocks and Vorticity-Induced Gravity
+%! Date = May 23, 2025
+%! Affiliation = Independent Researcher, Groningen, The Netherlands
+%! License = CC-BY 4.0
+%! ORCID = 0009-0006-1686-3961
+%! DOI = 10.5281/zenodo.15566336
+
+\documentclass[12pt,aps,prd,onecolumn,nofootinbib,superscriptaddress]{revtex4-2}
+
+% ==================== Packages ====================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{doi}
+\usepackage{physics}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usetikzlibrary{knots,intersections,decorations.pathreplacing}
+\usetikzlibrary{3d, calc, arrows.meta, positioning}
+\usepackage{pgfmath}
+\usetikzlibrary{decorations.pathmorphing}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18} % or version you have
+\usepackage{bm}          % bold math
+\usepackage{titlesec}    % section formatting (optional)
+\usepackage{float}       % [H] float placement
+\newcommand{\knotgif}[1]{\includegraphics[height=1.2em]{images/#1.gif}}
+% ==================== Metadata ====================
+\begin{document}
+
+    \title{
+        \textbf{On a Vortex-Based Lagrangian Unification of Gravity and Electromagnetism}\\[0.5em]
+        \large Swirlclock Dynamics, Topological Charge, and Emergent Mass \\
+        \normalsize From Knotted Æther Vorticity to Standard Model Reconstruction
+    }
+\author{Omar Iskandarani}
+\email{info@omariskandarani.com}
+\affiliation{Independent Researcher, Groningen, The Netherlands}
+\thanks{ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961}}
+\thanks{DOI: \href{https://doi.org/\paperdoi}{\paperdoi}}
+\thanks{License: CC-BY 4.0 International}
+
+\date{\today}
+
+    \maketitle
+        \begin{abstract}
+            We present the Vortex \AE{}ther Model (VAM), a fluid-dynamical reformulation of gravitation and the Standard Model based on structured vorticity in an incompressible, inviscid superfluid æther. Unlike spacetime curvature or abstract gauge fields, VAM attributes mass, charge, and spin to topologically stable vortex knots and their circulation in a flat Euclidean space with absolute time.
+
+            Fundamental particles emerge as quantized solitons—trefoils, torus knots, and Hopf links—governed by a unified vorticity Lagrangian. Gravitational interaction arises from swirl-induced pressure gradients; electromagnetic fields are encoded in helicity and chirality of vortex structures.
+
+            We introduce a Hamilton–Jacobi formulation based on the swirlclock phase \( S(\vec{x}, t) \), recovering quantization from circulation integrals and deriving a Schrödinger-like wave equation directly from vortex phase dynamics. Phase continuity enforces quantized circulation, while topological interference yields de Broglie relations and vortex-based duality.
+
+            Temporal phenomena—such as time dilation, neutrino oscillations, and $T$-violation—are interpreted as swirlclock decoherence across layered temporal modes. Using a topological master formula, we derive fermion rest masses from vortex energy with sub-percent accuracy for the proton, neutron, and electron.
+
+            Together, these results demonstrate that known physical observables can be recovered from coherent vorticity dynamics without invoking curved spacetime or quantum postulates. VAM provides a physically grounded, mathematically coherent foundation for unification.
+        \end{abstract}
+
+
+        \input{Sections/00_IntroductionAndMotivation}
+        \input{Sections/01_SwirlclockInducedTimeAsymmetry}
+        \input{Sections/02_SwirlclockInterferenceTimeReversalAsymmetryNeutrino}
+        \input{Sections/03_TopologicalOriginOfCharge}
+        \input{Sections/04_GravityAndElectromagnetismUnification}
+        \input{Sections/05_DeriveMaxwellFromLagrangian}
+        \input{Sections/06_DerivingHamiltonianForMasterFormula}
+        \input{Sections/07_Hamilton-Jacobi}
+        \input{Sections/08_TenoiralOntology}
+        \input{Sections/09_ConclusionDiscussion}
+
+    \appendix
+        \input{Appendix/Appendix_1_PhotonAsDipole}
+        \input{Appendix/Appendix_Benchmark1_CoulombLaw}
+        \input{Appendix/Appendix_Benchmark2_MagneticFields}
+        \input{Appendix/Appendix_Benchmark3}
+        \input{Appendix/Appendix_Benchmark4}
+        \input{Appendix/Appendix_Benchmark5}
+    %    \input{Appendix/Appendix_Benchmark6}
+        \input{Appendix/Appendix_Benchmark7}
+        \input{Appendix/Appendix_Benchmark8}
+        \input{Appendix/Appendix_Benchmark9}
+        \input{Appendix/Appendix_Benchmark10}
+
+
+    \bibliographystyle{unsrt}
+    \bibliography{../references}
+
+
+
+\end{document}
