@@ -28,6 +28,16 @@
 \usepackage{bm}          % bold math
 \usepackage{titlesec}    % section formatting (optional)
 \usepackage{float}       % [H] float placement
+\usepackage[export]{adjustbox}
+\usepackage{etoolbox}
+
+% Automatically scale oversized figures
+\AtBeginDocument{%
+  \let\Oldincludegraphics\includegraphics
+  \renewcommand{\includegraphics}[2][]{%
+    \Oldincludegraphics[#1,max width=\linewidth]{#2}%
+  }%
+}
 \newcommand{\knotgif}[1]{\includegraphics[height=1.2em]{images/#1.gif}}
 % ==================== Metadata ====================
 \begin{document}

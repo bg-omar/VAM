@@ -3,52 +3,23 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
-  <component name="CMakePresetLoader">{
-  &quot;useNewFormat&quot;: true
-}</component>
-  <component name="CMakeProjectFlavorService">
-    <option name="flavorId" value="CMakePlainProjectFlavor" />
-  </component>
-  <component name="CMakeReloadState">
-    <option name="reloaded" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
-  </component>
-  <component name="CMakeRunConfigurationManager">
-    <generated>
-      <config projectName="VAM" targetName="vambindings" />
-      <config projectName="VAM" targetName="VAM" />
-      <config projectName="VAM" targetName="test_frenet" />
-    </generated>
-  </component>
-  <component name="CMakeSettings" AUTO_RELOAD="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$">
-    <configurations>
-      <configuration PROFILE_NAME="Debug-MinGW" ENABLED="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" GENERATION_DIR="$PROJECT_DIR$/VAMpyBindings" CONFIG_NAME="Debug" TOOLCHAIN_NAME="MinGW" BUILD_OPTIONS="-j 18" />
-    </configurations>
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="68444c05-2aa5-47b0-a236-1340c65f3f8d" name="Changes" comment="Rename LaTeX files for consistency; add new appendices and sections on vortex dynamics, emergent mass, and entropic gravity; update references and improve document structure.">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="6f2a8139-c825-4497-876b-70e1a130c5c3" name="Changes" comment="Made MASTER paper, VAM4, VAM12.&#10;Added Knot images">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/12-OnAVortexBasedLagrangianUnificationGravityElectromagnetism.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/12-OnAVortexBasedLagrangianUnificationGravityElectromagnetism.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/Appendix/Appendix_Benchmark4.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/Appendix/Appendix_Benchmark4.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/Appendix/Appendix_Benchmark5.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/Appendix/Appendix_Benchmark5.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/Appendix/Appendix_Benchmark7.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/Appendix/Appendix_Benchmark7.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/12-OnAVortexBasedLagrangianUnificationGravityElectromagnetism.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/12-OnAVortexBasedLagrangianUnificationGravityElectromagnetism.pdf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="false" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager">
-    <option name="groupingKeys">
-      <option value="directory" />
-      <option value="module" />
-      <option value="repository" />
-    </option>
-  </component>
-  <component name="ClangdSettings">
-    <option name="formatViaClangd" value="false" />
-  </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug-MinGW" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
       </list>
     </option>
@@ -65,55 +36,13 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="fixing-the-issues-to-make-it-an-completer-theory" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RESET_MODE" value="HARD" />
-    <option name="ROOT_SYNC" value="DONT_SYNC" />
-  </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;bg-omar&quot;
-  }
-}</component>
-  <component name="GitRewordedCommitMessages">
-    <option name="commitMessagesMapping">
-      <RewordedCommitMessageMapping>
-        <option name="originalMessage" value="Hernoem LaTeX-bestanden, update bestandslocaties en pas bibliografie aan voor consistentie" />
-        <option name="rewordedMessage" value="Vertaal sectietitel 'Introduction' naar 'Introductie' in 01_introductie.tex&#10;&#10;&#10;Hernoem LaTeX-bestanden, update bestandslocaties en pas bibliografie aan voor consistentie" />
-      </RewordedCommitMessageMapping>
-    </option>
-    <option name="currentCommit" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
-    <option name="onto" value="0d85797c6bb54c6deb68eace01c41df37f466c17" />
-  </component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/bg-omar/VAM.git&quot;,
-    &quot;accountId&quot;: &quot;647b0fab-903b-45ad-bf58-2fa2998656f4&quot;
-  }
-}</component>
-  <component name="InvalidFacetManager">
-    <ignored-facets>
-      <facet id="VAM/invalid/Python" />
-    </ignored-facets>
-  </component>
-  <component name="ProjectApplicationVersion">
-    <option name="ide" value="CLion" />
-    <option name="majorVersion" value="2025" />
-    <option name="minorVersion" value="1.2" />
-    <option name="productBranch" value="Classic" />
   </component>
   <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 0
 }</component>
-  <component name="ProjectId" id="2tD0dfUVaCR8QzGC1eMxiZGO4Sj" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2zPT543xrOdyBDBtIng3qH9d2ET" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="sortByType" value="true" />
@@ -121,422 +50,65 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "BibTeX.0-Einsteins Æther bibliography.executor": "Run",
-    "BibTeX.000_Æther bibliography.executor": "Run",
-    "BibTeX.00_Periodeic_Table bibliography.executor": "Run",
-    "BibTeX.00_Tijdsdilatatie_in_3D_Superfluïde_Æther_Model bibliography.executor": "Run",
-    "BibTeX.00_Time_Dilation_in_3D_Superfluid_Æther_Model bibliography.executor": "Run",
-    "BibTeX.00_VAM bibliography.executor": "Run",
-    "BibTeX.00_Æther bibliography.executor": "Run",
-    "BibTeX.01_inleiding bibliography.executor": "Run",
-    "BibTeX.1-Tijdsdilatatie_in_3D_Superfluïde_Æther_Model bibliography.executor": "Run",
-    "BibTeX.1-Time_Dilation_in_3D_Superfluid_Æther_Model bibliography.executor": "Run",
-    "BibTeX.10-MilkyWay_as_a_Chiral_Swirl-Knot_Network bibliography.executor": "Run",
-    "BibTeX.10-Swirl-Induced Curvature as the Mechanism of Gravitation in the Vortex Æther Model bibliography.executor": "Run",
-    "BibTeX.2-Swirl_Clocks_Appendices bibliography.executor": "Run",
-    "BibTeX.2-Swirl_Clocks_and_Vorticity-Induced_Gravity bibliography.executor": "Run",
-    "BibTeX.2-Wervelklokken_en_vorticiteit_geïnduceerde_zwaartekracht bibliography.executor": "Run",
-    "BibTeX.3-Benchmarking_Vortex_Æther_Model_vs_General_Relativity bibliography.executor": "Run",
+    "BibTeX.12-OnAVortexBasedLagrangianUnificationGravityElectromagnetism bibliography.executor": "Run",
     "BibTeX.4-StandardModel-Lagrangian VAM bibliography.executor": "Run",
-    "BibTeX.5-StandardModel-Lagrangian VAM bibliography.executor": "Run",
     "BibTeX.5-Topological_Fluid_Dynamic_Lagrangian_In_VAM bibliography.executor": "Run",
-    "BibTeX.530_FundamentalEquationsOfVortexDynamics bibliography.executor": "Run",
-    "BibTeX.6-Core_Foundations_VAM bibliography.executor": "Run",
-    "BibTeX.7-Philosophical_Depth_Companion bibliography.executor": "Run",
-    "BibTeX.Appendix_5D_vortex_aether_model bibliography.executor": "Run",
-    "BibTeX.Appendix_ErikVerlindeConclusions bibliography.executor": "Run",
-    "BibTeX.Beyond_Spacetime_Gravity_Time_Vorticity bibliography.executor": "Run",
-    "BibTeX.EmergentGeneralRelativityFromStructuredSwirlDynamicsInVAM bibliography.executor": "Run",
-    "BibTeX.EntropicGravity_VariableLightSpeed_Torsion bibliography.executor": "Run",
-    "BibTeX.From_Quantum_Constants_to_Galactic_Swirl bibliography.executor": "Run",
-    "BibTeX.GR_in_3d bibliography.executor": "Run",
+    "BibTeX.EMlagrangian.executor": "Run",
     "BibTeX.LagrangianGravityElectromagnetism bibliography.executor": "Run",
-    "BibTeX.VAM-AssumptionsInconsistenciesAndPredictedPhenomena bibliography.executor": "Run",
-    "BibTeX.XX-APPENDIX_BUNDLE bibliography.executor": "Run",
-    "BibTeX.XX-VorticityEquation bibliography.executor": "Run",
-    "BibTeX.appendix_1 bibliography.executor": "Run",
-    "BibTeX.appendix_2 bibliography.executor": "Run",
-    "BibTeX.appendix_3 bibliography.executor": "Run",
-    "BibTeX.appendix_B_Derivation_Of_Gswirl bibliography.executor": "Run",
-    "BibTeX.appendix_C_ExperimentalValidationOfVortexCoreTangientalVelocity bibliography.executor": "Run",
-    "BibTeX.appendix_D_ExperimentalValidationOfGravitationalPotential bibliography.executor": "Run",
-    "BibTeX.appendix_Taxonomy_of_knots bibliography.executor": "Run",
-    "BibTeX.derivation_of_ÆtherDensity bibliography.executor": "Run",
-    "BibTeX.main bibliography.executor": "Run",
-    "BibTeX.vam-standalone bibliography.executor": "Run",
-    "BibTeX.vammain bibliography.executor": "Run",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "LaTeX.0-Einsteins Æther.executor": "Run",
-    "LaTeX.00-scaleDependentÆtherDensity.executor": "Run",
-    "LaTeX.000_Æther.executor": "Run",
-    "LaTeX.00_Introduction.executor": "Run",
-    "LaTeX.00_Periodeic_Table.executor": "Run",
-    "LaTeX.00_Tijdsdilatatie_in_3D_Superfluïde_Æther_Model.executor": "Run",
-    "LaTeX.00_Time_Dilation_in_3D_Superfluid_Æther_Model.executor": "Run",
-    "LaTeX.00_VAM.executor": "Run",
-    "LaTeX.00_aether_time_dilation.executor": "Run",
-    "LaTeX.00_aether_time_dilation_OG.executor": "Run",
-    "LaTeX.00_Æther.executor": "Run",
-    "LaTeX.01_TIME_DILATION_FROM_VORTEX_DYNAMICS.executor": "Run",
-    "LaTeX.01_Time_Dilation_from_Vortex_Dynamics.executor": "Run",
-    "LaTeX.01_inleiding.executor": "Run",
-    "LaTeX.01_tijdsdilatatie_van_vortex_dynamiek.executor": "Run",
-    "LaTeX.02_motivation.executor": "Run",
-    "LaTeX.02_supervloeistof_æther_geraamte.executor": "Run",
-    "LaTeX.03_natural_æther_constants.executor": "Run",
-    "LaTeX.06_VAM_Vortex_Scattering_Framework_Inspired_by_Elastic_Theory.executor": "Run",
-    "LaTeX.09_VAMvsGR_Overeenkomstige_Voorspellingen.executor": "Run",
-    "LaTeX.09_gravitational_waves.executor": "Run",
-    "LaTeX.1-Tijdsdilatatie_in_3D_Superfluïde_Æther_Model.executor": "Run",
-    "LaTeX.1-Time_Dilation_in_3D_Superfluid_Æther_Model.executor": "Run",
-    "LaTeX.10-MilkyWay_as_a_Chiral_Swirl-Knot_Network.executor": "Run",
-    "LaTeX.10-Swirl-Induced Curvature as the Mechanism of Gravitation in the Vortex Æther Model.executor": "Run",
-    "LaTeX.100_PhotonVortexDipole.executor": "Run",
-    "LaTeX.11-Master_Equation_for_Particle_Masses.executor": "Run",
-    "LaTeX.2-Swirl_Clocks_Appendices.executor": "Run",
-    "LaTeX.2-Swirl_Clocks_and_Vorticity-Induced_Gravity.executor": "Run",
-    "LaTeX.2-Wervelklokken_en_vorticiteit_geïnduceerde_zwaartekracht.executor": "Run",
-    "LaTeX.2_superfluid_æther_framework.executor": "Run",
-    "LaTeX.3-Benchmarking_Vortex_Æther_Model_vs_General_Relativity.executor": "Run",
-    "LaTeX.4-Engineering_Gravity_Superluminal_Communication_and_LENR_with_VAM.executor": "Run",
+    "BibTeX.Master Paper-VAM bibliography.executor": "Run",
+    "BibTeX.appendix_QuantizationOfVAM bibliography.executor": "Run",
+    "LaTeX.12-OnAVortexBasedLagrangianUnificationGravityElectromagnetism.executor": "Run",
     "LaTeX.4-StandardModel-Lagrangian VAM.executor": "Run",
-    "LaTeX.5-StandardModel-Lagrangian VAM.executor": "Run",
-    "LaTeX.5-Topological.executor": "Run",
     "LaTeX.5-Topological_Fluid_Dynamic_Lagrangian_In_VAM.executor": "Run",
-    "LaTeX.5-VAM - 5.executor": "Run",
-    "LaTeX.530_FundamentalEquationsOfVortexDynamics.executor": "Run",
-    "LaTeX.6-Core_Foundations_VAM.executor": "Run",
-    "LaTeX.6-VAM-Æther.executor": "Run",
-    "LaTeX.7-Philosophical_Depth_Companion.executor": "Run",
-    "LaTeX.9-Torus_Knots_as_Elements_Periodic_Table.executor": "Run",
-    "LaTeX.Appendix.executor": "Run",
-    "LaTeX.Appendix_3D_vortex_aether_model.executor": "Run",
-    "LaTeX.Appendix_5D_vortex_aether_model.executor": "Run",
-    "LaTeX.Appendix_ColdFusion.executor": "Run",
-    "LaTeX.Appendix_ErikVerlindeConclusions.executor": "Run",
-    "LaTeX.Appendix_ExplanationsFoundationalPhysicsAnomalies.executor": "Run",
-    "LaTeX.Appendix_PhotonCapacitor.executor": "Run",
-    "LaTeX.Appendix_all.executor": "Run",
-    "LaTeX.Appendix_beam_swirl_interaction.executor": "Run",
-    "LaTeX.Appendix_deriveFmax.executor": "Run",
-    "LaTeX.Appendix_derivingGravitationalConstant.executor": "Run",
-    "LaTeX.Appendix_ÆthericNow.executor": "Run",
-    "LaTeX.Appendixes.executor": "Run",
-    "LaTeX.Beyond_Spacetime_Gravity_Time_Vorticity.executor": "Run",
-    "LaTeX.CropCircles.executor": "Run",
-    "LaTeX.DerivationElectrostatic.executor": "Run",
-    "LaTeX.EmergentGeneralRelativityFromStructuredSwirlDynamicsInVAM.executor": "Run",
-    "LaTeX.EntropicGravity_VariableLightSpeed_Torsion.executor": "Run",
-    "LaTeX.From_Quantum_Constants_to_Galactic_Swirl.executor": "Run",
-    "LaTeX.GR_in_3d.executor": "Run",
+    "LaTeX.Appendix_PhotonAsDipole.executor": "Run",
     "LaTeX.LagrangianGravityElectromagnetism.executor": "Run",
-    "LaTeX.NewNowNotations.executor": "Run",
-    "LaTeX.Swirl-Induced Curvature as the Mechanism of Gravitation in the Vortex Æther Model.executor": "Run",
-    "LaTeX.Tijdsdilatatie.executor": "Run",
-    "LaTeX.TopologicalConstructionStandardModelParticlesVAM.executor": "Run",
-    "LaTeX.VAM-AssumptionsInconsistenciesAndPredictedPhenomena.executor": "Run",
-    "LaTeX.VAM.executor": "Run",
-    "LaTeX.VAM_Gravity_LERN_ftl.executor": "Run",
-    "LaTeX.XX-APPENDIX_BUNDLE.executor": "Run",
-    "LaTeX.XX-VorticityEquation.executor": "Run",
-    "LaTeX.appendix_1.executor": "Run",
-    "LaTeX.appendix_2.executor": "Run",
-    "LaTeX.appendix_3.executor": "Run",
-    "LaTeX.appendix_3_jamesclerckmaxwell_on_æther.executor": "Run",
-    "LaTeX.appendix_B_Derivation_Of_Gswirl.executor": "Run",
-    "LaTeX.appendix_C_ExperimentalValidationOfVortexCoreTangientalVelocity.executor": "Run",
-    "LaTeX.appendix_D_ExperimentalValidationOfGravitationalPotential.executor": "Run",
-    "LaTeX.appendix_F_LorentzInvariance.executor": "Run",
-    "LaTeX.appendix_Light_Vortex.executor": "Run",
-    "LaTeX.appendix_Taxonomy_of_knots.executor": "Run",
-    "LaTeX.appendix_afleiding_massa.executor": "Run",
-    "LaTeX.derivation_of_ÆtherDensity.executor": "Run",
-    "LaTeX.main.executor": "Run",
-    "LaTeX.main_1.executor": "Run",
-    "LaTeX.sampleLatex.executor": "Run",
-    "LaTeX.test_gnuplot.executor": "Run",
-    "LaTeX.vam-standalone.executor": "Run",
-    "LaTeX.vam_enhanced.executor": "Run",
-    "LaTeX.vam_gr_benchmark.executor": "Run",
-    "LaTeX.vammain.executor": "Run",
-    "LaTeX.Æther.executor": "Run",
-    "Makeindex.2-Swirl_Clocks_and_Vorticity-Induced_Gravity makeglossaries.executor": "Run",
-    "Python.00-scaleDependentÆtherDensity.executor": "Run",
-    "Python.00_R_r_horn_swindle_side_torus.executor": "Run",
-    "Python.00_scaleDependentÆtherDensity.executor": "Run",
-    "Python.01-streamlinesDiPole.executor": "Run",
-    "Python.01_Starship-MultiLayer-18.executor": "Run",
-    "Python.01_Starship-MultiLayer-24.executor": "Run",
-    "Python.01_Starship-MultiLayer-3phase-27x3points.executor": "Run",
-    "Python.02-RadialProfileOfLocalTimeDilation.executor": "Run",
-    "Python.02_Starship-2 inv.executor": "Run",
-    "Python.02_Starship-3phase-36points.executor": "Run",
-    "Python.03_Starship-3phase-36points-18 bidirectional.executor": "Run",
-    "Python.03_magnetic round coil.executor": "Run",
-    "Python.04-RotationalVsHeuristicTimeDilation.executor": "Run",
-    "Python.04_WaveFunctionVAM_QM.executor": "Run",
-    "Python.05-LogarithmicDecayLocalTime.executor": "Run",
-    "Python.05_lifterThrust.executor": "Run",
-    "Python.06-HeuristicTimeDilation.executor": "Run",
-    "Python.06-TimeDilationGRVsVAM.executor": "Run",
-    "Python.06-TimeDilationGRVsVAMModelNucleonMassPerVortex.executor": "Run",
-    "Python.07-Photon-ConfiningVortexThreadGravitation.executor": "Run",
-    "Python.09-CombinedTimeDilationSurface.executor": "Run",
-    "Python.0_UraniumKnoop.executor": "Run",
-    "Python.0_eersteKnopen.executor": "Run",
-    "Python.1-WervelkernKlok.executor": "Run",
-    "Python.1_vortexknopen.executor": "Run",
-    "Python.1s2soorbitals.executor": "Run",
-    "Python.2_elementenTorusknopen.executor": "Run",
-    "Python.2d radial magnet.executor": "Run",
-    "Python.3-TijdsdilatatieBeweging.executor": "Run",
-    "Python.3d empty space.executor": "Run",
-    "Python.4-GravitationeleÆtherinstroom.executor": "Run",
-    "Python.5-BaanRondMassa.executor": "Run",
-    "Python.6-HorizonTijdsbevriezing.executor": "Run",
-    "Python.6_swirlRichting.executor": "Run",
-    "Python.7-TijdsvertragingRelatieveBeweging.executor": "Run",
-    "Python.7_Slijten_Verbinden.executor": "Run",
-    "Python.8knot.executor": "Run",
-    "Python.Animate.executor": "Run",
-    "Python.BeamExite.executor": "Run",
-    "Python.BeamSwirl.executor": "Run",
-    "Python.Biot-Savart.executor": "Run",
-    "Python.C_e.executor": "Run",
-    "Python.CalculateHelicityForKnots.executor": "Run",
-    "Python.CalculateNeucleusMass.executor": "Run",
-    "Python.CanonicalGRPredictions.executor": "Run",
-    "Python.CombinedTimeDilationSurface.executor": "Run",
-    "Python.ESHFieldLines.executor": "Run",
-    "Python.Electron Node1.executor": "Run",
-    "Python.FatTreFoil.executor": "Run",
-    "Python.GR_Benchmark.executor": "Run",
-    "Python.GR_Observables.executor": "Run",
-    "Python.GR_VAM.executor": "Run",
-    "Python.GR_VS_VAM.executor": "Run",
-    "Python.GR_in_3d.executor": "Run",
-    "Python.GRvsSwirl.executor": "Run",
-    "Python.HarmonicResonance.executor": "Run",
-    "Python.LifterInwardFieldlines.executor": "Run",
-    "Python.LifterVsStarshipFields.executor": "Run",
-    "Python.MagneticCircleRodin.executor": "Run",
-    "Python.MoleculeCalculator.executor": "Run",
+    "LaTeX.Master Paper-VAM.executor": "Run",
+    "LaTeX.ONLINE-From_Quantum_Constants_to_Galactic_Swirl.executor": "Run",
+    "LaTeX.VAM_framework.executor": "Run",
+    "LaTeX.appendix_QuantizationOfVAM.executor": "Run",
+    "LaTeX.testknot.executor": "Run",
+    "Python.6_2_topview.executor": "Run",
+    "Python.Helicity.executor": "Run",
     "Python.MoleculeWeight.executor": "Run",
-    "Python.NODES.executor": "Run",
-    "Python.NeutronStarTimeDilation.executor": "Run",
-    "Python.NewGraph.executor": "Run",
-    "Python.Photon-ConfiningVortexThreadGravitation.executor": "Run",
-    "Python.PhotonGravityStandingWave.executor": "Run",
-    "Python.PressureProfileAroundCore.executor": "Run",
-    "Python.QED-VAM.executor": "Run",
-    "Python.RadialProfileOfLocalTimeDilation.executor": "Run",
-    "Python.Rodin-fields.executor": "Run",
-    "Python.Rodin_magnetic_fields.executor": "Run",
-    "Python.RotationalVsHeuristicTimeDilation.executor": "Run",
-    "Python.ScanCropperAligner.executor": "Run",
-    "Python.SiOperatorsVerification.executor": "Run",
-    "Python.SimulatedStarshipCoilPulsedVortexThrust.executor": "Run",
-    "Python.Starship-3phase-27x3points.executor": "Run",
-    "Python.Starship-MultiLayer-3phase-27x3points.executor": "Run",
-    "Python.SwirlClockInterference.executor": "Run",
-    "Python.SwirlVSGauge.executor": "Run",
-    "Python.ThrustVsVoltage.executor": "Run",
+    "Python.TemporalOntology.executor": "Run",
     "Python.TimeConstruct.executor": "Run",
-    "Python.TimeDilationCore.executor": "Run",
-    "Python.VAM_Benchmark.executor": "Run",
-    "Python.VAM_Benchmark2.executor": "Run",
-    "Python.VAM_GR_ISCO_Benchmark.executor": "Run",
-    "Python.VelocityFieldSurroundingATrefoilVortexKnot.executor": "Run",
-    "Python.WaveFunctionVAM_QM.executor": "Run",
-    "Python.WervelInOorsprong.executor": "Run",
-    "Python.beam-swirl-spectral-overlap.executor": "Run",
-    "Python.bib_cleaner_keep_best_entry.executor": "Run",
-    "Python.blackbody_vs_vortexwavevelocity.executor": "Run",
-    "Python.cilinder filled.executor": "Run",
-    "Python.combined_flow.executor": "Run",
-    "Python.cropper.executor": "Run",
-    "Python.cylinder_flow.executor": "Run",
-    "Python.diabolo.executor": "Run",
-    "Python.dipole.executor": "Run",
-    "Python.dodeca.executor": "Run",
-    "Python.doublestarship.executor": "Run",
-    "Python.doublestarshipteste.executor": "Run",
-    "Python.electron_decay1s orbitals.executor": "Run",
-    "Python.equations.executor": "Run",
-    "Python.exitation.executor": "Run",
-    "Python.galaxyRotation.executor": "Run",
-    "Python.gauge_swirl_equivalence.executor": "Run",
-    "Python.helical_coil.executor": "Run",
-    "Python.helical_coil_DC.executor": "Run",
-    "Python.helical_coil_SYCL.executor": "Run",
-    "Python.helix.executor": "Run",
-    "Python.kerrlike.executor": "Run",
-    "Python.lamb-chaplygn dipole.executor": "Run",
-    "Python.lamb-chaplygn dipole3D.executor": "Run",
-    "Python.localTime.executor": "Run",
-    "Python.magnetic round coil.executor": "Run",
-    "Python.magneticCircle.executor": "Run",
-    "Python.new.executor": "Run",
-    "Python.orbitals.executor": "Run",
-    "Python.photonAnimation.executor": "Run",
-    "Python.plotknots.executor": "Run",
-    "Python.references_case-harmonizer.executor": "Run",
-    "Python.references_cleaner_keep_best_entry.executor": "Run",
-    "Python.rodin.executor": "Run",
-    "Python.rodin_double.executor": "Run",
-    "Python.roding_field_animation.executor": "Run",
-    "Python.rotating_current_rodin_fields.executor": "Run",
-    "Python.schodinger_probability.executor": "Run",
-    "Python.schodinger_probability3D.executor": "Run",
-    "Python.spinTransportVectors.executor": "Run",
-    "Python.spindel and horn torus.executor": "Run",
-    "Python.spinner.executor": "Run",
-    "Python.starship-coil.executor": "Run",
-    "Python.starship.executor": "Run",
-    "Python.starshipCircleMagnets.executor": "Run",
-    "Python.streamlines_dipole.executor": "Run",
-    "Python.swirltorus rgb differences.executor": "Run",
-    "Python.swirltorus.executor": "Run",
-    "Python.swirltorus2_stars.executor": "Run",
-    "Python.swirltorus36 knots.executor": "Run",
-    "Python.swirltorusses.executor": "Run",
-    "Python.torus in torus.executor": "Run",
-    "Python.torus.executor": "Run",
-    "Python.torusspirals.executor": "Run",
-    "Python.trefoil_field_lines.executor": "Run",
-    "Python.trefoil_fields.executor": "Run",
-    "Python.tripleHelix.executor": "Run",
-    "Python.unknotNeutrino.executor": "Run",
-    "Python.vam vs schodinger.executor": "Run",
-    "Python.vamBindings.executor": "Run",
-    "Python.vortex flow electron orbital diagram.executor": "Run",
-    "Python.vortex_2d.executor": "Run",
-    "Python.vortex_3d.executor": "Run",
-    "Python.vorticity_field.executor": "Run",
-    "Python.ÆthericNow.executor": "Run",
+    "Python.proton_neutron_weigth.executor": "Run",
+    "Python.testknot.executor": "Run",
+    "Python.vam_vs_gr_potential_plot.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "RunOnceActivity.west.config.association.type.startup.service": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "false",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "deletionFromPopupRequiresConfirmation": "false",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "jdk.selected.LATEX_MODULE_TYPE": "MiKTeX Windows SDK",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/mr/IdeaProjects/VAM/VAM - 4 StandardModel-Lagrangian VAM/section",
+    "last_opened_file_path": "C:/Users/mr/IdeaProjects/VAM/VAM - Lagrangian Gravity Electromagnetism/images",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.28735632",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "C:\\Users\\Omar.Iskandarani\\AppData\\Local\\Programs\\IntelliJ IDEA Ultimate 2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="PyConsoleOptionsProvider">
-    <option name="myPythonConsoleState">
-      <console-settings working-directory="$USER_HOME$/anaconda3/bin">
-        <option name="myWorkingDirectory" value="$USER_HOME$/anaconda3/bin" />
-      </console-settings>
-    </option>
-  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\mr\IdeaProjects\VAM\VAM - 4 StandardModel-Lagrangian VAM\section" />
-      <recent name="C:\Users\mr\IdeaProjects\VAM\VAM - Appendix All\sections" />
-      <recent name="C:\Users\mr\IdeaProjects\VAM\good illustrations" />
-      <recent name="C:\Users\mr\IdeaProjects\VAM\VAM - 2 Swirl Clocks" />
-      <recent name="C:\Users\mr\IdeaProjects\VAM\VAM - Appendix All" />
+      <recent name="C:\Users\mr\IdeaProjects\VAM\VAM - Lagrangian Gravity Electromagnetism\images" />
+      <recent name="C:\Users\mr\IdeaProjects\VAM\VAM-MASTER Paper" />
+      <recent name="C:\Users\mr\IdeaProjects\VAM\VAM - 4 StandardModel-Lagrangian VAM" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mr\IdeaProjects\VAM\out" />
+      <recent name="C:\Users\mr\IdeaProjects\VAM" />
+      <recent name="C:\Users\mr\IdeaProjects\VAM\VAM-MASTER Paper" />
       <recent name="C:\Users\mr\IdeaProjects\VAM\VAM - 4 StandardModel-Lagrangian VAM\section" />
-      <recent name="C:\workspace\solo_projects\VAM" />
-      <recent name="C:\workspace\solo_projects\VAM\VAM - 2 Swirl Clocks" />
-      <recent name="C:\workspace\solo_projects\VAM\VAM - 3 Benchmarking Relativity" />
-      <recent name="C:\workspace\solo_projects\VAM\VAM - 1 TimeDilation" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
-      </method>
-    </configuration>
-    <configuration default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" type="PythonConfigurationType" factoryName="Python">
-      <module name="VAMpy" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
-      <option name="ADD_SOURCE_ROOTS" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="10-MilkyWay_as_a_Chiral_Swirl-Knot_Network bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-bibtex>
-        <compiler>BIBTEX</compiler>
+    <configuration default="true" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify>
+        <compiler>PDFLATEX</compiler>
         <compiler-path />
-        <compiler-arguments />
-        <envs />
-        <main-file>$PROJECT_DIR$/VAM - 10 MilkyWay as a Chiral Swirl-Knot Network/10-MilkyWay_as_a_Chiral_Swirl-Knot_Network.tex</main-file>
-        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
-        <latex-distribution>MIKTEX</latex-distribution>
-      </texify-bibtex>
-      <method v="2" />
-    </configuration>
-    <configuration name="10-Swirl-Induced Curvature as the Mechanism of Gravitation in the Vortex Æther Model bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-bibtex>
-        <compiler>BIBTEX</compiler>
-        <compiler-path />
-        <compiler-arguments />
-        <envs />
-        <main-file>$PROJECT_DIR$/VAM - 10 MilkyWay as a Chiral Swirl-Knot Network/10-Swirl-Induced Curvature as the Mechanism of Gravitation in the Vortex Æther Model.tex</main-file>
-        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
-        <latex-distribution>MIKTEX</latex-distribution>
-      </texify-bibtex>
-      <method v="2" />
-    </configuration>
-    <configuration name="4-StandardModel-Lagrangian VAM bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-bibtex>
-        <compiler>BIBTEX</compiler>
-        <compiler-path />
-        <compiler-arguments />
-        <envs />
-        <main-file>$PROJECT_DIR$/VAM - 4 StandardModel-Lagrangian VAM/4-StandardModel-Lagrangian VAM.tex</main-file>
-        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
-        <latex-distribution>MIKTEX</latex-distribution>
-      </texify-bibtex>
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-bibtex>
-        <compiler />
-        <compiler-path />
-        <sumatra-path />
-        <pdf-viewer>SUMATRA</pdf-viewer>
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <require-focus>true</require-focus>
         <viewer-command />
         <compiler-arguments />
         <envs />
@@ -554,9 +126,193 @@
       </texify>
       <method v="2" />
     </configuration>
+    <configuration default="true" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <require-focus>true</require-focus>
+        <viewer-command />
+        <compiler-arguments />
+        <envs />
+        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
+        <before-run-command />
+        <main-file />
+        <output-path>{projectDir}/out</output-path>
+        <auxil-path>{projectDir}/auxil</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>MIKTEX</latex-distribution>
+        <has-been-run>false</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <require-focus>true</require-focus>
+        <viewer-command />
+        <compiler-arguments />
+        <envs />
+        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
+        <before-run-command />
+        <main-file />
+        <output-path>{projectDir}/out</output-path>
+        <auxil-path>{projectDir}/auxil</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>MIKTEX</latex-distribution>
+        <has-been-run>false</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <require-focus>true</require-focus>
+        <viewer-command />
+        <compiler-arguments />
+        <envs />
+        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
+        <before-run-command />
+        <main-file />
+        <output-path>{projectDir}/out</output-path>
+        <auxil-path>{projectDir}/auxil</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>MIKTEX</latex-distribution>
+        <has-been-run>false</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
+    <configuration name="12-OnAVortexBasedLagrangianUnificationGravityElectromagnetism bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler>BIBTEX</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/12-OnAVortexBasedLagrangianUnificationGravityElectromagnetism.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
+        <latex-distribution>MIKTEX</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration name="4-StandardModel-Lagrangian VAM bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler>BIBTEX</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/VAM - 4 StandardModel-Lagrangian VAM/4-StandardModel-Lagrangian VAM.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
+        <latex-distribution>MIKTEX</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration name="5-Topological_Fluid_Dynamic_Lagrangian_In_VAM bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler>BIBTEX</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/VAM - 5/5-Topological_Fluid_Dynamic_Lagrangian_In_VAM.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
+        <latex-distribution>MIKTEX</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration name="EMlagrangian" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler>BIBTEX</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/12-OnAVortexBasedLagrangianUnificationGravityElectromagnetism.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
+        <latex-distribution>MIKTEX</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration name="Master Paper-VAM bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler>BIBTEX</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/VAM-MASTER Paper/Master Paper-VAM.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
+        <latex-distribution>MIKTEX</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration name="ONLINE-From_Quantum_Constants_to_Galactic_Swirl bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler>BIBTEX</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/VAM - 2 Swirl Clocks/ONLINE-From_Quantum_Constants_to_Galactic_Swirl.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
+        <latex-distribution>MIKTEX</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration name="VAM_framework bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler>BIBTEX</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/VAM-MASTER Paper/VAM_framework.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
+        <latex-distribution>MIKTEX</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler />
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file />
+        <aux-dir />
+        <latex-distribution>PROJECT_SDK</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration name="appendix_QuantizationOfVAM bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler>BIBTEX</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/VAM - 4 StandardModel-Lagrangian VAM/section/appendix_QuantizationOfVAM.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
+        <latex-distribution>MIKTEX</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="BibTeX.4-StandardModel-Lagrangian VAM bibliography" />
+      <item itemvalue="BibTeX.5-Topological_Fluid_Dynamic_Lagrangian_In_VAM bibliography" />
+      <item itemvalue="BibTeX.appendix_QuantizationOfVAM bibliography" />
+      <item itemvalue="BibTeX.Master Paper-VAM bibliography" />
+      <item itemvalue="BibTeX.ONLINE-From_Quantum_Constants_to_Galactic_Swirl bibliography" />
       <item itemvalue="BibTeX.VAM 4" />
-      <item itemvalue="LaTeX.4-StandardModel-Lagrangian VAM" />
+      <item itemvalue="BibTeX.12-OnAVortexBasedLagrangianUnificationGravityElectromagnetism bibliography" />
+      <item itemvalue="BibTeX.VAM_framework bibliography" />
+      <item itemvalue="BibTeX.EMlagrangian" />
     </list>
   </component>
   <component name="SharedIndexes">
@@ -567,739 +323,63 @@
       </set>
     </attachedChunks>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="false" transferred="false" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="68444c05-2aa5-47b0-a236-1340c65f3f8d" name="Changes" comment="" />
-      <created>1739871427489</created>
+      <changelist id="6f2a8139-c825-4497-876b-70e1a130c5c3" name="Changes" comment="" />
+      <created>1751631523297</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1739871427489</updated>
-      <workItem from="1739871428815" duration="370000" />
-      <workItem from="1739873352930" duration="1145000" />
-      <workItem from="1739874591795" duration="5656000" />
-      <workItem from="1739955478065" duration="3589000" />
-      <workItem from="1739968909778" duration="1355000" />
-      <workItem from="1739978799722" duration="2233000" />
-      <workItem from="1740037364673" duration="26000" />
-      <workItem from="1740038197873" duration="15000" />
-      <workItem from="1740038343984" duration="398000" />
-      <workItem from="1740038859520" duration="852000" />
-      <workItem from="1740039969659" duration="1171000" />
-      <workItem from="1741599734751" duration="2017000" />
-      <workItem from="1741966738769" duration="1814000" />
-      <workItem from="1742286321820" duration="1351000" />
-      <workItem from="1742288363484" duration="1718000" />
-      <workItem from="1742290732447" duration="231000" />
-      <workItem from="1742291095207" duration="505000" />
-      <workItem from="1742292077050" duration="478000" />
-      <workItem from="1742292873221" duration="685000" />
-      <workItem from="1742295202421" duration="2771000" />
-      <workItem from="1742312662779" duration="2557000" />
-      <workItem from="1742318100101" duration="99000" />
-      <workItem from="1742319408335" duration="83000" />
-      <workItem from="1742549020268" duration="10572000" />
-      <workItem from="1742890643032" duration="16115000" />
-      <workItem from="1743492155964" duration="12335000" />
-      <workItem from="1743509901987" duration="5892000" />
-      <workItem from="1743751084345" duration="8607000" />
-      <workItem from="1743774014353" duration="1917000" />
-      <workItem from="1744270012090" duration="1575000" />
-      <workItem from="1744272608256" duration="792000" />
-      <workItem from="1744274847825" duration="6318000" />
-      <workItem from="1744285729570" duration="169000" />
-      <workItem from="1744285921598" duration="1053000" />
-      <workItem from="1744287372243" duration="393000" />
-      <workItem from="1744287786435" duration="1989000" />
-      <workItem from="1744401140463" duration="574000" />
-      <workItem from="1744698388119" duration="71000" />
-      <workItem from="1744735514925" duration="240000" />
-      <workItem from="1744735762227" duration="1278000" />
-      <workItem from="1744737579789" duration="5180000" />
-      <workItem from="1744778291994" duration="2941000" />
-      <workItem from="1744788760969" duration="8508000" />
-      <workItem from="1744881900469" duration="159000" />
-      <workItem from="1744882067182" duration="4078000" />
-      <workItem from="1744977368074" duration="7474000" />
-      <workItem from="1745159666057" duration="78000" />
-      <workItem from="1745159750900" duration="29000" />
-      <workItem from="1745159787367" duration="82000" />
-      <workItem from="1745159878322" duration="266000" />
-      <workItem from="1745160155673" duration="8745000" />
-      <workItem from="1745170081239" duration="1389000" />
-      <workItem from="1745242939390" duration="4488000" />
-      <workItem from="1745262461132" duration="160000" />
-      <workItem from="1745307156778" duration="4996000" />
-      <workItem from="1745320751895" duration="7299000" />
-      <workItem from="1745333565330" duration="2891000" />
-      <workItem from="1745567496411" duration="9134000" />
-      <workItem from="1745599626884" duration="459000" />
-      <workItem from="1747676955263" duration="11103000" />
-      <workItem from="1747929744846" duration="552000" />
-      <workItem from="1747939509160" duration="3685000" />
-      <workItem from="1748372161070" duration="76000" />
-      <workItem from="1748372258502" duration="70000" />
-      <workItem from="1748372351848" duration="4536000" />
-      <workItem from="1748618335759" duration="18104000" />
-      <workItem from="1748641785326" duration="3029000" />
-      <workItem from="1748984231703" duration="1997000" />
-      <workItem from="1749044372338" duration="6550000" />
-      <workItem from="1749056844653" duration="7638000" />
-      <workItem from="1749294065607" duration="768000" />
-      <workItem from="1749484052172" duration="576000" />
-      <workItem from="1749484862029" duration="4281000" />
-      <workItem from="1749493561978" duration="9253000" />
-      <workItem from="1749536963130" duration="279000" />
-      <workItem from="1749540706500" duration="735000" />
-      <workItem from="1749541458714" duration="199000" />
-      <workItem from="1749541669934" duration="25000" />
-      <workItem from="1749541702680" duration="819000" />
-      <workItem from="1749544978808" duration="534000" />
-      <workItem from="1749545656117" duration="715000" />
-      <workItem from="1749546410941" duration="8000" />
-      <workItem from="1749546501045" duration="19108000" />
-      <workItem from="1749571714722" duration="34000" />
-      <workItem from="1749585810381" duration="10008000" />
-      <workItem from="1749606750650" duration="3324000" />
-      <workItem from="1749610131815" duration="1418000" />
-      <workItem from="1749611936958" duration="5664000" />
-      <workItem from="1749619251161" duration="2005000" />
-      <workItem from="1749627802169" duration="2014000" />
-      <workItem from="1749630454982" duration="11599000" />
-      <workItem from="1749680016831" duration="3044000" />
-      <workItem from="1749713780332" duration="17650000" />
-      <workItem from="1749746186866" duration="7283000" />
-      <workItem from="1749753850267" duration="8035000" />
-      <workItem from="1749766454472" duration="921000" />
-      <workItem from="1749768122881" duration="3266000" />
-      <workItem from="1749771806337" duration="96000" />
-      <workItem from="1749772152029" duration="2317000" />
-      <workItem from="1749776302234" duration="116000" />
-      <workItem from="1749815914522" duration="30452000" />
-      <workItem from="1749862264748" duration="1591000" />
-      <workItem from="1749944575984" duration="16281000" />
-      <workItem from="1750020730931" duration="6826000" />
-      <workItem from="1750157070302" duration="2833000" />
-      <workItem from="1750319574527" duration="6431000" />
-      <workItem from="1750363440218" duration="7553000" />
-      <workItem from="1750373318639" duration="6028000" />
-      <workItem from="1750404429445" duration="13740000" />
-      <workItem from="1750451627999" duration="3921000" />
-      <workItem from="1750468788726" duration="19897000" />
-      <workItem from="1750541357891" duration="1117000" />
-      <workItem from="1750552865446" duration="4000" />
-      <workItem from="1750552962183" duration="3865000" />
-      <workItem from="1750598492895" duration="648000" />
-      <workItem from="1750599442210" duration="413000" />
-      <workItem from="1750599866971" duration="87000" />
-      <workItem from="1750599960990" duration="409000" />
-      <workItem from="1750600379071" duration="2980000" />
-      <workItem from="1750605382550" duration="145000" />
-      <workItem from="1750605544814" duration="367000" />
-      <workItem from="1750606996894" duration="133000" />
-      <workItem from="1750607141542" duration="2016000" />
-      <workItem from="1750620848202" duration="688000" />
-      <workItem from="1750621545972" duration="3976000" />
-      <workItem from="1750630324905" duration="1637000" />
-      <workItem from="1750650736144" duration="1038000" />
-      <workItem from="1750651849013" duration="317000" />
-      <workItem from="1750689645788" duration="2747000" />
-      <workItem from="1750785163670" duration="8587000" />
-      <workItem from="1750836820079" duration="25725000" />
-      <workItem from="1750883233055" duration="870000" />
-      <workItem from="1750885418613" duration="1099000" />
-      <workItem from="1750927610456" duration="762000" />
-      <workItem from="1750954048474" duration="526000" />
-      <workItem from="1750954584797" duration="13547000" />
-      <workItem from="1751031987914" duration="699000" />
-      <workItem from="1751032713247" duration="1083000" />
-      <workItem from="1751046235481" duration="1714000" />
-      <workItem from="1751057270753" duration="5896000" />
-      <workItem from="1751116359139" duration="8905000" />
-      <workItem from="1751137849001" duration="3839000" />
-      <workItem from="1751145471501" duration="194000" />
-      <workItem from="1751211877800" duration="2418000" />
-      <workItem from="1751269365101" duration="26452000" />
+      <updated>1751631523297</updated>
+      <workItem from="1751631525367" duration="49000" />
+      <workItem from="1751631606771" duration="6328000" />
+      <workItem from="1751641552099" duration="55000" />
+      <workItem from="1751641610689" duration="14847000" />
+      <workItem from="1751661473996" duration="468000" />
+      <workItem from="1751728498704" duration="13442000" />
+      <workItem from="1751743737728" duration="1295000" />
+      <workItem from="1751748809520" duration="12226000" />
+      <workItem from="1751823345204" duration="7222000" />
+      <workItem from="1751840016176" duration="10573000" />
+      <workItem from="1751850908292" duration="1664000" />
+      <workItem from="1751889552306" duration="30587000" />
     </task>
-    <task id="LOCAL-00001" summary="some small tests">
-      <created>1739958944014</created>
+    <task id="LOCAL-00001" summary="Made MASTER paper, VAM4, VAM12.&#10;Added Knot images">
+      <option name="closed" value="true" />
+      <created>1751925083082</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1739958944014</updated>
+      <updated>1751925083082</updated>
     </task>
-    <task id="LOCAL-00002" summary="Added some constants and equations">
-      <created>1739980866979</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1739980866979</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Add references for Maxwell and Michelson, update Einstein's title, and refine Vinen's citation">
-      <created>1741969074899</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1741969074899</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Add references for Maxwell and Michelson, update Einstein's title, and refine Vinen's citation">
-      <created>1742288530021</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1742288530021</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Add quantum and vorticity wavefunction calculations, and update related LaTeX documents for improved structure and clarity">
-      <created>1742315149653</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1742315149653</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Add Vorticity Field calculations and LaTeX configuration for Vortex Æther Model">
-      <created>1742577131616</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1742577131616</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Add EHD field line visualizations for lifter and starship coil models, and introduce new LaTeX documents for VAM comparison">
-      <created>1742924214806</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1742924214806</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Rename sections and files for clarity; add new experimental anchors and VAM predictions; introduce scripts for time dilation analysis and visualizations">
-      <created>1743503757448</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1743503757448</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Rename sections and files for clarity; add new experimental anchors and VAM predictions; introduce scripts for time dilation analysis and visualizations">
-      <created>1743503863136</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1743503863136</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Update æther density notation for consistency across documents; refine time dilation equations and clarify vortex dynamics descriptions">
-      <created>1743505170688</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1743505170688</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Refine time dilation expressions and improve clarity in Vortex Æther Model documentation; update references and remove redundant sections">
-      <created>1743518563706</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1743518563706</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Rename research documents for clarity; add superfluid æther framework section and implement dynamic filename generation for visualizations">
-      <created>1743761078248</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1743761078248</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Add auxiliary files and improve time dilation script; streamline image saving process and enhance documentation structure">
-      <created>1743773208087</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1743773208087</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Add 3D multi-layer visualization for Starship coil; implement dynamic wire path generation and filename saving">
-      <created>1744698438510</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1744698438510</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Update Dutch translations and improve clarity in æther model documentation; add new references and captions">
-      <created>1745169057805</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1745169057805</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Update Dutch translations and improve clarity in æther model documentation; add new references and captions">
-      <created>1745169165746</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1745169165746</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Enhance 3D visualization documentation; adjust TikZ picture scale and improve label font size for clarity">
-      <created>1745169739561</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1745169739561</updated>
-    </task>
-    <task id="LOCAL-00018" summary="project cleanup">
-      <created>1745169818473</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1745169818473</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Update æther model documentation; correct section titles, add experimental references, and remove commented caption in Python script">
-      <created>1745171372978</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1745171372978</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Nederlandse Versie: &quot;Tijdsdilatatie in een 3D Superfluïde Æther Model, Gebaseerd op Wervel kernrotatie en ætherische Stroom&quot;">
-      <created>1745248530174</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1745248530174</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Vertaal sectietitel 'Introduction' naar 'Introductie' in 01_introductie.tex">
-      <created>1745262592664</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1745262592664</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Hernoem LaTeX-bestanden en update import statements voor consistentie">
-      <created>1745309302609</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1745309302609</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Hernoem LaTeX-bestanden en update import statements voor consistentie">
-      <created>1745309358220</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1745309358220</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Hernoem LaTeX-bestanden, update bestandslocaties en pas bibliografie aan voor consistentie">
-      <created>1745333141749</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1745333141749</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Vertaal sectietitel 'Introduction' naar 'Introductie' in 01_introductie.tex">
-      <created>1745334187501</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1745334187501</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Vertaal sectietitel 'Introduction' naar 'Introductie' in 01_introductie.tex">
-      <created>1745335745563</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1745335745563</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Hernoem LaTeX-bestanden en update bestandslocaties voor consistentie; vertaal sectietitel 'Introduction' naar 'Introductie' in 01_introductie.tex">
-      <created>1745336359149</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1745336359149</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Update terminology from &quot;vortex&quot; to &quot;wervel&quot; for consistency; improve clarity in multiple sections of LaTeX documents">
-      <created>1747302744134</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1747302744134</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Refactor LaTeX documents and Python scripts; update matplotlib version, improve clarity, and add visualizations for torus knots and vortex structures">
-      <created>1747703225048</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1747703225048</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Rename appendices for clarity; add new sections on gravitational fields, time dilation, and vortex dynamics in the Vortex Æther Model">
-      <created>1747944604840</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1747944604840</updated>
-    </task>
-    <task id="LOCAL-00031" summary="Rename multiple LaTeX and Python files for consistency; update terminology from &quot;vortex&quot; to &quot;wervel&quot; and correct minor typos in documentation.">
-      <created>1748207868320</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1748207868320</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Add dynamic filename generation for saved plots in Python scripts; include high-resolution PNG and PDF outputs">
-      <created>1748211455737</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1748211455737</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Rename geodetic precession document; update geometry settings and improve clarity in multiple LaTeX files; add new appendix on fine-structure constant derivation; implement dynamic filename generation for saved plots in Python scripts.">
-      <created>1748295519344</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1748295519344</updated>
-    </task>
-    <task id="LOCAL-00034" summary="Update PDF metadata creation and modification dates for consistency">
-      <created>1748295656100</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1748295656100</updated>
-    </task>
-    <task id="LOCAL-00035" summary="Update chapter title for clarity; adjust table formatting and improve text consistency in gravitational time dilation and perihelion precession sections">
-      <created>1748296050701</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1748296050701</updated>
-    </task>
-    <task id="LOCAL-00036" summary="Add ISCO benchmarking section and update document structure; rename conclusion and resolved challenges sections">
-      <created>1748326135582</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1748326135582</updated>
-    </task>
-    <task id="LOCAL-00037" summary="Update figure captions for clarity; modify section title in resolved challenges; add triple helix visualization script with dynamic filename generation for outputs">
-      <created>1748341111648</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1748341111648</updated>
-    </task>
-    <task id="LOCAL-00038" summary="Refactor æther density references for consistency; update LaTeX files and Python scripts for clarity; add new visualizations for trefoil knot and scale-dependent æther density">
-      <created>1748381059616</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1748381059616</updated>
-    </task>
-    <task id="LOCAL-00039" summary="📌 Reformulated the Standard Model Lagrangian in VAM units paper&#10;Add new sections on conclusion, natural æther constants, and vortex dynamics; r">
-      <created>1748555544850</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1748555544850</updated>
-    </task>
-    <task id="LOCAL-00040" summary="Add new sections on mapping Standard Model terms to VAM analogues, natural units, and observable predictions; update mass and inertia descriptions in the Vortex Æther Model">
-      <created>1748560911617</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1748560911617</updated>
-    </task>
-    <task id="LOCAL-00041" summary="Rename LaTeX files for consistency; update references in scripts and add new visualizations for vortex dynamics and time dilation; implement core pressure and mass derivation in new sections">
-      <created>1748636424686</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1748636424686</updated>
-    </task>
-    <task id="LOCAL-00042" summary="Rename LaTeX files for clarity and consistency; add new sections on boundary conditions and variational derivation in the Vortex Æther Model">
-      <created>1748745070932</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1748745070932</updated>
-    </task>
-    <task id="LOCAL-00043" summary="Rename files for clarity and consistency; update constants and add new LaTeX documents for Vortex Æther Model">
-      <created>1749417326857</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1749417326857</updated>
-    </task>
-    <task id="LOCAL-00044" summary="Rename files for clarity and consistency; update import paths and fix typographical errors in LaTeX documents">
-      <created>1749502421650</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1749502421650</updated>
-    </task>
-    <task id="LOCAL-00045" summary="Rename files for clarity and consistency; update import paths and fix typographical errors in LaTeX documents">
-      <created>1749571670059</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1749571670059</updated>
-    </task>
-    <task id="LOCAL-00046" summary="Rename files for clarity and consistency; update import paths and fix typographical errors in LaTeX documents">
-      <created>1749600586491</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1749600586491</updated>
-    </task>
-    <task id="LOCAL-00047" summary="Dynamically save plot images as PNG files with high resolution">
-      <created>1749610038640</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1749610038640</updated>
-    </task>
-    <task id="LOCAL-00048" summary="Dynamically save plot images as PNG files with high resolution">
-      <created>1749611543494</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1749611543494</updated>
-    </task>
-    <task id="LOCAL-00055" summary="Add new document for Vortex Æther Model; introduce temporal notations and theoretical foundations">
-      <created>1749776329875</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1749776329875</updated>
-    </task>
-    <option name="localTasksCounter" value="66" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="VCPKGProject">
-    <isAutomaticCheckingOnLaunch value="false" />
-    <isAutomaticFoundErrors value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
-    <isAutomaticReloadCMake value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="main" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="CHECK_NEW_TODO" value="false" />
-    <ignored-roots>
-      <path value="$PROJECT_DIR$/vambindings" />
-      <path value="$PROJECT_DIR$/VAMpyBindings/extern/pybind11" />
-    </ignored-roots>
-    <MESSAGE value="Refactor æther density references for consistency; update LaTeX files and Python scripts for clarity; add new visualizations for trefoil knot and scale-dependent æther density" />
-    <MESSAGE value=" Reformulated the Standard Model Lagrangian in VAM units paper&#10;Add new sections on conclusion, natural æther constants, and vortex dynamics; r" />
-    <MESSAGE value="Add new sections on mapping Standard Model terms to VAM analogues, natural units, and observable predictions; update mass and inertia descriptions in the Vortex Æther Model" />
-    <MESSAGE value="Rename LaTeX files for consistency; update references in scripts and add new visualizations for vortex dynamics and time dilation; implement core pressure and mass derivation in new sections" />
-    <MESSAGE value="Revert &quot;Generate equations for other VAM papers&quot;&#10;&#10;This reverts commit e67dc424" />
-    <MESSAGE value="Rename LaTeX files for clarity and consistency; add new sections on boundary conditions and variational derivation in the Vortex Æther Model" />
-    <MESSAGE value="Rename files for clarity and consistency; update constants and add new LaTeX documents for Vortex Æther Model" />
-    <MESSAGE value="Rename files for clarity and consistency; update import paths and fix typographical errors in LaTeX documents" />
-    <MESSAGE value="Dynamically save plot images as PNG files with high resolution" />
-    <MESSAGE value="Refactor file structure for clarity; rename files and update paths; add hybrid time dilation function and visualization enhancements" />
-    <MESSAGE value="Add new references to bibliography; update LaTeX document structure and abstract" />
-    <MESSAGE value="Update LaTeX document structure; enhance formatting and add title page for clarity" />
-    <MESSAGE value="Add new LaTeX document for Vortex Æther Model; include title page, abstract, and detailed particle mapping" />
-    <MESSAGE value="Add new appendix for Vortex Æther Model; derive resonance frequency for vortex knots and propose experimental realization strategy" />
-    <MESSAGE value="Update workspace configuration; modify task summaries and adjust work item durations for Vortex Æther Model" />
-    <MESSAGE value="Add new document for Vortex Æther Model; introduce temporal notations and theoretical foundations" />
-    <MESSAGE value="Add new files and update existing documents for Vortex Æther Model; refine appendix structure and improve LaTeX formatting" />
-    <MESSAGE value="Refactor and expand Vortex Æther Model documentation; update appendix structure, introduce new temporal constructs, and enhance LaTeX formatting" />
-    <MESSAGE value="Rename &quot;0-Einsteins Æther&quot; files for consistency; update appendix structure and enhance temporal constructs in Vortex Æther Model documentation" />
-    <MESSAGE value="Enhance Vortex Æther Model documentation; apply bold formatting for key concepts, refine temporal dynamics explanations, and reorganize experimental proposals for clarity" />
-    <MESSAGE value="Refine Vortex Æther Model documentation; enhance clarity of time dilation derivation, improve appendix references, and expand explanations of vortex-induced effects" />
-    <MESSAGE value="Enhance Vortex Æther Model documentation; apply bold formatting for key concepts, add new appendix on split helicity decomposition, and clarify temporal structure in relation to vortex dynamics" />
-    <MESSAGE value="Add new VAM Python bindings and implement gravitational potential and time dilation computations; rename and organize various appendices and source files for clarity and consistency" />
-    <MESSAGE value="Paper 10-11 Element selection and enhance README; update LaTeX style files and equations for improved formatting and clarity" />
-    <MESSAGE value="Rename LaTeX files for consistency; add new appendices and sections on vortex dynamics, emergent mass, and entropic gravity; update references and improve document structure." />
-    <option name="LAST_COMMIT_MESSAGE" value="Rename LaTeX files for consistency; add new appendices and sections on vortex dynamics, emergent mass, and entropic gravity; update references and improve document structure." />
-    <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/PythonDiagrams/torus/rotating_current_rodin_fields.py</url>
-          <line>103</line>
-          <option name="timeStamp" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/PythonDiagrams/torus/Rodin_magnetic_fields.py</url>
-          <line>7</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/PythonDiagrams/torus/magnetic round coil.py</url>
-          <line>92</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/PythonDiagrams/torus/torus in torus.py</url>
-          <line>$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
+    <MESSAGE value="Made MASTER paper, VAM4, VAM12.&#10;Added Knot images" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made MASTER paper, VAM4, VAM12.&#10;Added Knot images" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/VAM$references_case_harmonizer.coverage" NAME="references_case-harmonizer Coverage Results" MODIFIED="1749841469817" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/VAM$orbitals.coverage" NAME="orbitals Coverage Results" MODIFIED="1749608778648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
-    <SUITE FILE_PATH="coverage/VAM$00_scaleDependentÆtherDensity.coverage" NAME="00_scaleDependentÆtherDensity Coverage Results" MODIFIED="1748376999103" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - 2" />
-    <SUITE FILE_PATH="coverage/VAM$exitation.coverage" NAME="exitation Coverage Results" MODIFIED="1749609041768" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
-    <SUITE FILE_PATH="coverage/VAM$7_Slijten_Verbinden.coverage" NAME="7_Slijten_Verbinden Coverage Results" MODIFIED="1747694377281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Periodic Table/sections" />
-    <SUITE FILE_PATH="coverage/VAM$4_GravitationeleÆtherinstroom.coverage" NAME="4-GravitationeleÆtherinstroom Coverage Results" MODIFIED="1745168705834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation" />
-    <SUITE FILE_PATH="coverage/VAM$starship.coverage" NAME="starship Coverage Results" MODIFIED="1749608541851" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
-    <SUITE FILE_PATH="coverage/VAM$vortex_flow_electron_orbital_diagram.coverage" NAME="vortex flow electron orbital diagram Coverage Results" MODIFIED="1749607596082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
-    <SUITE FILE_PATH="coverage/VAM$rodin_double.coverage" NAME="rodin_double Coverage Results" MODIFIED="1751057853697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$WervelInOorsprong.coverage" NAME="WervelInOorsprong Coverage Results" MODIFIED="1745248201427" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation" />
-    <SUITE FILE_PATH="coverage/VAM$torus.coverage" NAME="torus Coverage Results" MODIFIED="1749608118040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
-    <SUITE FILE_PATH="coverage/VAM$MoleculeWeight.coverage" NAME="MoleculeWeight Coverage Results" MODIFIED="1751140119521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - 10 MilkyWay as a Chiral Swirl-Knot Network" />
-    <SUITE FILE_PATH="coverage/VAM$references_cleaner_keep_best_entry.coverage" NAME="references_cleaner_keep_best_entry Coverage Results" MODIFIED="1749841453346" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/VAM$dipole.coverage" NAME="dipole Coverage Results" MODIFIED="1749598768420" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
-    <SUITE FILE_PATH="coverage/VAM$vorticity_field.coverage" NAME="vorticity_field Coverage Results" MODIFIED="1751058371329" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$ÆthericNow.coverage" NAME="ÆthericNow Coverage Results" MODIFIED="1749842685308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Appendix All" />
-    <SUITE FILE_PATH="coverage/VAM$magneticCircle.coverage" NAME="magneticCircle Coverage Results" MODIFIED="1751058917663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$SimulatedStarshipCoilPulsedVortexThrust.coverage" NAME="SimulatedStarshipCoilPulsedVortexThrust Coverage Results" MODIFIED="1749284404070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$01_Starship_MultiLayer_3phase_27x3points.coverage" NAME="01_Starship-MultiLayer-3phase-27x3points Coverage Results" MODIFIED="1743755255706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$Biot_Savart.coverage" NAME="Biot-Savart Coverage Results" MODIFIED="1742315238292" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
-    <SUITE FILE_PATH="coverage/VAM$dodeca.coverage" NAME="dodeca Coverage Results" MODIFIED="1749607482394" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
-    <SUITE FILE_PATH="coverage/VAM$Starship_3phase_27x3points.coverage" NAME="Starship-3phase-27x3points Coverage Results" MODIFIED="1742314140341" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
-    <SUITE FILE_PATH="coverage/VAM$02_Starship_3phase_36points.coverage" NAME="02_Starship-3phase-36points Coverage Results" MODIFIED="1750691496325" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$swirltorusses.coverage" NAME="swirltorusses Coverage Results" MODIFIED="1749283989101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$GR_Benchmark.coverage" NAME="GR_Benchmark Coverage Results" MODIFIED="1749615947214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python VAM Benchmarks" />
-    <SUITE FILE_PATH="coverage/VAM$spindel_and_horn_torus.coverage" NAME="spindel and horn torus Coverage Results" MODIFIED="1749608595123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
-    <SUITE FILE_PATH="coverage/VAM$TimeDilationCore.coverage" NAME="TimeDilationCore Coverage Results" MODIFIED="1748635022526" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - 5 StandardModel-Lagrangian VAM" />
-    <SUITE FILE_PATH="coverage/VAM$roding_field_animation.coverage" NAME="roding_field_animation Coverage Results" MODIFIED="1749608677919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
-    <SUITE FILE_PATH="coverage/VAM$PressureProfileAroundCore.coverage" NAME="PressureProfileAroundCore Coverage Results" MODIFIED="1748634026618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - 5 StandardModel-Lagrangian VAM" />
-    <SUITE FILE_PATH="coverage/VAM$TimeConstruct.coverage" NAME="TimeConstruct Coverage Results" MODIFIED="1749849823274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Appendix All/images" />
-    <SUITE FILE_PATH="coverage/VAM$Animate.coverage" NAME="Animate Coverage Results" MODIFIED="1744799692963" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation" />
-    <SUITE FILE_PATH="coverage/VAM$03_magnetic_round_coil.coverage" NAME="03_magnetic round coil Coverage Results" MODIFIED="1751058314557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$swirltorus_rgb_differences.coverage" NAME="swirltorus rgb differences Coverage Results" MODIFIED="1749608272584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
-    <SUITE FILE_PATH="coverage/VAM$localTime.coverage" NAME="localTime Coverage Results" MODIFIED="1749629638432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python VAM Benchmarks" />
-    <SUITE FILE_PATH="coverage/VAM$1s2soorbitals.coverage" NAME="1s2soorbitals Coverage Results" MODIFIED="1749609121712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
-    <SUITE FILE_PATH="coverage/VAM$streamlines_dipole.coverage" NAME="streamlines_dipole Coverage Results" MODIFIED="1749608326523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
-    <SUITE FILE_PATH="coverage/VAM$NewGraph.coverage" NAME="NewGraph Coverage Results" MODIFIED="1743499858837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src_VAM2/export" />
-    <SUITE FILE_PATH="coverage/VAM$vortex_3d.coverage" NAME="vortex_3d Coverage Results" MODIFIED="1749607532926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
-    <SUITE FILE_PATH="coverage/VAM$C_e.coverage" NAME="C_e Coverage Results" MODIFIED="1749629247295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python VAM Benchmarks" />
-    <SUITE FILE_PATH="coverage/VAM$3_TijdsdilatatieBeweging.coverage" NAME="3-TijdsdilatatieBeweging Coverage Results" MODIFIED="1745168708479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation" />
-    <SUITE FILE_PATH="coverage/VAM$torus_in_torus.coverage" NAME="torus in torus Coverage Results" MODIFIED="1743774083114" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$0_eersteKnopen.coverage" NAME="0_eersteKnopen Coverage Results" MODIFIED="1747699047940" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Periodic Table/sections" />
-    <SUITE FILE_PATH="coverage/VAM$8knot.coverage" NAME="8knot Coverage Results" MODIFIED="1751057875675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$Electron_Node1.coverage" NAME="Electron Node1 Coverage Results" MODIFIED="1749609096171" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
-    <SUITE FILE_PATH="coverage/VAM$00_R_r_horn_swindle_side_torus.coverage" NAME="00_R_r_horn_swindle_side_torus Coverage Results" MODIFIED="1743773126037" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$helical_coil_DC.coverage" NAME="helical_coil_DC Coverage Results" MODIFIED="1749608894104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
-    <SUITE FILE_PATH="coverage/VAM$vam_vs_schodinger.coverage" NAME="vam vs schodinger Coverage Results" MODIFIED="1749607915447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
-    <SUITE FILE_PATH="coverage/VAM$BeamSwirl.coverage" NAME="BeamSwirl Coverage Results" MODIFIED="1749611448663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Appendix All" />
-    <SUITE FILE_PATH="coverage/VAM$Starship_MultiLayer_3phase_27x3points.coverage" NAME="Starship-MultiLayer-3phase-27x3points Coverage Results" MODIFIED="1742903712657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
-    <SUITE FILE_PATH="coverage/VAM$GR_Observables.coverage" NAME="GR_Observables Coverage Results" MODIFIED="1749629530218" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python VAM Benchmarks" />
-    <SUITE FILE_PATH="coverage/VAM$gauge_swirl_equivalence.coverage" NAME="gauge_swirl_equivalence Coverage Results" MODIFIED="1748644224058" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - 5 StandardModel-Lagrangian VAM" />
-    <SUITE FILE_PATH="coverage/VAM$lamb_chaplygn_dipole3D.coverage" NAME="lamb-chaplygn dipole3D Coverage Results" MODIFIED="1749609400002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$ScanCropperAligner.coverage" NAME="ScanCropperAligner Coverage Results" MODIFIED="1750452869817" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/VAM$starship_coil.coverage" NAME="starship-coil Coverage Results" MODIFIED="1749608345963" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
-    <SUITE FILE_PATH="coverage/VAM$Rodin_fields.coverage" NAME="Rodin-fields Coverage Results" MODIFIED="1749594329354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism" />
-    <SUITE FILE_PATH="coverage/VAM$6_swirlRichting.coverage" NAME="6_swirlRichting Coverage Results" MODIFIED="1747694425520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Periodic Table/sections" />
-    <SUITE FILE_PATH="coverage/VAM$cylinder_flow.coverage" NAME="cylinder_flow Coverage Results" MODIFIED="1744288256163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation" />
-    <SUITE FILE_PATH="coverage/VAM$2d_radial_magnet.coverage" NAME="2d radial magnet Coverage Results" MODIFIED="1749284903728" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$rotating_current_rodin_fields.coverage" NAME="rotating_current_rodin_fields Coverage Results" MODIFIED="1751057836966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$3d_empty_space.coverage" NAME="3d empty space Coverage Results" MODIFIED="1749609133701" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
-    <SUITE FILE_PATH="coverage/VAM$new.coverage" NAME="new Coverage Results" MODIFIED="1749285296330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$02_Starship_2_inv.coverage" NAME="02_Starship-2 inv Coverage Results" MODIFIED="1750691505357" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$1_vortexknopen.coverage" NAME="1_vortexknopen Coverage Results" MODIFIED="1747696697172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Periodic Table/sections" />
-    <SUITE FILE_PATH="coverage/VAM$06_TimeDilationGRVsVAMModelNucleonMassPerVortex.coverage" NAME="06-TimeDilationGRVsVAMModelNucleonMassPerVortex Coverage Results" MODIFIED="1751058632803" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
-    <SUITE FILE_PATH="coverage/VAM$WaveFunctionVAM_QM.coverage" NAME="WaveFunctionVAM_QM Coverage Results" MODIFIED="1742313811347" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
-    <SUITE FILE_PATH="coverage/VAM$SiOperatorsVerification.coverage" NAME="SiOperatorsVerification Coverage Results" MODIFIED="1748743785597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - 5 StandardModel-Lagrangian VAM" />
-    <SUITE FILE_PATH="coverage/VAM$swirltorus.coverage" NAME="swirltorus Coverage Results" MODIFIED="1749284228611" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$5_BaanRondMassa.coverage" NAME="5-BaanRondMassa Coverage Results" MODIFIED="1745168701306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation" />
-    <SUITE FILE_PATH="coverage/VAM$swirltorus36_knots.coverage" NAME="swirltorus36 knots Coverage Results" MODIFIED="1750955656723" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$NODES.coverage" NAME="NODES Coverage Results" MODIFIED="1749608803542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
-    <SUITE FILE_PATH="coverage/VAM$CanonicalGRPredictions.coverage" NAME="CanonicalGRPredictions Coverage Results" MODIFIED="1749629270467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python VAM Benchmarks" />
-    <SUITE FILE_PATH="coverage/VAM$equations.coverage" NAME="equations Coverage Results" MODIFIED="1749559711188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python VAM Benchmarks" />
-    <SUITE FILE_PATH="coverage/VAM$helical_coil_SYCL.coverage" NAME="helical_coil_SYCL Coverage Results" MODIFIED="1749608867024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
-    <SUITE FILE_PATH="coverage/VAM$04_WaveFunctionVAM_QM.coverage" NAME="04_WaveFunctionVAM_QM Coverage Results" MODIFIED="1749284986977" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$rodin.coverage" NAME="rodin Coverage Results" MODIFIED="1743775025795" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$torusspirals.coverage" NAME="torusspirals Coverage Results" MODIFIED="1749608095542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
-    <SUITE FILE_PATH="coverage/VAM$7_TijdsvertragingRelatieveBeweging.coverage" NAME="7-TijdsvertragingRelatieveBeweging Coverage Results" MODIFIED="1745168791482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation" />
-    <SUITE FILE_PATH="coverage/VAM$CombinedTimeDilationSurface.coverage" NAME="CombinedTimeDilationSurface Coverage Results" MODIFIED="1745161481840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation" />
-    <SUITE FILE_PATH="coverage/VAM$MoleculeCalculator.coverage" NAME="MoleculeCalculator Coverage Results" MODIFIED="1751120847954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - 10 MilkyWay as a Chiral Swirl-Knot Network" />
-    <SUITE FILE_PATH="coverage/VAM$Rodin_magnetic_fields.coverage" NAME="Rodin_magnetic_fields Coverage Results" MODIFIED="1750621713642" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
-    <SUITE FILE_PATH="coverage/VAM$SwirlClockInterference.coverage" NAME="SwirlClockInterference Coverage Results" MODIFIED="1749847587335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Appendix All/images" />
-    <SUITE FILE_PATH="coverage/VAM$vamBindings.coverage" NAME="vamBindings Coverage Results" MODIFIED="1749046543592" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../../../workspace/projects/VAM" />
-    <SUITE FILE_PATH="coverage/VAM$RadialProfileOfLocalTimeDilation.coverage" NAME="RadialProfileOfLocalTimeDilation Coverage Results" MODIFIED="1743500035091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src_VAM2/export" />
-    <SUITE FILE_PATH="coverage/VAM$VAM_Benchmark2.coverage" NAME="VAM_Benchmark2 Coverage Results" MODIFIED="1750107323234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python VAM Benchmarks" />
-    <SUITE FILE_PATH="coverage/VAM$bib_cleaner_keep_best_entry.coverage" NAME="bib_cleaner_keep_best_entry Coverage Results" MODIFIED="1749681747275" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/VAM$GRvsSwirl.coverage" NAME="GRvsSwirl Coverage Results" MODIFIED="1749633564730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
-    <SUITE FILE_PATH="coverage/VAM$combined_flow.coverage" NAME="combined_flow Coverage Results" MODIFIED="1744288583565" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation" />
-    <SUITE FILE_PATH="coverage/VAM$electron_decay1s_orbitals.coverage" NAME="electron_decay1s orbitals Coverage Results" MODIFIED="1749609072162" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
-    <SUITE FILE_PATH="coverage/VAM$GR_VAM.coverage" NAME="GR_VAM Coverage Results" MODIFIED="1750514650575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - 2 Swirl Clocks" />
-    <SUITE FILE_PATH="coverage/VAM$1_WervelkernKlok.coverage" NAME="1-WervelkernKlok Coverage Results" MODIFIED="1745165225289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation" />
-    <SUITE FILE_PATH="coverage/VAM$CalculateNeucleusMass.coverage" NAME="CalculateNeucleusMass Coverage Results" MODIFIED="1749629383387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python VAM Benchmarks" />
-    <SUITE FILE_PATH="coverage/VAM$cropper.coverage" NAME="cropper Coverage Results" MODIFIED="1750455475864" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/VAM$MagneticCircleRodin.coverage" NAME="MagneticCircleRodin Coverage Results" MODIFIED="1750955641435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$SwirlVSGauge.coverage" NAME="SwirlVSGauge Coverage Results" MODIFIED="1748644600659" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - 5 StandardModel-Lagrangian VAM" />
-    <SUITE FILE_PATH="coverage/VAM$BeamExite.coverage" NAME="BeamExite Coverage Results" MODIFIED="1749611219911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Appendix All" />
-    <SUITE FILE_PATH="coverage/VAM$HarmonicResonance.coverage" NAME="HarmonicResonance Coverage Results" MODIFIED="1749739286512" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Appendix All" />
-    <SUITE FILE_PATH="coverage/VAM$trefoil_field_lines.coverage" NAME="trefoil_field_lines Coverage Results" MODIFIED="1749046574919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../../../workspace/projects/VAM" />
-    <SUITE FILE_PATH="coverage/VAM$blackbody_vs_vortexwavevelocity.coverage" NAME="blackbody_vs_vortexwavevelocity Coverage Results" MODIFIED="1742553117664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
-    <SUITE FILE_PATH="coverage/VAM$trefoil_fields.coverage" NAME="trefoil_fields Coverage Results" MODIFIED="1749046566448" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../../../workspace/projects/VAM" />
-    <SUITE FILE_PATH="coverage/VAM$LifterVsStarshipFields.coverage" NAME="LifterVsStarshipFields Coverage Results" MODIFIED="1749609458663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$magnetic_round_coil.coverage" NAME="magnetic round coil Coverage Results" MODIFIED="1742904016875" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonDiagrams" />
-    <SUITE FILE_PATH="coverage/VAM$diabolo.coverage" NAME="diabolo Coverage Results" MODIFIED="1749609271660" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
-    <SUITE FILE_PATH="coverage/VAM$2_elementenTorusknopen.coverage" NAME="2_elementenTorusknopen Coverage Results" MODIFIED="1747694441072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Periodic Table/sections" />
-    <SUITE FILE_PATH="coverage/VAM$ESHFieldLines.coverage" NAME="ESHFieldLines Coverage Results" MODIFIED="1749609051585" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
-    <SUITE FILE_PATH="coverage/VAM$unknotNeutrino.coverage" NAME="unknotNeutrino Coverage Results" MODIFIED="1749633422593" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
-    <SUITE FILE_PATH="coverage/VAM$NeutronStarTimeDilation.coverage" NAME="NeutronStarTimeDilation Coverage Results" MODIFIED="1749629623385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python VAM Benchmarks" />
-    <SUITE FILE_PATH="coverage/VAM$6_HorizonTijdsbevriezing.coverage" NAME="6-HorizonTijdsbevriezing Coverage Results" MODIFIED="1745168694570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation" />
-    <SUITE FILE_PATH="coverage/VAM$0_UraniumKnoop.coverage" NAME="0_UraniumKnoop Coverage Results" MODIFIED="1747702791519" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Periodic Table/sections" />
-    <SUITE FILE_PATH="coverage/VAM$ThrustVsVoltage.coverage" NAME="ThrustVsVoltage Coverage Results" MODIFIED="1749608144869" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
-    <SUITE FILE_PATH="coverage/VAM$lamb_chaplygn_dipole.coverage" NAME="lamb-chaplygn dipole Coverage Results" MODIFIED="1749607417130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
-    <SUITE FILE_PATH="coverage/VAM$05_lifterThrust.coverage" NAME="05_lifterThrust Coverage Results" MODIFIED="1749609157720" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
-    <SUITE FILE_PATH="coverage/VAM$kerrlike.coverage" NAME="kerrlike Coverage Results" MODIFIED="1749629698745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python VAM Benchmarks" />
-    <SUITE FILE_PATH="coverage/VAM$03_Starship_3phase_36points_18_bidirectional.coverage" NAME="03_Starship-3phase-36points-18 bidirectional Coverage Results" MODIFIED="1749285063455" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$plotknots.coverage" NAME="plotknots Coverage Results" MODIFIED="1749567566335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - 5" />
-    <SUITE FILE_PATH="coverage/VAM$swirltorus2_stars.coverage" NAME="swirltorus2_stars Coverage Results" MODIFIED="1749608168220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
-    <SUITE FILE_PATH="coverage/VAM$starshipCircleMagnets.coverage" NAME="starshipCircleMagnets Coverage Results" MODIFIED="1750690390624" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$GR_in_3d.coverage" NAME="GR_in_3d Coverage Results" MODIFIED="1749629520057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python VAM Benchmarks" />
-    <SUITE FILE_PATH="coverage/VAM$CalculateHelicityForKnots.coverage" NAME="CalculateHelicityForKnots Coverage Results" MODIFIED="1749629442754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python VAM Benchmarks" />
-    <SUITE FILE_PATH="coverage/VAM$PhotonGravityStandingWave.coverage" NAME="PhotonGravityStandingWave Coverage Results" MODIFIED="1749629609073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python VAM Benchmarks" />
-    <SUITE FILE_PATH="coverage/VAM$vortex_2d.coverage" NAME="vortex_2d Coverage Results" MODIFIED="1749607553278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
-    <SUITE FILE_PATH="coverage/VAM$schodinger_probability.coverage" NAME="schodinger_probability Coverage Results" MODIFIED="1749607094152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
-    <SUITE FILE_PATH="coverage/VAM$RotationalVsHeuristicTimeDilation.coverage" NAME="RotationalVsHeuristicTimeDilation Coverage Results" MODIFIED="1743499851435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src_VAM2/export" />
-    <SUITE FILE_PATH="coverage/VAM$01_Starship_MultiLayer_18.coverage" NAME="01_Starship-MultiLayer-18 Coverage Results" MODIFIED="1751058395355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$galaxyRotation.coverage" NAME="galaxyRotation Coverage Results" MODIFIED="1750368764546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - 2 Swirl Clocks/Swirl_Clocks" />
-    <SUITE FILE_PATH="coverage/VAM$doublestarship.coverage" NAME="doublestarship Coverage Results" MODIFIED="1751059947906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$cilinder_filled.coverage" NAME="cilinder filled Coverage Results" MODIFIED="1749607367771" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
-    <SUITE FILE_PATH="coverage/VAM$01_Starship_MultiLayer_24.coverage" NAME="01_Starship-MultiLayer-24 Coverage Results" MODIFIED="1749284856421" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$VAM_Benchmark.coverage" NAME="VAM_Benchmark Coverage Results" MODIFIED="1749629580753" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python VAM Benchmarks" />
-    <SUITE FILE_PATH="coverage/VAM$09_CombinedTimeDilationSurface.coverage" NAME="09-CombinedTimeDilationSurface Coverage Results" MODIFIED="1745247952265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Æther_Time_Dilation/DutchTranslation" />
-    <SUITE FILE_PATH="coverage/VAM$schodinger_probability3D.coverage" NAME="schodinger_probability3D Coverage Results" MODIFIED="1749606881974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
-    <SUITE FILE_PATH="coverage/VAM$GR_VS_VAM.coverage" NAME="GR_VS_VAM Coverage Results" MODIFIED="1750107365483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python VAM Benchmarks" />
-    <SUITE FILE_PATH="coverage/VAM$spinner.coverage" NAME="spinner Coverage Results" MODIFIED="1750437241455" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/VAM$photonAnimation.coverage" NAME="photonAnimation Coverage Results" MODIFIED="1749609576454" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$LifterInwardFieldlines.coverage" NAME="LifterInwardFieldlines Coverage Results" MODIFIED="1749609333583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$doublestarshipteste.coverage" NAME="doublestarshipteste Coverage Results" MODIFIED="1751059219302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$helical_coil.coverage" NAME="helical_coil Coverage Results" MODIFIED="1749608990369" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
-    <SUITE FILE_PATH="coverage/VAM$VelocityFieldSurroundingATrefoilVortexKnot.coverage" NAME="VelocityFieldSurroundingATrefoilVortexKnot Coverage Results" MODIFIED="1751058604676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
+    <SUITE FILE_PATH="coverage/VAM$vam_vs_gr_potential_plot.coverage" NAME="vam_vs_gr_potential_plot Coverage Results" MODIFIED="1751903749996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
+    <SUITE FILE_PATH="coverage/VAM$testknot.coverage" NAME="testknot Coverage Results" MODIFIED="1751834892767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM-MASTER Paper" />
+    <SUITE FILE_PATH="coverage/VAM$TimeConstruct.coverage" NAME="TimeConstruct Coverage Results" MODIFIED="1751915068127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - 2 Swirl Clocks/images" />
+    <SUITE FILE_PATH="coverage/VAM$TemporalOntology.coverage" NAME="TemporalOntology Coverage Results" MODIFIED="1751921657061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
+    <SUITE FILE_PATH="coverage/VAM$proton_neutron_weigth.coverage" NAME="proton_neutron_weigth Coverage Results" MODIFIED="1751848726214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM-MASTER Paper" />
+    <SUITE FILE_PATH="coverage/VAM$MoleculeWeight.coverage" NAME="MoleculeWeight Coverage Results" MODIFIED="1751841523598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM-MASTER Paper" />
+    <SUITE FILE_PATH="coverage/VAM$6_2_topview.coverage" NAME="6_2_topview Coverage Results" MODIFIED="1751908053943" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
+    <SUITE FILE_PATH="coverage/VAM$Helicity.coverage" NAME="Helicity Coverage Results" MODIFIED="1751904879608" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
   </component>
 </project>
