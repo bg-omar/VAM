@@ -127,7 +127,7 @@ $S(t)$ is the Swirl Clock variable — its phase is shifted during scattering du
 Here \(\chi\) is the topological eddy sensitivity core.
 \subsection{Summary of VAM-inspired scattering structures}
 
-\begin{table}[htbp]
+\begin{table}[H]
     \centering
     \begin{tabular}{lll}
         \toprule
@@ -150,6 +150,13 @@ This scattering framework generalizes classical elastic analogs to a topological
 
 \begin{figure}[H]
 \centering
+
+% Compute vertical shifts for phase offset annotation
+\pgfmathsetmacro{\omega}{1.8}
+\pgfmathsetmacro{\xphase}{6.2}
+\pgfmathsetmacro{\ybaseline}{1.5 + 0.6*sin(\omega * \xphase)}
+\pgfmathsetmacro{\yshifted}{1.9 + 0.6*sin(\omega * \xphase)}
+
 \begin{tikzpicture}[scale=1.1]
 
 % Axes
@@ -167,19 +174,18 @@ This scattering framework generalizes classical elastic analogs to a topological
 
 \draw[very thick, red]
     plot[domain=3.2:6.5,samples=50,smooth]
-    (\x, {1.9 + 0.6*sin(1.8*\x r)});
-    node[right] {\footnotesize Scattered node};
+    (\x, {1.9 + 0.6*sin(1.8*\x r)}) node[right] {\footnotesize Scattered node};
 
 % Kairos Moment arrow
 \draw[->, thick, purple] (3.2,2.1) -- (3.2,2.6);
 \node[above, purple] at (3.2,2.6) {\( \kappa \)};
 
 % Phase shift annotation
-\draw[dashed, gray] (6.2,2.1) -- (6.2,2.5);
-\draw[<->, thick, gray] (6.4,2.1) -- (6.4,2.5);
-\node[right, gray] at (6.4,2.3) {\footnotesize \( \delta S(t) \)};
+\draw[dashed, gray] (6.2,\ybaseline) -- (6.2,\yshifted);
+\draw[<->, thick, gray] (6.4,\ybaseline) -- (6.4,\yshifted);
+\node[right, gray] at (6.4,{0.5*(\ybaseline + \yshifted)}) {\footnotesize \( \delta S(t) \)};
 
-% Labels
+% Origin label
 \node[below left] at (0,0) {\scriptsize 0};
 
 \end{tikzpicture}
@@ -199,9 +205,14 @@ The scattered node (red) experiences a permanent phase offset \( \delta S(t) \) 
 
 
 
-
 \begin{figure}[H]
 \centering
+
+% Precompute trig values
+\pgfmathsetmacro{\angleval}{13}
+\pgfmathsetmacro{\yshiftA}{1.0 + 0.5*sin(\angleval)}
+\pgfmathsetmacro{\yshiftB}{2.3 + 0.5*sin(\angleval)}
+
 \begin{tikzpicture}[scale=1.05]
 
 % Axes
@@ -225,36 +236,29 @@ The scattered node (red) experiences a permanent phase offset \( \delta S(t) \) 
 \draw[->, thick, purple] (3,2.5) -- (3,3.0);
 \node[above, purple] at (3,3.0) {\( \kappa \)};
 
-% Phase shift
-\draw[<->, thick, gray] (6.4,{1.0+0.5*sin(deg(13))}) -- (6.4,{2.3+0.5*sin(deg(13))});
+% Phase shift indicator
+\draw[<->, thick, gray] (6.4,{1.0+0.5*sin(\angleval)}) -- (6.4,{2.3+0.5*sin(\angleval)});
 \node[right, gray] at (6.4,1.7) {\footnotesize \( \delta S(t) \)};
 
-% Dotted line connecting nodes before wave
+% Dotted line: synchronized
 \draw[dashed, teal] (0,1.0) -- (0,2.0);
 \node[left, teal] at (0,1.5) {\scriptsize Synchronized};
 
-% Dotted line connecting nodes after wave
-\draw[dashed, teal] (6.5,1.0+0.5*sin(deg(13)* r)) -- (6.5,2.3+0.5*sin(deg(13)* r));
+% Dotted line: desynchronized
+\draw[dashed, teal] (6.5,\yshiftA) -- (6.5,\yshiftB);
 \node[left, teal] at (6.5,2.1) {\scriptsize Desynchronized};
 
 % Origin label
 \node[below left] at (0,0) {\scriptsize 0};
 
 \end{tikzpicture}
-\caption{
-\textbf{Ætheric Gravitational Wave as Swirl Clock Phase Drift.}
-A transient vorticity perturbation shifts the Swirl Clock \( S(t) \) of Node B relative to Node A.
-The shift occurs at a Kairos Moment \( \kappa \), producing a lasting phase lag \( \delta S(t) \).
-This phase decoherence represents a VAM analog to gravitational waves, where time differences arise from topological swirl transitions rather than spacetime curvature.
-}
-\label{fig:swirl_clock_wavefront}
-
+\caption{Phase evolution of two vortex nodes in the \( S(t) \) vs. \( \mathcal{N} \) diagram. Node B experiences a Kairos-induced phase shift at \( \mathcal{N} = 3 \), resulting in desynchronization.}
 \end{figure}
 
 \begin{itemize}
 \item Causal Time $\mathcal{N}$ runs along the x-axis — it's global and universal.
 \item Both nodes start synchronized: $S_A(t) = S_B(t)$
-\item After the wave passes Node B at time $\mathcal{N}_\kappaN$, its swirl phase shifts: $\delta S(t) \ne 0$
+\item After the wave passes Node B at time $\mathcal{N}_\kappa N$, its swirl phase shifts: $\delta S(t) \ne 0$
 \item This phase difference is \textit{observable} and \textit{permanent}, just like the distance shift in GR interferometers — but here it's swirl clock drift.
 \end{itemize}
 

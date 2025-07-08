@@ -6,10 +6,9 @@ matplotlib.use('TkAgg')  # Ensure it uses Tkinter backend
 # ✅ Get the script filename dynamically and save as pdf
 import os
 script_name = os.path.splitext(os.path.basename(__file__))[0]
-# Save with incrementing filename if file exists, restart count on rerun
-base_filename = f"{script_name}.png"
-filename = base_filename
-count = 1
+filename = f"{script_name}_1.png"
+
+
 # Step 1: Compute magnetic dipole field for comparison (quasi-static approx)
 # Step 2: Compute vorticity ω = ∇ × v
 # Step 3: Compute helicity density h = v ⋅ ω
@@ -28,7 +27,7 @@ ring_y = R * np.sin(theta)
 ring_z = np.zeros_like(theta)
 
 # Define evaluation grid for Biot-Savart (in x-z plane, y=0)
-eval_x, eval_z = np.meshgrid(np.linspace(-2, 2, 50), np.linspace(-2, 2, 50))
+eval_x, eval_z = np.meshgrid(np.linspace(-4, 4, 50), np.linspace(-4, 4, 50))
 eval_y = np.zeros_like(eval_x)
 
 # Biot–Savart law: compute velocity induced by vortex filament
@@ -78,10 +77,6 @@ plt.axis('equal')
 plt.grid(True)
 plt.legend()
 
-
-while os.path.exists(filename):
-    filename = f"{script_name}_{count}.png"
-    count += 1
 plt.savefig(filename, dpi=150)  # Save image with high resolution
 plt.tight_layout()
 
@@ -89,13 +84,17 @@ plt.tight_layout()
 mu0 = 4 * np.pi * 1e-7  # Vacuum permeability (just for analogy)
 m_dipole = np.array([0, 1, 0])  # Magnetic dipole along y (out of x-z plane)
 
-# Compute magnetic dipole field in x-z plane (y = 0)
+# Create larger evaluation grid for visible dipole field
+eval_x_large, eval_z_large = np.meshgrid(np.linspace(-4, 4, 80), np.linspace(-4, 4, 80))
+
+# Reuse the same function — no need to redefine
 def magnetic_dipole_field(x, z, m):
     r_vec = np.stack([x, np.zeros_like(x), z], axis=-1)
     r_mag = np.linalg.norm(r_vec, axis=-1, keepdims=True)
     dot = np.sum(m * r_vec, axis=-1, keepdims=True)
     field = (3 * r_vec * dot / (r_mag**5)) - (m / (r_mag**3))
     return field[..., 0], field[..., 2]  # return x and z components
+
 
 # Calculate magnetic field components
 Bx, Bz = magnetic_dipole_field(eval_x, eval_z, m_dipole)
@@ -117,7 +116,7 @@ helicity_density_smooth = gaussian_filter(helicity_density, sigma=1)
 m_dipole_visible = np.array([0, 0, 1])  # Dipole aligned along z-axis (into the plane)
 
 # Recompute magnetic dipole field with new orientation
-Bx_visible, Bz_visible = magnetic_dipole_field_fixed(eval_x_large, eval_z_large, m_dipole_visible)
+Bx_visible, Bz_visible = magnetic_dipole_field(eval_x_large, eval_z_large, m_dipole_visible)
 
 # Normalize vector field for visualization
 magnitude_visible = np.sqrt(Bx_visible**2 + Bz_visible**2)
@@ -135,9 +134,8 @@ plt.ylim(-4, 4)
 plt.axis('equal')
 plt.grid(True)
 plt.tight_layout()
-while os.path.exists(filename):
-    filename = f"{script_name}_{count}.png"
-    count += 1
+
+filename = f"{script_name}_2.png"
 plt.savefig(filename, dpi=150)  # Save image with high resolution
 
 
@@ -145,15 +143,14 @@ plt.savefig(filename, dpi=150)  # Save image with high resolution
 plt.figure(figsize=(8, 6))
 plt.contourf(eval_x, eval_z, vorticity_y_smooth, levels=30, cmap='RdBu_r')
 plt.colorbar(label=r'$\omega_y$')
-plt.title("Vorticity Field $\omega_y = (\nabla \times \vec{v})_y$")
+plt.title("Vorticity Field $\\omega_y = (\\nabla \\times \\vec{v})_y$")
 plt.xlabel('x')
 plt.ylabel('z')
 plt.axis('equal')
 plt.grid(True)
 plt.tight_layout()
-while os.path.exists(filename):
-    filename = f"{script_name}_{count}.png"
-    count += 1
+
+filename = f"{script_name}_3.png"
 plt.savefig(filename, dpi=150)  # Save image with high resolution
 
 
@@ -167,9 +164,8 @@ plt.ylabel('z')
 plt.axis('equal')
 plt.grid(True)
 plt.tight_layout()
-while os.path.exists(filename):
-    filename = f"{script_name}_{count}.png"
-    count += 1
+
+filename = f"{script_name}_4.png"
 plt.savefig(filename, dpi=150)  # Save image with high resolution
 
 plt.show()

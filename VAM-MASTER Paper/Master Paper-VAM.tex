@@ -1,42 +1,241 @@
 %! Author = Omar Iskandarani
 %! Title = The Vortex Æther Model: A Unified Topological Field Theory of Mass, Gravity, and Time
-%! Date = June 17, 2025
+%! Date = ...
 %! Affiliation = Independent Researcher, Groningen, The Netherlands
 %! License = CC-BY 4.0
 %! ORCID = 0009-0006-1686-3961
-%! DOI = 10.5281/zenodo.15772833
+%! DOI = ..
 
-% === Metadata ===
-\newcommand{\papertitle}{\textbf{The Vortex Æther Model:}\\  A Unified Topological Field Theory of Mass, Gravity, and Time}
-\newcommand{\paperdoi}{10.5281/zenodo.15772833}
+\newcommand{\paperdoi}{...}
+\documentclass[preprint]{revtex4-2}
 
-\documentclass[12pt]{article}
-%\documentclass[prd,aps,twocolumn]{revtex4-2}
-\usepackage{amssymb}
+% ==================== Packages ====================
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{titlesec} % Optional, just for cleaner formatting if needed
-\titleformat{\section}
-  {\normalfont\Large\bfseries}
-  {Appendix~\Alph{section}:}{1em}{}
-    \usepackage{etoolbox} % For smart patching
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{doi}
+\usepackage{physics}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usetikzlibrary{knots,intersections,decorations.pathreplacing}
+\usetikzlibrary{3d, calc, arrows.meta, positioning}
+\usepackage{pgfmath}
+\usetikzlibrary{decorations.pathmorphing}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18} % or version you have
+\usepackage{bm}          % bold math
+\usepackage{titlesec}    % section formatting (optional)
+\usepackage{float}       % [H] float placement
+\usepackage[font=footnotesize]{caption}
 
-\newcommand{\appendixsection}[1]{%
-  \refstepcounter{section}%
-  \section*{Appendix~\Alph{section}: #1}%
-  \addcontentsline{toc}{section}{Appendix~\Alph{section}: #1}%
-  \markright{Appendix~\Alph{section}}%
-}
-\input{../vamstyle.sty}
-\input{../vam_appendix_setup.sty}
+% ==================== Metadata ====================
 \begin{document}
 
-    % === Title page ===
-    \titlepageOpen
-        \begin{abstract}
-            We present the Vortex Æther Model (VAM), a unified physical framework in which mass, gravity, and proper time emerge from topologically structured vorticity within a compressible, inviscid æther. In contrast to curvature-based relativity and Higgs-based mass generation, VAM describes particles as knotted vortex excitations, and gravity as a swirl-induced time deviation field. The theory reproduces classical phenomena such as gravitational redshift, time dilation, and frame-dragging through fluid-dynamic energetics, and calculates particle masses and physical constants from first principles. The Standard Model gauge groups SU(3), SU(2), and U(1) arise naturally from vortex topology and swirl symmetry, while canonical quantization defines a Fock-like Hilbert space over knot eigenstates. We develop a full path-integral formulation over topological sectors of the æther manifold, enabling quantum transitions, knot fusion, and helicity exchange interactions. Benchmarking against general relativity and experimental tests of gravitational time deviation support the model’s viability. VAM offers a physically grounded, falsifiable, and derivational alternative to conventional quantum gravity and field theory models.
-        \end{abstract}
+\title{The Vortex Æther Model: \\[1ex]
+        \large A Unified Topological Field Theory of Mass, Gravity, and Time}
 
+\author{Omar Iskandarani}
+\email{info@omariskandarani.com}
+\affiliation{Independent Researcher, Groningen, The Netherlands}
+\thanks{ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961}}
+\thanks{DOI: \href{https://doi.org/\paperdoi}{\paperdoi}}
+\thanks{License: CC-BY 4.0 International}
+
+\date{\today}
+
+% ==================== Abstract ====================
+\begin{abstract}
+            We present the Vortex Æther Model (VAM), a unified physical framework in which mass, gravity, and proper time emerge from topologically structured vorticity within a compressible, inviscid æther. In contrast to curvature-based relativity and Higgs-based mass generation, VAM describes particles as knotted vortex excitations, and gravity as a swirl-induced time deviation field. The theory reproduces classical phenomena such as gravitational redshift, time dilation, and frame-dragging through fluid-dynamic energetics, and calculates particle masses and physical constants from first principles. The Standard Model gauge groups SU(3), SU(2), and U(1) arise naturally from vortex topology and swirl symmetry, while canonical quantization defines a Fock-like Hilbert space over knot eigenstates. We develop a full path-integral formulation over topological sectors of the æther manifold, enabling quantum transitions, knot fusion, and helicity exchange interactions. Benchmarking against general relativity and experimental tests of gravitational time deviation support the model’s viability. VAM offers a physically grounded, falsifiable, and derivational alternative to conventional quantum gravity and field theory models.\\
+            All basic Knots:\\
+            \( Unknot \):~\includegraphics[height=1.2em]{images/0_1} \\
+            \( Hopf link \):~\includegraphics[height=1.2em]{images/hopf}  \( Solomon \):~\includegraphics[height=1.2em]{images/solomon} \\
+            \( Borromean \):~\includegraphics[height=1.2em]{images/borromean} \( Trefoil Knot (3,2) \):~\includegraphics[height=1.2em]{images/3_1} \\
+            \( 6_2 \):~\includegraphics[height=1.2em]{images/6_2} \( 7_4 \):~\includegraphics[height=1.2em]{images/7_4} \\
+            \( Figure-8-knot \):~\includegraphics[height=1.2em]{images/4_1}
+\begin{tikzpicture}[scale=0.1,  line width=0.4pt]
+  \def\nsamples{60}
+  \foreach \i in {1,...,\nsamples} {
+      \pgfmathsetmacro\tprev{(\i - 1) * 2 * pi / \nsamples}
+      \pgfmathsetmacro\tcurr{\i * 2 * pi / \nsamples}
+      \pgfmathsetmacro\xprev{(2 + cos(2 * \tprev r)) * cos(3 * \tprev r)}
+      \pgfmathsetmacro\yprev{(2 + cos(2 * \tprev r)) * sin(3 * \tprev r)}
+      \pgfmathsetmacro\xcurr{(2 + cos(2 * \tcurr r)) * cos(3 * \tcurr r)}
+      \pgfmathsetmacro\ycurr{(2 + cos(2 * \tcurr r)) * sin(3 * \tcurr r)}
+      \draw[black, --] (\xprev,\yprev) -- (\xcurr,\ycurr);
+  }
+\end{tikzpicture}\\
+ \( 5_1 \):~\includegraphics[height=1.2em]{images/5_1}
+ \( 5_2 \):~\includegraphics[height=1.2em]{images/5_2}
+ \( 7_2 \):~\includegraphics[height=1.2em]{images/7_2}
+
+\end{abstract}
+\maketitle
+
+% ==================== Table of Contents (optional) ====================
+\newpage
+\begingroup
+\setlength{\baselineskip}{0.9\baselineskip}  % Adjust this factor as needed
+\tableofcontents
+\endgroup
+\vspace{1em}
+\newpage
+% ============= Begin of content ============
+\section{Introduction and Motivation}\label{sec:introduction-and-motivation}
+    The quest for a unified framework of fundamental physics remains unresolved. While General Relativity (GR) provides a powerful geometric description of gravity~\cite{einstein1915gr}, and the Standard Model (SM) successfully accounts for particle interactions via gauge symmetries~\cite{weinberg1995quantum}, these theories are conceptually and structurally incompatible. GR is formulated as a smooth, four-dimensional Riemannian geometry with dynamical curvature, while the SM operates on flat spacetime with point particles, quantum fields, and externally imposed mass via the Higgs mechanism.
+
+    Despite their predictive power, both frameworks leave foundational questions unanswered:
+    \begin{itemize}
+        \item What is the origin of inertial mass, beyond spontaneous symmetry breaking?
+        \item Why does proper time slow near massive bodies, and can this be described without spacetime curvature?
+        \item What underlying physical structure connects gravitation, mass-energy, and quantum phase?
+        \item Can the values of fundamental constants (e.g., $G$, $\alpha$, $\hbar$) be derived, rather than inserted?
+    \end{itemize}
+
+    The \textbf{Vortex \AE ther Model (VAM)} offers a new ontological starting point. It describes the universe as a structured, compressible, inviscid fluid---a physical \ae ther---embedded in a 3D Euclidean manifold with an absolute æther time $N$. Within this medium, particles are not pointlike but are stable \textit{topological knots} in the vorticity field. Mass, proper time, and gravitational attraction arise from swirl energetics, helicity density, and the emergent dynamics of local vortex configurations.
+
+    This approach does not invoke curvature or external scalar fields; instead, it derives time deviation, gravitational pressure, and inertial resistance from first principles in topological fluid mechanics. By defining a swirl scalar potential $\Phi(\vec{x},t)$, a velocity field $\vec{v} = \nabla \Phi$, and a vorticity field $\vec{\omega} = \nabla \times \vec{v}$, the theory reconstructs gravity as a time-dilating flow field and quantizes particles as eigenmodes of knotted circulation.
+
+    VAM builds on and surpasses prior analog models of gravity (e.g., superfluid vacuum theory~\cite{barcelo2011analogue}, analog BEC spacetimes~\cite{volovik2003universe}), but extends them into a complete field theory. It defines a Standard Model Lagrangian in terms of vortex knots and swirl symmetries, derives the values of $m_e$, $G$, and $\alpha$ from vortex geometry, and introduces a full canonical quantization scheme over a Hilbert space of knot eigenstates. It also aligns naturally with emergent gravity models like those of Jacobson~\cite{jacobson1995thermo} and Verlinde~\cite{verlinde2011emergent}, while offering a mechanical substrate and observable predictions.
+
+    This paper presents the full structure of the Vortex \AE ther Model, from its ontological foundations and swirl dynamics to its quantized field theory, Standard Model reconstruction, and experimental predictions.
+
+\section{Ontological Foundations: Æther, Swirl, and Time}\label{sec:ontological-foundations:-ther-swirl-and-time}
+    The Vortex \AE ther Model (VAM) is grounded in a physically realist ontology: the universe is composed of a compressible, inviscid fluid medium known as the \ae ther, embedded in a flat 3-dimensional Euclidean manifold $\mathbb{E}^3$ and parameterized by an absolute scalar time $N$. This æther forms the continuous substrate for all dynamics, structure, and causality. Swirl clocks $S(t)$ serve as the intrinsic timekeeping mechanisms for vortex-bound particles, representing a helicity-driven deviation from both proper time $\tau$ and global æther time $N$.
+
+    \subsection{The Æther Manifold $\mathcal{N}$ and Temporal Embedding}
+    We define the spacetime substrate as a 4-dimensional manifold $\mathcal{N} = \mathbb{E}^3 \times N$, where $N$ is the global æther time. All fields in VAM are defined over $\mathcal{N}$. Unlike in General Relativity, spacetime is not dynamical; instead, all physical dynamics arise from internal structure in the æther's flow fields. This allows for absolute simultaneity in æther time, while local time experiences can vary depending on vortex structures.
+
+    \subsection{Swirl Fields and Scalar Potentials}
+    The central dynamic quantity in VAM is the swirl scalar potential $\Phi(\vec{x},t)$, from which the velocity field is defined as:
+    \begin{equation}
+        \vec{v} = \nabla \Phi
+        \label{eq:velocity_from_potential}
+    \end{equation}
+    This is standard in vortex filament theory~\cite{saffman1992vortex} and classical fluid dynamics~\cite{batchelor2000introduction}.
+    The vorticity field is then given by:
+    \begin{equation}
+        \vec{\omega} = \nabla \times \vec{v}
+        \label{eq:vorticity_definition}
+    \end{equation}
+    These fields describe structured circulations and knots within the æther. Swirl configurations evolve over æther time $N$, and contain energy, helicity, and proper time deviation.
+
+    \subsection{Temporal Ontology: Proper Time and Swirl Clocks}
+    VAM introduces a layered model of time:
+    \begin{itemize}
+        \item \textbf{Æther Time \boldsymbol\(N\):} The global, absolute temporal parameter of the manifold $\mathcal{N}$
+        \item \textbf{Proper Time \boldsymbol\(\tau\):} The time experienced by a particle or knot, delayed by swirl-induced time deviation
+        \item \textbf{Swirl Clock Phase \boldsymbol\(S(t)\):} A local temporal field defined by helicity density $(\vec{v} \cdot \vec{\omega})$
+        \item \textbf{Vortex Proper Time \boldsymbol\(T_v\):} A phase cycle variable associated with the internal twist of a vortex knot
+    \end{itemize}
+
+    Gravitational time dilation is thus an emergent phenomenon: when swirl velocity increases, proper time slows as:
+    \begin{equation}
+        \frac{d\tau}{dN} = \sqrt{1 - \frac{v^2}{c^2}}
+        \label{eq:basic_time_deviation}
+    \end{equation}
+    This generalizes to:
+    \begin{equation}
+        \frac{d\tau}{dN} = \sqrt{1 - \frac{(\vec{v} \cdot \vec{\omega})^2}{\omega_{\text{bg}}^2 c^2}}
+        \label{eq:helicity_time_deviation}
+    \end{equation}
+    in the presence of background swirl fields. These relations reproduce the classical effects of redshift, gravitational delay, and relativistic contraction without invoking spacetime curvature.
+
+    \subsection{Knot Causality and Topological Stability}
+    Particles in VAM are not points, but stable, knotted configurations in the vorticity field. Each knot type $K_{p,q}$ (e.g., trefoil, torus, hyperbolic) defines a causally persistent structure with intrinsic energy, tension, and helicity~\cite{moffatt1969degree, arnold1998topological}. These knots evolve in the manifold $\mathcal{N}$ and obey conservation of circulation $\Gamma$ and linking number $Lk$ under ideal fluid flow. Their motion is governed by Eulerian advection and vortex filament equations.
+
+    \subsection*{Summary: Physical Ontology of VAM}
+    VAM replaces the postulates of field and curvature with:
+    \begin{itemize}
+        \item A real, compressible fluid medium — the æther — as the basis of reality;
+        \item Topological structures in swirl fields as the origin of particles, mass, and interaction;
+        \item Time as a multi-modal, emergent experience derived from flow, helicity, and phase;
+        \item Gravity as a fluid-dynamic phenomenon: structured swirl replaces curved geometry.
+    \end{itemize}
+
+\section{Swirl Kinematics and Classical Gravitation}\label{sec:swirl-kinematics-and-classical-gravitation}
+    In the Vortex \AE ther Model (VAM), gravity is not described by spacetime curvature but emerges from pressure gradients and time deviation in a structured swirl field. Gravitational phenomena arise from variations in the flow speed, helicity, and vorticity of the æther, modeled as a compressible, inviscid fluid. This section derives classical gravitational effects—such as redshift, time dilation, and orbital acceleration—from swirl dynamics and vortex energetics.
+
+    \subsection{Swirl Field Velocity and Time Deviation}
+    The swirl velocity field is defined as in Eq.~\ref{eq:velocity_from_potential}, with corresponding vorticity from Eq.~\ref{eq:vorticity_definition}. Proper time deviation follows Eq.~\ref{eq:basic_time_deviation}, which expresses how local swirl speed delays proper time $\tau$ relative to global æther time $N$.
+
+    This expression recovers the Schwarzschild time dilation formula when the swirl velocity is azimuthal, i.e., $v = v_\phi(r)$, as around a stationary massive source.
+
+    \subsection{Gravitational Redshift from Swirl Clock Phase}
+    The local swirl clock phase $S(t)$ evolves with helicity density, and redshift between an emitter and observer is:
+    \begin{equation}
+        \frac{f_{\text{emit}}}{f_{\text{obs}}} = \sqrt{1 - \frac{v_{\text{emit}}^2}{c^2}} \bigg/ \sqrt{1 - \frac{v_{\text{obs}}^2}{c^2}}
+        \label{eq:gravitational_redshift}
+    \end{equation}
+
+    This has the same functional form as classical gravitational redshift but arises from fluidic swirl energy instead of spacetime metric potentials.
+
+    \subsection{Frame-Dragging as Vortex Coupling}
+    Nearby test particles experience rotational acceleration from background swirl gradients:
+    \begin{equation}
+        \vec{a}_\theta = \Gamma \frac{\partial \vec{\omega}}{\partial r}
+        \label{eq:frame_drag_accel}
+    \end{equation}
+    This mimics Lense–Thirring frame dragging as an emergent property of circulation coupling~\cite{thorne1986blackholes}.
+
+    \subsection{Inertial Mass from Swirl Resistance}
+    VAM proposes that inertial mass arises from the local swirl energy stored in the vorticity field. The swirl energy of a region $\mathcal{V}$ is:
+    \begin{equation}
+        E_{\text{swirl}} = \frac{1}{2} \rho_{\text{\ae}}^{\text{(mass)}} \int_{\mathcal{V}} |\vec{\omega}|^2 \, d^3x
+        \label{eq:swirl_energy}
+    \end{equation}
+
+    The inertial mass is then:
+    \begin{equation}
+        m_{\text{inertial}} = \frac{E_{\text{swirl}}}{c^2}
+        \label{eq:inertial_mass}
+    \end{equation}
+
+    This realizes the Machian principle locally: resistance to acceleration arises from momentum-storing swirl structures, not from spacetime geometry.
+
+    \subsection{Recovery of Newtonian and Relativistic Limits}
+    In low-vorticity and low-velocity limits, swirl pressure gradients obey a Bernoulli-type equation:
+    \begin{equation}
+        \frac{1}{2} \rho v^2 + p + \rho \Phi_g = \text{const.}
+        \label{eq:bernoulli_grav}
+    \end{equation}
+
+    This leads to a classical gravitational force:
+    \begin{equation}
+        \vec{F}_g = -m \nabla \Phi_g
+        \label{eq:newtonian_grav_force}
+    \end{equation}
+
+    In analogy with Newton–Poisson gravity, we interpret the swirl-induced gravitational potential \( \Phi \) as satisfying:
+    \begin{equation}
+        \nabla^2 \Phi(\vec{x}) = - \frac{1}{2} \lambda_g |\vec{\omega}(\vec{x})|^2
+        \label{eq:swirl_poisson}
+    \end{equation}
+
+    This shows that vorticity density acts as the source of gravitational potential in VAM.
+
+    Under high swirl conditions, the full relativistic proper time deviation re-emerges as:
+    \begin{equation}
+        \frac{d\tau}{dN} = \sqrt{1 - \frac{\omega^2 r^2}{c^2}}
+        \label{eq:general_swirl_time}
+    \end{equation}
+
+    \subsection{Benchmarking Against GR}
+    This formulation reproduces:
+    \begin{itemize}
+        \item Time dilation near rotating bodies (e.g., GPS satellites, pulsars)
+        \item Gravitational redshift and lensing (via pressure gradients and swirl density)
+        \item Frame-dragging effects (via circulation field gradients)
+    \end{itemize}
+    These effects have been validated numerically in the VAM benchmarking study~\cite{vam_benchmark2025}.
+
+
+\section{Particles as Vortex Knots — Mass and Topology}
+    The Vortex \AE{}ther Model (VAM) interprets all elementary particles, atoms, and molecules as quantized vortex knots in an inviscid, compressible fluid-like medium. These knotted configurations carry energy, chirality, and linking number, and evolve through the distinct temporal modes defined earlier: global æther time \( N \), vortex proper time \( T_v \), swirl phase time \( S(t) \), and observer time \( \tau \). This topological ontology builds on classic work in vortex dynamics~\cite{moffatt1969degree, arnold1998topological, saffman1992vortex} and recent laboratory creation of knotted quantum vortices~\cite{kleckner2013creation}.
+
+    \subsection{Knot-Based Particle Taxonomy}
         \begin{figure}[H]
             \centering
             \footnotesize
@@ -93,187 +292,14 @@
                     \draw[arrow] (dark.south) -- (darkex.north);
                 \end{tikzpicture}
             }
-            \caption{Knot Classification by Swirl Coupling.
+            \caption{\footnotesize
+            \textbf{Knot Classification by Swirl Coupling.}
                 The flowchart visualizes how knot topology, chirality, and curvature tension determine gravitational behavior, and how this leads to specific particle subclasses:
                     \\ \textbf{Chiral knots} align with swirl fields and form matter: \textbf{leptons} (torus knots) and \textbf{quarks} (hyperbolic knots).
                     \\ \textbf{Achiral, tensionless} structures like unknots and Hopf links are \textbf{bosons}, passively guided by swirl tubes.
                     \\ \textbf{Achiral knots with tension} are expelled, forming \textbf{dark energy} candidates.
             }\label{fig:knot-classification}
         \end{figure}
-    \titlepageClose
-
-    \tableofcontents
-    \newpage
-% ============= Begin of content ============
-\section{Introduction and Motivation}
-
-    The quest for a unified framework of fundamental physics remains unresolved. While General Relativity (GR) provides a powerful geometric description of gravity~\cite{einstein1915gr}, and the Standard Model (SM) successfully accounts for particle interactions via gauge symmetries~\cite{weinberg1995quantum}, these theories are conceptually and structurally incompatible. GR is formulated as a smooth, four-dimensional Riemannian geometry with dynamical curvature, while the SM operates on flat spacetime with point particles, quantum fields, and externally imposed mass via the Higgs mechanism.
-
-    Despite their predictive power, both frameworks leave foundational questions unanswered:
-    \begin{itemize}
-        \item What is the origin of inertial mass, beyond spontaneous symmetry breaking?
-        \item Why does proper time slow near massive bodies, and can this be described without spacetime curvature?
-        \item What underlying physical structure connects gravitation, mass-energy, and quantum phase?
-        \item Can the values of fundamental constants (e.g., $G$, $\alpha$, $\hbar$) be derived, rather than inserted?
-    \end{itemize}
-
-    The \textbf{Vortex \AE ther Model (VAM)} offers a new ontological starting point. It describes the universe as a structured, compressible, inviscid fluid---a physical \ae ther---embedded in a 3D Euclidean manifold with an absolute æther time $N$. Within this medium, particles are not pointlike but are stable \textit{topological knots} in the vorticity field. Mass, proper time, and gravitational attraction arise from swirl energetics, helicity density, and the emergent dynamics of local vortex configurations.
-
-    This approach does not invoke curvature or external scalar fields; instead, it derives time deviation, gravitational pressure, and inertial resistance from first principles in topological fluid mechanics. By defining a swirl scalar potential $\Phi(\vec{x},t)$, a velocity field $\vec{v} = \nabla \Phi$, and a vorticity field $\vec{\omega} = \nabla \times \vec{v}$, the theory reconstructs gravity as a time-dilating flow field and quantizes particles as eigenmodes of knotted circulation.
-
-    VAM builds on and surpasses prior analog models of gravity (e.g., superfluid vacuum theory~\cite{barcelo2011analogue}, analog BEC spacetimes~\cite{volovik2003universe}), but extends them into a complete field theory. It defines a Standard Model Lagrangian in terms of vortex knots and swirl symmetries, derives the values of $m_e$, $G$, and $\alpha$ from vortex geometry, and introduces a full canonical quantization scheme over a Hilbert space of knot eigenstates. It also aligns naturally with emergent gravity models like those of Jacobson~\cite{jacobson1995thermo} and Verlinde~\cite{verlinde2011emergent}, while offering a mechanical substrate and observable predictions.
-
-    This paper presents the full structure of the Vortex \AE ther Model, from its ontological foundations and swirl dynamics to its quantized field theory, Standard Model reconstruction, and experimental predictions.
-
-\section{Ontological Foundations: Æther, Swirl, and Time}
-
-    The Vortex \AE ther Model (VAM) is grounded in a physically realist ontology: the universe is composed of a compressible, inviscid fluid medium known as the \ae ther, embedded in a flat 3-dimensional Euclidean manifold $\mathbb{E}^3$ and parameterized by an absolute scalar time $N$. This æther forms the continuous substrate for all dynamics, structure, and causality. Swirl clocks $S(t)$ serve as the intrinsic timekeeping mechanisms for vortex-bound particles, representing a helicity-driven deviation from both proper time $\tau$ and global æther time $N$.
-
-
-    \subsection{The Æther Manifold $\mathcal{N}$ and Temporal Embedding}
-
-    We define the spacetime substrate as a 4-dimensional manifold $\mathcal{N} = \mathbb{E}^3 \times N$, where $N$ is the global æther time. All fields in VAM are defined over $\mathcal{N}$. Unlike in General Relativity, spacetime is not dynamical; instead, all physical dynamics arise from internal structure in the æther's flow fields. This allows for absolute simultaneity in æther time, while local time experiences can vary depending on vortex structures.
-
-    \subsection{Swirl Fields and Scalar Potentials}
-
-    The central dynamic quantity in VAM is the swirl scalar potential $\Phi(\vec{x},t)$, from which the velocity field is defined as:
-    \begin{equation}
-        \vec{v} = \nabla \Phi
-        \label{eq:velocity_from_potential}
-    \end{equation}
-    This is standard in vortex filament theory~\cite{saffman1992vortex} and classical fluid dynamics~\cite{batchelor2000introduction}.
-    The vorticity field is then given by:
-    \begin{equation}
-        \vec{\omega} = \nabla \times \vec{v}
-        \label{eq:vorticity_definition}
-    \end{equation}
-    These fields describe structured circulations and knots within the æther. Swirl configurations evolve over æther time $N$, and contain energy, helicity, and proper time deviation.
-
-    \subsection{Temporal Ontology: Proper Time and Swirl Clocks}
-
-    VAM introduces a layered model of time:
-    \begin{itemize}
-        \item \textbf{Universal Æther Time} $N$: The global, absolute temporal parameter of the manifold $\mathcal{N}$
-        \item \textbf{Proper Time} $\tau$: The time experienced by a particle or knot, delayed by swirl-induced time deviation
-        \item \textbf{Swirl Clock Phase} $S(t)$: A local temporal field defined by helicity density $(\vec{v} \cdot \vec{\omega})$
-        \item \textbf{Vortex Proper Time} $T_v$: A phase cycle variable associated with the internal twist of a vortex knot
-    \end{itemize}
-
-    Gravitational time dilation is thus an emergent phenomenon: when swirl velocity increases, proper time slows as:
-    \begin{equation}
-        \frac{d\tau}{dN} = \sqrt{1 - \frac{v^2}{c^2}}
-        \label{eq:basic_time_deviation}
-    \end{equation}
-    This generalizes to:
-    \begin{equation}
-        \frac{d\tau}{dN} = \sqrt{1 - \frac{(\vec{v} \cdot \vec{\omega})^2}{\omega_{\text{bg}}^2 c^2}}
-        \label{eq:helicity_time_deviation}
-    \end{equation}
-    in the presence of background swirl fields. These relations reproduce the classical effects of redshift, gravitational delay, and relativistic contraction without invoking spacetime curvature.
-
-    \subsection{Knot Causality and Topological Stability}
-
-    Particles in VAM are not points, but stable, knotted configurations in the vorticity field. Each knot type $K_{p,q}$ (e.g., trefoil, torus, hyperbolic) defines a causally persistent structure with intrinsic energy, tension, and helicity~\cite{moffatt1969degree, arnold1998topological}. These knots evolve in the manifold $\mathcal{N}$ and obey conservation of circulation $\Gamma$ and linking number $Lk$ under ideal fluid flow. Their motion is governed by Eulerian advection and vortex filament equations.
-
-    \subsection{Summary: Physical Ontology of VAM}
-
-    VAM replaces the postulates of field and curvature with:
-    \begin{itemize}
-        \item A real, compressible fluid medium — the æther — as the basis of reality;
-        \item Topological structures in swirl fields as the origin of particles, mass, and interaction;
-        \item Time as a multi-modal, emergent experience derived from flow, helicity, and phase;
-        \item Gravity as a fluid-dynamic phenomenon: structured swirl replaces curved geometry.
-    \end{itemize}
-
-\section{Swirl Kinematics and Classical Gravitation}
-
-    In the Vortex \AE ther Model (VAM), gravity is not described by spacetime curvature but emerges from pressure gradients and time deviation in a structured swirl field. Gravitational phenomena arise from variations in the flow speed, helicity, and vorticity of the æther, modeled as a compressible, inviscid fluid. This section derives classical gravitational effects—such as redshift, time dilation, and orbital acceleration—from swirl dynamics and vortex energetics.
-
-    \subsection{Swirl Field Velocity and Time Deviation}
-
-    The swirl velocity field is defined as in Eq.~\ref{eq:velocity_from_potential}, with corresponding vorticity from Eq.~\ref{eq:vorticity_definition}. Proper time deviation follows Eq.~\ref{eq:basic_time_deviation}, which expresses how local swirl speed delays proper time $\tau$ relative to global æther time $N$.
-
-    This expression recovers the Schwarzschild time dilation formula when the swirl velocity is azimuthal, i.e., $v = v_\phi(r)$, as around a stationary massive source.
-
-    \subsection{Gravitational Redshift from Swirl Clock Phase}
-
-    The local swirl clock phase $S(t)$ evolves with helicity density, and redshift between an emitter and observer is:
-    \begin{equation}
-        \frac{f_{\text{emit}}}{f_{\text{obs}}} = \sqrt{1 - \frac{v_{\text{emit}}^2}{c^2}} \bigg/ \sqrt{1 - \frac{v_{\text{obs}}^2}{c^2}}
-        \label{eq:gravitational_redshift}
-    \end{equation}
-
-    This has the same functional form as classical gravitational redshift but arises from fluidic swirl energy instead of spacetime metric potentials.
-
-    \subsection{Frame-Dragging as Vortex Coupling}
-
-    Nearby test particles experience rotational acceleration from background swirl gradients:
-    \begin{equation}
-        \vec{a}_\theta = \Gamma \frac{\partial \vec{\omega}}{\partial r}
-        \label{eq:frame_drag_accel}
-    \end{equation}
-    This mimics Lense–Thirring frame dragging as an emergent property of circulation coupling~\cite{thorne1986blackholes}.
-
-    \subsection{Inertial Mass from Swirl Resistance}
-
-    VAM proposes that inertial mass arises from the local swirl energy stored in the vorticity field. The swirl energy of a region $\mathcal{V}$ is:
-    \begin{equation}
-        E_{\text{swirl}} = \frac{1}{2} \rho_{\text{\ae}}^{\text{(mass)}} \int_{\mathcal{V}} |\vec{\omega}|^2 \, d^3x
-        \label{eq:swirl_energy}
-    \end{equation}
-
-    The inertial mass is then:
-    \begin{equation}
-        m_{\text{inertial}} = \frac{E_{\text{swirl}}}{c^2}
-        \label{eq:inertial_mass}
-    \end{equation}
-
-    This realizes the Machian principle locally: resistance to acceleration arises from momentum-storing swirl structures, not from spacetime geometry.
-
-    \subsection{Recovery of Newtonian and Relativistic Limits}
-
-    In low-vorticity and low-velocity limits, swirl pressure gradients obey a Bernoulli-type equation:
-    \begin{equation}
-        \frac{1}{2} \rho v^2 + p + \rho \Phi_g = \text{const.}
-        \label{eq:bernoulli_grav}
-    \end{equation}
-
-    This leads to a classical gravitational force:
-    \begin{equation}
-        \vec{F}_g = -m \nabla \Phi_g
-        \label{eq:newtonian_grav_force}
-    \end{equation}
-
-    In analogy with Newton–Poisson gravity, we interpret the swirl-induced gravitational potential \( \Phi \) as satisfying:
-    \begin{equation}
-        \nabla^2 \Phi(\vec{x}) = - \frac{1}{2} \lambda_g |\vec{\omega}(\vec{x})|^2
-        \label{eq:swirl_poisson}
-    \end{equation}
-
-    This shows that vorticity density acts as the source of gravitational potential in VAM.
-
-    Under high swirl conditions, the full relativistic proper time deviation re-emerges as:
-    \begin{equation}
-        \frac{d\tau}{dN} = \sqrt{1 - \frac{\omega^2 r^2}{c^2}}
-        \label{eq:general_swirl_time}
-    \end{equation}
-
-    \subsection{Benchmarking Against GR}
-
-    This formulation reproduces:
-    \begin{itemize}
-        \item Time dilation near rotating bodies (e.g., GPS satellites, pulsars)
-        \item Gravitational redshift and lensing (via pressure gradients and swirl density)
-        \item Frame-dragging effects (via circulation field gradients)
-    \end{itemize}
-    These effects have been validated numerically in the VAM benchmarking study~\cite{vam_benchmark2025}.
-
-
-\section{Particles as Vortex Knots — Mass and Topology}
-
-    The Vortex \AE{}ther Model (VAM) interprets all elementary particles, atoms, and molecules as quantized vortex knots in an inviscid, compressible fluid-like medium. These knotted configurations carry energy, chirality, and linking number, and evolve through the distinct temporal modes defined earlier: global æther time \( N \), vortex proper time \( T_v \), swirl phase time \( S(t) \), and observer time \( \tau \). This topological ontology builds on classic work in vortex dynamics~\cite{moffatt1969degree, arnold1998topological, saffman1992vortex} and recent laboratory creation of knotted quantum vortices~\cite{kleckner2013creation}.
-
-    \subsection{Knot-Based Particle Taxonomy}
 
     The classification of matter in VAM arises from knot type, chirality, and internal curvature tension. This generates a natural taxonomy:
 
@@ -289,7 +315,6 @@
     A full taxonomy of particle-associated vortex knots—including topological class, chirality, and mass behavior—is presented in Appendix~\ref{tab:knot_taxonomy}. This gravitational classifier refines earlier analogs using quantized vortex tubes~\cite{volovik2003universe} and topologically stable defects~\cite{ranada1992knots}.
 
     \subsection{Chirality, Time, and Matter-Antimatter Duality}
-
     In VAM, chirality is not superficial but defines the knot’s alignment with temporal flow:
 
     \begin{itemize}
@@ -300,7 +325,6 @@
     Matter–antimatter asymmetry emerges from global æther vorticity, which biases toward one chirality sector, offering a topological basis for parity violation.
 
     \subsection{Swirl Energy and Charge from Helicity}
-
     The rest energy of a vortex knot arises from confined swirl motion:
 
     \begin{equation}
@@ -313,7 +337,6 @@
     In addition to mass, the swirl configuration determines electric charge via helicity flux:
 
     \paragraph{Electric Charge as Æther Helicity Flux:}
-
     The electric field is modeled as a helicity flux sourced by swirl topology:
 
     \begin{equation}
@@ -323,7 +346,6 @@
     Thus, electric charge is the conserved topological twist of a knot, and Coulomb’s law arises from vortex helicity gradients~\cite{ranada1992knots}.
 
     \subsection{Mass Formula with Topological Amplification}
-
     This raw energy is scaled by a topological amplification factor, which accounts for coherence and core structure:
 
     \begin{equation}
@@ -341,7 +363,6 @@
     where \( n \) is the number of swirl cores forming the knot bundle.
 
     \subsection{Derived Baryon Masses}
-
     Baryons are modeled as composite knots of three subcores. Their masses are given by:
 
     \begin{align}
@@ -364,7 +385,6 @@
     These yield baryon masses accurate to within 1–2\% of observed values using only geometric and topological inputs~\cite{kleckner2013creation}.
 
     \subsection{Master Formula for All Knot-Based Masses}
-
     All particle masses are unified under a general formula:
 
     \begin{equation}
@@ -387,7 +407,7 @@
         \item Molecules: \( n \gg 1 \), typically \( s = 2 \)
     \end{itemize}
 
-    \subsection{Physical Interpretation}
+    \subsection*{Physical Interpretation}
 
     Mass in VAM arises from:
     \begin{itemize}
@@ -399,13 +419,10 @@
 
     \noindent No scalar Higgs field is required.\footnote{In the Standard Model, mass arises via spontaneous symmetry breaking of a scalar field. In VAM, mass is a geometric consequence of vortex topology, æther tension, and swirl-induced proper time deviation.}
 
-
 \section{Standard Model from Swirl Symmetry}
-
     The Standard Model of particle physics is built upon abstract Lie groups that encode internal symmetries of particles and their interactions: \( SU(3)_C \) for the strong force, \( SU(2)_L \) for the weak interaction, and \( U(1)_Y \) for electromagnetism via hypercharge. In the Vortex \AE{}ther Model (VAM), these gauge groups are not purely mathematical constructions but emerge naturally from the topology and dynamics of swirl fields within a compressible æther medium~\cite{arnold1998topological, volovik2003universe, kleckner2013creation}.
 
-    \subsection{\textbf{\boldmath\texorpdfstring{$SU(1)_Y$}{U(1)Y}}: Hypercharge as Global Swirl Orientation}
-
+    \subsection{\textbf{\boldmath\texorpdfstring{$U(1)_Y$}{U(1)Y}}: Hypercharge as Global Swirl Orientation}
     The simplest gauge symmetry, \( U(1)_Y \), originates in VAM from the conserved global orientation of the swirl clock phase \( S(t) \). Clockwise and counterclockwise swirl directions correspond to positive and negative hypercharge, respectively. Since this global swirl coherence is preserved over proper time \( T_v \), it defines a real, physical basis for the \( U(1) \) group.
 
     \begin{itemize}
@@ -415,7 +432,6 @@
     \end{itemize}
 
     \subsection{\textbf{\boldmath\texorpdfstring{$SU(2)_L$}{SU(2)L}}: Chiral Bifurcations and Weak Interaction}
-
     The \( SU(2)_L \) group in VAM arises from chirality bifurcations in swirl phase evolution. Matter-like knots (left-handed) and antimatter-like knots (right-handed) occupy distinct topological configurations. Weak interactions are modeled as reconnection events (denoted \( \kappa \)-transitions) that flip chirality or induce topological class changes.
 
     \begin{itemize}
@@ -433,7 +449,6 @@
     where each generator \( T_i \) corresponds to a discrete topological transformation in the æther swirl configuration.
 
     \subsection{\textbf{\boldmath\texorpdfstring{$SU(3)_C$}{SU(3)C}}: Triskelion Braid Algebra and Color Charge}
-
     Color charge in VAM is modeled as helicity-entangled vortex triplets, also called \emph{triskelions}. Each colored strand (R, G, B) encodes a quantized helicity axis within a tightly bound tri-knot configuration. Gluon exchange arises from braid operations that reconnect or twist pairs of these strands:
 
     \begin{equation}
@@ -518,11 +533,9 @@
 
 
 \section{Quantized Swirl Field Theory in the Vortex \AE{}ther Model}\label{sec:quantized_swirl_field_theory}
-
     To elevate VAM from a classical topological theory to a fully quantized field theory, we construct a formalism for canonical and path-integral quantization of the structured swirl fields. These fields evolve across the distinct temporal layers \( S(t) \), \( T_v \), and \( \tau \) defined in the Temporal Ontology of the æther.
 
     \subsection{Canonical Commutators and Field Quantization}
-
     We define the swirl potential \( \theta(\vec{x}, t) \) and æther density \( \rho(\vec{x}, t) \) as a conjugate pair. The canonical commutation relation is:
 
     \begin{equation}
@@ -539,7 +552,6 @@
     This establishes a Lie algebra structure consistent with Helmholtz decomposition and vortex dynamics.
 
     \subsection{Swirl Mode Expansion and Vortex Quantization}
-
     The quantized swirl field operator is expressed as:
 
     \begin{equation}
@@ -555,7 +567,6 @@
     This introduces a vortex-based quantum of action~\cite{ranada1992knots}, suggesting a geometric origin for \( \hbar \).
 
     \subsection{Knot Hilbert Space and Topological Basis}
-
     We define a vortex-knot Hilbert space \( \mathcal{H}_K \), with basis states:
 
     \begin{equation}
@@ -575,7 +586,6 @@
     The knot types \( K_{p,q} \) act as topologically protected excitations — e.g., \( T(2,3) \) for the electron — with chirality and linking numbers encoding fermionic/bosonic distinctions~\cite{kleckner2013creation}.
 
     \subsection{Topological Path Integral}
-
     The partition function is extended to integrate over all vortex sectors:
 
     \begin{equation}
@@ -585,7 +595,6 @@
     Each sector \( \mathcal{K} \) corresponds to a knot class with fixed linking number, chirality, and topological helicity. Tunneling amplitudes between sectors yield transition rates for particle decays or interactions.
 
     \subsection{Interaction Vertices and S-Matrix Formulation}
-
     Swirl-mediated interactions are modeled as recombination or bifurcation events:
 
     \begin{equation}
@@ -650,7 +659,7 @@
     A swirl horizon occurs in VAM when a vortex knot’s internal phase progression halts:
 
     \[
-    \frac{d\tau}{dt} \rightarrow 0 \quad \Rightarrow \quad \vec{v} \cdot \vec{\omega} \rightarrow \frac{C_e \, \omega_0}{\alpha}
+        \frac{d\tau}{dt} \rightarrow 0 \quad \Rightarrow \quad \vec{v} \cdot \vec{\omega} \rightarrow \frac{C_e \, \omega_0}{\alpha}
     \]
 
     This condition marks a loss of observable proper time — analogous to an event horizon in GR. The underlying mechanism is topological: coherence breakdown in swirl clock synchronization across a high-curvature vorticity core~\cite{ranada1992knots}.
@@ -659,7 +668,7 @@
     The propagation of signals is slowed in swirl-dense regions due to the effective local refractive index increasing with energy density. The redshift experienced is:
 
     \begin{equation}
-    z \sim \frac{1}{\sqrt{1 - \frac{v_\phi^2}{C_e^2}}} - 1
+        z \sim \frac{1}{\sqrt{1 - \frac{v_\phi^2}{C_e^2}}} - 1
     \end{equation}
 
     This expression matches the Schwarzschild redshift to first order in the weak-field limit, with \( v_\phi \) being the azimuthal swirl velocity. It predicts similar results to GR but from internal fluid compression~\cite{volovik2003universe, kleckner2013creation}.
@@ -699,7 +708,7 @@
 
     showing that relativistic kinematics emerge from hydrodynamic swirl symmetry rather than fundamental spacetime postulates.
 
-    \subsection{Conclusion: GR as a Topological Fluid Limit}
+    \subsection*{Conclusion: GR as a Topological Fluid Limit}
     VAM reproduces all major predictions of GR — time dilation, redshift, frame dragging, black hole horizons — through quantifiable fluid and topological effects in the structured swirl field. Curved spacetime is not fundamental, but emerges as an effective theory from helicity gradients and swirl clock dynamics.
 
 
@@ -713,7 +722,7 @@
         \frac{d\tau}{dt} = 1 - \frac{\alpha \mathcal{H}}{C_e \omega_0}
     \end{equation}
 
-    Experimental efforts such as atom interferometry or optical clock shifts in toroidal BECs could detect these time rate changes, confirming the helicity origin of gravity in VAM~\cite{pethick2008bose,kleckner2013creation,scheeler2014helicity}.
+    Experimental efforts such as atom interferometry or optical clock shifts in toroidal BECs could detect these time rate changes, confirming the helicity origin of gravity in VAM~\cite{pethick2008bose, kleckner2013creation, scheeler2014helicity}.
 
     \subsection{Optical Helicity Lensing}
     VAM predicts birefringence and angular deflection of circularly polarized light in regions with strong swirl gradients. In intense laser setups, a transverse swirl pressure gradient $ \nabla P_{\text{swirl}} $ acts analogously to a gravitational lens:
@@ -722,7 +731,7 @@
         \theta_r^{\text{VAM}} \sim \frac{1}{2} \cdot \frac{\nabla P_{\text{swirl}}}{\rho_{\text{\ae}}^{\text{(mass)}} v^2}
     \end{equation}
 
-    This matches the angular deflection expected from nonlinear QED effects but arises from æther flow mechanics~\cite{sarazin2016refraction,battesti2013qed,zhang2025simulation}.
+    This matches the angular deflection expected from nonlinear QED effects but arises from æther flow mechanics~\cite{sarazin2016refraction, battesti2013qed, zhang2025simulation}.
 
     \subsection{Quantized Mass–Circulation Correlation}
     VAM asserts that inertial mass is quantized via knot helicity and vortex circulation:
@@ -731,12 +740,12 @@
         M = \frac{8\pi \rho_{\text{\ae}}^\text{(mass)} r_c^3}{C_e} \left( \sqrt{p^2 + q^2 + \gamma pq} \right)
     \]
 
-    Stable vortex knots of various types (e.g., trefoil \( T(2,3) \), figure-eight \( 4_1 \)) embedded in superfluids should exhibit mass-like behavior in drift or phase delay. Simulating these in fluid tanks or holographic BEC systems provides direct tests~\cite{kleckner2013creation,volovik2003universe}.
+    Stable vortex knots of various types (e.g., trefoil \( T(2,3) \), figure-eight \( 4_1 \)) embedded in superfluids should exhibit mass-like behavior in drift or phase delay. Simulating these in fluid tanks or holographic BEC systems provides direct tests~\cite{kleckner2013creation, volovik2003universe}.
 
     \subsection{Persistent Swirl Entanglement in BECs}
     Topological memory of knotted vortex configurations can be preserved over long durations in superfluids, resembling quantum entanglement in spatially separated systems. Experiments by Irvine et al.~\cite{kleckner2013creation} demonstrate stable torus knots and Hopf links, which in VAM are interpreted as bound topological states with shared causal time links $T_v$.
 
-    These experiments could validate the VAM interpretation of entanglement as conserved circulation among nonlocal knotted domains~\cite{volovik2003universe,kiehn2005torsion}.
+    These experiments could validate the VAM interpretation of entanglement as conserved circulation among nonlocal knotted domains~\cite{volovik2003universe, kiehn2005torsion}.
 
     \subsection{Refraction of Light by Light}
     Laser setups designed to observe photon–photon scattering (via nonlinear vacuum refractive index) may instead be detecting vortex-mediated swirl gradients. The probe beam’s phase is modulated by swirl-induced effective refractive index changes~\cite{sarazin2016refraction}:
@@ -769,7 +778,7 @@
     \end{table}
     Detailed protocols, setups, and quantitative predictions for these effects are presented in Appendix~\ref{sec:experimental_protocols}.
 
-    \subsection{Conclusion}
+    \subsection*{Conclusion}
     These proposals demonstrate that VAM is not only a theoretical construct but a predictive, experimentally testable framework. The swirl-based interpretation of time, mass, and gauge interaction provides multiple accessible avenues for validation.
 
 
@@ -780,7 +789,7 @@
     VAM achieves a fluid-based reinterpretation of major physical constructs:
 
     \begin{itemize}
-        \item \textbf{Mass and Inertia:} Inertial mass arises from quantized circulation and helicity, not via symmetry-breaking fields~\cite{kleckner2013creation,volovik2003universe}.
+        \item \textbf{Mass and Inertia:} Inertial mass arises from quantized circulation and helicity, not via symmetry-breaking fields~\cite{kleckner2013creation, volovik2003universe}.
         \item \textbf{Time as an Emergent Flow:} Temporal evolution is layered: vortex proper time $T_v$, swirl clock phase $S(t)$, and external lab time $\bar{t}$ emerge from helicity flux $\vec{v} \cdot \vec{\omega}$~\cite{volovik2003universe, ranada1990topological}. This flow governs causality, entanglement, and energy quantization within knotted systems. A glossary of these temporal constructs and their physical meanings is provided in Appendix~\ref{sec:glossary}.
         \item \textbf{Gauge Interactions:} SU(3), SU(2), and U(1) fields arise as emergent swirl geometries over causal æther manifold $\mathcal{N}$~\cite{moffatt1969knottedness}.
         \item \textbf{Standard Model Constants:} Constants like $h$, $\alpha$, and $G$ are not fundamental but emergent from vortex core radius, swirl speed, and æther density.     Derivations of these constants from first principles of vortex geometry are detailed in Appendix~\ref{sec:constants_derivation}.
@@ -828,7 +837,6 @@
         \item A quantized Hilbert space and topological S-matrix defined over vortex-knot sectors (Sec.~\ref{sec:quantized_swirl_field_theory}).
     \end{itemize}
 
-
     If future experiments validate helicity-driven time dilation, mass–circulation quantization, or persistent topological entanglement, VAM may serve as a testable, fluid-based foundation beneath both classical and quantum theory.
 
     \begin{quote}
@@ -839,7 +847,7 @@
 %                                             APPENDIX                                                   %
 %========================================================================================================%
     \appendix
-        \appendixsection{Derivation of Fundamental Constants from Vortex Geometry}\label{sec:constants_derivation}
+        \section{Derivation of Fundamental Constants from Vortex Geometry}\label{sec:constants_derivation}
             In the Vortex \AE{}ther Model (VAM), what are traditionally considered fundamental constants are reinterpreted as emergent quantities arising from topological features, swirl flow, and strain energy in the æther. This appendix outlines the derivations for the fine-structure constant \( \alpha \), Planck’s constant \( \hbar \), Newton’s gravitational constant \( G \), and the electron mass \( m_e \).
         
             \subsection{Fine-Structure Constant \boldmath\( \alpha \)}
@@ -882,7 +890,7 @@
         
             with \( \gamma \approx 0.0059 \) calibrated from experimental values, this shows that mass depends on the linking geometry and swirl energy of the æther domain~\cite{kleckner2013knots, moffatt1969knottedness}.
         
-            \subsection{Summary Table}
+            \subsection*{Summary Table}
         
             \begin{table}[H]
                 \centering
@@ -987,7 +995,7 @@
         
                 It also matches the order of vacuum energy density in some QFT calculations and serves as a natural cutoff scale in VAM.
         
-                \subsection{Summary and Preferred Usage of Æther Densities}
+                \subsection*{Summary and Preferred Usage of Æther Densities}
         
                 Throughout the Vortex \AE{}ther Model, different effective æther densities are used based on physical context. The most commonly applied value is the \textbf{mass-equivalent æther density} \( \rho_{\text{\ae}}^{\text{(mass)}} \), as it governs inertial response and is central to the mass–helicity relationship.
         
@@ -1013,8 +1021,8 @@
 %========================================================================================================%
 %                                             APPENDIX                                                   %
 %========================================================================================================%
-       \appendixsection{Vortex-Scale Gravitational Coupling and Ætheric Planck Units}
-                \subsection{Definition and Physical Motivation}
+       \section{Vortex-Scale Gravitational Coupling and Ætheric Planck Units}
+                \subsection*{Definition and Physical Motivation}
 
                 We define a dimensionless gravitational coupling constant intrinsic to the Vortex \AE{}ther Model (VAM), evaluated at the electron mass scale and vortex core radius:
 
@@ -1046,7 +1054,7 @@
                 \eta_e \approx \frac{6.67430 \times 10^{-11} \cdot (9.10938 \times 10^{-31})^2}{(1.40897 \times 10^{-15})^2 \cdot 29.0535} \approx \boxed{2.08 \times 10^{-43}}
                 \end{equation}
 
-                \subsection{Physical Interpretation}
+                \subsection*{Physical Interpretation}
 
                 The quantity \( \eta_e \) characterizes gravitational coupling within the VAM vortex structure:
 
@@ -1056,7 +1064,7 @@
                     \item It provides a natural expansion parameter in perturbative formulations of gravity within VAM.
                 \end{enumerate}
 
-                \subsection{Ætheric Planck Units}
+                \subsection*{Ætheric Planck Units}
 
                 Using the core radius \( r_c \), core swirl speed \( C_e \), and force limit \( F_{\text{\ae}}^{\text{max}} \), we define a self-consistent system of physical units native to the ætheric model—analogous to the Planck system, but grounded in fluid dynamics.
 
@@ -1094,7 +1102,7 @@
 %========================================================================================================%
 %                                             APPENDIX                                                   %
 %========================================================================================================%
-        \appendixsection{Knot Mass Taxonomy and Helicity Tables}
+        \section{Knot Mass Taxonomy and Helicity Tables}
         \label{sec:knot_mass_taxonomy}
             This appendix presents a condensed taxonomy of particle-like vortex knots in the Vortex \AE{}ther Model (VAM), correlating topological class, chirality, and predicted mass behavior under swirl-based scaling laws.
         
@@ -1122,7 +1130,7 @@
 %========================================================================================================%
 %                                             APPENDIX                                                   %
 %========================================================================================================%
-        \appendixsection{Swirl Operator Algebra – Reference Form}\label{sec:swirl_operator_algebra}
+        \section{Swirl Operator Algebra – Reference Form}\label{sec:swirl_operator_algebra}
             This appendix outlines the algebra of topological operators acting on quantized vortex knot states in the Vortex \AE{}ther Model (VAM). These operators provide an explicit realization of SU(2) and SU(3) symmetry operations within the Hilbert space of swirl eigenstates.
         
             \subsection{SU(2) Algebra from Topological Knot Transformations}
@@ -1190,7 +1198,7 @@
         
             These operators thus encode the full strong interaction algebra via topological transformations~\cite{moffatt1969knottedness}.
         
-            \subsection{Physical Interpretation of Operators}
+            \subsection*{Physical Interpretation of Operators}
         
             \begin{table}[H]
                 \centering
@@ -1215,11 +1223,10 @@
 %========================================================================================================%
 %                                             APPENDIX                                                   %
 %========================================================================================================%
-        \appendixsection{Experimental Protocols and Clock Shift Predictions}\label{sec:experimental_protocols}
+        \section{Experimental Protocols and Clock Shift Predictions}\label{sec:experimental_protocols}
             This appendix outlines laboratory-accessible experiments that test the central predictions of the Vortex \AE{}ther Model (VAM), focusing on time dilation effects, vortex helicity dynamics, and ætheric swirl interactions. Each protocol aims to validate the model’s claim that mass, proper time, and gravitation arise from structured vorticity.
         
             \subsection{Helicity-Induced Time Dilation in Toroidal BECs}
-        
             \paragraph{Prediction.}
             Proper time inside a vortex is slowed relative to external æther time \( \bar{t} \), following:
         
@@ -1235,7 +1242,6 @@
             Phase lag \( \Delta \tau \) is expected to scale with local helicity and matches predictions from Eq.~\ref{eq:helicity_dilation}~\cite{volovik2003universe, ranada1990topological}.
         
             \subsection{Optical Helicity Lensing via Swirl Interference}
-        
             \paragraph{Prediction.}
             Intense counter-rotating light beams induce a transverse swirl gradient in the æther. A third probe beam experiences polarization-dependent deflection:
         
@@ -1253,7 +1259,6 @@
             Predicted deflection \( \sim 5 \times 10^{-12} \, \text{rad} \) should match nonlinear QED but is attributed here to swirl-based pressure gradients~\cite{moffatt1969knottedness}.
         
             \subsection{Swirl Clocks and Phase-Resolved Measurement of \( S(t) \)}
-        
             \paragraph{Prediction.}
             The internal swirl phase \( S(t) \), which defines a knot’s proper time, deviates under varying core tension. Swirl phase clocks embedded in BEC rings should show time lag under vortex-induced confinement.
         
@@ -1264,7 +1269,6 @@
             Swirl clocks accumulate lag proportional to \( \Gamma^2 / r_c^2 \), providing experimental access to internal time pacing in VAM~\cite{volovik2003universe}.
         
             \subsection*{Summary of Observable Signatures}
-        
             \begin{table}[H]
                 \centering
                 \footnotesize
@@ -1285,7 +1289,6 @@
             \end{table}
         
             \subsection{Static Swirl Field Experiments from Æther Potential Theory}
-        
             In addition to dynamic vortex phenomena, the Vortex \AE{}ther Model (VAM) predicts that quasi-static or weakly rotating swirl configurations generate measurable gravitational-like effects via the static swirl potential \( \Phi \). These effects arise from the modified Poisson-like equation~(see Eq.~\ref{eq:swirl_poisson}):
         
             \begin{equation}
@@ -1295,7 +1298,6 @@
             This implies that spatial gradients in static vorticity fields can source effective gravitational potentials and induce proper time deviation, even in the absence of large-scale fluid motion. We propose the following experimental tests targeting this quasi-static regime:
         
             \subsubsection{Atom Interferometry in Static Swirl Wells}
-        
             Construct a stationary or slowly rotating vortex tube inside a Bose–Einstein condensate. Use ultracold atoms (e.g., Rb-87, Yb-171) launched axially through the swirl field. Time-of-flight measurements, or Ramsey-type interferometry, will detect phase lags arising from the potential gradient:
         
             \begin{equation}
@@ -1305,7 +1307,6 @@
             This tests whether static swirl energy curves proper time, a direct falsification of VAM versus GR predictions.
         
             \subsubsection{Passive Drift in Helicity Gradients}
-        
             In a classical fluid tank, generate a standing vortex ring or helicity-rich knotted field with low net flow speed. Introduce neutrally buoyant tracers. In VAM, effective gravitational-like drift occurs toward regions of higher \( |\vec{v} \cdot \vec{\omega}| \), even absent pressure gradients. Observe:
         
             \begin{itemize}
@@ -1316,7 +1317,6 @@
             This could be done using glycerol-water mixtures with dye tracers and visualized using particle image velocimetry (PIV).
         
             \subsubsection{Optical Cavity Time Deviation Test}
-        
             Build two high-stability optical cavities on either side of a stationary vortex region (e.g., around a rotating ring-shaped BEC or permanent superfluid torus). Synchronize phase across the system. VAM predicts that clock signal propagation through differing swirl potential zones will undergo a geometric phase shift:
         
             \begin{equation}
@@ -1330,11 +1330,10 @@
 %========================================================================================================%
 %                                             APPENDIX                                                   %
 %========================================================================================================%
-        \appendixsection{Glossary of Temporal Ontology and Ætheric Constructs}\label{sec:glossary}
+        \section{Glossary of Temporal Ontology and Ætheric Constructs}\label{sec:glossary}
             This glossary compiles and defines the key theoretical constructs of the Vortex \AE{}ther Model (VAM), particularly those relating to its multi-layered temporal ontology and fluid-dynamical foundations. Each term is contrasted with its classical or quantum field theory analog where applicable.
         
-            \subsection{Temporal Modes in VAM}
-        
+            \subsection*{Temporal Modes in VAM}
             \begin{description}
                 \item[$N$ — Æther-Time:] Absolute causal evolution parameter for the global manifold. All physical changes propagate over $N$, providing the ontological frame for vortex histories. Analogous to Newtonian universal time~\cite{volovik2003universe, ranada1990topological}.
         
@@ -1359,8 +1358,7 @@
                 \item[$\kappa$ — Kairos Events:] Discrete topological bifurcations in vortex evolution. These mark transitions, knot fusion, or decay moments and are non-reversible in $N$~\cite{kleckner2013knots, moffatt1969knottedness}.
             \end{description}
         
-            \subsection{Æther Field Quantities}
-        
+            \subsection*{Æther Field Quantities}
             \begin{description}
                 \item[$\rho_{\text{\ae}}^{\text{(mass)}}$:] Inertial (mass-equivalent) density of the æther; governs kinetic energy, wave propagation, and time dilation effects.
                 \item[$\rho_{\text{\ae}}^{\text{(fluid)}}$:] Compressibility-related density; appears in pressure gradient and Bernoulli terms.
@@ -1379,7 +1377,7 @@
                 \item[$C_e$:] Swirl-limited speed at $r_c$, analogous to speed of sound. Appears in all derivations of $m$, $\hbar$, and $\alpha$.
             \end{description}
         
-            \subsection{Knot Taxonomy Labels}
+            \subsection*{Knot Taxonomy Labels}
         
             \begin{description}
                 \item[$K_{p,q}$:] Knot type characterized by winding numbers $p$, $q$. Examples:
@@ -1393,7 +1391,7 @@
                 \item[Chirality $C = \pm 1$:] Determines interaction handedness and coupling asymmetry (e.g., weak parity violation).
             \end{description}
         
-            \subsection{VAM vs Classical Analogs}
+            \subsection*{VAM vs Classical Analogs}
         
             \begin{table}[H]
                 \centering
@@ -1414,11 +1412,10 @@
 %========================================================================================================%
 %                                             APPENDIX                                                   %
 %========================================================================================================%
-        \appendixsection{Scaling Hierarchy of Observable Forces in Vortex \AE ther}\label{sec:force_scaling}
+        \section{Scaling Hierarchy of Observable Forces in Vortex \AE ther}\label{sec:force_scaling}
             This appendix formalizes the scaling relationships between the internal swirl tension of vortex knots in the \AE ther and the observed strengths of the fundamental forces. We demonstrate that the maximum tension in the \AE ther sets a universal force scale \( F_0 \), from which both electromagnetic and gravitational forces emerge as suppressed projections governed by topological coherence parameters: the fine-structure constant \( \alpha \), the golden ratio \( \varphi \), and the gravitational fine-structure constant \( \alpha_g \)~\cite{ranada1990topological, volovik2003universe}.
         
             \subsection{Fundamental Æther Tension}
-        
             The maximum force transmissible by a coherent vortex core is defined by its energy density and swirl velocity limit:
             \begin{equation}
                 F_0 = \frac{1}{2} \rho_{\text{\ae}}^{(\text{energy})} C_e^2
@@ -1442,7 +1439,6 @@
             The projection relationship reflects the emergence of EM fields from knotted helicity structures~\cite{kiehn2005topological}.
         
             \subsection{Gravitational Coupling and Fine Structure}
-        
             In VAM, gravitational interactions arise from incoherent helicity leakage across global swirl fields:
             \begin{equation}
                 F_\text{grav} = \alpha_g \cdot F_0, \quad \text{where } \alpha_g = \frac{G m_e^2}{\hbar c} \approx 1.7518 \times 10^{-45}
@@ -1455,7 +1451,6 @@
             demonstrating an extreme suppression of gravitational effects by geometric coherence decay.
         
             \subsection{Hierarchical Scaling of Forces}
-        
             \begin{equation}
                 \boxed{
                     F_\text{grav} \ll F_\text{Coulomb} \ll F_\text{core}^{\text{max}}
@@ -1463,14 +1458,13 @@
             \end{equation}
         
             \subsection{Interpretation of Scaling}
-        
             \begin{itemize}
                 \item The \textbf{core tension} \( F_0 \) represents the unconstrained swirl force inside confined knots.
                 \item The \textbf{Coulomb force} reflects partial phase-coherent leakage from aligned knotted fields.
                 \item The \textbf{gravitational force} emerges from globally incoherent swirl leakage — suppressed by many orders of magnitude.
             \end{itemize}
         
-            \subsection{Postulate: Swirl Coupling Limit}
+            \subsection*{Postulate: Swirl Coupling Limit}
         
             \textbf{Postulate (Swirl Coupling Limit).} Observable force magnitudes from vortex-bound æther structures are projections of core swirl tension, suppressed by topological coherence factors:
         
@@ -1488,7 +1482,7 @@
 %========================================================================================================%
 %                                             APPENDIX                                                   %
 %========================================================================================================%
-        \appendixsection{Entropic Gravity from Swirl Fields}\label{sec:verlinde_mapping}
+        \section{Entropic Gravity from Swirl Fields}\label{sec:verlinde_mapping}
             In this appendix, we derive a vortex-based interpretation of Verlinde's entropic force law, connecting it to the structured vorticity fields of the Vortex \AE{}ther Model (VAM). We start from the original entropic force expression:
 
             \begin{equation}
@@ -1497,7 +1491,6 @@
             and reinterpret all terms within the framework of vortex-based æther dynamics. The goal is to ground the entropic force in the structured vorticity fields of the Vortex \AE ther Model (VAM), using fundamental fluid variables such as local angular velocity $\Omega$, æther density $\rho_{\text{\ae}}^{\text{(fluid)}}$\footnote{Throughout this appendix, \(\rho_{\text{\ae}}^{\text{(fluid)}}\) denotes the compressible æther’s inertial (fluidic) density relevant to wave propagation and pressure gradients, while \(\rho_{\text{\ae}}^{\text{(mass)}}\) denotes the effective confined mass density of swirl knots. See Appendix~\ref{sec:constants_derivation} for derivation and values.}, and swirl-clock phase memory $S(t)$.
 
             \subsection{Swirl Clock as Entropy}
-
             In VAM, the swirl clock $S(t)$ tracks the phase evolution of a vortex:
             \begin{equation}
                 S(t) = \int \Omega(r(t'))\, dt'.
@@ -1509,7 +1502,6 @@
             This defines a local change in phase memory across a spatial distance $\Delta x$.
 
             \subsection*{Effective Temperature from Swirl Energy}
-
             We define an effective temperature as a thermal analogue of the local rotational energy per degree of freedom:
             \begin{equation}
                 T_\text{eff} = \frac{1}{2k_B} \rho_{\text{\ae}}^{\text{(fluid)}} \Omega^2 r^2.
@@ -1517,7 +1509,6 @@
             This connects the kinetic swirl energy to a thermodynamic-like quantity usable in the entropic force expression.
 
             \subsection{Entropic Force in VAM}
-
             Substituting into the original equation:
             \begin{align}
                 F &= T_\text{eff} \cdot \frac{\Delta S}{\Delta x} \\
@@ -1526,7 +1517,6 @@
             \end{align}
 
             \subsection*{Comparison with Pressure Gradient Force}
-
             VAM models forces as arising from Bernoulli-type swirl pressure:
             \begin{equation}
                 F_\text{vortex} = -\nabla P = -\frac{1}{2} \rho_{\text{\ae}}^{\text{(fluid)}} \nabla |\vec{\omega}|^2.
@@ -1539,7 +1529,6 @@
             This matches the qualitative structure of the entropic force when $\frac{\Delta S}{\Delta x} \sim \frac{d\Omega}{dx}$.
 
             \subsection{Final VAM Entropic Force Expression}
-
             We summarize the derived VAM-compatible expression as:
             \begin{equation}
                 F = \left( \frac{1}{2} \rho_{\text{\ae}}^{\text{(fluid)}} \Omega^2 r^2 \right) \cdot \left( \frac{d\Omega}{dx} \cdot \Delta t \right)
@@ -1551,7 +1540,6 @@
             This shows that entropy-driven forces emerge naturally from structured angular motion in the æther.
 
             \subsection*{Interpretation and Outlook}
-
             This derivation grounds Verlinde's concept of gravity as an entropic force in concrete fluid dynamics. Rather than invoking information bits on holographic screens, the VAM replaces them with physical vortex swirl memory $S(t)$ and energy gradients. This paves the way for testable predictions linking vorticity and inertia.
 
             Next steps may include:
@@ -1590,7 +1578,6 @@
             This gives a field-based entropy grounded in æther swirl dynamics, rather than microstate statistics.
 
             \subsection*{Interpretation}
-
             \begin{itemize}
             \item Numerator: Total stored energy in the vortex cross-section.
             \item Denominator: Accumulated swirl phase — the memory of angular identity.
@@ -1855,7 +1842,7 @@
             This reflects a natural resolution limit imposed by swirl quantization.
 
 
-        \appendixsection{Acknowledgements and Author Notes}
+        \section{Acknowledgements and Author Notes}
             The development of the Vortex \AE{}ther Model (VAM) emerged from a decade-long re-examination of classical physics, topological fluid mechanics, and foundational concepts in time and motion. This framework draws upon both historical lineage and novel intuition—anchored not in quantum orthodoxy, but in the continuity of Helmholtz, Kelvin, and Maxwell's fluidic paradigm.
         
             \subsection*{Author Acknowledgements}

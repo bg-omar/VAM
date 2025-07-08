@@ -42,31 +42,16 @@ Finally, grouping terms:
 + \frac{1}{2} \lambda_g \rho_\text{\ae}^{(\text{fluid})} |\vec{\omega}|^2
 + V(\vec{\omega})
 - \frac{\alpha_e}{2} (\vec{v} \cdot \vec{\omega})^2
-}
+}\label{eq:VAM_Hamiltonian}
 \end{equation}
 
 \subsection{ Hamilton--Jacobi Formulation in VAM}
 
 In the Vortex \AE ther Model, the swirlclock phase \( S(\vec{x}, t) \) replaces the classical action as the central dynamical quantity from which vortex evolution, quantization, and wave-like behavior emerge. This section derives the Hamilton--Jacobi equation for structured \ae ther flows, showing how quantization and de Broglie-like behavior naturally arise from vorticity phase dynamics.
 
-\subsection*{Hamiltonian Recap}
-
-We begin with the VAM Hamiltonian density derived from the unified Lagrangian~\ref{VAM4}:
-\begin{equation}
-\mathcal{H}_\text{VAM} = \frac{1}{2} \rho_\text{\ae}^{(\text{fluid})} |\vec{v}|^2
-+ \frac{1}{2} \lambda_g \rho_\text{\ae}^{(\text{fluid})} |\vec{\omega}|^2
-+ V(\vec{\omega}) - \frac{\alpha_e}{2} (\vec{v} \cdot \vec{\omega})^2.
-\end{equation}
-
-Here:
-- \( \rho_\text{\ae}^{(\text{fluid})} \) is the inertial mass density of the æther,
-- \( \vec{\omega} = \nabla \times \vec{v} \),
-- \( \alpha_e \) is the helicity–charge coupling,
-- \( V(\vec{\omega}) \) is the topological stabilization potential.
-
 \subsection*{Swirlclock Phase and Hamilton--Jacobi Equation}
 
-Let \( S(\vec{x}, t) \) denote the swirlclock phase field. The \ae ther velocity is defined via the phase gradient~\cite{Arnold1998,moffatt1969degree}:
+We begin with the VAM Hamiltonian density derived from the unified Lagrangian~\ref{eq:VAM_Hamiltonian}. Let \( S(\vec{x}, t) \) denote the swirlclock phase field. The \ae ther velocity is defined via the phase gradient~\cite{Arnold1998, moffatt1969degree}:
 \begin{equation}
 \vec{v} = \frac{1}{\rho_\text{\ae}^{(\text{fluid})}} \nabla S,
 \end{equation}
@@ -87,7 +72,7 @@ This equation describes the evolution of the swirlclock phase \( S \) in terms o
 
 \subsection*{Quantization from Circulation Integrals}
 
-Vortex knots exhibit quantized circulation due to single-valuedness of the phase field~\cite{Helmholtz1858,faddeev1997stable}:
+Vortex knots exhibit quantized circulation due to single-valuedness of the phase field~\cite{Helmholtz1858, faddeev1997stable}:
 \begin{equation}
 \oint_\Gamma \nabla S \cdot d\vec{\ell} = 2\pi n \hbar_\text{\ae}, \qquad n \in \mathbb{Z},
 \end{equation}
@@ -126,7 +111,7 @@ We begin by assuming that the \ae ther velocity arises from the gradient of a sc
 \begin{equation}
 \vec{v} = \frac{1}{\rho_\text{\ae}^{(\text{fluid})}} \nabla S(\vec{x}, t),
 \end{equation}
-as originally suggested by analogies to classical Hamilton--Jacobi mechanics~\cite{arnold1998topological,moffatt1969degree}.
+as originally suggested by analogies to classical Hamilton--Jacobi mechanics~\cite{arnold1998topological, moffatt1969degree}.
 
 \paragraph{Hamiltonian with Substitution.}
 Substituting into the Hamiltonian:
@@ -149,7 +134,7 @@ with:
 \end{align*}
 
 \paragraph{Quantization from Circulation Integrals.}
-Quantization arises from the requirement that \( \psi = A e^{i S/\hbar_\text{\ae}} \) be single-valued~\cite{helmholtz1858integrals,faddeev1997stable}:
+Quantization arises from the requirement that \( \psi = A e^{i S/\hbar_\text{\ae}} \) be single-valued~\cite{helmholtz1858integrals, faddeev1997stable}:
 \begin{equation}
 \oint_\Gamma \nabla S \cdot d\vec{\ell} = 2\pi n \hbar_\text{\ae}, \quad n \in \mathbb{Z},
 \end{equation}

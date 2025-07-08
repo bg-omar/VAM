@@ -6,27 +6,81 @@
 %! ORCID = 0009-0006-1686-3961
 %! DOI = 10.5281/zenodo.15566336
 
-\documentclass[a4paper,12pt]{article}
-\usepackage{vamstyle}
+%\documentclass[12pt,aps,prd,onecolumn,nofootinbib,superscriptaddress]{revtex4-2}
+%\usepackage{../vamstyle}
+%\usetikzlibrary{arrows.meta, positioning, shapes.multipart}
+%\usepackage{amsthm}
+%\usepackage{array}
+%\usepackage{lmodern}
+%\usepackage{amsmath,amssymb,amsfonts}
+%\usepackage{graphicx}
+%\usepackage{hyperref}
+%\usepackage{physics}
+%\usepackage{mathtools}
+%\usepackage{tikz}
+%\usetikzlibrary{knots,intersections,decorations.pathreplacing}
+%\usetikzlibrary{3d, calc, arrows.meta, positioning}
+%\usepackage{pgfmath}
+%\usetikzlibrary{decorations.pathmorphing}
+%\usepackage{pgfplots}
+%\pgfplotsset{compat=1.18} % or version you have
+%\usepackage{bm}          % bold math
+%\usepackage{titlesec}    % section formatting (optional)
+%\usepackage{float}       % [H] float placement
+%\usepackage[export]{adjustbox}
+%\usepackage{etoolbox}
+%\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
+%\usepackage{booktabs}
+\documentclass[preprint]{revtex4-2}
+% safe packages
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{physics}
+\usepackage{bm}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{siunitx}
+\sisetup{per-mode=symbol, output-decimal-marker={.}}
 
+\usepackage{mathtools}
 
-\title{Swirl Clocks and Vorticity-Induced Gravity\\[0.5em]
-\large Reformulating Relativity in a Structured Æther\\[0.5em]
-\normalsize A Topological Fluid Mechanics Approach to Time Dilation, Mass, and Gravitation}
-\author{
-    Omar Iskandarani\thanks{
-        Independent Researcher, Groningen, The Netherlands.\\
-        Email: \texttt{info@omariskandarani.com}\\
-        ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961}\\
-        DOI: \href{https://doi.org/10.5281/zenodo.15566336}{10.5281/zenodo.15566336}
-    }
-}
-\date{\today}
+\usetikzlibrary{knots,intersections,decorations.pathreplacing}
+\usetikzlibrary{3d, calc, arrows.meta, positioning}
+\usepackage{pgfmath}
+\usetikzlibrary{decorations.pathmorphing}
 
+\pgfplotsset{compat=1.18} % or version you have
+
+\usepackage{titlesec}    % section formatting (optional)
+
+% safe fix for table of contents
+\providecommand{\contentsname}{Contents}
+\newcommand{\paperdoi}{10.5281/zenodo.15566336}
 
 \begin{document}
-    \maketitle
-    \vspace{-2ex}
+\title{Swirl Clocks and Vorticity-Induced Gravity\\[0.25em]
+\large Reformulating Relativity in a Structured Æther}
+
+\author{Omar Iskandarani}
+\email{info@omariskandarani.com}
+\affiliation{Independent Researcher, Groningen, The Netherlands}
+\thanks{ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961}}
+\thanks{DOI: \href{https://doi.org/\paperdoi}{\paperdoi}}
+\thanks{License: CC-BY 4.0 International}
+
+\date{\today}
+
 
     \begin{abstract}
         This paper presents a fluid-dynamic reformulation of General Relativity using the Vortex Æther Model (VAM), wherein gravity and time dilation arise from vorticity-induced pressure gradients in an incompressible, inviscid superfluid æther. Within a Euclidean 3D space governed by an absolute causal time $\mathcal{N}$ (Aithēr-Time), mass and inertia emerge as topologically stable vortex knots. Geodesic motion is replaced by alignment along vortex streamlines with conserved circulation, and gravitational force is modeled as a Bernoulli pressure potential:
@@ -49,9 +103,9 @@
 
         VAM introduces a multilayered temporal ontology, distinguishing absolute causal time ($\mathcal{N}$), local proper time ($\tau$), and internal vortex phase time $S(t)$ (Swirl Clock). A scale-dependent æther density governs transitions between dense core regions and asymptotic vacuum, leading to testable predictions in rotating systems, gravitational redshift anomalies, and low-energy nuclear resonance (LENR).
 
-        The model reproduces Newtonian gravity and Lense–Thirring frame-dragging in the appropriate limits and establishes a physically grounded, topologically invariant theory of time, mass, and gravitation. VAM extends analogue gravity frameworks~\cite{barcelo2011analogue,volovik2009universe} by embedding them in a consistent, vortex-based æther ontology.
+        The model reproduces Newtonian gravity and Lense–Thirring frame-dragging in the appropriate limits and establishes a physically grounded, topologically invariant theory of time, mass, and gravitation. VAM extends analogue gravity frameworks~\cite{barcelo2011analogue, volovik2009universe} by embedding them in a consistent, vortex-based æther ontology.
     \end{abstract}
-
+    \maketitle
     \vfill
 
 \newpage
@@ -79,17 +133,17 @@
     \input{Swirl_Clocks/appendix_D_ExperimentalValidationOfGravitationalPotential}\newpage
     \input{Swirl_Clocks/appendix_E_TemporalOntology}
 
-%    \input{Swirl_Clocks/appendix_02_Derivation_GravitationalField}
-%    \input{Swirl_Clocks/appendix_03_Newtonian_Limits}
-%    \input{Swirl_Clocks/appendix_04_DynamicsVortexCirculationQuantization}
-%    \input{Swirl_Clocks/appendix_05_TimeDilationVortexEnergyPressureGradients}
-%    \input{Swirl_Clocks/appendix_06_ParameterTuningLimitBehavior}
-%    \input{Swirl_Clocks/appendix_07_Foundations_Velocity_Fields_and_Energies}
-%    \input{Swirl_Clocks/appendix_08_Integration_of_Clausius_Heat_Theory}
-%    \input{Swirl_Clocks/appendix_09_TopologicalCharge}
-%    \input{Swirl_Clocks/appendix_10_SplitHelicity}
-%    \input{Swirl_Clocks/appendix_11_VAM_Lagrangian}
-%    \input{Swirl_Clocks/appendix_12_DerivationFineStructureConstant}
+    \input{Swirl_Clocks/appendix_02_Derivation_GravitationalField}
+    \input{Swirl_Clocks/appendix_03_Newtonian_Limits}
+    \input{Swirl_Clocks/appendix_04_DynamicsVortexCirculationQuantization}
+    \input{Swirl_Clocks/appendix_05_TimeDilationVortexEnergyPressureGradients}
+    \input{Swirl_Clocks/appendix_06_ParameterTuningLimitBehavior}
+    \input{Swirl_Clocks/appendix_07_Foundations_Velocity_Fields_and_Energies}
+    \input{Swirl_Clocks/appendix_08_Integration_of_Clausius_Heat_Theory}
+    \input{Swirl_Clocks/appendix_09_TopologicalCharge}
+    \input{Swirl_Clocks/appendix_10_SplitHelicity}
+    \input{Swirl_Clocks/appendix_11_VAM_Lagrangian}
+    \input{Swirl_Clocks/appendix_12_DerivationFineStructureConstant}
 
 
     \bibliography{../references}

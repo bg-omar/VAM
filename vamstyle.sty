@@ -96,8 +96,6 @@
 % === Tables ===
 \RequirePackage{graphicx, float, booktabs}
 \RequirePackage{array, tabularx, multirow, makecell}
-\RequirePackage[font=footnotesize, labelfont=bf]{caption}
-\RequirePackage{subcaption}
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
 \newenvironment{tighttable}[1][]{\begin{table}[H]\centering\renewcommand{\arraystretch}{1.3}\begin{tabularx}{\textwidth}{#1}}{\end{tabularx}\end{table}}
 \RequirePackage{etoolbox}
@@ -119,17 +117,17 @@
 \newtheorem{lemma}[theorem]{Lemma}
 
 % === TOC ===
-\RequirePackage{tocloft}
-\setcounter{tocdepth}{2}
-\renewcommand{\cftsecfont}{\bfseries}
-\renewcommand{\cftsubsecfont}{\itshape}
-\renewcommand{\cftsecleader}{\cftdotfill{.}}
-\renewcommand{\contentsname}{\centering \Huge\textbf{Contents}}
+%\RequirePackage{tocloft}
+%\setcounter{tocdepth}{2}
+%\renewcommand{\cftsecfont}{\bfseries}
+%\renewcommand{\cftsubsecfont}{\itshape}
+%\renewcommand{\cftsecleader}{\cftdotfill{.}}
+%\renewcommand{\contentsname}{\centering \Huge\textbf{Contents}}
 
 % === Sections ===
-\RequirePackage{sectsty}
-\sectionfont{\Large\bfseries\sffamily}
-\subsectionfont{\large\bfseries\sffamily}
+%\RequirePackage{sectsty}
+%\sectionfont{\Large\bfseries\sffamily}
+%\subsectionfont{\large\bfseries\sffamily}
 
 % === Bibliography ===
 %\RequirePackage[numbers]{natbib}
@@ -154,10 +152,12 @@
 \RequirePackage{empheq}
 \RequirePackage[most]{tcolorbox}
 \newtcolorbox{eqbox}{colback=blue!5!white, colframe=blue!75!black, boxrule=0.6pt, arc=4pt, left=6pt, right=6pt, top=4pt, bottom=4pt}
-\RequirePackage{titling}
+%\RequirePackage{titling}
 \RequirePackage{amsfonts}
-\RequirePackage{titlesec}
+%\RequirePackage{titlesec}
 \RequirePackage{enumitem}
+
+\AtBeginDocument{\RenewCommandCopy\qty\SI}
 
 \pretitle{\begin{center}\LARGE\bfseries}
 \posttitle{\par\end{center}\vskip 0.5em}
