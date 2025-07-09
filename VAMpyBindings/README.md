@@ -106,14 +106,6 @@ python tests/test_potential_timefield.py
 ```
 ---
 
-## 📖 Zenodo-Registered Releases
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15566101.svg)](https://doi.org/10.5281/zenodo.15566101)  
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15566319.svg)](https://doi.org/10.5281/zenodo.15566319)  
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15566336.svg)](https://doi.org/10.5281/zenodo.15566336)
-
-All papers and associated code are archived on [Zenodo](https://zenodo.org/) for permanent accessibility and citation.
-
----
 
 ## 🧠 Author   
 
@@ -150,9 +142,7 @@ This document provides a summary of implemented functions in the VAM C++/Python 
 **Function**: `compute_helicity(velocity, vorticity)`
 
 **Formula**:
-\\[
-\\mathcal{H} = \\int_{\\mathbb{R}^3} \\mathbf{v} \\cdot \\boldsymbol{\\omega} \\, d^3\\mathbf{r}
-\\]
+$${H} = \int_{\mathbb{R}^3} \mathbf{v} \cdot \omega \, d^3\mathbf{r}$$
 
 ---
 
@@ -161,9 +151,7 @@ This document provides a summary of implemented functions in the VAM C++/Python 
 **Function**: `compute_kinetic_energy(velocity, rho_ae)`
 
 **Formula**:
-\\[
-E = \\frac{1}{2} \\rho_\\ae \\int |\\mathbf{v}|^2 \\, d^3\\mathbf{r}
-\\]
+$$E = \frac{1}{2} \rho_æ \int |\mathbf{v}|^2 \, d^3\mathbf{r}$$
 
 ---
 
@@ -172,9 +160,7 @@ E = \\frac{1}{2} \\rho_\\ae \\int |\\mathbf{v}|^2 \\, d^3\\mathbf{r}
 **Function**: `compute_curvature_torsion(positions)`
 
 **Formula**:
-\\[
-\\kappa(s) = \\left\\| \\frac{d^2 \\mathbf{X}}{ds^2} \\right\\|
-\\]
+$$\kappa(s) = \left\| \frac{d^2 \mathbf{X}}{ds^2} \right\|$$
 
 ---
 
@@ -183,9 +169,7 @@ E = \\frac{1}{2} \\rho_\\ae \\int |\\mathbf{v}|^2 \\, d^3\\mathbf{r}
 **Function**: `compute_curvature_torsion(positions)`
 
 **Formula**:
-\\[
-\\tau(s) = \\frac{ \\left( \\frac{d \\mathbf{X}}{ds} \\times \\frac{d^2 \\mathbf{X}}{ds^2} \\right) \\cdot \\frac{d^3 \\mathbf{X}}{ds^3} }{ \\left\\| \\frac{d \\mathbf{X}}{ds} \\times \\frac{d^2 \\mathbf{X}}{ds^2} \\right\\|^2 }
-\\]
+$$\tau(s) = \frac{ \left( \frac{d \mathbf{X}}{ds} \times \frac{d^2 \mathbf{X}}{ds^2} \right) \cdot \frac{d^3 \mathbf{X}}{ds^3} }{ \left\| \frac{d \mathbf{X}}{ds} \times \frac{d^2 \mathbf{X}}{ds^2} \right\|^2 }$$
 
 ---
 
@@ -194,9 +178,7 @@ E = \\frac{1}{2} \\rho_\\ae \\int |\\mathbf{v}|^2 \\, d^3\\mathbf{r}
 **Function**: `pressure_gradient` and `compute_bernoulli_pressure`
 
 **Formula**:
-\\[
-\\mathbf{g}(\\mathbf{r}) = -\\frac{1}{\\rho_\\ae} \\nabla P(\\mathbf{r}) = \\nabla \\left( \\frac{1}{2} |\\mathbf{v}|^2 \\right)
-\\]
+$$\mathbf{g}(\mathbf{r}) = -\frac{1}{\rho_æ} \nabla P(\mathbf{r}) = \nabla \left( \frac{1}{2} |\mathbf{v}|^2 \right)$$
 
 ---
 
@@ -205,9 +187,7 @@ E = \\frac{1}{2} \\rho_\\ae \\int |\\mathbf{v}|^2 \\, d^3\\mathbf{r}
 **Function**: `compute_time_dilation_map(tangential_velocities, ce)`
 
 **Formula**:
-\\[
-\\text{Time Dilation} = 1 - \\frac{v^2}{C_e^2}
-\\]
+$$\text{Time Dilation} = 1 - \frac{v^2}{C_e^2}$$
 
 ---
 
@@ -216,9 +196,7 @@ E = \\frac{1}{2} \\rho_\\ae \\int |\\mathbf{v}|^2 \\, d^3\\mathbf{r}
 **Function**: `compute_gravitational_potential(positions, vorticity, aether_density)`
 
 **Formula**:
-\\[
-\\Phi(\\mathbf{r}) = \\text{scalar potential derived from vorticity field}
-\\]
+$$\Phi(\mathbf{r}) = \text{scalar potential derived from vorticity field}$$
 
 ---
 

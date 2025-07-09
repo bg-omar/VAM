@@ -1,6 +1,8 @@
 import math, numpy as np, pandas as pd
 import ace_tools_open as tools
 
+# ─── Atomic and Molecular Definitions ─────────────────────────────────────────
+# Format: (Symbol, protons, neutrons, electrons, atomic mass in g/mol)
 atoms_molecules = [
     ("H", 1, 0, 1, 1.00784), ("He", 2, 2, 2, 4.002602), ("Li", 3, 4, 3, 6.94), ("Be", 4, 5, 4, 9.0122),
     ("B", 5, 6, 5, 10.81), ("C", 6, 6, 6, 12.011), ("N", 7, 7, 7, 14.0067), ("O", 8, 8, 8, 15.999),
@@ -34,48 +36,51 @@ atoms_molecules = [
 ]
 
 # ─── Constants ────────────────────────────────────────────────────────────────
-phi = (1 + math.sqrt(5)) / 2
-alpha = 7.2973525643e-3
+phi = (1 + math.sqrt(5)) / 2               # Golden ratio
+alpha = 7.2973525643e-3                    # Fine-structure constant
+rho_core = 3.8934358266918687e18           # Æther Mass related Energy-density
+C_e = 1.09384563e6                         # Swirl-limited wave speed
+r_c = 1.40897017e-15                       # Vortex core radius
+c = 299792458                              # Speed of light
+avogadro = 6.02214076e23                   # Avogadro constant
+F_max = 29.053507                          # Max field force scale
+M_e = 9.1093837015e-31                     # Electron mass
+a_0 = 5.29177210903e-11                    # Bohr radius
+beta_default = 0.06                        # Empirical suppression slope
 
-rho_core = 3.8934358266918687e18  # kg/m³
-C_e = 1.09384563e6               # m/s
-r_c = 1.40897017e-15            # m
-c = 299792458                   # m/s
-avogadro = 6.02214076e23        # mol⁻¹
-F_max = 29.053507  # N
-M_e = 9.1093837015e-31  # kg
-a_0 = 5.29177210903e-11 # m (Bohr radius)
-beta_default = 0.06
 
-
-# Define function
 def compute_orbital_radius(N, Z):
+    # Orbital radius per electron in atom
     return N * (F_max * r_c**2) / (M_e * Z * C_e**2)
 
 
-# Volume per vortex-knot: V = 2π² R r² with R = R_x = N * (F_max * r_c**2) / (M_e * Z * C_e**2)
 def compute_vortex_volume(R_x, R_core):
+    """  Volume of a toroidal vortex knot shell: """
+    """ V = 2π² R r² with R = R_x = N * (F_max * r_c**2) / (M_e * Z * C_e**2) """
     return 2 * math.pi**2 * R_x * R_core**2
 
-# Master VAM Mass Formula
+# Master Knot-Based Mass Model
 def vam_master_mass(n_knots, m_threads, s, V_list):
+    # General formula based on knot count and vortex core volume
     volume_sum = sum(V_list)
-    eta = (1 / m_threads)**(3/1)
-    xi = n_knots**(-1/phi)
-    tension = 1 / phi**s
-    energy_density = 0.5 * rho_core * C_e**2
+    eta = (1 / m_threads)**(3/1)               # Thread suppression
+    xi = n_knots**(-1/phi)                     # Coherence suppression
+    tension = 1 / phi**s                       # Golden tension
+    energy_density = 0.5 * rho_core * C_e**2   # Core energy per volume
     M = (4 / alpha) * eta * xi * tension * volume_sum * energy_density / c**2
     return M
 
+# Master Helicity-Based Electron Mass
 def vam_electron_mass_helicity(p=2, q=3):
-    """Calculate electron mass from helicity-based formula."""
+    """ Calculate electron mass from helicity-based formula."""
+    """ Mass from topological helicity vector (used for e⁻, ν, etc.) """
     sqrt_term = math.sqrt(p**2 + q**2)
     # Suppression parameters
     m = 1  # threads
     n = 1  # single knot
     s = 1  # golden renormalization index
 
-    # Derived suppression factor to replace γpq
+    """ Derived suppression factor to replace γpq (γ=beta empirical) """
     eta = (1 / m) ** 1.5
     xi = n ** (-1 / phi)
     tension = 1 / phi ** s
@@ -87,32 +92,31 @@ def vam_electron_mass_helicity(p=2, q=3):
 
 # ─── Core VAM mass models ────────────────────────────────────────────────────
 def vam_mass_core(nucleons, electrons, beta=beta_default, kappa=1.0, m_threads = 1, eq=2):
+    """ Computes mass of atom based on nucleon count, vortex volume, suppression model """
     Z = max(1, nucleons)  # atomic number approximation
     N = max(1, electrons)  # electron count
-    # Orbital radius R_x
-    R_x = N * (F_max * r_c**2) / (M_e * Z * C_e**2)
-    V_knot_fixed = 2 * math.pi**2 * (2 * r_c) * r_c**2
-    total_knots = nucleons + electrons
-    V_tot = total_knots * V_knot_fixed
-    energy_density = 0.5 * rho_core * C_e**2
-    E_base = energy_density * V_tot
 
+    # Orbital shell radius
+    R_x = compute_orbital_radius(N, Z)
 
+    # Canonical vortex knot volume (scaling with core size)
     V_knot = 2 * math.pi**2 * (2 * r_c) * r_c**2
+    total_knots = nucleons + electrons
+    V_tot = total_knots * V_knot
+
+    # Energy density in core swirl
+    energy_density = 0.5 * rho_core * C_e**2
 
     eta = 1
-    V_tot = total_knots * V_knot
+    """"
     # eq modes:
     # 0 → empirical log(n) suppression (with beta)
     # 1 → enhanced swirl suppression (power-law fit)
     # 2 → tan(φ)-based swirl suppression
     # 3 → pure first-principles golden suppression (preferred)
     # 4 → dynamic R_x volume model (without suppression)
-
-    if eq == 0: # 0 → empirical log(n) suppression (with beta)
-        # beta_default = ((alpha**3)/4)*(a_0/r_c)
-        # print("beta_default: ", beta_default)
-        # Thread Suppression Factor η(m)
+    """
+    if eq == 0: # 0 → empirical log(n) suppression (with beta = 0.06)
         eta = (1 / m_threads) ** 1.5
         # Coherence Correction Factor ξ(n)
         xi = 1 + beta * math.log(max(1, nucleons))

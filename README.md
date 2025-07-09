@@ -8,21 +8,63 @@ This repository hosts a collection of exploratory papers, simulations, and visua
 
 ---
 
-## 📚 Projects
+## 📖 Papers and Simulation Projects
+This repository contains a series of papers and simulation projects that explore the Vortex Æther Model, its implications for gravity, time dilation, and quantum mechanics, and how it contrasts with traditional spacetime theories. Each paper builds on the previous work, creating a comprehensive framework that challenges established paradigms. DOI are shown for each release.
 
-This repository includes the following key documents:
 
-- **Time Dilation in 3D Superfluid Æther Model**  
-  A reinterpretation of relativistic time dilation via swirl-induced clock slowdown.
+- **Einstein and the Æther (Opening Paper)**  
+  [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15669901.svg)](https://doi.org/10.5281/zenodo.15669901)  
 
+- **Time Dilation in 3D Superfluid Æther Model (Opening Paper)**  
+  [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15669794.svg)](https://doi.org/10.5281/zenodo.15669794)
+  
 - **Swirl Clocks and Vorticity-Induced Gravity**  
-  Proposes an alternative mechanism for gravity based on Bernoulli-like pressure gradients in rotating æther.
+  [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15566335.svg)](https://doi.org/10.5281/zenodo.15566335)
 
 - **Benchmarking Vortex Æther Model vs General Relativity**  
-  Numerical tests comparing VAM predictions with known GR results in extreme scenarios. 
+  [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15665432.svg)](https://doi.org/10.5281/zenodo.15665432)
 
-- **Standard Model Lagrangian in VAM**  
-  A bold attempt to reconstruct quantum field theory from first principles using vortex topologies.
+- **Emergent General Relativity from Structured Swirl Dynamics in VAM**  
+  [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15712577.svg)](https://doi.org/10.5281/zenodo.15712577)
+
+- **Beyond Spacetime: Gravity, Time, and Vorticity**  
+  [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15706546.svg)](https://doi.org/10.5281/zenodo.15706546)
+
+- **From Quantum Constants to Galactic Swirl**  
+  [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15750582.svg)](https://doi.org/10.5281/zenodo.15750582)
+
+- **Knotted Gauge Fields: Rebuilding the Standard Model from Vortex Æther Dynamics**  
+ [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15772832.svg)](https://doi.org/10.5281/zenodo.15772832)
+
+- **On a Vortex-Based Lagrangian Unification of Gravity and Electromagnetism**  
+
+- **Master Paper – Vortex Æther Framework Summary**  
+
+#### Each paper contributes to the broader theoretical framework of VAM, exploring how fluid dynamics and topological vortices redefine gravity, time, and quantum structure.
+
+## 📈 Zenodo-Registered Releases
+
+- Experimental Validation of the Vortex-Core Tangential Velocity 𝐶𝑒  
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15684872.svg)](https://doi.org/10.5281/zenodo.15684872)   
+- Experimental Proposal: Gravitational Modulation via Resonant Vortex Structures in Æther  
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15692508.svg)](https://doi.org/10.5281/zenodo.15692508)
+
+All papers and associated code are archived on [Zenodo](https://zenodo.org/) for permanent accessibility and citation.
+
+
+---
+## ⚙️ High-Performance Vortex Engine
+
+This repository includes a custom-built Python-to-C++ binding for accelerating Biot–Savart-based vortex interactions.  
+Key features:
+
+- 🔁 100x faster evaluation of vortex loops and filaments vs pure Python
+- 📦 Seamless Python interface via `pybind11`
+- 🧮 Supports time dilation, swirl potential, and local vorticity field extractions
+- 🧪 Used to benchmark vortex-based gravitational analogues in the `VAM` model
+
+[High-Performance Vortex Engine](VAMpyBindings/README.md)
+
 
 ---
 
@@ -31,14 +73,6 @@ This repository includes the following key documents:
 This repository is licensed under the [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) license.  
 © 2025 Omar Iskandarani. Use for educational and research purposes only. Commercial reuse prohibited without permission.
 
-
-## 📈 Zenodo-Registered Releases
-
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15566101.svg)](https://doi.org/10.5281/zenodo.15566101)  
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15566319.svg)](https://doi.org/10.5281/zenodo.15566319)  
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15566336.svg)](https://doi.org/10.5281/zenodo.15566336)
-
-All papers and associated code are archived on [Zenodo](https://zenodo.org/) for permanent accessibility and citation.
 
 ---
 
