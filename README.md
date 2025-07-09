@@ -26,6 +26,12 @@ This repository includes the following key documents:
 
 ---
 
+## License
+
+This repository is licensed under the [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) license.  
+© 2025 Omar Iskandarani. Use for educational and research purposes only. Commercial reuse prohibited without permission.
+
+
 ## 📈 Zenodo-Registered Releases
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15566101.svg)](https://doi.org/10.5281/zenodo.15566101)  
@@ -39,14 +45,14 @@ All papers and associated code are archived on [Zenodo](https://zenodo.org/) for
 ## 🔬 Author
 
 **ORCID**: [0009-0006-1686-3961](https://orcid.org/0009-0006-1686-3961)  
-Conceived, written, and fearlessly pushed into the void by a person undeterred by the collapse of academic consensus.
+Conceived, written,  and fearlessly launched into the æther by a person undeterred by the collapse of academic consensus.
 
 ---
 
 ## 🧠 Topics of Interest
 
 - General Relativity vs Fluid Models
-- Æther Theory Redux (but make it spicy)
+- Æther Theory Redux (with turbulence)
 - Superfluid Analog Gravity
 - Quantum Topology in Continuum Mechanics
 - Gravitational Redshift without Geometry
