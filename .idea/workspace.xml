@@ -4,62 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f2a8139-c825-4497-876b-70e1a130c5c3" name="Changes" comment="Refactor file structure by renaming the timediagram script; add citation metadata and license files; update paper title and references for clarity and consistency.">
-      <change afterPath="$PROJECT_DIR$/VAM - 0 Einsteins Æther/README.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM-MASTER Paper/images/knot_6_2_topview.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM-MASTER Paper/images/knot_7_4_topview.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM-MASTER Paper/images/knots_6_2_and_7_4_3D.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM-MASTER Paper/master-formula.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/master-formula.pdf" afterDir="false" />
+    <list default="true" id="6f2a8139-c825-4497-876b-70e1a130c5c3" name="Changes" comment="Refactor file structure by renaming multiple LaTeX documents and scripts for consistency; update README.txt to include submission details and add new introduction and conclusion sections.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template/sections/appendix_1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Template/sections/appendix_1.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template/vammain.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Template/vammain.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 1 TimeDilation/ONLINE-1-Time_Dilation_in_3D_Superfluid_Æther_Model.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 1 TimeDilation/ONLINE-1-Time_Dilation_in_3D_Superfluid_Æther_Model.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 1 TimeDilation/Tijddilatatie/1-Tijdsdilatatie_in_3D_Superfluïde_Æther_Model.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 1 TimeDilation/Tijddilatatie/1-Tijdsdilatatie_in_3D_Superfluïde_Æther_Model.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 10 MilkyWay as a Chiral Swirl-Knot Network/10-MilkyWay_as_a_Chiral_Swirl-Knot_Network.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 10 MilkyWay as a Chiral Swirl-Knot Network/10-MilkyWay_as_a_Chiral_Swirl-Knot_Network.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 10 MilkyWay as a Chiral Swirl-Knot Network/10-Swirl-Induced Curvature as the Mechanism of Gravitation in the Vortex Æther Model.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 10 MilkyWay as a Chiral Swirl-Knot Network/10-Swirl-Induced Curvature as the Mechanism of Gravitation in the Vortex Æther Model.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 10 MilkyWay as a Chiral Swirl-Knot Network/sections/appendix_1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 10 MilkyWay as a Chiral Swirl-Knot Network/sections/appendix_1.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 11 Master Equation for Particle Masses/11-Master_Equation_for_Particle_Masses.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 11 Master Equation for Particle Masses/11-Master_Equation_for_Particle_Masses.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 11 Master Equation for Particle Masses/sections/appendix_1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 11 Master Equation for Particle Masses/sections/appendix_1.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 2 Swirl Clocks/ONLINE-2-Swirl_Clocks_Appendices.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 2 Swirl Clocks/ONLINE-2-Swirl_Clocks_Appendices.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 2 Swirl Clocks/ONLINE-2-Swirl_Clocks_and_Vorticity-Induced_Gravity.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 2 Swirl Clocks/ONLINE-2-Swirl_Clocks_and_Vorticity-Induced_Gravity.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 2 Swirl Clocks/ONLINE-EmergentGeneralRelativityFromStructuredSwirlDynamicsInVAM.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 2 Swirl Clocks/ONLINE-EmergentGeneralRelativityFromStructuredSwirlDynamicsInVAM.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 2 Swirl Clocks/ONLINE-From_Quantum_Constants_to_Galactic_Swirl.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 2 Swirl Clocks/ONLINE-From_Quantum_Constants_to_Galactic_Swirl.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 2 Swirl Clocks/Swirl_Clocks/appendix_B_Derivation_Of_Gswirl.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 2 Swirl Clocks/Swirl_Clocks/appendix_B_Derivation_Of_Gswirl.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 2 Swirl Clocks/Swirl_Clocks/appendix_C_ExperimentalValidationOfVortexCoreTangientalVelocity.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 2 Swirl Clocks/Swirl_Clocks/appendix_C_ExperimentalValidationOfVortexCoreTangientalVelocity.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 2 Swirl Clocks/Swirl_Clocks/appendix_D_ExperimentalValidationOfGravitationalPotential.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 2 Swirl Clocks/Swirl_Clocks/appendix_D_ExperimentalValidationOfGravitationalPotential.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 2 Swirl Clocks/Swirl_Clocks/appendix_F_LorentzInvariance.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 2 Swirl Clocks/Swirl_Clocks/appendix_F_LorentzInvariance.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 2 Swirl Clocks/WervelKlokken/2-Wervelklokken_en_vorticiteit_geïnduceerde_zwaartekracht.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 2 Swirl Clocks/WervelKlokken/2-Wervelklokken_en_vorticiteit_geïnduceerde_zwaartekracht.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 2 Swirl Clocks/vam_enhanced.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 2 Swirl Clocks/vam_enhanced.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 3 Benchmarking Relativity/3-Benchmarking_Vortex_Æther_Model_vs_General_Relativity.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 3 Benchmarking Relativity/3-Benchmarking_Vortex_Æther_Model_vs_General_Relativity.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 4 StandardModel-Lagrangian VAM/4-StandardModel-Lagrangian VAM.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 4 StandardModel-Lagrangian VAM/4-StandardModel-Lagrangian VAM.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 4 StandardModel-Lagrangian VAM/MoleculeWeight.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 5/5-Topological_Fluid_Dynamic_Lagrangian_In_VAM.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 5/5-Topological_Fluid_Dynamic_Lagrangian_In_VAM.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 6 Core Foundations VAM/6-Core_Foundations_VAM.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 6 Core Foundations VAM/6-Core_Foundations_VAM.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 7 Philosophical Depth Companion/7-Philosophical_Depth_Companion.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 7 Philosophical Depth Companion/7-Philosophical_Depth_Companion.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 9 -Torus_Knots_as_Elements_Periodic_Table/9-Torus_Knots_as_Elements_Periodic_Table.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 9 -Torus_Knots_as_Elements_Periodic_Table/9-Torus_Knots_as_Elements_Periodic_Table.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - 9 -Torus_Knots_as_Elements_Periodic_Table/TopologicalConstructionStandardModelParticlesVAM.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - 9 -Torus_Knots_as_Elements_Periodic_Table/TopologicalConstructionStandardModelParticlesVAM.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - Appendix All/Appendix_ColdFusion.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Appendix All/Appendix_ColdFusion.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - Appendix All/Appendix_ErikVerlindeConclusions.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Appendix All/Appendix_ErikVerlindeConclusions.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - Appendix All/Appendix_X-filesExplanationsFoundationalPhysicsAnomalies.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Appendix All/Appendix_X-filesExplanationsFoundationalPhysicsAnomalies.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - Appendix All/ONLINE- VORTICITY-Beyond_Spacetime_Gravity_Time_Vorticity.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Appendix All/ONLINE- VORTICITY-Beyond_Spacetime_Gravity_Time_Vorticity.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - Appendix All/sections/Appendix_ÆthericNow.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Appendix All/sections/Appendix_ÆthericNow.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/12-OnAVortexBasedLagrangianUnificationGravityElectromagnetism.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/12-OnAVortexBasedLagrangianUnificationGravityElectromagnetism.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/Appendix/Appendix_1_PhotonAsDipole.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/Appendix/Appendix_1_PhotonAsDipole.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/Appendix/Appendix_Benchmark4.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/Appendix/Appendix_Benchmark4.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/Sections/01_SwirlclockInducedTimeAsymmetry.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/Sections/01_SwirlclockInducedTimeAsymmetry.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/Sections/04_GravityAndElectromagnetismUnification.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/Sections/04_GravityAndElectromagnetismUnification.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-MASTER Paper/Master Paper-VAM.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM-MASTER Paper/Master Paper-VAM.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-MASTER Paper/MoleculeWeight.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM-MASTER Paper/MoleculeWeight.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-MASTER Paper/images/6_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/VAM-MASTER Paper/images/6_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAMpyBindings/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/VAMpyBindings/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/12-OnAVortexBasedLagrangianUnificationGravityElectromagnetism.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/12-OnAVortexBasedLagrangianUnificationGravityElectromagnetism.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/Master Paper-VAM.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/Master Paper-VAM.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/references.bib" beforeDir="false" afterPath="$PROJECT_DIR$/references.bib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vam_appendix_setup.sty" beforeDir="false" afterPath="$PROJECT_DIR$/vam_appendix_setup.sty" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vamstyle.sty" beforeDir="false" afterPath="$PROJECT_DIR$/vamstyle.sty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_11_Master_Equation_for_Particle_Masses/VAM-11-Master_Equation_for_Particle_Masses.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_11_Master_Equation_for_Particle_Masses/VAM-11-Master_Equation_for_Particle_Masses.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_11_Master_Equation_for_Particle_Masses/sections/main_1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_11_Master_Equation_for_Particle_Masses/sections/main_1.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_11_Master_Equation_for_Particle_Masses/sections/main_2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_11_Master_Equation_for_Particle_Masses/sections/main_2.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/VAM-11-Master_Equation_for_Particle_Masses.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/VAM-11-Master_Equation_for_Particle_Masses.pdf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="false" />
@@ -111,6 +61,8 @@
     "BibTeX.ONLINE-0-Einstein_and_the_Æther bibliography.executor": "Run",
     "BibTeX.ONLINE-1-Time_Dilation_in_3D_Superfluid_Æther_Model bibliography.executor": "Run",
     "BibTeX.ONLINE-2-Swirl_Clocks_and_Vorticity-Induced_Gravity bibliography.executor": "Run",
+    "BibTeX.VAM-11-Master_Equation_for_Particle_Masses.executor": "Run",
+    "BibTeX.VAM-14-Topological_Fluid_Dynamics_Lagrangian bibliography.executor": "Run",
     "BibTeX.appendix_QuantizationOfVAM bibliography.executor": "Run",
     "LaTeX.1-Time_Dilation_in_3D_Superfluid_Æther_Model.executor": "Run",
     "LaTeX.12-OnAVortexBasedLagrangianUnificationGravityElectromagnetism.executor": "Run",
@@ -124,6 +76,9 @@
     "LaTeX.ONLINE-2-Swirl_Clocks_and_Vorticity-Induced_Gravity.executor": "Run",
     "LaTeX.ONLINE-From_Quantum_Constants_to_Galactic_Swirl.executor": "Run",
     "LaTeX.VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm.executor": "Run",
+    "LaTeX.VAM-11-Master_Equation_for_Particle_Masses.executor": "Run",
+    "LaTeX.VAM-14-Topological_Fluid_Dynamics_Lagrangian.executor": "Run",
+    "LaTeX.VAM-8.5-Master_Formula.executor": "Run",
     "LaTeX.VAM_framework.executor": "Run",
     "LaTeX.appendix_QuantizationOfVAM.executor": "Run",
     "LaTeX.master-formula.executor": "Run",
@@ -145,7 +100,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/mr/IdeaProjects/VAM/VAM-MASTER Paper",
+    "last_opened_file_path": "C:/Users/mr/IdeaProjects/VAM/VAM_14_Topological_Fluid_Dynamics_Lagrangian/images",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -157,66 +112,21 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mr\IdeaProjects\VAM\VAM_14_Topological_Fluid_Dynamics_Lagrangian\images" />
       <recent name="C:\Users\mr\IdeaProjects\VAM\VAM-MASTER Paper" />
       <recent name="C:\Users\mr\IdeaProjects\VAM\VAM-MASTER Paper\images" />
       <recent name="C:\Users\mr\IdeaProjects\VAM\VAM - Lagrangian Gravity Electromagnetism\images" />
       <recent name="C:\Users\mr\IdeaProjects\VAM\VAM - 4 StandardModel-Lagrangian VAM" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\mr\IdeaProjects\VAM\Diagrams" />
-      <recent name="C:\Users\mr\IdeaProjects\VAM\VAM - 2 Swirl Clocks\images" />
       <recent name="C:\Users\mr\IdeaProjects\VAM\out" />
+      <recent name="C:\Users\mr\IdeaProjects\VAM\VAM_14_Topological_Fluid_Dynamics_Lagrangian\sections" />
       <recent name="C:\Users\mr\IdeaProjects\VAM" />
-      <recent name="C:\Users\mr\IdeaProjects\VAM\VAM-MASTER Paper" />
+      <recent name="C:\Users\mr\IdeaProjects\VAM\VAM - Appendix All\images" />
+      <recent name="C:\Users\mr\IdeaProjects\VAM\VAM - Appendix All\sections" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify>
-        <compiler>PDFLATEX</compiler>
-        <compiler-path />
-        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
-        <require-focus>true</require-focus>
-        <viewer-command />
-        <compiler-arguments />
-        <envs />
-        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
-        <before-run-command />
-        <main-file />
-        <output-path>{projectDir}/out</output-path>
-        <auxil-path>{projectDir}/auxil</auxil-path>
-        <compile-twice>false</compile-twice>
-        <output-format>PDF</output-format>
-        <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>false</has-been-run>
-        <bib-run-config>[]</bib-run-config>
-        <makeindex-run-config>[]</makeindex-run-config>
-      </texify>
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify>
-        <compiler>PDFLATEX</compiler>
-        <compiler-path />
-        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
-        <require-focus>true</require-focus>
-        <viewer-command />
-        <compiler-arguments />
-        <envs />
-        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
-        <before-run-command />
-        <main-file />
-        <output-path>{projectDir}/out</output-path>
-        <auxil-path>{projectDir}/auxil</auxil-path>
-        <compile-twice>false</compile-twice>
-        <output-format>PDF</output-format>
-        <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>false</has-been-run>
-        <bib-run-config>[]</bib-run-config>
-        <makeindex-run-config>[]</makeindex-run-config>
-      </texify>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="BibTeX.VAM-11-Master_Equation_for_Particle_Masses">
     <configuration default="true" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify>
         <compiler>PDFLATEX</compiler>
@@ -246,7 +156,7 @@
         <compiler-path />
         <compiler-arguments />
         <envs />
-        <main-file>$PROJECT_DIR$/VAM - $GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$ TimeDilation/ONLINE-1-Time_Dilation_in_3D_Superfluid_Æther_Model.tex</main-file>
+        <main-file />
         <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
         <latex-distribution>MIKTEX</latex-distribution>
       </texify-bibtex>
@@ -258,7 +168,7 @@
         <compiler-path />
         <compiler-arguments />
         <envs />
-        <main-file>$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/12-OnAVortexBasedLagrangianUnificationGravityElectromagnetism.tex</main-file>
+        <main-file />
         <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
         <latex-distribution>MIKTEX</latex-distribution>
       </texify-bibtex>
@@ -270,7 +180,7 @@
         <compiler-path />
         <compiler-arguments />
         <envs />
-        <main-file>$PROJECT_DIR$/VAM - 4 StandardModel-Lagrangian VAM/4-StandardModel-Lagrangian VAM.tex</main-file>
+        <main-file />
         <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
         <latex-distribution>MIKTEX</latex-distribution>
       </texify-bibtex>
@@ -282,7 +192,7 @@
         <compiler-path />
         <compiler-arguments />
         <envs />
-        <main-file>$PROJECT_DIR$/VAM - 5/5-Topological_Fluid_Dynamic_Lagrangian_In_VAM.tex</main-file>
+        <main-file>$PROJECT_DIR$/VAM_14_Topological_Fluid_Dynamics_Lagrangian/VAM-14-Topological_Fluid_Dynamics_Lagrangian.tex</main-file>
         <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
         <latex-distribution>MIKTEX</latex-distribution>
       </texify-bibtex>
@@ -294,7 +204,7 @@
         <compiler-path />
         <compiler-arguments />
         <envs />
-        <main-file>$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/12-OnAVortexBasedLagrangianUnificationGravityElectromagnetism.tex</main-file>
+        <main-file />
         <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
         <latex-distribution>MIKTEX</latex-distribution>
       </texify-bibtex>
@@ -306,7 +216,7 @@
         <compiler-path />
         <compiler-arguments />
         <envs />
-        <main-file>$PROJECT_DIR$/VAM-MASTER Paper/Master Paper-VAM.tex</main-file>
+        <main-file />
         <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
         <latex-distribution>MIKTEX</latex-distribution>
       </texify-bibtex>
@@ -318,7 +228,7 @@
         <compiler-path />
         <compiler-arguments />
         <envs />
-        <main-file>$PROJECT_DIR$/VAM - 0 Einsteins Æther/VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm.tex</main-file>
+        <main-file />
         <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
         <latex-distribution>MIKTEX</latex-distribution>
       </texify-bibtex>
@@ -330,7 +240,7 @@
         <compiler-path />
         <compiler-arguments />
         <envs />
-        <main-file>$PROJECT_DIR$/VAM - $GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$ TimeDilation/ONLINE-1-Time_Dilation_in_3D_Superfluid_Æther_Model.tex</main-file>
+        <main-file />
         <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
         <latex-distribution>MIKTEX</latex-distribution>
       </texify-bibtex>
@@ -342,7 +252,7 @@
         <compiler-path />
         <compiler-arguments />
         <envs />
-        <main-file>$PROJECT_DIR$/VAM - 2 Swirl Clocks/ONLINE-2-Swirl_Clocks_and_Vorticity-Induced_Gravity.tex</main-file>
+        <main-file />
         <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
         <latex-distribution>MIKTEX</latex-distribution>
       </texify-bibtex>
@@ -354,7 +264,7 @@
         <compiler-path />
         <compiler-arguments />
         <envs />
-        <main-file>$PROJECT_DIR$/VAM - 2 Swirl Clocks/ONLINE-From_Quantum_Constants_to_Galactic_Swirl.tex</main-file>
+        <main-file />
         <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
         <latex-distribution>MIKTEX</latex-distribution>
       </texify-bibtex>
@@ -366,7 +276,19 @@
         <compiler-path />
         <compiler-arguments />
         <envs />
-        <main-file>$PROJECT_DIR$/VAM - 0 Einsteins Æther/VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm.tex</main-file>
+        <main-file />
+        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
+        <latex-distribution>MIKTEX</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration name="VAM-11-Master_Equation_for_Particle_Masses bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler>BIBTEX</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/VAM_11_Master_Equation_for_Particle_Masses/VAM-11-Master_Equation_for_Particle_Masses.tex</main-file>
         <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
         <latex-distribution>MIKTEX</latex-distribution>
       </texify-bibtex>
@@ -402,7 +324,7 @@
         <compiler-path />
         <compiler-arguments />
         <envs />
-        <main-file>$PROJECT_DIR$/VAM - 4 StandardModel-Lagrangian VAM/section/appendix_QuantizationOfVAM.tex</main-file>
+        <main-file />
         <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
         <latex-distribution>MIKTEX</latex-distribution>
       </texify-bibtex>
@@ -414,13 +336,97 @@
         <compiler-path />
         <compiler-arguments />
         <envs />
-        <main-file>$PROJECT_DIR$/VAM-MASTER Paper/master-formula.tex</main-file>
+        <main-file />
         <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
         <latex-distribution>MIKTEX</latex-distribution>
       </texify-bibtex>
       <method v="2" />
     </configuration>
+    <configuration name="VAM-11-Master_Equation_for_Particle_Masses" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <require-focus>true</require-focus>
+        <viewer-command />
+        <compiler-arguments />
+        <envs />
+        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
+        <before-run-command />
+        <main-file>$PROJECT_DIR$/VAM_11_Master_Equation_for_Particle_Masses/VAM-11-Master_Equation_for_Particle_Masses.tex</main-file>
+        <output-path>$PROJECT_DIR$/out</output-path>
+        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>MIKTEX</latex-distribution>
+        <has-been-run>true</has-been-run>
+        <bib-run-config>[BibTeX.VAM-11-Master_Equation_for_Particle_Masses bibliography]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
+    <configuration name="VAM-14-Topological_Fluid_Dynamics_Lagrangian" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <require-focus>true</require-focus>
+        <viewer-command />
+        <compiler-arguments />
+        <envs />
+        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
+        <before-run-command />
+        <main-file>$PROJECT_DIR$/VAM_14_Topological_Fluid_Dynamics_Lagrangian/VAM-14-Topological_Fluid_Dynamics_Lagrangian.tex</main-file>
+        <output-path>$PROJECT_DIR$/out</output-path>
+        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>MIKTEX</latex-distribution>
+        <has-been-run>true</has-been-run>
+        <bib-run-config>[BibTeX.VAM-14-Topological_Fluid_Dynamics_Lagrangian bibliography]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
+    <configuration name="VAM-8.5-Master_Formula" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <require-focus>true</require-focus>
+        <viewer-command />
+        <compiler-arguments />
+        <envs />
+        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
+        <before-run-command />
+        <main-file>$PROJECT_DIR$/VAM_8_MASTER_Paper/VAM-8.5-Master_Formula.tex</main-file>
+        <output-path>$PROJECT_DIR$/out</output-path>
+        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>MIKTEX</latex-distribution>
+        <has-been-run>true</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="BibTeX.VAM-0-Einstein_and_the_Æther bibliography" />
+      <item itemvalue="BibTeX.VAM-1-Time_Dilation_in_3D_Superfluid_Æther_Model bibliography" />
+      <item itemvalue="BibTeX.VAM-10-Swirl-Induced Curvature" />
+      <item itemvalue="BibTeX.VAM-11-Master_Equation_for_Particle_Masses" />
+      <item itemvalue="BibTeX.VAM-13-Beyond_Spacetime_Gravity_Time_Vorticity" />
+      <item itemvalue="BibTeX.VAM-14-Topological_Fluid_Dynamics_Lagrangian bibliography" />
+      <item itemvalue="BibTeX.VAM-2-Swirl_Clocks_and_Vorticity-Induced_Gravity bibliography" />
+      <item itemvalue="BibTeX.VAM-3-Benchmarking" />
+      <item itemvalue="BibTeX.VAM-4-EmergentGeneralRelativityFromStructuredSwirlDynamicsInVAM" />
+      <item itemvalue="BibTeX.VAM-5-OnAVortexBasedLagrangianUnificationGravityElectromagnetism" />
+      <item itemvalue="BibTeX.VAM-6-Knotted_Gauge_Fields" />
+      <item itemvalue="BibTeX.VAM-7-From_Quantum_Constants_to_Galactic_Swirl" />
+      <item itemvalue="BibTeX.VAM-8-Master_Paper" />
+      <item itemvalue="BibTeX.VAM-8.5-Master_Formula" />
+      <item itemvalue="BibTeX.VAM-9-MilkyWay_as_a_Chiral_Swirl-Knot_Network" />
       <item itemvalue="BibTeX.1-Time_Dilation_in_3D_Superfluid_Æther_Model bibliography" />
       <item itemvalue="BibTeX.ONLINE-0-Einstein_and_the_Æther bibliography" />
       <item itemvalue="BibTeX.ONLINE-1-Time_Dilation_in_3D_Superfluid_Æther_Model bibliography" />
@@ -430,13 +436,23 @@
       <item itemvalue="BibTeX.appendix_QuantizationOfVAM bibliography" />
       <item itemvalue="BibTeX.Master Paper-VAM bibliography" />
       <item itemvalue="BibTeX.ONLINE-From_Quantum_Constants_to_Galactic_Swirl bibliography" />
-      <item itemvalue="BibTeX.VAM 4" />
       <item itemvalue="BibTeX.12-OnAVortexBasedLagrangianUnificationGravityElectromagnetism bibliography" />
       <item itemvalue="BibTeX.VAM_framework bibliography" />
       <item itemvalue="BibTeX.EMlagrangian" />
       <item itemvalue="BibTeX.VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm bibliography" />
       <item itemvalue="BibTeX.master-formula bibliography" />
+      <item itemvalue="BibTeX.VAM-11-Master_Equation_for_Particle_Masses bibliography" />
+      <item itemvalue="LaTeX.VAM-11-Master_Equation_for_Particle_Masses" />
+      <item itemvalue="LaTeX.VAM-14-Topological_Fluid_Dynamics_Lagrangian" />
+      <item itemvalue="LaTeX.VAM-8.5-Master_Formula" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="LaTeX.VAM-11-Master_Equation_for_Particle_Masses" />
+        <item itemvalue="LaTeX.VAM-14-Topological_Fluid_Dynamics_Lagrangian" />
+        <item itemvalue="LaTeX.VAM-8.5-Master_Formula" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -467,6 +483,7 @@
       <workItem from="1751889552306" duration="30617000" />
       <workItem from="1751959704346" duration="30162000" />
       <workItem from="1752046079285" duration="40170000" />
+      <workItem from="1752174850467" duration="499000" />
     </task>
     <task id="LOCAL-00001" summary="Made MASTER paper, VAM4, VAM12.&#10;Added Knot images">
       <option name="closed" value="true" />
@@ -500,7 +517,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752055947520</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Refactor file structure by renaming multiple LaTeX documents and scripts for consistency; update README.txt to include submission details and add new introduction and conclusion sections.">
+      <option name="closed" value="true" />
+      <created>1752171532516</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1752171532516</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -523,7 +548,8 @@
     <MESSAGE value="Enhance LaTeX documents by adding automatic figure scaling, improving figure layouts, and refining captions for clarity in vortex dynamics illustrations." />
     <MESSAGE value="Refactor file structure by renaming scripts and LaTeX documents for consistency; improve citation formatting in multiple files." />
     <MESSAGE value="Refactor file structure by renaming the timediagram script; add citation metadata and license files; update paper title and references for clarity and consistency." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor file structure by renaming the timediagram script; add citation metadata and license files; update paper title and references for clarity and consistency." />
+    <MESSAGE value="Refactor file structure by renaming multiple LaTeX documents and scripts for consistency; update README.txt to include submission details and add new introduction and conclusion sections." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor file structure by renaming multiple LaTeX documents and scripts for consistency; update README.txt to include submission details and add new introduction and conclusion sections." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/VAM$vam_vs_gr_potential_plot.coverage" NAME="vam_vs_gr_potential_plot Coverage Results" MODIFIED="1751903749996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
