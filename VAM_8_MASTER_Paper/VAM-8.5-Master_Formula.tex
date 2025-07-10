@@ -28,6 +28,15 @@
   \usepackage{newtxtext,newtxmath}
   \usepackage[scaled=0.95]{inconsolata}
   \usepackage{mathrsfs}
+  \newcommand{\heartmarker}{
+  \tikz[baseline=-1.4ex, xshift=-4ex, scale=0.06]
+    \draw[fill=pink,draw=none]
+    (0,0) .. controls (-1,1) and (-2,0.5) .. (-2,-0.5)
+            .. controls (-2,-2) and (0,-3) .. (0,-4)
+            .. controls (0,-3) and (2,-2) .. (2,-0.5)
+            .. controls (2,0.5) and (1,1) .. (0,0);
+}
+
 
 \newcommand{\dotmarker}[1]{\tikz[baseline]{\node[fill=#1,circle,inner sep=1.5pt]{};}}
 
@@ -53,6 +62,69 @@ M(n, m, \{V_i\}) = \frac{4}{\alpha} \cdot \left( \frac{1}{m} \right)^{3/2} \cdot
     \label{eq:master}
 \end{equation}
 
+
+
+\begin{table*}[htbp]
+\footnotesize
+\centering
+\caption{Results of the Master Formula applied to atomic masses.}
+\label{tab:vam_mass_preview}
+\begin{tabular}{p{0.46\linewidth} p{0.46\linewidth}}
+
+\begin{tabular}{|rllr|}
+\toprule
+Atom & Mass (kg) & VAM Mass & Err$_\text{M}$ \\
+\midrule
+H   & 1.674e-27 & 1.657e-27     & -0.97\% \heartmarker                                                                      \\
+He  & 6.646e-27 & 6.754e-27     & +1.61\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}       \\
+Li  & 1.152e-26 & 1.185e-26     & +2.83\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=orange,circle,inner sep=3pt]{};}      \\
+Be  & 1.497e-26 & 1.523e-26     & +1.75\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}       \\
+B   & 1.795e-26 & 1.860e-26     & +3.64\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=orange,circle,inner sep=3pt]{};}      \\
+C   & 1.994e-26 & 2.026e-26     & +1.58\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}       \\
+N   & 2.326e-26 & 2.364e-26     & +1.63\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}       \\
+O   & 2.657e-26 & 2.701e-26     & +1.68\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}       \\
+F   & 3.155e-26 & 3.211e-26     & +1.79\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}       \\
+Ne  & 3.351e-26 & 3.377e-26     & +0.77\% \heartmarker                                                                      \\
+Na  & 3.818e-26 & 3.886e-26     & +1.80\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}       \\
+Mg  & 4.036e-26 & 4.052e-26     & +0.40\% \heartmarker                                                                      \\
+Al  & 4.480e-26 & 4.562e-26     & +1.82\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}       \\
+\bottomrule
+\end{tabular} &
+\begin{tabular}{|rllr|}
+\toprule
+Species & Mass (kg) & VAM Mass & Err$_\text{M}$\\
+\midrule
+Si  & 4.664e-26 & 4.727e-26     & +1.37\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}       \\
+P   & 5.143e-26 & 5.237e-26     & +1.82\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}       \\
+S   & 5.324e-26 & 5.403e-26     & +1.49\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}       \\
+Cl  & 5.887e-26 & 5.912e-26     & +0.44\% \heartmarker                                                                      \\
+Ar  & 6.634e-26 & 6.766e-26     & +2.00\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}       \\
+K   & 6.492e-26 & 6.588e-26     & +1.47\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}       \\
+Ca  & 6.655e-26 & 6.754e-26     & +1.48\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}       \\
+Sc  & 7.465e-26 & 7.607e-26     & +1.90\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}       \\
+Ti  & 7.949e-26 & 8.117e-26     & +2.12\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}       \\
+V   & 8.459e-26 & 8.626e-26     & +1.98\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}       \\
+Cr  & 8.634e-26 & 8.792e-26     & +1.83\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}       \\
+Mn  & 9.123e-26 & 9.302e-26     & +1.96\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}       \\
+Fe  & 9.273e-26 & 9.467e-26     & +2.09\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}       \\
+\bottomrule
+\end{tabular}
+\end{tabular}
+\vspace{1ex}
+\scriptsize
+\textbf{Legend:}
+pink    \heartmarker   $<$0.5\%,
+green   \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}  $<$2.5\%,
+orange  \tikz[baseline=-0.5ex]{\node[draw=none,fill=orange,circle,inner sep=3pt]{};}  $<$10\%,
+red     \tikz[baseline=-0.5ex]{\node[draw=none,fill=red,circle,inner sep=3pt]{};} $<$25\%,
+black   \tikz[baseline=-0.5ex]{\node[draw=none,fill=black,circle,inner sep=3pt]{};}  $\geq$25\%.
+
+\end{table*}
+
+      \titlepageClose
+
+
+
 \subsection*{\noindent\raggedright Variables and Constants}
 \begin{itemize}
     \item $\alpha$ — Fine-structure constant ($\approx 1/137$)
@@ -69,7 +141,7 @@ M(n, m, \{V_i\}) = \frac{4}{\alpha} \cdot \left( \frac{1}{m} \right)^{3/2} \cdot
     \item $c$ — Speed of light in vacuum
 \end{itemize}
 
-      \titlepageClose
+
 
 \subsection*{Interpretation}
 The formula quantifies the mass as amplified swirl energy per unit volume, modulated by:
@@ -305,15 +377,6 @@ M_n &= 548.2 \cdot 0.192 \cdot 0.438 \cdot 0.381
   The Master Formula applied to atomic masses, comparing VAM-derived values (VAM-Mass) with experimental data(Mass). Showing the \% difference (Err$_\text{M}$), with the emperical version first used (Err$_\beta$)  .   \\ Err$_\text{M}$ \( M(n, m, \{V_i\}) = \frac{4}{\alpha} \cdot \left( \frac{1}{m} \right)^{3/2} \cdot \frac{1}{\varphi^s} \cdot n^{-1/\varphi} \cdot \left( \sum_i V_i \right) \cdot \left( \frac{1}{2} \rho_\text{\ae}^{(\text{energy})} C_e^2 \right) \)\\
   Err$_\beta$ \(  M(p,q) = 8\pi\,\rho_{\text{\ae}}\,r_c^3\,C_e \left(\sqrt{p^2 + q^2} + \gamma\, p\,q\right) \)
   Here $\sqrt{p^2+q^2}$ represents the \grqq swirl length\textquotedblright of the knot and the $\gamma p q$ term represents the additional energy from the knot's inter-linking/twisting, with $\gamma \approx 5.9\times10^{-3}$.
-  \newcommand{\heartmarker}{
-  \tikz[baseline=-1.4ex, xshift=-4ex, scale=0.06]
-    \draw[fill=pink,draw=none]
-    (0,0) .. controls (-1,1) and (-2,0.5) .. (-2,-0.5)
-            .. controls (-2,-2) and (0,-3) .. (0,-4)
-            .. controls (0,-3) and (2,-2) .. (2,-0.5)
-            .. controls (2,0.5) and (1,1) .. (0,0);
-}
-
 
 \begin{table*}[htbp]
 \scriptsize
