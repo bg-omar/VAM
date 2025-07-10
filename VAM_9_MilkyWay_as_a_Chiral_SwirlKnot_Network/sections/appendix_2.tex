@@ -1,0 +1,86 @@
+%! Author = Omar Iskandarani
+%! Date = 2025-06-13
+
+% === Metadata ===
+\newcommand{\appendixtitleII}{Appendix: Key References on the Vortex Æther Model}
+\newcommand{\paperauthor}{Omar Iskandarani}
+\newcommand{\paperaffil}{Independent Researcher, Groningen, The Netherlands}
+\newcommand{\paperdoi}{10.5281/zenodo.15566319}
+\newcommand{\paperorcid}{0009-0006-1686-3961}
+
+\ifdefined\standalonechapter\else
+  % Standalone mode
+  \documentclass[12pt]{article}
+  \usepackage[a4paper, margin=2cm]{geometry}
+  \usepackage{ifthen} % we can use it safely now
+  \usepackage{import}
+  \usepackage{subfiles}
+  \usepackage{hyperref}
+  \usepackage{graphicx}
+  \usepackage{amsmath, amssymb, physics}
+  \usepackage{siunitx}
+  \usepackage{tikz}
+  \usepackage{booktabs}
+  \usepackage{caption}
+  \usepackage{array, tabularx}
+  \usepackage{listings}
+  \usepackage{bookmark}
+  \usepackage{newtxtext,newtxmath}
+  \usepackage[scaled=0.95]{inconsolata}
+  \usepackage{mathrsfs}
+  \input{../vam_appendix_setup.sty}
+  \begin{document}
+
+  % === Title page ===
+  \titlepageOpen
+
+  \begin{abstract}
+      Abstracts are not typically included in appendices, but for standalone it is needed.
+  \end{abstract}
+
+  \titlepageClose
+\fi
+
+
+% ============= Begin of content ============
+\section{\appendixtitleII}
+\section*{Key References on the Vortex Æther Model (VAM)}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|p{5.2cm}|p{9.5cm}|}
+\hline
+\textbf{Reference} & \textbf{Description / Relevance to VAM} \\
+\hline
+Iskandarani, O. (2025). \textit{A Topological Reformulation of the Standard Model via Vortex Æther Dynamics}~\cite{iskandarani2025vam5} & Introduces the knot-particle correspondence; mass, charge, and gauge symmetries emerge from vortex topology. Replaces Higgs mechanism with æther tension and chirality-based mass generation. \\
+\hline
+Iskandarani, O. (2025). \textit{Time Dilation in a 3D Superfluid Æther Model}~\cite{iskandarani2025vam1} & Defines swirl clock $S(t)$, absolute time $N$, and proper time $\tau$; derives relativistic-style time dilation from vortex helicity and swirl density. \\
+\hline
+Iskandarani, O. (2025). \textit{Swirl Clocks and Vorticity-Induced Gravity}~\cite{iskandarani2025vam2} & Shows that gravity arises from helicity gradients. Chiral vortex structures induce swirl-pressure gradients mimicking GR curvature. \\
+\hline
+Iskandarani, O. (2025). \textit{Benchmarking VAM vs General Relativity}~\cite{iskandarani2025VAM3} & Demonstrates that VAM reproduces GR predictions for $G$, redshift, and orbits, using æther dynamics and no spacetime curvature. \\
+\hline
+Iskandarani, O. (2025). \textit{Appendix: Ætheric Time Ontology and Swirl Algebra}~\cite{iskandarani2025vam2} & Defines all time modes ($\mathcal{N}$, $\nu_0$, $\tau$, $T_v$, $S(t)$, $\kappa$). Introduces knot operators $S_1$, $S_2$, $S_3$ for chirality flip, twist-add, reconnection. \\
+\hline
+Annala, T. et al. (2022). \textit{Topologically Protected Vortex Knots and Links} & Shows certain vortex knots are long-lived in simulations; supports the idea of stable knotted particles in VAM. \\
+\hline
+Kleckner, D. \& Irvine, W. (2013). \textit{Creation and dynamics of knotted vortices in fluid flow} & First experimental creation of knotted vortices (e.g. trefoil); validates physical realizability of vortex knots in fluid systems. \\
+\hline
+Volovik, G. (2003). \textit{The Universe in a Helium Droplet} & Foundational treatise on emergent spacetime and field theories from superfluid analogs. Supports VAM’s fluid ontological framework. \\
+\hline
+Michell, J. \& Tippett, B. (2020). \textit{Helicity Conservation in Fluid Dynamics} & Describes helicity as a conserved quantity analogous to charge; relevant to VAM's topological charges. \\
+\hline
+Randoux, S. et al. (2020). \textit{Interplay of topology and dynamics in shaping vortex knots} & Simulation-based study of knot energy spectra; can be used to numerically test VAM’s knot-mass predictions. \\
+\hline
+\end{tabular}
+\caption{Primary theoretical, experimental, and conceptual sources underlying VAM.}
+\end{table}
+
+
+% ============== End of content =============
+
+\ifdefined\standalonechapter\else
+    \bibliographystyle{unsrt}
+    \bibliography{../../references}
+    \end{document}
+\fi
