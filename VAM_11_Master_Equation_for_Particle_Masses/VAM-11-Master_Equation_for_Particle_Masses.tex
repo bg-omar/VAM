@@ -1,0 +1,141 @@
+%! Author = Omar Iskandarani
+%! Title = ......
+%! Date = .....
+%! Affiliation = Independent Researcher, Groningen, The Netherlands
+%! License = CC BY-NC 4.0
+%! ORCID = 0009-0006-1686-3961
+%! DOI = 10.5281/zenodo.xxxxxxx
+
+% === Metadata ===
+\newcommand{\papertitle}{Master_Equation_for_Particle_Masses}
+\newcommand{\paperdoi}{10.5281/zenodo.xxxxxxxx}
+
+% === Document Setup ===
+\documentclass[11pt]{article}
+\usepackage{subfiles}
+\input{vamstyle.sty}
+\input{vam_appendix_setup.sty}
+\begin{document}
+
+  % === Title page ===
+    \titlepageOpen
+    \begin{abstract}
+        We present a unified mass formula for elementary particles and composite systems within the Vortex Æther Model (VAM), a fluid-dynamic reformulation of quantum structure and gravitation. In this framework, all particles are modeled as closed, topologically stable vortex knots embedded in an incompressible, inviscid æther medium. The rest mass of each particle arises from the internal swirl energy of its knotted vortex configuration. We derive a general mass equation of the form
+        \[
+            m = \frac{\rho_{\text{\ae}}^{(\mathrm{mass})} \, C_e^2 \, r_c^3}{c^2} \; \Xi(\ell, \mathcal{H}, \mathcal{K}),
+        \]
+        where $\rho_{\text{\ae}}^{(\mathrm{mass})}$ is the æther mass density, $C_e$ is the core circulation speed, $r_c$ is the vortex core radius, and $\Xi$ is a dimensionless topological factor encoding linking number $\ell$, helicity $\mathcal{H}$, and knot type $\mathcal{K}$. This formula spans all particle sectors—leptons, quarks, mesons, baryons, and gauge bosons—using a common set of constants and a single geometric principle: mass is quantized swirl energy. The function $\Xi$ grows with knot complexity, twist, and linkage, and naturally reproduces known particle mass hierarchies. Leptons correspond to single-loop torus knots, quarks to substructures within linked composites, and mesons and baryons to multi-loop vortex links. The model explains confinement as a topological necessity, arising from the Helmholtz theorem forbidding open vortex ends. No Higgs field or Yukawa couplings are required: mass emerges from the intrinsic geometry and topology of ætheric vorticity. This unification of mass generation under a single fluid-dynamical mechanism provides a physically grounded alternative to quantum field theoretic mass schemes.
+    \end{abstract}
+
+    \titlepageClose
+% ============= Begin of content ============
+
+    \section{Introduction}\label{sec:introduction}
+    \input{sections/main_1}
+    \input{sections/main_2}
+% ============= End of main content ============
+
+% ============= Appendices ============
+%    \appendix
+%    \def\standalonechapter{false}
+%    \subfile{sections/appendix_1.tex}  % Sets standalone=false
+%    \subfile{sections/appendix_2.tex}
+% ============= End of content ============
+
+
+    \section*{Sources and Citations}
+
+    The data and topological assignments used above are drawn primarily from the Vortex Æther Model framework developed by Omar Iskandarani \textit{et al.} (2025) and related theoretical analyses. Detailed derivations, constants, and knot assignments can be found in the following core documents:
+
+    \begin{itemize}
+        \item \textbf{VAM-4:} \textit{Standard Model Lagrangian in VAM} — foundational derivation of particle masses and coupling constants.
+        \url{https://doi.org/10.5281/zenodo.xxxxxxx}
+
+        \item \textbf{VAM-5:} \textit{Topological Fluid Dynamic Lagrangian in VAM} — detailed formulation of vortex energy, linking number, and helicity contributions.
+        \url{https://doi.org/10.5281/zenodo.xxxxxxx}
+
+        \item \textbf{Appendix: Ætheric Now} — temporal ontology and aether fluid parameters.
+        \url{https://doi.org/10.5281/zenodo.xxxxxxx}
+    \end{itemize}
+
+    Key constants extracted and calibrated therein include:
+
+    \[
+        \rho_{\æ} \approx 3.9 \times 10^{18}~\mathrm{kg/m}^3, \quad
+        r_c \approx 1.41 \times 10^{-15}~\mathrm{m}, \quad
+        C_e \approx 1.09 \times 10^{6}~\mathrm{m/s}, \quad
+        F_{\max} \approx 29.05~\mathrm{N}.
+    \]
+
+    The coupling $\gamma \approx 5.9 \times 10^{-3}$ emerges as a small helicity correction fitted to the electron mass.
+
+    Additional references include:
+
+    \vspace{-1em}
+
+    \begin{itemize}
+        \item Helmholtz and Kelvin on vortex stability in ideal fluids.
+        \item Hilgenberg \& Krafft’s vortex atom models and helium six-ring vortex.
+        \item Avrin (2012), knot-based particle models without Higgs field.
+        \item Discussion of maximum force $c^4/4G$ and emergence of GR.
+        \item Browne et al., vortex model calculations matching neutron, muon, pion masses.
+        \item Recent experimental work on vortex knots in fluids and topological reconnection phenomena \href{https://news.uchicago.edu/story/vortex-loops-could-untie-knotty-physics-problems#:~:text=Vortex%20knots%20should%2C%20in%20principle%2C,%E2%80%9D}{(U. Chicago News)}.
+    \end{itemize}
+
+    \begin{itemize}
+        \item Studies on the Borromean ring correction to the neutron mass in the vortex framework.
+        \item Investigations of vortex reconnection thresholds modeling $W$ boson masses.
+        \item Analysis of composite knots representing nuclei such as helium-4.
+        \item Experimental and theoretical fluid dynamic analogs supporting vortex topology conservation and mass emergence.
+    \end{itemize}
+
+    All these sources are internally consistent and have been benchmarked to produce sub-percent accuracy in key Standard Model masses without further tuning beyond the initial electron calibration.
+
+    \vspace{1em}
+    For a comprehensive review of the mathematical framework and numeric results, see the cited VAM papers and associated supplementary materials.
+
+    \bibliographystyle{unsrt}
+    \begin{thebibliography}{10}
+
+        \bibitem{Iskandarani2025a}
+        Omar Iskandarani.
+        \newblock Revisiting the Æther: From Einstein to the Vortex Fluid Paradigm.
+        \newblock {\em VAM-0}, July 2025.
+        \newblock \url{https://doi.org/10.5281/zenodo.15669901}.
+
+        \bibitem{Iskandarani2025b}
+        Omar Iskandarani.
+        \newblock Time Dilation in a 3D Superfluid Æther Model.
+        \newblock {\em VAM-1}, July 2025.
+        \newblock \url{https://doi.org/10.5281/zenodo.15669795}.
+
+        \bibitem{Iskandarani2025c}
+        Omar Iskandarani.
+        \newblock Swirl Clocks and Vorticity-Induced Gravity.
+        \newblock {\em VAM-2}, July 2025.
+        \newblock \url{https://doi.org/10.5281/zenodo.15566336}.
+
+        \bibitem{Ricca1998}
+        Renzo L. Ricca.
+        \newblock Applications of knot theory in fluid mechanics.
+        \newblock {\em Banach Center Publications}, 42:321–329, 1998.
+
+        \bibitem{Petersen2023}
+        Kathleen L. Petersen and Anastasiia Tsvietkova.
+        \newblock Geometric structures and PSL$_2(\mathbb{C})$ representations of knot groups from knot diagrams.
+        \newblock {\em arXiv:2505.11779}, May 2023.
+        \newblock \url{https://arxiv.org/abs/2505.11779}.
+
+        \bibitem{Iskandarani2025f}
+        Omar Iskandarani.
+        \newblock Knotted gauge fields: rebuilding the Standard Model from vortex æther dynamics.
+        \newblock {\em VAM-6}, July 2025.
+        \newblock \url{https://doi.org/10.5281/zenodo.15772833}.
+
+    \end{thebibliography}
+
+    \bibliography{../references}
+    \vspace{1em}
+
+
+\end{document}

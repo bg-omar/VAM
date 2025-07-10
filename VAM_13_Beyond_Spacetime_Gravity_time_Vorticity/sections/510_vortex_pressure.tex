@@ -1,0 +1,162 @@
+%! Author = Omar Iskandarani
+%! Date = 2025-06-13
+
+
+
+\ifdefined\standalonechapter\else
+% Standalone mode
+% === Metadata ===
+\newcommand{\papertitle}{Vortex Pressure, Stress, and Vorticity}
+\newcommand{\paperauthor}{Omar Iskandarani}
+\newcommand{\paperaffil}{Independent Researcher, Groningen, The Netherlands}
+\newcommand{\paperdoi}{10.5281/zenodo.15566319}
+\newcommand{\paperorcid}{0009-0006-1686-3961}
+\documentclass[12pt]{article}
+\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage{ifthen} % we can use it safely now
+\usepackage{import}
+\usepackage{subfiles}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amsmath, amssymb, physics}
+\usepackage{siunitx}
+\usepackage{tikz}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{array, tabularx}
+\usepackage{listings}
+\usepackage{bookmark}
+\usepackage{newtxtext,newtxmath}
+\usepackage[scaled=0.95]{inconsolata}
+\usepackage{mathrsfs}
+\input{../../vam_appendix_setup.sty}
+\begin{document}
+
+    % === Title page ===
+    \titlepageOpen
+
+    \begin{abstract}
+        This appendix derives the pressure gradients and internal stress distributions within rotating vortex structures embedded in the Æther. Starting from the classical balance of stress tensors in an inviscid, incompressible medium, we quantify the axial and transverse pressure relations, link them to tangential velocity, and identify emergent accelerations including Coriolis-type forces. These formulations demonstrate how pressure anisotropy and internal vorticity structure together produce stable vortex configurations, which in the Vortex Æther Model (VAM) underpin mass generation, swirl-induced gravity, and time dilation.
+    \end{abstract}
+
+
+    \titlepageClose
+    \fi
+
+% ============= Begin of content ============
+    \section{Vortex Pressure, Stress, and Vorticity}
+
+
+    \subsection{Vortex Pressure Relations}
+    In a steadily rotating vortex tube, let the core pressure be \(P_0\). The pressure at the vortex edge \(P_1\) is:
+    \begin{equation}
+        P_1 = P_0 + \frac{1}{2} \rho c^2,
+    \end{equation}
+    where \(\rho\) is the Æther density and \(c\) the tangential velocity at the vortex edge.
+
+    The axial pressure parallel to the vortex tube is:
+    \begin{equation}
+        P_2 = P_0 + \frac{1}{4} \rho c^2.
+    \end{equation}
+
+    The transverse pressure difference becomes:
+    \begin{equation}
+        P_1 - P_2 = \frac{1}{4} \rho c^2.
+    \end{equation}
+
+    For irrotational vortices where pressure arises from distributed angular momentum (e.g. as in swirl clocks or quantized vortices), this generalizes to:
+    \begin{equation}
+        P_1 - P_2 = N \rho c^2,
+    \end{equation}
+    with \(N\) a coefficient dependent on angular profile and vortex density.
+
+    \subsection{Stress Tensor Components}
+    Define vortex orientation via direction cosines \(l, m, n\) with respect to the \((x, y, z)\) axes.
+
+    The full stress tensor becomes:
+    \begin{align}
+        P_{xx} &= \rho c^2 l^2 - P_1, & P_{xy} &= \rho c^2 l m, & P_{xz} &= \rho c^2 l n, \\
+        P_{yy} &= \rho c^2 m^2 - P_1, & P_{yz} &= \rho c^2 m n, & P_{yx} &= P_{xy}, \\
+        P_{zz} &= \rho c^2 n^2 - P_1, & P_{zx} &= \rho c^2 n l, & P_{zy} &= P_{yz}.
+    \end{align}
+
+    If velocity components are defined by:
+    \begin{equation}
+        u = c l, \quad v = c m, \quad w = c n,
+    \end{equation}
+    then the stress tensor rewrites as:
+    \begin{align}
+        P_{xx} &= \rho u^2 - P_1, & P_{xy} &= \rho u v, & P_{xz} &= \rho u w, \\
+        P_{yy} &= \rho v^2 - P_1, & P_{yz} &= \rho v w, & P_{yx} &= \rho v u, \\
+        P_{zz} &= \rho w^2 - P_1, & P_{zx} &= \rho w u, & P_{zy} &= \rho w v.
+    \end{align}
+
+    \subsection{Equilibrium of Stresses and Force Components}
+    The force per unit volume follows the momentum balance:
+    \begin{align}
+        X &= \frac{\partial P_{xx}}{\partial x} + \frac{\partial P_{xy}}{\partial y} + \frac{\partial P_{xz}}{\partial z}, \\
+        Y &= \frac{\partial P_{yx}}{\partial x} + \frac{\partial P_{yy}}{\partial y} + \frac{\partial P_{yz}}{\partial z}, \\
+        Z &= \frac{\partial P_{zx}}{\partial x} + \frac{\partial P_{zy}}{\partial y} + \frac{\partial P_{zz}}{\partial z}.
+    \end{align}
+
+    Using the velocity substitution, the identity:
+    \[
+        u \frac{\partial u}{\partial x} + v \frac{\partial v}{\partial x} + w \frac{\partial w}{\partial x} = \frac{1}{2} \frac{\partial}{\partial x}(u^2 + v^2 + w^2)
+    \]
+    leads to:
+    \begin{align}
+        X &= \frac{1}{2} \rho \frac{\partial}{\partial x}(c^2)
+        + u \rho (\nabla \cdot \vec{u})
+        - \rho v (2 \zeta) + \rho w (2 \eta)
+        - \frac{\partial P_1}{\partial x}, \\
+        Y &= \frac{1}{2} \rho \frac{\partial}{\partial y}(c^2)
+        + v \rho (\nabla \cdot \vec{u})
+        - \rho w (2 \xi) + \rho u (2 \zeta)
+        - \frac{\partial P_1}{\partial y}, \\
+        Z &= \frac{1}{2} \rho \frac{\partial}{\partial z}(c^2)
+        + w \rho (\nabla \cdot \vec{u})
+        - \rho u (2 \eta) + \rho v (2 \xi)
+        - \frac{\partial P_1}{\partial z}.
+    \end{align}
+
+    \subsection{Connection to Vorticity and Coriolis Acceleration}
+    The terms involving:
+    \begin{equation}
+        \frac{1}{2} \rho \frac{\partial}{\partial x} (u^2 + v^2 + w^2)
+    \end{equation}
+    can be interpreted as a \textbf{Coulomb-like acceleration} from local kinetic energy gradients.
+
+    The cross terms:
+    \begin{equation}
+        - v (2 \zeta) + w (2 \eta),
+    \end{equation}
+    represent \textbf{Coriolis-type accelerations} in the rotating æther due to vorticity components in the transverse plane.
+
+    \subsection*{Conclusion}
+    This derivation exposes the deeper link between internal vortex pressure gradients and inertial forces resulting from vorticity. The decomposition of stresses into axial and transverse components reveals how Coriolis accelerations and pressure anisotropies arise naturally in rotating æther systems. These structures provide the mechanical foundation for VAM’s time dilation, mass generation, and vortex-induced gravitational fields.
+
+    \begin{tcolorbox}[colback=gray!10, colframe=black, title=Example: Vortex Pressure Drop]
+
+        Assuming:
+        \[
+            \rho = 7 \times 10^{-7} \, \mathrm{kg/m^3}, \quad c = C_e = 1.09384563 \times 10^6 \, \mathrm{m/s}
+        \]
+
+        We compute:
+        \[
+            P_1 - P_0 = \frac{1}{2} \rho c^2 = \boxed{418{,}774.39 \, \mathrm{Pa}}, \qquad
+            P_1 - P_2 = \frac{1}{4} \rho c^2 = \boxed{209{,}387.20 \, \mathrm{Pa}}
+        \]
+
+        This anisotropic pressure difference supports the vortex stability and creates a radial pressure gradient consistent with centripetal balance.
+    \end{tcolorbox}
+
+
+% === Bibliography (only for standalone) ===
+    \ifdefined\standalonechapter
+    % Being imported from main.tex — do nothing
+    \else
+    \bibliographystyle{unsrt}
+    \bibliography{../../references}
+    \end{document}
+    \fi
