@@ -1,0 +1,83 @@
+    %! Author = Omar Iskandarani
+    %! Title = VAM: Explaining the Universe in Analogies
+    %! Date = xx-xx-2025
+    %! Affiliation = Independent Researcher, Groningen, The Netherlands
+    %! License = CC BY-NC 4.0
+    %! ORCID = 0009-0006-1686-3961
+    %! DOI = 10.5281/zenodo.xxxxxxx
+
+% === Metadata ===
+    \newcommand{\papertitle}{VAM: Explaining the Universe in Analogies}
+    \newcommand{\paperdoi}{10.5281/zenodo.xxxxxxxx}
+
+
+    \documentclass[a4paper,12pt]{article}
+    \usepackage{../vamstyle}
+
+    \usepackage{import}
+    \usepackage{subfiles}
+
+
+    \input{../vamstyle.sty}
+    \input{../vam_appendix_setup.sty}
+    \begin{document}
+
+        % === Title page ===
+        \titlepageOpen
+
+
+
+        \begin{abstract}
+
+            This guide provides an accessible, richly illustrated introduction to the Vortex Æther Model (VAM)—a novel framework in physics that reimagines the fabric of reality as a vast, dynamic ocean of superfluid æther. Unlike conventional theories that describe gravity as the bending of spacetime or particles as indivisible points, VAM envisions all matter, energy, and even time itself as emergent from swirling knots, loops, and flows within this universal fluid.
+
+            Designed for curious laypeople, students, and interdisciplinary thinkers, each section replaces daunting equations with engaging analogies. Readers are invited to picture the universe as a calm pond where every particle is a smoke ring, every force a current, and every moment a ripple on the surface. The guide journeys from ancient philosophical notions of æther through the visions of Maxwell, Kelvin, and Einstein, and into the VAM’s modern reinterpretation—making connections with contemporary fluid dynamics and recent experiments with knotted vortices.
+
+            Illustrations and sidebars reinforce each metaphor:
+
+            \begin{itemize}
+                \item             Particles become knots and whirlpools, with mass arising from their swirl energy and chirality.
+                \item             Gravity emerges as a cosmic pressure gradient, like leaves drifting into a whirlpool, not as a mysterious force or spacetime curvature.
+                \item             Time is reimagined as both an absolute background rhythm and a local “swirl clock” within each knot, revealing layered and relative tempos throughout the universe.
+                \item             Electromagnetism, dark matter, and even the structure of galaxies are explored as patterns of flow and connectivity in the ætheric sea.
+            \end{itemize}
+
+            The guide contrasts VAM’s perspective with that of General Relativity and Quantum Mechanics, highlighting how shifting from geometry to flow can open new ways of thinking—and new possibilities for experiment and discovery. Above all, this work demonstrates the transformative power of analogies: not only as learning tools, but as springboards for imagination, insight, and the next generation of scientific breakthroughs.
+
+        \end{abstract}
+
+
+        \titlepageClose
+        \fi
+
+        \ifdefined\standalonechapter
+        \section{\papertitle}
+        \else
+        \fi
+% ============= BEGIN of content ============
+
+        \tableofcontents
+
+
+
+
+
+
+\input{vam-0-intro}
+\input{vam-1-aether}
+\input{vam-2-particles}
+\input{vam-3-gravity_and_mass}
+\input{vam-4-time}
+\input{vam-5-relativity}
+\input{vam-6-electromagnetism}
+\input{vam-7-big_picture}
+\input{vam-8-why_analogies_matter}
+
+
+
+% ============= END of content ============
+
+        \bibliographystyle{unsrt}
+        \bibliography{../references}
+
+    \end{document}
