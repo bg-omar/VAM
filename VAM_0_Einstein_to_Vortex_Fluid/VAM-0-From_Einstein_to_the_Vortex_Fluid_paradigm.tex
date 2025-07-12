@@ -8,6 +8,7 @@
 \usepackage{hyperref}
 \usepackage{enumitem}
 \usepackage{physics}
+\usepackage{caption}
 \usepackage{bm}
 \usepackage{tikz}
 \usepackage{pgfplots}
@@ -22,6 +23,8 @@
 \usetikzlibrary{decorations.pathmorphing}
 \pgfplotsset{compat=1.18} % or version you have
 \usepackage{titlesec}    % section formatting (optional)
+\renewcommand{\grqq}{``}
+
 
 \begin{document}
 \title{Revisiting the Æther:\\ From Einstein to the Vortex Fluid Paradigm}
@@ -32,16 +35,17 @@
 \thanks{DOI: \href{https://doi.org/10.5281/zenodo.15669901}{10.5281/zenodo.15669901}}
 \date{\today}
 \maketitle
-\begin{abstract}
-This paper revisits the concept of the æther through Einstein’s post-1920 writings, culminating in a structured reinterpretation via the Vortex Æther Model (VAM). Contrary to the prevailing view that Einstein abandoned the æther, we show that his later work restored it as a physically meaningful medium—devoid of mechanical motion but endowed with field-like properties essential for gravitation and inertia. We trace this conceptual shift from the 1905 rejection of the luminiferous æther to the 1924 Einstein–Cartan correspondence, emphasizing its continuity with modern field-theoretic frameworks.
+\begin{quotation}
+    \noindent\textbf{Abstract.}
+    This paper revisits the concept of the æther through Einstein’s post-1920 writings, culminating in a structured reinterpretation via the Vortex Æther Model (VAM). Contrary to the prevailing view that Einstein abandoned the æther, we show that his later work restored it as a physically meaningful medium—devoid of mechanical motion but endowed with field-like properties essential for gravitation and inertia. We trace this conceptual shift from the 1905 rejection of the luminiferous æther to the 1924 Einstein–Cartan correspondence, emphasizing its continuity with modern field-theoretic frameworks.
 
-Building on this foundation, VAM models the æther as an incompressible, inviscid superfluid. In this framework, gravitation and inertia emerge from the quantized circulation of knotted vortex filaments, with vorticity replacing curvature as the substrate of gravitational effects. Conserved angular momentum within the æther gives rise to time dilation, inertial response, and mass-energy equivalence. We introduce an effective mass profile \( M_{\text{eff}}(r) \) derived from localized vortex energy, along with a swirl potential \( \Omega \) governing fluid-mediated gravitation.
+    Building on this foundation, VAM models the æther as an incompressible, inviscid superfluid. In this framework, gravitation and inertia emerge from the quantized circulation of knotted vortex filaments, with vorticity replacing curvature as the substrate of gravitational effects. Conserved angular momentum within the æther gives rise to time dilation, inertial response, and mass-energy equivalence. We introduce an effective mass profile \( M_{\text{eff}}(r) \) derived from localized vortex energy, along with a swirl potential \( \Omega \) governing fluid-mediated gravitation.
 
-Time dilation arises naturally from vortex-induced flow as \( \frac{d\tau}{dt} = \sqrt{1 - \frac{v_\theta^2}{c^2}} \), with \( v_\theta(r) = \Gamma / (2\pi r) \), where \( \Gamma \) is the circulation and \( v_\theta \) the local tangential speed. This expression recovers relativistic time effects from fluid kinematics, without invoking curvature or spacetime deformation.
+    Time dilation arises naturally from vortex-induced flow as \( \frac{d\tau}{dt} = \sqrt{1 - \frac{v_\theta^2}{c^2}} \), with \( v_\theta(r) = \Gamma / (2\pi r) \), where \( \Gamma \) is the circulation and \( v_\theta \) the local tangential speed. This expression recovers relativistic time effects from fluid kinematics, without invoking curvature or spacetime deformation.
 
-This formulation sets a conceptual and mathematical foundation for the VAM framework, in which classical and quantum properties emerge from topological fluid dynamics. The model further distinguishes absolute, proper, and swirl-based time modes (\( \mathcal{N}, \tau, S(t) \)) within the ætheric field, offering a layered ontology of temporality. For empirical benchmarking against general relativity, see the companion analysis in~\cite{iskandarani2025benchmark}.
+    This formulation sets a conceptual and mathematical foundation for the VAM framework, in which classical and quantum properties emerge from topological fluid dynamics. The model further distinguishes absolute, proper, and swirl-based time modes (\( \mathcal{N}, \tau, S(t) \)) within the ætheric field, offering a layered ontology of temporality. For empirical benchmarking against general relativity, see the companion analysis in~\cite{iskandarani2025benchmark}.
 
-\end{abstract}
+\end{quotation}
 
 
 \section{Introduction}
@@ -541,6 +545,7 @@ It is time to stop portraying Einstein as the man who abolished the æther—and
     These “knots” are not particulate but \emph{topological excitations}—a modern resolution to Einstein’s concern over classical particles in a relativistic field theory.
 
     \vspace{0.5em}
+
     \noindent
     \textbf{Conclusion: From Silent Substrate to Structured Swirl}
 
@@ -551,6 +556,130 @@ It is time to stop portraying Einstein as the man who abolished the æther—and
     \textit{“Einstein stripped the æther of velocity to preserve symmetry. VAM restores internal motion to recover substance.”}
 
     \hfill — O. Iskandarani
+
+    \vspace{1em}
+    \noindent
+
+\section{Simultaneity: From Light Pulses to Vortex Clocks}
+
+\begin{center}
+    \footnotesize
+    \begin{tikzpicture}[node distance=3.5cm, every node/.style={font=\footnotesize}, >=latex]
+
+% Timeline axis
+        \draw[->, thick] (0,0) -- (14,0) node[below right] {\textbf{Time Concepts in Physics}};
+
+% Ticks and Labels
+        \foreach \x/\text in {
+            0/Newton (1687),
+            5/Einstein (1905--1920),
+            11/VAM (2025)
+        }{
+            \draw[thick] (\x,0.15) -- (\x,-0.15);
+            \node[below] at (\x,-0.3) {\textbf{\text}};
+        }
+
+% Newton
+        \node[align=left, above] at (0,1.7) {
+            \textbf{Absolute Time} \\[-0.2em]
+            Time flows uniformly and independently of \\[-0.2em]
+            the observer. Simultaneity is universal.
+        };
+        \draw[->, thick] (0,0.15) -- (0,1.4);
+
+% Einstein
+        \node[align=left, above] at (5,3.3) {
+            \textbf{Relativistic Time} \\[-0.2em]
+            Time depends on observer motion. \\[-0.2em]
+            Simultaneity is defined via light-signal \\[-0.2em]
+            exchange: \\[-0.2em]
+            $t_B = \frac{1}{2}(t_{\text{departure}} + t_{\text{return}})$ \\[-0.2em]
+            Proper time $\tau$ differs across frames.
+        };
+        \draw[->, thick] (5,0.15) -- (5,3.0);
+
+% VAM
+        \node[align=left, above] at (11,2.3) {
+            \textbf{Topological Time (VAM)} \\[-0.2em]
+            Global æther time \( N \) is absolute. \\[-0.2em]
+            Local time $\tau$ emerges from swirl \\[-0.2em]
+            energy via: \\[-0.2em]
+            $\displaystyle \frac{d\tau}{dN} = \sqrt{1 - \frac{|\vec{v}_{\text{\ae}}|^2}{c^2}}$ \\[-0.2em]
+            Internal clocks follow vortex phase: \\[-0.2em]
+            $S(t) = \int \Omega(r) \, dt$
+        };
+        \draw[->, thick] (11,0.15) -- (11,2.0);
+        \caption{Evolution of time concepts: from Newton’s absolute time, through Einstein’s relativistic simultaneity, to VAM’s swirl-clock and layered temporal ontology.}
+
+    \end{tikzpicture}
+\end{center}
+
+    In Einstein’s theory, time is defined operationally through the arrival and departure of light signals. Simultaneity is not absolute, but constructed by coordinating photon trajectories between clocks. This makes time a relational concept—dependent on the motion of observers and the invariance of light speed.
+
+    \begin{table}[h!]
+        \centering
+        \begin{tabular}{|c|c|c|c|}
+            \hline
+            \textbf{Theory} & \textbf{Time} & \textbf{Simultaneity} & \textbf{Defined By} \\
+            \hline
+            Newton & Absolute & Universal & External flow of time \\
+            Einstein (SR/GR) & Relative & Frame-dependent & Light signal coordination \\
+            VAM & Layered (N, $\tau$, $S(t)$) & Phase-coherent & Vortex swirl phase $\Omega(r)$ \\
+            \hline
+        \end{tabular}
+        \caption{Comparison of time and simultaneity in Newtonian, Einsteinian, and VAM frameworks.}
+    \end{table}
+
+    In contrast, the Vortex Æther Model grounds time in the internal dynamics of the medium itself. Absolute æther time \( N \) flows uniformly, while local time \( \tau \) and swirl clock time \( S(t) \) emerge from the rotational energy and helicity of vortex structures. Simultaneity is no longer a matter of synchronization via photons—it is encoded in the shared phase coherence of knotted circulation. In this sense, VAM replaces relativistic light-clock simultaneity with a topologically grounded, energetically conserved temporal ontology.
+
+    \begin{center}
+        \footnotesize
+        \begin{tikzpicture}[node distance=3.5cm, every node/.style={font=\footnotesize}, >=latex]
+
+    % Timeline (adjusted)
+            \draw[->, thick] (0,0) -- (10,0);
+
+    % Newton (left)
+            \node[draw, rounded corners=2pt, thick, align=center, fill=white, text width=6.2cm]  at (0,3.4) {
+                \textbf{Absolute Simultaneity} \\[-0.2em]
+                All observers agree on what events \\[-0.2em]
+                happen ``at the same time.'' \\[-0.2em]
+                Time is a universal background parameter.
+            };
+            \draw[->, thick] (0,0.0) -- (0,1.0);
+            \node[above=1.1cm, draw, thick, fill=white, rounded corners=2pt, font=\scriptsize] at (0,0) {\textbf{Newton (1687)}};
+
+    % Einstein (center)
+            \node[draw, rounded corners=2pt, thick, align=center, fill=white, text width=6.2cm]  at (5,-4.0) {
+                \textbf{Relativized Simultaneity} \\[-0.2em]
+                Events simultaneous in one frame are not in another. \\[-0.2em]
+                Defined via synchronized light signals: \\[-0.2em]
+                $t_B = \frac{1}{2}(t_{\text{send}} + t_{\text{return}})$
+            };
+            \draw[->, thick] (5,0.0) -- (5,-1.0);
+            \node[below=1.1cm, draw, thick, fill=white, rounded corners=2pt, font=\scriptsize]  at (5,0) {\textbf{Einstein (1905)}};
+
+    % VAM (right)
+            \node[draw, rounded corners=2pt, thick, align=center, fill=white, text width=6.2cm]  at (8,3.6) {
+                \textbf{Phase-Coherent Simultaneity} \\[-0.2em]
+                Events are synchronous if embedded \\[-0.2em]
+                in the same Swirl Clock phase $S(t)$. \\[-0.2em]
+                Simultaneity is \emph{vorticity-linked}, \\[-0.2em]
+                not speed-of-light-defined.
+            };
+            \draw[->, thick] (8,0.0) -- (8,1.0);
+            \node[above=1.1cm, draw, thick, fill=white, rounded corners=2pt, font=\scriptsize] at (8,0) {\textbf{VAM (2025)}};
+
+    % Timeline label above axis in box (higher)
+            \node[draw, thick, fill=white, rounded corners=2pt, font=\scriptsize] at (4,0.0) {\textbf{Simultaneity Across Physical Theories}};
+
+        \end{tikzpicture}
+        \captionof{figure}{Three conceptions of simultaneity: Newton’s universal now, Einstein’s light-signal-based frame dependence, and VAM’s internal phase coherence across vortex structures.}
+    \end{center}
+
+
+    \vspace{-1em}
+
 
 
 \section*{Final Reflection: Æther Past and Future}
