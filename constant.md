@@ -1,9 +1,9 @@
-$$ \R_e = \frac{\lambda_c}{2 \pi} \alpha $$  
-$$ \R_e = \frac{e^2}{4 \pi \varepsilon_0 M_e c^2} $$  
-$$ \R_e = 2 r_c $$  
-$$ \R_e =  \alpha^2 a_0 $$  
-$$ \R_e = \frac{e^2}{4 \pi \varepsilon_c m_c c^2} $$  
-$$ \R_e = \frac{e^2}{8 \pi \varepsilon_0 F^\text{\ae}_\text{max} r_c} $$
+$$ R_e = \frac{\lambda_c}{2 \pi} \alpha $$  
+$$ R_e = \frac{e^2}{4 \pi \varepsilon_0 M_e c^2} $$  
+$$ R_e = 2 r_c $$  
+$$ R_e =  \alpha^2 a_0 $$  
+$$ R_e = \frac{e^2}{4 \pi \varepsilon_c m_c c^2} $$  
+$$ R_e = \frac{e^2}{8 \pi \varepsilon_0 F^\text{\ae}_\text{max} r_c} $$
 $$ R_x = N \frac{F_{\max} r_c^2}{M_e Z C_e^2} $$
 $$ e=\frac{\sqrt{16 \pi F^\text{\ae}_\text{max} r_c^2}}{\mu_0 c^2} $$   
 $$ e^2=16 \pi F^\text{\ae}_\text{max} \xi_0 R_e^2 $$   

@@ -1,4 +1,4 @@
-\documentclass[preprint]{revtex4-2}
+\documentclass[preprint,notitlepage]{revtex4-2}
 \usepackage{amsmath, amssymb}
 \usepackage{graphicx}
 \usepackage{float}
@@ -22,30 +22,30 @@
 \usepackage{pgfmath}
 \usetikzlibrary{decorations.pathmorphing}
 \pgfplotsset{compat=1.18} % or version you have
-\usepackage{titlesec}    % section formatting (optional)
+\usepackage{titlesec}
+\usepackage{ulem}    % section formatting (optional)
 \renewcommand{\grqq}{``}
 
 
 \begin{document}
 \title{Revisiting the Æther:\\ From Einstein to the Vortex Fluid Paradigm}
 \author{Omar Iskandarani\footnote{\scriptsize This paper is not intended as a neutral historical review, but as a conceptual bridge—framing the Vortex Æther Model (VAM) as a contemporary realization of Einstein’s late æther philosophy. \textbf{Keywords:} Æther, Einstein, Vortex fluid model, Time dilation, Topological gravity, Field theory, Helmholtz, Maxwell, Kelvin, unified field theory}}
-\email{info@omariskandarani.com}
-\affiliation{Independent Researcher, Groningen, The Netherlands}
-\thanks{ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961}}
-\thanks{DOI: \href{https://doi.org/10.5281/zenodo.15669901}{10.5281/zenodo.15669901}}
+\thanks{Independent Researcher, Groningen, The Netherlands\\
+        info@omariskandarani.com \\
+        ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961} \\
+        DOI: \href{https://doi.org/10.5281/zenodo.15669901}{10.5281/zenodo.15669901}}
 \date{\today}
 \maketitle
-\begin{quotation}
-    \noindent\textbf{Abstract.}
-    This paper revisits the concept of the æther through Einstein’s post-1920 writings, culminating in a structured reinterpretation via the Vortex Æther Model (VAM). Contrary to the prevailing view that Einstein abandoned the æther, we show that his later work restored it as a physically meaningful medium—devoid of mechanical motion but endowed with field-like properties essential for gravitation and inertia. We trace this conceptual shift from the 1905 rejection of the luminiferous æther to the 1924 Einstein–Cartan correspondence, emphasizing its continuity with modern field-theoretic frameworks.
 
-    Building on this foundation, VAM models the æther as an incompressible, inviscid superfluid. In this framework, gravitation and inertia emerge from the quantized circulation of knotted vortex filaments, with vorticity replacing curvature as the substrate of gravitational effects. Conserved angular momentum within the æther gives rise to time dilation, inertial response, and mass-energy equivalence. We introduce an effective mass profile \( M_{\text{eff}}(r) \) derived from localized vortex energy, along with a swirl potential \( \Omega \) governing fluid-mediated gravitation.
+\begin{abstract}
+This paper revisits the concept of the æther through Einstein’s post-1920 writings, culminating in a structured reinterpretation via the Vortex Æther Model (VAM). Contrary to the belief that Einstein abandoned the æther, we show that his later work restored it as a physically meaningful medium—devoid of mechanical motion but endowed with field-like properties essential for gravitation and inertia. We trace this shift from the 1905 rejection of the luminiferous æther to the 1924 Einstein–Cartan correspondence, emphasizing its continuity with modern field-theoretic frameworks.
 
-    Time dilation arises naturally from vortex-induced flow as \( \frac{d\tau}{dt} = \sqrt{1 - \frac{v_\theta^2}{c^2}} \), with \( v_\theta(r) = \Gamma / (2\pi r) \), where \( \Gamma \) is the circulation and \( v_\theta \) the local tangential speed. This expression recovers relativistic time effects from fluid kinematics, without invoking curvature or spacetime deformation.
+VAM builds on this foundation by modeling the æther as an incompressible, inviscid superfluid. Gravitation and inertia emerge from the quantized circulation of knotted vortex filaments, with vorticity replacing curvature as the physical substrate of gravitational effects. Conserved angular momentum gives rise to time dilation, inertial response, and mass-energy equivalence. We define an effective mass profile \( M_{\text{eff}}(r) = \int_0^r 4\pi r'^2 \rho_\text{\ae}^{(\text{energy})}(r') \, dr' \), derived from localized vortex energy, and introduce a swirl potential \( \Omega(r) = \frac{C_e}{r_c} e^{-r/r_c} \), which governs fluid-mediated gravitation via Bernoulli-like pressure gradients.
 
-    This formulation sets a conceptual and mathematical foundation for the VAM framework, in which classical and quantum properties emerge from topological fluid dynamics. The model further distinguishes absolute, proper, and swirl-based time modes (\( \mathcal{N}, \tau, S(t) \)) within the ætheric field, offering a layered ontology of temporality. For empirical benchmarking against general relativity, see the companion analysis in~\cite{iskandarani2025benchmark}.
+Time dilation arises from tangential vortex flow as \( \frac{d\tau}{dt} = \sqrt{1 - \frac{v_\theta^2}{c^2}} \), with \( v_\theta(r) = \frac{\Gamma}{2\pi r} \), where \( \Gamma \) is the circulation quantum and \( v_\theta \) the local swirl velocity. This expression recovers relativistic time effects from fluid kinematics, without invoking curvature.
 
-\end{quotation}
+This sets a conceptual and mathematical foundation for VAM, in which classical and quantum behavior emerge from topological fluid dynamics. The model distinguishes three temporal modes within the æther: \( \mathcal{N} \) (Æther-Time), \( \tau \) (Proper Time), and \( S(t) = \int \Omega(r)\, dt \) (Swirl Clock Phase), offering a layered ontology of temporality. For empirical benchmarking against general relativity, see the companion analysis in~\cite{iskandarani2025benchmark}.
+\end{abstract}
 
 
 \section{Introduction}
@@ -562,57 +562,6 @@ It is time to stop portraying Einstein as the man who abolished the æther—and
 
 \section{Simultaneity: From Light Pulses to Vortex Clocks}
 
-\begin{center}
-    \footnotesize
-    \begin{tikzpicture}[node distance=3.5cm, every node/.style={font=\footnotesize}, >=latex]
-
-% Timeline axis
-        \draw[->, thick] (0,0) -- (14,0) node[below right] {\textbf{Time Concepts in Physics}};
-
-% Ticks and Labels
-        \foreach \x/\text in {
-            0/Newton (1687),
-            5/Einstein (1905--1920),
-            11/VAM (2025)
-        }{
-            \draw[thick] (\x,0.15) -- (\x,-0.15);
-            \node[below] at (\x,-0.3) {\textbf{\text}};
-        }
-
-% Newton
-        \node[align=left, above] at (0,1.7) {
-            \textbf{Absolute Time} \\[-0.2em]
-            Time flows uniformly and independently of \\[-0.2em]
-            the observer. Simultaneity is universal.
-        };
-        \draw[->, thick] (0,0.15) -- (0,1.4);
-
-% Einstein
-        \node[align=left, above] at (5,3.3) {
-            \textbf{Relativistic Time} \\[-0.2em]
-            Time depends on observer motion. \\[-0.2em]
-            Simultaneity is defined via light-signal \\[-0.2em]
-            exchange: \\[-0.2em]
-            $t_B = \frac{1}{2}(t_{\text{departure}} + t_{\text{return}})$ \\[-0.2em]
-            Proper time $\tau$ differs across frames.
-        };
-        \draw[->, thick] (5,0.15) -- (5,3.0);
-
-% VAM
-        \node[align=left, above] at (11,2.3) {
-            \textbf{Topological Time (VAM)} \\[-0.2em]
-            Global æther time \( N \) is absolute. \\[-0.2em]
-            Local time $\tau$ emerges from swirl \\[-0.2em]
-            energy via: \\[-0.2em]
-            $\displaystyle \frac{d\tau}{dN} = \sqrt{1 - \frac{|\vec{v}_{\text{\ae}}|^2}{c^2}}$ \\[-0.2em]
-            Internal clocks follow vortex phase: \\[-0.2em]
-            $S(t) = \int \Omega(r) \, dt$
-        };
-        \draw[->, thick] (11,0.15) -- (11,2.0);
-        \caption{Evolution of time concepts: from Newton’s absolute time, through Einstein’s relativistic simultaneity, to VAM’s swirl-clock and layered temporal ontology.}
-
-    \end{tikzpicture}
-\end{center}
 
     In Einstein’s theory, time is defined operationally through the arrival and departure of light signals. Simultaneity is not absolute, but constructed by coordinating photon trajectories between clocks. This makes time a relational concept—dependent on the motion of observers and the invariance of light speed.
 
@@ -632,6 +581,183 @@ It is time to stop portraying Einstein as the man who abolished the æther—and
 
     In contrast, the Vortex Æther Model grounds time in the internal dynamics of the medium itself. Absolute æther time \( N \) flows uniformly, while local time \( \tau \) and swirl clock time \( S(t) \) emerge from the rotational energy and helicity of vortex structures. Simultaneity is no longer a matter of synchronization via photons—it is encoded in the shared phase coherence of knotted circulation. In this sense, VAM replaces relativistic light-clock simultaneity with a topologically grounded, energetically conserved temporal ontology.
 
+\begin{center}
+\footnotesize
+\begin{tikzpicture}
+\scriptsize
+% Timeline base
+\draw[->, thick] (-1,0) -- (13.2,0);
+
+% Arrows above timeline (short, as requested)
+\draw[->, thick] (0,0) -- (0,1.2);       % Pre-Socratics
+\draw[->, thick] (3.8,0) -- (3.8,2.5);   % Augustine
+\draw[->, thick] (7.5,0) -- (7.5,1.2);   % Einstein
+\draw[->, thick] (11.4,0) -- (11.4,2.2); % VAM
+
+% Arrows below timeline (short, as requested)
+\draw[->, thick] (1.0,0) -- (1.0,-1.2);     % Plato/Aristotle
+\draw[->, thick] (5.5,0) -- (5.5,-2.4);     % Newton
+\draw[->, thick] (10.4,0) -- (10.4,-1.2);     % Leibniz/Mach
+
+    %--- Root title cards (above timeline) ---
+\node[draw, thick, rounded corners=2pt, fill=white, align=center, font=\bfseries ] at (0, .6)   {(500 BCE)};
+\node[draw, thick, rounded corners=2pt, fill=white, align=center, font=\bfseries ] at (3.8, .6) {(400 CE)};
+\node[draw, thick, rounded corners=2pt, fill=white, align=center, font=\bfseries ] at (7.5, .6) {(1700--1900)};
+\node[draw, thick, rounded corners=2pt, fill=white, align=center, font=\bfseries ] at (11.4, .6){(2025)};
+
+%--- Root title cards (below timeline) ---
+\node[draw, thick, rounded corners=2pt, fill=white, align=center, font=\bfseries ] at (1.0,- .6) {(350 BCE)};
+\node[draw, thick, rounded corners=2pt, fill=white, align=center, font=\bfseries ] at (5.5,- .6) {(1687)};
+\node[draw, thick, rounded corners=2pt, fill=white, align=center, font=\bfseries ] at (10.4,- .6) {(1905--1920)};
+
+    % Timeline label
+\node[draw, thick, fill=white, rounded corners=2pt, font=\scriptsize] at (5.7,0.0) {\textbf{Unified Timeline of Time and Simultaneity Theories}};
+
+% --- Pre-Socratics ---
+\node[draw, rounded corners=2pt, thick, align=center, fill=white] at (0,1.7) {
+\textbf{Pre-Socratics:} Timeless vs. Flux \\[-0.8em]
+Parmenides: being is eternal. \\[-0.8em]
+Heraclitus: everything flows.
+};
+
+% --- Augustine ---
+\node[draw, rounded corners=2pt, thick, align=center, fill=white] at (3.8,3.0) {
+\textbf{Augustine:} Time as Inner Sense \\[-0.8em]
+Only the present exists. \\[-0.8em]
+Past = memory, future = expectation.
+};
+
+% --- Leibniz / Mach ---
+\node[draw, rounded corners=2pt, thick, align=center, fill=white, text width=4.9cm] at (7.5,1.7) {
+\textbf{Leibniz / Mach:} Relational Time \\[-0.8em]
+No time without motion. \\[-0.8em]
+Time is order of events.
+};
+% --- VAM (modern) ---
+\node[draw, rounded corners=2pt, thick, align=center, fill=white, text width=6.0cm] at (11.4,3.0) {
+\textbf{VAM:} Topological Time \\[-0.8em]
+Æther time $N$ is absolute. \\[-0.6em]
+Swirl clock: $S(t)^\circlearrowleft = \int \Omega(r) dt$ \\[-0.6em]
+Local time $\tau$ emerges via: $ \frac{d\tau}{dN} = \sqrt{1 - \frac{|\vec{v}_\text{\ae}|^2}{c^2}}$
+
+};
+
+
+% --- Plato / Aristotle ---
+\node[draw, rounded corners=2pt, thick, align=center, fill=white, text width=6.2cm] at (1.0,-2) {
+\textbf{Plato / Aristotle:} Time as Motion/Image \\[-0.8em]
+Plato: time mimics eternity. \\[-0.8em]
+Aristotle: time = change.
+};
+
+
+
+% --- Einstein ---
+\node[draw, rounded corners=2pt, thick, align=center, fill=white, text width=5.4cm] at (10.5,-2.1) {
+\textbf{Einstein:} Relativized Time \\[-0.8em]
+Time depends on observer motion. \\[-0.8em]
+Simultaneity from light signals: \\[-0.8em]
+Proper time $\tau$ is path-dependent.\\[-0.8em]
+$t_B = \frac{1}{2}(t_{\text{send}} + t_{\text{return}})$
+};
+
+% --- Newton ---
+\node[draw, rounded corners=2pt, thick, align=center, fill=white, text width=5.7cm] at (5.5,-3.1) {
+\textbf{Newton:} Absolute Time \& Simultaneity \\[-0.8em]
+Time flows uniformly and independently \\[-0.8em]
+of the observer. Simultaneity is universal.
+};
+
+\end{tikzpicture}
+\captionof{figure}{Fused history of time and simultaneity: from early philosophical views and Newton’s absolutes to Einstein’s relativistic structure and VAM’s layered, swirl-based temporality.}
+\end{center}
+
+\begin{center}
+\footnotesize
+\begin{tikzpicture}
+\scriptsize
+
+% Timeline base
+\draw[->, thick] (-1,0) -- (13.3,0);
+
+% Arrows above timeline
+\draw[->, thick] (0,0) -- (0,1.2);       % Democritus
+\draw[->, thick] (3.8,0) -- (3.8,2.4);   % Newton
+\draw[->, thick] (7.5,0) -- (7.5,1.3);   % Einstein
+\draw[->, thick] (11.4,0) -- (11.4,2.2); % VAM
+
+% Arrows below timeline
+\draw[->, thick] (1.4,0) -- (1.4,-1.2);     % Aristotle
+\draw[->, thick] (5.5,0) -- (5.5,-2.3);     % Young/Huygens
+\draw[->, thick] (10.2,0) -- (10.2,-1.2);   % de Broglie
+
+% --- Date labels ---
+\node[draw, thick, rounded corners=2pt, fill=white, align=center, font=\bfseries ] at (0, .6)   {(400 BCE)};
+\node[draw, thick, rounded corners=2pt, fill=white, align=center, font=\bfseries ] at (3.8, .6) {(1704)};
+\node[draw, thick, rounded corners=2pt, fill=white, align=center, font=\bfseries ] at (7.5, .6) {(1905)};
+\node[draw, thick, rounded corners=2pt, fill=white, align=center, font=\bfseries ] at (11.4, .6){(2025)};
+
+\node[draw, thick, rounded corners=2pt, fill=white, align=center, font=\bfseries ] at (1.4,- .6) {(350 BCE)};
+\node[draw, thick, rounded corners=2pt, fill=white, align=center, font=\bfseries ] at (5.5,- .6) {(1801)};
+\node[draw, thick, rounded corners=2pt, fill=white, align=center, font=\bfseries ] at (10.2,- .6) {(1924--26)};
+
+% Timeline label
+\node[draw, thick, fill=white, rounded corners=2pt, font=\scriptsize] at (6.6,0.0) {\textbf{Wave–Particle Duality Through History}};
+
+% --- Democritus ---
+\node[draw, rounded corners=2pt, thick, align=center, fill=white, text width=5.4cm] at (0,1.8) {
+\textbf{Democritus:} Indivisible Particles \\[-0.8em]
+All matter is made of solid corpuscles. \\[-0.8em]
+No concept of wave behavior.
+};
+
+% --- Newton ---
+\node[draw, rounded corners=2pt, thick, align=center, fill=white, text width=5.4cm] at (3.8,2.8) {
+\textbf{Newton:} Corpuscular Light \\[-0.8em]
+Light is made of particles. \\[-0.8em]
+Explains reflection, refraction.
+};
+
+% --- Einstein ---
+\node[draw, rounded corners=2pt, thick, align=center, fill=white, text width=5.4cm] at (7.5,1.9) {
+\textbf{Einstein:} Light Quanta \\[-0.8em]
+Photoelectric effect implies photons. \\[-0.8em]
+Energy quantized: \( E = hf \).
+};
+
+% --- VAM ---
+\node[draw, rounded corners=2pt, thick, align=center, fill=white, text width=6.2cm] at (11.4,3.0) {
+\textbf{VAM:} Unified Vortex Excitations \\[-0.8em]
+Particles = knotted vortices in æther. \\[-0.6em]
+Wave-like behavior from interference. \\[-0.6em]
+No duality — pure structure.
+};
+
+% --- Aristotle ---
+\node[draw, rounded corners=2pt, thick, align=center, fill=white, text width=5.4cm] at (1.4,-2.0) {
+\textbf{Aristotle:} Continuous Medium \\[-0.8em]
+Matter is continuous. \\[-0.8em]
+Motion propagates like waves.
+};
+
+% --- Young / Huygens ---
+\node[draw, rounded corners=2pt, thick, align=center, fill=white, text width=5.4cm] at (5.5,-3.0) {
+\textbf{Young / Huygens:} Wave Optics \\[-0.8em]
+Light = waves in a medium. \\[-0.8em]
+Interference and diffraction.
+};
+
+% --- de Broglie / Schrödinger ---
+\node[draw, rounded corners=2pt, thick, align=center, fill=white, text width=5.7cm] at (10.2,-2.2) {
+\textbf{de Broglie / Schrödinger:} Duality \\[-0.8em]
+Matter has wavelength \( \lambda = h/p \). \\[-0.8em]
+Wavefunction governs evolution.
+};
+
+\end{tikzpicture}
+\captionof{figure}{Development of wave–particle duality: from atomistic corpuscles and wave optics, through quantum superposition, to VAM’s unified vortex excitation model.}
+\end{center}
+\sout{}
     \begin{center}
         \footnotesize
         \begin{tikzpicture}[node distance=3.5cm, every node/.style={font=\footnotesize}, >=latex]
@@ -680,6 +806,209 @@ It is time to stop portraying Einstein as the man who abolished the æther—and
 
     \vspace{-1em}
 
+
+\begin{center}
+\footnotesize
+\begin{tikzpicture}[node distance=3.5cm, every node/.style={font=\footnotesize}, >=latex]
+
+
+
+% Timeline base
+\draw[->, thick] (-1,0) -- (13.2,0);
+
+% Arrows above timeline (short, as requested)
+\draw[->, thick] (0,0) -- (0,1.2);       % Pre-Socratics
+\draw[->, thick] (3.8,0) -- (3.8,2.5);   % Augustine
+\draw[->, thick] (7.5,0) -- (7.5,1.2);   % Einstein
+\draw[->, thick] (11.4,0) -- (11.4,3.0); % VAM
+
+% Arrows below timeline (short, as requested)
+\draw[->, thick] (1.0,0) -- (1.0,-1.2);     % Plato/Aristotle
+\draw[->, thick] (5.5,0) -- (5.5,-2.4);     % Newton
+\draw[->, thick] (10.4,0) -- (10.4,-1.2);     % Leibniz/Mach
+
+    %--- Root title cards (above timeline) ---
+\node[draw, thick, rounded corners=2pt, fill=white, align=center, font=\bfseries ] at (0, .6)   {(500 BCE)};
+\node[draw, thick, rounded corners=2pt, fill=white, align=center, font=\bfseries ] at (3.8, .6) {(400 CE)};
+\node[draw, thick, rounded corners=2pt, fill=white, align=center, font=\bfseries ] at (7.5, .6) {(1700--1900)};
+\node[draw, thick, rounded corners=2pt, fill=white, align=center, font=\bfseries ] at (11.4, .6){(2025)};
+
+%--- Root title cards (below timeline) ---
+\node[draw, thick, rounded corners=2pt, fill=white, align=center, font=\bfseries ] at (1.0,- .6) {(350 BCE)};
+\node[draw, thick, rounded corners=2pt, fill=white, align=center, font=\bfseries ] at (5.5,- .6) {(1687)};
+\node[draw, thick, rounded corners=2pt, fill=white, align=center, font=\bfseries ] at (10.4,- .6) {(1905--1920)};
+
+% Label (centered box)
+\node[draw, thick, fill=white, rounded corners=2pt, font=\scriptsize] at (5.7,0.0) {\textbf{Ontology of Time in Western Science}};
+
+% Ancient Greek: Parmenides / Heraclitus
+\node[draw, rounded corners=2pt, thick, align=center, fill=white, text width=5cm] at (0,2.6) {
+\textbf{Timeless vs. Flux (ca. 500 BCE)} \\[-0.2em]
+Parmenides: timeless being. \\[-0.2em]
+Heraclitus: constant change (\textit{panta rhei}).
+};
+
+\node[above=1.6cm, draw, thick, fill=white, rounded corners=2pt, font=\scriptsize] at (0,0) {\textbf{Pre-Socratics}};
+
+% Plato / Aristotle
+\node[draw, rounded corners=2pt, thick, align=center, fill=white, text width=5cm] at (2.2,-3.0) {
+\textbf{Time as Motion/Image (ca. 350 BCE)} \\[-0.2em]
+Plato: moving image of eternity. \\[-0.2em]
+Aristotle: number of change.
+};
+
+\node[below=2.0cm, draw, thick, fill=white, rounded corners=2pt, font=\scriptsize] at (2.2,0) {\textbf{Plato / Aristotle}};
+
+% Augustine
+\node[draw, rounded corners=2pt, thick, align=center, fill=white, text width=5cm] at (4.3,2.8) {
+\textbf{Time as Inner Sense (400 CE)} \\[-0.2em]
+Past = memory, future = anticipation. \\[-0.2em]
+Only the present is real.
+};
+
+\node[above=1.8cm, draw, thick, fill=white, rounded corners=2pt, font=\scriptsize] at (4.3,0) {\textbf{Augustine}};
+
+% Newton
+\node[draw, rounded corners=2pt, thick, align=center, fill=white, text width=5cm] at (6.2,-3.2) {
+\textbf{Absolute Time (1687)} \\[-0.2em]
+Time flows uniformly, \\[-0.2em]
+independent of events.
+};
+
+\node[below=2.0cm, draw, thick, fill=white, rounded corners=2pt, font=\scriptsize] at (6.2,0) {\textbf{Newton}};
+
+% Relationalists: Leibniz / Mach
+\node[draw, rounded corners=2pt, thick, align=center, fill=white, text width=5cm] at (8.0,2.8) {
+\textbf{Relational Time (1700–1900)} \\[-0.2em]
+Time = order of events. \\[-0.2em]
+No time without change.
+};
+
+\node[above=1.8cm, draw, thick, fill=white, rounded corners=2pt, font=\scriptsize] at (8.0,0) {\textbf{Leibniz / Mach}};
+
+% Einstein
+\node[draw, rounded corners=2pt, thick, align=center, fill=white, text width=5cm] at (10.0,-3.0) {
+\textbf{Relative & Curved Time (1905–1915)} \\[-0.2em]
+Time depends on observer motion. \\[-0.2em]
+Becomes curved in gravity.
+};
+
+\node[below=2.0cm, draw, thick, fill=white, rounded corners=2pt, font=\scriptsize] at (10.0,0) {\textbf{Einstein}};
+
+% VAM
+\node[draw, rounded corners=2pt, thick, align=center, fill=white, text width=5cm] at (12.2,2.8) {
+\textbf{Layered Time (2025)} \\[-0.2em]
+Global time \( \mathcal{N} \), \\[-0.2em]
+Proper time \( \tau \), \\[-0.2em]
+Swirl phase \( S(t) = \int \Omega dt \).
+};
+
+\node[above=1.8cm, draw, thick, fill=white, rounded corners=2pt, font=\scriptsize] at (12.2,0) {\textbf{VAM}};
+
+\end{tikzpicture}
+\captionof{figure}{Historical evolution of temporal ontology: from pre-Socratic polarity to Einstein's spacetime and the layered temporality of the Vortex Æther Model.}
+\end{center}
+
+
+\begin{center}
+\footnotesize
+\begin{tikzpicture}[node distance=3.5cm, every node/.style={font=\footnotesize}, >=latex]
+
+
+% Timeline base
+\draw[->, thick] (-1,0) -- (13.2,0);
+
+% Arrows above timeline (short, as requested)
+\draw[->, thick] (0,0) -- (0,1.2);       % Pre-Socratics
+\draw[->, thick] (3.8,0) -- (3.8,2.5);   % Augustine
+\draw[->, thick] (7.5,0) -- (7.5,1.2);   % Einstein
+\draw[->, thick] (11.4,0) -- (11.4,3.0); % VAM
+
+% Arrows below timeline (short, as requested)
+\draw[->, thick] (1.0,0) -- (1.0,-1.2);     % Plato/Aristotle
+\draw[->, thick] (5.5,0) -- (5.5,-2.4);     % Newton
+\draw[->, thick] (10.4,0) -- (10.4,-1.2);     % Leibniz/Mach
+
+    %--- Root title cards (above timeline) ---
+\node[draw, thick, rounded corners=2pt, fill=white, align=center, font=\bfseries ] at (0, .6)   {(500 BCE)};
+\node[draw, thick, rounded corners=2pt, fill=white, align=center, font=\bfseries ] at (3.8, .6) {(400 CE)};
+\node[draw, thick, rounded corners=2pt, fill=white, align=center, font=\bfseries ] at (7.5, .6) {(1700--1900)};
+\node[draw, thick, rounded corners=2pt, fill=white, align=center, font=\bfseries ] at (11.4, .6){(2025)};
+
+%--- Root title cards (below timeline) ---
+\node[draw, thick, rounded corners=2pt, fill=white, align=center, font=\bfseries ] at (1.0,- .6) {(350 BCE)};
+\node[draw, thick, rounded corners=2pt, fill=white, align=center, font=\bfseries ] at (5.5,- .6) {(1687)};
+\node[draw, thick, rounded corners=2pt, fill=white, align=center, font=\bfseries ] at (10.4,- .6) {(1905--1920)};
+
+% Label
+\node[draw, thick, fill=white, rounded corners=2pt, font=\scriptsize] at (5.7,0.0) {\textbf{Ontology of Mass in Physical Theories}};
+
+% Democritus (left)
+\node[draw, rounded corners=2pt, thick, align=center, fill=white, text width=5cm] at (0,2.6) {
+\textbf{Mass as Indivisible Substance (400 BCE)} \\[-0.2em]
+Atoms are solid, eternal, massy bits of matter. \\[-0.2em]
+Mass is primitive and absolute.
+};
+
+\node[above=1.6cm, draw, thick, fill=white, rounded corners=2pt, font=\scriptsize] at (0,0) {\textbf{Democritus}};
+
+% Newton (below)
+\node[draw, rounded corners=2pt, thick, align=center, fill=white, text width=5cm] at (2.5,-3.0) {
+\textbf{Mass as Quantity of Matter (1687)} \\[-0.2em]
+Mass is inertial resistance to force. \\[-0.2em]
+Tied to gravitational attraction.
+};
+
+\node[below=2.0cm, draw, thick, fill=white, rounded corners=2pt, font=\scriptsize] at (2.5,0) {\textbf{Newton}};
+
+% Kelvin (top)
+\node[draw, rounded corners=2pt, thick, align=center, fill=white, text width=5cm] at (4.8,2.6) {
+\textbf{Vortex Atoms (1867)} \\[-0.2em]
+Mass from rotational stability of \\[-0.2em]
+vortex rings in a fluid æther.
+};
+
+\node[above=1.6cm, draw, thick, fill=white, rounded corners=2pt, font=\scriptsize] at (4.8,0) {\textbf{Kelvin}};
+
+% Maxwell (bottom)
+\node[draw, rounded corners=2pt, thick, align=center, fill=white, text width=5cm] at (6.6,-3.0) {
+\textbf{Field Mass (1873)} \\[-0.2em]
+Mass arises from field energy density. \\[-0.2em]
+No hard particles needed.
+};
+
+\node[below=2.0cm, draw, thick, fill=white, rounded corners=2pt, font=\scriptsize] at (6.6,0) {\textbf{Maxwell}};
+
+% Einstein (top)
+\node[draw, rounded corners=2pt, thick, align=center, fill=white, text width=5cm] at (8.6,2.6) {
+\textbf{Mass–Energy Equivalence (1905)} \\[-0.2em]
+\( E = mc^2 \): mass is a form of energy. \\[-0.2em]
+Massless fields can gain inertia.
+};
+
+\node[above=1.6cm, draw, thick, fill=white, rounded corners=2pt, font=\scriptsize] at (8.6,0) {\textbf{Einstein}};
+
+% Higgs (bottom)
+\node[draw, rounded corners=2pt, thick, align=center, fill=white, text width=5cm] at (10.5,-3.2) {
+\textbf{Mass from Field Coupling (1964)} \\[-0.2em]
+Particles gain mass by interacting \\[-0.2em]
+with the Higgs field vacuum.
+};
+
+\node[below=2.0cm, draw, thick, fill=white, rounded corners=2pt, font=\scriptsize] at (10.5,0) {\textbf{Higgs}};
+
+% VAM (top right)
+\node[draw, rounded corners=2pt, thick, align=center, fill=white, text width=5cm] at (12.5,2.8) {
+\textbf{Mass from Vortex Energy (2025)} \\[-0.2em]
+Mass is stored swirl energy: \\[-0.2em]
+\( M = \frac{1}{\varphi} \cdot \frac{4}{\alpha} \cdot \left( \frac{1}{2} \rho_\text{\ae} C_e^2 V \right) \)
+};
+
+\node[above=1.7cm, draw, thick, fill=white, rounded corners=2pt, font=\scriptsize] at (12.5,0) {\textbf{VAM}};
+
+\end{tikzpicture}
+\captionof{figure}{Historical evolution of mass ontology: from indivisible substance to field energy and finally to vortex-stored rotational energy in the ætheric continuum of VAM.}
+\end{center}
 
 
 \section*{Final Reflection: Æther Past and Future}

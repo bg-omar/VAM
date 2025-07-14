@@ -1,0 +1,1569 @@
+% \iffalse meta-comment
+%
+% Copyright
+%<*driver>
+\documentclass{ltxdoc}
+\usepackage{doc}
+
+\def\script#1{\texttt{#1}}
+\def\ext#1{\texttt{.#1}}
+\def\var#1{\texttt{\$#1}}
+\def\entry#1{\texttt{@#1}}
+\def\lang#1{\textsc{#1}}
+\def\bst#1{\textsf{#1.bst}}
+\def\BibTeX{Bib\TeX}
+
+%%%\AtBeginDocument{\CodelineIndex\EnableCrossrefs}
+%%%\AtEndDocument{\PrintIndex}
+\begin{document} 
+ \def\docdate{2019/03/30}
+ \def\fileversion{3.03}
+%%% Please also change date at the beginning of the script %%%
+%%% (VERSION and VDATE below)                              %%%
+ \DocInput{bibexport.dtx}
+\end{document}
+%</driver>
+% 
+% \fi
+% \CheckSum{45}
+%% \CharacterTable
+%%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
+%%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
+%%   Digits        \0\1\2\3\4\5\6\7\8\9
+%%   Exclamation   \!     Double quote  \"     Hash (number) \#
+%%   Dollar        \$     Percent       \%     Ampersand     \&
+%%   Acute accent  \'     Left paren    \(     Right paren   \)
+%%   Asterisk      \*     Plus          \+     Comma         \,
+%%   Minus         \-     Point         \.     Solidus       \/
+%%   Colon         \:     Semicolon     \;     Less than     \<
+%%   Equals        \=     Greater than  \>     Question mark \?
+%%   Commercial at \@     Left bracket  \[     Backslash     \\
+%%   Right bracket \]     Circumflex    \^     Underscore    \_
+%%   Grave accent  \`     Left brace    \{     Vertical bar  \|
+%%   Right brace   \}     Tilde         \~}
+%%
+%
+% \title{The \script{bibexport.sh} script}
+% \author{Nicolas Markey}
+% \date{\docdate}
+% \maketitle
+% \StopEventually{}
+%
+% \begin{abstract}
+% \script{bibexport.sh} is a small shell script, relying on \BibTeX, that
+% extracts entries of one or several \ext{bib} file(s). It~will expand
+% abbreviations and cross-references, except standard month and journal
+% abbreviations. The output is indented as neatly as possible, yielding a
+% readable \ext{bib} file even if the original file is~not.
+% \end{abstract}
+%
+%
+% \section{Exporting \ext{bib} files}
+%
+% \subsection{Why and how?}
+%
+% \BibTeX{} aims at allowing for the use of one single \ext{bib} file,
+% containing many entries, from which \BibTeX{} extracts only the
+% \verb+\cite+d ones. When sending a document to someone else, this
+% requires either sending the whole file, or extracting the \verb+\cite+d 
+% entries from the \ext{bib} file.
+%
+% \BibTeX{} also has a mechanism for using abbreviations and
+% cross-references. When extracting entries of a large \ext{bib} file,
+% it can be interesting to develop those abbreviations, in order to get a
+% clean, self-contained \ext{bib} file. Also, it may be useful to develop
+% cross-references in a \ext{bib} file, independently of any document.
+%
+% \medskip
+% \script{bibexport} can either extract entries that are cited in a document,
+% or all the entries of one or several \ext{bib} files. It will always develop
+% cross-references and abreviations, except standard abbreviations for months or
+% some journals, that are defined in standard \BibTeX{} styles. This script
+% uses \BibTeX{}. This has both pros and cons:
+% \begin{itemize}
+%\item[$+$] it is very simple. Basicaly, the script simply calls \BibTeX{}, and the
+% \ext{bst} file just outputs the name and the content of each field. 
+%\item[$+$] since it uses \BibTeX, we are sure that it will handle everything
+% "properly", \emph{i.e.} in the same way as they will be handled when cited in
+% a \LaTeX{} document;
+%\item[$=$] \BibTeX{} has some strict limitations (especially "no more than 78 consecutive
+% non-space characters") that we must be aware~of. On~the other hand, any such
+% problem occuring within the script would also occur when compiling a
+% document;
+%\item[$-$] abbreviations and cross-references will \emph{always} be
+% developped. It~could be argued that this is also a positive point, but
+% having the choice would be better.
+%\item[$-$] Many people seem to find \BibTeX's internal language clumsy, and thus
+% the script could be difficult to adapt to special needs. However, this is
+% not \emph{that} difficult, as will be explained later~on. In the present case, 
+% adding more fields to be exported is quite easy.
+% \end{itemize}
+%
+% \subsection{Related scripts}
+%
+% Several other tools exist for achieving this task:
+% \begin{itemize}
+%\item \verb+aux2bib+, written by Ralf Treinen, relies on \verb+bib2bib+,
+% which is a \lang{CaML} program for selecting some entries in one or several \ext{bib}
+% files. It does not expand anything, but includes all the necessary
+% definitions and entries. 
+%\item \verb+bibextract.sh+, by Nelson Beebe. This script uses \lang{awk} for
+% extracting some entries out of a \ext{bib} file. It~is said not to be
+% compliant with cross-references. 
+%\item \bst{subset}, by David Kotz. \bst{export} develops the same ideas (but
+% I discovered that only later~on). \bst{subset} does not handle
+% \entry{preamble}, neither does it "protect" standard abbreviations. 
+% \end{itemize}
+%
+% \subsection{Some examples}
+%
+% \begin{itemize}
+%\item extracting \verb+\cite+d references of a document, also including
+% cross-references:
+%\begin{center}
+% \ttfamily bibexport.sh -o {\itshape <result>}.bib {\itshape <file>}.aux
+%\end{center}
+%\item extracting \verb+\cite+d references of a document, without crossrefs,
+% and using a special \ext{bst} file:
+%\begin{center}
+% \ttfamily bibexport.sh -b {\itshape <style>}.bst -o {\itshape <result>}.bib {\itshape <file>}.aux
+%\end{center}
+%\item export all the entries of two \ext{bib} files (including crossrefed entries):
+%\begin{center}
+% \ttfamily bibexport.sh -a -o {\itshape <result>}.bib {\itshape <file1>}.bib {\itshape <file2>}.bib
+%\end{center}
+%\item export all the entries of two \ext{bib} files (without crossrefs):
+%\begin{center}
+% \ttfamily bibexport.sh -a -n -o {\itshape <result>}.bib {\itshape <file1>}.bib
+% {\itshape <file2>}.bib 
+%\end{center}
+% In fact, the only difference between this and the previous one is that
+% \texttt{crossref} field will be filtered out at the end of the script. 
+%\item export all the entries of two \ext{bib} files, using an extra file
+% containing cross-referenced entries (which should not be included):
+%\begin{center}
+% \ttfamily bibexport.sh -a -e {\itshape <crossref>}.bib -n -o {\itshape
+% <result>}.bib \textbackslash\par {\itshape <file1>}.bib {\itshape <file2>}.bib 
+%\end{center}
+%\end{itemize}
+%
+% \subsection{Exporting extra fields}
+%
+% By~default, \script{bibexport} exports only "standard" fields
+% (those defined and used in \bst{plain}), as~well as a few
+% others. It~is very easy to modify it in order to export other fields:
+% it~suffices to modify \bst{export} as follows:
+% \begin{itemize}
+% \item in the \texttt{ENTRY} list, add the name of the field you would
+%   like to export. Notice that \texttt{ENTRY} takes three space-separated
+%   lists as arguments; you must add extra fields in the first argument
+%   (actually, the last two are empty).
+% \item in the function \texttt{entry.export.extra}, add a line of the
+% form
+% \begin{center}
+% \ttfamily
+% "myfield" myfield field.export
+% \end{center}
+% where \texttt{myfield} is the name of the extra field you want to
+% export.
+% \end{itemize}
+%
+% \subsection*{Acknowledgements}
+% I thank \'Eric Colin de Verdi\`ere, Richard Mathar, Harald Hanche-Olsen, 
+% Damien Pollet, and Caner Kazanci for suggesting several improvements
+% or corrections.
+%
+% \section{The code}
+% \subsection{The shell script}
+% \subsubsection{Initialization}
+%
+%\begin{macro}{checkversion}
+% We check that the \ext{bst} files have the correct version number:
+%    \begin{macrocode}
+%<*script>
+function checkversion()
+{
+  kpsewhich expcites.bst > /dev/null || 
+    echo "-----------
+--Warning-- file expcites.bst not found.
+-----------"
+  grep -q $VDATE `kpsewhich expkeys.bst` || 
+    echo "-----------
+--Warning-- the version of the .bst files does not match with that of this script.
+-----------"
+}
+%</script>
+%    \end{macrocode}
+%\end{macro}
+%
+%\begin{macro}{usage}
+% We first define how the script should be used:
+%    \begin{macrocode}
+%<*script>
+function usage()
+{
+echo "bibexport: a tool to extract BibTeX entries out of .bib files.
+usage: `basename $0` [-h|v|n|c|a|d|s|t] [-b|e|es|ec|o|r file] file...
+
+Basic options: 
+--------------
+ -a, --all                  export the entire .bib files
+ -o bib, --output-file bib  write output to file       [default: bibexport.bib]
+ -ns, --nosave              overwrite output file without keeping a copy
+ -p, --preamble             write a preamble at beginning of output
+ -t, --terse                operate silently
+ -h, --help                 print this message and exit
+ -v, --version              print version number and exit
+
+Advanced options:
+-----------------
+ -b bst, --bst bst          specifies the .bst style file [default: export.bst]
+ -c, --crossref             preserve crossref field               [default: no]
+ -n, --no-crossref          remove crossref'd entries             [default: no]
+ -e bib, --extra bib        extra .bib file to be used (crossrefs and strings)
+ -es bib, --extras bib      extra .bib file to be used (for strings)
+ -ec bib, --extrac bib      extra .bib file to be used (for crossrefs)
+ -r bib, --replace bib      replace .bib file(s) in the .aux file
+ -d, --debug                create intermediate files but don't run BibTeX";
+exit 0;
+}
+%</script>
+%    \end{macrocode}
+%\end{macro}
+%
+%\begin{macro}{opttoolate}
+% We also have a function to warn if extra options are given after
+% the names of input files, which is not allowed.
+%    \begin{macrocode}
+%<*script>
+function opttoolate()
+{
+if [ ! -z "${TOOLATE}" ]; then
+    echo "No options are allowed after the input files";
+    exit 0;
+fi
+}
+%</script>
+%    \end{macrocode}
+%\end{macro}
+%\begin{macro}{VERSION}
+%\begin{macro}{VDATE}
+%\begin{macro}{ALL}
+%\begin{macro}{CREF}
+%\begin{macro}{DEBUG}
+%\begin{macro}{FILE}
+%\begin{macro}{EXT}
+%\begin{macro}{EXTRA}
+%\begin{macro}{EXTRABIB}
+%\begin{macro}{REPLACEBIB}
+%\begin{macro}{NEWBIB}
+%\begin{macro}{SPACE}
+%\begin{macro}{BST}
+%\begin{macro}{TERSE}
+%\begin{macro}{BANNER}
+%\begin{macro}{NOSAVE}
+%\begin{macro}{ARGS}
+%\begin{macro}{TOOLATE}
+% We define the default value of some variables:
+% \begin{itemize}
+% \item \var{VERSION}: the version number;
+% \item \var{VDATE}: the release date;
+% \item \var{ALL}: a flag indicating that all entries of the given (\ext{bib})
+%   file are to be exported;
+% \item \var{CREF}: the value of \verb+-min-crossrefs+;
+% \item \var{FILE}: the input file(s);
+% \item \var{EXT}: the extension (\ext{aux} or \ext{bib}) of input files;
+% \item \var{EXTRA}: list of possible extra \ext{bib} files without extension;
+% \item \var{EXTRABIB}: list of possible extra \ext{bib} files with extension;
+% \item \var{REPLACEBIB}: flag indicating that we will replace the \ext{bib}
+%   file given in the \ext{aux} file with a new one;
+% \item \var{NEWBIB}: new \ext{bib} file to replace that fiven in the
+%   \ext{aux} file;
+% \item \var{SPACE}: file name separator (can be \textvisiblespace, comma or empty);
+% \item \var{BST}: the \ext{bst} file to be used;
+% \item \var{TERSE}: run silently;
+% \item \var{BANNER}: don't print the initial comment;
+% \item \var{NOSAVE}: don't keep a copy if overwriting output file;
+% \item \var{ARGS}: the list of aruments passed to \texttt{bibexport.sh};
+% \item \var{TOOLATE}: options are not allowed once we have encountered the
+%   first non-option argument.
+% \item \var{DEBUG}: create intermediate files but do not run BibTeX.
+% \end{itemize}
+%    \begin{macrocode}
+%<*script>
+## Version number
+VERSION="3.03";
+## Release date
+VDATE="2019/03/30";
+
+# ALL is a flag set to 1 when '-a' is given
+ALL="";
+# FILE will be the main input file(s) (.aux or .bib, depending on '-a')
+FILE="";
+# EXT is the extension of the input file(s) (.aux, or .bib if '-a')
+EXT=".aux";
+# EXTRA and EXTRABIB are two copies of the extra files ('-e'), used to 
+# include crossref'd entries and @string's
+EXTRA="";
+EXTRABIB="";
+# REPLACEBIB ('-r') is set to 1 when the \bibdata of the .aux input file 
+# must be ignores (then '-e' must be used)
+REPLACEBIB="";
+# NEWBIB will contain the argument given to -r
+NEWBIB="";
+# BST is the .bst file to be used (default to export.bst)
+BST="export";
+# TERSE will be set to '-terse' if '-t' is given
+TERSE="";
+# NOSAVE if no need to save file before overwriting it
+NOSAVE=""
+# BANNER is used to turn on or off the preamble informations in the output
+BANNER="";
+# CREF is the number of citations of crossrefs from which the crossref'd entry 
+# must be included. 
+CREF="0";
+
+# SPACE will be either ' ' or ','
+SPACE="";
+# TOOLATE is used to prevent extra options after the main file
+TOOLATE="";
+# DEBUG is used to create files but not run BibTeX.
+DEBUG="";
+
+ARGS=$@;
+%</script>
+%    \end{macrocode}
+%\end{macro}
+%\end{macro}
+%\end{macro}
+%\end{macro}
+%\end{macro}
+%\end{macro}
+%\end{macro}
+%\end{macro}
+%\end{macro}
+%\end{macro}
+%\end{macro}
+%\end{macro}
+%\end{macro}
+%\end{macro}
+%\end{macro}
+%\end{macro}
+%\end{macro}
+%\end{macro}
+%
+% \subsubsection{Handling arguments}
+%
+% If no argument have been supplied, we call \script{usage}. Otherwise, we
+% check version number.
+%
+%    \begin{macrocode}
+%<*script>
+if [ $# -eq 0 ]; then
+  usage;
+fi
+checkversion;
+%</script>
+%    \end{macrocode}
+%
+% Otherwise, we enter a \verb+while+-loop for handling the whole list of arguments:
+%    \begin{macrocode}
+%<*script>
+while [ $# != 0 ]; do
+    case $1 in
+%</script>
+%    \end{macrocode}
+%\begin{itemize}
+%\item \verb+-a+ or \verb+--all+: export all the bibliography. This
+% means that we input \ext{bib} files. 
+%    \begin{macrocode}
+%<*script>
+        -a|--all)
+            ## - export all entries in the input file(s)
+            ## - the input files are BibTeX files
+            opttoolate;
+            EXT=""; SPACE=""; ALL="a";
+            shift ;;
+%</script>
+%    \end{macrocode}
+%\item \verb+-b+ or \verb+--bst+: specifies the style file. It seems
+% that \BibTeX{} does not like the \texttt{./\textit{style}.bst}
+% syntax, and we have to handle that case separately.
+%    \begin{macrocode}
+%<*script>
+        -b|--bst) 
+            ## - specifies the .bst file to use (default to 'export.bst')
+            opttoolate;
+            if [ "`dirname $2`" = "." ]; then
+                DOLLARTWO="`basename $2 .bst`";
+            else
+                DOLLARTWO="`dirname $2`/`basename $2 .bst`";
+            fi
+            BST="${DOLLARTWO}";
+            shift 2;;
+%</script>
+%    \end{macrocode}
+%\item \verb+-d+ or \verb+--debug+: only creates (and preserves) the 
+% intermediate files. This can help finding problems with the script or 
+% \ext{bst} files.
+%    \begin{macrocode}
+%<*script>
+        -d|--debug)
+            ## - debug mode: we create files but do not run bibtex
+            ## - instead, we print what we would have done...
+            opttoolate;
+            DEBUG="a";
+            shift ;;
+%</script>
+%    \end{macrocode}
+%\item \verb+-e+ or \verb+--extra+: when we want to export all the
+% entries of a \ext{bib} file, we can specify an extra \ext{bib} file
+% that would contain entries that we don't want to export, but that
+% are needed, \emph{e.g.} for crossrefs.
+%    \begin{macrocode}
+%<*script>
+        -e|--extra)
+            ## - extra input files (containing crossrefs or strings)
+            ## - they will be included twice: once before the main file(s) 
+            ##   (for @string's), once after (for crossrefs). We fool BibTeX 
+            ##   by naming the first one 'file.bib' and the second one 
+            ##   'file.bib.bib', to avoid complaints.
+            opttoolate;
+            if [ "`dirname $2`" = "." ]; then
+                DOLLARTWO="`basename $2 .bib`";
+            else
+                DOLLARTWO="`dirname $2`/`basename $2 .bib`";
+            fi
+            EXTRA="${EXTRA}${DOLLARTWO},";
+            EXTRABIB="${EXTRABIB},${DOLLARTWO}.bib";
+            shift 2;;
+%</script>
+%    \end{macrocode}
+%\item \verb+-es+ or \verb+--extras+: if, for some reason, including extra 
+% files twice is not possible, this options provides a way of including extra
+% \ext{bib} files only before the main \ext{bib} file(s).
+%    \begin{macrocode}
+%<*script>
+        -es|--extras)
+            ## - extra input files (containing strings)
+            ## - will be included *before* the main files (hence not suitable
+            ##   for crossrefs)
+            opttoolate;
+            if [ "`dirname $2`" = "." ]; then
+                DOLLARTWO="`basename $2 .bib`";
+            else
+                DOLLARTWO="`dirname $2`/`basename $2 .bib`";
+            fi
+            EXTRA="${EXTRA}${DOLLARTWO},";
+            shift 2;;
+%</script>
+%    \end{macrocode}
+%\item \verb+-ec+ or \verb+--extrac+: similar to te previous one, but for 
+% file(s) included after the main \ext{bib} file(s).
+%    \begin{macrocode}
+%<*script>
+        -ec|--extrac)
+            ## - extra input files (containing crossrefs)
+            ## - will be included only *after* the main files (hence not
+            ##   suitable for @string's)
+            opttoolate;
+            if [ "`dirname $2`" = "." ]; then
+                DOLLARTWO="`basename $2 .bib`";
+            else
+                DOLLARTWO="`dirname $2`/`basename $2 .bib`";
+            fi
+            EXTRABIB="${EXTRABIB},${DOLLARTWO}.bib";
+            shift 2;;
+%</script>
+%    \end{macrocode}
+%\item \verb+-o+ or \verb+--output+: the name of the output file.
+%    \begin{macrocode}
+%<*script>
+        -o|--output-file)
+            ## - name of the output file
+            ## - we force it to end with '.bib'
+            opttoolate;
+            if [ "`dirname $2`" = "." ]; then
+                DOLLARTWO="`basename $2 .bib`";
+            else
+                DOLLARTWO="`dirname $2`/`basename $2 .bib`";
+            fi
+            OUTPUT="${DOLLARTWO}.bib";
+            shift 2 ;;
+%</script>
+%    \end{macrocode}
+%\item \verb+-c+ or \verb+--crossref+ (or others): this options means
+% that we want crossrefs to be included. Note that for any entry,
+% field inheritage will be performed.
+%    \begin{macrocode}
+%<*script>
+        -c|--crossref|--crossrefs|--with-crossref|--with-crossrefs)
+            ## - whether or not to preserve 'crossref' keys.
+            ## - by default, they are removed, but crossref'd entries are 
+            ##   included.
+            ## - crossrefs are *always* expanded anyway.
+            opttoolate;
+            CREF="1" ;
+            shift ;;
+%</script>
+%    \end{macrocode}
+%\item \verb+-n+ or \verb+--no-crossref+: don't include crossref'ed
+% entries. 
+%    \begin{macrocode}
+%<*script>
+        -n|--no-crossref|--without-crossref|--no-crossrefs|--without-crossrefs)
+            ## - to remove crossref'd entries (hence remove 'crossref' keys).
+            opttoolate;
+            CREF="20000" ;
+            shift ;;
+%</script>
+%    \end{macrocode}
+%\item \verb+-r+ or \verb+--replace+: this provides a way of replacing the 
+% \ext{bib} files given by \cmd{bibdata} in the \ext{aux} file with (a) new 
+% one(s).
+%    \begin{macrocode}
+%<*script>
+        -r|--replace)
+            ## - to replace the file(s) given in \bibdata in the .aux file with
+            ##   (a) new one(s).
+            opttoolate;
+            REPLACEBIB="a";
+            if [ "`dirname $2`" = "." ]; then
+                DOLLARTWO="`basename $2 .bib`";
+            else
+                DOLLARTWO="`dirname $2`/`basename $2 .bib`";
+            fi
+            NEWBIB="${NEWBIB}${DOLLARTWO}.bib,";
+            shift 2;;
+%</script>
+%    \end{macrocode}
+%\item \verb+-v+ or \verb+--version+ for version number:
+%    \begin{macrocode}
+%<*script>
+        -v|--version)
+            echo "This is bibexport v${VERSION} (released ${VDATE})"; exit 0;;
+%</script>
+%    \end{macrocode}
+%\item \verb+-ns+ or \verb+--nosave+ for not keeping a copy
+% of the output file if we overwrite it:
+%    \begin{macrocode}
+%<*script>
+        -ns|--nosave|--no-save)
+            NOSAVE="a";
+            shift ;;
+%</script>
+%    \end{macrocode}
+%\item \verb+-p+ or \verb+--preamble+ for inserting some informations 
+% at the beginning of the output file:
+%    \begin{macrocode}
+%<*script>
+        -p|--preamble|--with-preamble)
+            BANNER="a";
+            shift ;;
+%</script>
+%    \end{macrocode}
+%\item \verb+-t+ or \verb+--terse+ for asking \BibTeX{} to run silently:
+%    \begin{macrocode}
+%<*script>
+        -t|--terse|--silent)
+            TERSE=" -terse ";
+            shift ;;
+%</script>
+%    \end{macrocode}
+%\item other dash-options are erroneous (except \verb+-h+, but...):
+%    \begin{macrocode}
+%<*script>
+        -*)
+            usage;;
+%</script>
+%    \end{macrocode}
+%\item there should only remain file names: we add those names to the
+% list of files.
+%    \begin{macrocode}
+%<*script>
+        *)
+            ## - list of input files
+            ## - we ensure that no extra option is given later...
+            TOOLATE="a";
+            if [ "`dirname $1`" = "." ]; then
+                DOLLARONE="`basename $1 ${EXT}`";
+            else
+                DOLLARONE="`dirname $1`/`basename $1 ${EXT}`";
+            fi
+            FILE="${FILE}${SPACE}${DOLLARONE}${EXT}";
+            if [ -z "${ALL}" ]; then
+                SPACE=" ";
+            else
+                SPACE=",";
+            fi;
+            shift;;
+%</script>
+%    \end{macrocode}
+% \end{itemize}
+% That's all folks:
+%    \begin{macrocode}
+%<*script>
+    esac
+done
+%</script>
+%    \end{macrocode}
+% 
+% \subsubsection{The core of the script}
+%
+% We first set the name of the result and intermediary files: 
+%    \begin{macrocode}
+%<*script>
+FINALFILE=${OUTPUT};
+if [ ! "${FINALFILE}" ]; then
+    FINALFILE="bibexport.bib";
+fi
+TMPFILE="bibexp.`date +%s`";
+%</script>
+%    \end{macrocode}
+%
+% We then create the \ext{aux} file for the main run of \BibTeX. Note
+% that this could call \BibTeX, with the \bst{expkeys} file, in the
+% case where we want to export all entries of a \ext{bib} file but not
+% crossrefs. Note how, in that case, we trick \BibTeX for inputing
+% extra files twice: we include then with their short name first (with
+% no extension), and then with the full name. We \emph{need} to do that,
+% since \verb+string+ abbreviations must be defined first, while
+% crossrefs must occur after having been referenced.
+%
+%    \begin{macrocode}
+%<*script>
+if [ -z "${EXT}" ]; then ## we export all entries
+    if [ -z "${EXTRA}" ]; then ## we have no extra files
+        cat > ${TMPFILE}.aux <<EOF
+\citation{*}
+\bibdata{${FILE}}
+\bibstyle{${BST}}
+EOF
+    else ## we have extra files (e.g. for crossrefs) but want all entries from ${FILE}
+         ## we first extract the keys to be used:
+        cat > ${TMPFILE}.aux <<EOF
+\citation{*}
+\bibdata{${FILE}}
+\bibstyle{expkeys}
+EOF
+        ## This run may generate errors. We redirect the output:
+        bibtex -min-crossrefs=${CREF} -terse ${TMPFILE} >/dev/null 2>&1;
+        mv -f ${TMPFILE}.bbl ${TMPFILE}.aux;
+        ## and then prepare the .aux file for exporting:
+        cat >> ${TMPFILE}.aux <<EOF
+\bibdata{${EXTRA}${FILE}${EXTRABIB}}
+\bibstyle{${BST}}
+EOF
+    fi
+else ## we only export entries listed in the given .aux file:
+  if [ -z "${REPLACEBIB}" ]; then
+    cat ${FILE} | sed -e "s/bibstyle{.*}/bibstyle{${BST}}/" > ${TMPFILE}.aux;
+  else
+    cat ${FILE} | sed -e "s/bibstyle{.*}/bibstyle{${BST}}/" \
+      -e "s|bibdata{.*}|bibdata{${EXTRA}${NEWBIB%,}${EXTRABIB}}|" > ${TMPFILE}.aux;
+  fi
+fi
+%</script>
+%    \end{macrocode}
+%
+% This was the hard part. We now call \BibTeX, clean and rename the
+% output file, and remove intermediary files:
+%
+%    \begin{macrocode}
+%<*script>
+if [ -z "$DEBUG" ]; then
+    bibtex -min-crossrefs=${CREF} ${TERSE} ${TMPFILE};
+    if [ -e ${FINALFILE} ] && [ -z "${NOSAVE}" ]; then
+        mv ${FINALFILE} ${FINALFILE}-save-`date "+%Y.%m.%d:%H.%M.%S"`
+    fi
+    echo "" > ${FINALFILE}
+else
+    echo "bibtex -min-crossrefs=${CREF} ${TERSE} ${TMPFILE};"
+    if [ -e ${FINALFILE} ] && [ -z "${NOSAVE}" ]; then
+        echo "mv ${FINALFILE} ${FINALFILE}-save-`date \"+%Y.%m.%d:%H.%M.%S\"`"
+    fi
+    echo "echo \"\" > ${FINALFILE}"
+fi
+if [ ! -z "${BANNER}" ]; then
+    ## list of cited entries
+    if [ -z "$DEBUG" ]; then
+        sed -i -e "s/\\\bibstyle{.*}/\\\bibstyle{expcites}/" ${TMPFILE}.aux
+        mv ${TMPFILE}.aux ${TMPFILE}-cites.aux
+        bibtex -terse -min-crossrefs=${CREF} ${TMPFILE}-cites
+        echo -ne "@comment{generated using bibexport:\n" >> ${FINALFILE};
+        echo -ne "  creation date:\t`date +\"%c\"`\n" >> ${FINALFILE};
+        echo -ne "  command:\t\t`basename $0` ${ARGS}\n" >> ${FINALFILE};
+        if [ -z "${EXT}" ]; then
+            echo -ne "  source files:\t\t${FILETAB}\t\t\t${EXTRABIBTAB}\n" >> ${FINALFILE}; \
+                fi
+        cat ${TMPFILE}-cites.bbl >> ${FINALFILE};
+        #echo -ne "  bibexport-version:\tv${VERSION} (${VDATE})\n" >> ${FINALFILE};
+        #echo -ne "  bibexport-maintainer:\tNicolas Markey <bibexport(at)markey.fr>\n" >> ${FINALFILE};
+        sed -i -e "s/}/)/g" ${FINALFILE};
+        echo -n -e "}\n\n\n" >> ${FINALFILE};
+        rm -f ${TMPFILE}-cites.bbl ${TMPFILE}-cites.aux ${TMPFILE}-cites.blg
+    fi
+fi
+if [ ${CREF} -ne 1 ]; then
+    if [ -z "$DEBUG" ]; then
+        egrep -iv '^ *crossref *= *[^,]+,?$' \
+            ${TMPFILE}.bbl >> ${FINALFILE};
+    else
+        echo "egrep -iv '^ *crossref *= *[^,]+,?$' ${TMPFILE}.bbl >> ${FINALFILE};"
+    fi
+else
+    if [ -z "$DEBUG" ]; then
+        cat ${TMPFILE}.bbl >> ${FINALFILE};
+    else
+        echo "cat ${TMPFILE}.bbl >> ${FINALFILE};"
+    fi
+fi
+if [ -z "$DEBUG" ]; then
+    rm -f ${TMPFILE}.bbl ${TMPFILE}.aux ${TMPFILE}.blg;
+else
+    echo "rm -f ${TMPFILE}.bbl ${TMPFILE}.aux ${TMPFILE}.blg";
+fi
+%</script>
+%    \end{macrocode}
+%
+%
+% \subsection{The \bst{expkeys} file}
+%
+% The only role of that file is to export the list of entries to be
+% exported. It is used when we export all the entries of \ext{bib}
+% files, except those of \emph{extra} \ext{bib} files. 
+% Thus:
+%    \begin{macrocode}
+%<*expkeys>
+ENTRY{}{}{}
+READ
+FUNCTION{export.key}
+{
+  "\citation{" cite$ "}" * * write$ newline$
+}
+ITERATE{export.key}
+%</expkeys>
+%    \end{macrocode}
+%
+% \subsection{The \bst{expcites} file}
+%
+% This file is used for exporting and formating the list of \verb+\cite+d entries.
+% We begin with some parameters defining the margins
+% \subsubsection{Some configuration values}
+% \begin{macro}{left.width}
+% \begin{macro}{right.width}
+% \begin{macro}{url.right.width}
+% \begin{macro}{left.short.width}
+% \begin{macro}{right.short.width}
+% \begin{macro}{left.delim}
+% \begin{macro}{right.delim}
+%    \begin{macrocode}
+%<*expcites>
+FUNCTION{left.width}{#23}
+FUNCTION{right.width}{#55}
+FUNCTION{url.right.width}{#61}
+FUNCTION{left.short.width}{#10} %% for @preamble
+FUNCTION{right.long.width}{#63}
+FUNCTION{left.delim}{quote$}
+FUNCTION{right.delim}{quote$}
+%</expcites>
+%    \end{macrocode}
+% \end{macro}
+% \end{macro}
+% \end{macro}
+% \end{macro}
+% \end{macro}
+% \end{macro}
+% \end{macro}
+%
+% \subsubsection{Entries}
+% We only want to export \verb+\cite+d keys, so we won't use any field.
+% \begin{macro}{ENTRY}
+%    \begin{macrocode}
+%<*expcites>
+ENTRY{dummy}{}{}
+%</expcites>
+%    \end{macrocode}
+% \end{macro}
+%
+% \subsubsection{Basic functions}
+%
+%\begin{macro}{or}
+%\begin{macro}{and}
+%\begin{macro}{not}
+%    \begin{macrocode}
+%<*expcites>
+FUNCTION{not}
+{
+    {#0}
+    {#1}
+  if$
+}
+FUNCTION{and}
+{
+    'skip$
+    {pop$ #0}
+  if$
+}
+FUNCTION{or}
+{
+    {pop$ #1}
+    'skip$
+  if$
+}
+%</expcites>
+%    \end{macrocode}
+% \end{macro}
+% \end{macro}
+% \end{macro}
+%
+% \subsubsection{Splitting strings}
+%
+% We design functions for splitting strings, so that the final
+% \ext{bib} file will be cleanly indented. 
+% \begin{macro}{space.complete}
+% \begin{macro}{split.string}
+%    \begin{macrocode}
+%<*expcites>
+INTEGERS{left.length right.length}
+STRINGS{ s t }
+INTEGERS{bool cpt}
+FUNCTION{space.complete}
+{
+  'left.length :=
+  duplicate$ text.length$ left.length swap$ -
+  {duplicate$ #0 >}
+    {
+      swap$ " " * swap$ #1 -
+    }
+  while$
+  pop$
+}
+FUNCTION{split.string}
+{
+  'right.length :=
+  duplicate$ right.length #1 + #1 substring$ "" =
+    {""}
+    {
+      's :=
+      right.length
+      {duplicate$ duplicate$ s swap$ #1 substring$ " " = not and}
+        {#1 -}
+      while$
+      duplicate$ #2 <
+        {
+          pop$ "    " s * ""
+        }
+        {
+          duplicate$ s swap$ #1 swap$ substring$
+          swap$
+          s swap$ global.max$ substring$
+        }
+      if$
+    }
+  if$
+}
+%</expcites>
+%    \end{macrocode}
+% \end{macro}
+% \end{macro}
+%
+% \subsubsection{Exporting cited entries}
+% 
+% Now we initialize, and export \verb+\cite+d entries.
+%\begin{macro}{init.cited.keys}
+%\begin{macro}{write.cited.keys}
+%\begin{macro}{write.cited.keys.last}
+%\begin{macro}{write.nbkeys}
+%\begin{macro}{cited.keys}
+%\begin{macro}{end.cited.keys}
+%    \begin{macrocode}
+%<*expcites>
+FUNCTION{init.cited.keys}
+{
+  left.delim 's :=
+  #0 'bool :=
+  #0 'cpt :=
+}
+FUNCTION{write.cited.keys}
+{
+  bool
+    {"" left.width space.complete swap$}
+    {"  list of keys: " left.width space.complete swap$
+     #1 'bool :=}
+  if$
+  {duplicate$ text.length$ right.width >}
+    {
+      right.width split.string 't :=
+      *
+      write$ newline$
+      "" left.width space.complete t
+    }
+  while$
+  pop$ pop$ t
+}
+FUNCTION{write.cited.keys.last}
+{
+  bool
+    {"" left.width space.complete swap$}
+    {"  list of keys: " left.width space.complete swap$
+     #1 'bool :=}
+  if$
+  {duplicate$ duplicate$ text.length$ #1 substring$ "," = not}
+    {duplicate$ text.length$ #1 - #1 swap$ substring$}
+  while$
+  duplicate$ text.length$ #1 - #1 swap$ substring$
+  right.delim * "," *
+  {duplicate$ "" = not}
+    {
+      right.width split.string 't :=
+      *
+      write$ newline$
+      "" left.width space.complete t
+    }
+  while$
+  pop$ pop$
+}
+FUNCTION{write.nbkeys}
+{
+  "  number of entries: " left.width space.complete 
+  " " *
+  cpt int.to.str$ * "," * write$ newline$
+}
+FUNCTION{cited.keys}
+{
+  cpt #1 + 'cpt :=
+  s cite$ ", " * *  's :=
+  s text.length$ #4000 >
+    {s write.cited.keys 's :=}
+    'skip$
+  if$
+}
+FUNCTION{end.cited.keys}
+{
+  s write.cited.keys.last
+  write.nbkeys
+}
+%</expcites>
+%    \end{macrocode}
+% \end{macro}
+% \end{macro}
+% \end{macro}
+% \end{macro}
+% \end{macro}
+% \end{macro}
+%
+% \subsubsection{Now, we export...}
+%
+% We now export everything...
+%    \begin{macrocode}
+%<*expcites>
+FUNCTION{article}{cited.keys}
+FUNCTION{book}{cited.keys}
+FUNCTION{booklet}{cited.keys}
+FUNCTION{conference}{cited.keys}
+FUNCTION{habthesis}{cited.keys}
+FUNCTION{inbook}{cited.keys}
+FUNCTION{incollection}{cited.keys}
+FUNCTION{inproceedings}{cited.keys}
+FUNCTION{journals}{cited.keys}
+FUNCTION{manual}{cited.keys}
+FUNCTION{mastersthesis}{cited.keys}
+FUNCTION{misc}{cited.keys}
+FUNCTION{phdthesis}{cited.keys}
+FUNCTION{proceedings}{cited.keys}
+FUNCTION{techreport}{cited.keys}
+FUNCTION{unpublished}{cited.keys}
+READ
+EXECUTE{init.cited.keys}
+ITERATE{cited.keys}
+EXECUTE{end.cited.keys}
+%</expcites>
+%    \end{macrocode}
+%
+% \subsection{The \bst{export} file}
+%
+% \subsubsection{Some configuration values}
+% \begin{macro}{left.width}
+% \begin{macro}{right.width}
+% \begin{macro}{url.right.width}
+% \begin{macro}{left.short.width}
+% \begin{macro}{right.short.width}
+% \begin{macro}{left.delim}
+% \begin{macro}{right.delim}
+% We define here the indentation values, and the field
+% delimiters. \emph{short} width are used for \entry{preamble}.
+%    \begin{macrocode}
+%<*export>
+FUNCTION{left.width}{#18}
+FUNCTION{right.width}{#55}
+FUNCTION{url.right.width}{#61}
+FUNCTION{left.short.width}{#10} %% for @preamble
+FUNCTION{right.long.width}{#63}
+FUNCTION{left.delim}{"{"}
+FUNCTION{right.delim}{"}"}
+%FUNCTION{left.delim}{quote$}
+%FUNCTION{right.delim}{quote$}
+%</export>
+%    \end{macrocode}
+%\end{macro}
+%\end{macro}
+%\end{macro}
+%\end{macro}
+%\end{macro}
+%\end{macro}
+%\end{macro}
+% \subsubsection{Entries}
+% We use standard entries here. Of course, more entries could be added
+% for special \ext{bib} files. Those extra entries will also have to
+% be added in the main exporting function.
+% \begin{macro}{ENTRY}
+%    \begin{macrocode}
+%<*export>
+ENTRY{
+% Standard fields:
+    address
+    author
+    booktitle
+    chapter
+    edition
+    editor
+    howpublished
+    institution
+    journal
+    key
+    month
+    note
+    number
+    organization
+    pages
+    publisher
+    school
+    series
+    title
+    type
+    volume
+    year
+% Special (but still somewhat standard) fields (natbib, germbib, DBLP, ...):
+    abstract
+    acronym
+    annote
+    biburl
+    bibsource
+    doi
+    eid
+    isbn
+    issn
+    language
+    timestamp
+    url
+    urn
+}{}{}
+%</export>
+%    \end{macrocode}
+% \end{macro}
+%
+% \subsubsection{Basic functions}
+%
+% No comment.
+%\begin{macro}{or}
+%\begin{macro}{and}
+%\begin{macro}{not}
+%    \begin{macrocode}
+%<*export>
+FUNCTION{not}
+{
+    {#0}
+    {#1}
+  if$
+}
+FUNCTION{and}
+{
+    'skip$
+    {pop$ #0}
+  if$
+}
+FUNCTION{or}
+{
+    {pop$ #1}
+    'skip$
+  if$
+}
+%</export>
+%    \end{macrocode}
+%\end{macro}
+%\end{macro}
+%\end{macro}
+% \subsubsection{Splitting strings}
+%
+% We design functions for splitting strings, so that the final
+% \ext{bib} file will be cleanly indented. This is also crucial
+% to avoid long URLs.
+% \begin{macro}{space.complete}
+% \begin{macro}{split.string}
+% \begin{macro}{split.url}
+% \begin{macro}{split.name}
+%    \begin{macrocode}
+%<*export>
+INTEGERS{left.length right.length}
+STRINGS{ s t }
+FUNCTION{space.complete}
+{
+  'left.length :=
+  duplicate$ text.length$ left.length swap$ -
+  {duplicate$ #0 >}
+    {
+      swap$ " " * swap$ #1 -
+    }
+  while$
+  pop$
+}
+FUNCTION{split.string}
+{
+  'right.length :=
+  duplicate$ right.length #1 + #1 substring$ "" =
+    {""}
+    {
+      's :=
+      right.length
+      {duplicate$ duplicate$ s swap$ #1 substring$ " " = not and}
+        {#1 -}
+      while$
+      duplicate$ #2 <
+        {
+          pop$ "    " s * ""
+        }
+        {
+          duplicate$ s swap$ #1 swap$ substring$
+          swap$
+          s swap$ global.max$ substring$
+        }
+      if$
+    }
+  if$
+}
+FUNCTION{split.url}
+{
+  'right.length :=
+  duplicate$ right.length #1 + #1 substring$ "" =
+    {""}
+    {
+      's :=
+      right.length
+      {duplicate$ duplicate$ s swap$ #1 substring$ 
+        duplicate$ "/" = swap$ 
+        duplicate$ "&" = swap$
+        duplicate$ "?" = swap$
+        duplicate$ "-" = swap$ 
+                   ":" = or or or or not and}
+        {#1 -}
+      while$
+      duplicate$ #2 <
+        {
+          pop$ "    " s * ""
+        }
+        {
+          duplicate$ s swap$ #1 swap$ substring$
+          swap$ #1 +
+          s swap$ global.max$ substring$
+        }
+      if$
+    }
+  if$
+}
+FUNCTION{split.name}
+{
+  'right.length :=
+  duplicate$ right.length #1 + #1 substring$ "" =
+    {""}
+    {
+      's :=
+      right.length
+      {duplicate$ duplicate$ s swap$ #5 substring$ " and " = not and}
+        {#1 -}
+      while$
+      duplicate$ #2 <
+        {
+          pop$ "  " s * ""
+        }
+        {
+          #4 + duplicate$ s swap$ #1 swap$ substring$
+          swap$
+          s swap$ global.max$ substring$
+        }
+      if$
+    }
+  if$
+}
+%</export>
+%    \end{macrocode}
+% \end{macro}
+% \end{macro}
+% \end{macro}
+% \end{macro}
+% \subsubsection{Exporting fields}
+% 
+% Here, we have four exporting functions, since we also have to deal
+% with abbreviations: 
+%\begin{macro}{field.export}
+%\begin{macro}{abbrv.export}
+%\begin{macro}{name.export}
+%\begin{macro}{url.export}
+%    \begin{macrocode}
+%<*export>
+FUNCTION{field.export}
+{
+  duplicate$ missing$
+    'skip$
+    {
+      left.delim swap$ * right.delim *
+      swap$
+      "  " swap$ * " = " * left.width space.complete
+      swap$ "," *
+      {duplicate$ "" = not}
+        {
+          right.width split.string 't :=
+          *
+          write$ newline$
+          "" left.width space.complete t
+        }
+      while$
+    }
+  if$
+  pop$ pop$
+}
+FUNCTION{abbrv.export}
+{
+  duplicate$ missing$
+    'skip$
+    {
+      swap$
+      "  " swap$ * " = " * left.width space.complete
+      swap$ "," *
+      {duplicate$ "" = not}
+        {
+          right.width split.string 't :=
+          *
+          write$ newline$
+          "" left.width space.complete t
+        }
+      while$
+    }
+  if$
+  pop$ pop$
+}
+FUNCTION{name.export}
+{
+  duplicate$ missing$
+    'skip$
+    {
+      left.delim swap$ * right.delim *
+      swap$
+      "  " swap$ * " = " * left.width space.complete
+      swap$ "," *
+      {duplicate$ "" = not}
+        {
+          right.width split.name 't :=
+          *
+          write$ newline$
+          "" left.width space.complete t
+        }
+      while$
+    }
+  if$
+  pop$ pop$
+}
+FUNCTION{url.export}
+{
+  duplicate$ missing$
+    'skip$
+    {
+      left.delim swap$ * right.delim *
+      swap$
+      "  " swap$ * " = " * left.width space.complete
+      swap$ "," *
+      {duplicate$ "" = not}
+        {
+          url.right.width split.url 't :=
+          *
+          write$ newline$
+          "" left.width space.complete t
+        }
+      while$
+    }
+  if$
+  pop$ pop$
+}
+%</export>
+%    \end{macrocode}
+%\end{macro}
+%\end{macro}
+%\end{macro}
+%\end{macro}
+% \subsubsection{Handling abbreviations}
+%
+% Abbreviations are difficult to deal with if we wish to still use
+% them, since \BibTeX will expand them before we can do anything. All we
+% can do is to define them in a special way, in order to be able to get
+% back to the abbreviations later on. This is precisely what we do:
+%\begin{macro}{jan-dec}
+%\begin{macro}{acmcs-tcs}
+%\begin{macro}{remove.exports.from.months}
+%\begin{macro}{remove.export.from.journal}
+%    \begin{macrocode}
+%<*export>
+MACRO{jan}{"export-jan"}
+MACRO{feb}{"export-feb"}
+MACRO{mar}{"export-mar"}
+MACRO{apr}{"export-apr"}
+MACRO{may}{"export-may"}
+MACRO{jun}{"export-jun"}
+MACRO{jul}{"export-jul"}
+MACRO{aug}{"export-aug"}
+MACRO{sep}{"export-sep"}
+MACRO{oct}{"export-oct"}
+MACRO{nov}{"export-nov"}
+MACRO{dec}{"export-dec"}
+MACRO{acmcs}{"export-acmcs"}
+MACRO{acta}{"export-acta"}
+MACRO{cacm}{"export-cacm"}
+MACRO{ibmjrd}{"export-ibmjrd"}
+MACRO{ibmsj}{"export-ibmsj"}
+MACRO{ieeese}{"export-ieeese"}
+MACRO{ieeetc}{"export-ieeetc"}
+MACRO{ieeetcad}{"export-ieeetcad"}
+MACRO{ipl}{"export-ipl"}
+MACRO{jacm}{"export-jacm"}
+MACRO{jcss}{"export-jcss"}
+MACRO{scp}{"export-scp"}
+MACRO{sicomp}{"export-sicomp"}
+MACRO{tocs}{"export-tocs"}
+MACRO{tods}{"export-tods"}
+MACRO{tog}{"export-tog"}
+MACRO{toms}{"export-toms"}
+MACRO{toois}{"export-poois"}
+MACRO{toplas}{"export-toplas"}
+MACRO{tcs}{"export-tcs"}
+INTEGERS{ intxt }
+FUNCTION{remove.exports.from.months}
+{
+  #0 'intxt :=
+  duplicate$ missing$
+    'skip$
+    {'t :=
+    ""
+    {t #1 #1 substring$ "" = not}
+      {
+      t #1 #7 substring$ "export-" =
+        {intxt
+           {right.delim * #0 'intxt :=}
+           'skip$
+         if$
+         duplicate$ "" =
+           'skip$
+           {" # " *}
+         if$
+         t #8 #3 substring$ *
+         t #11 global.max$ substring$ 't :=}
+        {intxt
+           'skip$
+           {duplicate$ "" = 
+              {}
+              {" # " *}
+            if$
+            left.delim * #1 'intxt :=}
+         if$
+         t #1 #1 substring$ *
+         t #2 global.max$ substring$ 't :=}
+      if$
+      }
+    while$
+    intxt
+      {right.delim *}
+      'skip$
+    if$
+    }
+  if$
+}
+FUNCTION{remove.export.from.journals}
+{
+  duplicate$ missing$
+    'skip$
+    {
+      duplicate$ #1 #7 substring$ "export-" =
+        {#8 global.max$ substring$}
+        {left.delim swap$
+         right.delim * *}
+      if$
+    }
+  if$
+}
+%</export>
+%    \end{macrocode}
+%\end{macro}
+%\end{macro}
+%\end{macro}
+%\end{macro}
+%
+% \subsubsection{Now, we export...}
+%
+% We gather everything. This is were special fields must be added for
+% being exported:
+%\begin{macro}{entry.export.standard}
+%\begin{macro}{entry.export.extra}
+%\begin{macro}{entry.export}
+%\begin{macro}{export}
+%    \begin{macrocode}
+%<*export>
+FUNCTION{entry.export.standard}
+{
+  "address" address field.export
+  "author" author name.export
+  "booktitle" booktitle field.export
+  "chapter" chapter field.export
+  "crossref" crossref field.export
+  "edition" edition field.export
+  "editor" editor name.export
+  "howpublished" howpublished field.export
+  "institution" institution field.export
+  "journal" journal remove.export.from.journals abbrv.export
+  "key" key field.export
+  "month" month remove.exports.from.months abbrv.export
+  "note" note field.export
+  "number" number field.export
+  "organization" organization field.export
+  "pages" pages field.export
+  "publisher" publisher field.export
+  "school" school field.export
+  "series" series field.export
+  "type" type field.export
+  "title" title field.export
+  "volume" volume field.export
+  "year" year field.export
+}
+FUNCTION{entry.export.extra}
+{
+  "abstract" abstract field.export
+  "acronym" acronym field.export
+  "annote" annote field.export
+  "biburl" biburl url.export
+  "bibsource" bibsource field.export
+  "doi" doi field.export
+  "eid" eid field.export
+  "isbn" isbn field.export
+  "issn" issn field.export
+  "language" language field.export
+  "timestamp" timestamp field.export
+  "url" url url.export
+  "urn" urn url.export
+}
+FUNCTION{entry.export}
+{
+  entry.export.standard
+  entry.export.extra
+}
+FUNCTION{export}
+{
+  "@" type$ * "{" * cite$ * "," * write$ newline$
+  entry.export
+  "}" write$ newline$ newline$
+}
+%</export>
+%    \end{macrocode}
+%\end{macro}
+%\end{macro}
+%\end{macro}
+%\end{macro}
+%
+% \subsubsection{Miscellanea}
+% We also have to handle preamble, and to define functions for each
+% entry type (we won't use them but otherwise, \BibTeX would complain). 
+%
+%\begin{macro}{preamble}
+%\begin{macro}{header}
+%\begin{macro}{entries.headers}
+%\begin{macro}{article-unpublished}
+%    \begin{macrocode}
+%<*export>
+FUNCTION{preamble}
+{
+preamble$ duplicate$ "" =
+  'pop$
+  {
+    ",-------------------." write$ newline$
+    "|     PREAMBLE      |" write$ newline$
+    "`-------------------'" write$ newline$ newline$
+    "@preamble{ "  swap$
+    quote$ swap$ * quote$ *
+    {duplicate$ "" = not}
+      {
+        right.long.width split.string 't :=
+        *
+        write$ newline$
+        "" left.short.width space.complete t
+      }
+    while$
+    "}" write$ newline$ newline$
+    pop$ pop$
+  }
+if$
+}
+FUNCTION{header}
+{
+%"** This file has been automatically generated by bibexport **" 
+%write$ newline$
+%"** See   http://people.irisa.fr/Nicolas.Markey/latex.php   **" 
+%write$ newline$
+%"** for more informations about bibexport.                  **" 
+%write$ newline$
+newline$
+}
+FUNCTION{entries.header}
+{
+preamble$ "" =
+  'skip$
+  {
+    ",-------------------." write$ newline$
+    "|  BIBTEX ENTRIES   |" write$ newline$
+    "`-------------------'" write$ newline$ newline$
+  }
+if$
+}
+FUNCTION{article}{export}
+FUNCTION{book}{export}
+FUNCTION{booklet}{export}
+FUNCTION{conference}{export}
+FUNCTION{habthesis}{export}
+FUNCTION{inbook}{export}
+FUNCTION{incollection}{export}
+FUNCTION{inproceedings}{export}
+FUNCTION{journals}{export}
+FUNCTION{manual}{export}
+FUNCTION{mastersthesis}{export}
+FUNCTION{misc}{export}
+FUNCTION{phdthesis}{export}
+FUNCTION{proceedings}{export}
+FUNCTION{techreport}{export}
+FUNCTION{unpublished}{export}
+%</export>
+%    \end{macrocode}
+%\end{macro}
+%\end{macro}
+%\end{macro}
+%\end{macro}
+% \subsubsection{Main program}
+%
+% We now can execute and iterate those functions:
+%
+%    \begin{macrocode}
+%<*export>
+READ
+EXECUTE{header}
+EXECUTE{preamble}
+EXECUTE{entries.header}
+ITERATE{export}
+%</export>
+%    \end{macrocode}
+%
+% \Finale
+\endinput
