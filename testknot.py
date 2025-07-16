@@ -108,11 +108,11 @@ t = np.linspace(0, 2 * np.pi, 2000)
 # Approximation for knot 6_2
 x_62 = np.sin(3 * t) + 0.5 * np.sin(6 * t)
 y_62 = np.cos(2 * t) - 0.5 * np.cos(5 * t)
-plot_knot(x_62, y_62, title="6₂ Knot Approximation", filename="knot_6_2.png")
+plot_knot(x_62, y_62, title="6₂ Knot Approximation", filename="images/knot_6_2.png")
 
 # Approximation for knot 7_4
 x_74 = np.sin(2 * t) - 0.7 * np.sin(5 * t)
 y_74 = np.cos(3 * t) - 0.5 * np.cos(4 * t)
-plot_knot(x_74, y_74, title="7₄ Knot Approximation", filename="knot_7_4.png")
+plot_knot(x_74, y_74, title="7₄ Knot Approximation", filename="images/knot_7_4.png")
 
 plt.show()

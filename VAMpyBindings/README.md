@@ -60,6 +60,13 @@ You can still use `pybind11` + `C++23` this way and avoid MSVC issues altogether
 Make sure you have Python 3.11+ installed, then create a virtual environment and install the required packages.
 This might be the time to take a look at Conda, which is a package manager that can help you manage Python environments and dependencies more easily.
 ```bash
+conda create -n  VAMpyBindings    python=3.12
+conda activate  VAMpyBindings   
+pip install -r requirements.txt
+```
+
+
+```bash
 pip install -r requirements.txt
 ```
 To keep file up to date: `pip freeze > requirements.txt`
@@ -79,7 +86,7 @@ git clone https://github.com/pybind/pybind11.git extern/pybind11
 
 ### 🔨 Build C++ Core
 ```bash
-"C:\Program Files\JetBrains\CLion\bin\cmake\win\x64\bin\cmake.exe" --build C:\Users\mr\IdeaProjects\VAM\vambindings\cmake-build-debug --target vambindings -j 18 
+"C:\Program Files\JetBrains\CLion\bin\cmake\win\x64\bin\cmake.exe" --build C:\Users\mr\IdeaProjects\VAM\VAMpyBindings\cmake-build-debug --target vambindings -j 18 
 
 "C:\Program Files\JetBrains\CLion\bin\cmake\win\x64\bin\cmake.exe"  -S . -B build
 "C:\Program Files\JetBrains\CLion\bin\cmake\win\x64\bin\cmake.exe" --build build
@@ -96,7 +103,7 @@ This indicates that the Python bindings for VAMcore have been successfully built
 ### 🔨 Load the C++ module dynamically from the compiled path
 ```python
 import os
-module_path = os.path.abspath("build/Debug/vambindings.cp311-win_amd64.pyd")
+module_path = os.path.abspath("C:\\Users\mr\IdeaProjects\VAM\VAMpyBindings\\build\Debug\\vambindings.cp312-win_amd64.pyd")
 module_name = "vambindings"
 ```
 

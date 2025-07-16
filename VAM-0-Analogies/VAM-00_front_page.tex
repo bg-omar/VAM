@@ -7,7 +7,7 @@
 \definecolor{gray}{gray}{0.5}
 \usepackage{tikz}
 
-\usetikzlibrary{arrows.meta,decorations.markings}
+\usetikzlibrary{arrows.meta,decorations.markings, positioning}
 \usepackage{multicol}
 \usepackage{lmodern}
 \usepackage{setspace}
@@ -147,6 +147,67 @@
 
 
     \newpage
+
+\begin{tikzpicture}
+\foreach \x in {1,...,10}{
+\pgfmathparse{1-atan(\x)/90}
+\xdef\rotang{\pgfmathresult}
+\node[draw,circle,minimum height=\x cm,rotate=7/\x*\rotang r] (n-\x) at (0,0) {};
+\foreach \y [count=\yi] in {22.5,45,...,360}{
+\coordinate (l-\x-\yi) at (n-\x.\y) {};
+    }
+}
+\foreach \yi [count=\y]in {22.5,45,...,360}
+    \draw[thick] (l-1-\y) to[in=175+\yi,out=105+\yi] (l-2-\y)
+        \foreach \x [evaluate=\x as \nextx using {int(\x+1)} ] in {3,4,...,8}{
+           --(l-\x-\y) -- (l-\nextx-\y)
+        } -- (l-10-\y);
+\end{tikzpicture}
+
+
+\begin{center}
+\begin{tikzpicture}[
+  node distance=2 and 2.8,
+  every node/.style={draw, rounded corners, align=center, minimum height=2},
+  arrow/.style={-{Latex[length=2]}, thick}
+]
+
+% Nodes
+\node(Faraday) {\(\nabla \times \mathbf{E} = - \partial_t \mathbf{B} - \mathbf{b}\)};
+\node[left=of Faraday]  (E)          {\(\mathbf{E}\)};
+\node[right=of Faraday] (rho) {\(\mathbf{\rho} \)};
+\node[below=of rho] (C) {\(\mathbf{\rho} = \sigma \mathbf{H}\)};
+
+\node[below=of E] (Ohm) {$\mathbf{j} = \sigma \mathbf{E}$};
+
+
+\node[below right=2 and 0 of Faraday, align=right] (B) {\(\mathbf{B} = \mu \mathbf{H}\)};
+\node[below left=2 and 0 of Faraday] (D) {\(\mathbf{D} = \varepsilon \mathbf{E}\)};
+
+
+\node[below=of Ohm] (J) {\(\mathbf{j}\)};
+\node[right=of J] (Ampere) {\(\nabla \times \mathbf{H} = \mathbf{j} + \partial_t \mathbf{D}\)};
+\node[below=of C] (H) {\(\mathbf{H}\)};
+
+
+% Arrows
+\draw[arrow] (E) -- (D);
+\draw[arrow] (C) -- (rho);
+\draw[arrow] (rho) -- (Faraday);
+\draw[arrow] (J) -- (Ampere);
+\draw[arrow] (H) -- (Ampere);
+\draw[arrow] (E) -- (Faraday);
+\draw[arrow] (Faraday) -- (B);
+\draw[arrow] (Ampere) -- (D);
+\draw[arrow] (B) -- (H);
+\draw[arrow] (H) -- (C);
+\draw[arrow] (E) -- (Ohm);
+\draw[arrow] (Ohm) -- (J);
+
+\end{tikzpicture}
+\end{center}
+
+
 
 
     \begin{tikzpicture}[scale=1.3, x=1cm, y=1cm]

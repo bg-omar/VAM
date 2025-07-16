@@ -3,79 +3,137 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="VAMCore" targetName="vambindings" />
+      <config projectName="VAMCore" targetName="vamcore" />
+      <config projectName="VAMCore" targetName="test_frenet" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
   <component name="ChangeListManager">
-    <list default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" id="6f2a8139-c825-4497-876b-70e1a130c5c3" name="Changes" comment="Refactor file structure by renaming multiple diagram and illustration scripts for consistency; update .gitignore and add new configuration files for improved project management.">
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 12, 2025, 07_08_13 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 12, 2025, 07_08_16 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 12, 2025, 07_08_18 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 12, 2025, 07_08_21 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 12, 2025, 07_08_23 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 12, 2025, 07_08_26 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 12, 2025, 07_08_30 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 12, 2025, 07_56_16 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 12, 2025, 07_56_23 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 12, 2025, 07_56_30 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 12, 2025, 07_56_34 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 12, 2025, 07_56_38 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 12, 2025, 07_56_41 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 12, 2025, 07_56_44 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 12, 2025, 07_56_46 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 12, 2025, 07_56_48 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 12, 2025, 07_56_50 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 12, 2025, 07_56_55 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 12, 2025, 07_56_57 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 13, 2025, 09_58_17 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 13, 2025, 09_59_41 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 14, 2025, 05_23_00 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 14, 2025, 06_34_11 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 14, 2025, 06_34_13 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 14, 2025, 06_41_01 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 14, 2025, 06_43_16 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 14, 2025, 06_44_53 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 14, 2025, 06_44_55 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 14, 2025, 06_44_57 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 14, 2025, 06_44_58 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 14, 2025, 06_45_06 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 14, 2025, 06_45_10 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 14, 2025, 06_45_20 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 14, 2025, 06_45_23 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 14, 2025, 06_45_36 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 14, 2025, 06_45_40 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 14, 2025, 06_45_43 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 14, 2025, 06_45_46 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 14, 2025, 06_46_12 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 14, 2025, 08_24_45 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 15, 2025, 06_30_06 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 15, 2025, 06_30_08 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 15, 2025, 06_30_11 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 15, 2025, 06_30_14 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 15, 2025, 06_30_16 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 15, 2025, 06_30_18 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 15, 2025, 06_30_22 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 15, 2025, 06_30_30 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 15, 2025, 06_30_34 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 15, 2025, 06_30_37 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 15, 2025, 06_30_40 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 15, 2025, 06_30_42 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 15, 2025, 06_30_56 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 15, 2025, 06_31_07 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 15, 2025, 06_31_11 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jul 15, 2025, 07_13_22 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPT Image Jun 30, 2025, 07_20_53 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Relaxation-of-the-trefoil-knot-to-a-tight-minimum-energy-state-two-representations-of.ppm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM-0-Analogies/VAM-00_front_page.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM-0-Analogies/images/ChatGPT Image Jul 15, 2025, 07_13_22 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dg_vs_r.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fibo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nes starship coil.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/phi_vs_r.png" afterDir="false" />
+    <list default="true" id="6f2a8139-c825-4497-876b-70e1a130c5c3" name="Changes" comment="Add VAM front page LaTeX document and refactor workspace.xml for improved project structure">
+      <change afterPath="$PROJECT_DIR$/.run/build.run.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QuantumComputing/Knot_Logic_Gates.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QuantumComputing/Swirl_Bit_Taxonomy.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QuantumComputing/Swirl_Field_QED.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QuantumComputing/VAM_Quantum_Computing_Blueprint.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QuantumComputing/knot_logic.bib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QuantumComputing/swirl_bits.bib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QuantumComputing/swirl_qed.bib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QuantumComputing/vam_quantum.bib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM-1_to_15.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAMpyBindings/test_frenet.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAMpyBindings/vambindings.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAMpyBindings/vambindings.lib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAMpyBindings/vambindings.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAMpyBindings/vamcore.lib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAMpyBindings/vamcore.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 12, 2025, 07_08_13 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ChatGPT Image Jul 12, 2025, 07_08_13 PM.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 12, 2025, 07_08_16 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 12, 2025, 07_08_18 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 12, 2025, 07_08_21 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 12, 2025, 07_08_23 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ChatGPT Image Jul 12, 2025, 07_08_23 PM.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 12, 2025, 07_08_26 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ChatGPT Image Jul 12, 2025, 07_08_26 PM.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 12, 2025, 07_08_30 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 12, 2025, 07_56_16 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ChatGPT Image Jul 12, 2025, 07_56_16 PM.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 12, 2025, 07_56_23 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ChatGPT Image Jul 12, 2025, 07_56_23 PM.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 12, 2025, 07_56_30 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 12, 2025, 07_56_34 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 12, 2025, 07_56_38 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ChatGPT Image Jul 12, 2025, 07_56_38 PM.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 12, 2025, 07_56_41 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ChatGPT Image Jul 12, 2025, 07_56_41 PM.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 12, 2025, 07_56_44 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ChatGPT Image Jul 12, 2025, 07_56_44 PM.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 12, 2025, 07_56_46 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 12, 2025, 07_56_48 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 12, 2025, 07_56_50 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 12, 2025, 07_56_55 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ChatGPT Image Jul 12, 2025, 07_56_55 PM.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 12, 2025, 07_56_57 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ChatGPT Image Jul 12, 2025, 07_56_57 PM.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 13, 2025, 09_58_17 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 13, 2025, 09_59_41 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ChatGPT Image Jul 13, 2025, 09_59_41 PM.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 14, 2025, 05_23_00 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 14, 2025, 06_34_11 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 14, 2025, 06_34_13 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 14, 2025, 06_41_01 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 14, 2025, 06_43_16 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 14, 2025, 06_44_53 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 14, 2025, 06_44_55 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 14, 2025, 06_44_57 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 14, 2025, 06_44_58 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 14, 2025, 06_45_06 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 14, 2025, 06_45_10 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 14, 2025, 06_45_20 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 14, 2025, 06_45_23 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 14, 2025, 06_45_36 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 14, 2025, 06_45_40 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 14, 2025, 06_45_43 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 14, 2025, 06_45_46 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 14, 2025, 06_46_12 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 14, 2025, 08_24_45 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ChatGPT Image Jul 14, 2025, 08_24_45 PM.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 15, 2025, 06_30_06 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ChatGPT Image Jul 15, 2025, 06_30_06 PM.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 15, 2025, 06_30_08 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ChatGPT Image Jul 15, 2025, 06_30_08 PM.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 15, 2025, 06_30_11 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ChatGPT Image Jul 15, 2025, 06_30_11 PM.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 15, 2025, 06_30_14 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ChatGPT Image Jul 15, 2025, 06_30_14 PM.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 15, 2025, 06_30_16 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ChatGPT Image Jul 15, 2025, 06_30_16 PM.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 15, 2025, 06_30_18 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ChatGPT Image Jul 15, 2025, 06_30_18 PM.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 15, 2025, 06_30_22 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ChatGPT Image Jul 15, 2025, 06_30_22 PM.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 15, 2025, 06_30_30 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ChatGPT Image Jul 15, 2025, 06_30_30 PM.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 15, 2025, 06_30_34 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ChatGPT Image Jul 15, 2025, 06_30_34 PM.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 15, 2025, 06_30_37 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ChatGPT Image Jul 15, 2025, 06_30_37 PM.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 15, 2025, 06_30_40 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ChatGPT Image Jul 15, 2025, 06_30_40 PM.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 15, 2025, 06_30_42 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ChatGPT Image Jul 15, 2025, 06_30_42 PM.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 15, 2025, 06_30_56 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ChatGPT Image Jul 15, 2025, 06_30_56 PM.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 15, 2025, 06_31_07 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ChatGPT Image Jul 15, 2025, 06_31_07 PM.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 15, 2025, 06_31_11 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ChatGPT Image Jul 15, 2025, 06_31_11 PM.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jul 15, 2025, 07_13_22 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ChatGPT Image Jul 15, 2025, 07_13_22 PM.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPT Image Jun 30, 2025, 07_20_53 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Relaxation-of-the-trefoil-knot-to-a-tight-minimum-energy-state-two-representations-of.ppm" beforeDir="false" afterPath="$PROJECT_DIR$/images/Relaxation-of-the-trefoil-knot-to-a-tight-minimum-energy-state-two-representations-of.ppm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ScanCropperAligner.py" beforeDir="false" afterPath="$PROJECT_DIR$/NotebookScanCropperAligner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TorZooA.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/TorZooA.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM-0-Analogies/VAM-00_front_page.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM-0-Analogies/VAM-00_front_page.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAMpyBindings/.ninja_log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAMpyBindings/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAMpyBindings/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/VAMpyBindings/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAMpyBindings/build.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAMpyBindings/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/VAMpyBindings/cmake_installooooo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAMpyBindings/examples/trefoil_fields.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAMpyBindings/examples/vamBindings.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAMpyBindings/examples/vamBindings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAMpyBindings/libvamcore.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAMpyBindings/vambindings.cp311-win_amd64.pyd" beforeDir="false" afterPath="$PROJECT_DIR$/VAMpyBindings/vambindings.cp311-win_amd64.pyd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/vortex-fine-structure.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/vortex-fine-structure.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nes starship coil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/VAM-00_front_page.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/VAM-00_front_page.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testknot.py" beforeDir="false" afterPath="$PROJECT_DIR$/testknot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/torus-zoo-xing.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/torus-zoo-xing.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trefoil_fields.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/trefoil_fields.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trefoil_fields2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/trefoil_fields2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trefoil_knot_2.3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trefoil_knot_3.2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vortex-fine-structure.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="false" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -106,128 +164,154 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
-    <option name="autoscrollFromSource" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
-    <option name="sortByType" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
-    <option name="sortKey" value="BY_TYPE" />
+    <option name="autoscrollFromSource" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "BibTeX.12-OnAVortexBasedLagrangianUnificationGravityElectromagnetism bibliography.executor": "Run",
-    "BibTeX.4-StandardModel-Lagrangian VAM bibliography.executor": "Run",
-    "BibTeX.5-Topological_Fluid_Dynamic_Lagrangian_In_VAM bibliography.executor": "Run",
-    "BibTeX.EMlagrangian.executor": "Run",
-    "BibTeX.LagrangianGravityElectromagnetism bibliography.executor": "Run",
-    "BibTeX.Master Paper-VAM bibliography.executor": "Run",
-    "BibTeX.ONLINE-0-Einstein_and_the_Æther bibliography.executor": "Run",
-    "BibTeX.ONLINE-1-Time_Dilation_in_3D_Superfluid_Æther_Model bibliography.executor": "Run",
-    "BibTeX.ONLINE-2-Swirl_Clocks_and_Vorticity-Induced_Gravity bibliography.executor": "Run",
-    "BibTeX.VAM-0-Analogies.executor": "Run",
-    "BibTeX.VAM-0-Einstein_and_the_Æther bibliography.executor": "Run",
-    "BibTeX.VAM-10-Swirl_Induced_Curvature_as_the_Mechanism_of_Gravitation bibliography.executor": "Run",
-    "BibTeX.VAM-11-Master_Equation_for_Particle_Masses.executor": "Run",
-    "BibTeX.VAM-13-Beyond_Spacetime_Gravity_Time_Vorticity.executor": "Run",
-    "BibTeX.VAM-14-Topological_Fluid_Dynamics_Lagrangian bibliography.executor": "Run",
-    "BibTeX.VAM-15-updated.executor": "Run",
-    "BibTeX.VAM-8.5-Master_Formula.executor": "Run",
-    "BibTeX.VAM-9-MilkyWay_as_a_Chiral_Swirl-Knot_Network.executor": "Run",
-    "BibTeX.VAM_15_Quantum_Gravity bibliography.executor": "Run",
-    "BibTeX.appendix_QuantizationOfVAM bibliography.executor": "Run",
-    "LaTeX.00_front_page.executor": "Run",
-    "LaTeX.1-Time_Dilation_in_3D_Superfluid_Æther_Model.executor": "Run",
-    "LaTeX.12-OnAVortexBasedLagrangianUnificationGravityElectromagnetism.executor": "Run",
-    "LaTeX.4-StandardModel-Lagrangian VAM.executor": "Run",
-    "LaTeX.5-Topological_Fluid_Dynamic_Lagrangian_In_VAM.executor": "Run",
-    "LaTeX.Appendix_PhotonAsDipole.executor": "Run",
-    "LaTeX.LagrangianGravityElectromagnetism.executor": "Run",
-    "LaTeX.Master Paper-VAM.executor": "Run",
-    "LaTeX.ONLINE-0-Einstein_and_the_Æther.executor": "Run",
-    "LaTeX.ONLINE-1-Time_Dilation_in_3D_Superfluid_Æther_Model.executor": "Run",
-    "LaTeX.ONLINE-2-Swirl_Clocks_and_Vorticity-Induced_Gravity.executor": "Run",
-    "LaTeX.ONLINE-From_Quantum_Constants_to_Galactic_Swirl.executor": "Run",
-    "LaTeX.VAM-0-Analogies.executor": "Run",
-    "LaTeX.VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm.executor": "Run",
-    "LaTeX.VAM-00_front_page.executor": "Run",
-    "LaTeX.VAM-10-Swirl_Induced_Curvature_as_the_Mechanism_of_Gravitation.executor": "Run",
-    "LaTeX.VAM-11-Master_Equation_for_Particle_Masses.executor": "Run",
-    "LaTeX.VAM-13-Beyond_Spacetime_Gravity_Time_Vorticity.executor": "Run",
-    "LaTeX.VAM-14-Topological_Fluid_Dynamics_Lagrangian.executor": "Run",
-    "LaTeX.VAM-8.5-Master_Formula.executor": "Run",
-    "LaTeX.VAM-9-MilkyWay_as_a_Chiral_Swirl-Knot_Network.executor": "Run",
-    "LaTeX.VAM_15_Quantum_Gravity.executor": "Run",
-    "LaTeX.VAM_15_Quantum_Gravity_updated.executor": "Run",
-    "LaTeX.VAM_framework.executor": "Run",
-    "LaTeX.appendix_QuantizationOfVAM.executor": "Run",
-    "LaTeX.master-formula.executor": "Run",
-    "LaTeX.testknot.executor": "Run",
-    "LaTeX.vam_mass_comparison_colored.executor": "Run",
-    "LaTeX.vam_mass_dotmarker_postfix.executor": "Run",
-    "Python.02_Starship-2 inv.executor": "Run",
-    "Python.03_magnetic round coil.executor": "Run",
-    "Python.6_2_topview.executor": "Run",
-    "Python.6_2knot.executor": "Run",
-    "Python.7_4knot.executor": "Run",
-    "Python.8knot-Trefoil.executor": "Run",
-    "Python.8knot.executor": "Run",
-    "Python.Helicity.executor": "Run",
-    "Python.MagneticCircleRodin.executor": "Run",
-    "Python.MoleculeWeight.executor": "Run",
-    "Python.NODES.executor": "Run",
-    "Python.Rodin_magnetic_fields.executor": "Run",
-    "Python.TemporalOntology.executor": "Run",
-    "Python.TimeConstruct.executor": "Run",
-    "Python.all_knots.executor": "Run",
-    "Python.change_bib_to_footnoting.executor": "Run",
-    "Python.dipole.executor": "Run",
-    "Python.doublestarship.executor": "Run",
-    "Python.doublestarshipteste.executor": "Run",
-    "Python.magneticCircle.executor": "Run",
-    "Python.magneticCircleArrows.executor": "Run",
-    "Python.photonAnimation.executor": "Run",
-    "Python.proton_neutron_weigth.executor": "Run",
-    "Python.quarck streamlines.executor": "Run",
-    "Python.reference_cleaning.executor": "Run",
-    "Python.rotating_current_rodin_fields.executor": "Run",
-    "Python.testknot.executor": "Run",
-    "Python.timediagram.executor": "Run",
-    "Python.torus.executor": "Run",
-    "Python.torusspirals.executor": "Run",
-    "Python.vam_vs_gr_potential_plot.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/mr/IdeaProjects/VAM/VAM-0-Analogies/images",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.47126436",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;BibTeX.12-OnAVortexBasedLagrangianUnificationGravityElectromagnetism bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.4-StandardModel-Lagrangian VAM bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.5-Topological_Fluid_Dynamic_Lagrangian_In_VAM bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.EMlagrangian.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.LagrangianGravityElectromagnetism bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.Master Paper-VAM bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.ONLINE-0-Einstein_and_the_Æther bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.ONLINE-1-Time_Dilation_in_3D_Superfluid_Æther_Model bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.ONLINE-2-Swirl_Clocks_and_Vorticity-Induced_Gravity bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.VAM-0-Analogies.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.VAM-0-Einstein_and_the_Æther bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.VAM-10-Swirl_Induced_Curvature_as_the_Mechanism_of_Gravitation bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.VAM-11-Master_Equation_for_Particle_Masses.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.VAM-13-Beyond_Spacetime_Gravity_Time_Vorticity.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.VAM-14-Topological_Fluid_Dynamics_Lagrangian bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.VAM-15-updated.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.VAM-8.5-Master_Formula.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.VAM-9-MilkyWay_as_a_Chiral_Swirl-Knot_Network.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.VAM_15_Quantum_Gravity bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.appendix_QuantizationOfVAM bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.bind.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.build.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.vamcore.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Debug.bob.executor&quot;: &quot;Debug&quot;,
+    &quot;LaTeX.00_front_page.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.1-Time_Dilation_in_3D_Superfluid_Æther_Model.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.12-OnAVortexBasedLagrangianUnificationGravityElectromagnetism.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.4-StandardModel-Lagrangian VAM.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.5-Topological_Fluid_Dynamic_Lagrangian_In_VAM.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.Appendix_PhotonAsDipole.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.Knot_Logic_Gates.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.LagrangianGravityElectromagnetism.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.Master Paper-VAM.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.ONLINE-0-Einstein_and_the_Æther.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.ONLINE-1-Time_Dilation_in_3D_Superfluid_Æther_Model.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.ONLINE-2-Swirl_Clocks_and_Vorticity-Induced_Gravity.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.ONLINE-From_Quantum_Constants_to_Galactic_Swirl.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.VAM-0-Analogies.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.VAM-00_front_page.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.VAM-10-Swirl_Induced_Curvature_as_the_Mechanism_of_Gravitation.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.VAM-11-Master_Equation_for_Particle_Masses.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.VAM-13-Beyond_Spacetime_Gravity_Time_Vorticity.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.VAM-14-Topological_Fluid_Dynamics_Lagrangian.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.VAM-8.5-Master_Formula.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.VAM-9-MilkyWay_as_a_Chiral_Swirl-Knot_Network.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.VAM_15_Quantum_Gravity.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.VAM_15_Quantum_Gravity_updated.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.VAM_framework.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.appendix_QuantizationOfVAM.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.master-formula.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.testknot.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.vam_mass_comparison_colored.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.vam_mass_dotmarker_postfix.executor&quot;: &quot;Run&quot;,
+    &quot;Python.02_Starship-2 inv.executor&quot;: &quot;Run&quot;,
+    &quot;Python.03_magnetic round coil.executor&quot;: &quot;Run&quot;,
+    &quot;Python.6_2_topview.executor&quot;: &quot;Run&quot;,
+    &quot;Python.6_2knot.executor&quot;: &quot;Run&quot;,
+    &quot;Python.7_4knot.executor&quot;: &quot;Run&quot;,
+    &quot;Python.8knot-Trefoil.executor&quot;: &quot;Run&quot;,
+    &quot;Python.8knot.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Helicity.executor&quot;: &quot;Run&quot;,
+    &quot;Python.MagneticCircleRodin.executor&quot;: &quot;Run&quot;,
+    &quot;Python.MoleculeWeight.executor&quot;: &quot;Run&quot;,
+    &quot;Python.NODES.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Rodin_magnetic_fields.executor&quot;: &quot;Run&quot;,
+    &quot;Python.TemporalOntology.executor&quot;: &quot;Run&quot;,
+    &quot;Python.TimeConstruct.executor&quot;: &quot;Run&quot;,
+    &quot;Python.all_knots.executor&quot;: &quot;Run&quot;,
+    &quot;Python.change_bib_to_footnoting.executor&quot;: &quot;Run&quot;,
+    &quot;Python.dipole.executor&quot;: &quot;Run&quot;,
+    &quot;Python.doublestarship.executor&quot;: &quot;Run&quot;,
+    &quot;Python.doublestarshipteste.executor&quot;: &quot;Run&quot;,
+    &quot;Python.magneticCircle.executor&quot;: &quot;Run&quot;,
+    &quot;Python.magneticCircleArrows.executor&quot;: &quot;Run&quot;,
+    &quot;Python.photonAnimation.executor&quot;: &quot;Run&quot;,
+    &quot;Python.proton_neutron_weigth.executor&quot;: &quot;Run&quot;,
+    &quot;Python.python -c \&quot;import vambindings; print(vambindings)\&quot;.executor&quot;: &quot;Run&quot;,
+    &quot;Python.quarck streamlines.executor&quot;: &quot;Run&quot;,
+    &quot;Python.reference_cleaning.executor&quot;: &quot;Run&quot;,
+    &quot;Python.rotating_current_rodin_fields.executor&quot;: &quot;Run&quot;,
+    &quot;Python.testknot.executor&quot;: &quot;Run&quot;,
+    &quot;Python.timediagram.executor&quot;: &quot;Run&quot;,
+    &quot;Python.torus.executor&quot;: &quot;Run&quot;,
+    &quot;Python.torusspirals.executor&quot;: &quot;Run&quot;,
+    &quot;Python.vam_vs_gr_potential_plot.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.west.config.association.type.startup.service&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mr/IdeaProjects/VAM/QuantumComputing&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.47126436&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CMakeSettings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\mr\IdeaProjects\VAM\VAM-0-Analogies\images" />
+      <recent name="C:\Users\mr\IdeaProjects\VAM\QuantumComputing" />
+      <recent name="C:\Users\mr\IdeaProjects\VAM\VAMpyBindings" />
       <recent name="C:\Users\mr\IdeaProjects\VAM" />
+      <recent name="C:\Users\mr\IdeaProjects\VAM\VAM-0-Analogies\images" />
       <recent name="C:\Users\mr\IdeaProjects\VAM\images" />
-      <recent name="C:\Users\mr\IdeaProjects\VAM\Python VAM Illustrations" />
-      <recent name="C:\Users\mr\IdeaProjects\VAM\good illustrations\Biot-Savart" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mr\IdeaProjects\VAM\images" />
       <recent name="C:\workspace\solo_projects\VAM" />
       <recent name="C:\Users\mr\IdeaProjects\VAM\VAM - Appendix All" />
       <recent name="C:\Users\mr\IdeaProjects\VAM\Python VAM Illustrations" />
-      <recent name="C:\Users\mr\IdeaProjects\VAM\images" />
       <recent name="C:\Users\mr\IdeaProjects\VAM" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="BibTeX.Knot_Logic_Gates bibliography">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Knot_Logic_Gates bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler>BIBTEX</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/QuantumComputing/Knot_Logic_Gates.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
+        <latex-distribution>MIKTEX</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
     <configuration name="VAM-0-Analogies bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify-bibtex>
         <compiler>BIBTEX</compiler>
@@ -300,11 +384,24 @@
       </texify-bibtex>
       <method v="2" />
     </configuration>
+    <configuration name="bob" type="CMakeListConfigurationType" factoryName="CMakeListConfigurationFactory">
+      <method v="2" />
+    </configuration>
+    <configuration name="bind" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" WORKING_DIR="file://$PROJECT_DIR$/VAMpyBindings" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VAMCore" TARGET_NAME="vambindings" CONFIG_NAME="Debug" RUN_PATH="$PROJECT_DIR$/VAMpyBindings/vambindings.cp312-win_amd64.pyd">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test_frenet" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VAMCore" TARGET_NAME="test_frenet" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="VAMCore" RUN_TARGET_NAME="test_frenet">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify>
         <compiler>PDFLATEX</compiler>
         <compiler-path />
-        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <pdf-viewer>SumatraPDF</pdf-viewer>
         <require-focus>false</require-focus>
         <viewer-command />
         <compiler-arguments />
@@ -327,7 +424,7 @@
       <texify>
         <compiler>PDFLATEX</compiler>
         <compiler-path />
-        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <pdf-viewer>SumatraPDF</pdf-viewer>
         <require-focus>false</require-focus>
         <viewer-command />
         <compiler-arguments />
@@ -350,7 +447,7 @@
       <texify>
         <compiler>PDFLATEX</compiler>
         <compiler-path />
-        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <pdf-viewer>SumatraPDF</pdf-viewer>
         <require-focus>false</require-focus>
         <viewer-command />
         <compiler-arguments />
@@ -373,7 +470,7 @@
       <texify>
         <compiler>PDFLATEX</compiler>
         <compiler-path />
-        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <pdf-viewer>SumatraPDF</pdf-viewer>
         <require-focus>false</require-focus>
         <viewer-command />
         <compiler-arguments />
@@ -396,7 +493,7 @@
       <texify>
         <compiler>PDFLATEX</compiler>
         <compiler-path />
-        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <pdf-viewer>SumatraPDF</pdf-viewer>
         <require-focus>false</require-focus>
         <viewer-command />
         <compiler-arguments />
@@ -419,7 +516,7 @@
       <texify>
         <compiler>PDFLATEX</compiler>
         <compiler-path />
-        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <pdf-viewer>SumatraPDF</pdf-viewer>
         <require-focus>false</require-focus>
         <viewer-command />
         <compiler-arguments />
@@ -438,7 +535,64 @@
       </texify>
       <method v="2" />
     </configuration>
+    <configuration default="true" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <require-focus>true</require-focus>
+        <viewer-command />
+        <compiler-arguments />
+        <envs />
+        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
+        <before-run-command />
+        <main-file />
+        <output-path>{projectDir}/out</output-path>
+        <auxil-path>{projectDir}/auxil</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>MIKTEX</latex-distribution>
+        <has-been-run>false</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="MAKEINDEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-makeindex>
+        <program>MAKEINDEX</program>
+        <main-file />
+        <command-line-args />
+        <work-dir />
+      </texify-makeindex>
+      <method v="2" />
+    </configuration>
+    <configuration name="python -c &quot;import vambindings; print(vambindings)&quot;" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="VAM" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/VAMpyBindings" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="-c" />
+      <option name="PARAMETERS" value="&quot;import vambindings; print(vambindings)&quot;" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="BibTeX.Knot_Logic_Gates bibliography" />
+      <item itemvalue="BibTeX.VAM-0-Analogies" />
       <item itemvalue="BibTeX.VAM-0-Einstein_and_the_Æther bibliography" />
       <item itemvalue="BibTeX.VAM-1-Time_Dilation_in_3D_Superfluid_Æther_Model bibliography" />
       <item itemvalue="BibTeX.VAM-10-Swirl-Induced Curvature" />
@@ -455,41 +609,41 @@
       <item itemvalue="BibTeX.VAM-8-Master_Paper" />
       <item itemvalue="BibTeX.VAM-8.5-Master_Formula" />
       <item itemvalue="BibTeX.VAM-9-MilkyWay_as_a_Chiral_Swirl-Knot_Network" />
-      <item itemvalue="BibTeX.VAM-0-Analogies" />
+      <item itemvalue="BibTeX.VAM_15_Quantum_Gravity bibliography" />
       <item itemvalue="BibTeX.VAM-0-Analogies bibliography" />
       <item itemvalue="BibTeX.VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm bibliography" />
       <item itemvalue="BibTeX.VAM_15_Quantum_Gravity_updated bibliography" />
       <item itemvalue="BibTeX.VAM-10-Swirl_Induced_Curvature_as_the_Mechanism_of_Gravitation bibliography" />
       <item itemvalue="BibTeX.VAM-13-Beyond_Spacetime_Gravity_Time_Vorticity bibliography" />
       <item itemvalue="BibTeX.VAM-9-MilkyWay_as_a_Chiral_Swirl-Knot_Network bibliography" />
-      <item itemvalue="BibTeX.VAM_15_Quantum_Gravity bibliography" />
       <item itemvalue="LaTeX.VAM_15_Quantum_Gravity_updated" />
       <item itemvalue="LaTeX.VAM-10-Swirl_Induced_Curvature_as_the_Mechanism_of_Gravitation" />
       <item itemvalue="LaTeX.VAM-13-Beyond_Spacetime_Gravity_Time_Vorticity" />
       <item itemvalue="LaTeX.VAM-9-MilkyWay_as_a_Chiral_Swirl-Knot_Network" />
       <item itemvalue="LaTeX.VAM_15_Quantum_Gravity" />
       <item itemvalue="LaTeX.VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm" />
+      <item itemvalue="Python.python -c &quot;import vambindings; print(vambindings)&quot;" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.python -c &quot;import vambindings; print(vambindings)&quot;" />
         <item itemvalue="LaTeX.VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm" />
         <item itemvalue="LaTeX.VAM_15_Quantum_Gravity_updated" />
         <item itemvalue="LaTeX.VAM_15_Quantum_Gravity" />
         <item itemvalue="LaTeX.VAM-13-Beyond_Spacetime_Gravity_Time_Vorticity" />
-        <item itemvalue="LaTeX.VAM-10-Swirl_Induced_Curvature_as_the_Mechanism_of_Gravitation" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.23591.19" />
-        <option value="bundled-js-predefined-d6986cc7102b-6be00b7b0f42-JavaScript-IU-252.23591.19" />
+        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-PY-251.26927.74" />
+        <option value="bundled-python-sdk-657d8234b839-64d779b69b7a-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.26927.74" />
       </set>
     </attachedChunks>
   </component>
   <component name="TaskManager">
-    <task active="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" id="Default" summary="Default task">
+    <task active="true" id="Default" summary="Default task">
       <changelist id="6f2a8139-c825-4497-876b-70e1a130c5c3" name="Changes" comment="" />
       <created>1751631523297</created>
       <option name="number" value="Default" />
@@ -520,7 +674,12 @@
       <workItem from="1752478014378" duration="24485000" />
       <workItem from="1752509995829" duration="4495000" />
       <workItem from="1752584942379" duration="3002000" />
-      <workItem from="1752598447805" duration="4139000" />
+      <workItem from="1752598447805" duration="4635000" />
+      <workItem from="1752608548757" duration="1134000" />
+      <workItem from="1752644298178" duration="14000" />
+      <workItem from="1752644667004" duration="4300000" />
+      <workItem from="1752650034346" duration="314000" />
+      <workItem from="1752668226467" duration="1154000" />
     </task>
     <task id="LOCAL-00001" summary="Made MASTER paper, VAM4, VAM12.&#10;Added Knot images">
       <created>1751925083082</created>
@@ -599,11 +758,23 @@
       <option name="project" value="LOCAL" />
       <updated>1752436519520</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Add VAM front page LaTeX document and refactor workspace.xml for improved project structure">
+      <created>1752602655435</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1752602655435</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -628,39 +799,42 @@
     <MESSAGE value="Implement script to convert bibliographic citations to footnotes in LaTeX; add new bibliography file and update existing references for improved clarity." />
     <MESSAGE value="Refactor file structure by renaming multiple LaTeX documents and Python scripts for consistency; update paths in LaTeX files and improve magnetic field computation in Python scripts." />
     <MESSAGE value="Add new Python scripts for 6_2 and 7_4 knots; create all_knots.py for various knot visualizations and refactor workspace.xml for improved file structure." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add new Python scripts for 6_2 and 7_4 knots; create all_knots.py for various knot visualizations and refactor workspace.xml for improved file structure." />
+    <MESSAGE value="Add VAM front page LaTeX document and refactor workspace.xml for improved project structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add VAM front page LaTeX document and refactor workspace.xml for improved project structure" />
+    <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/VAM$torus.coverage" NAME="torus Coverage Results" MODIFIED="1752431773431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
-    <SUITE FILE_PATH="coverage/VAM$vam_vs_gr_potential_plot.coverage" NAME="vam_vs_gr_potential_plot Coverage Results" MODIFIED="1751903749996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
-    <SUITE FILE_PATH="coverage/VAM$MoleculeWeight.coverage" NAME="MoleculeWeight Coverage Results" MODIFIED="1752073629003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM-MASTER Paper" />
-    <SUITE FILE_PATH="coverage/VAM$TemporalOntology.coverage" NAME="TemporalOntology Coverage Results" MODIFIED="1751921657061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
-    <SUITE FILE_PATH="coverage/VAM$quarck_streamlines.coverage" NAME="quarck streamlines Coverage Results" MODIFIED="1752596530929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/VAM$testknot.coverage" NAME="testknot Coverage Results" MODIFIED="1751834892767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM-MASTER Paper" />
-    <SUITE FILE_PATH="coverage/VAM$Rodin_magnetic_fields.coverage" NAME="Rodin_magnetic_fields Coverage Results" MODIFIED="1752427869291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$all_knots.coverage" NAME="all_knots Coverage Results" MODIFIED="1752435420032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_5_Lagrangian_Gravity_Electromagnetism/images" />
-    <SUITE FILE_PATH="coverage/VAM$timediagram.coverage" NAME="timediagram Coverage Results" MODIFIED="1752051334138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - 0 Einsteins Æther" />
-    <SUITE FILE_PATH="coverage/VAM$8knot_Trefoil.coverage" NAME="8knot-Trefoil Coverage Results" MODIFIED="1752424632219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$6_2knot.coverage" NAME="6_2knot Coverage Results" MODIFIED="1752431244452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$03_magnetic_round_coil.coverage" NAME="03_magnetic round coil Coverage Results" MODIFIED="1752425539443" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$TimeConstruct.coverage" NAME="TimeConstruct Coverage Results" MODIFIED="1751915068127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - 2 Swirl Clocks/images" />
-    <SUITE FILE_PATH="coverage/VAM$02_Starship_2_inv.coverage" NAME="02_Starship-2 inv Coverage Results" MODIFIED="1752424773159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$8knot.coverage" NAME="8knot Coverage Results" MODIFIED="1752424545584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$Helicity.coverage" NAME="Helicity Coverage Results" MODIFIED="1751904879608" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
-    <SUITE FILE_PATH="coverage/VAM$magneticCircleArrows.coverage" NAME="magneticCircleArrows Coverage Results" MODIFIED="1752425627820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$doublestarship.coverage" NAME="doublestarship Coverage Results" MODIFIED="1752427975246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$reference_cleaning.coverage" NAME="reference_cleaning Coverage Results" MODIFIED="1751967331566" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/VAM$rotating_current_rodin_fields.coverage" NAME="rotating_current_rodin_fields Coverage Results" MODIFIED="1752424861440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$magneticCircle.coverage" NAME="magneticCircle Coverage Results" MODIFIED="1752426259414" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$change_bib_to_footnoting.coverage" NAME="change_bib_to_footnoting Coverage Results" MODIFIED="1752345948506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_15_Quantum_Gravity" />
-    <SUITE FILE_PATH="coverage/VAM$dipole.coverage" NAME="dipole Coverage Results" MODIFIED="1751969712280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
-    <SUITE FILE_PATH="coverage/VAM$proton_neutron_weigth.coverage" NAME="proton_neutron_weigth Coverage Results" MODIFIED="1751848726214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM-MASTER Paper" />
-    <SUITE FILE_PATH="coverage/VAM$NODES.coverage" NAME="NODES Coverage Results" MODIFIED="1752427455247" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$MagneticCircleRodin.coverage" NAME="MagneticCircleRodin Coverage Results" MODIFIED="1752427883514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$torusspirals.coverage" NAME="torusspirals Coverage Results" MODIFIED="1752431790353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
     <SUITE FILE_PATH="coverage/VAM$7_4knot.coverage" NAME="7_4knot Coverage Results" MODIFIED="1752431182408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$6_2_topview.coverage" NAME="6_2_topview Coverage Results" MODIFIED="1751908053943" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
-    <SUITE FILE_PATH="coverage/VAM$doublestarshipteste.coverage" NAME="doublestarshipteste Coverage Results" MODIFIED="1752427391084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$TemporalOntology.coverage" NAME="TemporalOntology Coverage Results" MODIFIED="1751921657061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
+    <SUITE FILE_PATH="coverage/VAM$reference_cleaning.coverage" NAME="reference_cleaning Coverage Results" MODIFIED="1751967331566" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/VAM$trefoil_field_lines.coverage" NAME="trefoil_field_lines Coverage Results" MODIFIED="1752644028053" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAMpyBindings/examples" />
+    <SUITE FILE_PATH="coverage/VAM$MoleculeWeight.coverage" NAME="MoleculeWeight Coverage Results" MODIFIED="1752073629003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM-MASTER Paper" />
+    <SUITE FILE_PATH="coverage/VAM$03_magnetic_round_coil.coverage" NAME="03_magnetic round coil Coverage Results" MODIFIED="1752425539443" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$MagneticCircleRodin.coverage" NAME="MagneticCircleRodin Coverage Results" MODIFIED="1752427883514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$8knot_Trefoil.coverage" NAME="8knot-Trefoil Coverage Results" MODIFIED="1752424632219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
+    <SUITE FILE_PATH="coverage/VAM$all_knots.coverage" NAME="all_knots Coverage Results" MODIFIED="1752435420032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_5_Lagrangian_Gravity_Electromagnetism/images" />
+    <SUITE FILE_PATH="coverage/VAM$testknot.coverage" NAME="testknot Coverage Results" MODIFIED="1752608691698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/VAM$quarck_streamlines.coverage" NAME="quarck streamlines Coverage Results" MODIFIED="1752596530929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/VAM$TimeConstruct.coverage" NAME="TimeConstruct Coverage Results" MODIFIED="1751915068127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - 2 Swirl Clocks/images" />
     <SUITE FILE_PATH="coverage/VAM$photonAnimation.coverage" NAME="photonAnimation Coverage Results" MODIFIED="1752424817557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
+    <SUITE FILE_PATH="coverage/VAM$6_2knot.coverage" NAME="6_2knot Coverage Results" MODIFIED="1752431244452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$torusspirals.coverage" NAME="torusspirals Coverage Results" MODIFIED="1752431790353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
+    <SUITE FILE_PATH="coverage/VAM$torus.coverage" NAME="torus Coverage Results" MODIFIED="1752431773431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
+    <SUITE FILE_PATH="coverage/VAM$dipole.coverage" NAME="dipole Coverage Results" MODIFIED="1751969712280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
+    <SUITE FILE_PATH="coverage/VAM$Rodin_magnetic_fields.coverage" NAME="Rodin_magnetic_fields Coverage Results" MODIFIED="1752427869291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$doublestarshipteste.coverage" NAME="doublestarshipteste Coverage Results" MODIFIED="1752427391084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$magneticCircleArrows.coverage" NAME="magneticCircleArrows Coverage Results" MODIFIED="1752425627820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$vam_vs_gr_potential_plot.coverage" NAME="vam_vs_gr_potential_plot Coverage Results" MODIFIED="1751903749996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
+    <SUITE FILE_PATH="coverage/VAM$8knot.coverage" NAME="8knot Coverage Results" MODIFIED="1752424545584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
+    <SUITE FILE_PATH="coverage/VAM$timediagram.coverage" NAME="timediagram Coverage Results" MODIFIED="1752051334138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - 0 Einsteins Æther" />
+    <SUITE FILE_PATH="coverage/VAM$proton_neutron_weigth.coverage" NAME="proton_neutron_weigth Coverage Results" MODIFIED="1751848726214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM-MASTER Paper" />
+    <SUITE FILE_PATH="coverage/VAM$magneticCircle.coverage" NAME="magneticCircle Coverage Results" MODIFIED="1752426259414" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$doublestarship.coverage" NAME="doublestarship Coverage Results" MODIFIED="1752427975246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$Helicity.coverage" NAME="Helicity Coverage Results" MODIFIED="1751904879608" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
+    <SUITE FILE_PATH="coverage/VAM$02_Starship_2_inv.coverage" NAME="02_Starship-2 inv Coverage Results" MODIFIED="1752424773159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
+    <SUITE FILE_PATH="coverage/VAM$rotating_current_rodin_fields.coverage" NAME="rotating_current_rodin_fields Coverage Results" MODIFIED="1752424861440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
+    <SUITE FILE_PATH="coverage/VAM$change_bib_to_footnoting.coverage" NAME="change_bib_to_footnoting Coverage Results" MODIFIED="1752345948506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_15_Quantum_Gravity" />
+    <SUITE FILE_PATH="coverage/VAM$6_2_topview.coverage" NAME="6_2_topview Coverage Results" MODIFIED="1751908053943" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
+    <SUITE FILE_PATH="coverage/VAM$NODES.coverage" NAME="NODES Coverage Results" MODIFIED="1752427455247" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
   </component>
 </project>
