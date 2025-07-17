@@ -84,9 +84,14 @@ mkdir extern/pybind11
 git clone https://github.com/pybind/pybind11.git extern/pybind11
 ````
 
+In the pyBind11 directory, load the CMake project by richt clicking on the `CMakeLists.txt` file and selecting "Reload CMake Project".
+
+The do the same in VAMpyBindings directory, right click on the `CMakeLists.txt` file and select "Reload CMake Project".
+
 ### 🔨 Build C++ Core
 ```bash
-"C:\Program Files\JetBrains\CLion\bin\cmake\win\x64\bin\cmake.exe" --build C:\Users\mr\IdeaProjects\VAM\VAMpyBindings\cmake-build-debug --target vambindings -j 18 
+"C:\Program Files\JetBrains\CLion\bin\cmake\win\x64\bin\cmake.exe" --build C:\workspace\solo_projects\VAM\VAMpyBindings\cmake-build-debug --target 
+vambindings -j 18 
 
 "C:\Program Files\JetBrains\CLion\bin\cmake\win\x64\bin\cmake.exe"  -S . -B build
 "C:\Program Files\JetBrains\CLion\bin\cmake\win\x64\bin\cmake.exe" --build build
