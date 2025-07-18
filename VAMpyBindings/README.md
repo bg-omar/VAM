@@ -62,10 +62,10 @@ This might be the time to take a look at Conda, which is a package manager that 
 ```bash
 conda create -n  VAMpyBindings    python=3.12
 conda activate  VAMpyBindings   
-pip install -r requirements.txt
 ```
 
-
+We now have to at least `pip install pybind11` and  `pip install numpy` to run the Python bindings.
+I recommend to use a `requirements.txt` file to manage the dependencies of the project, it will reflect my environment.
 ```bash
 pip install -r requirements.txt
 ```
@@ -84,12 +84,31 @@ mkdir extern/pybind11
 git clone https://github.com/pybind/pybind11.git extern/pybind11
 ````
 
+```bash
+project-root/
+├── src/
+│   ├── fluid_dynamics.cpp
+│   ├── thermo_dynamics.cpp
+│   ├── vorticity_dynamics.cpp
+│   └── ...
+├── src_bindings/
+│   ├── module_vam.cpp
+│   ├── py_fluid_dynamics.cpp
+│   ├── py_thermo_dynamics.cpp
+│   ├── py_vorticity_dynamics.cpp
+│   └── ...
+├── extern/pybind11/         # <-- Git submodule or manually cloned
+├── example_vorticity_2D.py
+├── CMakeLists.txt
+```
+
 ### 🔨 Build C++ Core
 ```bash
-"C:\Program Files\JetBrains\CLion\bin\cmake\win\x64\bin\cmake.exe" --build C:\Users\mr\IdeaProjects\VAM\VAMpyBindings\cmake-build-debug --target vambindings -j 18 
+mkdir build
+cd build
+cmake ..
+cmake --build . --config Debug  # or Release
 
-"C:\Program Files\JetBrains\CLion\bin\cmake\win\x64\bin\cmake.exe"  -S . -B build
-"C:\Program Files\JetBrains\CLion\bin\cmake\win\x64\bin\cmake.exe" --build build
 ```
 This command compiles the C++ core and generates the Python bindings using `pybind11`.
 
@@ -100,7 +119,13 @@ python -c "import vambindings; print(vambindings)"
 This should return `<module 'vambindings' from 'C:\\workspace\\projects\\vamcore\\build\\Debug\\vambindings.cp311-win_amd64.pyd'>`
 This indicates that the Python bindings for VAMcore have been successfully built and installed.
 
-### 🔨 Load the C++ module dynamically from the compiled path
+### 🐍 Import the VAM Bindings in Python
+```
+from vambindings import VortexKnotSystem, biot_savart_velocity, compute_kinetic_energy
+```
+
+
+### 🔨 Load the C++ module dynamically from the compiled path, because the VAM Bindings are not installed in the Python site-packages.
 ```python
 import os
 module_path = os.path.abspath("C:\\Users\mr\IdeaProjects\VAM\VAMpyBindings\\build\Debug\\vambindings.cp312-win_amd64.pyd")

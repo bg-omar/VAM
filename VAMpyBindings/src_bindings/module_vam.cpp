@@ -16,6 +16,12 @@ void bind_vortex_knot_system(py::module_& m);
 void bind_kinetic_energy(py::module_& m); // forward declaration
 void bind_swirl_field(py::module_& m); // forward declaration
 
+void bind_vorticity_dynamics(py::module_& m);
+void bind_thermo_dynamics(py::module_& m);
+void bind_relative_vorticity(py::module_& m); // forward declaration
+
+
+
 PYBIND11_MODULE(vambindings, m) {
 	m.doc() = "VAM Core Bindings";
 
@@ -30,4 +36,8 @@ PYBIND11_MODULE(vambindings, m) {
 	bind_vortex_knot_system(m);  // ✅ Include this
 	bind_kinetic_energy(m);
 	bind_swirl_field(m);
+
+	bind_vorticity_dynamics(m);
+	bind_thermo_dynamics(m);
+	bind_relative_vorticity(m);
 }

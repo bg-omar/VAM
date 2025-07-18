@@ -3,6 +3,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
+import vambindings
+print(vambindings.vorticity_z_2D(3.0, 1.0))  # Example
+
+
 import os
 script_name = os.path.splitext(os.path.basename(__file__))[0]
 from matplotlib.colors import TwoSlopeNorm

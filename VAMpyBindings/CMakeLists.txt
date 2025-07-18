@@ -23,7 +23,8 @@ add_library(vamcore STATIC
         src/fluid_dynamics.cpp
         src/kinetic_energy.cpp
         src/swirl_field.cpp
-)
+        src/thermo_dynamics.cpp
+        src/vorticity_dynamics.cpp)
 
 target_include_directories(vamcore PUBLIC src)
 
@@ -41,7 +42,8 @@ target_sources(vambindings PRIVATE
         src_bindings/py_vortex_knot_system.cpp
         src_bindings/py_kinetic_energy.cpp
         src_bindings/py_swirl_field.cpp
-)
+        src_bindings/py_thermo_dynamics.cpp
+        src_bindings/py_vorticity_dynamics.cpp)
 
 target_link_libraries(vambindings PRIVATE vamcore)
 target_include_directories(vambindings PRIVATE extern/pybind11/include)

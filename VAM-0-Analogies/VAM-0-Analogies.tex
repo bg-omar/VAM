@@ -16,11 +16,14 @@
 
     \usepackage{import}
     \usepackage{subfiles}
+    \pgfplotsset{compat=newest}
+    \usepgfplotslibrary{patchplots}
 
+\usepackage[unicode]{hyperref}
+\hypersetup{pageanchor=false}
     \usepackage{caption}
 
 
-    \input{../vamstyle.sty}
     \input{../vam_appendix_setup.sty}
     \begin{document}
 
@@ -50,7 +53,6 @@
 
 
         \titlepageClose
-        \fi
 
         \ifdefined\standalonechapter
         \section{\papertitle}
@@ -61,6 +63,25 @@
         \tableofcontents
         \newpage
 
+        \begin{tikzpicture}
+  \begin{axis}[
+    view={45}{35},
+    axis lines=none,
+    ticks=none,
+    colormap/cool,
+    samples=200,
+    domain=0:6.2832,  % 0 to 2π
+    z buffer=sort,
+    ]
+    \addplot3 [
+      thick,
+      black,
+      samples=200,
+      domain=0:6.2832,
+    ]
+    ( {0.1015*cos(deg(x)) + 0.063367*sin(deg(x)) - 0.058576*cos(deg(3*x)) - 0.047834*sin(deg(3*x) +  0.010809*cos(deg(5*x)) - 0.123037*sin(deg(5*x)) - 0.019292*cos(deg(7*x)) + 0.002397*sin(deg(7*x)) + 0.021062*cos(deg(9*x)) - 0.027679*sin(deg(9*x))}, {-0.360746*cos(deg(2*x)) - 0.006923*sin(deg(2*x)) + 0.008628*cos(deg(4*x)) - 0.021589*sin(deg(4*x)) - 0.044936*cos(deg(6*x)) + 0.021844*sin(deg(6*x)) - 0.003736*cos(deg(8*x)) - 0.004946*sin(deg(8*x)) - 0.001866*cos(deg(10*x)) + 0.020238*sin(deg(10*x))}, {0.018163*cos(deg(x)) - 0.01601*sin(deg(x))+ 0.050709*cos(deg(3*x)) - 0.083507*sin(deg(3*x)) + 0.101439*cos(deg(5*x)) - 0.013338*sin(deg(5*x)) - 0.040565*cos(deg(7*x)) - 0.010632*sin(deg(7*x)) - 0.00138*cos(deg(9*x)) + 0.021509*sin(deg(9*x))});
+  \end{axis}
+\end{tikzpicture}
 
         \input{sections/vam-0-intro}
         \input{sections/vam-1-aether}
