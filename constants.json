@@ -16,12 +16,28 @@
         "symbol": ""
     },
     {
-        "constant": "\\rho_\\text{\\ae}",
+        "constant": "\\rho_\\text{\\ae}^\\text{(fluid)}",
         "value": 7e-07,
         "uncertainty": "(Range: 5.0e-8 to 5.0e-5)",
         "unit": "kg m^-3",
         "latex": "\\rho_\\text{\\ae}",
         "symbol": ""
+    },
+    {
+      "constant": "\\rho_\\text{\\ae}^\\text{(energy)}",
+      "value": 7e-07,
+      "uncertainty": "(Range: 5.0e-8 to 5.0e-5)",
+      "unit": "kg m^-3",
+      "latex": "\\rho_\\text{\\ae}",
+      "symbol": ""
+    },
+    {
+      "constant": "\\rho_\\text{\\ae}^\\text{(mass)}",
+      "value": 7e-07,
+      "uncertainty": "(Range: 5.0e-8 to 5.0e-5)",
+      "unit": "kg m^-3",
+      "latex": "\\rho_\\text{\\ae}",
+      "symbol": ""
     },
     {
         "constant": "Coulomb constant",

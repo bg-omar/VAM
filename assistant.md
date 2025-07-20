@@ -88,6 +88,17 @@
 ## Action: Clean and Convert Repeated Mixed Plain/LaTeX Text into Correct LaTeX
 When processing pasted manuscript sections (such as those copied into IntelliJ), please consistently handle the following formatting issues:
 
+### Remove any of the following 
+```adlanguage
+ 
+ 
+ 
+ 
+​
+% -> \%
+
+```
+
 ### Specific Cleaning and Conversion Steps:
 #### Replace all occurrences of the special character Æ or æ in math mode with the proper LaTeX command:
 - Find: æ (in math mode)
@@ -106,6 +117,7 @@ Example:
 - Only in section titles when referring to the substance æther, is usage of Æ in Æther allowed.
 - Only æ is used in math subtext.
 - Always write: Vortex Æther Model (correct). Other variations are wrong: Vortex æther-model or Æther-vortex model (wrong)
+- 
 Example:
 ```latex
 % Incorrect:
@@ -183,15 +195,7 @@ You're absolutely right — and this is a **perfect case** for a formatting rule
 ## 🧹 Structural Cleanup and Formatting Rules
 ### 🚫 Remove Redundant Commands
 * **Do not allow duplicated commands** such as:
-```adlanguage
- 
- 
- 
- 
-​
-% -> \%
 
-```
   ```latex
   \maketitle
   \maketitle

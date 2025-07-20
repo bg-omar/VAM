@@ -2,7 +2,7 @@ from pathlib import Path
 import re
 import bibtexparser
 
-bib_path = Path("VAM_15_Quantum_Gravity.bib")
+bib_path = Path("VAM_15_Quantum_Gravity_all_footnotes.bib")
 tex_path = Path("VAM_15_Quantum_Gravity.tex")
 
 # Parse the bib file robustly
@@ -34,7 +34,7 @@ def replace_cite(match):
 tex_content = tex_path.read_text(encoding="utf-8")
 tex_updated = re.sub(r'\\cite\{(reference_\d+)\}', replace_cite, tex_content)
 
-output_path = Path("VAM_15_Quantum_Gravity_updated.tex")
+output_path = Path("VAM-15-Quantum_Gravity.tex")
 output_path.write_text(tex_updated, encoding="utf-8")
 
-print("Done! Output written to VAM_15_Quantum_Gravity_updated.tex")
+print("Done! Output written to VAM-15-Quantum_Gravity.tex")

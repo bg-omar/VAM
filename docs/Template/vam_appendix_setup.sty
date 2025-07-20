@@ -1,0 +1,35 @@
+% vamappendixsetup.sty
+
+\newcommand{\titlepageOpen}{
+  \begin{titlepage}
+  \thispagestyle{empty}
+  \centering
+  {\Huge\bfseries \papertitle \par}
+  \vspace{1cm}
+  {\Large\itshape\textbf{Omar Iskandarani}\textsuperscript{\textbf{*}} \par}
+  \vspace{0.5cm}
+  {\today \par}
+  \vspace{0.5cm}
+}
+
+% here comes abstract
+\newcommand{\titlepageClose}{
+  \vfill
+  \null
+  \begin{picture}(0,0)
+  % Adjust position: (x,y) = (left, bottom)
+  \put(-200,-45){  % Shift 200pt left, 40pt down
+    \begin{minipage}[b]{0.7\textwidth}
+    \footnotesize % One step bigger than \tiny
+    \renewcommand{\arraystretch}{1.0}
+    \noindent\rule{\textwidth}{0.4pt} \\[0.5em]  % ← horizontal line
+    \textsuperscript{\textbf{*}} Independent Researcher, Groningen, The Netherlands \\
+    Email: \texttt{info@omariskandarani.com} \\
+    ORCID: \texttt{\href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961}} \\
+    DOI: \href{https://doi.org/\paperdoi}{\paperdoi} \\
+    License: CC-BY 4.0 International \\
+    \end{minipage}
+  }
+  \end{picture}
+  \end{titlepage}
+}
