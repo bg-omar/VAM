@@ -9,7 +9,7 @@ import os
 script_name = os.path.splitext(os.path.basename(__file__))[0]
 
 # Spiral parameters (widened)
-theta = np.linspace(0, 4 * np.pi, 500)
+theta = np.linspace(0, 3.5 * np.pi, 500)
 r = np.linspace(0.4, 1.5, 500)  # widened spiral
 z = np.linspace(0, 1.5, 500)
 x = r * np.cos(theta)
@@ -17,11 +17,11 @@ y = r * np.sin(theta)
 
 # Time layer labels and fractions
 time_labels = [
-    (1.25 / 1.5, "Kairos Moment ($\\mathbb{K}$)"),  # end of spiral
-    (1.0 / 1.5, "Vortex Proper Time ($T_v$)"),
-    (0.7 / 1.5, "Swirl Clock ($S(t)^\\circlearrowleft$)"),
-    (0.5 / 1.5, "Chronos-Time ($\\tau$)"),
-    (0.38 / 1.5, "Now-Point ($\\nu_0$)"),
+    (1.45 / 1.5, "Kairos Moment ($\\mathbb{K}$)"),  # end of spiral
+    (1.2 / 1.5, "Vortex Proper Time ($T_v$)"),
+    (0.95 / 1.5, "Swirl Clock ($S^\\circlearrowleft_\\text{(t)}$)"),
+    (0.65 / 1.5, "Chronos-Time ($\\tau$)"),
+    (0.45 / 1.5, "Now-Point ($\\nu_0$)"),
 ]
 
 fig = plt.figure(figsize=(8, 6))
@@ -46,7 +46,7 @@ ax.text(
 
 
 
-ax.set_title("Vortex Phase Spiral of Ætheric Time \n $\\mathcal{N} \\rightarrow \\nu_0 \\rightarrow \\tau \\rightarrow S(t)^\\circlearrowleft \\rightarrow T_v \\rightarrow \\mathbb{K}$", fontsize=12)
+ax.set_title("Vortex Phase Spiral of Ætheric Time \n $\\mathcal{N} \\rightarrow \\nu_0 \\rightarrow \\tau \\rightarrow S^\\circlearrowleft_\\text{(t)} \\rightarrow T_v \\rightarrow \\mathbb{K}$", fontsize=12)
 ax.set_axis_off()
 ax.view_init(elev=-155, azim=175)
 

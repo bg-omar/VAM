@@ -25,411 +25,28 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" id="6f2a8139-c825-4497-876b-70e1a130c5c3" name="Changes" comment="Add new vorticity dynamics and thermodynamics modules; implement circulation and enstrophy calculations; update bindings and examples for enhanced fluid dynamics analysis">
-      <change afterPath="$PROJECT_DIR$/EXPERIMENTAL PROPOSITION_lazer_c_e.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAMpyBindings/VAM.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart/bubble.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/autoknot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="6f2a8139-c825-4497-876b-70e1a130c5c3" name="Changes" comment="Add new knot series data files for various knots; include detailed comments for clarity and processing instructions">
+      <change afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/TemporalOntologyv2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.run/build.run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.run/build.run.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/00_Tijdsdilatatie_in_3D_Superfluïde_Æther_Model (2).pdf" beforeDir="false" afterPath="$PROJECT_DIR$/docs/00_Tijdsdilatatie_in_3D_Superfluïde_Æther_Model (2).pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1-Tijdsdilatatie_in_3D_Superfluïde_Æther_Model.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/docs/1-Tijdsdilatatie_in_3D_Superfluïde_Æther_Model.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2-Wervelklokken_en_vorticiteit_geïnduceerde_zwaartekracht.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/docs/2-Wervelklokken_en_vorticiteit_geïnduceerde_zwaartekracht.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Feedback/07-06-2025_Analysis of the Vortex Æther Model (VAM).pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Feedback/Actionpoints Vortex Æther Model VAM.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Feedback/Old/Feedback1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Feedback/Old/Feedback2.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Feedback/Old/GPT-Research Benchmark.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Feedback/Old/GPT-Research VAM.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Feedback/Old/feedback3.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Feedback/Old/feedback4.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Feedback/VAM_Feedback_Summary_ScholarAI.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Feedback/VAM_Publication_ActionPlan.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Feedback/action_points_vam.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-2012.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-2013.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebook-2014.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/00_R_r_horn_swindle_side_torus.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/00_R_r_horn_swindle_side_torus.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/01_Starship-MultiLayer-12.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/01_Starship-MultiLayer-12.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/01_Starship-MultiLayer-18.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/01_Starship-MultiLayer-18.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/01_Starship-MultiLayer-18.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/01_Starship-MultiLayer-18.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/01_Starship-MultiLayer-24.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/01_Starship-MultiLayer-24.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/01_Starship-MultiLayer-3phase-12x3points.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/01_Starship-MultiLayer-3phase-12x3points.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/01_Starship-MultiLayer-3phase-27x3points.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/01_Starship-MultiLayer-3phase-27x3points.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/02_Starship-2 inv1.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/02_Starship-2 inv1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/02_Starship-3phase-27x3points.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/02_Starship-3phase-27x3points.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/02_Starship-3phase-36points.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/02_Starship-3phase-36points.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/02_Starship-3phase-36points2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/02_Starship-3phase-36points2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/03_magnetic round coil2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/03_magnetic round coil2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/04_WaveFunctionVAM_QM.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/04_WaveFunctionVAM_QM.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/2d radial magnet.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/2d radial magnet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/8knot.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/8knot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/8knot2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/8knot2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Animate.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Animate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Biot-Savart/02_Starship-2 inv.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart/02_Starship-2 inv.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Biot-Savart/02_Starship-3phase-36points.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart/02_Starship-3phase-36points.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Biot-Savart/03_Starship-3phase-36points-18 bidirectional.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart/03_Starship-3phase-36points-18 bidirectional.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Biot-Savart/03_magnetic round coil.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart/03_magnetic round coil.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Biot-Savart/03_magnetic round coil2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart/03_magnetic round coil2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Biot-Savart/6_2knot.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart/6_2knot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Biot-Savart/7_4knot.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart/7_4knot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Biot-Savart/8knot-Trefoil.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart/8knot-Trefoil.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Biot-Savart/8knot.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart/8knot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Biot-Savart/MagneticCircleRodin.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart/MagneticCircleRodin.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Biot-Savart/MagneticCircleRodin.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart/MagneticCircleRodin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Biot-Savart/NODES.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart/NODES.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Biot-Savart/Rodin_magnetic_fields.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart/Rodin_magnetic_fields.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Biot-Savart/Rodin_magnetic_fields.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart/Rodin_magnetic_fields.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Biot-Savart/Rodin_magnetic_fields2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart/Rodin_magnetic_fields2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Biot-Savart/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart/03_slice biot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Biot-Savart/doublestarship.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart/doublestarship.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Biot-Savart/doublestarshipteste.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart/doublestarshipteste.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Biot-Savart/magneticCircle.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart/magneticCircle.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Biot-Savart/magneticCircle.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart/magneticCircle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Biot-Savart/magneticCircleArrows.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart/magneticCircleArrows.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Biot-Savart/rotating_current_rodin_fields.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart/rotating_current_rodin_fields.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Biot-Savart/vortex flow electron orbital diagram.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart/vortex flow electron orbital diagram.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Biot-Savart/vorticity_field.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart/vorticity_field.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/05_lifterThrust.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/05_lifterThrust.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/05_lifterThrust.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/05_lifterThrust.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/05_lifterThrust2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/05_lifterThrust2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/06-TimeDilationGRVsVAMModelNucleonMassPerVortex.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/06-TimeDilationGRVsVAMModelNucleonMassPerVortex.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/06-TimeDilationGRVsVAMModelNucleonMassPerVortex.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/06-TimeDilationGRVsVAMModelNucleonMassPerVortex.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/06-TimeDilationGRVsVAMModelNucleonMassPerVortex1.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/06-TimeDilationGRVsVAMModelNucleonMassPerVortex1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/06-TimeDilationGRVsVAMModelNucleonMassPerVortex1_nl.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/06-TimeDilationGRVsVAMModelNucleonMassPerVortex1_nl.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/06-TimeDilationGRVsVAMModelNucleonMassPerVortex2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/06-TimeDilationGRVsVAMModelNucleonMassPerVortex2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/06-TimeDilationGRVsVAMModelNucleonMassPerVortex2_nl.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/06-TimeDilationGRVsVAMModelNucleonMassPerVortex2_nl.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/1s2soorbitals.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/1s2soorbitals.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/1s2soorbitals.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/1s2soorbitals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/3d empty space.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/3d empty space.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/3d empty space.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/3d empty space.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/BronInOorsprong.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/BronInOorsprong.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/ESHFieldLines.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/ESHFieldLines.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/ESHFieldLines.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/ESHFieldLines.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/Electron Node1.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/Electron Node1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/Electron Node1.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/Electron Node1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/NODES.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/NODES.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/QED-VAM.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/QED-VAM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/QED-VAM.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/QED-VAM.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/QED-VAM1.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/QED-VAM1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/QED-VAM2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/QED-VAM2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/Rodin_magnetic_fields.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/Rodin_magnetic_fields.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/Rodin_magnetic_fields2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/Rodin_magnetic_fields2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/ThrustVsVoltage.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/ThrustVsVoltage.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/ThrustVsVoltage.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/ThrustVsVoltage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/TimeConstruct.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/TimeConstruct.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/TimeTables.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/TimeTables.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/WervelInOorsprong.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/WervelInOorsprong.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/WervelInOorsprong.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/WervelInOorsprong.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/cilinder filled.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/cilinder filled.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/curved cilinder.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/curved cilinder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/diabolo.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/diabolo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/diabolo.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/diabolo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/diabolo1.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/diabolo1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/dipoleOorsprong.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/dipoleOorsprong.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/dipoleOorsprong2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/dipoleOorsprong2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/dipoolOorsprong.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/dipoolOorsprong.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/dodeca.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/dodeca.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/electron_decay1s orbitals.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/electron_decay1s orbitals.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/electron_decay1s orbitals.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/electron_decay1s orbitals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/exitation.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/exitation.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/exitation.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/exitation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/export/00_side_torus_20250403_162543.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/export/00_side_torus_20250403_162543.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/export/side_torus_20250325_193527.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/export/side_torus_20250325_193527.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/export/torus_20250313_114427.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/export/torus_20250313_114427.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/export/torus_rotation_20250308_180659.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/export/torus_rotation_20250308_180659.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/export/torus_rotation_20250308_180726.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/export/torus_rotation_20250308_180726.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/export/torus_rotation_20250308_180814.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/export/torus_rotation_20250308_180814.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/export/torus_rotation_20250308_180845.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/export/torus_rotation_20250308_180845.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/export/torus_rotation_20250308_180915.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/export/torus_rotation_20250308_180915.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/export/torus_rotation_20250308_180937.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/export/torus_rotation_20250308_180937.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/export/torus_rotation_20250308_181005.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/export/torus_rotation_20250308_181005.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/export/torus_rotation_20250308_181032.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/export/torus_rotation_20250308_181032.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/export/torus_rotation_20250308_181105.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/export/torus_rotation_20250308_181105.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/export/torus_rotation_20250308_181131.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/export/torus_rotation_20250308_181131.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/export/torus_rotation_20250308_181158.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/export/torus_rotation_20250308_181158.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/export/torus_rotation_20250308_181305.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/export/torus_rotation_20250308_181305.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/export/torus_rotation_20250308_181351.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/export/torus_rotation_20250308_181351.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/export/torus_rotation_20250308_181733.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/export/torus_rotation_20250308_181733.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/export/torus_rotation_20250308_181907.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/export/torus_rotation_20250308_181907.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/export/torus_rotation_20250308_182019.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/export/torus_rotation_20250308_182019.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/export/torus_rotation_20250308_182102.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/export/torus_rotation_20250308_182102.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/export/torus_rotation_20250308_182954.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/export/torus_rotation_20250308_182954.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/export/torus_rotation_20250308_183437.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/export/torus_rotation_20250308_183437.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/export/torus_rotation_20250308_183604.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/export/torus_rotation_20250308_183604.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/helical_coil.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/helical_coil.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/helical_coil_DC.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/helical_coil_DC.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/helical_coil_DC.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/helical_coil_DC.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/helical_coil_SYCL.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/helical_coil_SYCL.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/helix.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/helix.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/helix.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/helix.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/lamb-chaplygn dipole.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/lamb-chaplygn dipole.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/orbitals.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/orbitals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/orbitals2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/orbitals2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/roding_field_animation.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/roding_field_animation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/roding_field_animation2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/roding_field_animation2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/schodinger_probability.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/schodinger_probability.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/schodinger_probability3D.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/schodinger_probability3D.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/spindel and horn torus.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/spindel and horn torus.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/spindel and horn torus.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/spindel and horn torus.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/spindel and horn torus2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/spindel and horn torus2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/spindel and horn torus3.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/spindel and horn torus3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/starship-coil.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/starship-coil.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/starship-coil.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/starship-coil.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/starship.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/starship.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/starship.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/starship.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/starship.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/starship.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/starship2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/starship2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/streamlines_dipole.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/streamlines_dipole.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/streamlines_dipole.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/streamlines_dipole.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/streamlines_dipole1.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/streamlines_dipole1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/swirltorus rgb differences.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/swirltorus rgb differences.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/swirltorus rgb differences.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/swirltorus rgb differences.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/swirltorus rgb differences1.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/swirltorus rgb differences1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/swirltorus2_stars.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/swirltorus2_stars.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/swirltorus2_stars.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/swirltorus2_stars.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/timediagram.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/timediagram.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/timediagram.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/timediagram.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/torus.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/torus.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/torus.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/torus.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/torusspirals.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/torusspirals.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/torusspirals.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/torusspirals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/torusspirals1.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/torusspirals1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/tripleHelix.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/tripleHelix.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/tripleHelix.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/tripleHelix.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/vam vs schodinger.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/vam vs schodinger.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/vam vs schodinger.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/vam vs schodinger.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/vam vs schodinger2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/vam vs schodinger2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/vam vs schodinger3.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/vam vs schodinger3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/vortex flow electron orbital diagram.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/vortex flow electron orbital diagram.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/vortex flow electron orbital diagram2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/vortex flow electron orbital diagram2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/vortex_2d.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/vortex_2d.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/vortex_2d.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/vortex_2d.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/vortex_3d.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/vortex_3d.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/vortex_3d.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/vortex_3d.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Diagrams/vorticial_flow_animation.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Diagrams/vorticial_flow_animation.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/LifterInwardFieldlines.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/LifterInwardFieldlines.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/LifterVsStarshipFields.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/LifterVsStarshipFields.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/MagneticCircleRodin.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/MagneticCircleRodin.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/SimulatedStarshipCoilPulsedVortexThrust.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/SimulatedStarshipCoilPulsedVortexThrust.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/Starship-MultiLayer-input.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Starship-MultiLayer-input.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/VelocityFieldSurroundingATrefoilVortexKnot.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/VelocityFieldSurroundingATrefoilVortexKnot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/VelocityFieldSurroundingATrefoilVortexKnot.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/VelocityFieldSurroundingATrefoilVortexKnot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/00_R_r_horn_swindle_side_torus_143050.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/00_R_r_horn_swindle_side_torus_143050.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/00_R_r_horn_swindle_side_torus_152527.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/00_R_r_horn_swindle_side_torus_152527.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/01_Starship-MultiLayer-12_220511.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/01_Starship-MultiLayer-12_220511.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/01_Starship-MultiLayer-12_221850.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/01_Starship-MultiLayer-12_221850.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/01_Starship-MultiLayer-18.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/01_Starship-MultiLayer-18.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/01_Starship-MultiLayer-24.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/01_Starship-MultiLayer-24.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/01_Starship-MultiLayer-3phase-12x3points.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/01_Starship-MultiLayer-3phase-12x3points.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/01_Starship-MultiLayer-3phase-12x3points_194150.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/01_Starship-MultiLayer-3phase-12x3points_194150.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/01_Starship-MultiLayer-3phase-27x3points.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/01_Starship-MultiLayer-3phase-27x3points.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/01_Starship-MultiLayer-3phase-27x3points_102737.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/01_Starship-MultiLayer-3phase-27x3points_102737.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/01_Starship-MultiLayer-3phase-27x3points_134901.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/01_Starship-MultiLayer-3phase-27x3points_134901.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/02_Starship-2 inv_142108.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/02_Starship-2 inv_142108.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/02_Starship-3phase-27x3points_030557.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/02_Starship-3phase-27x3points_030557.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/02_Starship-3phase-36points.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/02_Starship-3phase-36points.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/02_Starship-3phase-36points2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/02_Starship-3phase-36points2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/02_Starship-3phase-36points_154545.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/02_Starship-3phase-36points_154545.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/02_Starship-3phase-36points_222249.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/02_Starship-3phase-36points_222249.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/02_Starship-3phase-36points_222430.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/02_Starship-3phase-36points_222430.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/02_Starship-3phase-36points_224126.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/02_Starship-3phase-36points_224126.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional1.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional_103709.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional_103709.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional_103733.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional_103733.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional_103745.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional_103745.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional_103857.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional_103857.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional_103952.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional_103952.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional_104015.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional_104015.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional_104036.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional_104036.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional_104108.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional_104108.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional_104151.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional_104151.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional_104948.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional_104948.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional_105137.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional_105137.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional_105625.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional_105625.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional_105655.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional_105655.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional_105832.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional_105832.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional_105931.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional_105931.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional_111243.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional_111243.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional_111330.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional_111330.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional_111420.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/03_Starship-3phase-36points-18 bidirectional_111420.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/03_magnetic round coil.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/03_magnetic round coil.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/03_magnetic round coil2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/03_magnetic round coil2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/04_WaveFunctionVAM_QM2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/04_WaveFunctionVAM_QM2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/2d radial magnet.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/2d radial magnet.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/2d radial magnet2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/2d radial magnet2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/8knot.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/8knot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/8knot2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/8knot2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/Animate-3.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/Animate-3.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/Animate.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/Animate.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/LifterInwardFieldlines.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/LifterInwardFieldlines.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/LifterInwardFieldlines2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/LifterInwardFieldlines2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/LifterVsStarshipFields.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/LifterVsStarshipFields.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/LifterVsStarshipFields3.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/LifterVsStarshipFields3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/SimulatedStarshipCoilPulsedVortexThrust.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/SimulatedStarshipCoilPulsedVortexThrust.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/SimulatedStarshipCoilPulsedVortexThrust2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/SimulatedStarshipCoilPulsedVortexThrust2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/VelocityFieldSurroundingATrefoilVortexKnot.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/VelocityFieldSurroundingATrefoilVortexKnot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/lamb-chaplygn dipole3D.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/lamb-chaplygn dipole3D.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/lamb-chaplygn dipole3D2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/lamb-chaplygn dipole3D2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/lamb-chaplygn dipole3D3.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/lamb-chaplygn dipole3D3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/magneticCircle.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/magneticCircle.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/photonAnimation.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/photonAnimation.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/rodin_222046.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/rodin_222046.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/rodin_double_215456.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/rodin_double_215456.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/rodin_double_215704.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/rodin_double_215704.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/rodin_double_215736.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/rodin_double_215736.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/rodin_double_215803.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/rodin_double_215803.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/rodin_double_215923.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/rodin_double_215923.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/rodin_double_220007.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/rodin_double_220007.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/rodin_double_220054.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/rodin_double_220054.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/rodin_double_220244.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/rodin_double_220244.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/rodin_double_220321.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/rodin_double_220321.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/rodin_double_220420.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/rodin_double_220420.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/rodin_double_222316.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/rodin_double_222316.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/rodin_double_222415.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/rodin_double_222415.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/rodin_double_223306.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/rodin_double_223306.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/rodin_double_224815.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/rodin_double_224815.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/rodin_double_224825.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/rodin_double_224825.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/rodin_double_225052.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/rodin_double_225052.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/rodin_double_225133.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/rodin_double_225133.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/rodin_double_225208.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/rodin_double_225208.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/rodin_double_225230.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/rodin_double_225230.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/rodin_double_225455.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/rodin_double_225455.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/starship-coil-12_154109.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/starship-coil-12_154109.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/starship-coil-12_155455.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/starship-coil-12_155455.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/starship-coil-12_171711.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/starship-coil-12_171711.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/starship-coil-12_171728.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/starship-coil-12_171728.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/starship-coil-12_180722.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/starship-coil-12_180722.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/swirltorus.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/swirltorus.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/swirltorus2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/swirltorus2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/swirltorus3.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/swirltorus3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/swirltorus36 knots.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/swirltorus36 knots.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/swirltorus36 knots2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/swirltorus36 knots2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/swirltorus36 knots3.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/swirltorus36 knots3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/swirltorus36 knots4.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/swirltorus36 knots4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/swirltorus4.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/swirltorus4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/swirltorus5.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/swirltorus5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/swirltorus6.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/swirltorus6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/swirltorusses.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/swirltorusses.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/swirltorusses2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/swirltorusses2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/export/vorticial_flow_animation.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/export/vorticial_flow_animation.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/lamb-chaplygn dipole3D.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/lamb-chaplygn dipole3D.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/magneticCircle.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/magneticCircle.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/photonAnimation.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/photonAnimation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/rodin.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/rodin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/rodin_double.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/rodin_double.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/rodin_double_225734.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/rodin_double_225734.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/schodinger_probability3Dcorrected.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/schodinger_probability3Dcorrected.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/starship-coil-12.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/starship-coil-12.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/swirltorus.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/swirltorus.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/swirltorus36 knots.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/swirltorus36 knots.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/swirltorus36 knots.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/swirltorus36 knots.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/swirltorus36 knots2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/swirltorus36 knots2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/swirltorus36 knots3.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/swirltorus36 knots3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/swirltorus36 knots4.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/swirltorus36 knots4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/swirltorusses.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/swirltorusses.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python VAM Illustrations/torus in torus.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/torus in torus.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuantumComputing/Knot_Logic_Gates.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_16_QuantumComputing/Knot_Logic_Gates.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuantumComputing/Swirl_Bit_Taxonomy.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_16_QuantumComputing/Swirl_Bit_Taxonomy.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuantumComputing/Swirl_Field_QED.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_16_QuantumComputing/Swirl_Field_QED.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuantumComputing/VAM_Quantum_Computing_Blueprint.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_16_QuantumComputing/VAM_Quantum_Computing_Blueprint.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuantumComputing/knot_logic.bib" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_16_QuantumComputing/knot_logic.bib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuantumComputing/swirl_bits.bib" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_16_QuantumComputing/swirl_bits.bib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuantumComputing/swirl_qed.bib" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_16_QuantumComputing/swirl_qed.bib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuantumComputing/vam_quantum.bib" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_16_QuantumComputing/vam_quantum.bib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Template/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template/sections/appendix_1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Template/sections/appendix_1.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template/sections/appendix_2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Template/sections/appendix_2.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template/sections/main_1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Template/sections/main_1.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template/vam_appendix_setup.sty" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Template/vam_appendix_setup.sty" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template/vammain.tex" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Template/vammain.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template/vamstyle.sty" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Template/vamstyle.sty" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-0-Analogies/VAM-0-Analogies.bib" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Analogies/VAM-0-Analogies.bib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-0-Analogies/VAM-0-Analogies.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Analogies/VAM-0-Analogies.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-0-Analogies/VAM-00_front_page.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Analogies/VAM-00_front_page.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-0-Analogies/images/ChatGPT Image Jul 11, 2025, 02_17_16 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Analogies/images/ChatGPT Image Jul 11, 2025, 02_17_16 PM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-0-Analogies/images/ChatGPT Image Jul 11, 2025, 02_17_18 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Analogies/images/ChatGPT Image Jul 11, 2025, 02_17_18 PM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-0-Analogies/images/ChatGPT Image Jul 12, 2025, 07_56_30 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Analogies/images/ChatGPT Image Jul 12, 2025, 07_56_30 PM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-0-Analogies/images/ChatGPT Image Jul 12, 2025, 07_56_34 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Analogies/images/ChatGPT Image Jul 12, 2025, 07_56_34 PM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-0-Analogies/images/ChatGPT Image Jul 12, 2025, 07_56_38 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Analogies/images/ChatGPT Image Jul 12, 2025, 07_56_38 PM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-0-Analogies/images/ChatGPT Image Jul 12, 2025, 07_56_41 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Analogies/images/ChatGPT Image Jul 12, 2025, 07_56_41 PM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-0-Analogies/images/ChatGPT Image Jul 12, 2025, 07_56_44 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Analogies/images/ChatGPT Image Jul 12, 2025, 07_56_44 PM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-0-Analogies/images/ChatGPT Image Jul 12, 2025, 07_56_50 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Analogies/images/ChatGPT Image Jul 12, 2025, 07_56_50 PM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-0-Analogies/images/ChatGPT Image Jul 13, 2025, 03_17_03 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Analogies/images/ChatGPT Image Jul 13, 2025, 03_17_03 PM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-0-Analogies/images/ChatGPT Image Jul 13, 2025, 03_17_06 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Analogies/images/ChatGPT Image Jul 13, 2025, 03_17_06 PM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-0-Analogies/images/ChatGPT Image Jul 13, 2025, 03_17_16 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Analogies/images/ChatGPT Image Jul 13, 2025, 03_17_16 PM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-0-Analogies/images/ChatGPT Image Jul 13, 2025, 03_17_18 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Analogies/images/ChatGPT Image Jul 13, 2025, 03_17_18 PM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-0-Analogies/images/ChatGPT Image Jul 15, 2025, 07_13_22 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Analogies/images/ChatGPT Image Jul 15, 2025, 07_13_22 PM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-0-Analogies/images/KnotThreadedPolarFlow.png" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Analogies/images/KnotThreadedPolarFlow.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-0-Analogies/sections/vam-0-intro.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Analogies/sections/vam-0-intro.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-0-Analogies/sections/vam-1-aether.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Analogies/sections/vam-1-aether.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-0-Analogies/sections/vam-2-particles.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Analogies/sections/vam-2-particles.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-0-Analogies/sections/vam-3-gravity_and_mass.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Analogies/sections/vam-3-gravity_and_mass.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-0-Analogies/sections/vam-4-time.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Analogies/sections/vam-4-time.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-0-Analogies/sections/vam-5-relativity.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Analogies/sections/vam-5-relativity.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-0-Analogies/sections/vam-6-electromagnetism.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Analogies/sections/vam-6-electromagnetism.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-0-Analogies/sections/vam-7-big_picture.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Analogies/sections/vam-7-big_picture.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-0-Analogies/sections/vam-8-why_analogies_matter.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Analogies/sections/vam-8-why_analogies_matter.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-1_to_15.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/VAM-1_to_15_Draft_Collection_of_All_Papers.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_15_Quantum_Gravity/VAM_15_Quantum_Gravity.bib" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_15_Quantum_Gravity/VAM_15_Quantum_Gravity_all_footnotes.bib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_15_Quantum_Gravity/VAM_15_Quantum_Gravity.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_15_Quantum_Gravity/VAM_15_Quantum_Gravity_updated.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_15_Quantum_Gravity/VAM-15-Quantum_Gravity.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_15_Quantum_Gravity/change_bib_to_footnoting.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_15_Quantum_Gravity/change_bib_to_footnoting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAMpyBindings/py_knots/Knot_Taxonomy.tex" beforeDir="false" afterPath="$PROJECT_DIR$/py_knots/Knot_Taxonomy.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAMpyBindings/py_knots/fseries/knot.3_1.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/py_knots/fseries/knot.3_1.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAMpyBindings/py_knots/fseries/knot.4_1.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/py_knots/fseries/knot.4_1.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAMpyBindings/py_knots/fseries/knot.5_1.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/py_knots/fseries/knot.5_1.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAMpyBindings/py_knots/fseries/knot.6_2.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/py_knots/fseries/knot.6_2.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAMpyBindings/py_knots/fseries/knot.7_4.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/py_knots/fseries/knot.7_4.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAMpyBindings/py_knots/knot_3_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAMpyBindings/py_knots/knot_6_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/py_knots/knot_6_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAMpyBindings/py_knots/knots.py" beforeDir="false" afterPath="$PROJECT_DIR$/py_knots/knots.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assistant.md" beforeDir="false" afterPath="$PROJECT_DIR$/assistant.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bibexport.dtx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bibexport.ins" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bibexport.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bibexport.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bibexport.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/constant.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/VAM_high_school_equations.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/constants.json" beforeDir="false" afterPath="$PROJECT_DIR$/constants.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cropper.py" beforeDir="false" afterPath="$PROJECT_DIR$/docs/cropper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dg_vs_r.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/expcites.bst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/expkeys.bst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/export.bst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_equations.py" beforeDir="false" afterPath="$PROJECT_DIR$/docs/extract_equations.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fibo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/fibonacci_in_orbitals.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure8_knot_fixed.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/figure8_knot_fixed.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generate_equation_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/docs/generate_equation_class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/irrotational and rotational.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/irrotational and rotational.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/irrotational and rotational.psd" beforeDir="false" afterPath="$PROJECT_DIR$/images/irrotational and rotational.psd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kelvins_formula.py" beforeDir="false" afterPath="$PROJECT_DIR$/docs/kelvins_formula.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/VAM_15_Quantum_Gravity.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/VAM_15_Quantum_Gravity.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/VAM_15_Quantum_Gravity_updated.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/phi_vs_r.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/physical_constants_latex.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/physics_constants_all.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/physics_constants_all.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/putOnZenodo.py" beforeDir="false" afterPath="$PROJECT_DIR$/docs/putOnZenodo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - Appendix All/sections/A11_DerivationGravitationalModification.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Appendix All/sections/A11_DerivationGravitationalModification.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/VAM.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm.bib" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm.bib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_11_Master_Equation_for_Particle_Masses/VAM-11-Master_Equation_for_Particle_Masses.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_11_Master_Equation_for_Particle_Masses/VAM-11-Master_Equation_for_Particle_Masses.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_11_Master_Equation_for_Particle_Masses/sections/main_2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_11_Master_Equation_for_Particle_Masses/sections/main_2.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_12_Fractal_Swirl/VAM-12-Fractal_Swirl.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_12_Fractal_Swirl/VAM-12-Fractal_Swirl.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_14_Topological_Fluid_Dynamics_Lagrangian/VAM-14-Topological_Fluid_Dynamics_Lagrangian.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_14_Topological_Fluid_Dynamics_Lagrangian/VAM-14-Topological_Fluid_Dynamics_Lagrangian.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_15_Quantum_Gravity/VAM_15_Quantum_Gravity_small.bib" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_15_Quantum_Gravity/VAM_15_Quantum_Gravity_small.bib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/TemporalOntology.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/TemporalOntology.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/TemporalOntology.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/TemporalOntology.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/TemporalOntologyKairosMoment.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/TemporalOntologyKairosMoment.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/TemporalOntologyv2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/TemporalOntologyv2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/VAM-11-Master_Equation_for_Particle_Masses.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/VAM-11-Master_Equation_for_Particle_Masses.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/VAM-12-Fractal_Swirl.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/VAM-12-Fractal_Swirl.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/VAM-14-Topological_Fluid_Dynamics_Lagrangian.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/VAM-14-Topological_Fluid_Dynamics_Lagrangian.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/references.bib" beforeDir="false" afterPath="$PROJECT_DIR$/references.bib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/references_cleaned.bib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spinner.gif" beforeDir="false" afterPath="$PROJECT_DIR$/docs/spinner.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spinner.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/docs/spinner.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spinner.py" beforeDir="false" afterPath="$PROJECT_DIR$/docs/spinner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swirl_equations.py" beforeDir="false" afterPath="$PROJECT_DIR$/docs/swirl_equations.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_swirl_equations.py" beforeDir="false" afterPath="$PROJECT_DIR$/docs/test_swirl_equations.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www-periodic-table/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www-periodic-table/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www-periodic-table/scripts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www-periodic-table/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www-periodic-table/value_get.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="false" />
@@ -438,6 +55,9 @@
   </component>
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileTemplateManagerImpl">
@@ -483,145 +103,147 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
-    <option name="autoscrollFromSource" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
-    <option name="hideEmptyMiddlePackages" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
-    <option name="showLibraryContents" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;BibTeX.12-OnAVortexBasedLagrangianUnificationGravityElectromagnetism bibliography.executor&quot;: &quot;Run&quot;,
-    &quot;BibTeX.4-StandardModel-Lagrangian VAM bibliography.executor&quot;: &quot;Run&quot;,
-    &quot;BibTeX.5-Topological_Fluid_Dynamic_Lagrangian_In_VAM bibliography.executor&quot;: &quot;Run&quot;,
-    &quot;BibTeX.EMlagrangian.executor&quot;: &quot;Run&quot;,
-    &quot;BibTeX.EXPERIMENTAL PROPOSITION_lazer_c_e bibliography.executor&quot;: &quot;Run&quot;,
-    &quot;BibTeX.LagrangianGravityElectromagnetism bibliography.executor&quot;: &quot;Run&quot;,
-    &quot;BibTeX.Master Paper-VAM bibliography.executor&quot;: &quot;Run&quot;,
-    &quot;BibTeX.ONLINE-0-Einstein_and_the_Æther bibliography.executor&quot;: &quot;Run&quot;,
-    &quot;BibTeX.ONLINE-1-Time_Dilation_in_3D_Superfluid_Æther_Model bibliography.executor&quot;: &quot;Run&quot;,
-    &quot;BibTeX.ONLINE-2-Swirl_Clocks_and_Vorticity-Induced_Gravity bibliography.executor&quot;: &quot;Run&quot;,
-    &quot;BibTeX.VAM-0-Analogies.executor&quot;: &quot;Run&quot;,
-    &quot;BibTeX.VAM-0-Einstein_and_the_Æther bibliography.executor&quot;: &quot;Run&quot;,
-    &quot;BibTeX.VAM-10-Swirl_Induced_Curvature_as_the_Mechanism_of_Gravitation bibliography.executor&quot;: &quot;Run&quot;,
-    &quot;BibTeX.VAM-11-Master_Equation_for_Particle_Masses.executor&quot;: &quot;Run&quot;,
-    &quot;BibTeX.VAM-13-Beyond_Spacetime_Gravity_Time_Vorticity.executor&quot;: &quot;Run&quot;,
-    &quot;BibTeX.VAM-14-Topological_Fluid_Dynamics_Lagrangian bibliography.executor&quot;: &quot;Run&quot;,
-    &quot;BibTeX.VAM-15-updated.executor&quot;: &quot;Run&quot;,
-    &quot;BibTeX.VAM-8.5-Master_Formula.executor&quot;: &quot;Run&quot;,
-    &quot;BibTeX.VAM-9-MilkyWay_as_a_Chiral_Swirl-Knot_Network.executor&quot;: &quot;Run&quot;,
-    &quot;BibTeX.VAM_15_Quantum_Gravity bibliography.executor&quot;: &quot;Run&quot;,
-    &quot;BibTeX.appendix_QuantizationOfVAM bibliography.executor&quot;: &quot;Run&quot;,
-    &quot;CMake Application.bind.executor&quot;: &quot;Run&quot;,
-    &quot;CMake Application.build.executor&quot;: &quot;Run&quot;,
-    &quot;CMake Application.vamcore.executor&quot;: &quot;Run&quot;,
-    &quot;CMake Debug.bob.executor&quot;: &quot;Debug&quot;,
-    &quot;LaTeX.00_front_page.executor&quot;: &quot;Run&quot;,
-    &quot;LaTeX.1-Time_Dilation_in_3D_Superfluid_Æther_Model.executor&quot;: &quot;Run&quot;,
-    &quot;LaTeX.12-OnAVortexBasedLagrangianUnificationGravityElectromagnetism.executor&quot;: &quot;Run&quot;,
-    &quot;LaTeX.4-StandardModel-Lagrangian VAM.executor&quot;: &quot;Run&quot;,
-    &quot;LaTeX.5-Topological_Fluid_Dynamic_Lagrangian_In_VAM.executor&quot;: &quot;Run&quot;,
-    &quot;LaTeX.Appendix_PhotonAsDipole.executor&quot;: &quot;Run&quot;,
-    &quot;LaTeX.EXPERIMENTAL PROPOSITION_lazer_c_e.executor&quot;: &quot;Run&quot;,
-    &quot;LaTeX.Knot_Logic_Gates.executor&quot;: &quot;Run&quot;,
-    &quot;LaTeX.Knot_Taxonomy.executor&quot;: &quot;Run&quot;,
-    &quot;LaTeX.LagrangianGravityElectromagnetism.executor&quot;: &quot;Run&quot;,
-    &quot;LaTeX.Master Paper-VAM.executor&quot;: &quot;Run&quot;,
-    &quot;LaTeX.ONLINE-0-Einstein_and_the_Æther.executor&quot;: &quot;Run&quot;,
-    &quot;LaTeX.ONLINE-1-Time_Dilation_in_3D_Superfluid_Æther_Model.executor&quot;: &quot;Run&quot;,
-    &quot;LaTeX.ONLINE-2-Swirl_Clocks_and_Vorticity-Induced_Gravity.executor&quot;: &quot;Run&quot;,
-    &quot;LaTeX.ONLINE-From_Quantum_Constants_to_Galactic_Swirl.executor&quot;: &quot;Run&quot;,
-    &quot;LaTeX.VAM-0-Analogies.executor&quot;: &quot;Run&quot;,
-    &quot;LaTeX.VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm.executor&quot;: &quot;Run&quot;,
-    &quot;LaTeX.VAM-00_front_page.executor&quot;: &quot;Run&quot;,
-    &quot;LaTeX.VAM-10-Swirl_Induced_Curvature_as_the_Mechanism_of_Gravitation.executor&quot;: &quot;Run&quot;,
-    &quot;LaTeX.VAM-11-Master_Equation_for_Particle_Masses.executor&quot;: &quot;Run&quot;,
-    &quot;LaTeX.VAM-13-Beyond_Spacetime_Gravity_Time_Vorticity.executor&quot;: &quot;Run&quot;,
-    &quot;LaTeX.VAM-14-Topological_Fluid_Dynamics_Lagrangian.executor&quot;: &quot;Run&quot;,
-    &quot;LaTeX.VAM-8.5-Master_Formula.executor&quot;: &quot;Run&quot;,
-    &quot;LaTeX.VAM-9-MilkyWay_as_a_Chiral_Swirl-Knot_Network.executor&quot;: &quot;Run&quot;,
-    &quot;LaTeX.VAM_15_Quantum_Gravity.executor&quot;: &quot;Run&quot;,
-    &quot;LaTeX.VAM_15_Quantum_Gravity_updated.executor&quot;: &quot;Run&quot;,
-    &quot;LaTeX.VAM_framework.executor&quot;: &quot;Run&quot;,
-    &quot;LaTeX.appendix_QuantizationOfVAM.executor&quot;: &quot;Run&quot;,
-    &quot;LaTeX.master-formula.executor&quot;: &quot;Run&quot;,
-    &quot;LaTeX.testknot.executor&quot;: &quot;Run&quot;,
-    &quot;LaTeX.vam_mass_comparison_colored.executor&quot;: &quot;Run&quot;,
-    &quot;LaTeX.vam_mass_dotmarker_postfix.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in 6274.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_swirl_equations.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.02_Starship-2 inv.executor&quot;: &quot;Run&quot;,
-    &quot;Python.02_Starship-3phase-36points.executor&quot;: &quot;Run&quot;,
-    &quot;Python.03_Starship-3phase-36points-18 bidirectional.executor&quot;: &quot;Run&quot;,
-    &quot;Python.03_magnetic round coil.executor&quot;: &quot;Run&quot;,
-    &quot;Python.03_slice biot.executor&quot;: &quot;Run&quot;,
-    &quot;Python.6274.executor&quot;: &quot;Run&quot;,
-    &quot;Python.6_2_topview.executor&quot;: &quot;Run&quot;,
-    &quot;Python.6_2knot.executor&quot;: &quot;Run&quot;,
-    &quot;Python.7_4knot.executor&quot;: &quot;Run&quot;,
-    &quot;Python.8knot-Trefoil.executor&quot;: &quot;Run&quot;,
-    &quot;Python.8knot.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Helicity.executor&quot;: &quot;Run&quot;,
-    &quot;Python.MagneticCircleRodin.executor&quot;: &quot;Run&quot;,
-    &quot;Python.MoleculeWeight.executor&quot;: &quot;Run&quot;,
-    &quot;Python.NODES.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Rodin_magnetic_fields.executor&quot;: &quot;Run&quot;,
-    &quot;Python.TemporalOntology.executor&quot;: &quot;Run&quot;,
-    &quot;Python.TimeConstruct.executor&quot;: &quot;Run&quot;,
-    &quot;Python.all_knots.executor&quot;: &quot;Run&quot;,
-    &quot;Python.autoknot.executor&quot;: &quot;Run&quot;,
-    &quot;Python.bubble.executor&quot;: &quot;Run&quot;,
-    &quot;Python.change_bib_to_footnoting.executor&quot;: &quot;Run&quot;,
-    &quot;Python.cropper.executor&quot;: &quot;Run&quot;,
-    &quot;Python.dipole.executor&quot;: &quot;Run&quot;,
-    &quot;Python.doublestarship.executor&quot;: &quot;Run&quot;,
-    &quot;Python.doublestarshipteste.executor&quot;: &quot;Run&quot;,
-    &quot;Python.knot_6_2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.knots.executor&quot;: &quot;Run&quot;,
-    &quot;Python.magneticCircle.executor&quot;: &quot;Run&quot;,
-    &quot;Python.magneticCircleArrows.executor&quot;: &quot;Run&quot;,
-    &quot;Python.photonAnimation.executor&quot;: &quot;Run&quot;,
-    &quot;Python.proton_neutron_weigth.executor&quot;: &quot;Run&quot;,
-    &quot;Python.python -c \&quot;import vambindings; print(vambindings)\&quot;.executor&quot;: &quot;Run&quot;,
-    &quot;Python.quarck streamlines.executor&quot;: &quot;Run&quot;,
-    &quot;Python.reference_cleaning.executor&quot;: &quot;Run&quot;,
-    &quot;Python.rotating_current_rodin_fields.executor&quot;: &quot;Run&quot;,
-    &quot;Python.swirltorus36 knots.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.testknot.executor&quot;: &quot;Run&quot;,
-    &quot;Python.timediagram.executor&quot;: &quot;Run&quot;,
-    &quot;Python.torus.executor&quot;: &quot;Run&quot;,
-    &quot;Python.torusspirals.executor&quot;: &quot;Run&quot;,
-    &quot;Python.vam_vs_gr_potential_plot.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.west.config.association.type.startup.service&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/mr/IdeaProjects/VAM/VAMpyBindings/py_knots/fourier coefficients table&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.47126436&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "BibTeX.12-OnAVortexBasedLagrangianUnificationGravityElectromagnetism bibliography.executor": "Run",
+    "BibTeX.4-StandardModel-Lagrangian VAM bibliography.executor": "Run",
+    "BibTeX.5-Topological_Fluid_Dynamic_Lagrangian_In_VAM bibliography.executor": "Run",
+    "BibTeX.EMlagrangian.executor": "Run",
+    "BibTeX.EXPERIMENTAL PROPOSITION_lazer_c_e bibliography.executor": "Run",
+    "BibTeX.LagrangianGravityElectromagnetism bibliography.executor": "Run",
+    "BibTeX.Master Paper-VAM bibliography.executor": "Run",
+    "BibTeX.ONLINE-0-Einstein_and_the_Æther bibliography.executor": "Run",
+    "BibTeX.ONLINE-1-Time_Dilation_in_3D_Superfluid_Æther_Model bibliography.executor": "Run",
+    "BibTeX.ONLINE-2-Swirl_Clocks_and_Vorticity-Induced_Gravity bibliography.executor": "Run",
+    "BibTeX.VAM-0-Analogies.executor": "Run",
+    "BibTeX.VAM-0-Einstein_and_the_Æther bibliography.executor": "Run",
+    "BibTeX.VAM-10-Swirl_Induced_Curvature_as_the_Mechanism_of_Gravitation bibliography.executor": "Run",
+    "BibTeX.VAM-11-Master_Equation_for_Particle_Masses.executor": "Run",
+    "BibTeX.VAM-12-Fractal_Swirl bibliography.executor": "Run",
+    "BibTeX.VAM-13-Beyond_Spacetime_Gravity_Time_Vorticity.executor": "Run",
+    "BibTeX.VAM-14-Topological_Fluid_Dynamics_Lagrangian bibliography.executor": "Run",
+    "BibTeX.VAM-15-updated.executor": "Run",
+    "BibTeX.VAM-8.5-Master_Formula.executor": "Run",
+    "BibTeX.VAM-9-MilkyWay_as_a_Chiral_Swirl-Knot_Network.executor": "Run",
+    "BibTeX.VAM_15_Quantum_Gravity bibliography.executor": "Run",
+    "BibTeX.appendix_QuantizationOfVAM bibliography.executor": "Run",
+    "CMake Application.bind.executor": "Run",
+    "CMake Application.build.executor": "Run",
+    "CMake Application.vamcore.executor": "Run",
+    "CMake Debug.bob.executor": "Debug",
+    "LaTeX.00_front_page.executor": "Run",
+    "LaTeX.1-Time_Dilation_in_3D_Superfluid_Æther_Model.executor": "Run",
+    "LaTeX.12-OnAVortexBasedLagrangianUnificationGravityElectromagnetism.executor": "Run",
+    "LaTeX.4-StandardModel-Lagrangian VAM.executor": "Run",
+    "LaTeX.5-Topological_Fluid_Dynamic_Lagrangian_In_VAM.executor": "Run",
+    "LaTeX.Appendix_PhotonAsDipole.executor": "Run",
+    "LaTeX.EXPERIMENTAL PROPOSITION_lazer_c_e.executor": "Run",
+    "LaTeX.Knot_Logic_Gates.executor": "Run",
+    "LaTeX.Knot_Taxonomy.executor": "Run",
+    "LaTeX.LagrangianGravityElectromagnetism.executor": "Run",
+    "LaTeX.Master Paper-VAM.executor": "Run",
+    "LaTeX.ONLINE-0-Einstein_and_the_Æther.executor": "Run",
+    "LaTeX.ONLINE-1-Time_Dilation_in_3D_Superfluid_Æther_Model.executor": "Run",
+    "LaTeX.ONLINE-2-Swirl_Clocks_and_Vorticity-Induced_Gravity.executor": "Run",
+    "LaTeX.ONLINE-From_Quantum_Constants_to_Galactic_Swirl.executor": "Run",
+    "LaTeX.VAM-0-Analogies.executor": "Run",
+    "LaTeX.VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm.executor": "Run",
+    "LaTeX.VAM-00_front_page.executor": "Run",
+    "LaTeX.VAM-10-Swirl_Induced_Curvature_as_the_Mechanism_of_Gravitation.executor": "Run",
+    "LaTeX.VAM-11-Master_Equation_for_Particle_Masses.executor": "Run",
+    "LaTeX.VAM-12-Fractal_Swirl.executor": "Run",
+    "LaTeX.VAM-13-Beyond_Spacetime_Gravity_Time_Vorticity.executor": "Run",
+    "LaTeX.VAM-14-Topological_Fluid_Dynamics_Lagrangian.executor": "Run",
+    "LaTeX.VAM-8.5-Master_Formula.executor": "Run",
+    "LaTeX.VAM-9-MilkyWay_as_a_Chiral_Swirl-Knot_Network.executor": "Run",
+    "LaTeX.VAM_15_Quantum_Gravity.executor": "Run",
+    "LaTeX.VAM_15_Quantum_Gravity_updated.executor": "Run",
+    "LaTeX.VAM_framework.executor": "Run",
+    "LaTeX.appendix_QuantizationOfVAM.executor": "Run",
+    "LaTeX.master-formula.executor": "Run",
+    "LaTeX.testknot.executor": "Run",
+    "LaTeX.vam_mass_comparison_colored.executor": "Run",
+    "LaTeX.vam_mass_dotmarker_postfix.executor": "Run",
+    "Python tests.Python tests in 6274.py.executor": "Run",
+    "Python tests.Python tests in test_swirl_equations.py.executor": "Run",
+    "Python.02_Starship-2 inv.executor": "Run",
+    "Python.02_Starship-3phase-36points.executor": "Run",
+    "Python.03_Starship-3phase-36points-18 bidirectional.executor": "Run",
+    "Python.03_magnetic round coil.executor": "Run",
+    "Python.03_slice biot.executor": "Run",
+    "Python.6274.executor": "Run",
+    "Python.6_2_topview.executor": "Run",
+    "Python.6_2knot.executor": "Run",
+    "Python.7_4knot.executor": "Run",
+    "Python.8knot-Trefoil.executor": "Run",
+    "Python.8knot.executor": "Run",
+    "Python.Helicity.executor": "Run",
+    "Python.MagneticCircleRodin.executor": "Run",
+    "Python.MoleculeWeight.executor": "Run",
+    "Python.NODES.executor": "Run",
+    "Python.Rodin_magnetic_fields.executor": "Run",
+    "Python.TemporalOntology.executor": "Run",
+    "Python.TimeConstruct.executor": "Run",
+    "Python.all_knots.executor": "Run",
+    "Python.autoknot.executor": "Run",
+    "Python.bubble.executor": "Run",
+    "Python.change_bib_to_footnoting.executor": "Run",
+    "Python.cropper.executor": "Run",
+    "Python.dipole.executor": "Run",
+    "Python.doublestarship.executor": "Run",
+    "Python.doublestarshipteste.executor": "Run",
+    "Python.knot_6_2.executor": "Run",
+    "Python.knots.executor": "Run",
+    "Python.magneticCircle.executor": "Run",
+    "Python.magneticCircleArrows.executor": "Run",
+    "Python.photonAnimation.executor": "Run",
+    "Python.proton_neutron_weigth.executor": "Run",
+    "Python.python -c \"import vambindings; print(vambindings)\".executor": "Run",
+    "Python.quarck streamlines.executor": "Run",
+    "Python.reference_cleaning.executor": "Run",
+    "Python.rotating_current_rodin_fields.executor": "Run",
+    "Python.swirltorus36 knots.executor": "Run",
+    "Python.test.executor": "Run",
+    "Python.testknot.executor": "Run",
+    "Python.timediagram.executor": "Run",
+    "Python.torus.executor": "Run",
+    "Python.torusspirals.executor": "Run",
+    "Python.vam_vs_gr_potential_plot.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.west.config.association.type.startup.service": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/workspace/projects/VAM/VAM_0_Einstein_to_Vortex_Fluid",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.47126436",
+    "settings.editor.selected.configurable": "preferences.fileTypes",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\workspace\projects\VAM\VAM_0_Einstein_to_Vortex_Fluid" />
       <recent name="C:\Users\mr\IdeaProjects\VAM\VAMpyBindings\py_knots\fourier coefficients table" />
       <recent name="C:\Users\mr\IdeaProjects\VAM\QuantumComputing" />
       <recent name="C:\Users\mr\IdeaProjects\VAM\VAMpyBindings" />
       <recent name="C:\Users\mr\IdeaProjects\VAM" />
-      <recent name="C:\Users\mr\IdeaProjects\VAM\VAM-0-Analogies\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\mr\IdeaProjects\VAM" />
@@ -631,7 +253,7 @@
       <recent name="C:\Users\mr\IdeaProjects\VAM\VAMpyBindings" />
     </key>
   </component>
-  <component name="RunManager" selected="BibTeX.VAM-0-Analogies">
+  <component name="RunManager" selected="LaTeX.VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm">
     <configuration default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
@@ -697,6 +319,30 @@
       </texify-bibtex>
       <method v="2" />
     </configuration>
+    <configuration name="VAM-11-Master_Equation_for_Particle_Masses bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler>BIBTEX</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/VAM_11_Master_Equation_for_Particle_Masses/VAM-11-Master_Equation_for_Particle_Masses.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
+        <latex-distribution>MIKTEX</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration name="VAM-12-Fractal_Swirl bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler>BIBTEX</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/VAM_12_Fractal_Swirl/VAM-12-Fractal_Swirl.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
+        <latex-distribution>MIKTEX</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
     <configuration name="VAM-13-Beyond_Spacetime_Gravity_Time_Vorticity bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify-bibtex>
         <compiler>BIBTEX</compiler>
@@ -705,6 +351,18 @@
         <envs />
         <main-file>$PROJECT_DIR$/VAM_13_Beyond_Spacetime_Gravity_time_Vorticity/VAM-13-Beyond_Spacetime_Gravity_Time_Vorticity.tex</main-file>
         <aux-dir />
+        <latex-distribution>MIKTEX</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration name="VAM-14-Topological_Fluid_Dynamics_Lagrangian bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler>BIBTEX</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/VAM_14_Topological_Fluid_Dynamics_Lagrangian/VAM-14-Topological_Fluid_Dynamics_Lagrangian.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
         <latex-distribution>MIKTEX</latex-distribution>
       </texify-bibtex>
       <method v="2" />
@@ -730,6 +388,18 @@
         <main-file>$PROJECT_DIR$/VAM_15_Quantum_Gravity/VAM-15-Quantum_Gravity.tex</main-file>
         <aux-dir />
         <latex-distribution>MIKTEX</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler />
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file />
+        <aux-dir />
+        <latex-distribution>PROJECT_SDK</latex-distribution>
       </texify-bibtex>
       <method v="2" />
     </configuration>
@@ -786,7 +456,7 @@
         <compile-twice>false</compile-twice>
         <output-format>PDF</output-format>
         <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>false</has-been-run>
+        <has-been-run>true</has-been-run>
         <bib-run-config>[BibTeX.VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm bibliography]</bib-run-config>
         <makeindex-run-config>[]</makeindex-run-config>
       </texify>
@@ -815,6 +485,52 @@
       </texify>
       <method v="2" />
     </configuration>
+    <configuration name="VAM-11-Master_Equation_for_Particle_Masses" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <require-focus>true</require-focus>
+        <viewer-command />
+        <compiler-arguments />
+        <envs />
+        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
+        <before-run-command />
+        <main-file>$PROJECT_DIR$/VAM_11_Master_Equation_for_Particle_Masses/VAM-11-Master_Equation_for_Particle_Masses.tex</main-file>
+        <output-path>$PROJECT_DIR$/out</output-path>
+        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>MIKTEX</latex-distribution>
+        <has-been-run>true</has-been-run>
+        <bib-run-config>[BibTeX.VAM-11-Master_Equation_for_Particle_Masses bibliography]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
+    <configuration name="VAM-12-Fractal_Swirl" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <require-focus>true</require-focus>
+        <viewer-command />
+        <compiler-arguments />
+        <envs />
+        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
+        <before-run-command />
+        <main-file>$PROJECT_DIR$/VAM_12_Fractal_Swirl/VAM-12-Fractal_Swirl.tex</main-file>
+        <output-path>$PROJECT_DIR$/out</output-path>
+        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>MIKTEX</latex-distribution>
+        <has-been-run>true</has-been-run>
+        <bib-run-config>[BibTeX.VAM-12-Fractal_Swirl bibliography]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
     <configuration name="VAM-13-Beyond_Spacetime_Gravity_Time_Vorticity" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify>
         <compiler>PDFLATEX</compiler>
@@ -834,6 +550,29 @@
         <latex-distribution>MIKTEX</latex-distribution>
         <has-been-run>false</has-been-run>
         <bib-run-config>[BibTeX.VAM-13-Beyond_Spacetime_Gravity_Time_Vorticity bibliography]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
+    <configuration name="VAM-14-Topological_Fluid_Dynamics_Lagrangian" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <require-focus>true</require-focus>
+        <viewer-command />
+        <compiler-arguments />
+        <envs />
+        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
+        <before-run-command />
+        <main-file>$PROJECT_DIR$/VAM_14_Topological_Fluid_Dynamics_Lagrangian/VAM-14-Topological_Fluid_Dynamics_Lagrangian.tex</main-file>
+        <output-path>$PROJECT_DIR$/out</output-path>
+        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>MIKTEX</latex-distribution>
+        <has-been-run>true</has-been-run>
+        <bib-run-config>[BibTeX.VAM-14-Topological_Fluid_Dynamics_Lagrangian bibliography]</bib-run-config>
         <makeindex-run-config>[]</makeindex-run-config>
       </texify>
       <method v="2" />
@@ -980,6 +719,8 @@
       <item itemvalue="BibTeX.VAM-9-MilkyWay_as_a_Chiral_Swirl-Knot_Network bibliography" />
       <item itemvalue="BibTeX.VAM_15_Quantum_Gravity_updated bibliography" />
       <item itemvalue="BibTeX.EXPERIMENTAL PROPOSITION_lazer_c_e bibliography" />
+      <item itemvalue="BibTeX.VAM-11-Master_Equation_for_Particle_Masses bibliography" />
+      <item itemvalue="BibTeX.VAM-12-Fractal_Swirl bibliography" />
       <item itemvalue="LaTeX.VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm" />
       <item itemvalue="LaTeX.VAM-10-Swirl_Induced_Curvature_as_the_Mechanism_of_Gravitation" />
       <item itemvalue="LaTeX.VAM-13-Beyond_Spacetime_Gravity_Time_Vorticity" />
@@ -987,11 +728,17 @@
       <item itemvalue="LaTeX.VAM_15_Quantum_Gravity" />
       <item itemvalue="LaTeX.VAM_15_Quantum_Gravity_updated" />
       <item itemvalue="LaTeX.VAM-0-Analogies" />
+      <item itemvalue="LaTeX.VAM-11-Master_Equation_for_Particle_Masses" />
+      <item itemvalue="LaTeX.VAM-12-Fractal_Swirl" />
+      <item itemvalue="LaTeX.VAM-14-Topological_Fluid_Dynamics_Lagrangian" />
       <item itemvalue="Python.knots" />
       <item itemvalue="Python.python -c &quot;import vambindings; print(vambindings)&quot;" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="LaTeX.VAM-14-Topological_Fluid_Dynamics_Lagrangian" />
+        <item itemvalue="LaTeX.VAM-12-Fractal_Swirl" />
+        <item itemvalue="LaTeX.VAM-11-Master_Equation_for_Particle_Masses" />
         <item itemvalue="LaTeX.VAM-0-Analogies" />
       </list>
     </recent_temporary>
@@ -999,13 +746,13 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.23591.19" />
-        <option value="bundled-js-predefined-d6986cc7102b-6be00b7b0f42-JavaScript-IU-252.23591.19" />
+        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-PY-251.26927.90" />
+        <option value="bundled-python-sdk-41e8cd69c857-64d779b69b7a-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.26927.90" />
       </set>
     </attachedChunks>
   </component>
   <component name="TaskManager">
-    <task active="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" id="Default" summary="Default task">
+    <task active="true" id="Default" summary="Default task">
       <changelist id="6f2a8139-c825-4497-876b-70e1a130c5c3" name="Changes" comment="" />
       <created>1751631523297</created>
       <option name="number" value="Default" />
@@ -1061,6 +808,9 @@
       <workItem from="1752914950937" duration="659000" />
       <workItem from="1752940061086" duration="382000" />
       <workItem from="1752951983139" duration="14855000" />
+      <workItem from="1753171215550" duration="478000" />
+      <workItem from="1753171757901" duration="2335000" />
+      <workItem from="1753174482586" duration="19376000" />
     </task>
     <task id="LOCAL-00001" summary="Made MASTER paper, VAM4, VAM12.&#10;Added Knot images">
       <created>1751925083082</created>
@@ -1160,7 +910,14 @@
       <option name="project" value="LOCAL" />
       <updated>1752852063646</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Add new knot series data files for various knots; include detailed comments for clarity and processing instructions">
+      <created>1753171412920</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1753171412920</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1209,7 +966,8 @@
     <MESSAGE value="Add VAM front page LaTeX document and refactor workspace.xml for improved project structure" />
     <MESSAGE value="Refactor file structure by renaming ScanCropperAligner.py to NotebookScanCropperAligner.py; update module path in vamBindings.py for Python 3.12 compatibility; add LastTest.log for testing logs; update paths in testknot.py for image saving; add new LaTeX documents and bibliography files for quantum computing research." />
     <MESSAGE value="Add new vorticity dynamics and thermodynamics modules; implement circulation and enstrophy calculations; update bindings and examples for enhanced fluid dynamics analysis" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add new vorticity dynamics and thermodynamics modules; implement circulation and enstrophy calculations; update bindings and examples for enhanced fluid dynamics analysis" />
+    <MESSAGE value="Add new knot series data files for various knots; include detailed comments for clarity and processing instructions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add new knot series data files for various knots; include detailed comments for clarity and processing instructions" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
@@ -1217,56 +975,59 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/VAM$vam_vs_gr_potential_plot.coverage" NAME="vam_vs_gr_potential_plot Coverage Results" MODIFIED="1751903749996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
-    <SUITE FILE_PATH="coverage/VAMCore$knots.coverage" NAME="knots Coverage Results" MODIFIED="1752973335370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
-    <SUITE FILE_PATH="coverage/VAMCore$knot_6_2.coverage" NAME="knot_6_2 Coverage Results" MODIFIED="1752971761263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
-    <SUITE FILE_PATH="coverage/VAM$Rodin_magnetic_fields.coverage" NAME="Rodin_magnetic_fields Coverage Results" MODIFIED="1752427869291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$all_knots.coverage" NAME="all_knots Coverage Results" MODIFIED="1752435420032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_5_Lagrangian_Gravity_Electromagnetism/images" />
     <SUITE FILE_PATH="coverage/VAMCore$autoknot.coverage" NAME="autoknot Coverage Results" MODIFIED="1752972268197" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
-    <SUITE FILE_PATH="coverage/VAMCore$bubble.coverage" NAME="bubble Coverage Results" MODIFIED="1752966915606" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAMCore$8knot_Trefoil.coverage" NAME="8knot-Trefoil Coverage Results" MODIFIED="1752969413265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$03_magnetic_round_coil.coverage" NAME="03_magnetic round coil Coverage Results" MODIFIED="1752425539443" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$TimeConstruct.coverage" NAME="TimeConstruct Coverage Results" MODIFIED="1751915068127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - 2 Swirl Clocks/images" />
-    <SUITE FILE_PATH="coverage/VAM$8knot.coverage" NAME="8knot Coverage Results" MODIFIED="1752424545584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$reference_cleaning.coverage" NAME="reference_cleaning Coverage Results" MODIFIED="1751967331566" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/VAM$rotating_current_rodin_fields.coverage" NAME="rotating_current_rodin_fields Coverage Results" MODIFIED="1752424861440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAMCore$cropper.coverage" NAME="cropper Coverage Results" MODIFIED="1752869008603" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/VAM$magneticCircle.coverage" NAME="magneticCircle Coverage Results" MODIFIED="1752426259414" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAMCore$8knot.coverage" NAME="8knot Coverage Results" MODIFIED="1752969741067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$TemporalOntology.coverage" NAME="TemporalOntology Coverage Results" MODIFIED="1753193206663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images" />
     <SUITE FILE_PATH="coverage/VAMCore$swirltorus36_knots.coverage" NAME="swirltorus36 knots Coverage Results" MODIFIED="1752966295911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations" />
+    <SUITE FILE_PATH="coverage/VAM$trefoil_field_lines.coverage" NAME="trefoil_field_lines Coverage Results" MODIFIED="1752644028053" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAMpyBindings/examples" />
+    <SUITE FILE_PATH="coverage/VAM$03_magnetic_round_coil.coverage" NAME="03_magnetic round coil Coverage Results" MODIFIED="1752425539443" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAMCore$doublestarshipteste.coverage" NAME="doublestarshipteste Coverage Results" MODIFIED="1752968462704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAMCore$8knot.coverage" NAME="8knot Coverage Results" MODIFIED="1752969741067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$quarck_streamlines.coverage" NAME="quarck streamlines Coverage Results" MODIFIED="1752596530929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/VAM$TimeConstruct.coverage" NAME="TimeConstruct Coverage Results" MODIFIED="1751915068127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - 2 Swirl Clocks/images" />
+    <SUITE FILE_PATH="coverage/VAM$photonAnimation.coverage" NAME="photonAnimation Coverage Results" MODIFIED="1752424817557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
+    <SUITE FILE_PATH="coverage/VAM$6_2knot.coverage" NAME="6_2knot Coverage Results" MODIFIED="1752431244452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$torus.coverage" NAME="torus Coverage Results" MODIFIED="1752431773431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
+    <SUITE FILE_PATH="coverage/VAM$Rodin_magnetic_fields.coverage" NAME="Rodin_magnetic_fields Coverage Results" MODIFIED="1752427869291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$8knot.coverage" NAME="8knot Coverage Results" MODIFIED="1752424545584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
+    <SUITE FILE_PATH="coverage/VAM$magneticCircle.coverage" NAME="magneticCircle Coverage Results" MODIFIED="1752426259414" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAMCore$03_slice_biot.coverage" NAME="03_slice biot Coverage Results" MODIFIED="1752968655991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$Helicity.coverage" NAME="Helicity Coverage Results" MODIFIED="1751904879608" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
+    <SUITE FILE_PATH="coverage/VAM$02_Starship_2_inv.coverage" NAME="02_Starship-2 inv Coverage Results" MODIFIED="1752424773159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
     <SUITE FILE_PATH="coverage/VAM$change_bib_to_footnoting.coverage" NAME="change_bib_to_footnoting Coverage Results" MODIFIED="1752345948506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_15_Quantum_Gravity" />
+    <SUITE FILE_PATH="coverage/VAMCore$8knot_Trefoil.coverage" NAME="8knot-Trefoil Coverage Results" MODIFIED="1752969413265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
     <SUITE FILE_PATH="coverage/VAMCore$test.coverage" NAME="test Coverage Results" MODIFIED="1752969406787" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$MagneticCircleRodin.coverage" NAME="MagneticCircleRodin Coverage Results" MODIFIED="1752427883514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$torusspirals.coverage" NAME="torusspirals Coverage Results" MODIFIED="1752431790353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
+    <SUITE FILE_PATH="coverage/VAM$knot_6_2.coverage" NAME="knot_6_2 Coverage Results" MODIFIED="1753171538416" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
+    <SUITE FILE_PATH="coverage/VAM$6_2_topview.coverage" NAME="6_2_topview Coverage Results" MODIFIED="1751908053943" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
     <SUITE FILE_PATH="coverage/VAM$NODES.coverage" NAME="NODES Coverage Results" MODIFIED="1752427455247" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
     <SUITE FILE_PATH="coverage/VAM$7_4knot.coverage" NAME="7_4knot Coverage Results" MODIFIED="1752431182408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$photonAnimation.coverage" NAME="photonAnimation Coverage Results" MODIFIED="1752424817557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$trefoil_field_lines.coverage" NAME="trefoil_field_lines Coverage Results" MODIFIED="1752644028053" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAMpyBindings/examples" />
-    <SUITE FILE_PATH="coverage/VAMCore$doublestarship.coverage" NAME="doublestarship Coverage Results" MODIFIED="1752968481994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAMCore$03_Starship_3phase_36points_18_bidirectional.coverage" NAME="03_Starship-3phase-36points-18 bidirectional Coverage Results" MODIFIED="1752968378418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$torus.coverage" NAME="torus Coverage Results" MODIFIED="1752431773431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
-    <SUITE FILE_PATH="coverage/VAM$MoleculeWeight.coverage" NAME="MoleculeWeight Coverage Results" MODIFIED="1752073629003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM-MASTER Paper" />
+    <SUITE FILE_PATH="coverage/VAM$reference_cleaning.coverage" NAME="reference_cleaning Coverage Results" MODIFIED="1751967331566" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/VAM$knots.coverage" NAME="knots Coverage Results" MODIFIED="1753171628251" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
     <SUITE FILE_PATH="coverage/VAMCore$rotating_current_rodin_fields.coverage" NAME="rotating_current_rodin_fields Coverage Results" MODIFIED="1752969037957" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$TemporalOntology.coverage" NAME="TemporalOntology Coverage Results" MODIFIED="1751921657061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
-    <SUITE FILE_PATH="coverage/VAM$quarck_streamlines.coverage" NAME="quarck streamlines Coverage Results" MODIFIED="1752596530929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/VAM$testknot.coverage" NAME="testknot Coverage Results" MODIFIED="1752608691698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/VAM$MoleculeWeight.coverage" NAME="MoleculeWeight Coverage Results" MODIFIED="1752073629003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM-MASTER Paper" />
+    <SUITE FILE_PATH="coverage/VAM$MagneticCircleRodin.coverage" NAME="MagneticCircleRodin Coverage Results" MODIFIED="1752427883514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAMCore$03_Starship_3phase_36points_18_bidirectional.coverage" NAME="03_Starship-3phase-36points-18 bidirectional Coverage Results" MODIFIED="1752968378418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$autoknot.coverage" NAME="autoknot Coverage Results" MODIFIED="1753171640814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
     <SUITE FILE_PATH="coverage/VAM$8knot_Trefoil.coverage" NAME="8knot-Trefoil Coverage Results" MODIFIED="1752424632219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$timediagram.coverage" NAME="timediagram Coverage Results" MODIFIED="1752051334138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - 0 Einsteins Æther" />
-    <SUITE FILE_PATH="coverage/VAM$6_2knot.coverage" NAME="6_2knot Coverage Results" MODIFIED="1752431244452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$02_Starship_2_inv.coverage" NAME="02_Starship-2 inv Coverage Results" MODIFIED="1752424773159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$Helicity.coverage" NAME="Helicity Coverage Results" MODIFIED="1751904879608" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
-    <SUITE FILE_PATH="coverage/VAM$magneticCircleArrows.coverage" NAME="magneticCircleArrows Coverage Results" MODIFIED="1752425627820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAMCore$doublestarshipteste.coverage" NAME="doublestarshipteste Coverage Results" MODIFIED="1752968462704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$doublestarship.coverage" NAME="doublestarship Coverage Results" MODIFIED="1752427975246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
     <SUITE FILE_PATH="coverage/VAMCore$NODES.coverage" NAME="NODES Coverage Results" MODIFIED="1752967419859" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
     <SUITE FILE_PATH="coverage/VAMCore$02_Starship_3phase_36points.coverage" NAME="02_Starship-3phase-36points Coverage Results" MODIFIED="1752968703840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$testknot.coverage" NAME="testknot Coverage Results" MODIFIED="1752608691698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/VAM$all_knots.coverage" NAME="all_knots Coverage Results" MODIFIED="1752435420032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_5_Lagrangian_Gravity_Electromagnetism/images" />
     <SUITE FILE_PATH="coverage/VAMCore$.coverage" NAME=" Coverage Results" MODIFIED="1752957951546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/VAM$torusspirals.coverage" NAME="torusspirals Coverage Results" MODIFIED="1752431790353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
     <SUITE FILE_PATH="coverage/VAM$dipole.coverage" NAME="dipole Coverage Results" MODIFIED="1751969712280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
-    <SUITE FILE_PATH="coverage/VAM$proton_neutron_weigth.coverage" NAME="proton_neutron_weigth Coverage Results" MODIFIED="1751848726214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM-MASTER Paper" />
-    <SUITE FILE_PATH="coverage/VAM$6_2_topview.coverage" NAME="6_2_topview Coverage Results" MODIFIED="1751908053943" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
-    <SUITE FILE_PATH="coverage/VAMCore$6274.coverage" NAME="6274 Coverage Results" MODIFIED="1752709477549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_15_Quantum_Gravity" />
     <SUITE FILE_PATH="coverage/VAM$doublestarshipteste.coverage" NAME="doublestarshipteste Coverage Results" MODIFIED="1752427391084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$magneticCircleArrows.coverage" NAME="magneticCircleArrows Coverage Results" MODIFIED="1752425627820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$vam_vs_gr_potential_plot.coverage" NAME="vam_vs_gr_potential_plot Coverage Results" MODIFIED="1751903749996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
+    <SUITE FILE_PATH="coverage/VAMCore$doublestarship.coverage" NAME="doublestarship Coverage Results" MODIFIED="1752968481994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$timediagram.coverage" NAME="timediagram Coverage Results" MODIFIED="1752051334138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - 0 Einsteins Æther" />
+    <SUITE FILE_PATH="coverage/VAM$proton_neutron_weigth.coverage" NAME="proton_neutron_weigth Coverage Results" MODIFIED="1751848726214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM-MASTER Paper" />
+    <SUITE FILE_PATH="coverage/VAMCore$6274.coverage" NAME="6274 Coverage Results" MODIFIED="1752709477549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_15_Quantum_Gravity" />
+    <SUITE FILE_PATH="coverage/VAMCore$bubble.coverage" NAME="bubble Coverage Results" MODIFIED="1752966915606" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$doublestarship.coverage" NAME="doublestarship Coverage Results" MODIFIED="1752427975246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAMCore$knot_6_2.coverage" NAME="knot_6_2 Coverage Results" MODIFIED="1752971761263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
+    <SUITE FILE_PATH="coverage/VAMCore$cropper.coverage" NAME="cropper Coverage Results" MODIFIED="1752869008603" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/VAM$rotating_current_rodin_fields.coverage" NAME="rotating_current_rodin_fields Coverage Results" MODIFIED="1752424861440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
+    <SUITE FILE_PATH="coverage/VAMCore$knots.coverage" NAME="knots Coverage Results" MODIFIED="1752973335370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
     <SUITE FILE_PATH="coverage/VAMCore$Rodin_magnetic_fields.coverage" NAME="Rodin_magnetic_fields Coverage Results" MODIFIED="1752967471245" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAMCore$03_slice_biot.coverage" NAME="03_slice biot Coverage Results" MODIFIED="1752968655991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
   </component>
 </project>
