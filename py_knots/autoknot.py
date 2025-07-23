@@ -111,7 +111,7 @@ def redraw(_):
         ax.set_axis_off()
         axes.append(ax)
 
-    plt.tight_layout(rect=[0.2,0,1,1])
+    plt.tight_layout(rect=(0.2,0,1,1))
     fig.canvas.draw_idle()
 
 check.on_clicked(redraw)

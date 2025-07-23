@@ -25,28 +25,41 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f2a8139-c825-4497-876b-70e1a130c5c3" name="Changes" comment="Add new knot series data files for various knots; include detailed comments for clarity and processing instructions">
-      <change afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/TemporalOntologyv2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="6f2a8139-c825-4497-876b-70e1a130c5c3" name="Changes" comment="Update project configuration and documentation; modify Python SDK path, correct DOI references, and enhance LaTeX document metadata for clarity">
+      <change afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/01_Introduction.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/02_Rejection_Æther.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/03_MultimodalTime.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/04_ConnectionToVAM.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/05_ConclusionOutlook.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/A1_Helmholtz.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/A2_Kelvin.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/A3_Maxwell.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/A4_Einstein.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/A5_VAM.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/A6_Simultaneity.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/plot_HistoryTemporalOntologyWesternScience.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/plot_OntologyOfMass.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/plot_SimultaneityTheories.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/plot_WaveParticle.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_Experiments/PressureDropForceField.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_Experiments/Warpdrive.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_Experiments/fieldpressure.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_Experiments/warpdrive.bib" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM - Appendix All/sections/A11_DerivationGravitationalModification.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Appendix All/sections/A11_DerivationGravitationalModification.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/VAM.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm.bib" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm.bib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - Appendix All/Appendix_WarpDrive.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_Experiments/Appendix_WarpDrive.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_11_Master_Equation_for_Particle_Masses/VAM-11-Master_Equation_for_Particle_Masses.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_11_Master_Equation_for_Particle_Masses/VAM-11-Master_Equation_for_Particle_Masses.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_11_Master_Equation_for_Particle_Masses/sections/main_2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_11_Master_Equation_for_Particle_Masses/sections/main_2.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_12_Fractal_Swirl/VAM-12-Fractal_Swirl.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_12_Fractal_Swirl/VAM-12-Fractal_Swirl.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_14_Topological_Fluid_Dynamics_Lagrangian/VAM-14-Topological_Fluid_Dynamics_Lagrangian.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_14_Topological_Fluid_Dynamics_Lagrangian/VAM-14-Topological_Fluid_Dynamics_Lagrangian.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_15_Quantum_Gravity/VAM_15_Quantum_Gravity_small.bib" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_15_Quantum_Gravity/VAM_15_Quantum_Gravity_small.bib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/TemporalOntology.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/TemporalOntology.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/TemporalOntology.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/TemporalOntology.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/TemporalOntologyKairosMoment.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/TemporalOntologyKairosMoment.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/TemporalOntologyv2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/TemporalOntologyv2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_16_QuantumComputing/Knot_Logic_Gates.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_16_QuantumComputing/Swirl_Bit_Taxonomy.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_16_QuantumComputing/Swirl_Field_QED.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_16_QuantumComputing/VAM_Quantum_Computing_Blueprint.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_16_QuantumComputing/VAM-16-Quantum_Computing_Blueprint.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_16_QuantumComputing/knot_logic.bib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_16_QuantumComputing/swirl_bits.bib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_16_QuantumComputing/swirl_qed.bib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_16_QuantumComputing/vam_quantum.bib" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_16_QuantumComputing/vam_quantum.bib" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/VAM-11-Master_Equation_for_Particle_Masses.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/VAM-11-Master_Equation_for_Particle_Masses.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/VAM-12-Fractal_Swirl.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/VAM-12-Fractal_Swirl.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/VAM-14-Topological_Fluid_Dynamics_Lagrangian.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/VAM-14-Topological_Fluid_Dynamics_Lagrangian.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/references.bib" beforeDir="false" afterPath="$PROJECT_DIR$/references.bib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/WarpDrive.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/WarpDrive.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py_knots/autoknot.py" beforeDir="false" afterPath="$PROJECT_DIR$/py_knots/autoknot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py_knots/knot.7_4.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/py_knots/knot.7_4.fseries" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="false" />
@@ -88,6 +101,9 @@
     &quot;assignee&quot;: &quot;bg-omar&quot;
   }
 }</component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="2c278c1a-7324-46f9-aef5-4039844fc58e" />
+  </component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/bg-omar/VAM.git&quot;,
@@ -112,6 +128,7 @@
     "BibTeX.12-OnAVortexBasedLagrangianUnificationGravityElectromagnetism bibliography.executor": "Run",
     "BibTeX.4-StandardModel-Lagrangian VAM bibliography.executor": "Run",
     "BibTeX.5-Topological_Fluid_Dynamic_Lagrangian_In_VAM bibliography.executor": "Run",
+    "BibTeX.Appendix_WarpDrive bibliography.executor": "Run",
     "BibTeX.EMlagrangian.executor": "Run",
     "BibTeX.EXPERIMENTAL PROPOSITION_lazer_c_e bibliography.executor": "Run",
     "BibTeX.LagrangianGravityElectromagnetism bibliography.executor": "Run",
@@ -141,6 +158,7 @@
     "LaTeX.4-StandardModel-Lagrangian VAM.executor": "Run",
     "LaTeX.5-Topological_Fluid_Dynamic_Lagrangian_In_VAM.executor": "Run",
     "LaTeX.Appendix_PhotonAsDipole.executor": "Run",
+    "LaTeX.Appendix_WarpDrive.executor": "Run",
     "LaTeX.EXPERIMENTAL PROPOSITION_lazer_c_e.executor": "Run",
     "LaTeX.Knot_Logic_Gates.executor": "Run",
     "LaTeX.Knot_Taxonomy.executor": "Run",
@@ -163,6 +181,7 @@
     "LaTeX.VAM_15_Quantum_Gravity.executor": "Run",
     "LaTeX.VAM_15_Quantum_Gravity_updated.executor": "Run",
     "LaTeX.VAM_framework.executor": "Run",
+    "LaTeX.Warpdrive.executor": "Run",
     "LaTeX.appendix_QuantizationOfVAM.executor": "Run",
     "LaTeX.master-formula.executor": "Run",
     "LaTeX.testknot.executor": "Run",
@@ -185,6 +204,7 @@
     "Python.MagneticCircleRodin.executor": "Run",
     "Python.MoleculeWeight.executor": "Run",
     "Python.NODES.executor": "Run",
+    "Python.PressureDropForceField.executor": "Run",
     "Python.Rodin_magnetic_fields.executor": "Run",
     "Python.TemporalOntology.executor": "Run",
     "Python.TimeConstruct.executor": "Run",
@@ -233,7 +253,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.47126436",
-    "settings.editor.selected.configurable": "preferences.fileTypes",
+    "settings.editor.selected.configurable": "preferences.editor",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -246,11 +266,11 @@
       <recent name="C:\Users\mr\IdeaProjects\VAM" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\workspace\projects\VAM\VAM_Experiments" />
       <recent name="C:\Users\mr\IdeaProjects\VAM" />
       <recent name="C:\Users\mr\IdeaProjects\VAM\docs" />
       <recent name="C:\Users\mr\IdeaProjects\VAM\images" />
       <recent name="C:\Users\mr\IdeaProjects\VAM\auxil" />
-      <recent name="C:\Users\mr\IdeaProjects\VAM\VAMpyBindings" />
     </key>
   </component>
   <component name="RunManager" selected="LaTeX.VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm">
@@ -258,6 +278,18 @@
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
       </method>
+    </configuration>
+    <configuration name="Appendix_WarpDrive bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler>BIBTEX</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/VAM_Experiments/Appendix_WarpDrive.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
+        <latex-distribution>MIKTEX</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
     </configuration>
     <configuration name="EXPERIMENTAL PROPOSITION_lazer_c_e bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify-bibtex>
@@ -277,7 +309,7 @@
         <compiler-path />
         <compiler-arguments />
         <envs />
-        <main-file>$PROJECT_DIR$/VAM_16_QuantumComputing/Knot_Logic_Gates.tex</main-file>
+        <main-file />
         <aux-dir />
         <latex-distribution>MIKTEX</latex-distribution>
       </texify-bibtex>
@@ -391,6 +423,18 @@
       </texify-bibtex>
       <method v="2" />
     </configuration>
+    <configuration name="Warpdrive bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler>BIBTEX</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/VAM_Experiments/Warpdrive.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
+        <latex-distribution>MIKTEX</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify-bibtex>
         <compiler />
@@ -415,6 +459,29 @@
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="false" />
       </method>
+    </configuration>
+    <configuration name="Appendix_WarpDrive" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <require-focus>true</require-focus>
+        <viewer-command />
+        <compiler-arguments />
+        <envs />
+        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
+        <before-run-command />
+        <main-file>$PROJECT_DIR$/VAM_Experiments/Appendix_WarpDrive.tex</main-file>
+        <output-path>$PROJECT_DIR$/out</output-path>
+        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>MIKTEX</latex-distribution>
+        <has-been-run>true</has-been-run>
+        <bib-run-config>[BibTeX.Appendix_WarpDrive bibliography]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
     </configuration>
     <configuration name="VAM-0-Analogies" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify>
@@ -646,6 +713,29 @@
       </texify>
       <method v="2" />
     </configuration>
+    <configuration name="Warpdrive" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <require-focus>true</require-focus>
+        <viewer-command />
+        <compiler-arguments />
+        <envs />
+        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
+        <before-run-command />
+        <main-file>$PROJECT_DIR$/VAM_Experiments/Warpdrive.tex</main-file>
+        <output-path>$PROJECT_DIR$/out</output-path>
+        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>MIKTEX</latex-distribution>
+        <has-been-run>true</has-been-run>
+        <bib-run-config>[BibTeX.Warpdrive bibliography]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
     <configuration name="knots" type="PythonConfigurationType" factoryName="Python">
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -721,6 +811,8 @@
       <item itemvalue="BibTeX.EXPERIMENTAL PROPOSITION_lazer_c_e bibliography" />
       <item itemvalue="BibTeX.VAM-11-Master_Equation_for_Particle_Masses bibliography" />
       <item itemvalue="BibTeX.VAM-12-Fractal_Swirl bibliography" />
+      <item itemvalue="BibTeX.Appendix_WarpDrive bibliography" />
+      <item itemvalue="BibTeX.Warpdrive bibliography" />
       <item itemvalue="LaTeX.VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm" />
       <item itemvalue="LaTeX.VAM-10-Swirl_Induced_Curvature_as_the_Mechanism_of_Gravitation" />
       <item itemvalue="LaTeX.VAM-13-Beyond_Spacetime_Gravity_Time_Vorticity" />
@@ -728,6 +820,8 @@
       <item itemvalue="LaTeX.VAM_15_Quantum_Gravity" />
       <item itemvalue="LaTeX.VAM_15_Quantum_Gravity_updated" />
       <item itemvalue="LaTeX.VAM-0-Analogies" />
+      <item itemvalue="LaTeX.Appendix_WarpDrive" />
+      <item itemvalue="LaTeX.Warpdrive" />
       <item itemvalue="LaTeX.VAM-11-Master_Equation_for_Particle_Masses" />
       <item itemvalue="LaTeX.VAM-12-Fractal_Swirl" />
       <item itemvalue="LaTeX.VAM-14-Topological_Fluid_Dynamics_Lagrangian" />
@@ -736,10 +830,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="LaTeX.Warpdrive" />
+        <item itemvalue="LaTeX.Appendix_WarpDrive" />
         <item itemvalue="LaTeX.VAM-14-Topological_Fluid_Dynamics_Lagrangian" />
         <item itemvalue="LaTeX.VAM-12-Fractal_Swirl" />
         <item itemvalue="LaTeX.VAM-11-Master_Equation_for_Particle_Masses" />
-        <item itemvalue="LaTeX.VAM-0-Analogies" />
       </list>
     </recent_temporary>
   </component>
@@ -810,7 +905,9 @@
       <workItem from="1752951983139" duration="14855000" />
       <workItem from="1753171215550" duration="478000" />
       <workItem from="1753171757901" duration="2335000" />
-      <workItem from="1753174482586" duration="19376000" />
+      <workItem from="1753174482586" duration="19463000" />
+      <workItem from="1753203173524" duration="611000" />
+      <workItem from="1753262215646" duration="13934000" />
     </task>
     <task id="LOCAL-00001" summary="Made MASTER paper, VAM4, VAM12.&#10;Added Knot images">
       <created>1751925083082</created>
@@ -917,7 +1014,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753171412920</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Update project configuration and documentation; modify Python SDK path, correct DOI references, and enhance LaTeX document metadata for clarity">
+      <option name="closed" value="true" />
+      <created>1753201483462</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1753201483462</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -967,7 +1072,8 @@
     <MESSAGE value="Refactor file structure by renaming ScanCropperAligner.py to NotebookScanCropperAligner.py; update module path in vamBindings.py for Python 3.12 compatibility; add LastTest.log for testing logs; update paths in testknot.py for image saving; add new LaTeX documents and bibliography files for quantum computing research." />
     <MESSAGE value="Add new vorticity dynamics and thermodynamics modules; implement circulation and enstrophy calculations; update bindings and examples for enhanced fluid dynamics analysis" />
     <MESSAGE value="Add new knot series data files for various knots; include detailed comments for clarity and processing instructions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add new knot series data files for various knots; include detailed comments for clarity and processing instructions" />
+    <MESSAGE value="Update project configuration and documentation; modify Python SDK path, correct DOI references, and enhance LaTeX document metadata for clarity" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update project configuration and documentation; modify Python SDK path, correct DOI references, and enhance LaTeX document metadata for clarity" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
@@ -981,8 +1087,8 @@
     <SUITE FILE_PATH="coverage/VAM$trefoil_field_lines.coverage" NAME="trefoil_field_lines Coverage Results" MODIFIED="1752644028053" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAMpyBindings/examples" />
     <SUITE FILE_PATH="coverage/VAM$03_magnetic_round_coil.coverage" NAME="03_magnetic round coil Coverage Results" MODIFIED="1752425539443" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
     <SUITE FILE_PATH="coverage/VAMCore$doublestarshipteste.coverage" NAME="doublestarshipteste Coverage Results" MODIFIED="1752968462704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAMCore$8knot.coverage" NAME="8knot Coverage Results" MODIFIED="1752969741067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
     <SUITE FILE_PATH="coverage/VAM$quarck_streamlines.coverage" NAME="quarck streamlines Coverage Results" MODIFIED="1752596530929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/VAMCore$8knot.coverage" NAME="8knot Coverage Results" MODIFIED="1752969741067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
     <SUITE FILE_PATH="coverage/VAM$TimeConstruct.coverage" NAME="TimeConstruct Coverage Results" MODIFIED="1751915068127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - 2 Swirl Clocks/images" />
     <SUITE FILE_PATH="coverage/VAM$photonAnimation.coverage" NAME="photonAnimation Coverage Results" MODIFIED="1752424817557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
     <SUITE FILE_PATH="coverage/VAM$6_2knot.coverage" NAME="6_2knot Coverage Results" MODIFIED="1752431244452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
@@ -996,17 +1102,17 @@
     <SUITE FILE_PATH="coverage/VAM$change_bib_to_footnoting.coverage" NAME="change_bib_to_footnoting Coverage Results" MODIFIED="1752345948506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_15_Quantum_Gravity" />
     <SUITE FILE_PATH="coverage/VAMCore$8knot_Trefoil.coverage" NAME="8knot-Trefoil Coverage Results" MODIFIED="1752969413265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
     <SUITE FILE_PATH="coverage/VAMCore$test.coverage" NAME="test Coverage Results" MODIFIED="1752969406787" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$knot_6_2.coverage" NAME="knot_6_2 Coverage Results" MODIFIED="1753171538416" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
     <SUITE FILE_PATH="coverage/VAM$6_2_topview.coverage" NAME="6_2_topview Coverage Results" MODIFIED="1751908053943" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
+    <SUITE FILE_PATH="coverage/VAM$knot_6_2.coverage" NAME="knot_6_2 Coverage Results" MODIFIED="1753282968507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
     <SUITE FILE_PATH="coverage/VAM$NODES.coverage" NAME="NODES Coverage Results" MODIFIED="1752427455247" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
     <SUITE FILE_PATH="coverage/VAM$7_4knot.coverage" NAME="7_4knot Coverage Results" MODIFIED="1752431182408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
     <SUITE FILE_PATH="coverage/VAM$reference_cleaning.coverage" NAME="reference_cleaning Coverage Results" MODIFIED="1751967331566" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/VAM$knots.coverage" NAME="knots Coverage Results" MODIFIED="1753171628251" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
+    <SUITE FILE_PATH="coverage/VAM$knots.coverage" NAME="knots Coverage Results" MODIFIED="1753282948097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
     <SUITE FILE_PATH="coverage/VAMCore$rotating_current_rodin_fields.coverage" NAME="rotating_current_rodin_fields Coverage Results" MODIFIED="1752969037957" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
     <SUITE FILE_PATH="coverage/VAM$MoleculeWeight.coverage" NAME="MoleculeWeight Coverage Results" MODIFIED="1752073629003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM-MASTER Paper" />
     <SUITE FILE_PATH="coverage/VAM$MagneticCircleRodin.coverage" NAME="MagneticCircleRodin Coverage Results" MODIFIED="1752427883514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
     <SUITE FILE_PATH="coverage/VAMCore$03_Starship_3phase_36points_18_bidirectional.coverage" NAME="03_Starship-3phase-36points-18 bidirectional Coverage Results" MODIFIED="1752968378418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$autoknot.coverage" NAME="autoknot Coverage Results" MODIFIED="1753171640814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
+    <SUITE FILE_PATH="coverage/VAM$autoknot.coverage" NAME="autoknot Coverage Results" MODIFIED="1753284526932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
     <SUITE FILE_PATH="coverage/VAM$8knot_Trefoil.coverage" NAME="8knot-Trefoil Coverage Results" MODIFIED="1752424632219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
     <SUITE FILE_PATH="coverage/VAMCore$NODES.coverage" NAME="NODES Coverage Results" MODIFIED="1752967419859" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
     <SUITE FILE_PATH="coverage/VAMCore$02_Starship_3phase_36points.coverage" NAME="02_Starship-3phase-36points Coverage Results" MODIFIED="1752968703840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
@@ -1023,6 +1129,7 @@
     <SUITE FILE_PATH="coverage/VAM$proton_neutron_weigth.coverage" NAME="proton_neutron_weigth Coverage Results" MODIFIED="1751848726214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM-MASTER Paper" />
     <SUITE FILE_PATH="coverage/VAMCore$6274.coverage" NAME="6274 Coverage Results" MODIFIED="1752709477549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_15_Quantum_Gravity" />
     <SUITE FILE_PATH="coverage/VAMCore$bubble.coverage" NAME="bubble Coverage Results" MODIFIED="1752966915606" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$PressureDropForceField.coverage" NAME="PressureDropForceField Coverage Results" MODIFIED="1753271119280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_Experiments" />
     <SUITE FILE_PATH="coverage/VAM$doublestarship.coverage" NAME="doublestarship Coverage Results" MODIFIED="1752427975246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
     <SUITE FILE_PATH="coverage/VAMCore$knot_6_2.coverage" NAME="knot_6_2 Coverage Results" MODIFIED="1752971761263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
     <SUITE FILE_PATH="coverage/VAMCore$cropper.coverage" NAME="cropper Coverage Results" MODIFIED="1752869008603" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
