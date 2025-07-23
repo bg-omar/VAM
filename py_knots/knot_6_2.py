@@ -29,16 +29,16 @@ def knot_6_2(s):
 s = np.linspace(0, 2*np.pi, 1000)
 x, y, z = knot_6_2(s)
 
-# Plot the knot in 3D
-fig = plt.figure(figsize=(8,6))
-ax = fig.add_subplot(111, projection='3d')
-ax.plot(x, y, z, color='navy', linewidth=2)
-ax.set_xlabel('x')
-ax.set_ylabel('y')
-ax.set_zlabel('z')
-ax.set_title('6_2 Knot (Fourier Parameterization)')
-ax.grid(False)
-plt.tight_layout()
+# # Plot the knot in 3D
+# fig = plt.figure(figsize=(8,6))
+# ax = fig.add_subplot(111, projection='3d')
+# ax.plot(x, y, z, color='navy', linewidth=2)
+# ax.set_xlabel('x')
+# ax.set_ylabel('y')
+# ax.set_zlabel('z')
+# ax.set_title('6_2 Knot (Fourier Parameterization)')
+# ax.grid(False)
+# plt.tight_layout()
 
 
 
@@ -210,20 +210,20 @@ coords = np.array([
 ])
 
 x, y, z = coords[:, 0], coords[:, 1], coords[:, 2]
-
-# 3D plot
-fig = plt.figure(figsize=(8, 6))
-ax = fig.add_subplot(111, projection='3d')
-ax.plot(x, y, z, '-', lw=2, color='darkorange')
-ax.scatter([x[0]], [y[0]], [z[0]], color='red', label='Start')
-ax.scatter([x[-1]], [y[-1]], [z[-1]], color='blue', label='End')
-ax.set_xlabel('x')
-ax.set_ylabel('y')
-ax.set_zlabel('z')
-ax.set_title('6₍₂₎ Knot (Coordinate Data)')
-ax.legend()
-plt.tight_layout()
-
+#
+# # 3D plot
+# fig = plt.figure(figsize=(8, 6))
+# ax = fig.add_subplot(111, projection='3d')
+# ax.plot(x, y, z, '-', lw=2, color='darkorange')
+# ax.scatter([x[0]], [y[0]], [z[0]], color='red', label='Start')
+# ax.scatter([x[-1]], [y[-1]], [z[-1]], color='blue', label='End')
+# ax.set_xlabel('x')
+# ax.set_ylabel('y')
+# ax.set_zlabel('z')
+# ax.set_title('6₍₂₎ Knot (Coordinate Data)')
+# ax.legend()
+# plt.tight_layout()
+#
 
 
 # Coefficient arrays (j runs from 1 to 10)
@@ -263,22 +263,22 @@ s = np.linspace(0, 2*np.pi, 1000)
 x, y, z = knot_6_2p(s)
 dx, dy, dz = knot_6_2p_tangent(s)
 
-# Plot knot and tangent vectors
-fig = plt.figure(figsize=(9, 7))
-ax = fig.add_subplot(111, projection='3d')
-ax.plot(x, y, z, color='slateblue', lw=2, label='Knot centerline')
-
-# Show tangent vectors every N points
-N = 50
-ax.quiver(x[::N], y[::N], z[::N],
-          dx[::N], dy[::N], dz[::N],
-          length=0.2, normalize=True, color='crimson', linewidth=1)
-
-ax.set_xlabel('x')
-ax.set_ylabel('y')
-ax.set_zlabel('z')
-ax.set_title(r'$6_2$ Knot with Tangent Vectors')
-plt.tight_layout()
+# # Plot knot and tangent vectors
+# fig = plt.figure(figsize=(9, 7))
+# ax = fig.add_subplot(111, projection='3d')
+# ax.plot(x, y, z, color='slateblue', lw=2, label='Knot centerline')
+#
+# # Show tangent vectors every N points
+# N = 50
+# ax.quiver(x[::N], y[::N], z[::N],
+#           dx[::N], dy[::N], dz[::N],
+#           length=0.2, normalize=True, color='crimson', linewidth=1)
+#
+# ax.set_xlabel('x')
+# ax.set_ylabel('y')
+# ax.set_zlabel('z')
+# ax.set_title(r'$6_2$ Knot with Tangent Vectors')
+# plt.tight_layout()
 
 
 from matplotlib import cm
@@ -293,15 +293,105 @@ curvature = np.linalg.norm(dT_ds, axis=1)
 norm = plt.Normalize(curvature.min(), curvature.max())
 colors = cm.viridis(norm(curvature))
 
-fig = plt.figure(figsize=(9, 7))
-ax = fig.add_subplot(111, projection='3d')
+# fig = plt.figure(figsize=(9, 7))
+# ax = fig.add_subplot(111, projection='3d')
+#
+# for i in range(len(x)-1):
+#     ax.plot(x[i:i+2], y[i:i+2], z[i:i+2], color=colors[i])
+#
+# ax.set_title(r'$6_2$ Knot Colored by Local Curvature (Vorticity Proxy)')
+# ax.set_xlabel('x')
+# ax.set_ylabel('y')
+# ax.set_zlabel('z')
+# plt.tight_layout()
+# plt.show()
 
-for i in range(len(x)-1):
-    ax.plot(x[i:i+2], y[i:i+2], z[i:i+2], color=colors[i])
+# New figure with neon effect
+fig = plt.figure(figsize=(12, 10), facecolor='black')
+ax = fig.add_subplot(111, projection='3d', facecolor='black')
 
-ax.set_title(r'$6_2$ Knot Colored by Local Curvature (Vorticity Proxy)')
-ax.set_xlabel('x')
-ax.set_ylabel('y')
-ax.set_zlabel('z')
+# Apply "neon glow" by layering lines with decreasing alpha and increasing width
+# Boost glow by adding more layers
+for glow in range(15, 0, -1):  # More layers = stronger glow
+    alpha = 0.01 * glow**1.3   # Exponential alpha for better blending
+    linewidth = 1 + glow / 2
+    ax.plot(x, y, z, color=(0.0, 1.0, 1.0, alpha), linewidth=linewidth)
+
+for i in range(0, len(x), 5):
+    size = 8
+    alpha = 0.2 + 0.6 * (i / len(x))
+    ax.scatter([x[i]], [y[i]], [z[i]], s=size, color='cyan', alpha=alpha)
+
+
+# Final main line on top
+ax.plot(x, y, z, color=(0.0, 1.0, 1.0, 1.0), linewidth=1.5)
+
+# Add "æther haze" via faint scatter
+ax.scatter(x[::20], y[::20], z[::20], s=1, c='cyan', alpha=0.02)
+ax.scatter(x[::10], y[::10], z[::10], c='cyan', alpha=0.01, s=5)
+r = np.sqrt(x**2 + y**2 + z**2)
+fog_alpha = 0.01 + 0.03 * (r - r.min()) / (r.max() - r.min())
+ax.scatter(x, y, z, c='cyan', alpha=fog_alpha, s=2)
+
+# Turn off axes, grid, and ticks
+ax.set_axis_off()
+
 plt.tight_layout()
+plt.savefig("glowing_knot.png", dpi=300, transparent=True)
+
 plt.show()
+
+
+import numpy as np
+import pyvista as pv
+from pyvista import themes
+
+# Fourier coefficients (second set as in your script)
+a_x2 = np.array([0.101500,  0, -0.058576, 0, 0.010809, 0, -0.019292, 0, 0.021062, 0])
+b_x2 = np.array([0.063367,  0, -0.047834, 0, -0.123037, 0, 0.002397, 0, -0.027679, 0])
+a_y2 = np.array([0, -0.360746, 0, 0.008628, 0, -0.044936, 0, -0.003736, 0, -0.001866])
+b_y2 = np.array([0, -0.006923, 0, -0.021589, 0, 0.021844, 0, -0.004946, 0, 0.020238])
+a_z2 = np.array([0.018163, 0, 0.050709, 0, 0.101439, 0, -0.040565, 0, -0.001380, 0])
+b_z2 = np.array([-0.016010, 0, -0.083507, 0, -0.013338, 0, -0.010632, 0, 0.021509, 0])
+
+def knot(s, ax, bx, ay, by, az, bz):
+    x = y = z = np.zeros_like(s)
+    for j in range(len(ax)):
+        n = j + 1
+        x += ax[j] * np.cos(n*s) + bx[j] * np.sin(n*s)
+        y += ay[j] * np.cos(n*s) + by[j] * np.sin(n*s)
+        z += az[j] * np.cos(n*s) + bz[j] * np.sin(n*s)
+    return x, y, z
+
+# Sample the knot
+s = np.linspace(0, 2*np.pi, 2000)
+x, y, z = knot(s, a_x2, b_x2, a_y2, b_y2, a_z2, b_z2)
+
+# Create a tube mesh around the centerline
+points = np.vstack((x, y, z)).T
+line = pv.Spline(points, 2000)
+tube = line.tube(radius=0.03, n_sides=50)
+
+# Set up plotter with cinematic theme
+plotter = pv.Plotter(window_size=(1200, 900))
+plotter.set_background('black')
+theme = themes.DocumentTheme()
+theme.lighting = True
+plotter.theme = theme
+
+# Add tube with emissive (glow) material
+plotter.add_mesh(tube, color=(0, 255, 255), specular=1.0,
+                 smooth_shading=True, emissive=0.6)
+
+plotter.enable_ssao(radius=1.5, bias=0.05, kernel_size=256, blur=True)
+plotter.enable_anti_aliasing('ssaa')
+
+# Add soft point lights for bloom effect
+plotter.add_light(pv.Light(position=(2,2,2), color=(0.2,1,1), intensity=2))
+plotter.add_light(pv.Light(position=(-2,-1,0.5), color=(0.2,1,1), intensity=1.5))
+
+
+# Render with bloom-like tone mapping
+plotter.show(auto_close=False)
+plotter.camera_position = 'iso'  # Isometric view
+plotter.show(screenshot='knot_pyvista.png')

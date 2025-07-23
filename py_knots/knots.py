@@ -90,18 +90,14 @@ def plot_knots_grid_auto(paths):
         blocks = parse_fseries_multi(p)
         if not blocks:
             continue
-        # pick block with most harmonics
-        _, coeffs = max(blocks, key=lambda b: b[1]['a_x'].size)
-        # eval_fourier returns (x, y, z)
-        x, y, z = eval_fourier(coeffs['a_x'],
-                               coeffs['b_x'],
-                               coeffs['a_y'],
-                               coeffs['b_y'],
-                               coeffs['a_z'],
-                               coeffs['b_z'],
-                               s)
+        # pick block with most harmonics (size of a_x)
+        _, coeffs = max(blocks, key=lambda b: b[1][0].size)
+
+        x, y, z = eval_fourier(coeffs[0], coeffs[1], coeffs[2],
+                               coeffs[3], coeffs[4], coeffs[5], s)
         knots_pts.append((x, y, z))
         labels.append(os.path.basename(p))
+        all_pts.append(np.vstack((x, y, z)).T)  # ← you also forgot this!
 
     all_pts = np.vstack(all_pts)
     L = np.max(np.abs(all_pts))*1.1

@@ -2,21 +2,16 @@ import glob
 import os
 import numpy as np
 import matplotlib.pyplot as plt
-from matplotlib.widgets import CheckButtons
+from matplotlib.widgets import CheckButtons, Button
 from mpl_toolkits.mplot3d import Axes3D
-import spherogram
 import matplotlib
-matplotlib.use('TkAgg')  # Ensure it uses Tkinter backend
-import os
-script_name = os.path.splitext(os.path.basename(__file__))[0]
-import glob
-import os
-import numpy as np
-import matplotlib.pyplot as plt
-from matplotlib.widgets import CheckButtons
-from mpl_toolkits.mplot3d import Axes3D
+matplotlib.use('TkAgg')
 
-# --- Parse .fseries into a list of (header, coeff-dicts) blocks ---
+# --- Global states ---
+effects_enabled = False
+ignore_redraw = False
+
+# --- Fourier block parser ---
 def parse_fseries_multi(filename):
     knots = []
     header = None
@@ -25,13 +20,15 @@ def parse_fseries_multi(filename):
         for line in f:
             line = line.strip()
             if line.startswith('%'):
-                # save previous if any
                 if arrays['a_x']:
                     knots.append((header, {k: np.array(v) for k,v in arrays.items()}))
                     for v in arrays.values(): v.clear()
                 header = line.lstrip('%').strip()
                 continue
-            if not line:
+            if not line and arrays['a_x']:
+                knots.append((header, {k: np.array(v) for k,v in arrays.items()}))
+                for v in arrays.values(): v.clear()
+                header = None
                 continue
             parts = line.split()
             if len(parts)==6:
@@ -41,79 +38,159 @@ def parse_fseries_multi(filename):
         knots.append((header, {k: np.array(v) for k,v in arrays.items()}))
     return knots
 
-# --- Evaluate Fourier block to a (N×3) array of xyz points ---
 def eval_fourier_block(coeffs, s):
-    x = y = z = np.zeros_like(s)
+    x = np.zeros_like(s)
+    y = np.zeros_like(s)
+    z = np.zeros_like(s)
     for j in range(len(coeffs['a_x'])):
-        n = j+1
-        x += coeffs['a_x'][j]*np.cos(n*s) + coeffs['b_x'][j]*np.sin(n*s)
-        y += coeffs['a_y'][j]*np.cos(n*s) + coeffs['b_y'][j]*np.sin(n*s)
-        z += coeffs['a_z'][j]*np.cos(n*s) + coeffs['b_z'][j]*np.sin(n*s)
-    return np.vstack([x,y,z]).T
+        n = j + 1
+        x += coeffs['a_x'][j] * np.cos(n * s) + coeffs['b_x'][j] * np.sin(n * s)
+        y += coeffs['a_y'][j] * np.cos(n * s) + coeffs['b_y'][j] * np.sin(n * s)
+        z += coeffs['a_z'][j] * np.cos(n * s) + coeffs['b_z'][j] * np.sin(n * s)
+    return np.stack((x, y, z), axis=1)
 
-# --- Load all knots, pick richest block ---
-folder = 'fseries'
-paths = sorted(glob.glob(os.path.join(folder,'*.fseries')))
-labels = [os.path.basename(p) for p in paths]
-s = np.linspace(0,2*np.pi,1000)
+def compute_curvature(x, y, z):
+    dx = np.gradient(x)
+    dy = np.gradient(y)
+    dz = np.gradient(z)
+    d2x = np.gradient(dx)
+    d2y = np.gradient(dy)
+    d2z = np.gradient(dz)
+    num = np.sqrt((dy*d2z - dz*d2y)**2 + (dz*d2x - dx*d2z)**2 + (dx*d2y - dy*d2x)**2)
+    denom = (dx**2 + dy**2 + dz**2)**1.5 + 1e-8
+    return num / denom
+
+# --- Load and prepare knots ---
+folder = './'
+paths = sorted(glob.glob(os.path.join(folder, '*.fseries')))
+labels = [os.path.splitext(os.path.basename(p))[0].replace('knot','').replace('Knot','') for p in paths]
+s = np.linspace(0, 2*np.pi, 1000)
 
 knots = []
 for p in paths:
     blocks = parse_fseries_multi(p)
-    if not blocks:
-        knots.append(None)
-    else:
-        # pick block with max harmonics
+    if blocks:
         hdr, coeffs = max(blocks, key=lambda b: b[1]['a_x'].size)
-        knots.append(eval_fourier_block(coeffs, s))
+        pts = eval_fourier_block(coeffs, s)
+        curv = compute_curvature(pts[:,0], pts[:,1], pts[:,2])
+        knots.append((pts, curv))
+    else:
+        knots.append(None)
 
-# --- Initial checkbox state (all on) ---
 selected = [k is not None for k in knots]
 
-# --- Set up the figure with checkboxes + empty 3D grid area ---
-fig = plt.figure(figsize=(10,6))
-rax = fig.add_axes([0.01,0.1,0.15,0.8])
-check = CheckButtons(rax, labels, selected)
+# --- UI Setup ---
+fig = plt.figure(figsize=(14, 8))
+rax1 = fig.add_axes([0.01, 0.05, 0.12, 0.9])
+rax2 = fig.add_axes([0.14, 0.05, 0.12, 0.9])
+mid = len(labels) // 2
+check1 = CheckButtons(rax1, labels[:mid], selected[:mid])
+check2 = CheckButtons(rax2, labels[mid:], selected[mid:])
 
-axes = []  # to store current 3D axes
+# Buttons
+select_ax = fig.add_axes([0.4, 0.02, 0.12, 0.05])
+deselect_ax = fig.add_axes([0.55, 0.02, 0.12, 0.05])
+effects_ax = fig.add_axes([0.7, 0.02, 0.12, 0.05])
+select_btn = Button(select_ax, 'Select All')
+deselect_btn = Button(deselect_ax, 'Deselect All')
+effects_btn = Button(effects_ax, 'Toggle Effects')
+
+axes = []
 
 def redraw(_):
-    global axes
-    # update selected flags
-    for i,stat in enumerate(check.get_status()):
-        selected[i] = stat
+    global selected, axes, ignore_redraw
+    if ignore_redraw:
+        return
 
-    # remove old axes
+    new_status = list(check1.get_status()) + list(check2.get_status())
+    if new_status.count(True) == 0:
+        new_status[0] = True
+        check1.set_active(0)
+    selected = new_status
+
     for ax in axes:
         fig.delaxes(ax)
     axes.clear()
 
-    # build list of active knots
-    active = [k for k,sel in zip(knots,selected) if sel]
+    active = [k for k, sel in zip(knots, selected) if sel]
     if not active:
         fig.canvas.draw_idle()
         return
 
-    # grid dims
-    n = len(active)
-    cols = int(np.ceil(np.sqrt(n)))
-    rows = int(np.ceil(n/cols))
+    L = 0
+    centered_active = []
+    for pts, curv in active:
+        centroid = pts.mean(axis=0)
+        pts_centered = pts - centroid
+        radius = np.max(np.linalg.norm(pts_centered, axis=1))
+        L = max(L, radius)
+        centered_active.append((pts_centered, curv))
+    L *= 1.1
 
-    # compute global limits so all loops fit
-    allpts = np.vstack(active)
-    L = np.max(np.abs(allpts))*1.1
+    cols = int(np.ceil(np.sqrt(len(active))))
+    rows = int(np.ceil(len(active) / cols))
 
-    # create subplots
-    for idx, pts in enumerate(active):
-        ax = fig.add_subplot(rows,cols,idx+1,projection='3d')
-        ax.plot(pts[:,0],pts[:,1],pts[:,2],color='slateblue',lw=1.5)
-        ax.set_xlim(-L,L); ax.set_ylim(-L,L); ax.set_zlim(-L,L)
+    from matplotlib import cm
+    norm = plt.Normalize(0, 0.5)
+
+    for idx, (pts, curv) in enumerate(active):
+        ax = fig.add_subplot(rows, cols, idx+1, projection='3d')
+        x, y, z = pts[:,0], pts[:,1], pts[:,2]
+        if effects_enabled:
+            for i in range(len(x) - 1):
+                rgba = cm.plasma(norm(curv[i]))
+                ax.plot(x[i:i+2], y[i:i+2], z[i:i+2], color=rgba, lw=2)
+            for i in range(2, 0, -1):
+                ax.plot(x, y, z, color=(1, 1, 1, 0.04*i), lw=1+i)
+        else:
+            ax.plot(x, y, z, color='slateblue', lw=1.5)
+        ax.set_xlim(-L, L); ax.set_ylim(-L, L); ax.set_zlim(-L, L)
         ax.set_axis_off()
         axes.append(ax)
 
-    plt.tight_layout(rect=(0.2,0,1,1))
+    plt.tight_layout(rect=(0.27, 0.08, 1, 1))
     fig.canvas.draw_idle()
 
-check.on_clicked(redraw)
+def toggle_effects(event):
+    global effects_enabled
+    effects_enabled = not effects_enabled
+    redraw(None)
+
+def select_all(event):
+    global ignore_redraw
+    ignore_redraw = True
+    for i, stat in enumerate(check1.get_status()):
+        if not stat:
+            check1.set_active(i)
+    for i, stat in enumerate(check2.get_status()):
+        if not stat:
+            check2.set_active(i)
+    ignore_redraw = False
+    redraw(None)
+
+def deselect_all(event):
+    global ignore_redraw
+    if selected.count(True) <= 1:
+        print("[INFO] At least one knot must remain.")
+        return
+    ignore_redraw = True
+    # Leave only the first selected
+    toggled = 0
+    for i, stat in enumerate(check1.get_status()):
+        if stat and toggled > 0:
+            check1.set_active(i)
+        elif stat:
+            toggled += 1
+    for i, stat in enumerate(check2.get_status()):
+        if stat:
+            check2.set_active(i)
+    ignore_redraw = False
+    redraw(None)
+
+check1.on_clicked(redraw)
+check2.on_clicked(redraw)
+select_btn.on_clicked(select_all)
+deselect_btn.on_clicked(deselect_all)
+effects_btn.on_clicked(toggle_effects)
 redraw(None)
 plt.show()
