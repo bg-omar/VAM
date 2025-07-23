@@ -1,6 +1,10 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
+import matplotlib
+matplotlib.use('TkAgg')  # Ensure it uses Tkinter backend
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
 
 rho_fluid = 7e-7
 
@@ -53,7 +57,7 @@ def compute_pressure(vorticity_x, vorticity_y, vorticity_z):
 Bx, By, Bz = magnetic_field_static_ring(X, Y, Z)
 vort_x, vort_y, vort_z = compute_vorticity(Bx, By, Bz, dx=space[1] - space[0])
 pressure = compute_pressure(vort_x, vort_y, vort_z)
-f_x, f_y, f_z = -np.gradient(pressure, dx) / rho_fluid
+# f_x, f_y, f_z = -np.gradient(pressure, space[1] - space[0]) / rho_fluid
 # Plot mid-Z pressure slice
 mid = grid_size // 2
 plt.figure(figsize=(10, 6))

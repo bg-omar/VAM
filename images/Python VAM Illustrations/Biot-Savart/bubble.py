@@ -47,7 +47,15 @@ plt.figure(figsize=(6, 6))
 contours = plt.contourf(X, Z, Vmag, levels=50)
 plt.xlabel('x')
 plt.ylabel('z')
-plt.title('|v| from Vectorized Biot–Savart on y=0 slice')
-plt.colorbar(contours, label='|v| (arb. units)')
+plt.title(
+    rf"$|\vec{{v}}|$ from Biot–Savart field at $y = 0$ for $(p, q) = ({p}, {q})$" "\n"
+    rf"Torus knot: $R = {R},\ r = {r}$"
+)
+plt.colorbar(contours, label=r"$|\vec{v}|$ (arb. units)")
 plt.tight_layout()
+import os
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+filename = f"{script_name}.png"
+plt.savefig(filename, dpi=150)  # Save image with high resolution
+
 plt.show()

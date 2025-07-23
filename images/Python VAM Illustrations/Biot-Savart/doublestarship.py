@@ -30,7 +30,7 @@ params = {
     "z_min":  0.0, "z_max": 1.0,
 }
 
-def generate_alternating_skip_sequence(corners, step_even, step_odd, radius=1.0, z_layer=0.0):
+def generate_alternating_skip_sequence(corners, step_even, step_odd, radius=1.0, z_layer=0.0, angle_offset=5.0):
     sequence = []
     current = 1
     toggle = True
@@ -40,9 +40,13 @@ def generate_alternating_skip_sequence(corners, step_even, step_odd, radius=1.0,
         current = (current + step - 1) % corners + 1
         toggle = not toggle
     angles = np.linspace(0, 2 * np.pi, corners, endpoint=False) - np.pi / 2
-    positions = [(radius * np.cos(angles[(i - 1) % corners]),
-                  radius * np.sin(angles[(i - 1) % corners]),
-                  z_layer) for i in sequence]
+    positions = [
+        (radius * np.cos(angles[(i - 1) % corners] + angle_offset),
+         radius * np.sin(angles[(i - 1) % corners] + angle_offset),
+         z_layer)
+        for i in sequence
+    ]
+
     even_steps = [(sequence[i], sequence[i+1]) for i in range(0, len(sequence)-1, 2)]
     odd_steps = [(sequence[i], sequence[i+1]) for i in range(1, len(sequence)-1, 2)]
     return {
@@ -66,32 +70,35 @@ def compute_field_vectors(arrows, grid_size, x_range, y_range, z_range):
     x = np.linspace(*x_range, grid_size)
     y = np.linspace(*y_range, grid_size)
     z = np.linspace(*z_range, grid_size)
-    X, Y, Z = np.meshgrid(x, y, z)
+    X, Y, Z = np.meshgrid(x, y, z, indexing='ij')
+
     Bx = np.zeros_like(X)
     By = np.zeros_like(Y)
     Bz = np.zeros_like(Z)
+
     for origin, vector in arrows:
         x0, y0, z0 = origin
         dx, dy, dz = vector
-        segment = np.array([dx, dy, dz]) * dl
+        dl_vec = np.array([dx, dy, dz]) * dl
         r0 = np.array([x0, y0, z0])
-        for i in range(grid_size):
-            for j in range(grid_size):
-                for k in range(grid_size):
-                    r = np.array([X[i, j, k], Y[i, j, k], Z[i, j, k]])
-                    R = r - r0
-                    norm_R = np.linalg.norm(R)
-                    if norm_R < 1e-3:
-                        continue
-                    dB = np.cross(segment, R) / (norm_R**3)
-                    Bx[i, j, k] += dB[0]
-                    By[i, j, k] += dB[1]
-                    Bz[i, j, k] += dB[2]
-    B_magnitude = np.sqrt(Bx**2 + By**2 + Bz**2)
-    Bx /= (B_magnitude + 1e-9)
-    By /= (B_magnitude + 1e-9)
-    Bz /= (B_magnitude + 1e-9)
-    return X, Y, Z, Bx, By, Bz
+
+        RX = X - r0[0]
+        RY = Y - r0[1]
+        RZ = Z - r0[2]
+        norm_R = np.sqrt(RX**2 + RY**2 + RZ**2) + 1e-8
+
+        cross_x = dl_vec[1]*RZ - dl_vec[2]*RY
+        cross_y = dl_vec[2]*RX - dl_vec[0]*RZ
+        cross_z = dl_vec[0]*RY - dl_vec[1]*RX
+        factor = 1 / (norm_R**3)
+
+        Bx += cross_x * factor
+        By += cross_y * factor
+        Bz += cross_z * factor
+
+    B_mag = np.sqrt(Bx**2 + By**2 + Bz**2) + 1e-9
+    return X, Y, Z, Bx / B_mag, By / B_mag, Bz / B_mag
+
 
 def plot_wires(ax, sequence, coil_corners, z_layer, base_color, style, alpha=1.0, filter_type='even'):
     angles = np.linspace(0, 2 * np.pi, coil_corners, endpoint=False) - np.pi / 2
@@ -109,28 +116,40 @@ def plot_wires(ax, sequence, coil_corners, z_layer, base_color, style, alpha=1.0
                 color=base_color, linestyle=style, linewidth=2, alpha=alpha)
 
 def compute_everything():
-    sequence_data = generate_alternating_skip_sequence(
-        params["coil_corners"], params["skip_forward"], params["skip_backward"])
-    sequence = sequence_data["sequence"]
-    all_positions = []
-    for layer in range(params["num_layers"]):
-        z_offset = layer * params["layer_spacing"]
-        for (x, y, z) in sequence_data["positions"]:
-            all_positions.append((x, y, z + z_offset))
-    arrows = get_wire_arrows(all_positions)
+    angles = [0, 2 * np.pi / 3, 4 * np.pi / 3]
+    colors = ['#00ccff', '#33ff66', '#ff3366']
+    phases = []
+
+    for a in angles:
+        seq_data = generate_alternating_skip_sequence(
+            params["coil_corners"],
+            params["skip_forward"],
+            params["skip_backward"],
+            angle_offset=a
+        )
+        all_pos = []
+        for layer in range(params["num_layers"]):
+            z_offset = layer * params["layer_spacing"]
+            for (x, y, z) in seq_data["positions"]:
+                all_pos.append((x, y, z + z_offset))
+        phases.append((seq_data["sequence"], all_pos))
+
+    # Use first phase to compute B-field vectors
+    arrows = get_wire_arrows(phases[0][1])
     X, Y, Z, Bx, By, Bz = compute_field_vectors(
         arrows, params["grid_size"],
         (params["x_min"], params["x_max"]),
         (params["y_min"], params["y_max"]),
         (params["z_min"], params["z_max"])
     )
+
     return {
-        "sequence_data": sequence_data,
-        "arrows": arrows,
-        "all_positions": all_positions,
+        "phases": phases,
+        "colors": colors,
         "X": X, "Y": Y, "Z": Z,
         "Bx": Bx, "By": By, "Bz": Bz
     }
+
 
 def update_plot(*args):
     show_field = cb_status[0]
@@ -138,17 +157,29 @@ def update_plot(*args):
     show_odd = cb_status[2]
     data = gui_state["data"]
     ax.clear()
+
     if show_field:
-        ax.quiver(data["X"], data["Y"], data["Z"], data["Bx"], data["By"], data["Bz"],
+        density = 2  # downsample to avoid visual clutter
+        ax.quiver(data["X"][::density,::density,::density],
+                  data["Y"][::density,::density,::density],
+                  data["Z"][::density,::density,::density],
+                  data["Bx"][::density,::density,::density],
+                  data["By"][::density,::density,::density],
+                  data["Bz"][::density,::density,::density],
                   length=0.07, normalize=True, color='cyan', alpha=0.7)
-    seq = data["sequence_data"]["sequence"]
-    for layer in range(params["num_layers"]):
-        z_layer = layer * params["layer_spacing"]
-        if show_even:
-            plot_wires(ax, seq, params["coil_corners"], z_layer, '#ff9900', '-', alpha=1.0, filter_type='even')
-        if show_odd:
-            plot_wires(ax, seq, params["coil_corners"], z_layer, '#cc0000', '-', alpha=1.0, filter_type='odd')
-    ax.set_title(f"Starship Coil: N={params['coil_corners']} Skip=({params['skip_forward']}, {params['skip_backward']})", color='white')
+
+    for (seq, positions), color in zip(data["phases"], data["colors"]):
+        for layer in range(params["num_layers"]):
+            z_layer = layer * params["layer_spacing"]
+            if show_even:
+                plot_wires(ax, seq, params["coil_corners"], z_layer, '#ff9900', '-', alpha=1.0, filter_type='even')
+            if show_odd:
+                plot_wires(ax, seq, params["coil_corners"], z_layer, '#ff0000', '-', alpha=1.0, filter_type='odd')
+
+    ax.set_title(
+        f"3-Phase Coil: N={params['coil_corners']} Skip=({params['skip_forward']}, {params['skip_backward']})",
+        color='white'
+    )
     ax.set_xlim(params["x_min"], params["x_max"])
     ax.set_ylim(params["y_min"], params["y_max"])
     ax.set_zlim(params["z_min"], params["z_max"])
