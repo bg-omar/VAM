@@ -1,0 +1,69 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{physics}
+\usepackage{geometry}
+\geometry{margin=2cm}
+
+\begin{document}
+
+    \section*{Vortex Velocity and Stream Function}
+
+    \begin{align*}
+        V_\theta &= \frac{\Gamma}{2\pi r} \\
+        V_\theta &= - \frac{d\psi}{dr} \\
+        V_r &= -\frac{1}{r} \frac{d\psi}{d\theta}
+    \end{align*}
+
+    \textbf{Stream function:}
+    \[
+        \psi = \frac{\Gamma}{2\pi} \ln(r)
+    \]
+
+    \textbf{Potential function:}
+    \[
+        \phi = \frac{\Gamma}{2\pi} \theta
+    \]
+
+    \textbf{Circulation:}
+    \[
+        \Gamma = \oint \vb{V} \cdot d\vb{s} = \iint_S (\curl{\vb{v}}) \cdot \hat{n} \, dS
+    \]
+
+    \[
+        \Gamma = \iint (u \, dx + v \, dy) = \int V \cos(\phi) \, ds
+    \]
+
+    \section*{Boyle's Law for Ideal Gases (Kinetic Theory)}
+
+    \[
+        pV = \frac{1}{3} T - \frac{1}{6} \rho \iiint (u^2 + v^2 + w^2) (x \, dy \, dz + y \, dz \, dx + z \, dx \, dy)
+    \]
+
+    \section*{Newton's Potential around the Sun}
+
+    \[
+        \Phi = - \frac{GM}{r} + \frac{1}{6} \Delta c^2 r^2
+    \]
+
+    \section*{Vacuum Energy Density Estimate}
+
+    \[
+        \frac{1}{V} \int \frac{1}{2} \hbar \omega \approx \frac{\hbar}{2\pi^2 c^3} \int_0^{\omega_{\text{max}}} \omega^3 d\omega
+        = \frac{\hbar}{2\pi^2 c^3} \omega_{\text{max}}^4
+    \]
+
+    \textbf{Cosmological constant:}
+    \[
+        \Lambda \approx \frac{G^2 m^6}{\hbar^4}
+    \]
+
+    \section*{Triple Integral Volume Identity}
+
+    \[
+        \int_S (x\,dy\,dz + y\,dz\,dx + 2z\,dx\,dy)
+        = \iiint (1+1+1) \, dx \, dy \, dz
+        = 3 \int_0^1 dx \int_0^1 dy \int_0^1 dz = \boxed{3}
+    \]
+
+\end{document}

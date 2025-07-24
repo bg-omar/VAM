@@ -66,8 +66,8 @@ This paper reinterprets the Alcubierre warp drive solution in the framework of t
 We map key ADM/GR warp quantities to VAM swirl variables (Table~\ref{tab:mapping}). Definitions:
 \begin{itemize}
   \item Swirl velocity $\mathbf{v}_{\rm swirl} = -v_s f(r,x)\,\hat x$ generates vorticity $\boldsymbol{\omega} = \nabla \times \mathbf{v}$, consistent with the axisymmetric ansatz derived in Appendix~\ref{sec:AxisymmetricReduction}.
-  \item Swirl‐clock rate $\dfrac{d\tau}{dN} = \sqrt{1 - \abs{\boldsymbol{\omega}}^2 / C_e^2}$ defines the local proper time in VAM. This time dilation expression was first proposed in \cite{VAM1} and interpreted in terms of Bernoulli-induced kinetic suppression in \cite{VAM2}.
-  \item Helicity $H = \int \mathbf{v} \cdot \boldsymbol{\omega}\, d^3x$ is a topologically conserved quantity, as derived from the variational principles in Appendix~B and originally emphasized in the vortex-knotted formulations of \cite{VAM2, VAM4}.
+  \item Swirl‐clock rate $\dfrac{d\tau}{dN} = \sqrt{1 - \abs{\boldsymbol{\omega}}^2 / C_e^2}$ defines the local proper time in VAM. This time dilation expression was first proposed in \cite{VAM-1} and interpreted in terms of Bernoulli-induced kinetic suppression in \cite{VAM-2}.
+  \item Helicity $H = \int \mathbf{v} \cdot \boldsymbol{\omega}\, d^3x$ is a topologically conserved quantity, as derived from the variational principles in Appendix~B and originally emphasized in the vortex-knotted formulations of \cite{VAM-2, VAM-4}.
 \end{itemize}
 
 \begin{table}[H]
@@ -204,14 +204,14 @@ We map key ADM/GR warp quantities to VAM swirl variables (Table~\ref{tab:mapping
     \begin{equation}
     (x, y, z)(\theta) = \left( (R + r\cos 3\theta)\cos 2\theta,\; (R + r\cos 3\theta)\sin 2\theta,\; r\sin 3\theta \right),
     \end{equation}
-    which traces a chiral loop with triple axial helices and double toroidal windings. This geometry approximates a closed helicity reservoir and matches the minimal topologically nontrivial swirl configuration \cite{VAM10}.
+    which traces a chiral loop with triple axial helices and double toroidal windings. This geometry approximates a closed helicity reservoir and matches the minimal topologically nontrivial swirl configuration \cite{VAM-10}.
     
     To physically realize this structure, we recommend interleaving:
     \begin{itemize}
         \item $\sim$30–60 turns of **superconducting tape** along the toroidal direction (A-winding),
         \item $\sim$30–60 turns through the poloidal axis (B-winding),
     \end{itemize}
-    in an alternating A–B–A–B layout. This mimics the Rodin–trefoil hybrid proposed in \cite{VAM6, VAM10}, maximizing cross-helicity in the center.
+    in an alternating A–B–A–B layout. This mimics the Rodin–trefoil hybrid proposed in \cite{VAM-6, VAM-10}, maximizing cross-helicity in the center.
     
     \subsection{Power and Pulse Requirements}
     
@@ -274,22 +274,22 @@ We map key ADM/GR warp quantities to VAM swirl variables (Table~\ref{tab:mapping
 \section{Figures \& Diagrams}
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.65\textwidth]{swirltorus36 knots.png}
+  \includegraphics[width=0.65\textwidth]{swirltorus3}
   \caption{3D parametric rendering of a $(2,3)$ torus-knot winding. This configuration establishes intertwined toroidal and poloidal swirl conducive to helicity stabilization.}
   \label{fig:torus36}
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.48\textwidth]{02_Starship-3phase-27x3points_030557.png}
-  \includegraphics[width=0.48\textwidth]{02_Starship-3phase-36points_222249.png}
+  \includegraphics[width=0.48\textwidth]{02_Starship-3phase-27x3points_030557}
+  \includegraphics[width=0.48\textwidth]{02_Starship-3phase-36points_222249}
   \caption{Left: 3-phase Rodin coil pattern with 27x3 points (A/B/C phases). Right: Higher resolution 36-point configuration. Phase-coded colors enable directionally rotating swirl induction.}
   \label{fig:starshipcoil}
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.48\textwidth]{8knot.png}
+  \includegraphics[width=0.48\textwidth]{8knot}
   \caption{Simulation of the velocity (left) and Bernoulli pressure field (right) in a stable figure-8 vortex knot. Low-pressure shell encloses a stable bubble region, emulating a warp-shell analogue.}
   \label{fig:8knotpressure}
 \end{figure}
@@ -321,7 +321,7 @@ We map key ADM/GR warp quantities to VAM swirl variables (Table~\ref{tab:mapping
     %====================
     \section{Derivation of Field-Theoretic Formalism}\label{sec:field_theory}
     
-    This appendix provides the variational basis for the field theory presented in Section~4, following \cite{VAM1, VAM2, VAM4}. We begin by introducing the vector potential $\mathbf{A}(\mathbf{x},t)$ such that the æther swirl velocity is given by:
+    This appendix provides the variational basis for the field theory presented in Section~4, following \cite{VAM-1, VAM-2, VAM-4}. We begin by introducing the vector potential $\mathbf{A}(\mathbf{x},t)$ such that the æther swirl velocity is given by:
     \begin{equation}
     \mathbf{v} = \nabla \times \mathbf{A}.
     \end{equation}
@@ -338,7 +338,7 @@ We map key ADM/GR warp quantities to VAM swirl variables (Table~\ref{tab:mapping
     \begin{equation}
     V(\boldsymbol{\omega}) = \frac{1}{2} \mu^2 \abs{\boldsymbol{\omega}}^2 + \frac{\kappa}{4} (\boldsymbol{\omega} \cdot \boldsymbol{\omega})^2.
     \end{equation}
-    This potential structure is inspired by Ginzburg–Landau and Skyrme-type terms explored in \cite{VAM2, VAM10}.
+    This potential structure is inspired by Ginzburg–Landau and Skyrme-type terms explored in \cite{VAM-2, VAM-10}.
     
     \subsection*{Euler–Lagrange Equations}
     To derive the field equations, we vary $\mathcal{L}_{\text{eff}}$ with respect to $\mathbf{A}$. Using $\delta \mathbf{v} = \nabla \times \delta \mathbf{A}$, the variation yields:
@@ -350,7 +350,7 @@ We map key ADM/GR warp quantities to VAM swirl variables (Table~\ref{tab:mapping
     \begin{equation}
     \nabla \times ( \rho_{\text{\ae}} \nabla \times \mathbf{A} - \lambda \boldsymbol{\omega} ) + \cdots = 0.
     \end{equation}
-    This governs the evolution of the vortex shell structure, consistent with \cite{VAM4}.
+    This governs the evolution of the vortex shell structure, consistent with \cite{VAM-4}.
     
     \subsection*{Canonical Momentum Density}
     The conjugate momentum density is defined by:
@@ -383,21 +383,21 @@ We map key ADM/GR warp quantities to VAM swirl variables (Table~\ref{tab:mapping
     \begin{equation}
     \frac{\partial S}{\partial t} + \int d^3x \left[ \frac{1}{2\rho_{\text{\ae}}} \left| \frac{\delta S}{\delta \mathbf{A}} \right|^2 + V(\boldsymbol{\omega}) - \lambda (\mathbf{v} \cdot \boldsymbol{\omega}) \right] = 0,
     \end{equation}
-    as derived in \cite{VAM4}. This equation governs the phase‐space dynamics of the ætheric swirl field.
+    as derived in \cite{VAM-4}. This equation governs the phase‐space dynamics of the ætheric swirl field.
 
 
     %====================
     % Appendix~\ref{sec:AxisymmetricReduction}: Axisymmetric Reduction
     %====================
     \section{Derivation of Axisymmetric Reduction}\label{sec:AxisymmetricReduction}
-        We derive here the axisymmetric reduction for the effective Lagrangian and Hamiltonian–Jacobi functional introduced in Section~5, based on swirl dynamics developed in \cite{VAM1, VAM2, VAM4}. Cylindrical coordinates $(r, \phi, x)$ are used, with the assumption of axial symmetry: $\partial_\phi = 0$.
+        We derive here the axisymmetric reduction for the effective Lagrangian and Hamiltonian–Jacobi functional introduced in Section~5, based on swirl dynamics developed in \cite{VAM-1, VAM-2, VAM-4}. Cylindrical coordinates $(r, \phi, x)$ are used, with the assumption of axial symmetry: $\partial_\phi = 0$.
 
         \subsection*{Vector Potential Ansatz}
         We assume the vector potential takes the form:
         \begin{equation}
           \mathbf{A} = A_\phi(r,x)\, \hat{e}_\phi,
         \end{equation}
-        which has only an azimuthal component and depends on $r$ and $x$. This ansatz is consistent with the toroidal-poloidal decomposition of swirl fields used in \cite{VAM10}.
+        which has only an azimuthal component and depends on $r$ and $x$. This ansatz is consistent with the toroidal-poloidal decomposition of swirl fields used in \cite{VAM-10}.
 
         \subsection*{Swirl Velocity}
         We compute $\mathbf{v} = \nabla \times \mathbf{A}$ in cylindrical coordinates. Using the curl identity:
@@ -417,7 +417,7 @@ We map key ADM/GR warp quantities to VAM swirl variables (Table~\ref{tab:mapping
         \begin{equation}
           \omega_\phi = (\partial_r^2 + \frac{1}{r}\partial_r + \partial_x^2) A_\phi = \nabla^2_{(r,x)} A_\phi,
         \end{equation}
-        where $\nabla^2_{(r,x)}$ denotes the cylindrical Laplacian for axisymmetric scalar fields. This matches the structure of induced swirl vortices derived in \cite{VAM4, VAM10}.
+        where $\nabla^2_{(r,x)}$ denotes the cylindrical Laplacian for axisymmetric scalar fields. This matches the structure of induced swirl vortices derived in \cite{VAM-4, VAM-10}.
 
         \subsection*{Reduced Hamiltonian Density}
         Substituting $\mathbf{v}$ into the kinetic term:
@@ -428,7 +428,7 @@ We map key ADM/GR warp quantities to VAM swirl variables (Table~\ref{tab:mapping
         \begin{equation}
           \mathcal{H}_{\text{axi}} = \frac{1}{2}\rho_{æ}\left[ (\partial_x A_\phi)^2 + \left( \frac{1}{r} \partial_r(r A_\phi) \right)^2 \right] + V(\omega_\phi),
         \end{equation}
-        with the vorticity potential $V(\omega_\phi) = \frac{1}{2} \mu^2 \omega_\phi^2 + \frac{\kappa}{4} \omega_\phi^4$. This form is adapted from the Skyrme-like swirl Lagrangians in \cite{VAM2}.
+        with the vorticity potential $V(\omega_\phi) = \frac{1}{2} \mu^2 \omega_\phi^2 + \frac{\kappa}{4} \omega_\phi^4$. This form is adapted from the Skyrme-like swirl Lagrangians in \cite{VAM-2}.
 
         \subsection*{Reduced Hamilton–Jacobi Functional}
         We define the Hamilton–Jacobi functional $S[A_\phi, t]$ and use:
@@ -439,7 +439,7 @@ We map key ADM/GR warp quantities to VAM swirl variables (Table~\ref{tab:mapping
         \begin{equation}
           \frac{\partial S}{\partial t} + \int 2\pi r \,dr\,dx \left[ \frac{1}{2\rho_{æ}} \left( \frac{\delta S}{\delta A_\phi} \right)^2 + V(\omega_\phi) \right] = 0,
         \end{equation}
-        which governs soliton evolution and semiclassical warp quantization as proposed in \cite{VAM4}.
+        which governs soliton evolution and semiclassical warp quantization as proposed in \cite{VAM-4}.
 
     %====================
     % Appendix~\ref{sec:numerical_methods}: Numerical Methods for Soliton Profiles

@@ -1,0 +1,44 @@
+\section{Biot--Savart Swirl Integral in \ae ther}\label{sec:biot-savart}
+
+Using the Biot--Savart analogy:
+\begin{equation}
+    \chi^i(\vec{x}) = \frac{1}{4\pi} \int \frac{\alpha^i(\vec{\xi}) \times (\vec{x} - \vec{\xi})}{|\vec{x} - \vec{\xi}|^3} \, d^3\xi
+\end{equation}
+
+The swirl potential $\chi^i$ defines the \ae theric coframe:
+\begin{equation}
+    \boldsymbol{\theta}^i = dx^i + \chi^i
+\end{equation}
+
+\section{Photon as a Vortex Ring}
+
+The photon is modeled as a massless, quantized vortex ring with tangential velocity $C_e$ and core radius $r_c$, moving through the \ae ther. Its circulation is $\Gamma = 2\pi r_c C_e$.
+
+\subsection{Lagrangian}
+\begin{equation}
+    \mathcal{L}_\gamma = \pi^2 r_c^2 C_e^2 \rho_\text{\ae}^{(\text{energy})} R_\gamma \left( \ln\left( \frac{8R_\gamma}{r_c} \right) - \frac{7}{4} \right)
+\end{equation}
+
+\subsection{Hamiltonian}
+\begin{equation}
+    \mathcal{H}_\gamma = \frac{P^2}{2M_{\text{ring}}} + \mathcal{L}_\gamma, \quad M_{\text{ring}} = \rho_\text{\ae}^{(\text{mass})} \cdot V_{\text{ring}}
+\end{equation}
+
+\subsection{Jacobian}
+\begin{align}
+    \vec{X}(\phi,\theta) =
+    \begin{pmatrix}
+    (R + a\cos\theta)\cos\phi \\
+    (R + a\cos\theta)\sin\phi \\
+    a\sin\theta
+    \end{pmatrix}, \\
+    J = a(R + a\cos\theta)
+\end{align}
+
+
+\section{Time Dilation and Proper Time in Photons}
+
+Using swirl-induced time dilation~\cite{VAM-1}:
+\begin{equation}
+    \frac{dt}{dt_\infty} = \sqrt{1 - \frac{|\vec{\omega}|^2}{c^2}}, \quad \vec{\omega} = \frac{C_e}{r_c} \gg c \Rightarrow dt \approx 0
+\end{equation}

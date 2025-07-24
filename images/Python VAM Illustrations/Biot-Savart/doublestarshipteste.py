@@ -7,7 +7,7 @@ matplotlib.use('TkAgg')  # Ensure it uses Tkinter backend
 
 # === Starship Coil Configurations ===
 # Format: (number of corners, forward skip, backward skip)
-config_index = 0  # 0-6 to pick different patterns
+config_index = 1  # 0-6 to pick different patterns
 coil_configs = [
     (32, 11, -9),
     (34, 11,  7),
@@ -50,9 +50,15 @@ sequence, base_positions = generate_alternating_skip_sequence(coil_corners, skip
 
 positions = []
 for layer in range(num_layers):
-    z_offset = layer * layer_spacing
-    for (x, y, z) in base_positions:
-        positions.append((x, y, z + z_offset))
+    offset = layer * layer_spacing
+    layer_positions = [
+        (x, y, z + offset) for (x, y, z) in base_positions
+    ]
+    if layer > 0:
+        # Avoid duplicating first point of each new layer
+        positions.extend(layer_positions[1:])
+    else:
+        positions.extend(layer_positions)
 
 # === Generate vector arrows from consecutive points ===
 arrows = []
