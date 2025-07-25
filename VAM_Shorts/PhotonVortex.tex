@@ -1,14 +1,14 @@
 %! Author = Omar Iskandarani
-%! Title = ...
-%! Date = xx-xx-2025
+%! Title = Photon as a Topological Vortex Ring: Torsion and the Geometry of Light in the Æther
+%! Date = 25-07-2025
 %! Affiliation = Independent Researcher, Groningen, The Netherlands
 %! License = © 2025 Omar Iskandarani. All rights reserved. This manuscript is made available for academic reading and citation only. No republication, redistribution, or derivative works are permitted without explicit written permission from the author. Contact: info@omariskandarani.com
 %! ORCID = 0009-0006-1686-3961
-%! DOI = 10.5281/zenodo.xxxxxxx
+%! DOI = 10.5281/zenodo.16419255
 
 % === Metadata ===
 \newcommand{\papertitle}{Photon as a Topological Vortex Ring: \\ Torsion and the Geometry of Light in the Æther}
-\newcommand{\paperdoi}{10.5281/zenodo.xxxxxxxx}
+\newcommand{\paperdoi}{10.5281/zenodo.16419255}
 
 \documentclass[twocolumn,aps,pre,floatfix,nofootinbib]{revtex4-2}
 \usepackage{amsmath, amssymb}
@@ -63,50 +63,18 @@
 
 
 
-
-    \section{Introduction}
-        In the Vortex \ae ther Model (VAM), gravitation and quantum phenomena are reformulated through the topology and dynamics of vorticity in an incompressible, inviscid fluid-like \ae ther. This article derives a formal connection between classical defect theory---dislocations and disclinations in condensed matter physics---and VAM's vortex core structures using the language of Cartan geometry. Inspired by recent developments \cite{kobayashi2025}, we reinterpret torsion and curvature within the Cartan structure equations in terms of swirl density and topological vortex curvature. Furthermore, we show that light itself---the photon---can be interpreted as a topologically stable vortex ring, unifying electromagnetic energy propagation with the mechanics of superfluid circulation.
-
-
-    \section{Vortex Ring and Cartan Torsion}
-
-    \begin{center}
-        \begin{tikzpicture}[scale=0.8]
-            % Ring (vortex core)
-            \draw[thick, blue!70] (0,0) circle (2);
-
-            % Flow lines (tangential swirl)
-            \foreach \a in {15,45,75,105,135,165,195,225,255,285,315,345} {
-                \draw[->, red!70, thick]
-                ({2*cos(\a)}, {2*sin(\a)})
-                ++({-0.4*sin(\a)}, {0.4*cos(\a)})
-                -- ++({0.4*sin(\a)}, {-0.4*cos(\a)});
-            }
-
-            % Central torsion arrow
-            \draw[->, thick, violet] (0,0) -- (0,2.6) node[above] {\small $\mathbf{T}^y$};
-
-            % Axis labels
-            \draw[->, thick, gray!60] (0,0) -- (3,0) node[right] {$x$};
-            \draw[->, thick, gray!60] (0,0) -- (0,3) node[above] {$y$};
-
-            % Label
-            \node at (0,-2.5) {\small Vortex ring with tangential velocity $C_e$};
-        \end{tikzpicture}
-    \end{center}
-
-
-    \noindent
-    This diagram shows a vortex ring in the $x$-$y$ plane with tangential swirl velocity (red arrows) and central torsion aligned along the $y$-axis,
-    representing $\mathbf{T}^y$ from Cartan's torsion 2-form.
-
+    \input{sections/00_Introduction}
 
     \input{sections/01_Framework}
 
-
     \input{sections/02_Biot-Savart}
 
+    \input{sections/03_PhotonEmissionAndAbsorbtion}
 
+    
+    \input{sections/CorrespondenceWithQED}
+    
+    \input{sections/Experimental_Implications}
 
     \input{sections/ConclusionOutlook}
 

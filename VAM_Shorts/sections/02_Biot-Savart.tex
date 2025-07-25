@@ -1,44 +1,100 @@
 \section{Biot--Savart Swirl Integral in \ae ther}\label{sec:biot-savart}
 
-Using the Biot--Savart analogy:
-\begin{equation}
-    \chi^i(\vec{x}) = \frac{1}{4\pi} \int \frac{\alpha^i(\vec{\xi}) \times (\vec{x} - \vec{\xi})}{|\vec{x} - \vec{\xi}|^3} \, d^3\xi
-\end{equation}
+        Using the Biot--Savart analogy:
+        \begin{equation}
+            \chi^i(\vec{x}) = \frac{1}{4\pi} \int \frac{\alpha^i(\vec{\xi}) \times (\vec{x} - \vec{\xi})}{|\vec{x} - \vec{\xi}|^3} \, d^3\xi
+        \end{equation}
 
-The swirl potential $\chi^i$ defines the \ae theric coframe:
-\begin{equation}
-    \boldsymbol{\theta}^i = dx^i + \chi^i
-\end{equation}
+        The swirl potential $\chi^i$ defines the \ae theric coframe:
+        \begin{equation}
+            \boldsymbol{\theta}^i = dx^i + \chi^i
+        \end{equation}
 
 \section{Photon as a Vortex Ring}
 
-The photon is modeled as a massless, quantized vortex ring with tangential velocity $C_e$ and core radius $r_c$, moving through the \ae ther. Its circulation is $\Gamma = 2\pi r_c C_e$.
+        The photon is modeled as a massless, quantized vortex ring with tangential velocity $C_e$ and core radius $r_c$, moving through the \ae ther. Its circulation is $\Gamma = 2\pi r_c C_e$.
 
-\subsection{Lagrangian}
-\begin{equation}
-    \mathcal{L}_\gamma = \pi^2 r_c^2 C_e^2 \rho_\text{\ae}^{(\text{energy})} R_\gamma \left( \ln\left( \frac{8R_\gamma}{r_c} \right) - \frac{7}{4} \right)
-\end{equation}
+        \subsection{Lagrangian}
+        \begin{equation}
+            \mathcal{L}_\gamma = \pi^2 r_c^2 C_e^2 \rho_\text{\ae}^{(\text{energy})} R_\gamma \left( \ln\left( \frac{8R_\gamma}{r_c} \right) - \frac{7}{4} \right)
+        \end{equation}
 
-\subsection{Hamiltonian}
-\begin{equation}
-    \mathcal{H}_\gamma = \frac{P^2}{2M_{\text{ring}}} + \mathcal{L}_\gamma, \quad M_{\text{ring}} = \rho_\text{\ae}^{(\text{mass})} \cdot V_{\text{ring}}
-\end{equation}
+        \subsection{Hamiltonian}
+        \begin{equation}
+            \mathcal{H}_\gamma = \frac{P^2}{2M_{\text{ring}}} + \mathcal{L}_\gamma, \quad M_{\text{ring}} = \rho_\text{\ae}^{(\text{mass})} \cdot V_{\text{ring}}
+        \end{equation}
 
-\subsection{Jacobian}
-\begin{align}
-    \vec{X}(\phi,\theta) =
-    \begin{pmatrix}
-    (R + a\cos\theta)\cos\phi \\
-    (R + a\cos\theta)\sin\phi \\
-    a\sin\theta
-    \end{pmatrix}, \\
-    J = a(R + a\cos\theta)
-\end{align}
+        \subsection{Jacobian}
+        \begin{align}
+            \vec{X}(\phi,\theta) =
+            \begin{pmatrix}
+            (R + a\cos\theta)\cos\phi \\
+            (R + a\cos\theta)\sin\phi \\
+            a\sin\theta
+            \end{pmatrix}, \\
+            J = a(R + a\cos\theta)
+        \end{align}
+
+\section{Toward Interactions and Nonabelian Vortex Structures}\label{sec:nonabelian}
+
+        The current VAM photon model, expressed as a topologically stable vortex ring, captures the dynamics of an Abelian \( U(1) \) gauge boson in a flat æther background. Extending this framework to model interactions and nonabelian gauge theories (e.g., \( SU(2) \), \( SU(3) \)) requires both multi-ring coupling and the inclusion of chirality and knot topology.
+
+        \subsection{Quantization from Circulation Eigenstates}
+
+            In VAM, energy quantization arises naturally from discrete circulation states:
+            \[
+                \Gamma_n = n \cdot 2\pi r_c C_e, \quad n \in \mathbb{Z}^+
+            \]
+            These correspond to topologically distinct vortex rings or knot classes, and enforce quantized angular momentum and energy via:
+            \[
+                E_n = \frac{1}{2} \rho_\text{\ae}^{(\text{energy})} \Gamma_n^2 / (2\pi r_c)
+            \]
+            Spin-1 arises from circulation axis orientation, with helicity embedded in the swirl chirality (left/right-handedness).
+
+        \subsection{Interacting Gauge Bosons as Linked Vortices}
+
+            To model bosonic interactions, we construct link and knot configurations:
+            \begin{itemize}
+                \item \textbf{Photon self-interaction}: modeled by ring–ring scattering or reconnection events, possibly mediated by localized æther pressure spikes.
+                \item \textbf{Nonabelian fields}: modeled by chirally braided vortex tubes with internal twist degrees of freedom. These generate holonomy-like transformations when transported around each other.
+            \end{itemize}
+
+            Gauge field structure then emerges from circulation algebra:
+            \[
+                [\Gamma^a, \Gamma^b] = i f^{abc} \Gamma^c
+            \]
+            with \( f^{abc} \) determined by the braid/topology algebra. For example, a Hopf link and Borromean triplet encode noncommutative loop operations analogous to \( SU(2) \) and \( SU(3) \) structure constants.
+
+        \subsection{Geometric Lagrangian for Nonabelian Swirl Fields}
+
+            A generalized VAM Lagrangian may be written as:
+            \[
+                \mathcal{L}_{\text{gauge}} = -\frac{1}{4} \rho_\text{\ae}^{(\text{fluid})} \operatorname{Tr}(F_{ij} F^{ij}) + \lambda \, \varepsilon^{ijk} \operatorname{Tr}\left(A_i \partial_j A_k + \frac{2}{3} A_i A_j A_k \right)
+            \]
+            where \( A_i \) is the æther swirl potential and \( F_{ij} = \partial_i A_j - \partial_j A_i + [A_i, A_j] \). The second term resembles a fluid Chern–Simons action and accounts for helicity conservation in knotted æther flows.
+
+        \subsection{Quantization Pathway}
+
+            Quantization proceeds via:
+            \begin{enumerate}
+                \item Topological quantization: only allowed vortex states correspond to specific knot invariants or linking numbers.
+                \item Canonical Hamiltonian formalism on swirl phase space: identify conjugate pairs \( (\chi^i, \omega^i) \), then apply canonical quantization rules.
+                \item Path-integral over swirl configurations: gauge-invariant partition functions on knotted vortex histories.
+            \end{enumerate}
+
+        \subsection{Outlook: VAM Gauge Symmetry Breaking}
+
+        VAM allows symmetry breaking via localized swirl density gradients:
+        \[
+            \partial_t \rho_\text{\ae}^{(\text{energy})} \neq 0 \quad \Rightarrow \quad \text{massive boson vortex rings}
+        \]
+        This may correspond to the emergence of massive gauge bosons like \( W^\pm \), \( Z^0 \) as unstable bound vortex structures.
+
 
 
 \section{Time Dilation and Proper Time in Photons}
 
-Using swirl-induced time dilation~\cite{VAM-1}:
-\begin{equation}
-    \frac{dt}{dt_\infty} = \sqrt{1 - \frac{|\vec{\omega}|^2}{c^2}}, \quad \vec{\omega} = \frac{C_e}{r_c} \gg c \Rightarrow dt \approx 0
-\end{equation}
+    Using swirl-induced time dilation~\cite{VAM-1}:
+    \begin{equation}
+        \frac{dt}{dt_\infty} = \sqrt{1 - \frac{|\vec{\omega}|^2}{c^2}}, \quad \vec{\omega} = \frac{C_e}{r_c} \gg c \Rightarrow dt \approx 0
+    \end{equation}
