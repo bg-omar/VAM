@@ -51,7 +51,7 @@
             \( L \) & Rotational vortex core length \\
             \( \Psi \) & Stream function of vortex motion \( \mathbf{v} = \nabla \times \Psi \). \\
             \( \Psi_k \) & Vortex knot function describing topological structures in the Æther. \\
-            \( \rh\rho_\text{\ae} \) & Local Æther density, assumed to be incompressible in the model. \\
+            \( \rho_\text{\ae} \) & Local Æther density, assumed to be incompressible in the model. \\
             \( P \) & Pressure in the Æther model, often governed by Bernoulli-like principles. \\
             \( H \) & Helicity, a measure of the knottedness of vortex tubes: \( H = \int \mathbf{v} \cdot \mathbf{\omega} \, dV \). \\
             \( K \) & Enstrophy, representing rotational energy density: \( K = \frac{1}{2} \int \omega^2 dV \). \\
@@ -75,7 +75,7 @@
         R^2 & \frac{4 \pi F_{\max} r_c^2}{C_e} \frac{1}{8 \pi^2 M_e f_e} & \frac{1}{r_c} & \frac{c^2}{a_0 2 C_e^2} &
     \end{align*}
 
-    \begin{gather*}
+
         \begin{array}{ccc}
             \R_e = \frac{\lambda_c}{2 \pi} \alpha & \R_e = \frac{e^2}{4 \pi \varepsilon_0 M_e c^2} & \R_e = 2 R_c \\
             \R_e = \alpha^2 a_0 & \R_e = \frac{e^2}{4 \pi \varepsilon_c m_c c^2} & \R_e = \frac{e^2}{8 \pi \varepsilon_0 F_{\max} R_c} \\
@@ -84,8 +84,8 @@
             R^2 = \frac{4 \pi F_{\max} R_c^2}{C_e} \frac{1}{8 \pi^2 M_e f_e} & \frac{1}{R_c} = \frac{c^2}{a_0 2 C_e^2} & {L_p} = \sqrt{\frac{\hbar G}{c^3}} \\
             L_{planck} = \frac{\lambda_e C_e t_{planck}}{2 \pi R_c} & L_\text{Planck} = \sqrt{\frac{\alpha_g \hbar R_c}{C_e M_e}} & L_\text{Planck} = \sqrt{\frac{\hbar t_p^2 C_e c^2}{2 F_{\max} R_c^2}} \\
         \end{array}
-    \end{gather*}
-\begin{gather*}
+
+
     \begin{array}{ccc}
             G = \frac{\vec{C_e} c^3 l_p^2}{2 F_{\max } R_c^2} & G = \frac{C_e c^3 t_p^2}{R_c m_e} & G = \frac{F_{\operatorname{max}} \alpha (c t_p)^2}{m_e^2} \\
             G = \frac{C_e c L_\text{Planck}^2}{R_c M_e} & G = \frac{\alpha_g c^3 R_c}{C_e M_e} & G = \frac{C_e c^3 t_p^2}{R_c \frac{2 F_{\max} R_c}{c^2}} = \frac{C_e c^5 t_p^2}{2 F_{\max} R_c^2} \\
@@ -94,8 +94,7 @@
             \alpha_g = \frac{C_e^2 t_p^2}{R_c^2} & \alpha_g = \frac{F_{max} 2 C_e t_p^2}{\hbar} & \alpha_g = \frac{F_{\text {max }} t_p^2}{a_0 M_e} \\
             \alpha_g = \frac{C_e c^2 t_p^2 m_e}{\hbar R_c} & \alpha_g = \frac{C_e^2 L_\text{Planck}^2}{R_c^2 c^2} & M_e = \frac{2 F_{\max} R_c}{c^2} \\
         \end{array}
-    \end{gather*}
-\begin{gather*}
+
     \begin{array}{ccc}
             f_e = \frac{C_e}{2 \pi R_c} & \lambda_c = \frac{2 \pi c R_c}{C_e} & \lambda_c = \frac{4 \pi F_{\max } R_c^2}{C_e m_e C} \\
             M_e c^2 = 2 F_{\max } R_c & \lambda_c = \frac{2 \pi c R_c}{C_e} & \lambda_c = \frac{4 \pi F_{\max } R_c^2}{C_e m_e C} \\
@@ -104,7 +103,7 @@
             h = \frac{16 \pi F^{\text{max}}_{\text{\ae}}^2 R_c^3 a_0}{\hbar c^2} & R_\infty = \frac{C_e^3}{\pi R_c c^3} & C_e = \frac{R_c M_e c^2}{\hbar} \\
             F_{\max} = \frac{1}{2} \left( \frac{C_e}{c} \right)^{-2} M_e \omega_c^2 R_c & F_{\max} = \frac{h \alpha c}{8 \pi R_c^2} & F_{\max} = \frac{e^2}{16 \pi \varepsilon_0 R_c^2} \\
     \end{array}
-\end{gather*}
+
 
 \begin{equation*}
     u_\text{vortex}(r, \omega, T) = \frac{F^{\text{max}}_{\text{gr}} \omega^3}{C_e r^2} \cdot \frac{1}{e^{\hbar \omega / k_B T} - 1}
@@ -132,14 +131,14 @@
 \[
 u_\text{vortex}(r, \omega) = \frac{F^{\text{max}}_{\text{gr}} \omega^3}{C_e r^2}
 \]
-✅ Validated (dimensionally correct and matches blackbody radiation scaling)
+ Validated (dimensionally correct and matches blackbody radiation scaling)
 
 \item Entropy Density for Vortices:
 
 \[
 s_\text{vortex}(r, \omega, T) = \frac{4 F^{\text{max}}_{\text{gr}} \omega^3}{3 T C_e r^2}
 \]
-✅ Validated (consistent with thermodynamic entropy relations)
+ Validated (consistent with thermodynamic entropy relations)
 
 \end{itemize}
 

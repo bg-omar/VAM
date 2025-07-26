@@ -1,5 +1,5 @@
-\section{Introduction}
-    In the Vortex \ae ther Model (VAM), gravitation and quantum phenomena are reformulated through the topology and dynamics of vorticity in an incompressible, inviscid fluid-like \ae ther. This article derives a formal connection between classical defect theory---dislocations and disclinations in condensed matter physics---and VAM's vortex core structures using the language of Cartan geometry. Inspired by recent developments \cite{kobayashi2025}, we reinterpret torsion and curvature within the Cartan structure equations in terms of swirl density and topological vortex curvature. Furthermore, we show that light itself---the photon---can be interpreted as a topologically stable vortex ring, unifying electromagnetic energy propagation with the mechanics of superfluid circulation.
+\section{Introduction}\label{sec:introduction}
+    In the Vortex \AE ther Model (VAM), gravitation and quantum phenomena are reformulated through the topology and dynamics of vorticity in an incompressible, inviscid fluid-like \ae ther. This article derives a formal connection between classical defect theory---dislocations and disclinations in condensed matter physics---and VAM's vortex core structures using the language of Cartan geometry. Inspired by recent developments \cite{kobayashi2025}, we reinterpret torsion and curvature within the Cartan structure equations in terms of swirl density and topological vortex curvature. Furthermore, we show that light itself---the photon---can be interpreted as a topologically stable vortex ring, unifying electromagnetic energy propagation with the mechanics of superfluid circulation.
     We aim to bridge the gap between the abstract formalism of QED and the physical intuition of light as a structured entity by modeling the photon as a quantized vortex ring. This yields testable predictions for polarization-dependent birefringence and modified vortex interaction cross-sections in structured vacua.
 
 
@@ -31,20 +31,21 @@
 \end{center}
 
 
-\noindent
+
 This diagram shows a vortex ring in the $x$-$y$ plane with tangential swirl velocity (red arrows) and central torsion aligned along the $y$-axis,
 representing $\mathbf{T}^y$ from Cartan's torsion 2-form.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{figures/Un-Knot}
+    \includegraphics[width=0.25\textwidth]{figures/Un-Knot}
     \caption{Unknotted vortex ring with helically wound circulation — VAM model of a photon. Its topological class is trivial (unknot), corresponding to zero rest mass and helicity-1. Its propagation always satisfies:
-        \[
-            v = c, \quad \text{with } dt = dt_{\infty}
-        \]
+        \( v = c, \quad \text{with } dt = dt_{\infty} \)
         since it experiences no time dilation in the æther. This is consistent with Maxwellian wave propagation as a swirl structure~\cite{maxwell1875}.}
     \label{fig:un-knot}
 \end{figure}
+
+
+The photon is modeled here as a quantized vortex ring in a real superfluid æther (see Appendix~\ref{appendix:energy-check} for the associated energy expressions).
 
 \begin{figure}[H]
     \centering
@@ -52,9 +53,9 @@ representing $\mathbf{T}^y$ from Cartan's torsion 2-form.
     \caption{
         This dual-motion structure serves as the foundation for modeling photons as stable, knotted æther vortices in VAM.
         Dual-scale vortex winding with toroidal and poloidal circulations. The toroidal circulation speed is $C_e$, while the poloidal component reaches $c$ due to maximum vortex ring propagation. The two scales form a helicity product:
-        \[
+        \(
             \mathcal{H} = \int \vec{v} \cdot \vec{\omega} \, dV \sim \Gamma_{\text{toroidal}} \cdot \Gamma_{\text{poloidal}}
-        \]
+        \)
         This product contributes to the derivation of the fine-structure constant $\alpha$ in VAM~\cite{iskandarani2025b}.
     }
     \label{fig:vortex-3d}
@@ -63,19 +64,18 @@ representing $\mathbf{T}^y$ from Cartan's torsion 2-form.
 
 
 
-
-
-
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.35\textwidth]{figures/Tre-foil}
+    \includegraphics[width=0.25\textwidth]{figures/Tre-foil}
     \caption{Trefoil knot vortex structure — minimal topologically nontrivial knot with chirality. This diagram represents a fermion in VAM (e.g., electron), whose mass is generated from internal knotted swirl energy:
-        \[
+        \(
             m_e \approx \frac{1}{\varphi} \cdot \frac{4}{\alpha} \cdot \left( \frac{1}{2} \rho_{\text{\ae}}^{\text{(energy)}} C_e^2 V \right)
-        \]
+        \)
         where $V$ is the knot volume, $\varphi$ the golden ratio, and $\rho_{\text{\ae}}^{\text{(energy)}}$ the æther energy density~\cite{iskandarani2025a, iskandarani2025b}. This configuration also exhibits chirality, fundamental for distinguishing matter vs antimatter in VAM.}
     \label{fig:trefoil-vortex}
 \end{figure}
+
+For the derivation, parameter choices, Python code, and full mass comparison table, see: "  VAM-8.5: Master Formula for Particle and Atomic Masses," ~\cite{VAM-8, VAM-8.5}.
 
 \section{Related Work and Historical Context}
 
@@ -95,7 +95,7 @@ representing $\mathbf{T}^y$ from Cartan's torsion 2-form.
 \section{Historical Roots of the Vortex \ae ther Concept}
 
 
-    The Vortex \ae ther Model (VAM) is deeply rooted in 19th-century developments in fluid dynamics and early field theory. The historical context reveals that many foundational ideas—long before the emergence of modern quantum field theory—foreshadowed a vortex-based structure of matter and interactions.
+    The Vortex \AE ther Model (VAM) is deeply rooted in 19th-century developments in fluid dynamics and early field theory. The historical context reveals that many foundational ideas—long before the emergence of modern quantum field theory—foreshadowed a vortex-based structure of matter and interactions.
 
 
     \subsection{Helmholtz and the Birth of Vorticity}
@@ -130,7 +130,7 @@ representing $\mathbf{T}^y$ from Cartan's torsion 2-form.
 
     \begin{quote}
 
-    \textit{“The vortex theory, though abandoned, left behind the powerful idea that topological structure could be the key to the quantum.”} \[0.5em]
+    \textit{“The vortex theory, though abandoned, left behind the powerful idea that topological structure could be the key to the quantum.”} \\[0.5em]
 
     \hfill -- Helmholtz–Kelvin–Tait lineage, revisited.
 
@@ -139,7 +139,7 @@ representing $\mathbf{T}^y$ from Cartan's torsion 2-form.
 
 \section{Physical Interpretation of the Æther}\label{sec:aether-interpretation}
 
-    In the Vortex \ae ther Model (VAM), the \ae ther is a physically real, incompressible, inviscid superfluid that fills all space and serves as the medium in which vortex structures propagate. Unlike the luminiferous æther of pre-relativistic physics, the VAM æther is not a rigid or preferred frame in the classical sense, but a \emph{relational fluid substrate} whose dynamics obey local conservation laws and whose properties are encoded in geometric field variables such as vorticity $\vec{\omega}$, swirl potential $\chi$, and pressure gradients $\nabla P$.
+    In the Vortex \AE ther Model (VAM), the \ae ther is a physically real, incompressible, inviscid superfluid that fills all space and serves as the medium in which vortex structures propagate. Unlike the luminiferous æther of pre-relativistic physics, the VAM æther is not a rigid or preferred frame in the classical sense, but a \emph{relational fluid substrate} whose dynamics obey local conservation laws and whose properties are encoded in geometric field variables such as vorticity $\vec{\omega}$, swirl potential $\chi$, and pressure gradients $\nabla P$.
 
     \subsection{Æther and Relativity}
 

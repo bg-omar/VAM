@@ -1,0 +1,849 @@
+%! Author = Omar Iskandarani
+%! Title = Photon as a Topological Vortex Ring: Torsion and the Geometry of Light in the Æther
+%! Date = 25-07-2025
+%! Affiliation = Independent Researcher, Groningen, The Netherlands
+%! License = © 2025 Omar Iskandarani. All rights reserved. This manuscript is made available for academic reading and citation only. No republication, redistribution, or derivative works are permitted without explicit written permission from the author. Contact: info@omariskandarani.com
+%! ORCID = 0009-0006-1686-3961
+%! DOI = 10.5281/zenodo.
+
+% === Metadata ===
+\newcommand{\papertitle}{On the Vortex Interpretation of Kerr Geometry in the Vortex Æther Model (VAM)}
+\newcommand{\paperdoi}{10.5281/zenodo.}
+
+\documentclass[twocolumn,aps,pre,floatfix,nofootinbib]{revtex4-2}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{physics}
+\usepackage{caption}
+\usepackage{bm}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{mathtools}
+\usetikzlibrary{knots,intersections,decorations.pathreplacing}
+\usetikzlibrary{3d, calc, arrows.meta, positioning}
+\usepackage{pgfmath}
+\usetikzlibrary{decorations.pathmorphing}
+\pgfplotsset{compat=1.18} % or version you have
+\usepackage{titlesec}
+\usepackage{ulem}
+\usepackage{subcaption}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\renewcommand{\grqq}{``}
+\usepackage{subfiles}
+\usepackage{ragged2e}
+\usepackage{amsmath, amssymb, bm}
+
+\begin{document}
+    \title{\papertitle}
+    \author{Omar Iskandarani}
+    \thanks{Independent Researcher, Groningen, The Netherlands\\
+    info@omariskandarani.com \\
+    ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961} \\
+    DOI: \href{https://doi.org/\paperdoi}{\paperdoi}}
+    \date{\today}
+
+    \begin{abstract}
+        \vspace*{-0.5em}
+        \section*{\centering Abstract}
+        \vspace*{-1em}
+
+We reinterpret the Kerr solution of general relativity through the framework of the Vortex Æther Model (VAM), replacing spacetime curvature and singularities with structured swirl fields in an inviscid, incompressible medium. The Kerr frame-dragging term \(g_{t\phi}\) is shown to emerge naturally from the circulation \( \Gamma\) of an axisymmetric vortex ring, yielding a new expression: \(\g_{t\phi}^{(\text{VAM})} \sim -\frac{\Gamma}{C_e^2}\)
+
+This correspondence allows us to model the rotating gravitational field of a compact object as a physical æther vortex with well-defined energy, swirl, and pressure gradients. We compare the VAM tensor formulation to the Einstein tensor of the Kerr metric and establish the conditions under which they produce similar observational effects. This work extends prior VAM formulations
+ \cite{Iskandarani2025a,Iskandarani2025b,Iskandarani2025c,Iskandarani2025d,Iskandarani2025f}.
+
+    \end{abstract}
+    \maketitle
+
+
+    \section{Introduction}
+
+    The Kerr metric \cite{Kerr1963} is the exact, stationary, axisymmetric solution to Einstein's vacuum field equations describing the spacetime geometry around a rotating mass. It has long been celebrated for its elegance, predicting phenomena such as frame dragging, the ergosphere, and event horizons without requiring any explicit matter distribution. However, the vacuum nature of the solution ($G_{\mu\nu} = 0$) poses an ontological challenge: how can angular momentum, energy, and causality structure arise from an empty geometry?
+
+    The Vortex \textit{\ae}ther Model (VAM) \cite{Iskandarani2025a,Iskandarani2025b,Iskandarani2025c} offers an alternative: gravity emerges not from spacetime curvature, but from swirl dynamics in an incompressible, inviscid æther. In this framework, frame dragging is interpreted as the physical result of a structured vorticity field—specifically, a quantized circulation of the æther surrounding a knotted vortex core. VAM replaces differential geometry with fluid dynamics, and the Ricci-flat Kerr spacetime with a pressure-balanced vortex soliton of finite energy.
+
+    In this work, we present a formal correspondence between the Kerr solution and the vortex structures permitted in VAM. We demonstrate that the off-diagonal metric term \( g_{t\phi} \) arises directly from the circulation \( \Gamma \) of an axisymmetric swirl, following the relation:
+    \[
+        g_{t\phi}^{(\text{VAM})} \sim -\frac{\Gamma}{C_e^2},
+    \]
+    where \( C_e \) is the maximum vortex-core tangential velocity of the æther. This recovers the correct frame-dragging signature in the weak-field limit and matches the angular momentum profile of the Kerr solution.
+
+    We further analyze the event horizon as a breakdown radius of æther pressure coherence, rather than a coordinate singularity. The absence of geometric singularities in VAM enables a regular, topological interpretation of the Kerr geometry as a finite-energy, helicity-conserving configuration.
+
+    This paper is part of the broader VAM series \cite{Iskandarani2025a,Iskandarani2025b,Iskandarani2025c,Iskandarani2025d,Iskandarani2025e,Iskandarani2025f}, aiming to reconstruct gravity, time dilation, quantum structure, and electromagnetism from first principles using structured swirl fields in a superfluid medium. Here, we focus on showing that even one of the most celebrated exact solutions in GR can be reinterpreted as a manifestation of fluid mechanics and vortex topology.
+
+
+
+
+
+    \section{Swirl Circulation and the Off-Diagonal Kerr Term}
+
+    The Kerr metric, expressed in Boyer--Lindquist coordinates $(t, r, \theta, \phi)$, contains a nonzero off-diagonal term $g_{t\phi}$ that encodes the phenomenon of frame dragging. This term couples time and azimuthal angular displacement, and is given by:
+    \begin{equation}
+        g_{t\phi} = -\frac{2 G M a r \sin^2\theta}{\Sigma}, \qquad \Sigma = r^2 + a^2 \cos^2\theta,
+    \end{equation}
+    where $a = J/M$ is the specific angular momentum. In general relativity, this term is a consequence of spacetime curvature induced by rotation. However, within the VAM framework, it arises naturally from the swirl velocity field of an axisymmetric vortex.
+
+    In particular, we identify the ætheric analog of this off-diagonal term with the azimuthal circulation:
+    \begin{equation}
+        \Gamma_{\text{swirl}} = \oint v_\phi (r \sin\theta) \, d\phi = 2\pi r \sin\theta \cdot v_\phi.
+    \end{equation}
+    Using this, we propose the leading-order correspondence:
+    \begin{equation}
+        g_{t\phi}^{(\text{VAM})} \sim -\frac{\Gamma_{\text{swirl}}}{C_e^2}, \label{eq:gtphi_vam}
+    \end{equation}
+    where $C_e$ is the vortex-core tangential velocity constant in VAM \cite{Iskandarani2025a}.
+
+    To derive this, consider the momentum flux tensor in the æther due to angular swirl. The effective metric component associated with this flux takes the form:
+    \begin{equation}
+        g_{t\phi}^{(\text{VAM})} = - \kappa \cdot \rho_{\text{\ae}}^{(\text{mass})} \cdot v_\phi \cdot (r \sin\theta) \cdot \Delta V,
+    \end{equation}
+    where $\kappa$ is a dimensionless geometric factor and $\rho_{\text{\ae}}^{(\text{mass})}$ is the mass-equivalent æther density \cite{Iskandarani2025f}. Normalizing by the maximum æther energy per unit volume, $\rho_{\text{\ae}}^{(\text{mass})} C_e^2$, and integrating over the azimuthal loop yields:
+    \begin{equation}
+        g_{t\phi}^{(\text{VAM})} \sim -\frac{1}{\rho_{\text{\ae}}^{(\text{mass})} C_e^2} \cdot \rho_{\text{\ae}}^{(\text{mass})} \cdot \Gamma_{\text{swirl}} = -\frac{\Gamma_{\text{swirl}}}{C_e^2},
+    \end{equation}
+    which recovers the correct physical dimension and weak-field behavior expected from the Kerr frame-dragging term.
+
+    This identification not only reproduces the metric structure of the Kerr solution, but also provides a physical mechanism grounded in æther dynamics: angular momentum is not an abstract geometric quantity, but the integral of real swirl in a structured, incompressible fluid.
+
+
+
+
+    \subsection{Breakdown Radius and Horizon Analogy in VAM}
+
+    In general relativity, the outer event horizon of the Kerr black hole occurs at:
+    \[
+        r_+ = M + \sqrt{M^2 - a^2}
+    \]
+    This surface marks a coordinate singularity, where \( g_{tt} \to 0 \) and \( g_{rr} \to \infty \), and is often interpreted as the causal boundary of a rotating black hole.
+
+    In VAM, no singularity occurs. Instead, we identify a breakdown radius \( r_c \), where the swirl velocity reaches its peak and pressure drops to a minimum:
+    \[
+        P(r) = P_\infty - \frac{1}{2} \rho_{\text{\ae}}^{(\text{mass})} v_\phi^2(r)
+    \]
+    As \( r \to 0 \), the pressure and swirl saturate smoothly, and the energy density remains finite. There is no horizon, but rather a stable vortex core with smooth topological transition. We define the mass and angular momentum as:
+    \begin{align}
+        M &= \frac{1}{\varphi} \cdot \frac{4}{\alpha} \cdot \left( \frac{1}{2} \rho_{\text{\ae}}^{(\text{mass})} C_e^2 V \right) \\
+        J &= n_t \hbar, \quad a = \frac{J}{M} = \frac{\hbar n_t}{M}
+    \end{align}
+    where \( V \) is the vortex core volume and \( n_t \) the twist number of the knotted vortex ring.
+
+    This provides a direct correspondence between Kerr parameters \( (M, a) \) and topological, energetic features of the vortex in VAM.
+
+
+
+
+    \section{Helicity Balance and Vacuum Structure}
+
+    In general relativity, the vacuum condition \( G_{\mu\nu} = 0 \) implies the absence of matter-energy sources. In VAM, this condition is reinterpreted:
+    \begin{quote}
+        The æther is not empty, but in a state of perfect dynamical balance, where all internal stresses cancel: swirl-induced pressure, centrifugal gradients, helicity tension, and energy flux divergence sum to zero.
+    \end{quote}
+    This implies that the vortex configuration is a solitonic equilibrium, governed by:
+    \[
+        \nabla_\mu T^{\mu\nu}_{\text{(vortex)}} = 0
+    \]
+    with \( T^{\mu\nu}_{\text{(vortex)}} \) representing a tensor of internal æther dynamics. The stress-energy of the æther may include:
+    \begin{itemize}
+        \item Swirl pressure: \( -\rho v_\phi^2 \)
+        \item Helicity flux: \( \vec{v} \cdot \vec{\omega} \)
+        \item Anisotropic tension along vortex lines
+    \end{itemize}
+    In this reinterpretation, the vacuum geometry is not devoid of physical content but is a topologically and energetically constrained vorticity configuration.
+
+
+
+
+
+\subsection{Toward a VAM Field Equation}
+    Following \cite{Iskandarani2025c}, we propose:
+    \begin{equation}
+    G_{\mu\nu} = 8\pi T_{\mu\nu}^{(\text{vortex})},
+    \end{equation}
+    with $T_{\mu\nu}^{(\text{vortex})}$ including terms for swirl pressure, helicity flux, and anisotropic vorticity stress \cite{Iskandarani2025e}. The vacuum limit $G_{\mu\nu} = 0$ then represents a self-balanced topological soliton in the æther.
+
+    The Kerr geometry is reborn as a stable, rotating, helicity-conserving vortex configuration. Its structure emerges not from abstract curvature, but from measurable swirl, pressure, and vortex tension. This paves the way for experimental analogs, finite-energy alternatives to black holes, and a unified treatment of gravity and quantum structure within a fluidic topological framework.
+
+
+
+
+
+\section{Einstein Tensor from a Rotating Æther Vortex Mass}
+
+    To compare with the Kerr geometry, we now construct the full Einstein tensor \( G_{\mu\nu} \) for a rotating æther vortex mass with finite energy density and swirl profile.
+
+    We assume axial symmetry and adopt a cylindrical coordinate system \( (t, r, \phi, z) \), where the swirl is confined to the azimuthal direction:
+    \[
+        \vec{v}(r) = v_\phi(r)\, \hat{\phi}, \quad \vec{\omega}(r) = \nabla \times \vec{v} = \frac{1}{r} \frac{d}{dr} (r v_\phi) \hat{z}.
+    \]
+
+    Let the metric ansatz take the form:
+    \[
+        ds^2 = -f(r) dt^2 - 2\chi(r) dt\, d\phi + h(r)\, d\phi^2 + \frac{1}{g(r)} dr^2 + dz^2,
+    \]
+    where \( \chi(r) \sim \Gamma(r)/C_e^2 \) encodes the swirl-induced frame dragging.
+
+    We compute the Christoffel symbols, Ricci tensor, and Einstein tensor components from this ansatz. To leading order in \( \chi(r) \), the nonzero components of the Einstein tensor are:
+    \begin{align}
+        G_{tt} &\approx \frac{g}{2r} \left( \frac{d^2 h}{dr^2} - \frac{1}{r} \frac{dh}{dr} \right), \\
+        G_{t\phi} &\approx \frac{1}{2} \left( \frac{d^2 \chi}{dr^2} + \frac{1}{r} \frac{d\chi}{dr} \right), \\
+        G_{\phi\phi} &\approx -\frac{1}{2} \left( \frac{df}{dr} \frac{d}{dr} \left( \frac{1}{g} \right) + \ldots \right).
+    \end{align}
+
+    These components correspond respectively to:
+    - Local energy density from azimuthal swirl tension
+    - Angular momentum density via vorticity flux
+    - Centrifugal balancing via pressure gradients
+
+    When matched with a structured æther stress-energy tensor \( T^{\mu\nu}_{\text{(vortex)}} \), we recover the analog of the Kerr metric outside the core region.
+
+    \section*{Einstein Tensor \(G_{\mu\nu}\) for a Rotating Vortex Mass in VAM}
+
+    \subsection*{1. Objective}
+
+    To compute the full Einstein tensor \(G_{\mu\nu}\) for a rotating mass configuration in the Vortex \textit{\ae}ther Model (VAM), where the source is a knotted, helicity-conserving vortex structure. Unlike the vacuum Kerr solution, we consider a nonzero pressure and vorticity distribution.
+
+    \subsection*{2. VAM Metric Ansatz for Rotating Mass}
+
+    We define a generalized stationary, axisymmetric metric in coordinates \((t, r, \theta, \phi)\) adapted to the æther swirl flow:
+    \begin{equation}
+        ds^2 = -\left(1 - \Phi(r,\theta)\right) dt^2 - 2 \Omega(r,\theta) r^2 \sin^2\theta\, dt\, d\phi + A(r,\theta)\, dr^2 + B(r,\theta)\, d\theta^2 + C(r,\theta)\, d\phi^2
+    \end{equation}
+    where:
+    \begin{itemize}
+        \item \( \Phi(r,\theta) \): gravitational potential from swirl-induced pressure drop
+        \item \( \Omega(r,\theta) \): local frame-dragging rate = swirl angular velocity
+        \item \( A, B, C \): radial and angular metric functions determined by æther compressibility and swirl field
+    \end{itemize}
+
+    \subsection*{3. Æther Stress-Energy Tensor}
+
+    In VAM, the effective energy-momentum tensor is:
+    \begin{equation}
+        T_{\mu\nu}^{(\text{vortex})} = \rho_{\text{\ae}}^{(\text{mass})} u_\mu u_\nu + P_{\text{swirl}} \left( g_{\mu\nu} + u_\mu u_\nu \right) + \tau_{\mu\nu}
+    \end{equation}
+    with:
+    \begin{itemize}
+        \item \( u^\mu \): 4-velocity field aligned with æther flow
+        \item \( P_{\text{swirl}} = \frac{1}{2}\rho v_\phi^2 \): swirl pressure
+        \item \( \tau_{\mu\nu} \): vorticity-induced anisotropic stress (nonzero off-diagonal terms)
+    \end{itemize}
+
+    \subsection*{4. Christoffel Symbols and Ricci Tensor}
+
+    Using the metric ansatz, we compute all nonzero Christoffel symbols:
+    \[
+        \Gamma^\lambda_{\mu\nu} = \frac{1}{2} g^{\lambda\sigma} \left( \partial_\mu g_{\nu\sigma} + \partial_\nu g_{\mu\sigma} - \partial_\sigma g_{\mu\nu} \right)
+    \]
+    From this, construct \(R_{\mu\nu}\) and then the scalar curvature \(R = g^{\mu\nu} R_{\mu\nu}\).
+
+    \subsection*{5. Einstein Tensor Components}
+
+    The Einstein tensor is:
+    \[
+        G_{\mu\nu} = R_{\mu\nu} - \frac{1}{2}g_{\mu\nu}R
+    \]
+    We expect:
+    \begin{itemize}
+        \item \( G_{tt} \approx 8\pi G \rho_{\text{\ae}}^{(\text{mass})} \): swirl energy density
+        \item \( G_{t\phi} \propto \Gamma_{\text{swirl}}(r,\theta) \): frame dragging
+        \item \( G_{rr}, G_{\theta\theta}, G_{\phi\phi} \): gradients of swirl pressure and centrifugal tension
+    \end{itemize}
+
+    \subsection*{6. Limiting Behavior}
+
+    In the limit \( \Omega(r,\theta) \to 0 \) and \( \Phi \to 2GM/r \), the metric reduces to the Schwarzschild case. In the limit of vanishing pressure gradients, \( G_{\mu\nu} \to 0 \) recovers the Kerr geometry.
+
+    \section{Stress-Energy Tensor from Æther Vorticity}
+
+    We now define the stress-energy tensor in the VAM framework, incorporating real physical sources from structured vortex flow:
+    \[
+        T^{\mu\nu}_{(\text{vortex})} = \rho_{\text{\ae}}^{(\text{mass})} u^\mu u^\nu + P_{\text{swirl}}\, g^{\mu\nu} + \lambda_1 \omega^\mu \omega^\nu + \lambda_2 H^{\mu\nu},
+    \]
+    where:
+    \begin{itemize}
+        \item \( u^\mu = (1, v^i) \): swirl velocity 4-vector
+        \item \( \omega^\mu = \epsilon^{\mu\nu\alpha\beta} u_\nu \nabla_\alpha u_\beta \): vorticity 4-vector
+        \item \( H^{\mu\nu} = u^\mu \omega^\nu + u^\nu \omega^\mu \): helicity tensor (symmetric)
+        \item \( P_{\text{swirl}} = -\frac{1}{2} \rho v_\phi^2 \): pressure drop due to rotational velocity
+    \end{itemize}
+
+    This tensor accounts for:
+    - Compressional stress from vortex energy density
+    - Bernoulli-type swirl pressure
+    - Helicity coupling (similar to magnetohydrodynamics)
+    - Tension along vortex lines via \( \omega^\mu \omega^\nu \)
+
+    Substituting into:
+    \[
+        G_{\mu\nu} = 8\pi T_{\mu\nu}^{(\text{vortex})},
+    \]
+    we can match the swirl-induced geometry to a real, conserved source.
+    This redefines the gravitational source: not static mass, but swirl-coherent energy flux in a knotted æther.
+
+
+
+
+
+    \section{VAM Interpretation of the Kerr Solution}
+
+    \subsection*{1. From Frame Dragging to Swirl Flow}
+    The Kerr metric, a solution to the Einstein field equations in vacuum, describes the geometry surrounding a rotating mass. Traditionally, it is derived from purely geometric and relativistic assumptions: axial symmetry, stationarity, and asymptotic flatness. However, within the framework of the Vortex \textit{\ae}ther Model (VAM), this same geometry can be interpreted as the manifestation of a physically real, helicity-conserving, rotating vortex structure in an inviscid, incompressible \textit{\ae}ther. Frame dragging, rather than arising from spacetime curvature, emerges from circulation of the \textit{\ae}ther itself.
+
+    \subsection*{2. Kerr Metric Overview}
+    In Boyer--Lindquist coordinates, the Kerr line element is:
+    \begin{equation}
+        \begin{aligned}
+            ds^2 = & -\left(1 - \frac{2 G M r}{\Sigma} \right) dt^2 - \frac{4 G M a r \sin^2\theta}{\Sigma} dt\, d\phi + \frac{\Sigma}{\Delta} dr^2 + \Sigma d\theta^2 \\
+            & + \left(r^2 + a^2 + \frac{2 G M a^2 r \sin^2\theta}{\Sigma} \right) \sin^2\theta\, d\phi^2,
+        \end{aligned}
+    \end{equation}
+    where
+    \[
+        \Sigma = r^2 + a^2 \cos^2\theta, \qquad \Delta = r^2 - 2 G M r + a^2,
+    \]
+    and \( a = J/M \) is the angular momentum per unit mass.
+
+    The Einstein tensor \( G_{\mu\nu} = 0 \) implies a Ricci-flat spacetime, with curvature fully encoded in the Weyl tensor.
+
+    \subsection*{3. VAM Interpretation: Tangential Swirl and Helicity Balance}
+    We reinterpret the off-diagonal metric component as arising from the swirl of the æther:
+    \begin{equation}
+        g_{t\phi} = -\frac{2 G M a r \sin^2\theta}{\Sigma}.
+    \end{equation}
+    This corresponds to the ætheric circulation:
+    \begin{equation}
+        \Gamma_{\text{swirl}} = \oint v_\phi\, r \sin\theta\, d\phi = 2\pi r \sin\theta\, v_\phi.
+    \end{equation}
+    Hence,
+    \begin{equation}
+        g_{t\phi}^{(\text{VAM})} \sim -\frac{\Gamma_{\text{swirl}}}{C_e^2},
+    \end{equation}
+    where \( C_e \) is the characteristic tangential velocity of the vortex core.
+
+    \subsection*{4. Helicity-Conserved Vacuum as Vortex Equilibrium}
+    Although \( G_{\mu\nu} = 0 \), this does not imply emptiness in VAM. Rather, it signifies that the æther is in a state of perfect dynamical balance:
+    \begin{quote}
+        A topologically stable vortex configuration in which all ætheric pressure gradients and swirl-induced inertial forces cancel, yielding zero net energy-momentum divergence.
+    \end{quote}
+
+    The vortex energy is stored in rotational motion:
+    \begin{equation}
+        E_{\text{vortex}} = \int \frac{1}{2} \rho_{\text{\ae}}^{(\text{mass})} v_\phi^2\, dV.
+    \end{equation}
+
+    \subsection*{5. Mass and Spin from Knot Geometry}
+    We define mass and spin in terms of vortex core properties:
+    \begin{align}
+        M &= \frac{1}{\varphi} \cdot \frac{4}{\alpha} \cdot \left( \frac{1}{2} \rho_{\text{\ae}}^{(\text{mass})} C_e^2 V \right), \\
+        J &= n_t \hbar, \quad a = \frac{J}{M} = \frac{\hbar n_t}{\rho_{\text{\ae}}^{(\text{mass})} C_e^2 V} \cdot \frac{\alpha \varphi}{4},
+    \end{align}
+    where \( n_t \) is the twist number and \( V \) the volume of the vortex core.
+
+    \subsection*{6. Consequences and Testable Predictions}
+    \begin{itemize}
+        \item \textbf{Frame dragging} is real æther circulation; testable in rotating superfluid or electromagnetic systems.
+        \item \textbf{Kerr singularity} is replaced by a smooth core of radius \( r_c \), finite energy, and continuous pressure.
+        \item \textbf{Vacuum solutions} in GR correspond to helicity-neutral vortex equilibria in VAM.
+        \item \textbf{Time dilation} follows from rotational energy:
+        \[
+            dt = dt_{\infty} \sqrt{1 - \frac{v_\phi^2}{C_e^2}}.
+        \]
+    \end{itemize}
+
+    \subsection*{7. Conclusion}
+    The Kerr geometry arises not from empty curvature, but from structured swirl in a physical æther. This interpretation offers a smooth, finite-energy foundation for gravity, where frame dragging, mass, and rotation emerge from vortex dynamics.
+
+
+
+    \section*{Stress-Energy Tensor in VAM from Vorticity Flow}
+
+    \subsection*{1. Objective}
+
+    To define the full stress-energy tensor \( T^{\mu\nu}_{(\text{vortex})} \) within the Vortex \textit{\ae}ther Model (VAM), expressed in terms of swirl velocity \( v^\mu \), vorticity \( \omega^\mu \), pressure gradients, and topological structure. This tensor serves as the physical source for Einstein’s equations in the VAM reinterpretation of gravity.
+
+    \subsection*{2. Æther as an Inviscid, Incompressible Fluid}
+
+    The æther is modeled as a relativistically consistent, inviscid and incompressible superfluid with absolute time and flat spatial geometry. The 4-velocity is:
+    \begin{equation}
+        u^\mu = \gamma \left(1, \frac{\vec{v}}{C_e} \right), \quad \gamma = \frac{1}{\sqrt{1 - \vec{v}^2 / C_e^2}}
+    \end{equation}
+
+    Vorticity is defined as:
+    \begin{equation}
+        \omega^\mu = \frac{1}{2} \epsilon^{\mu\nu\alpha\beta} u_\nu \partial_\alpha u_\beta
+    \end{equation}
+
+    \subsection*{3. General Form of the Energy-Momentum Tensor}
+
+    We define:
+    \begin{equation}
+        T^{\mu\nu}_{(\text{vortex})} = \rho_{\text{\ae}}^{(\text{mass})} u^\mu u^\nu + P g^{\mu\nu} + \pi^{\mu\nu}
+    \end{equation}
+    where:
+    \begin{itemize}
+        \item \( \rho_{\text{\ae}}^{(\text{mass})} \approx 3.89 \times 10^{18} \, \text{kg/m}^3 \) is the æther mass density \cite{Iskandarani2025b}
+        \item \( P \) is the isotropic pressure (background or swirl-induced)
+        \item \( \pi^{\mu\nu} \) is the anisotropic stress tensor due to helicity, swirl gradients, and knot tension
+    \end{itemize}
+
+    \subsection*{4. Swirl-Induced Pressure and Anisotropic Stress}
+
+    We model the swirl pressure as:
+    \begin{equation}
+        P_{\text{swirl}} = \frac{1}{2} \rho_{\text{\ae}}^{(\text{mass})} v_\phi^2
+    \end{equation}
+
+    The anisotropic stress is:
+    \begin{equation}
+        \pi^{\mu\nu} = \lambda_1 \, \omega^\mu \omega^\nu + \lambda_2 H^{\mu\nu} + \lambda_3 \nabla^{(\mu} v^{\nu)}
+    \end{equation}
+    with:
+    \begin{itemize}
+        \item \( H^{\mu\nu} = \epsilon^{\mu\alpha\beta\sigma} u_\alpha \nabla_\beta \omega_\sigma \): helicity flux tensor
+        \item \( \lambda_i \): coupling constants encoding vortex core structure, chirality, and swirl coherence
+    \end{itemize}
+
+    \subsection*{5. Conservation and Dynamical Balance}
+
+    The stress-energy tensor is conserved:
+    \begin{equation}
+        \nabla_\mu T^{\mu\nu}_{(\text{vortex})} = 0
+    \end{equation}
+    This condition ensures Bernoulli equilibrium and global helicity conservation for stable knotted vortex structures.
+
+    \subsection*{6. Example: Toroidal Axisymmetric Vortex Knot}
+
+    For a rotating toroidal knot with dominant azimuthal swirl:
+    \begin{align*}
+        T^{tt} &\approx \rho_{\text{\ae}}^{(\text{mass})} + P_{\text{swirl}} \\
+        T^{t\phi} &\approx \rho_{\text{\ae}}^{(\text{mass})} v_\phi \\
+        T^{rr} &\approx -P + \lambda_1 (\omega^r)^2 \\
+        T^{\phi\phi} &\approx P + \frac{1}{2}\lambda_1 (\omega^\phi)^2
+    \end{align*}
+
+    \subsection*{7. Toward a VAM-Based Gravitational Field Equation}
+
+    We substitute this vortex-derived tensor into the field equation:
+    \begin{equation}
+        G^{\mu\nu} = 8\pi T^{\mu\nu}_{(\text{vortex})}
+    \end{equation}
+    This replaces abstract spacetime curvature with concrete, swirl-supported energy flow — a tangible source grounded in knotted fluid dynamics.
+
+    A natural next step is to construct a Lagrangian density \( \mathcal{L}_{\text{vortex}} \) whose variation with respect to \( u^\mu \) and \( \omega^\mu \) reproduces the above stress-energy tensor via the Euler–Lagrange formalism.
+
+
+    \section*{Vortex Lagrangian Density for Structured \textit{\ae}ther Stress}
+
+    \subsection*{1. Objective}
+
+    To construct a Lagrangian density \( \mathcal{L}_{\text{vortex}} \) that generates the vortex stress-energy tensor in the Vortex \textit{\ae}ther Model (VAM) via the Euler–Lagrange equations applied to the 4-velocity field \( u^\mu \) and the vorticity field \( \omega^\mu \).
+
+    \subsection*{2. Governing Fields}
+
+    We define:
+
+    \begin{itemize}
+        \item \( u^\mu = \gamma (1, \vec{v}/C_e), \quad \gamma = (1 - \vec{v}^2/C_e^2)^{-1/2} \): æther swirl 4-velocity
+        \item \( \omega^\mu = \frac{1}{2} \epsilon^{\mu\nu\alpha\beta} u_\nu \partial_\alpha u_\beta \): vorticity pseudovector
+        \item \( H^{\mu\nu} = \epsilon^{\mu\alpha\beta\sigma} u_\alpha \nabla_\beta \omega_\sigma \): helicity flux tensor
+    \end{itemize}
+
+    \subsection*{3. Lagrangian Density Form}
+
+    We propose the following vortex-field Lagrangian:
+
+    \begin{equation}
+        \boxed{
+            \mathcal{L}_{\text{vortex}} =
+            -\frac{1}{2} \rho_{\text{\ae}}^{(\text{mass})} u^\mu u_\mu
+            + \lambda_1 \omega^\mu \omega_\mu
+            + \lambda_2 H^{\mu\nu} H_{\mu\nu}
+            + \lambda_3 \nabla^{(\mu} u^{\nu)} \nabla_{(\mu} u_{\nu)}
+            + P
+        }
+    \end{equation}
+
+    This expression encodes:
+    \begin{itemize}
+        \item Ætheric rest energy and swirl kinetic energy
+        \item Topological tension via vorticity self-interaction
+        \item Helicity transport and conservation
+        \item Anisotropic stress from swirl shear gradients
+        \item Background pressure from swirl confinement
+    \end{itemize}
+
+    \subsection*{4. Stress Tensor via Variation}
+
+    Applying:
+    \[
+        T^{\mu\nu} = \frac{2}{\sqrt{-g}} \frac{\delta (\sqrt{-g} \mathcal{L}_{\text{vortex}})}{\delta g_{\mu\nu}}
+    \]
+    reproduces:
+    \[
+        T^{\mu\nu}_{(\text{vortex})} = \rho_{\text{\ae}}^{(\text{mass})} u^\mu u^\nu + P g^{\mu\nu} + \lambda_1 \omega^\mu \omega^\nu + \lambda_2 H^{\mu\nu} + \lambda_3 \nabla^{(\mu} u^{\nu)}
+    \]
+
+    \subsection*{5. Interpretation}
+
+    This Lagrangian formalism shows that the gravitational source in VAM is a structured, topologically stabilized energy field — not an abstract mass point. The Euler–Lagrange dynamics reflect the conservation of vortex helicity, swirl momentum, and ætheric coherence.
+
+
+    \section*{Topological Conservation Law from Vortex Helicity}
+
+    \subsection*{1. Objective}
+
+    To identify the topologically conserved quantity associated with the vortex Lagrangian \( \mathcal{L}_{\text{vortex}} \), and express its conservation via a divergence-free helicity current.
+
+    \subsection*{2. Helicity Current Definition}
+
+    We define the helicity 4-current as:
+    \begin{equation}
+        J^\mu_{\text{helicity}} = \epsilon^{\mu\nu\alpha\beta} u_\nu \omega_\alpha v_\beta
+    \end{equation}
+
+    This current reflects the intertwining of vorticity and æther flow, i.e., the degree to which the swirl field forms knotted or linked structures.
+
+    \subsection*{3. Conservation Law}
+
+    Variation of the Lagrangian with respect to \( u^\mu \) and \( \omega^\mu \), together with the Bianchi identities, yields the conservation law:
+    \begin{equation}
+        \nabla_\mu J^\mu_{\text{helicity}} = 0
+    \end{equation}
+
+    This equation encodes **topological invariance of total helicity**:
+    \begin{equation}
+        \mathcal{H} = \int J^0_{\text{helicity}} \, d^3x = \text{constant}
+    \end{equation}
+
+    \subsection*{4. Physical Interpretation in VAM}
+
+    In the Vortex \textit{æ}ther Model:
+    \begin{itemize}
+        \item \( \mathcal{H} \) corresponds to the linking and twisting of vortex tubes in 3D æther space.
+        \item Quantized particles (e.g., electrons, protons) correspond to knotted structures with nonzero conserved helicity.
+        \item Helicity conservation ensures stability of vortex cores and suppresses topological transitions (unless external torque or swirl violation occurs).
+    \end{itemize}
+
+    \subsection*{5. Connection to VAM Gravitational Sources}
+
+    In this formulation:
+    \[
+        T^{\mu\nu} \Rightarrow \text{depends functionally on } \mathcal{H}
+    \]
+    Thus, gravitational effects in VAM are not sourced by mass-energy alone, but by the *topological class of the swirl structure*. Gravitational lensing, time dilation, and inertial effects emerge from the conserved helicity content.
+
+    \subsection*{6. Relation to Hopf Invariant and Knot Class}
+
+    The total helicity \( \mathcal{H} \) is formally equivalent to the Hopf invariant \( H \in \pi_3(S^2) = \mathbb{Z} \), classifying mappings from the compactified spatial 3-sphere to the unit vorticity sphere:
+    \begin{equation}
+        \mathcal{H} \sim \int_{\mathbb{R}^3} \vec{v} \cdot \vec{\omega} \, d^3x \quad \longleftrightarrow \quad \text{Hopf}(u^\mu)
+    \end{equation}
+
+    This links the VAM helicity current to the topological winding of vortex lines — where distinct particle species correspond to distinct knotted or linked configurations. For example:
+    \begin{itemize}
+        \item Trefoil knot: \( H = \pm1 \), fermionic soliton
+        \item Hopf link: \( H = 0 \), neutrino-like structure
+        \item Higher-order torus knots: \( |H| > 1 \), hadronic bound states
+    \end{itemize}
+
+    \textbf{Conclusion:} In VAM, helicity conservation is not merely a dynamical symmetry, but a topological invariant encoding particle identity, gravitational coupling, and quantum coherence.
+
+
+    \section{Stress-Energy Tensor and Helicity Conservation in VAM}
+
+    \subsection*{1. Objective}
+
+    To define the complete stress-energy tensor \( T^{\mu\nu}_{(\text{vortex})} \) within the Vortex \textit{\ae}ther Model (VAM), incorporating swirl velocity \( u^\mu \), vorticity \( \omega^\mu \), pressure gradients, and topological structure — and to show how this leads to helicity conservation as a fundamental topological law.
+
+    \subsection*{2. Æther as an Inviscid, Incompressible Fluid}
+
+    The \textit{\ae}ther is modeled as a relativistically consistent, incompressible, inviscid fluid with absolute time. The 4-velocity of the swirl flow is:
+    \begin{equation}
+        u^\mu = \gamma \left(1, \frac{\vec{v}}{C_e}\right), \qquad \gamma = \frac{1}{\sqrt{1 - \vec{v}^2 / C_e^2}}
+    \end{equation}
+
+    Vorticity is defined via the relativistic extension:
+    \begin{equation}
+        \omega^\mu = \frac{1}{2} \epsilon^{\mu\nu\alpha\beta} u_\nu \partial_\alpha u_\beta
+    \end{equation}
+
+    \subsection*{3. Stress-Energy Tensor Formulation}
+
+    We propose the total energy-momentum tensor of a vortex configuration:
+    \begin{equation}
+        T^{\mu\nu}_{(\text{vortex})} = \rho_{\text{\ae}}^{(\text{mass})} u^\mu u^\nu + P g^{\mu\nu} + \pi^{\mu\nu}
+    \end{equation}
+    where:
+    \begin{itemize}
+        \item \( \rho_{\text{\ae}}^{(\text{mass})} \) is the æther mass density (e.g. \( \sim 3.89 \times 10^{18} \,\text{kg/m}^3 \))
+        \item \( P \) is isotropic Bernoulli pressure from tangential vortex tension
+        \item \( \pi^{\mu\nu} \) is an anisotropic stress term encoding swirl directionality and topology
+    \end{itemize}
+
+    \subsection*{4. Swirl Pressure and Anisotropic Structure}
+
+    The tangential swirl pressure is:
+    \begin{equation}
+        P_{\text{swirl}} = \frac{1}{2} \rho_{\text{\ae}}^{(\text{mass})} v_\phi^2
+    \end{equation}
+
+    The anisotropic stress is modeled as:
+    \begin{equation}
+        \pi^{\mu\nu} = \lambda_1 \omega^\mu \omega^\nu + \lambda_2 H^{\mu\nu} + \lambda_3 \nabla^{(\mu} u^{\nu)}
+    \end{equation}
+    with:
+    \begin{itemize}
+        \item \( H^{\mu\nu} = \epsilon^{\mu\alpha\beta\sigma} u_\alpha \nabla_\beta \omega_\sigma \): helicity flux tensor
+        \item \( \lambda_i \): coefficients that encode vortex topology (e.g., trefoil, link, torus knots)
+    \end{itemize}
+
+    \subsection*{5. Conservation Laws}
+
+    The covariant conservation equation:
+    \begin{equation}
+        \nabla_\mu T^{\mu\nu}_{(\text{vortex})} = 0
+    \end{equation}
+    ensures dynamic stability and embodies Bernoulli balance within structured swirl fields.
+
+    From the vorticity and 4-velocity, we construct the helicity current:
+    \begin{equation}
+        \mathcal{J}^\mu = \epsilon^{\mu\nu\alpha\beta} u_\nu \partial_\alpha u_\beta = 2 \omega^\mu
+    \end{equation}
+
+    \textbf{Topological helicity conservation} then follows:
+    \begin{equation}
+        \nabla_\mu \mathcal{J}^\mu = 0
+    \end{equation}
+    ensuring that total helicity is conserved unless external forcing or vortex reconnection occurs.
+
+    \subsection*{6. Topological Interpretation via Hopf Invariant}
+
+    The spatial integral of helicity recovers the Hopf invariant:
+    \begin{equation}
+        \mathcal{H} = \int \vec{v} \cdot \vec{\omega} \, d^3x \quad \leftrightarrow \quad H \in \pi_3(S^2) = \mathbb{Z}
+    \end{equation}
+    This classifies the knot type:
+    \begin{itemize}
+        \item Trefoil knot: \( H = \pm 1 \)
+        \item Hopf link: \( H = 0 \)
+        \item Torus knots: \( H = n \in \mathbb{Z} \)
+    \end{itemize}
+    The VAM interpretation is that each particle species corresponds to a different topological equivalence class in this homotopy group.
+
+    \subsection*{7. Toward a VAM Field Equation}
+
+    Finally, we posit:
+    \begin{equation}
+        G^{\mu\nu} = 8\pi T^{\mu\nu}_{(\text{vortex})}
+    \end{equation}
+    linking spacetime geometry not to abstract curvature, but to the real swirl energy of a structured æther field.
+
+    \textbf{Next:} Derive a Lagrangian density \( \mathcal{L}_{\text{vortex}} \) that yields this stress-energy tensor via Euler–Lagrange variation with respect to \( u^\mu \) and \( \omega^\mu \), and guarantees topological conservation as a Noether current.
+
+
+    \section*{Lagrangian Density for Vortex Fields in the Vortex \textit{\ae}ther Model (VAM)}
+
+    We propose the following swirl-based Lagrangian density \( \mathcal{L}_{\text{vortex}} \), capturing both dynamics and topology of the æther flow:
+
+    \[
+        \boxed{
+            \mathcal{L}_{\text{vortex}} =
+            \underbrace{-\rho_{\text{\ae}}^{(\text{mass})} C_e^2 \sqrt{1 - \frac{v^2}{C_e^2}}}_{\text{relativistic fluid energy}}
+            +
+            \underbrace{\frac{\lambda_1}{2} \omega_\mu \omega^\mu}_{\text{swirl energy (vorticity norm)}}
+            +
+            \underbrace{\lambda_2 \epsilon^{\mu\nu\alpha\beta} u_\mu \omega_\nu \partial_\alpha u_\beta}_{\text{topological helicity term}}
+            +
+            \underbrace{\lambda_3 \nabla_\mu u_\nu \nabla^\mu u^\nu}_{\text{æther strain energy}}
+        }
+    \]
+
+    \subsection*{Interpretation}
+
+    \begin{itemize}
+        \item The **first term** gives the base energy of the moving æther parcel, mirroring perfect-fluid dynamics \cite{schutz1970perfect}.
+        \item The **second term** models energy from rotation, responsible for centrifugal tension and swirl pressure.
+        \item The **third term** captures topological linking of vortex lines — formally a helicity-related Chern–Simons analog \cite{moffatt1969degree, arnold1998topological}.
+        \item The **fourth term** introduces internal æther strain from velocity shear (analogous to elastic tension).
+    \end{itemize}
+
+    \subsection*{Topological Conservation Law}
+
+    Varying the helicity term yields a conserved current:
+    \[
+        \mathcal{J}^\mu = \epsilon^{\mu\nu\alpha\beta} u_\nu \partial_\alpha u_\beta = 2 \omega^\mu,
+        \quad \nabla_\mu \mathcal{J}^\mu = 0
+    \]
+    This guarantees conservation of vortex linkage class (Hopf charge) in the absence of dissipation.
+
+    \subsection*{References}
+
+    \begin{itemize}
+        \item \bibentry{schutz1970perfect}  % Action principle for perfect fluids
+        \item \bibentry{arnold1998topological} % Topological Methods in Hydrodynamics
+        \item \bibentry{moffatt1969degree} % Helicity conservation and knottedness
+        \item \bibentry{Iskandarani2025b} % Time Dilation in VAM
+        \item \bibentry{Iskandarani2025c} % Swirl Clocks and Vorticity
+    \end{itemize}
+
+    \section*{Euler--Lagrange Equation for the Æther 4-Velocity Field}
+
+    We derive the Euler--Lagrange equation for the swirl 4-velocity \( u^\mu \) from the VAM Lagrangian density:
+    \begin{align}
+        \mathcal{L}_{\text{vortex}} &=
+        \underbrace{\rho_{\text{\ae}}^{(\text{mass})} u^\mu u^\nu g_{\mu\nu}}_{\text{Kinetic energy}} +
+        \underbrace{P\, g^{\mu\nu}}_{\text{Swirl pressure (isotropic)}} +
+        \underbrace{\lambda_1 \omega^\mu \omega^\nu g_{\mu\nu}}_{\text{Vorticity energy}} \nonumber \\
+        &\quad +
+        \underbrace{\lambda_2\, \epsilon^{\mu\nu\alpha\beta} u_\mu \omega_\nu \partial_\alpha u_\beta}_{\text{Helicity coupling}} +
+        \underbrace{\lambda_3 \nabla_\mu u_\nu \nabla^\mu u^\nu}_{\text{Strain energy}} \label{eq:VAM_Lagrangian}
+    \end{align}
+
+    We apply the Euler--Lagrange field equation to the vector field \( u^\mu \):
+    \begin{equation}
+        \frac{\partial \mathcal{L}}{\partial u^\mu}
+        - \nabla_\alpha \left( \frac{\partial \mathcal{L}}{\partial(\nabla_\alpha u^\mu)} \right) = 0
+    \end{equation}
+
+    \subsection*{Variation of Individual Terms}
+
+    \paragraph{1. Kinetic Energy Term:}
+    \[
+        \frac{\partial}{\partial u^\mu} \left( u^\nu u^\sigma g_{\nu\sigma} \right)
+        = 2 u_\mu
+        \quad \Rightarrow \quad
+        \frac{\partial \mathcal{L}}{\partial u^\mu} \supset 2 \rho_{\text{\ae}}^{(\text{mass})} u_\mu
+    \]
+
+    \paragraph{2. Strain Energy Term:}
+    \[
+        \frac{\delta}{\delta u^\mu} \left( \nabla_\lambda u_\nu \nabla^\lambda u^\nu \right)
+        = -2 \nabla_\lambda \nabla^\lambda u_\mu = -2 \Box u_\mu
+        \quad \Rightarrow \quad
+        \frac{\partial \mathcal{L}}{\partial u^\mu} \supset -2 \lambda_3 \Box u_\mu
+    \]
+
+    \paragraph{3. Helicity Coupling Term:}
+    The helicity interaction is:
+    \[
+        \mathcal{L}_{\text{hel}} = \lambda_2\, \epsilon^{\mu\nu\alpha\beta} u_\mu \omega_\nu \partial_\alpha u_\beta
+    \]
+    Given \( \omega^\nu = \frac{1}{2} \epsilon^{\nu\sigma\lambda\kappa} u_\sigma \partial_\lambda u_\kappa \), this term involves both \( u^\mu \) and its derivatives. Variation yields terms of the form:
+    \[
+        \delta \mathcal{L}_{\text{hel}} \sim
+        \lambda_2 \left[
+                      \epsilon_{\mu\nu\alpha\beta} \omega^\nu \partial^\alpha u^\beta
+                      + \text{nonlinear combinations of } u^\mu \text{ and } \partial_\lambda u^\kappa
+        \right]
+    \]
+    Exact evaluation requires symmetry assumptions (e.g., axisymmetry) or numerical evaluation.
+
+    \subsection*{Resulting Equation of Motion}
+
+    Combining the above:
+    \begin{equation}
+        \boxed{
+            \rho_{\text{\ae}}^{(\text{mass})} u_\mu
+            - \lambda_3 \Box u_\mu
+            + \lambda_2 \left[ \epsilon_{\mu\nu\alpha\beta} \omega^\nu \partial^\alpha u^\beta + \cdots \right]
+            = 0
+        }
+    \end{equation}
+
+    This is the effective equation of motion for the æther swirl field, governing the evolution of vortex-knotted configurations in the presence of helicity tension and internal swirl strain.
+
+    \vspace{1em}
+    \noindent
+    \textbf{References:}
+    \begin{itemize}
+        \item Iskandarani, O. (2025). \textit{Time Dilation in a 3D Superfluid Æther Model}. VAM-1. \url{https://doi.org/10.5281/zenodo.15669795}
+        \item Iskandarani, O. (2025). \textit{Swirl Clocks and Vorticity-Induced Gravity}. VAM-2. \url{https://doi.org/10.5281/zenodo.15566336}
+        \item Iskandarani, O. (2025). \textit{On a Vortex-Based Lagrangian Unification of Gravity and Electromagnetism}. VAM-5. \url{https://doi.org/10.5281/zenodo.15665434}
+    \end{itemize}
+
+
+    \section*{Euler--Lagrange Equation for the Vorticity Field \( \omega^\mu \)}
+
+    We now vary the vortex Lagrangian density with respect to the vorticity 4-vector \( \omega^\mu \), where:
+    \begin{equation}
+        \mathcal{L}_{\text{vortex}} =
+        \rho_{\text{\ae}}^{(\text{mass})} u^\mu u^\nu g_{\mu\nu}
+        + P g^{\mu\nu}
+        + \lambda_1 \omega^\mu \omega^\nu g_{\mu\nu}
+        + \lambda_2\, \epsilon^{\mu\nu\alpha\beta} u_\mu \omega_\nu \partial_\alpha u_\beta
+        + \lambda_3 \nabla_\mu u_\nu \nabla^\mu u^\nu
+    \end{equation}
+
+    We apply the Euler–Lagrange equation:
+    \begin{equation}
+        \frac{\partial \mathcal{L}}{\partial \omega^\mu}
+        - \nabla_\nu \left( \frac{\partial \mathcal{L}}{\partial (\nabla_\nu \omega^\mu)} \right) = 0
+    \end{equation}
+
+    \subsection*{Variation of Terms Involving \( \omega^\mu \)}
+
+    \paragraph{1. Vorticity Energy Term:}
+    \[
+        \frac{\partial}{\partial \omega^\mu} \left( \omega^\alpha \omega^\beta g_{\alpha\beta} \right)
+        = 2 \omega_\mu
+        \quad \Rightarrow \quad
+        \frac{\partial \mathcal{L}}{\partial \omega^\mu} \supset 2 \lambda_1 \omega_\mu
+    \]
+
+    \paragraph{2. Helicity Coupling Term:}
+    \[
+        \frac{\partial}{\partial \omega^\mu} \left( \epsilon^{\alpha\beta\gamma\delta} u_\alpha \omega_\beta \partial_\gamma u_\delta \right)
+        = \epsilon^{\alpha\mu\gamma\delta} u_\alpha \partial_\gamma u_\delta
+        \quad \Rightarrow \quad
+        \frac{\partial \mathcal{L}}{\partial \omega^\mu} \supset \lambda_2\, \epsilon^{\alpha\mu\gamma\delta} u_\alpha \partial_\gamma u_\delta
+    \]
+
+    No derivatives of \( \omega^\mu \) appear in \( \mathcal{L} \), so the second term of the Euler–Lagrange equation vanishes.
+
+    \subsection*{Vorticity Evolution Equation}
+
+    Putting it together:
+    \begin{equation}
+        \boxed{
+            2 \lambda_1 \omega_\mu
+            + \lambda_2\, \epsilon^{\alpha\mu\gamma\delta} u_\alpha \partial_\gamma u_\delta
+            = 0
+        }
+    \end{equation}
+
+    \subsection*{Interpretation}
+
+    \begin{itemize}
+        \item This equation equates the inertial vorticity field to a helicity-induced swirl curvature.
+        \item The second term is proportional to the swirl helicity density:
+        \[
+            \mathcal{H}^\mu = \epsilon^{\mu\nu\alpha\beta} u_\nu \partial_\alpha u_\beta = 2\, \omega^\mu
+            \Rightarrow \omega^\mu \propto \mathcal{H}^\mu
+        \]
+        \item Hence, the dynamics of \( \omega^\mu \) encode the topological conservation of linked/swirl lines in the æther — a key feature of knotted vortex solitons in VAM.
+    \end{itemize}
+
+    \vspace{1em}
+    \noindent
+    \textbf{References:}
+    \begin{itemize}
+        \item Iskandarani, O. (2025). \textit{Time Dilation in a 3D Superfluid Æther Model}. VAM-1. \url{https://doi.org/10.5281/zenodo.15669795}
+        \item Iskandarani, O. (2025). \textit{Swirl Clocks and Vorticity-Induced Gravity}. VAM-2. \url{https://doi.org/10.5281/zenodo.15566336}
+        \item Iskandarani, O. (2025). \textit{Fractal Swirl and Æther Helicity}. VAM-12. \url{https://doi.org/10.5281/zenodo.15669796}
+    \end{itemize}
+
+    \bibliographystyle{unsrt}
+\bibliography{VAM-17_refs}
+
+
+\end{document}

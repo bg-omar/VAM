@@ -1,0 +1,253 @@
+\documentclass{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsmath,amssymb,bm}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\geometry{margin=2cm}
+\usepackage{mathtools}
+\usepackage{physics}
+\usepackage{array}    % For matrix formatting
+
+\begin{document}
+
+    \section*{Color Gauge Coupling in Dirac Bilinear Form}
+
+    \[
+        \mathcal{L}_{\text{int}} = -g \, \bar{\Psi} \gamma^\mu G_\mu \Psi
+    \]
+
+    \[
+        \Psi =
+        \begin{bmatrix}
+            \textcolor{red}{\psi_{r1}} &
+            \textcolor{red}{\psi_{r2}} &
+            \textcolor{red}{\psi_{r3}} &
+            \textcolor{red}{\psi_{r4}} \\
+            \textcolor{ForestGreen}{\psi_{g1}} &
+            \textcolor{ForestGreen}{\psi_{g2}} &
+            \textcolor{ForestGreen}{\psi_{g3}} &
+            \textcolor{ForestGreen}{\psi_{g4}} \\
+            \textcolor{RoyalBlue}{\psi_{b1}} &
+            \textcolor{RoyalBlue}{\psi_{b2}} &
+            \textcolor{RoyalBlue}{\psi_{b3}} &
+            \textcolor{RoyalBlue}{\psi_{b4}}
+        \end{bmatrix}^T
+    \]
+
+    \[
+        \bar{\Psi} = \Psi^\dagger \gamma^0 =
+        \begin{bmatrix}
+            \textcolor{red}{\psi^*_{r1}} &
+            \textcolor{red}{\psi^*_{r2}} &
+            \textcolor{red}{-\psi^*_{r3}} &
+            \textcolor{red}{-\psi^*_{r4}} \\
+            \textcolor{ForestGreen}{\psi^*_{g1}} &
+            \textcolor{ForestGreen}{\psi^*_{g2}} &
+            \textcolor{ForestGreen}{-\psi^*_{g3}} &
+            \textcolor{ForestGreen}{-\psi^*_{g4}} \\
+            \textcolor{RoyalBlue}{\psi^*_{b1}} &
+            \textcolor{RoyalBlue}{\psi^*_{b2}} &
+            \textcolor{RoyalBlue}{-\psi^*_{b3}} &
+            \textcolor{RoyalBlue}{-\psi^*_{b4}}
+        \end{bmatrix}
+    \]
+
+    \[
+        \gamma^\mu =
+        \begin{bmatrix}
+            \gamma^\mu_{11} & \gamma^\mu_{12} & \gamma^\mu_{13} & \gamma^\mu_{14} \\
+            \gamma^\mu_{21} & \gamma^\mu_{22} & \gamma^\mu_{23} & \gamma^\mu_{24} \\
+            \gamma^\mu_{31} & \gamma^\mu_{32} & \gamma^\mu_{33} & \gamma^\mu_{34} \\
+            \gamma^\mu_{41} & \gamma^\mu_{42} & \gamma^\mu_{43} & \gamma^\mu_{44}
+        \end{bmatrix}, \quad
+        G_\mu =
+        \begin{bmatrix}
+            \textcolor{red}{G_\mu^{11}} & \textcolor{red}{G_\mu^{12}} & \textcolor{red}{G_\mu^{13}} \\
+            \textcolor{ForestGreen}{G_\mu^{21}} & \textcolor{ForestGreen}{G_\mu^{22}} & \textcolor{ForestGreen}{G_\mu^{23}} \\
+            \textcolor{RoyalBlue}{G_\mu^{31}} & \textcolor{RoyalBlue}{G_\mu^{32}} & \textcolor{RoyalBlue}{G_\mu^{33}}
+        \end{bmatrix}
+    \]
+
+    \[
+        \mathcal{L}_{\text{int}} = -g\, \bar{\Psi}_i^\alpha (\gamma^\mu)_{\alpha\beta} (G_\mu)^{ij} \Psi_j^\beta
+    \]
+
+    \[
+        \text{\small where } i,j \in \{\text{r},\text{g},\text{b}\}, \quad \alpha,\beta \in \{1,2,3,4\}
+    \]
+
+    \bigskip
+
+    \noindent
+    This can be written as a **color block matrix**:
+    \[
+        \bar{\Psi} \gamma^\mu G_\mu \Psi =
+        \begin{bmatrix}
+            \bar{\psi}_{r\alpha} & \bar{\psi}_{g\alpha} & \bar{\psi}_{b\alpha}
+        \end{bmatrix}
+        \cdot
+        \begin{bmatrix}
+            \gamma^\mu_{\alpha\beta} G_\mu^{11} & \cdots & \gamma^\mu_{\alpha\beta} G_\mu^{13} \\
+            \vdots & \ddots & \vdots \\
+            \gamma^\mu_{\alpha\beta} G_\mu^{31} & \cdots & \gamma^\mu_{\alpha\beta} G_\mu^{33}
+        \end{bmatrix}
+        \cdot
+        \begin{bmatrix}
+            \psi_{r\beta} \\ \psi_{g\beta} \\ \psi_{b\beta}
+        \end{bmatrix}
+    \]
+
+    \bigskip
+
+    \noindent
+    Color interactions mix flavors within and across color channels using $SU(3)$ gauge couplings $G_\mu^{ij}$ modulated by Lorentz $\gamma^\mu$ structure.
+
+
+
+    \[
+        \scalebox{0.78}{$
+        -g
+        \begin{bmatrix}
+            \textcolor{violet}{\psi^*_{r1}} \\
+            \textcolor{violet}{\psi^*_{r2}} \\
+            \textcolor{orange}{\psi^*_{r3}} \\
+            \textcolor{orange}{\psi^*_{r4}} \\
+            \textcolor{green}{\psi^*_{g1}} \\
+            \textcolor{green}{\psi^*_{g2}} \\
+            \textcolor{olive}{\psi^*_{g3}} \\
+            \textcolor{olive}{\psi^*_{g4}} \\
+            \textcolor{cyan}{\psi^*_{b1}} \\
+            \textcolor{cyan}{\psi^*_{b2}} \\
+            \textcolor{blue}{\psi^*_{b3}} \\
+            \textcolor{blue}{\psi^*_{b4}} \\
+        \end{bmatrix}^T
+        \begin{bmatrix}
+            \textcolor{brown}{\gamma^\mu_{11} G_\mu^{11}} & \cdots & \textcolor{brown}{\gamma^\mu_{14} G_\mu^{11}} & \textcolor{green!60!black}{\gamma^\mu_{11} G_\mu^{12}} & \cdots & \textcolor{green!60!black}{\gamma^\mu_{14} G_\mu^{12}} & \textcolor{violet}{\gamma^\mu_{11} G_\mu^{13}} & \cdots & \textcolor{violet}{\gamma^\mu_{14} G_\mu^{13}} \\
+            \vdots & \ddots & \vdots & \vdots & \ddots & \vdots & \vdots & \ddots & \vdots \\
+            \textcolor{brown}{\gamma^\mu_{41} G_\mu^{11}} & \cdots & \textcolor{brown}{\gamma^\mu_{44} G_\mu^{11}} & \textcolor{green!60!black}{\gamma^\mu_{41} G_\mu^{12}} & \cdots & \textcolor{green!60!black}{\gamma^\mu_{44} G_\mu^{12}} & \textcolor{violet}{\gamma^\mu_{41} G_\mu^{13}} & \cdots & \textcolor{violet}{\gamma^\mu_{44} G_\mu^{13}} \\
+            \textcolor{cyan!70!black}{\gamma^\mu_{11} G_\mu^{21}} & \cdots & \textcolor{cyan!70!black}{\gamma^\mu_{14} G_\mu^{21}} & \textcolor{orange}{\gamma^\mu_{11} G_\mu^{22}} & \cdots & \textcolor{orange}{\gamma^\mu_{14} G_\mu^{22}} & \textcolor{red}{\gamma^\mu_{11} G_\mu^{23}} & \cdots & \textcolor{red}{\gamma^\mu_{14} G_\mu^{23}} \\
+            \vdots & \ddots & \vdots & \vdots & \ddots & \vdots & \vdots & \ddots & \vdots \\
+            \textcolor{cyan!70!black}{\gamma^\mu_{44} G_\mu^{21}} & \cdots & \textcolor{cyan!70!black}{\gamma^\mu_{44} G_\mu^{21}} & \textcolor{orange}{\gamma^\mu_{44} G_\mu^{22}} & \cdots & \textcolor{orange}{\gamma^\mu_{44} G_\mu^{22}} & \textcolor{red}{\gamma^\mu_{44} G_\mu^{23}} & \cdots & \textcolor{red}{\gamma^\mu_{44} G_\mu^{23}} \\
+            \textcolor{green!30!black}{\gamma^\mu_{11} G_\mu^{31}} & \cdots & \textcolor{green!30!black}{\gamma^\mu_{14} G_\mu^{31}} & \textcolor{blue!60!black}{\gamma^\mu_{11} G_\mu^{32}} & \cdots & \textcolor{blue!60!black}{\gamma^\mu_{14} G_\mu^{32}} & \textcolor{cyan!70!black}{\gamma^\mu_{11} G_\mu^{33}} & \cdots & \textcolor{cyan!70!black}{\gamma^\mu_{14} G_\mu^{33}} \\
+            \vdots & \ddots & \vdots & \vdots & \ddots & \vdots & \vdots & \ddots & \vdots \\
+            \textcolor{green!30!black}{\gamma^\mu_{44} G_\mu^{31}} & \cdots & \textcolor{green!30!black}{\gamma^\mu_{44} G_\mu^{31}} & \textcolor{blue!60!black}{\gamma^\mu_{44} G_\mu^{32}} & \cdots & \textcolor{blue!60!black}{\gamma^\mu_{44} G_\mu^{32}} & \textcolor{cyan!70!black}{\gamma^\mu_{44} G_\mu^{33}} & \cdots & \textcolor{cyan!70!black}{\gamma^\mu_{44} G_\mu^{33}} \\
+        \end{bmatrix}
+        \begin{bmatrix}
+            \textcolor{violet}{\psi_{r1}} \\
+            \textcolor{violet}{\psi_{r2}} \\
+            \textcolor{orange}{\psi_{r3}} \\
+            \textcolor{orange}{\psi_{r4}} \\
+            \textcolor{green}{\psi_{g1}} \\
+            \textcolor{green}{\psi_{g2}} \\
+            \textcolor{olive}{\psi_{g3}} \\
+            \textcolor{olive}{\psi_{g4}} \\
+            \textcolor{cyan}{\psi_{b1}} \\
+            \textcolor{cyan}{\psi_{b2}} \\
+            \textcolor{blue}{\psi_{b3}} \\
+            \textcolor{blue}{\psi_{b4}} \\
+        \end{bmatrix}
+        $}
+    \]
+
+
+
+
+
+\[
+\begin{bmatrix}
+    \footnotesize
+\textcolor{red}{\gamma^\mu_{11} G^{11}_\mu} & \textcolor{red}{\gamma^\mu_{12} G^{11}_\mu} & \textcolor{red}{\gamma^\mu_{13} G^{11}_\mu} & \textcolor{red}{\gamma^\mu_{14} G^{11}_\mu} & \textcolor{teal}{\gamma^\mu_{11} G^{12}_\mu} & \textcolor{teal}{\gamma^\mu_{12} G^{12}_\mu} & \textcolor{teal}{\gamma^\mu_{13} G^{12}_\mu} & \textcolor{teal}{\gamma^\mu_{14} G^{12}_\mu} & \textcolor{olive}{\gamma^\mu_{11} G^{13}_\mu} & \textcolor{olive}{\gamma^\mu_{12} G^{13}_\mu} & \textcolor{olive}{\gamma^\mu_{13} G^{13}_\mu} & \textcolor{olive}{\gamma^\mu_{14} G^{13}_\mu} \\
+\textcolor{red}{\gamma^\mu_{21} G^{11}_\mu} & \textcolor{red}{\gamma^\mu_{22} G^{11}_\mu} & \textcolor{red}{\gamma^\mu_{23} G^{11}_\mu} & \textcolor{red}{\gamma^\mu_{24} G^{11}_\mu} & \textcolor{teal}{\gamma^\mu_{21} G^{12}_\mu} & \textcolor{teal}{\gamma^\mu_{22} G^{12}_\mu} & \textcolor{teal}{\gamma^\mu_{23} G^{12}_\mu} & \textcolor{teal}{\gamma^\mu_{24} G^{12}_\mu} & \textcolor{olive}{\gamma^\mu_{21} G^{13}_\mu} & \textcolor{olive}{\gamma^\mu_{22} G^{13}_\mu} & \textcolor{olive}{\gamma^\mu_{23} G^{13}_\mu} & \textcolor{olive}{\gamma^\mu_{24} G^{13}_\mu} \\
+\textcolor{red}{\gamma^\mu_{31} G^{11}_\mu} & \textcolor{red}{\gamma^\mu_{32} G^{11}_\mu} & \textcolor{red}{\gamma^\mu_{33} G^{11}_\mu} & \textcolor{red}{\gamma^\mu_{34} G^{11}_\mu} & \textcolor{teal}{\gamma^\mu_{31} G^{12}_\mu} & \textcolor{teal}{\gamma^\mu_{32} G^{12}_\mu} & \textcolor{teal}{\gamma^\mu_{33} G^{12}_\mu} & \textcolor{teal}{\gamma^\mu_{34} G^{12}_\mu} & \textcolor{olive}{\gamma^\mu_{31} G^{13}_\mu} & \textcolor{olive}{\gamma^\mu_{32} G^{13}_\mu} & \textcolor{olive}{\gamma^\mu_{33} G^{13}_\mu} & \textcolor{olive}{\gamma^\mu_{34} G^{13}_\mu} \\
+\textcolor{red}{\gamma^\mu_{41} G^{11}_\mu} & \textcolor{red}{\gamma^\mu_{42} G^{11}_\mu} & \textcolor{red}{\gamma^\mu_{43} G^{11}_\mu} & \textcolor{red}{\gamma^\mu_{44} G^{11}_\mu} & \textcolor{teal}{\gamma^\mu_{41} G^{12}_\mu} & \textcolor{teal}{\gamma^\mu_{42} G^{12}_\mu} & \textcolor{teal}{\gamma^\mu_{43} G^{12}_\mu} & \textcolor{teal}{\gamma^\mu_{44} G^{12}_\mu} & \textcolor{olive}{\gamma^\mu_{41} G^{13}_\mu} & \textcolor{olive}{\gamma^\mu_{42} G^{13}_\mu} & \textcolor{olive}{\gamma^\mu_{43} G^{13}_\mu} & \textcolor{olive}{\gamma^\mu_{44} G^{13}_\mu} \\
+\textcolor{magenta}{\gamma^\mu_{11} G^{21}_\mu} & \textcolor{magenta}{\gamma^\mu_{12} G^{21}_\mu} & \textcolor{magenta}{\gamma^\mu_{13} G^{21}_\mu} & \textcolor{magenta}{\gamma^\mu_{14} G^{21}_\mu} & \textcolor{blue}{\gamma^\mu_{11} G^{22}_\mu} & \textcolor{blue}{\gamma^\mu_{12} G^{22}_\mu} & \textcolor{blue}{\gamma^\mu_{13} G^{22}_\mu} & \textcolor{blue}{\gamma^\mu_{14} G^{22}_\mu} & \textcolor{orange}{\gamma^\mu_{11} G^{23}_\mu} & \textcolor{orange}{\gamma^\mu_{12} G^{23}_\mu} & \textcolor{orange}{\gamma^\mu_{13} G^{23}_\mu} & \textcolor{orange}{\gamma^\mu_{14} G^{23}_\mu} \\
+\textcolor{magenta}{\gamma^\mu_{21} G^{21}_\mu} & \textcolor{magenta}{\gamma^\mu_{22} G^{21}_\mu} & \textcolor{magenta}{\gamma^\mu_{23} G^{21}_\mu} & \textcolor{magenta}{\gamma^\mu_{24} G^{21}_\mu} & \textcolor{blue}{\gamma^\mu_{21} G^{22}_\mu} & \textcolor{blue}{\gamma^\mu_{22} G^{22}_\mu} & \textcolor{blue}{\gamma^\mu_{23} G^{22}_\mu} & \textcolor{blue}{\gamma^\mu_{24} G^{22}_\mu} & \textcolor{orange}{\gamma^\mu_{21} G^{23}_\mu} & \textcolor{orange}{\gamma^\mu_{22} G^{23}_\mu} & \textcolor{orange}{\gamma^\mu_{23} G^{23}_\mu} & \textcolor{orange}{\gamma^\mu_{24} G^{23}_\mu} \\
+\textcolor{magenta}{\gamma^\mu_{31} G^{21}_\mu} & \textcolor{magenta}{\gamma^\mu_{32} G^{21}_\mu} & \textcolor{magenta}{\gamma^\mu_{33} G^{21}_\mu} & \textcolor{magenta}{\gamma^\mu_{34} G^{21}_\mu} & \textcolor{blue}{\gamma^\mu_{31} G^{22}_\mu} & \textcolor{blue}{\gamma^\mu_{32} G^{22}_\mu} & \textcolor{blue}{\gamma^\mu_{33} G^{22}_\mu} & \textcolor{blue}{\gamma^\mu_{34} G^{22}_\mu} & \textcolor{orange}{\gamma^\mu_{31} G^{23}_\mu} & \textcolor{orange}{\gamma^\mu_{32} G^{23}_\mu} & \textcolor{orange}{\gamma^\mu_{33} G^{23}_\mu} & \textcolor{orange}{\gamma^\mu_{34} G^{23}_\mu} \\
+\textcolor{magenta}{\gamma^\mu_{41} G^{21}_\mu} & \textcolor{magenta}{\gamma^\mu_{42} G^{21}_\mu} & \textcolor{magenta}{\gamma^\mu_{43} G^{21}_\mu} & \textcolor{magenta}{\gamma^\mu_{44} G^{21}_\mu} & \textcolor{blue}{\gamma^\mu_{41} G^{22}_\mu} & \textcolor{blue}{\gamma^\mu_{42} G^{22}_\mu} & \textcolor{blue}{\gamma^\mu_{43} G^{22}_\mu} & \textcolor{blue}{\gamma^\mu_{44} G^{22}_\mu} & \textcolor{orange}{\gamma^\mu_{41} G^{23}_\mu} & \textcolor{orange}{\gamma^\mu_{42} G^{23}_\mu} & \textcolor{orange}{\gamma^\mu_{43} G^{23}_\mu} & \textcolor{orange}{\gamma^\mu_{44} G^{23}_\mu} \\
+\textcolor{purple}{\gamma^\mu_{11} G^{31}_\mu} & \textcolor{purple}{\gamma^\mu_{12} G^{31}_\mu} & \textcolor{purple}{\gamma^\mu_{13} G^{31}_\mu} & \textcolor{purple}{\gamma^\mu_{14} G^{31}_\mu} & \textcolor{brown}{\gamma^\mu_{11} G^{32}_\mu} & \textcolor{brown}{\gamma^\mu_{12} G^{32}_\mu} & \textcolor{brown}{\gamma^\mu_{13} G^{32}_\mu} & \textcolor{brown}{\gamma^\mu_{14} G^{32}_\mu} & \textcolor{lime}{\gamma^\mu_{11} G^{33}_\mu} & \textcolor{lime}{\gamma^\mu_{12} G^{33}_\mu} & \textcolor{lime}{\gamma^\mu_{13} G^{33}_\mu} & \textcolor{lime}{\gamma^\mu_{14} G^{33}_\mu} \\
+\textcolor{purple}{\gamma^\mu_{21} G^{31}_\mu} & \textcolor{purple}{\gamma^\mu_{22} G^{31}_\mu} & \textcolor{purple}{\gamma^\mu_{23} G^{31}_\mu} & \textcolor{purple}{\gamma^\mu_{24} G^{31}_\mu} & \textcolor{brown}{\gamma^\mu_{21} G^{32}_\mu} & \textcolor{brown}{\gamma^\mu_{22} G^{32}_\mu} & \textcolor{brown}{\gamma^\mu_{23} G^{32}_\mu} & \textcolor{brown}{\gamma^\mu_{24} G^{32}_\mu} & \textcolor{lime}{\gamma^\mu_{21} G^{33}_\mu} & \textcolor{lime}{\gamma^\mu_{22} G^{33}_\mu} & \textcolor{lime}{\gamma^\mu_{23} G^{33}_\mu} & \textcolor{lime}{\gamma^\mu_{24} G^{33}_\mu} \\
+\textcolor{purple}{\gamma^\mu_{31} G^{31}_\mu} & \textcolor{purple}{\gamma^\mu_{32} G^{31}_\mu} & \textcolor{purple}{\gamma^\mu_{33} G^{31}_\mu} & \textcolor{purple}{\gamma^\mu_{34} G^{31}_\mu} & \textcolor{brown}{\gamma^\mu_{31} G^{32}_\mu} & \textcolor{brown}{\gamma^\mu_{32} G^{32}_\mu} & \textcolor{brown}{\gamma^\mu_{33} G^{32}_\mu} & \textcolor{brown}{\gamma^\mu_{34} G^{32}_\mu} & \textcolor{lime}{\gamma^\mu_{31} G^{33}_\mu} & \textcolor{lime}{\gamma^\mu_{32} G^{33}_\mu} & \textcolor{lime}{\gamma^\mu_{33} G^{33}_\mu} & \textcolor{lime}{\gamma^\mu_{34} G^{33}_\mu} \\
+\textcolor{purple}{\gamma^\mu_{41} G^{31}_\mu} & \textcolor{purple}{\gamma^\mu_{42} G^{31}_\mu} & \textcolor{purple}{\gamma^\mu_{43} G^{31}_\mu} & \textcolor{purple}{\gamma^\mu_{44} G^{31}_\mu} & \textcolor{brown}{\gamma^\mu_{41} G^{32}_\mu} & \textcolor{brown}{\gamma^\mu_{42} G^{32}_\mu} & \textcolor{brown}{\gamma^\mu_{43} G^{32}_\mu} & \textcolor{brown}{\gamma^\mu_{44} G^{32}_\mu} & \textcolor{lime}{\gamma^\mu_{41} G^{33}_\mu} & \textcolor{lime}{\gamma^\mu_{42} G^{33}_\mu} & \textcolor{lime}{\gamma^\mu_{43} G^{33}_\mu} & \textcolor{lime}{\gamma^\mu_{44} G^{33}_\mu} \\
+
+\end{bmatrix}
+\]
+
+    \[\scalebox{0.8}{$
+    \begin{array}{cccccccccccc}
+            \textcolor{red}{\gamma^\mu_{11} G^{11}_\mu} & \textcolor{cyan}{\gamma^\mu_{12} G^{11}_\mu} & \textcolor{limegreen}{\gamma^\mu_{13} G^{11}_\mu} & \textcolor{orange}{\gamma^\mu_{14} G^{11}_\mu} & \textcolor{red}{\gamma^\mu_{11} G^{12}_\mu} & \textcolor{cyan}{\gamma^\mu_{12} G^{12}_\mu} & \textcolor{limegreen}{\gamma^\mu_{13} G^{12}_\mu} & \textcolor{orange}{\gamma^\mu_{14} G^{12}_\mu} & \textcolor{red}{\gamma^\mu_{11} G^{13}_\mu} & \textcolor{cyan}{\gamma^\mu_{12} G^{13}_\mu} & \textcolor{limegreen}{\gamma^\mu_{13} G^{13}_\mu} & \textcolor{orange}{\gamma^\mu_{14} G^{13}_\mu} \\
+            \textcolor{violet}{\gamma^\mu_{21} G^{11}_\mu} & \textcolor{limegreen}{\gamma^\mu_{22} G^{11}_\mu} & \textcolor{red}{\gamma^\mu_{23} G^{11}_\mu} & \textcolor{blue}{\gamma^\mu_{24} G^{11}_\mu} & \textcolor{violet}{\gamma^\mu_{21} G^{12}_\mu} & \textcolor{limegreen}{\gamma^\mu_{22} G^{12}_\mu} & \textcolor{red}{\gamma^\mu_{23} G^{12}_\mu} & \textcolor{blue}{\gamma^\mu_{24} G^{12}_\mu} & \textcolor{violet}{\gamma^\mu_{21} G^{13}_\mu} & \textcolor{limegreen}{\gamma^\mu_{22} G^{13}_\mu} & \textcolor{red}{\gamma^\mu_{23} G^{13}_\mu} & \textcolor{blue}{\gamma^\mu_{24} G^{13}_\mu} \\
+            \textcolor{orange}{\gamma^\mu_{31} G^{11}_\mu} & \textcolor{yellow}{\gamma^\mu_{32} G^{11}_\mu} & \textcolor{cyan}{\gamma^\mu_{33} G^{11}_\mu} & \textcolor{violet}{\gamma^\mu_{34} G^{11}_\mu} & \textcolor{orange}{\gamma^\mu_{31} G^{12}_\mu} & \textcolor{yellow}{\gamma^\mu_{32} G^{12}_\mu} & \textcolor{cyan}{\gamma^\mu_{33} G^{12}_\mu} & \textcolor{violet}{\gamma^\mu_{34} G^{12}_\mu} & \textcolor{orange}{\gamma^\mu_{31} G^{13}_\mu} & \textcolor{yellow}{\gamma^\mu_{32} G^{13}_\mu} & \textcolor{cyan}{\gamma^\mu_{33} G^{13}_\mu} & \textcolor{violet}{\gamma^\mu_{34} G^{13}_\mu} \\
+            \textcolor{blue}{\gamma^\mu_{41} G^{11}_\mu} & \textcolor{violet}{\gamma^\mu_{42} G^{11}_\mu} & \textcolor{orange}{\gamma^\mu_{43} G^{11}_\mu} & \textcolor{limegreen}{\gamma^\mu_{44} G^{11}_\mu} & \textcolor{blue}{\gamma^\mu_{41} G^{12}_\mu} & \textcolor{violet}{\gamma^\mu_{42} G^{12}_\mu} & \textcolor{orange}{\gamma^\mu_{43} G^{12}_\mu} & \textcolor{limegreen}{\gamma^\mu_{44} G^{12}_\mu} & \textcolor{blue}{\gamma^\mu_{41} G^{13}_\mu} & \textcolor{violet}{\gamma^\mu_{42} G^{13}_\mu} & \textcolor{orange}{\gamma^\mu_{43} G^{13}_\mu} & \textcolor{limegreen}{\gamma^\mu_{44} G^{13}_\mu} \\
+            \textcolor{red}{\gamma^\mu_{11} G^{21}_\mu} & \textcolor{cyan}{\gamma^\mu_{12} G^{21}_\mu} & \textcolor{limegreen}{\gamma^\mu_{13} G^{21}_\mu} & \textcolor{orange}{\gamma^\mu_{14} G^{21}_\mu} & \textcolor{red}{\gamma^\mu_{11} G^{22}_\mu} & \textcolor{cyan}{\gamma^\mu_{12} G^{22}_\mu} & \textcolor{limegreen}{\gamma^\mu_{13} G^{22}_\mu} & \textcolor{orange}{\gamma^\mu_{14} G^{22}_\mu} & \textcolor{red}{\gamma^\mu_{11} G^{23}_\mu} & \textcolor{cyan}{\gamma^\mu_{12} G^{23}_\mu} & \textcolor{limegreen}{\gamma^\mu_{13} G^{23}_\mu} & \textcolor{orange}{\gamma^\mu_{14} G^{23}_\mu} \\
+            \textcolor{violet}{\gamma^\mu_{21} G^{21}_\mu} & \textcolor{limegreen}{\gamma^\mu_{22} G^{21}_\mu} & \textcolor{red}{\gamma^\mu_{23} G^{21}_\mu} & \textcolor{blue}{\gamma^\mu_{24} G^{21}_\mu} & \textcolor{violet}{\gamma^\mu_{21} G^{22}_\mu} & \textcolor{limegreen}{\gamma^\mu_{22} G^{22}_\mu} & \textcolor{red}{\gamma^\mu_{23} G^{22}_\mu} & \textcolor{blue}{\gamma^\mu_{24} G^{22}_\mu} & \textcolor{violet}{\gamma^\mu_{21} G^{23}_\mu} & \textcolor{limegreen}{\gamma^\mu_{22} G^{23}_\mu} & \textcolor{red}{\gamma^\mu_{23} G^{23}_\mu} & \textcolor{blue}{\gamma^\mu_{24} G^{23}_\mu} \\
+            \textcolor{orange}{\gamma^\mu_{31} G^{21}_\mu} & \textcolor{yellow}{\gamma^\mu_{32} G^{21}_\mu} & \textcolor{cyan}{\gamma^\mu_{33} G^{21}_\mu} & \textcolor{violet}{\gamma^\mu_{34} G^{21}_\mu} & \textcolor{orange}{\gamma^\mu_{31} G^{22}_\mu} & \textcolor{yellow}{\gamma^\mu_{32} G^{22}_\mu} & \textcolor{cyan}{\gamma^\mu_{33} G^{22}_\mu} & \textcolor{violet}{\gamma^\mu_{34} G^{22}_\mu} & \textcolor{orange}{\gamma^\mu_{31} G^{23}_\mu} & \textcolor{yellow}{\gamma^\mu_{32} G^{23}_\mu} & \textcolor{cyan}{\gamma^\mu_{33} G^{23}_\mu} & \textcolor{violet}{\gamma^\mu_{34} G^{23}_\mu} \\
+            \textcolor{blue}{\gamma^\mu_{41} G^{21}_\mu} & \textcolor{violet}{\gamma^\mu_{42} G^{21}_\mu} & \textcolor{orange}{\gamma^\mu_{43} G^{21}_\mu} & \textcolor{limegreen}{\gamma^\mu_{44} G^{21}_\mu} & \textcolor{blue}{\gamma^\mu_{41} G^{22}_\mu} & \textcolor{violet}{\gamma^\mu_{42} G^{22}_\mu} & \textcolor{orange}{\gamma^\mu_{43} G^{22}_\mu} & \textcolor{limegreen}{\gamma^\mu_{44} G^{22}_\mu} & \textcolor{blue}{\gamma^\mu_{41} G^{23}_\mu} & \textcolor{violet}{\gamma^\mu_{42} G^{23}_\mu} & \textcolor{orange}{\gamma^\mu_{43} G^{23}_\mu} & \textcolor{limegreen}{\gamma^\mu_{44} G^{23}_\mu} \\
+            \textcolor{red}{\gamma^\mu_{11} G^{31}_\mu} & \textcolor{cyan}{\gamma^\mu_{12} G^{31}_\mu} & \textcolor{limegreen}{\gamma^\mu_{13} G^{31}_\mu} & \textcolor{orange}{\gamma^\mu_{14} G^{31}_\mu} & \textcolor{red}{\gamma^\mu_{11} G^{32}_\mu} & \textcolor{cyan}{\gamma^\mu_{12} G^{32}_\mu} & \textcolor{limegreen}{\gamma^\mu_{13} G^{32}_\mu} & \textcolor{orange}{\gamma^\mu_{14} G^{32}_\mu} & \textcolor{red}{\gamma^\mu_{11} G^{33}_\mu} & \textcolor{cyan}{\gamma^\mu_{12} G^{33}_\mu} & \textcolor{limegreen}{\gamma^\mu_{13} G^{33}_\mu} & \textcolor{orange}{\gamma^\mu_{14} G^{33}_\mu} \\
+            \textcolor{violet}{\gamma^\mu_{21} G^{31}_\mu} & \textcolor{limegreen}{\gamma^\mu_{22} G^{31}_\mu} & \textcolor{red}{\gamma^\mu_{23} G^{31}_\mu} & \textcolor{blue}{\gamma^\mu_{24} G^{31}_\mu} & \textcolor{violet}{\gamma^\mu_{21} G^{32}_\mu} & \textcolor{limegreen}{\gamma^\mu_{22} G^{32}_\mu} & \textcolor{red}{\gamma^\mu_{23} G^{32}_\mu} & \textcolor{blue}{\gamma^\mu_{24} G^{32}_\mu} & \textcolor{violet}{\gamma^\mu_{21} G^{33}_\mu} & \textcolor{limegreen}{\gamma^\mu_{22} G^{33}_\mu} & \textcolor{red}{\gamma^\mu_{23} G^{33}_\mu} & \textcolor{blue}{\gamma^\mu_{24} G^{33}_\mu} \\
+            \textcolor{orange}{\gamma^\mu_{31} G^{31}_\mu} & \textcolor{yellow}{\gamma^\mu_{32} G^{31}_\mu} & \textcolor{cyan}{\gamma^\mu_{33} G^{31}_\mu} & \textcolor{violet}{\gamma^\mu_{34} G^{31}_\mu} & \textcolor{orange}{\gamma^\mu_{31} G^{32}_\mu} & \textcolor{yellow}{\gamma^\mu_{32} G^{32}_\mu} & \textcolor{cyan}{\gamma^\mu_{33} G^{32}_\mu} & \textcolor{violet}{\gamma^\mu_{34} G^{32}_\mu} & \textcolor{orange}{\gamma^\mu_{31} G^{33}_\mu} & \textcolor{yellow}{\gamma^\mu_{32} G^{33}_\mu} & \textcolor{cyan}{\gamma^\mu_{33} G^{33}_\mu} & \textcolor{violet}{\gamma^\mu_{34} G^{33}_\mu} \\
+            \textcolor{blue}{\gamma^\mu_{41} G^{31}_\mu} & \textcolor{violet}{\gamma^\mu_{42} G^{31}_\mu} & \textcolor{orange}{\gamma^\mu_{43} G^{31}_\mu} & \textcolor{limegreen}{\gamma^\mu_{44} G^{31}_\mu} & \textcolor{blue}{\gamma^\mu_{41} G^{32}_\mu} & \textcolor{violet}{\gamma^\mu_{42} G^{32}_\mu} & \textcolor{orange}{\gamma^\mu_{43} G^{32}_\mu} & \textcolor{limegreen}{\gamma^\mu_{44} G^{32}_\mu} & \textcolor{blue}{\gamma^\mu_{41} G^{33}_\mu} & \textcolor{violet}{\gamma^\mu_{42} G^{33}_\mu} & \textcolor{orange}{\gamma^\mu_{43} G^{33}_\mu} & \textcolor{limegreen}{\gamma^\mu_{44} G^{33}_\mu} \\
+        \end{array}
+    $}
+    \]
+
+
+    \section*{Vortex Velocity and Stream Function}
+
+    \begin{align*}
+        V_\theta &= \frac{\Gamma}{2\pi r} \\
+        V_\theta &= - \frac{d\psi}{dr} \\
+        V_r &= -\frac{1}{r} \frac{d\psi}{d\theta}
+    \end{align*}
+
+    \textbf{Stream function:}
+    \[
+        \psi = \frac{\Gamma}{2\pi} \ln(r)
+    \]
+
+    \textbf{Potential function:}
+    \[
+        \phi = \frac{\Gamma}{2\pi} \theta
+    \]
+
+    \textbf{Circulation:}
+    \[
+        \Gamma = \oint \vb{V} \cdot d\vb{s} = \iint_S (\curl{\vb{v}}) \cdot \hat{n} \, dS
+    \]
+
+    \[
+        \Gamma = \iint (u \, dx + v \, dy) = \int V \cos(\phi) \, ds
+    \]
+
+    \section*{Boyle's Law for Ideal Gases (Kinetic Theory)}
+
+    \[
+        pV = \frac{1}{3} T - \frac{1}{6} \rho \iiint (u^2 + v^2 + w^2) (x \, dy \, dz + y \, dz \, dx + z \, dx \, dy)
+    \]
+
+    \section*{Newton's Potential around the Sun}
+
+    \[
+        \Phi = - \frac{GM}{r} + \frac{1}{6} \Delta c^2 r^2
+    \]
+
+    \section*{Vacuum Energy Density Estimate}
+
+    \[
+        \frac{1}{V} \int \frac{1}{2} \hbar \omega \approx \frac{\hbar}{2\pi^2 c^3} \int_0^{\omega_{\text{max}}} \omega^3 d\omega
+        = \frac{\hbar}{2\pi^2 c^3} \omega_{\text{max}}^4
+    \]
+
+    \textbf{Cosmological constant:}
+    \[
+        \Lambda \approx \frac{G^2 m^6}{\hbar^4}
+    \]
+
+    \section*{Triple Integral Volume Identity}
+
+    \[
+        \int_S (x\,dy\,dz + y\,dz\,dx + 2z\,dx\,dy)
+        = \iiint (1+1+1) \, dx \, dy \, dz
+        = 3 \int_0^1 dx \int_0^1 dy \int_0^1 dz = \boxed{3}
+    \]
+
+\end{document}

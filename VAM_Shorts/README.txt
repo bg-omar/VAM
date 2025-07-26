@@ -1,0 +1,1 @@
+This submission includes: main LaTeX file, BibTeX references, and all figures for the paper "Photon as a Topological Vortex Ring: Torsion and the Geometry of Light in the Æther" by Omar Iskandarani. Compiles with pdflatex.

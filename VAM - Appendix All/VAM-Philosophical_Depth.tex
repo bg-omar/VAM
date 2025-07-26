@@ -1,0 +1,159 @@
+%! Author = Omar Iskandarani
+%! Title = The Vortex Æther Model: A Unified Vorticity Framework for Gravity, Electromagnetism, and Quantum Phenomena
+%! Date = Feb 15, 2025
+%! Affiliation = Independent Researcher, Groningen, The Netherlands
+%! License = © 2025 Omar Iskandarani. All rights reserved. This manuscript is made available for academic reading and citation only. No republication, redistribution, or derivative works are permitted without explicit written permission from the author. Contact: info@omariskandarani.com
+%! ORCID = 0009-0006-1686-3961
+
+
+\documentclass[a4paper,10pt]{article}
+
+% Page Geometry
+\usepackage[a4paper, margin=2.5cm]{geometry}
+
+% Language, Encoding, Fonts
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+
+% Colors, Graphics, Diagrams
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{xcolor}
+
+% Math and Physics
+\usepackage{amsmath, amssymb, physics}
+\usepackage{siunitx}
+
+% Tables and Figures
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{array, tabularx, makecell, multirow}
+\renewcommand{\arraystretch}{1.5}
+\renewcommand{\floatpagefraction}{.8}
+\usepackage[font=footnotesize]{caption}
+\usepackage{subcaption}
+
+% Code and Listings
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily\footnotesize, breaklines=true}
+
+% TOC Customization
+\usepackage{tocloft}
+\setcounter{tocdepth}{4}
+\renewcommand{\cftsecfont}{\bfseries}
+\renewcommand{\cftsubsecfont}{\itshape}
+\renewcommand{\cftsecleader}{\cftdotfill{5}}
+\renewcommand{\contentsname}{\centering \Huge\textbf{Contents}}
+
+% Links and Metadata
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue,
+    pdftitle={The Vortex Æther Model},
+    pdfauthor={Omar Iskandarani},
+    pdfkeywords={vorticity, gravity, æther, fluid dynamics, time dilation, VAM}
+}
+\usepackage{bookmark} % PDF bookmarks
+
+% Bibliography
+\usepackage[numbers]{natbib} % Or switch to biblatex if preferred
+
+% Line and Hyphenation
+\usepackage[none]{hyphenat}
+\usepackage{amsfonts}
+
+\sloppy
+
+\begin{document}
+
+    \title{The Vortex Æther Model: A Unified Vorticity Framework for Gravity, Electromagnetism, and Quantum Phenomena}
+    \date{feb 2025}
+    \author{
+        Omar Iskandarani\\
+        \small Independent Researcher, Groningen, The Netherlands
+        \thanks{\texttt{info@omariskandarani.com}}
+        \thanks{ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961} \quad DOI: \href{https://doi.org/10.5281/zenodo.16426048}{10.5281/zenodo.16426048} \quad License: \href{https://creativecommons.org/licenses/by/4.0/}{CC BY-NC 4.0}}
+        \noindent\thanks{\textbf{Keywords:} \textit{time dilation, superfluid æther, Vortex Æther Model, vortex dynamics, emergent time, fluid spacetime, special relativity, analog gravity, 3D vortex structures, quantized circulation, relativistic effects, topological matter, fluid mechanics, vortex clocks, knot theory, mass generation, swirl gravity, topological quantum field theory, Gross--Pitaevskii, Biot--Savart, Standard Model unification, periodic table topology}}
+    }
+    \maketitle
+    \begin{abstract}
+         This collection of papers present the Vortex Æther Model (VAM), a novel framework in which gravity and electromagnetism emerge from vorticity interactions within an inviscid, superfluid-like medium. Unlike traditional relativity, which relies on spacetime curvature, VAM posits that fundamental forces arise from structured vortex dynamics. This paper explores the theoretical basis of this model, its connection to quantum mechanics and fluid dynamics, and its testable predictions. VAM offers a new perspective on the fundamental nature of the universe. . We propose that both hydrogenic wavefunctions and gravitational fields in VAM are governed by exponentially decaying vortex structures, establishing a deep correspondence between atomic orbitals and large-scale gravitational interactions. Unlike conventional approaches relying on curved spacetime or intrinsic mass, VAM suggests that mass, energy, and time emerge from structured ætheric vorticity, reinforcing a purely three-dimensional Euclidean framework.
+
+        The unification is demonstrated by analyzing electron orbitals as stable vortex states that follow hydrodynamic decay laws, analogous to the gravitational vorticity decay governing massive objects. We derive fundamental relations between the Bohr radius and the Coulomb barrier in VAM, showing that mass accumulation and probability density functions share identical mathematical structures. Through the mapping of vortex quantization principles across scales, we establish that gravitational interactions are the macroscopic limit of the same vortex dynamics that define atomic energy states.
+
+        This work further examines implications such as mass-energy equivalence as an emergent property of vorticity, black holes as large-scale quantum vortex states, and time dilation as a direct consequence of vortex confinement rather than a separate spacetime dimension. The conclusions challenge conventional models of particle physics and cosmology, suggesting that all known interactions may ultimately be reformulated within a vorticity-based framework. Experimental validation is proposed through comparisons with superfluid analogs and controlled vortex confinement studies, aiming to solidify VAM as a testable and predictive theory of fundamental physics.
+    \end{abstract}
+
+
+   \newpage \tableofcontents
+
+    \newpage \input{sections/001_introduction}
+    \newpage \chapter{Part I}\label{sec:part-1}   \input{sections/010_extension_physics}
+    \input{sections/020_History}
+    \input{sections/025_Maxwell_Electromagnetic_field_theory_and_VAM}
+    \input{sections/030_observations_on_gr}
+    \input{sections/040_why_3d}
+    \input{sections/050_æther_3D}
+    \input{sections/055_C_e_DerivationVorticitySuperfluid}
+    \input{sections/060_derivation_æther_desity}
+    \input{sections/070_observation_on_light_particle}
+    \input{sections/080_riged_body}
+    \input{sections/090_derevation_swirl}
+    
+
+
+    \newpage \chapter{Part II}\label{sec:part-2} \input{sections/100_derevation_Gswirl}
+    \input{sections/110_VAM_reformulation_GR}
+    \input{sections/120_vam_derevation}
+    \input{sections/130_Magnetism_as_vorticity}
+    \input{sections/140_vortex_induced_magnetic_fields}
+    \input{sections/150_QM_VAM}
+    \input{sections/160_Atomic_Scale}
+    \input{sections/170_Radial_Function}
+    \input{sections/180_orbitals}
+    \input{sections/190_addressing_qed_corrections}
+    \input{sections/200_path_Integral_gauge_relativity}
+    \input{sections/210_bragg}
+    \input{sections/300_VortexKnotsQg}
+    \input{sections/310_QuantizedVorticity}
+    \input{sections/320_EmWavesFromQuantizedVortices}
+    \input{sections/340_VortexWaveVelocity}
+    \input{sections/350_VAM_MaxForce}
+    \input{sections/360_DerivationOfPlanck}
+    \input{sections/370_BlackbodyRadiationEntropy_VAM}
+
+    \newpage \input{sections/500_movement_of_free_Æther_particles}
+    \input{sections/510_vortex_pressure}
+    \input{sections/520_vorticity_natural_coords}
+    \input{sections/530_FundamentalEquationsOfVortexDynamics}
+    \input{sections/540_relative_vorticity_2knots}
+    \input{sections/550_why_coulomb_differs_in_electromagnetic_system}
+    \input{sections/560_Spin_Torsion_in_Vortices}
+    \input{sections/570_photon_vortex}
+    \input{sections/580_atomic_orbits_Vortex_Gravity_space_and_time}
+    \input{sections/590_Bridging_Knot_Theory_Particle_Physics}
+    \input{sections/600_Casimir_Effect}
+    \input{sections/610_BlackBody_radiation_entropy}
+    \input{sections/620_Æther_gas}
+    \input{sections/630_maxwell}
+    \input{sections/640_vortex_energy}
+    \input{sections/650_sprites}
+    \input{sections/660_oumuamua}
+    \input{sections/670_derive_vortex_wave_speed}
+    \input{sections/680_Stationary_Knotted_Vortex}
+    \input{sections/690_temp_swelling_latex_version}
+    \input{sections/700_temp_swelling}
+    \input{sections/250_eqs}
+
+    \bibliographystyle{unsrtnat}
+    \bibliography{../references}
+
+\end{document}

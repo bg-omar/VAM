@@ -25,23 +25,104 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f2a8139-c825-4497-876b-70e1a130c5c3" name="Changes" comment="Refactor file structure by renaming scripts for clarity; add new experimental validation appendix and update LaTeX documents for improved organization and readability">
-      <change afterPath="$PROJECT_DIR$/VAM_Shorts/sections/00_Introduction.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM_Shorts/sections/03_PhotonEmissionAndAbsorbtion.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM_Shorts/sections/CorrespondenceWithQED.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM_Shorts/sections/Experimental_Implications.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/PhotonVortex.pdf" afterDir="false" />
+    <list default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" id="6f2a8139-c825-4497-876b-70e1a130c5c3" name="Changes" comment="Add 3D bowl visualization with toggleable features; implement Biot-Savart field computation and interactive plotting">
+      <change afterPath="$PROJECT_DIR$/.run/EXP_lazer_c_e.run.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.run/VAM-0-Analogy.run.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.run/VAM-12.run.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.run/VAM-14.run.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.run/VAM-17.1.run.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.run/VAM-17.2.run.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.run/VAM-Core_Foundations_VAM.run.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.run/VAM-Philosophical_Depth_Companion.run.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_Shorts/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_Shorts/VAM-17.2_OnTheVortexInterpretationOfKerrGeometryInTheVortexÆtherModel.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_Shorts/sections/B_Dimentional_Consistancy.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coil_boit.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/VAM-16-Quantum_Computing_Blueprint.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/VAM.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_14_Topological_Fluid_Dynamics_Lagrangian/sections/2-vortex-æther-model.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_14_Topological_Fluid_Dynamics_Lagrangian/sections/2-vortex-æther-model.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_14_Topological_Fluid_Dynamics_Lagrangian/sections/3-vortex-mass-formula.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_14_Topological_Fluid_Dynamics_Lagrangian/sections/3-vortex-mass-formula.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_5_Lagrangian_Gravity_Electromagnetism/Sections/06_DerivingHamiltonianForMasterFormula.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_5_Lagrangian_Gravity_Electromagnetism/Sections/06_DerivingHamiltonianForMasterFormula.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_Experiments/Warpdrive.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_Experiments/Warpdrive.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_Shorts/PhtonVortex.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_Shorts/PhotonVortex.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_Shorts/photon_vortex_refs.bib" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_Shorts/photon_vortex_refs.bib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.run/VAM-0-Analogies.run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.run/EXP_Warpdrive.run.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.run/VAM-0-Einstein_and_the_Æther bibliography.run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.run/VAM-0.run.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.run/VAM-1-Time_Dilation_in_3D_Superfluid_Æther_Model bibliography.run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.run/VAM-1.run.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.run/VAM-10-Swirl-Induced Curvature.run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.run/VAM-10.run.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.run/VAM-11-Master_Equation_for_Particle_Masses.run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.run/VAM-11.run.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.run/VAM-13-Beyond_Spacetime_Gravity_Time_Vorticity.run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.run/VAM-13.run.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.run/VAM-15-updated.run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.run/VAM-15.run.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.run/VAM-2-Swirl_Clocks_and_Vorticity-Induced_Gravity bibliography.run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.run/VAM-2.run.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.run/VAM-3-Benchmarking.run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.run/VAM-3.run.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.run/VAM-4-EmergentGeneralRelativityFromStructuredSwirlDynamicsInVAM.run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.run/VAM-4.run.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.run/VAM-5-OnAVortexBasedLagrangianUnificationGravityElectromagnetism.run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.run/VAM-5.run.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.run/VAM-6-Knotted_Gauge_Fields.run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.run/VAM-6.run.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.run/VAM-7-From_Quantum_Constants_to_Galactic_Swirl.run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.run/VAM-7.run.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.run/VAM-8-Master_Paper.run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.run/VAM-8.run.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.run/VAM-8.5-Master_Formula.run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.run/VAM-8.5.run.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.run/VAM-9-MilkyWay_as_a_Chiral_Swirl-Knot_Network.run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.run/VAM-9.run.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.run/VAM_15_Quantum_Gravity bibliography.run.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.run/build.run.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - Appendix All/6-Core_Foundations_VAM.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Appendix All/VAM-Core_Foundations.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - Appendix All/7-Philosophical_Depth_Companion.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Appendix All/VAM-Philosophical_Depth.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - Appendix All/sections/135_toy_model.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Appendix All/sections/135_toy_model.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM - Appendix All/sections/250_eqs.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM - Appendix All/sections/250_eqs.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm.bib" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm.bib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_Shorts/PhotonVortex.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_Shorts/VAM-17.1_PhotonVortex.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_Shorts/figures/ChatGPT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_Shorts/figures/Tre-foil.png" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_Shorts/figures/Tre-foil.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_Shorts/figures/Un-Knot.png" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_Shorts/figures/Un-Knot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_Shorts/figures/Vortex-Winding-dualscale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_Shorts/figures/vortex-fine-structure2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_Shorts/notebook.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_Shorts/photon_vortex_refs.bib" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_Shorts/VAM-17_refs.bib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_Shorts/sections/00_Introduction.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_Shorts/sections/00_Introduction.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VAM_Shorts/sections/02_Biot-Savart.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_Shorts/sections/02_Biot-Savart.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_Shorts/sections/ConclusionOutlook.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_Shorts/sections/ConclusionOutlook.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/PhtonVortex.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_Shorts/sections/03_PhotonEmissionAndAbsorbtion.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_Shorts/sections/03_PhotonEmissionAndAbsorbtion.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_Shorts/sections/A1_Derivation_of_Lagrangian_Hamiltonian_Jacobian.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_Shorts/sections/A_Derivation_of_Lagrangian_Hamiltonian_Jacobian.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_Shorts/sections/ConclusionOutlook.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_Shorts/sections/06_ConclusionOutlook.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_Shorts/sections/CorrespondenceWithQED.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_Shorts/sections/04_CorrespondenceWithQED.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_Shorts/sections/Experimental_Implications.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_Shorts/sections/05_Experimental_Implications.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_Shorts/vortex-fine-structure.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/5-Topological_Fluid_Dynamic_Lagrangian_In_VAM.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/6-Core_Foundations_VAM.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/7-Philosophical_Depth_Companion.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/8-Engineering_Gravity_Superluminal_Communication_and_LENR_with_VAM.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/Appendix_2FluidÆther.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/Appendix_3D_vortex_aether_model.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/Appendix_CalculateElectronHelicity.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/Appendix_CalculateKnotHelicity.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/Appendix_CalculateNeucleusMass.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/Appendix_ColdFusion.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/Appendix_CompareMassFormulas.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/Appendix_ErikVerlindeConclusions.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/Appendix_PhotonCapacitor.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/Appendix_RoleOfC_e.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/Appendix_VAM_Pressure_Shells_Snapshot.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/Appendix_WarpDrive.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/Appendix_X-FilesExplanationsFoundationalPhysicsAnomalies.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/Appendix_beam_swirl_interaction.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/Appendix_deriveFmax.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/Appendix_derivingGravitationalConstant.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/Appendix_swirl_resonance.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/Beyond_Spacetime_Gravity_Time_Vorticity.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/Constants_latex.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/CropCircles.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/EXPERIMENTAL PROPOSITION_lazer_c_e.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/FluidQuantumLegrange.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/Knot_Logic_Gates.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/Knot_Taxonomy.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/Master Paper-VAM(6-7-25).pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/Master Paper-VAM.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/ONLINE-0-Einstein_and_the_Æther.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/ONLINE-1-Time_Dilation_in_3D_Superfluid_Æther_Model.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/ONLINE-2-Swirl_Clocks_and_Vorticity-Induced_Gravity.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/ONLINE-From_Quantum_Constants_to_Galactic_Swirl.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/ONLINE-appendix_D_ExperimentalValidationOfGravitationalPotential.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/PhotonVortex.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/TopologicalConstructionStandardModelParticlesVAM.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/VAM-AssumptionsInconsistenciesAndPredictedPhenomena.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/VAM_framework.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/appendix_BlackBody.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/appendix_QuantizationOfVAM.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/appendix_Taxonomy_of_knots.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/master-formula.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/notebook.pdf" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="false" />
@@ -54,6 +135,7 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -88,6 +170,9 @@
     &quot;accountId&quot;: &quot;0776f82c-3bbb-49f0-a09f-02fc4da2bd68&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/anaconda3/envs/VAM/Lib/site-packages/numpy/_core/fromnumeric.py" root0="SKIP_INSPECTION" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 0
@@ -97,162 +182,176 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
-    <option name="autoscrollFromSource" value="true" />
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-    <option name="sortKey" value="BY_TIME_DESCENDING" />
+    <option name="autoscrollFromSource" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
+    <option name="hideEmptyMiddlePackages" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
+    <option name="showLibraryContents" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "BibTeX.12-OnAVortexBasedLagrangianUnificationGravityElectromagnetism bibliography.executor": "Run",
-    "BibTeX.4-StandardModel-Lagrangian VAM bibliography.executor": "Run",
-    "BibTeX.5-Topological_Fluid_Dynamic_Lagrangian_In_VAM bibliography.executor": "Run",
-    "BibTeX.Appendix_WarpDrive bibliography.executor": "Run",
-    "BibTeX.EMlagrangian.executor": "Run",
-    "BibTeX.EXPERIMENTAL PROPOSITION_lazer_c_e bibliography.executor": "Run",
-    "BibTeX.LagrangianGravityElectromagnetism bibliography.executor": "Run",
-    "BibTeX.Master Paper-VAM bibliography.executor": "Run",
-    "BibTeX.ONLINE-0-Einstein_and_the_Æther bibliography.executor": "Run",
-    "BibTeX.ONLINE-1-Time_Dilation_in_3D_Superfluid_Æther_Model bibliography.executor": "Run",
-    "BibTeX.ONLINE-2-Swirl_Clocks_and_Vorticity-Induced_Gravity bibliography.executor": "Run",
-    "BibTeX.PhotonVortex bibliography.executor": "Run",
-    "BibTeX.PhtonVortex bibliography.executor": "Run",
-    "BibTeX.VAM-0-Analogies.executor": "Run",
-    "BibTeX.VAM-0-Einstein_and_the_Æther bibliography.executor": "Run",
-    "BibTeX.VAM-10-Swirl_Induced_Curvature_as_the_Mechanism_of_Gravitation bibliography.executor": "Run",
-    "BibTeX.VAM-11-Master_Equation_for_Particle_Masses.executor": "Run",
-    "BibTeX.VAM-12-Fractal_Swirl bibliography.executor": "Run",
-    "BibTeX.VAM-13-Beyond_Spacetime_Gravity_Time_Vorticity.executor": "Run",
-    "BibTeX.VAM-14-Topological_Fluid_Dynamics_Lagrangian bibliography.executor": "Run",
-    "BibTeX.VAM-15-updated.executor": "Run",
-    "BibTeX.VAM-8.5-Master_Formula.executor": "Run",
-    "BibTeX.VAM-9-MilkyWay_as_a_Chiral_Swirl-Knot_Network.executor": "Run",
-    "BibTeX.VAM_15_Quantum_Gravity bibliography.executor": "Run",
-    "BibTeX.Warpdrive bibliography.executor": "Run",
-    "BibTeX.appendix_QuantizationOfVAM bibliography.executor": "Run",
-    "CMake Application.bind.executor": "Run",
-    "CMake Application.build.executor": "Run",
-    "CMake Application.vamcore.executor": "Run",
-    "CMake Debug.bob.executor": "Debug",
-    "LaTeX.00_front_page.executor": "Run",
-    "LaTeX.01_Introduction.executor": "Run",
-    "LaTeX.1-Time_Dilation_in_3D_Superfluid_Æther_Model.executor": "Run",
-    "LaTeX.12-OnAVortexBasedLagrangianUnificationGravityElectromagnetism.executor": "Run",
-    "LaTeX.4-StandardModel-Lagrangian VAM.executor": "Run",
-    "LaTeX.5-Topological_Fluid_Dynamic_Lagrangian_In_VAM.executor": "Run",
-    "LaTeX.Appendix_PhotonAsDipole.executor": "Run",
-    "LaTeX.Appendix_WarpDrive.executor": "Run",
-    "LaTeX.EXPERIMENTAL PROPOSITION_lazer_c_e.executor": "Run",
-    "LaTeX.Knot_Logic_Gates.executor": "Run",
-    "LaTeX.Knot_Taxonomy.executor": "Run",
-    "LaTeX.LagrangianGravityElectromagnetism.executor": "Run",
-    "LaTeX.Master Paper-VAM.executor": "Run",
-    "LaTeX.ONLINE-0-Einstein_and_the_Æther.executor": "Run",
-    "LaTeX.ONLINE-1-Time_Dilation_in_3D_Superfluid_Æther_Model.executor": "Run",
-    "LaTeX.ONLINE-2-Swirl_Clocks_and_Vorticity-Induced_Gravity.executor": "Run",
-    "LaTeX.ONLINE-From_Quantum_Constants_to_Galactic_Swirl.executor": "Run",
-    "LaTeX.PhotonVortex.executor": "Run",
-    "LaTeX.PhtonVortex.executor": "Run",
-    "LaTeX.VAM-0-Analogies.executor": "Run",
-    "LaTeX.VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm.executor": "Run",
-    "LaTeX.VAM-00_front_page.executor": "Run",
-    "LaTeX.VAM-10-Swirl_Induced_Curvature_as_the_Mechanism_of_Gravitation.executor": "Run",
-    "LaTeX.VAM-11-Master_Equation_for_Particle_Masses.executor": "Run",
-    "LaTeX.VAM-12-Fractal_Swirl.executor": "Run",
-    "LaTeX.VAM-13-Beyond_Spacetime_Gravity_Time_Vorticity.executor": "Run",
-    "LaTeX.VAM-14-Topological_Fluid_Dynamics_Lagrangian.executor": "Run",
-    "LaTeX.VAM-8.5-Master_Formula.executor": "Run",
-    "LaTeX.VAM-9-MilkyWay_as_a_Chiral_Swirl-Knot_Network.executor": "Run",
-    "LaTeX.VAM_15_Quantum_Gravity.executor": "Run",
-    "LaTeX.VAM_15_Quantum_Gravity_updated.executor": "Run",
-    "LaTeX.VAM_framework.executor": "Run",
-    "LaTeX.Warpdrive.executor": "Run",
-    "LaTeX.appendix_QuantizationOfVAM.executor": "Run",
-    "LaTeX.master-formula.executor": "Run",
-    "LaTeX.notebook.executor": "Run",
-    "LaTeX.testknot.executor": "Run",
-    "LaTeX.vam_mass_comparison_colored.executor": "Run",
-    "LaTeX.vam_mass_dotmarker_postfix.executor": "Run",
-    "Python tests.Python tests in 6274.py.executor": "Run",
-    "Python tests.Python tests in test_swirl_equations.py.executor": "Run",
-    "Python.02_Starship-2 inv.executor": "Run",
-    "Python.02_Starship-3phase-36points.executor": "Run",
-    "Python.03_Starship-3phase-36points-18 bidirectional.executor": "Run",
-    "Python.03_magnetic round coil.executor": "Run",
-    "Python.03_slice biot.executor": "Run",
-    "Python.6274.executor": "Run",
-    "Python.6_2_topview.executor": "Run",
-    "Python.6_2knot.executor": "Run",
-    "Python.7_4knot.executor": "Run",
-    "Python.8knot-Trefoil.executor": "Run",
-    "Python.8knot.executor": "Run",
-    "Python.Helicity.executor": "Run",
-    "Python.MagneticCircleRodin.executor": "Run",
-    "Python.MoleculeWeight.executor": "Run",
-    "Python.NODES.executor": "Run",
-    "Python.PressureDropForceField.executor": "Run",
-    "Python.Rodin_magnetic_fields.executor": "Run",
-    "Python.TemporalOntology.executor": "Run",
-    "Python.TimeConstruct.executor": "Run",
-    "Python.all_knots.executor": "Run",
-    "Python.autoknot.executor": "Run",
-    "Python.bubble.executor": "Run",
-    "Python.change_bib_to_footnoting.executor": "Run",
-    "Python.cropper.executor": "Run",
-    "Python.dipole.executor": "Run",
-    "Python.doublestarship.executor": "Run",
-    "Python.doublestarshipteste.executor": "Run",
-    "Python.fieldpressure.executor": "Run",
-    "Python.knot_6_2.executor": "Run",
-    "Python.knots.executor": "Run",
-    "Python.magneticCircle.executor": "Run",
-    "Python.magneticCircleArrows.executor": "Run",
-    "Python.neonKnot.6_2.executor": "Run",
-    "Python.photonAnimation.executor": "Run",
-    "Python.proton_neutron_weigth.executor": "Run",
-    "Python.python -c \"import vambindings; print(vambindings)\".executor": "Run",
-    "Python.quarck streamlines.executor": "Run",
-    "Python.reference_cleaning.executor": "Run",
-    "Python.rotating_current_rodin_fields.executor": "Run",
-    "Python.swirltorus36 knots.executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.testknot.executor": "Run",
-    "Python.timediagram.executor": "Run",
-    "Python.torus.executor": "Run",
-    "Python.torusspirals.executor": "Run",
-    "Python.vam_vs_gr_potential_plot.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "RunOnceActivity.west.config.association.type.startup.service": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "false",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/workspace/solo_projects/VAM/VAM_Shorts",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.47126436",
-    "settings.editor.selected.configurable": "preferences.editor",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;BibTeX.12-OnAVortexBasedLagrangianUnificationGravityElectromagnetism bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.4-StandardModel-Lagrangian VAM bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.5-Topological_Fluid_Dynamic_Lagrangian_In_VAM bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.6-Core_Foundations_VAM.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.7-Philosophical_Depth_Companion bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.Appendix_WarpDrive bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.EMlagrangian.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.EXPERIMENTAL PROPOSITION_lazer_c_e bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.LagrangianGravityElectromagnetism bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.Master Paper-VAM bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.ONLINE-0-Einstein_and_the_Æther bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.ONLINE-1-Time_Dilation_in_3D_Superfluid_Æther_Model bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.ONLINE-2-Swirl_Clocks_and_Vorticity-Induced_Gravity bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.PhotonVortex bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.PhtonVortex bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.Short_PhotonVortex.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.VAM-0-Analogies.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.VAM-0-Einstein_and_the_Æther bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.VAM-10-Swirl_Induced_Curvature_as_the_Mechanism_of_Gravitation bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.VAM-11-Master_Equation_for_Particle_Masses.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.VAM-12-Fractal_Swirl bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.VAM-13-Beyond_Spacetime_Gravity_Time_Vorticity.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.VAM-14-Topological_Fluid_Dynamics_Lagrangian bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.VAM-15-updated.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.VAM-16-Quantum_Computing_Blueprint bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.VAM-17.1.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.VAM-17.2.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.VAM-17_OnTheVortexInterpretationOfKerrGeometryInTheVortexÆtherModel bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.VAM-8.5-Master_Formula.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.VAM-9-MilkyWay_as_a_Chiral_Swirl-Knot_Network.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.VAM-Philosophical_Depth_Companion.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.VAM_15_Quantum_Gravity bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.Warpdrive bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.appendix_QuantizationOfVAM bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.bind.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.build.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.vamcore.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Debug.bob.executor&quot;: &quot;Debug&quot;,
+    &quot;LaTeX.00_front_page.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.01_Introduction.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.1-Time_Dilation_in_3D_Superfluid_Æther_Model.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.12-OnAVortexBasedLagrangianUnificationGravityElectromagnetism.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.4-StandardModel-Lagrangian VAM.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.5-Topological_Fluid_Dynamic_Lagrangian_In_VAM.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.6-Core_Foundations_VAM.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.7-Philosophical_Depth_Companion.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.Appendix_PhotonAsDipole.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.Appendix_WarpDrive.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.Appendix_X-filesExplanationsFoundationalPhysicsAnomalies.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.EXPERIMENTAL PROPOSITION_lazer_c_e.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.Knot_Logic_Gates.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.Knot_Taxonomy.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.LagrangianGravityElectromagnetism.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.Master Paper-VAM.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.ONLINE-0-Einstein_and_the_Æther.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.ONLINE-1-Time_Dilation_in_3D_Superfluid_Æther_Model.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.ONLINE-2-Swirl_Clocks_and_Vorticity-Induced_Gravity.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.ONLINE-From_Quantum_Constants_to_Galactic_Swirl.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.PhotonVortex.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.PhtonVortex.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.VAM-0-Analogies.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.VAM-00_front_page.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.VAM-10-Swirl_Induced_Curvature_as_the_Mechanism_of_Gravitation.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.VAM-11-Master_Equation_for_Particle_Masses.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.VAM-12-Fractal_Swirl.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.VAM-13-Beyond_Spacetime_Gravity_Time_Vorticity.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.VAM-14-Topological_Fluid_Dynamics_Lagrangian.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.VAM-16-Quantum_Computing_Blueprint.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.VAM-17.1_PhotonVortex.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.VAM-17.2_OnTheVortexInterpretationOfKerrGeometryInTheVortexÆtherModel.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.VAM-17_OnTheVortexInterpretationOfKerrGeometryInTheVortexÆtherModel.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.VAM-8.5-Master_Formula.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.VAM-9-MilkyWay_as_a_Chiral_Swirl-Knot_Network.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.VAM_15_Quantum_Gravity.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.VAM_15_Quantum_Gravity_updated.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.VAM_framework.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.Warpdrive.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.appendix_QuantizationOfVAM.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.master-formula.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.notebook.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.testknot.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.vam_mass_comparison_colored.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.vam_mass_dotmarker_postfix.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in 6274.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_swirl_equations.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.02_Starship-2 inv.executor&quot;: &quot;Run&quot;,
+    &quot;Python.02_Starship-3phase-36points.executor&quot;: &quot;Run&quot;,
+    &quot;Python.03_Starship-3phase-36points-18 bidirectional.executor&quot;: &quot;Run&quot;,
+    &quot;Python.03_magnetic round coil.executor&quot;: &quot;Run&quot;,
+    &quot;Python.03_slice biot.executor&quot;: &quot;Run&quot;,
+    &quot;Python.6274.executor&quot;: &quot;Run&quot;,
+    &quot;Python.6_2_topview.executor&quot;: &quot;Run&quot;,
+    &quot;Python.6_2knot.executor&quot;: &quot;Run&quot;,
+    &quot;Python.7_4knot.executor&quot;: &quot;Run&quot;,
+    &quot;Python.8knot-Trefoil.executor&quot;: &quot;Run&quot;,
+    &quot;Python.8knot.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Helicity.executor&quot;: &quot;Run&quot;,
+    &quot;Python.MagneticCircleRodin.executor&quot;: &quot;Run&quot;,
+    &quot;Python.MoleculeWeight.executor&quot;: &quot;Run&quot;,
+    &quot;Python.NODES.executor&quot;: &quot;Run&quot;,
+    &quot;Python.PressureDropForceField.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Rodin_magnetic_fields.executor&quot;: &quot;Run&quot;,
+    &quot;Python.TemporalOntology.executor&quot;: &quot;Run&quot;,
+    &quot;Python.TimeConstruct.executor&quot;: &quot;Run&quot;,
+    &quot;Python.all_knots.executor&quot;: &quot;Run&quot;,
+    &quot;Python.autoknot.executor&quot;: &quot;Run&quot;,
+    &quot;Python.bubble.executor&quot;: &quot;Run&quot;,
+    &quot;Python.change_bib_to_footnoting.executor&quot;: &quot;Run&quot;,
+    &quot;Python.cropper.executor&quot;: &quot;Run&quot;,
+    &quot;Python.dipole.executor&quot;: &quot;Run&quot;,
+    &quot;Python.doublestarship.executor&quot;: &quot;Run&quot;,
+    &quot;Python.doublestarshipteste.executor&quot;: &quot;Run&quot;,
+    &quot;Python.fieldpressure.executor&quot;: &quot;Run&quot;,
+    &quot;Python.knot_6_2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.knots.executor&quot;: &quot;Run&quot;,
+    &quot;Python.magneticCircle.executor&quot;: &quot;Run&quot;,
+    &quot;Python.magneticCircleArrows.executor&quot;: &quot;Run&quot;,
+    &quot;Python.neonKnot.6_2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.photonAnimation.executor&quot;: &quot;Run&quot;,
+    &quot;Python.proton_neutron_weigth.executor&quot;: &quot;Run&quot;,
+    &quot;Python.python -c \&quot;import vambindings; print(vambindings)\&quot;.executor&quot;: &quot;Run&quot;,
+    &quot;Python.quarck streamlines.executor&quot;: &quot;Run&quot;,
+    &quot;Python.reference_cleaning.executor&quot;: &quot;Run&quot;,
+    &quot;Python.rotating_current_rodin_fields.executor&quot;: &quot;Run&quot;,
+    &quot;Python.swirltorus36 knots.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.testknot.executor&quot;: &quot;Run&quot;,
+    &quot;Python.timediagram.executor&quot;: &quot;Run&quot;,
+    &quot;Python.torus.executor&quot;: &quot;Run&quot;,
+    &quot;Python.torusspirals.executor&quot;: &quot;Run&quot;,
+    &quot;Python.vam_vs_gr_potential_plot.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.west.config.association.type.startup.service&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/workspace/projects/VAM/VAM_Shorts&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.47126436&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\workspace\projects\VAM\VAM_Shorts" />
+      <recent name="C:\workspace\projects\VAM\VAM_Shorts\figures" />
       <recent name="C:\workspace\solo_projects\VAM\VAM_Shorts" />
       <recent name="C:\workspace\solo_projects\VAM\VAM_Experiments" />
       <recent name="C:\workspace\projects\VAM\VAM_Experiments" />
-      <recent name="C:\workspace\projects\VAM\VAM_0_Einstein_to_Vortex_Fluid" />
-      <recent name="C:\Users\mr\IdeaProjects\VAM\VAMpyBindings\py_knots\fourier coefficients table" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\workspace\solo_projects\VAM" />
@@ -262,619 +361,191 @@
       <recent name="C:\Users\mr\IdeaProjects\VAM\docs" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="LaTeX.VAM-17.1_PhotonVortex">
     <configuration default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
       </method>
     </configuration>
-    <configuration name="01_Introduction bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+    <configuration name="VAM-16-Quantum_Computing_Blueprint bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify-bibtex>
         <compiler>BIBTEX</compiler>
         <compiler-path />
         <compiler-arguments />
         <envs />
-        <main-file />
+        <main-file>$PROJECT_DIR$/VAM_16_QuantumComputing/VAM-16-Quantum_Computing_Blueprint.tex</main-file>
         <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
         <latex-distribution>MIKTEX</latex-distribution>
       </texify-bibtex>
       <method v="2" />
     </configuration>
-    <configuration name="Appendix_WarpDrive bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-bibtex>
-        <compiler>BIBTEX</compiler>
-        <compiler-path />
-        <compiler-arguments />
-        <envs />
-        <main-file>$PROJECT_DIR$/VAM_Experiments/Appendix_WarpDrive.tex</main-file>
-        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
-        <latex-distribution>MIKTEX</latex-distribution>
-      </texify-bibtex>
-      <method v="2" />
-    </configuration>
-    <configuration name="EXPERIMENTAL PROPOSITION_lazer_c_e bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-bibtex>
-        <compiler>BIBTEX</compiler>
-        <compiler-path />
-        <compiler-arguments />
-        <envs />
-        <main-file>$PROJECT_DIR$/VAM_Experiments/EXPERIMENTAL PROPOSITION_lazer_c_e.tex</main-file>
-        <aux-dir />
-        <latex-distribution>MIKTEX</latex-distribution>
-      </texify-bibtex>
-      <method v="2" />
-    </configuration>
-    <configuration name="Knot_Logic_Gates bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-bibtex>
-        <compiler>BIBTEX</compiler>
-        <compiler-path />
-        <compiler-arguments />
-        <envs />
-        <main-file />
-        <aux-dir />
-        <latex-distribution>MIKTEX</latex-distribution>
-      </texify-bibtex>
-      <method v="2" />
-    </configuration>
-    <configuration name="PhotonVortex bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-bibtex>
-        <compiler>BIBTEX</compiler>
-        <compiler-path />
-        <compiler-arguments />
-        <envs />
-        <main-file>$PROJECT_DIR$/VAM_Shorts/PhotonVortex.tex</main-file>
-        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
-        <latex-distribution>MIKTEX</latex-distribution>
-      </texify-bibtex>
-      <method v="2" />
-    </configuration>
-    <configuration name="PhtonVortex bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-bibtex>
-        <compiler>BIBTEX</compiler>
-        <compiler-path />
-        <compiler-arguments />
-        <envs />
-        <main-file>$PROJECT_DIR$/VAM_Shorts/PhotonVortex.tex</main-file>
-        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
-        <latex-distribution>MIKTEX</latex-distribution>
-      </texify-bibtex>
-      <method v="2" />
-    </configuration>
-    <configuration name="VAM-0-Analogies bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-bibtex>
-        <compiler>BIBTEX</compiler>
-        <compiler-path />
-        <compiler-arguments />
-        <envs />
-        <main-file>$PROJECT_DIR$/VAM_0_Analogies/VAM-0-Analogies.tex</main-file>
-        <aux-dir />
-        <latex-distribution>MIKTEX</latex-distribution>
-      </texify-bibtex>
-      <method v="2" />
-    </configuration>
-    <configuration name="VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-bibtex>
-        <compiler>BIBTEX</compiler>
-        <compiler-path />
-        <compiler-arguments />
-        <envs />
-        <main-file>$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm.tex</main-file>
-        <aux-dir />
-        <latex-distribution>MIKTEX</latex-distribution>
-      </texify-bibtex>
-      <method v="2" />
-    </configuration>
-    <configuration name="VAM-10-Swirl_Induced_Curvature_as_the_Mechanism_of_Gravitation bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-bibtex>
-        <compiler>BIBTEX</compiler>
-        <compiler-path />
-        <compiler-arguments />
-        <envs />
-        <main-file>$PROJECT_DIR$/VAM_10_Swirl_Induced_Curvature_as_the_Mechanism_of_Gravitation/VAM-10-Swirl_Induced_Curvature_as_the_Mechanism_of_Gravitation.tex</main-file>
-        <aux-dir />
-        <latex-distribution>MIKTEX</latex-distribution>
-      </texify-bibtex>
-      <method v="2" />
-    </configuration>
-    <configuration name="VAM-11-Master_Equation_for_Particle_Masses bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-bibtex>
-        <compiler>BIBTEX</compiler>
-        <compiler-path />
-        <compiler-arguments />
-        <envs />
-        <main-file>$PROJECT_DIR$/VAM_11_Master_Equation_for_Particle_Masses/VAM-11-Master_Equation_for_Particle_Masses.tex</main-file>
-        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
-        <latex-distribution>MIKTEX</latex-distribution>
-      </texify-bibtex>
-      <method v="2" />
-    </configuration>
-    <configuration name="VAM-12-Fractal_Swirl bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-bibtex>
-        <compiler>BIBTEX</compiler>
-        <compiler-path />
-        <compiler-arguments />
-        <envs />
-        <main-file>$PROJECT_DIR$/VAM_12_Fractal_Swirl/VAM-12-Fractal_Swirl.tex</main-file>
-        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
-        <latex-distribution>MIKTEX</latex-distribution>
-      </texify-bibtex>
-      <method v="2" />
-    </configuration>
-    <configuration name="VAM-13-Beyond_Spacetime_Gravity_Time_Vorticity bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-bibtex>
-        <compiler>BIBTEX</compiler>
-        <compiler-path />
-        <compiler-arguments />
-        <envs />
-        <main-file>$PROJECT_DIR$/VAM_13_Beyond_Spacetime_Gravity_time_Vorticity/VAM-13-Beyond_Spacetime_Gravity_Time_Vorticity.tex</main-file>
-        <aux-dir />
-        <latex-distribution>MIKTEX</latex-distribution>
-      </texify-bibtex>
-      <method v="2" />
-    </configuration>
-    <configuration name="VAM-14-Topological_Fluid_Dynamics_Lagrangian bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-bibtex>
-        <compiler>BIBTEX</compiler>
-        <compiler-path />
-        <compiler-arguments />
-        <envs />
-        <main-file>$PROJECT_DIR$/VAM_14_Topological_Fluid_Dynamics_Lagrangian/VAM-14-Topological_Fluid_Dynamics_Lagrangian.tex</main-file>
-        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
-        <latex-distribution>MIKTEX</latex-distribution>
-      </texify-bibtex>
-      <method v="2" />
-    </configuration>
-    <configuration name="VAM-9-MilkyWay_as_a_Chiral_Swirl-Knot_Network bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-bibtex>
-        <compiler>BIBTEX</compiler>
-        <compiler-path />
-        <compiler-arguments />
-        <envs />
-        <main-file>$PROJECT_DIR$/VAM_9_MilkyWay_as_a_Chiral_SwirlKnot_Network/VAM-9-MilkyWay_as_a_Chiral_Swirl-Knot_Network.tex</main-file>
-        <aux-dir />
-        <latex-distribution>MIKTEX</latex-distribution>
-      </texify-bibtex>
-      <method v="2" />
-    </configuration>
-    <configuration name="VAM_15_Quantum_Gravity_updated bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-bibtex>
-        <compiler>BIBTEX</compiler>
-        <compiler-path />
-        <compiler-arguments />
-        <envs />
-        <main-file>$PROJECT_DIR$/VAM_15_Quantum_Gravity/VAM-15-Quantum_Gravity.tex</main-file>
-        <aux-dir />
-        <latex-distribution>MIKTEX</latex-distribution>
-      </texify-bibtex>
-      <method v="2" />
-    </configuration>
-    <configuration name="Warpdrive bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-bibtex>
-        <compiler>BIBTEX</compiler>
-        <compiler-path />
-        <compiler-arguments />
-        <envs />
-        <main-file>$PROJECT_DIR$/VAM_Experiments/Warpdrive.tex</main-file>
-        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
-        <latex-distribution>MIKTEX</latex-distribution>
-      </texify-bibtex>
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-bibtex>
-        <compiler />
-        <compiler-path />
-        <compiler-arguments />
-        <envs />
-        <main-file />
-        <aux-dir />
-        <latex-distribution>PROJECT_SDK</latex-distribution>
-      </texify-bibtex>
-      <method v="2" />
-    </configuration>
-    <configuration name="bob" type="CMakeListConfigurationType" factoryName="CMakeListConfigurationFactory">
-      <method v="2" />
-    </configuration>
-    <configuration name="bind" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" WORKING_DIR="file://$PROJECT_DIR$/VAMpyBindings" PASS_PARENT_ENVS_2="false" PROJECT_NAME="VAMCore" TARGET_NAME="vambindings" CONFIG_NAME="Debug" RUN_PATH="$PROJECT_DIR$/VAMpyBindings/vambindings.cp312-win_amd64.pyd">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration name="test_frenet" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="false" PROJECT_NAME="VAMCore" TARGET_NAME="test_frenet" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="VAMCore" RUN_TARGET_NAME="test_frenet">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration name="Appendix_WarpDrive" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+    <configuration name="6-Core_Foundations_VAM" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$">
       <texify>
         <compiler>PDFLATEX</compiler>
         <compiler-path />
         <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
-        <require-focus>true</require-focus>
+        <require-focus>$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$</require-focus>
         <viewer-command />
         <compiler-arguments />
         <envs />
         <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
         <before-run-command />
-        <main-file>$PROJECT_DIR$/VAM_Experiments/Appendix_WarpDrive.tex</main-file>
+        <main-file>$PROJECT_DIR$/VAM - Appendix All/VAM-Core_Foundations.tex</main-file>
         <output-path>$PROJECT_DIR$/out</output-path>
         <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
         <compile-twice>false</compile-twice>
         <output-format>PDF</output-format>
         <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>true</has-been-run>
-        <bib-run-config>[BibTeX.Appendix_WarpDrive bibliography]</bib-run-config>
-        <makeindex-run-config>[]</makeindex-run-config>
-      </texify>
-      <method v="2" />
-    </configuration>
-    <configuration name="PhtonVortex" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
-      <texify>
-        <compiler>PDFLATEX</compiler>
-        <compiler-path />
-        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
-        <require-focus>true</require-focus>
-        <viewer-command />
-        <compiler-arguments />
-        <envs />
-        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
-        <before-run-command />
-        <main-file>$PROJECT_DIR$/VAM_Shorts/PhotonVortex.tex</main-file>
-        <output-path>$PROJECT_DIR$/out</output-path>
-        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
-        <compile-twice>false</compile-twice>
-        <output-format>PDF</output-format>
-        <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>true</has-been-run>
-        <bib-run-config>[BibTeX.PhtonVortex bibliography]</bib-run-config>
-        <makeindex-run-config>[]</makeindex-run-config>
-      </texify>
-      <method v="2" />
-    </configuration>
-    <configuration name="VAM-0-Analogies" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify>
-        <compiler>PDFLATEX</compiler>
-        <compiler-path />
-        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
-        <require-focus>false</require-focus>
-        <viewer-command />
-        <compiler-arguments />
-        <envs />
-        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
-        <before-run-command />
-        <main-file>$PROJECT_DIR$/VAM_0_Analogies/VAM-0-Analogies.tex</main-file>
-        <output-path>$PROJECT_DIR$/out</output-path>
-        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
-        <compile-twice>false</compile-twice>
-        <output-format>PDF</output-format>
-        <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>false</has-been-run>
-        <bib-run-config>[BibTeX.VAM-0-Analogies bibliography]</bib-run-config>
-        <makeindex-run-config>[]</makeindex-run-config>
-      </texify>
-      <method v="2" />
-    </configuration>
-    <configuration name="VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify>
-        <compiler>PDFLATEX</compiler>
-        <compiler-path />
-        <pdf-viewer>none</pdf-viewer>
-        <require-focus>false</require-focus>
-        <viewer-command />
-        <compiler-arguments />
-        <envs />
-        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
-        <before-run-command />
-        <main-file>$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm.tex</main-file>
-        <output-path>$PROJECT_DIR$/out</output-path>
-        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
-        <compile-twice>false</compile-twice>
-        <output-format>PDF</output-format>
-        <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>true</has-been-run>
-        <bib-run-config>[BibTeX.VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm bibliography]</bib-run-config>
-        <makeindex-run-config>[]</makeindex-run-config>
-      </texify>
-      <method v="2" />
-    </configuration>
-    <configuration name="VAM-10-Swirl_Induced_Curvature_as_the_Mechanism_of_Gravitation" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify>
-        <compiler>PDFLATEX</compiler>
-        <compiler-path />
-        <pdf-viewer>none</pdf-viewer>
-        <require-focus>false</require-focus>
-        <viewer-command />
-        <compiler-arguments />
-        <envs />
-        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
-        <before-run-command />
-        <main-file>$PROJECT_DIR$/VAM_10_Swirl_Induced_Curvature_as_the_Mechanism_of_Gravitation/VAM-10-Swirl_Induced_Curvature_as_the_Mechanism_of_Gravitation.tex</main-file>
-        <output-path>$PROJECT_DIR$/out</output-path>
-        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
-        <compile-twice>false</compile-twice>
-        <output-format>PDF</output-format>
-        <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>false</has-been-run>
-        <bib-run-config>[BibTeX.VAM-10-Swirl_Induced_Curvature_as_the_Mechanism_of_Gravitation bibliography]</bib-run-config>
-        <makeindex-run-config>[]</makeindex-run-config>
-      </texify>
-      <method v="2" />
-    </configuration>
-    <configuration name="VAM-13-Beyond_Spacetime_Gravity_Time_Vorticity" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify>
-        <compiler>PDFLATEX</compiler>
-        <compiler-path />
-        <pdf-viewer>none</pdf-viewer>
-        <require-focus>false</require-focus>
-        <viewer-command />
-        <compiler-arguments />
-        <envs />
-        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
-        <before-run-command />
-        <main-file>$PROJECT_DIR$/VAM_13_Beyond_Spacetime_Gravity_time_Vorticity/VAM-13-Beyond_Spacetime_Gravity_Time_Vorticity.tex</main-file>
-        <output-path>$PROJECT_DIR$/out</output-path>
-        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
-        <compile-twice>false</compile-twice>
-        <output-format>PDF</output-format>
-        <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>false</has-been-run>
-        <bib-run-config>[BibTeX.VAM-13-Beyond_Spacetime_Gravity_Time_Vorticity bibliography]</bib-run-config>
-        <makeindex-run-config>[]</makeindex-run-config>
-      </texify>
-      <method v="2" />
-    </configuration>
-    <configuration name="VAM-14-Topological_Fluid_Dynamics_Lagrangian" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
-      <texify>
-        <compiler>PDFLATEX</compiler>
-        <compiler-path />
-        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
-        <require-focus>true</require-focus>
-        <viewer-command />
-        <compiler-arguments />
-        <envs />
-        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
-        <before-run-command />
-        <main-file>$PROJECT_DIR$/VAM_14_Topological_Fluid_Dynamics_Lagrangian/VAM-14-Topological_Fluid_Dynamics_Lagrangian.tex</main-file>
-        <output-path>$PROJECT_DIR$/out</output-path>
-        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
-        <compile-twice>false</compile-twice>
-        <output-format>PDF</output-format>
-        <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>true</has-been-run>
-        <bib-run-config>[BibTeX.VAM-14-Topological_Fluid_Dynamics_Lagrangian bibliography]</bib-run-config>
-        <makeindex-run-config>[]</makeindex-run-config>
-      </texify>
-      <method v="2" />
-    </configuration>
-    <configuration name="VAM-9-MilkyWay_as_a_Chiral_Swirl-Knot_Network" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify>
-        <compiler>PDFLATEX</compiler>
-        <compiler-path />
-        <pdf-viewer>none</pdf-viewer>
-        <require-focus>false</require-focus>
-        <viewer-command />
-        <compiler-arguments />
-        <envs />
-        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
-        <before-run-command />
-        <main-file>$PROJECT_DIR$/VAM_9_MilkyWay_as_a_Chiral_SwirlKnot_Network/VAM-9-MilkyWay_as_a_Chiral_Swirl-Knot_Network.tex</main-file>
-        <output-path>$PROJECT_DIR$/out</output-path>
-        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
-        <compile-twice>false</compile-twice>
-        <output-format>PDF</output-format>
-        <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>false</has-been-run>
-        <bib-run-config>[BibTeX.VAM-9-MilkyWay_as_a_Chiral_Swirl-Knot_Network bibliography]</bib-run-config>
-        <makeindex-run-config>[]</makeindex-run-config>
-      </texify>
-      <method v="2" />
-    </configuration>
-    <configuration name="VAM_15_Quantum_Gravity" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify>
-        <compiler>PDFLATEX</compiler>
-        <compiler-path />
-        <pdf-viewer>none</pdf-viewer>
-        <require-focus>false</require-focus>
-        <viewer-command />
-        <compiler-arguments />
-        <envs />
-        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
-        <before-run-command />
-        <main-file />
-        <output-path>$PROJECT_DIR$/out</output-path>
-        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
-        <compile-twice>false</compile-twice>
-        <output-format>PDF</output-format>
-        <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>false</has-been-run>
-        <bib-run-config>[BibTeX.VAM_15_Quantum_Gravity bibliography]</bib-run-config>
-        <makeindex-run-config>[]</makeindex-run-config>
-      </texify>
-      <method v="2" />
-    </configuration>
-    <configuration name="VAM_15_Quantum_Gravity_updated" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify>
-        <compiler>PDFLATEX</compiler>
-        <compiler-path />
-        <pdf-viewer>none</pdf-viewer>
-        <require-focus>false</require-focus>
-        <viewer-command />
-        <compiler-arguments />
-        <envs />
-        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
-        <before-run-command />
-        <main-file>$PROJECT_DIR$/VAM_15_Quantum_Gravity/VAM-15-Quantum_Gravity.tex</main-file>
-        <output-path>$PROJECT_DIR$/out</output-path>
-        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
-        <compile-twice>false</compile-twice>
-        <output-format>PDF</output-format>
-        <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>false</has-been-run>
+        <has-been-run>$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$</has-been-run>
         <bib-run-config>[]</bib-run-config>
         <makeindex-run-config>[]</makeindex-run-config>
       </texify>
       <method v="2" />
     </configuration>
-    <configuration name="Warpdrive" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+    <configuration name="7-Philosophical_Depth_Companion" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$">
       <texify>
         <compiler>PDFLATEX</compiler>
         <compiler-path />
         <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
-        <require-focus>true</require-focus>
+        <require-focus>$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$</require-focus>
         <viewer-command />
         <compiler-arguments />
         <envs />
         <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
         <before-run-command />
-        <main-file>$PROJECT_DIR$/VAM_Experiments/Warpdrive.tex</main-file>
+        <main-file>$PROJECT_DIR$/VAM - Appendix All/VAM-Philosophical_Depth.tex</main-file>
         <output-path>$PROJECT_DIR$/out</output-path>
         <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
         <compile-twice>false</compile-twice>
         <output-format>PDF</output-format>
         <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>true</has-been-run>
-        <bib-run-config>[BibTeX.Warpdrive bibliography]</bib-run-config>
+        <has-been-run>$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$</has-been-run>
+        <bib-run-config>[BibTeX.7-Philosophical_Depth_Companion bibliography]</bib-run-config>
         <makeindex-run-config>[]</makeindex-run-config>
       </texify>
       <method v="2" />
     </configuration>
-    <configuration name="notebook" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+    <configuration name="Appendix_X-filesExplanationsFoundationalPhysicsAnomalies" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$">
       <texify>
         <compiler>PDFLATEX</compiler>
         <compiler-path />
         <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
-        <require-focus>true</require-focus>
+        <require-focus>$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$</require-focus>
         <viewer-command />
         <compiler-arguments />
         <envs />
         <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
         <before-run-command />
-        <main-file>$PROJECT_DIR$/VAM_Shorts/notebook.tex</main-file>
+        <main-file>$PROJECT_DIR$/VAM - Appendix All/Appendix_X-filesExplanationsFoundationalPhysicsAnomalies.tex</main-file>
         <output-path>$PROJECT_DIR$/out</output-path>
         <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
         <compile-twice>false</compile-twice>
         <output-format>PDF</output-format>
         <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>true</has-been-run>
+        <has-been-run>$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$</has-been-run>
         <bib-run-config>[]</bib-run-config>
         <makeindex-run-config>[]</makeindex-run-config>
       </texify>
       <method v="2" />
     </configuration>
-    <configuration name="knots" type="PythonConfigurationType" factoryName="Python">
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="false" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/VAMpyBindings/py_knots" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="false" />
-      <option name="ADD_SOURCE_ROOTS" value="false" />
-      <module name="" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/VAMpyBindings/py_knots/knots.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+    <configuration name="VAM-17.1_PhotonVortex" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <require-focus>$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$</require-focus>
+        <viewer-command />
+        <compiler-arguments />
+        <envs />
+        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
+        <before-run-command />
+        <main-file>$PROJECT_DIR$/VAM_Shorts/VAM-17.1_PhotonVortex.tex</main-file>
+        <output-path>$PROJECT_DIR$/out</output-path>
+        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>MIKTEX</latex-distribution>
+        <has-been-run>$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
       <method v="2" />
     </configuration>
-    <configuration name="python -c &quot;import vambindings; print(vambindings)&quot;" type="PythonConfigurationType" factoryName="Python">
-      <module name="VAM" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="false" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/VAMpyBindings" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="false" />
-      <option name="ADD_SOURCE_ROOTS" value="false" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="-c" />
-      <option name="PARAMETERS" value="&quot;import vambindings; print(vambindings)&quot;" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+    <configuration name="VAM-17.2_OnTheVortexInterpretationOfKerrGeometryInTheVortexÆtherModel" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <require-focus>$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$</require-focus>
+        <viewer-command />
+        <compiler-arguments />
+        <envs />
+        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
+        <before-run-command />
+        <main-file>$PROJECT_DIR$/VAM_Shorts/VAM-17.2_OnTheVortexInterpretationOfKerrGeometryInTheVortexÆtherModel.tex</main-file>
+        <output-path>$PROJECT_DIR$/out</output-path>
+        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>MIKTEX</latex-distribution>
+        <has-been-run>$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="BibTeX.01_Introduction bibliography" />
-      <item itemvalue="BibTeX.PhtonVortex bibliography" />
-      <item itemvalue="BibTeX.VAM-0-Analogies" />
-      <item itemvalue="BibTeX.VAM-0-Einstein_and_the_Æther bibliography" />
-      <item itemvalue="BibTeX.VAM-1-Time_Dilation_in_3D_Superfluid_Æther_Model bibliography" />
-      <item itemvalue="BibTeX.VAM-10-Swirl-Induced Curvature" />
-      <item itemvalue="BibTeX.VAM-11-Master_Equation_for_Particle_Masses" />
-      <item itemvalue="BibTeX.VAM-13-Beyond_Spacetime_Gravity_Time_Vorticity" />
       <item itemvalue="BibTeX.VAM-14-Topological_Fluid_Dynamics_Lagrangian bibliography" />
-      <item itemvalue="BibTeX.VAM-15-updated" />
-      <item itemvalue="BibTeX.VAM-2-Swirl_Clocks_and_Vorticity-Induced_Gravity bibliography" />
-      <item itemvalue="BibTeX.VAM-3-Benchmarking" />
-      <item itemvalue="BibTeX.VAM-4-EmergentGeneralRelativityFromStructuredSwirlDynamicsInVAM" />
-      <item itemvalue="BibTeX.VAM-5-OnAVortexBasedLagrangianUnificationGravityElectromagnetism" />
-      <item itemvalue="BibTeX.VAM-6-Knotted_Gauge_Fields" />
-      <item itemvalue="BibTeX.VAM-7-From_Quantum_Constants_to_Galactic_Swirl" />
-      <item itemvalue="BibTeX.VAM-8-Master_Paper" />
-      <item itemvalue="BibTeX.VAM-8.5-Master_Formula" />
-      <item itemvalue="BibTeX.VAM-9-MilkyWay_as_a_Chiral_Swirl-Knot_Network" />
-      <item itemvalue="BibTeX.VAM_15_Quantum_Gravity bibliography" />
-      <item itemvalue="BibTeX.Knot_Logic_Gates bibliography" />
-      <item itemvalue="BibTeX.VAM-0-Analogies bibliography" />
-      <item itemvalue="BibTeX.VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm bibliography" />
-      <item itemvalue="BibTeX.VAM-10-Swirl_Induced_Curvature_as_the_Mechanism_of_Gravitation bibliography" />
-      <item itemvalue="BibTeX.VAM-13-Beyond_Spacetime_Gravity_Time_Vorticity bibliography" />
-      <item itemvalue="BibTeX.VAM-9-MilkyWay_as_a_Chiral_Swirl-Knot_Network bibliography" />
-      <item itemvalue="BibTeX.VAM_15_Quantum_Gravity_updated bibliography" />
-      <item itemvalue="BibTeX.EXPERIMENTAL PROPOSITION_lazer_c_e bibliography" />
-      <item itemvalue="BibTeX.VAM-11-Master_Equation_for_Particle_Masses bibliography" />
-      <item itemvalue="BibTeX.VAM-12-Fractal_Swirl bibliography" />
-      <item itemvalue="BibTeX.Appendix_WarpDrive bibliography" />
-      <item itemvalue="BibTeX.Warpdrive bibliography" />
-      <item itemvalue="BibTeX.PhotonVortex bibliography" />
-      <item itemvalue="LaTeX.VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm" />
-      <item itemvalue="LaTeX.VAM-10-Swirl_Induced_Curvature_as_the_Mechanism_of_Gravitation" />
-      <item itemvalue="LaTeX.VAM-13-Beyond_Spacetime_Gravity_Time_Vorticity" />
-      <item itemvalue="LaTeX.VAM-9-MilkyWay_as_a_Chiral_Swirl-Knot_Network" />
-      <item itemvalue="LaTeX.VAM_15_Quantum_Gravity" />
-      <item itemvalue="LaTeX.VAM_15_Quantum_Gravity_updated" />
-      <item itemvalue="LaTeX.VAM-0-Analogies" />
-      <item itemvalue="LaTeX.PhtonVortex" />
-      <item itemvalue="LaTeX.notebook" />
-      <item itemvalue="LaTeX.Appendix_WarpDrive" />
-      <item itemvalue="LaTeX.Warpdrive" />
-      <item itemvalue="LaTeX.VAM-14-Topological_Fluid_Dynamics_Lagrangian" />
-      <item itemvalue="Python.knots" />
-      <item itemvalue="Python.python -c &quot;import vambindings; print(vambindings)&quot;" />
+      <item itemvalue="BibTeX.VAM-Philosophical_Depth_Companion" />
+      <item itemvalue="BibTeX.VAM-Core_Foundations_VAM" />
+      <item itemvalue="BibTeX.VAM-16-Quantum_Computing_Blueprint bibliography" />
+      <item itemvalue="BibTeX.VAM-17.2" />
+      <item itemvalue="BibTeX.VAM-1" />
+      <item itemvalue="BibTeX.VAM-10" />
+      <item itemvalue="BibTeX.VAM-11" />
+      <item itemvalue="BibTeX.VAM-13" />
+      <item itemvalue="BibTeX.VAM-14" />
+      <item itemvalue="BibTeX.VAM-15" />
+      <item itemvalue="BibTeX.VAM-2" />
+      <item itemvalue="BibTeX.VAM-3" />
+      <item itemvalue="BibTeX.VAM-4" />
+      <item itemvalue="BibTeX.VAM-5" />
+      <item itemvalue="BibTeX.VAM-6" />
+      <item itemvalue="BibTeX.VAM-7" />
+      <item itemvalue="BibTeX.VAM-8" />
+      <item itemvalue="BibTeX.VAM-8.5" />
+      <item itemvalue="BibTeX.VAM-9" />
+      <item itemvalue="BibTeX.VAM-0-Analogy" />
+      <item itemvalue="BibTeX.VAM-0" />
+      <item itemvalue="BibTeX.EXP_lazer_c_e" />
+      <item itemvalue="BibTeX.VAM-12" />
+      <item itemvalue="BibTeX.EXP_Warpdrive" />
+      <item itemvalue="BibTeX.VAM-17.1" />
+      <item itemvalue="LaTeX.VAM-17.1_PhotonVortex" />
+      <item itemvalue="LaTeX.VAM-17.2_OnTheVortexInterpretationOfKerrGeometryInTheVortexÆtherModel" />
+      <item itemvalue="LaTeX.Appendix_X-filesExplanationsFoundationalPhysicsAnomalies" />
+      <item itemvalue="LaTeX.6-Core_Foundations_VAM" />
+      <item itemvalue="LaTeX.7-Philosophical_Depth_Companion" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="LaTeX.PhtonVortex" />
-        <item itemvalue="LaTeX.notebook" />
-        <item itemvalue="LaTeX.Warpdrive" />
-        <item itemvalue="LaTeX.Appendix_WarpDrive" />
-        <item itemvalue="LaTeX.VAM-14-Topological_Fluid_Dynamics_Lagrangian" />
+        <item itemvalue="LaTeX.VAM-17.1_PhotonVortex" />
+        <item itemvalue="LaTeX.VAM-17.2_OnTheVortexInterpretationOfKerrGeometryInTheVortexÆtherModel" />
+        <item itemvalue="LaTeX.Appendix_X-filesExplanationsFoundationalPhysicsAnomalies" />
+        <item itemvalue="LaTeX.7-Philosophical_Depth_Companion" />
+        <item itemvalue="LaTeX.6-Core_Foundations_VAM" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-IU-251.26927.53" />
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.23892.248" />
       </set>
     </attachedChunks>
   </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
+    <task active="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" id="Default" summary="Default task">
       <changelist id="6f2a8139-c825-4497-876b-70e1a130c5c3" name="Changes" comment="" />
       <created>1751631523297</created>
       <option name="number" value="Default" />
@@ -936,6 +607,7 @@
       <workItem from="1753203173524" duration="611000" />
       <workItem from="1753262215646" duration="21621000" />
       <workItem from="1753430562842" duration="5809000" />
+      <workItem from="1753512374189" duration="2185000" />
     </task>
     <task id="LOCAL-00001" summary="Made MASTER paper, VAM4, VAM12.&#10;Added Knot images">
       <created>1751925083082</created>
@@ -1043,7 +715,7 @@
       <updated>1753171412920</updated>
     </task>
     <task id="LOCAL-00016" summary="Update project configuration and documentation; modify Python SDK path, correct DOI references, and enhance LaTeX document metadata for clarity">
-      <option name="closed" value="true" />
+      <option name="closed" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
       <created>1753201483462</created>
       <option name="number" value="00016" />
       <option name="presentableId" value="LOCAL-00016" />
@@ -1051,7 +723,7 @@
       <updated>1753201483462</updated>
     </task>
     <task id="LOCAL-00017" summary="Refactor file structure and enhance documentation; rename Appendix_WarpDrive.tex, add new sections on simultaneity and Helmholtz, and introduce new plots for temporal ontology and wave-particle duality">
-      <option name="closed" value="true" />
+      <option name="closed" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
       <created>1753286410884</created>
       <option name="number" value="00017" />
       <option name="presentableId" value="LOCAL-00017" />
@@ -1059,7 +731,7 @@
       <updated>1753286410884</updated>
     </task>
     <task id="LOCAL-00018" summary="Add neon knot visualization; implement new plotting techniques and enhance UI with interactive effects">
-      <option name="closed" value="true" />
+      <option name="closed" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
       <created>1753293465889</created>
       <option name="number" value="00018" />
       <option name="presentableId" value="LOCAL-00018" />
@@ -1067,7 +739,7 @@
       <updated>1753293465889</updated>
     </task>
     <task id="LOCAL-00019" summary="Refactor file structure by renaming scripts for clarity; add new experimental validation appendix and update LaTeX documents for improved organization and readability">
-      <option name="closed" value="true" />
+      <option name="closed" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
       <created>1753370378012</created>
       <option name="number" value="00019" />
       <option name="presentableId" value="LOCAL-00019" />
