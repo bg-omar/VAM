@@ -1,14 +1,14 @@
 \documentclass[preprint,notitlepage]{revtex4-2}
 \usepackage{amsmath, amssymb}
 \usepackage{graphicx}
-\usepackage{float}
+
 \usepackage{booktabs}
 \usepackage{xcolor}
 \usepackage{tcolorbox}
 \usepackage{hyperref}
 \usepackage{enumitem}
 \usepackage{physics}
-\usepackage{caption}
+
 \usepackage{bm}
 \usepackage{tikz}
 \usepackage{pgfplots}
@@ -20,89 +20,93 @@
 \usepackage{pgfmath}
 \usetikzlibrary{decorations.pathmorphing}
 \pgfplotsset{compat=1.18} % or version you have
-\usepackage{titlesec}
+
 \usepackage{ulem}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\renewcommand{\grqq}{``}
+
+
 
 
 \begin{document}
-\title{Revisiting the Æther:\\ From Einstein to the Vortex Fluid Paradigm}
-\author{Omar Iskandarani\footnote{\scriptsize This paper is not intended as a neutral historical review, but as a conceptual bridge—framing the Vortex Æther Model (VAM) as a contemporary realization of Einstein’s late æther philosophy. \textbf{Keywords:} Æther, Einstein, Vortex fluid model, Time dilation, Topological gravity, Field theory, Helmholtz, Maxwell, Kelvin, unified field theory}}
-\thanks{Independent Researcher, Groningen, The Netherlands\\
-        info@omariskandarani.com \\
-        ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961} \\
-        DOI: \href{https://doi.org/10.5281/zenodo.15669901}{10.5281/zenodo.15669901}}
-\date{\today}
-\maketitle
+    \title{Revisiting the Æther:\\ From Einstein to the Vortex Fluid Paradigm}
 
-\begin{abstract}
-This paper revisits the concept of the æther through Einstein’s post-1920 writings, culminating in a structured reinterpretation via the Vortex Æther Model (VAM). Contrary to the belief that Einstein abandoned the æther, we show that his later work restored it as a physically meaningful medium—devoid of mechanical motion but endowed with field-like properties essential for gravitation and inertia. We trace this shift from the 1905 rejection of the luminiferous æther to the 1924 Einstein–Cartan correspondence, emphasizing its continuity with modern field-theoretic frameworks.
+    \author{Omar Iskandarani}
+    \email{info@omariskandarani.com}
+    \affiliation{Independent Researcher, Groningen, The Netherlands}
+    \thanks{ORCID: \url{https://orcid.org/0009-0006-1686-3961}}
+    \thanks{DOI: \url{https://doi.org/10.5281/zenodo.16538780}}
+    \thanks{This paper is not intended as a neutral historical review, but as a conceptual bridge—framing the Vortex Æther Model (VAM) as a contemporary realization of Einstein’s late æther philosophy.}
 
-VAM builds on this foundation by modeling the æther as an incompressible, inviscid superfluid. Gravitation and inertia emerge from the quantized circulation of knotted vortex filaments, with vorticity replacing curvature as the physical substrate of gravitational effects. Conserved angular momentum gives rise to time dilation, inertial response, and mass-energy equivalence. We define an effective mass profile \( M_{\text{eff}}(r) = \int_0^r 4\pi r'^2 \rho_\text{\ae}^{(\text{energy})}(r') \, dr' \), derived from localized vortex energy, and introduce a swirl potential \( \Omega(r) = \frac{C_e}{r_c} e^{-r/r_c} \), which governs fluid-mediated gravitation via Bernoulli-like pressure gradients.
-
-Time dilation arises from tangential vortex flow as \( \frac{d\tau}{dt} = \sqrt{1 - \frac{v_\theta^2}{c^2}} \), with \( v_\theta(r) = \frac{\Gamma}{2\pi r} \), where \( \Gamma \) is the circulation quantum and \( v_\theta \) the local swirl velocity. This expression recovers relativistic time effects from fluid kinematics, without invoking curvature.
-
-This sets a conceptual and mathematical foundation for VAM, in which classical and quantum behavior emerge from topological fluid dynamics. The model distinguishes three temporal modes within the æther: \( \mathcal{N} \) (Æther-Time), \( \tau \) (Proper Time), and \( S(t) = \int \Omega(r)\, dt \) (Swirl Clock Phase), offering a layered ontology of temporality. For empirical benchmarking against general relativity, see the companion analysis in~\cite{VAM-3}.
-\end{abstract}
-
-\section{Introduction}
-\input{01_Introduction}
-
-\section{Reevaluating Einstein’s Supposed Rejection of the Æther}
-\input{02_Rejection_Æther}
-
-\section{Multimodal Time: The Ætheric Temporal Ontology}
-\input{03_MultimodalTime}
-
-\section{Connection to the Vortex Æther Model (VAM)}
-\input{04_ConnectionToVAM}
-
-\section{Historical Continuity and Outlook}
-\input{05_ConclusionOutlook}
-
-\appendix
-
-\section*{Appendix I: Helmholtz and the Foundations of Vortex Physics}
-\label{appendix:helmholtz}
-\addcontentsline{toc}{section}{Appendix I: Helmholtz on Vorticity}
-\input{A1_Helmholtz}
+    \date{\today}
 
 
-\section*{Appendix II: Lord Kelvin and the Knot-Æther Critique}
-\addcontentsline{toc}{section}{Appendix II: Lord Kelvin}
-\label{appendix:kelvin}
-\input{A2_Kelvin}
+    \vspace{1em}
+
+    \begin{abstract}
+    This paper revisits the concept of the æther through Einstein’s post-1920 writings, culminating in a structured reinterpretation via the Vortex Æther Model (VAM). Contrary to the belief that Einstein abandoned the æther, we show that his later work restored it as a physically meaningful medium—devoid of mechanical motion but endowed with field-like properties essential for gravitation and inertia. We trace this shift from the 1905 rejection of the luminiferous æther to the 1924 Einstein–Cartan correspondence, emphasizing its continuity with modern field-theoretic frameworks.
+
+    VAM builds on this foundation by modeling the æther as an incompressible, inviscid superfluid. Gravitation and inertia emerge from the quantized circulation of knotted vortex filaments, with vorticity replacing curvature as the physical substrate of gravitational effects. Conserved angular momentum gives rise to time dilation, inertial response, and mass-energy equivalence. We define an effective mass profile \( M_{\text{eff}}(r) = \int_0^r 4\pi r'^2 \rho_\text{\ae}^{(\text{energy})}(r') \, dr' \), derived from localized vortex energy, and introduce a swirl potential \( \Omega(r) = \frac{C_e}{r_c} e^{-r/r_c} \), which governs fluid-mediated gravitation via Bernoulli-like pressure gradients.
+
+    Time dilation arises from tangential vortex flow as \( \frac{d\tau}{dt} = \sqrt{1 - \frac{v_\theta^2}{c^2}} \), with \( v_\theta(r) = \frac{\Gamma}{2\pi r} \), where \( \Gamma \) is the circulation quantum and \( v_\theta \) the local swirl velocity. This expression recovers relativistic time effects from fluid kinematics, without invoking curvature.
+
+    This sets a conceptual and mathematical foundation for VAM, in which classical and quantum behavior emerge from topological fluid dynamics. The model distinguishes three temporal modes within the æther: \( \mathcal{N} \) (Æther-Time), \( \tau \) (Proper Time), and \( S(t) = \int \Omega(r)\, dt \) (Swirl Clock Phase), offering a layered ontology of temporality. For empirical benchmarking against general relativity, see the companion analysis in~\cite{VAM-3}.
+    \end{abstract}
+   \maketitle
+    \section{Introduction}\label{sec:introduction}
+    \input{01_Introduction}
+
+    \section{Reevaluating Einstein’s Supposed Rejection of the Æther}\label{sec:reevaluating-einsteins-supposed-rejection-of-the-ther}
+    \input{02_Rejection_Æther}
+
+    \section{Multimodal Time: The Ætheric Temporal Ontology}\label{sec:multimodal-time:-the-theric-temporal-ontology}
+    \input{03_MultimodalTime}
+
+    \section{Connection to the Vortex Æther Model (VAM)}\label{sec:connection_to_VAM}
+    \input{04_ConnectionToVAM}
+
+    \section{Historical Continuity and Outlook}\label{sec:historical-continuity-and-outlook}
+    \input{05_ConclusionOutlook}
+
+    \appendix
+
+        \section*{Appendix I: Helmholtz and the Foundations of Vortex Physics}
+        \addcontentsline{toc}{section}{Appendix I: Helmholtz on Vorticity}
+            \label{appendix:helmholtz}
+            \input{A1_Helmholtz}
 
 
-\section*{Appendix III: James Clerk Maxwell on the Æther and the Vortex Atom Theory}
-\addcontentsline{toc}{section}{Appendix III: James Clerk Maxwell on the Æther and the Vortex Atom Theory}
-\label{appendix:maxwell}
-\input{A3_Maxwell}
+        \section*{Appendix II: Lord Kelvin and the Knot-Æther Critique}
+        \addcontentsline{toc}{section}{Appendix II: Lord Kelvin}
+            \label{appendix:kelvin}
+            \input{A2_Kelvin}
 
-\section*{Appendix IV: Einstein on the Æther — Translated Quotes and VAM Equivalents}
-\addcontentsline{toc}{section}{Appendix IV: Einstein on the Æther}
-\label{appendix:einstein}
-\input{A4_Einstein}
 
-\section*{Appendix V: VAM Resolution of Einstein’s Final Æther Paradox}
-\addcontentsline{toc}{section}{Appendix V: VAM and the Final Æther Paradox}
-\label{appendix:final-aether}
-\input{A5_VAM}
+        \section*{Appendix III: James Clerk Maxwell on the Æther and the Vortex Atom Theory}
+        \addcontentsline{toc}{section}{Appendix III: James Clerk Maxwell on the Æther and the Vortex Atom Theory}
+            \label{appendix:maxwell}
+            \input{A3_Maxwell}
 
-\section{Simultaneity: From Light Pulses to Vortex Clocks}
-\input{A6_Simultaneity}
+        \section*{Appendix IV: Einstein on the Æther — Translated Quotes and VAM Equivalents}
+        \addcontentsline{toc}{section}{Appendix IV: Einstein on the Æther}
+            \label{appendix:einstein}
+            \input{A4_Einstein}
 
-\section*{Final Reflection: Æther Past and Future}
+        \section*{Appendix V: VAM Resolution of Einstein’s Final Æther Paradox}
+        \addcontentsline{toc}{section}{Appendix V: VAM and the Final Æther Paradox}
+            \label{appendix:final-aether}
+            \input{A5_VAM}
 
-    These appendices trace a conceptual lineage—beginning with Maxwell's mechanical æther as a carrier of field stresses, evolving through Kelvin's vision of atoms as knotted vortex rings, and reformulated by Einstein into a geometric substrate underlying spacetime itself. Each step preserved the core intuition: that empty space is not truly empty, but possesses structure, energy, and dynamical influence.
+        \section{Appendix VI: Simultaneity — From Light Pulses to Vortex Clocks}
+        \addcontentsline{toc}{section}{Appendix VI: Simultaneity — From Light Pulses to Vortex Clocks}
+            \label{appendix:Simultaneity}
+            \input{A6_Simultaneity}
 
-    The Vortex Æther Model (VAM) completes this lineage by merging the fluid and field paradigms into a unified topological framework. In VAM, the æther is no longer an abstract scaffolding or discarded relic, but a physically real medium: incompressible, inviscid, and threaded with quantized vorticity. Mass arises from rotational energy; gravity from swirl-induced pressure gradients; time from the internal phase of topological knots.
-
-    Where previous æther models lacked formal consistency or empirical validation, VAM draws on modern tools—fluid dynamics, knot theory, Hamiltonian flows, and high-precision measurement—to revisit the æther hypothesis with scientific rigor and predictive power.
-
-    Einstein redefined the æther without abandoning it. VAM takes the next step—restoring motion, structure, and causality to the medium beneath all physical law.
+        \section*{Final Reflection: Æther Past and Future}
+            These appendices trace a conceptual lineage—beginning with Maxwell's mechanical æther as a carrier of field stresses, evolving through Kelvin's vision of atoms as knotted vortex rings, and reformulated by Einstein into a geometric substrate underlying spacetime itself. Each step preserved the core intuition: that empty space is not truly empty, but possesses structure, energy, and dynamical influence.
+            The Vortex Æther Model (VAM) completes this lineage by merging the fluid and field paradigms into a unified topological framework. In VAM, the æther is no longer an abstract scaffolding or discarded relic, but a physically real medium: incompressible, inviscid, and threaded with quantized vorticity. Mass arises from rotational energy; gravity from swirl-induced pressure gradients; time from the internal phase of topological knots.
+            Where previous æther models lacked formal consistency or empirical validation, VAM draws on modern tools—fluid dynamics, knot theory, Hamiltonian flows, and high-precision measurement—to revisit the æther hypothesis with scientific rigor and predictive power.
+            Einstein redefined the æther without abandoning it. VAM takes the next step—restoring motion, structure, and causality to the medium beneath all physical law.
 
 
 

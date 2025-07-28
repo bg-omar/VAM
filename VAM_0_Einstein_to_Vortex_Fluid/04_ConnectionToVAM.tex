@@ -7,7 +7,77 @@ Key structural elements of VAM include:
     \item \textbf{A revised system of natural constants}, including $C_e$ (vortex boundary velocity) and $F^{\max}_{\text{\ae}}$ (maximum ætheric stress), defined and operationalized in the topological Lagrangian~\cite{VAM-14}.
 \end{itemize}
 
-\subsection*{VAM-Derived Expression for $\boldsymbol{G}$}
+Figure~\ref{fig:taxonomy} illustrates the classification flow based on topology, chirality, and tension within the swirl field framework.
+
+
+\begin{figure}[H]
+    \centering
+    \footnotesize
+    \scalebox{0.75}{
+        \begin{tikzpicture}[
+          box/.style = {draw, rounded corners, minimum width=2.0cm, minimum height=0.8cm, font=\small, align=center},
+          arrow/.style = {->, thick},   node distance=1.0cm and 1.5cm
+        ]
+            % Inputs
+            \node[box] (topology) {Knot Topology};
+            \node[box, right=of topology] (chirality) {Chirality};
+            \node[box, right=of chirality] (tension) {Tension};
+
+            % Swirl coupling
+            \node[box, below=of chirality, minimum width=5.5cm] (coupling) {Swirl Coupling Condition};
+
+            % Gravitational response
+            \node[box, below=of coupling] (grav) {Gravitational Response};
+
+            % Gravitational classes
+            \node[box, below left=1.3cm and 1.5cm of grav] (matter) {Chiral\\Leptons \& Quarks};
+            \node[box, below=2cm of grav] (boson) {Achiral + No Tension\\\(\rightarrow\) Bosons};
+            \node[box, below right=1.3cm and 1.7cm of grav] (dark) {Achiral + Tension\\\(\rightarrow\) Dark Energy Knots};
+
+            % Subclasses
+            \node[box, below=of matter, xshift=-1.1cm] (leptons) {Leptons\\(e\textsuperscript{--} = T(2,3))};
+            \node[box, below=of matter, xshift=+1.0cm] (quarks) {Quarks\\(6\textsubscript{2}, 7\textsubscript{4}, 8\textsubscript{19})};
+
+            \node[box, below=of boson, xshift=-2.1cm] (photon) {Photon\\(unknot)};
+            \node[box, below=of boson] (gluon) {Gluon\\(Hopf link)};
+            \node[box, below=of boson, xshift=+2.3cm] (zboson) {Z\textsuperscript{0}\\(neutral loop)};
+
+            \node[box, below=of dark] (darkex) {Example: \(4_{1}, 8_{17}\)\\ (achiral hyperbolic)};
+
+            % Arrows to coupling
+            \draw[arrow] (topology.south) -- ++(0,-0.5) -| (coupling.north west);
+            \draw[arrow] (chirality.south) -- (coupling.north);
+            \draw[arrow] (tension.south) -- ++(0,-0.5) -| (coupling.north east);
+
+            % Arrows down flow
+            \draw[arrow] (coupling.south) -- (grav.north);
+            \draw[arrow] (grav.south) -- (matter.north);
+            \draw[arrow] (grav.south) -- (boson.north);
+            \draw[arrow] (grav.south) -- (dark.north);
+
+            % Particle branches
+            \draw[arrow] (matter.south) -- (leptons.north);
+            \draw[arrow] (matter.south) -- (quarks.north);
+
+            \draw[arrow] (boson.south) -- (photon.north);
+            \draw[arrow] (boson.south) -- (gluon.north);
+            \draw[arrow] (boson.south) -- (zboson.north);
+
+            \draw[arrow] (dark.south) -- (darkex.north);
+        \end{tikzpicture}
+    }
+    \caption{Knot Classification by Swirl Coupling.
+        The flowchart visualizes how knot topology, chirality, and curvature tension determine gravitational behavior, and how this leads to specific particle subclasses:
+            \\ \textbf{Chiral knots} align with swirl fields and form matter: \textbf{leptons} (torus knots) and \textbf{quarks} (hyperbolic knots).
+            \\ \textbf{Achiral, tensionless} structures like unknots and Hopf links are \textbf{bosons}, passively guided by swirl tubes.
+            \\ \textbf{Achiral knots with tension} are expelled, forming \textbf{dark energy} candidates.
+    }\label{fig:taxonomy}
+\end{figure}
+
+
+
+
+\subsection*[VAM-Derived Expression for G]{VAM-Derived Expression for G}
 
 One of the notable results in VAM is a derivation of the gravitational constant in terms of ætheric and topological parameters~\cite{VAM-2, VAM-13, VAM-14}. Rewriting the expression in dimensionally transparent form:
 

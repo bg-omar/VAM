@@ -25,7 +25,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" id="6f2a8139-c825-4497-876b-70e1a130c5c3" name="Changes" comment="Add README and update run configuration files; include project details and rename configurations for clarity" />
+    <list default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" id="6f2a8139-c825-4497-876b-70e1a130c5c3" name="Changes" comment="Update workspace configuration: rename run configurations for clarity and adjust settings for improved usability">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="false" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,6 +84,11 @@
   <component name="ProjectId" id="2zPT543xrOdyBDBtIng3qH9d2ET" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
+    <option name="hideEmptyMiddlePackages" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
+    <option name="showLibraryContents" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
@@ -507,6 +514,10 @@
       <workItem from="1753430562842" duration="5809000" />
       <workItem from="1753512374189" duration="2256000" />
       <workItem from="1753532683171" duration="488000" />
+      <workItem from="1753561413141" duration="381000" />
+      <workItem from="1753645304473" duration="640000" />
+      <workItem from="1753689739036" duration="1313000" />
+      <workItem from="1753707792522" duration="196000" />
     </task>
     <task id="LOCAL-00001" summary="Made MASTER paper, VAM4, VAM12.&#10;Added Knot images">
       <created>1751925083082</created>
@@ -648,7 +659,14 @@
       <option name="project" value="LOCAL" />
       <updated>1753515941976</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Update workspace configuration: rename run configurations for clarity and adjust settings for improved usability">
+      <created>1753561628244</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1753561628244</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -683,7 +701,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Made MASTER paper, VAM4, VAM12.&#10;Added Knot images" />
     <MESSAGE value="Enhance LaTeX documents by adding automatic figure scaling, improving figure layouts, and refining captions for clarity in vortex dynamics illustrations." />
@@ -704,7 +721,8 @@
     <MESSAGE value="Add neon knot visualization; implement new plotting techniques and enhance UI with interactive effects" />
     <MESSAGE value="Refactor file structure by renaming scripts for clarity; add new experimental validation appendix and update LaTeX documents for improved organization and readability" />
     <MESSAGE value="Add README and update run configuration files; include project details and rename configurations for clarity" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add README and update run configuration files; include project details and rename configurations for clarity" />
+    <MESSAGE value="Update workspace configuration: rename run configurations for clarity and adjust settings for improved usability" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update workspace configuration: rename run configurations for clarity and adjust settings for improved usability" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
