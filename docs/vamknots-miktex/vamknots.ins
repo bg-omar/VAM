@@ -1,0 +1,11 @@
+%====================================================================
+% vamknots.ins  —  DocStrip driver for the VAM knots package
+%====================================================================
+
+\def\batchfile{vamknots.ins}      % this filename
+\input docstrip.tex               % load DocStrip
+
+% Extract the “package” guard from the .dtx into .sty
+\generate{\file{vamknots.sty}{\from{vamknots.dtx}{package}}}
+
+\endbatchfile                      % done

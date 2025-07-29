@@ -1,0 +1,102 @@
+%====================================================================
+% vamknots.dtx — Documentation & code for the VAM knots package
+%====================================================================
+
+%<*driver>
+\input docstrip.tex
+\usedir{.}
+\generate{\file{vamknots.sty}{\from{vamknots.dtx}{package}}}
+\endbatchfile
+%</driver>
+
+%------------------------------------------------------------------------
+% \title{The \textsf{vamknots} package}
+% \author{Omar Iskandarani}
+% \date{2025/07/29}
+% \maketitle
+%
+% \section{Introduction}
+% This package provides LaTeX macros to render VAM vortex‑knot diagrams
+% and the three Reidemeister moves, with styling for U(1), SU(2), and SU(3).
+%
+% \begin{macro}{\DrawKnot}
+%   Draws a named knot (e.g.\ “trefoil”, “figureeight”), with
+%   optional group styling.
+% \end{macro}
+%
+% \begin{macro}{\ReidemeisterI}
+%   Renders Reidemeister Move I, etc.
+% \end{macro}
+%
+% \StopEventually{}  % End of documentation portion
+
+%<*package>
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{vamknots}[2025/07/29 VAM knot‑viz library]
+
+% Load dependencies
+\RequirePackage{tikz}
+\usetikzlibrary{knots,decorations.pathreplacing}
+\RequirePackage{ifthen}
+
+%— Group style keys
+\pgfkeys{
+  /VAMgroup/.is family,
+  /VAMgroup,
+    default/.style = {color=black, line width=1pt},
+    U1/.style      = {color=black, line width=0.8pt},
+    SU2/.style     = {color=blue,  ->,    line width=1pt},
+    SU3/.style     = {color=red,   -,     line width=1.2pt},
+}
+
+%— Draw a named knot
+\newcommand{\DrawKnot}[2][]{%
+  \begingroup
+    \pgfkeys{/VAMgroup, #1}%
+    \begin{tikzpicture}[baseline=(current bounding box.center)]
+      \strand[/VAMgroup/default];
+      \ifthenelse{\equal{#2}{trefoil}}{%
+        % insert trefoil path here...
+        \strand[knot];
+      }{}
+      \ifthenelse{\equal{#2}{figureeight}}{%
+        % insert figure‑8 path here...
+        \strand[knot];
+      }{}
+    \end{tikzpicture}%
+  \endgroup
+}
+
+%— Reidemeister moves
+\newcommand{\ReidemeisterI}[1][]{%
+  \begin{tikzpicture}[#1]
+    \draw (0,0) to[out=90,in=180] (1,1) to[out=0,in=90] (2,0);
+    \node at (3,0.5) {$\longleftrightarrow$};
+    \draw (4,0) -- (6,0);
+  \end{tikzpicture}%
+}
+\newcommand{\ReidemeisterII}[1][]{%
+  \begin{tikzpicture}[#1]
+    % two crossing strands ↔ two parallels
+    % … code …
+  \end{tikzpicture}%
+}
+\newcommand{\ReidemeisterIII}[1][]{%
+  \begin{tikzpicture}[#1]
+    % three-strand slide
+    % … code …
+  \end{tikzpicture}%
+}
+
+% Convenience wrappers
+\newcommand{\Knot}[2][]{\DrawKnot[group=#1]{#2}}
+\newcommand{\Rmove}[2][]{%
+  \ifthenelse{\equal{#2}{I}}{\ReidemeisterI[#1]}{}%
+  \ifthenelse{\equal{#2}{II}}{\ReidemeisterII[#1]}{}%
+  \ifthenelse{\equal{#2}{III}}{\ReidemeisterIII[#1]}{}%
+}
+
+\endinput
+%</package>
+%------------------------------------------------------------------------
+% \end{document}
