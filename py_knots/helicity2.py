@@ -4,8 +4,20 @@ import numpy as np
 
 # === Load Cleaned Fourier Series ===
 def load_fourier_series_clean(filename):
-    data = np.loadtxt(filename)
+    data = []
+    with open(filename) as f:
+        for line in f:
+            if line.strip().startswith('%') or not line.strip():
+                continue
+            parts = line.split()
+            if len(parts) == 6:
+                data.append([float(x) for x in parts])
+            if len(parts) != 6:
+                print(f"[WARN] Skipped malformed line: {line.strip()}")
+
+    data = np.array(data)
     return data[:, 0], data[:, 1], data[:, 2], data[:, 3], data[:, 4], data[:, 5]
+
 
 # === Knot Reconstruction ===
 def reconstruct_knot(a_x, b_x, a_y, b_y, a_z, b_z, N=1000):
@@ -66,7 +78,8 @@ knot_files = {
 
 results = {}
 
-for label, file in knot_files.items():
+for i, (label, file) in enumerate(knot_files.items(), 1):
+    print(f"\n[{i}/{len(knot_files)}] Processing: {file}")
     a_x, b_x, a_y, b_y, a_z, b_z = load_fourier_series_clean(file)
     x, y, z = reconstruct_knot(a_x, b_x, a_y, b_y, a_z, b_z)
     velocity = compute_biot_savart_velocity(x, y, z, grid_points)
@@ -78,6 +91,9 @@ for label, file in knot_files.items():
     H_mass = np.sum(np.linalg.norm(w_sub, axis=1)**2 * r_sq)
     a_mu = 0.5 * (H_charge / H_mass - 1)
     results[label] = {"H_charge": H_charge, "H_mass": H_mass, "a_mu": a_mu}
+    print(f"{label}:\n  H_charge = {H_charge:.6f}\n  H_mass = {H_mass:.6f}\n  H_ratio = {H_charge/H_mass:.6f} → a_mu^VAM = {a_mu:.8f}")
+
+
 
 # === Print Results ===
 for k, v in results.items():
