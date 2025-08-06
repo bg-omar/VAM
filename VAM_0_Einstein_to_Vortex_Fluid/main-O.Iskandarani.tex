@@ -1,0 +1,276 @@
+%=================================================================
+\documentclass[entropy,article,submit,pdftex,oneauthor]{Definitions/mdpi}
+%=================================================================
+
+%=================================================================
+% MDPI internal commands - do not modify
+\firstpage{1} 
+\makeatletter 
+\setcounter{page}{\@firstpage} 
+\makeatother
+\pubvolume{1}
+\issuenum{1}
+\articlenumber{0}
+\pubyear{2025}
+\copyrightyear{2025}
+%\externaleditor{Firstname Lastname} % More than 1 editor, please add `` and '' before the last editor name
+\datereceived{ } 
+\daterevised{ } % Comment out if no revised date
+\dateaccepted{ } 
+\datepublished{ } 
+%\datecorrected{} % For corrected papers: "Corrected: XXX" date in the original paper.
+%\dateretracted{} % For retracted papers: "Retracted: XXX" date in the original paper.
+\hreflink{https://doi.org/10.5281/zenodo.16616699} % If needed use \linebreak
+%\doinum{}
+%\pdfoutput=1 % Uncommented for upload to arXiv.org
+%\CorrStatement{yes}  % For updates
+%\longauthorlist{yes} % For many authors that exceed the left citation part
+
+%=================================================================
+% Add packages and commands here. The following packages are loaded in our class file: fontenc, inputenc, calc, indentfirst, fancyhdr, graphicx, epstopdf, lastpage, ifthen, float, amsmath, amssymb, lineno, setspace, enumitem, mathpazo, booktabs, titlesec, etoolbox, tabto, xcolor, colortbl, soul, multirow, microtype, tikz, totcount, changepage, attrib, upgreek, array, tabularx, pbox, ragged2e, tocloft, marginnote, marginfix, enotez, amsthm, natbib, hyperref, cleveref, scrextend, url, geometry, newfloat, caption, draftwatermark, seqsplit
+% cleveref: load \crefname definitions after \begin{document}
+
+\usepackage{amsmath, amssymb}
+\usepackage{tcolorbox}
+\usepackage{physics}
+\usepackage{bm}
+\usetikzlibrary{knots,intersections,decorations.pathreplacing,3d,calc,arrows.meta,positioning,decorations.pathmorphing}
+\usepackage{pgfmath}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{lmodern}
+\usepackage{mathtools}
+\usepackage{ulem}
+
+%=================================================================
+% Please use the following mathematics environments: Theorem, Lemma, Corollary, Proposition, Characterization, Property, Problem, Example, ExamplesandDefinitions, Hypothesis, Remark, Definition, Notation, Assumption
+%% For proofs, please use the proof environment (the amsthm package is loaded by the MDPI class).
+
+%=================================================================
+% Full title of the paper (Capitalized)
+\Title{REVISITING THE ÆTHER:\\ FROM EINSTEIN TO THE VORTEX FLUID PARADIGM}
+\TitleCitation{Revisiting the Æther}
+\newcommand{\orcidauthorA}{0009-0006-1686-3961}
+\Author{Omar Iskandarani $^{1}$\orcidA{}}
+\AuthorNames{Omar Iskandarani}
+\AuthorCitation{Iskandarani, O.}
+
+
+% MDPI internal command: Authors, for metadata in PDF
+\AuthorNames{Firstname Lastname, Firstname Lastname and Firstname Lastname}
+
+
+% Affiliations / Addresses (Add [1] after \address if there is only one affiliation.)
+\address{%
+$^{1}$ \quad Independent Researcher, Groningen, The Netherlands;  info@omariskandarani.com}
+
+% Contact information of the corresponding author
+\corres{Correspondence: info@omariskandarani.com}
+
+
+% Current address and/or shared authorship
+%\firstnote{Current address: Affiliation.}  
+% Current address should not be the same as any items in the Affiliation section.
+
+%\secondnote{These authors contributed equally to this work.}
+% The commands \thirdnote{} till \eighthnote{} are available for further notes.
+
+%\simplesumm{} % Simple summary
+
+%\conference{} % An extended version of a conference paper
+
+% Abstract (Do not insert blank lines, i.e. \\) 
+\abstract{This paper reexamines the æther concept through Einstein’s later writings and proposes its modern realization via the Vortex Æther Model (VAM). Contrary to the widespread belief that Einstein discarded the æther, his post-1920 perspective envisioned space as a structured, non-mechanical medium—a view that VAM formalizes as a quantized, incompressible superfluid. Within this framework, gravitational and inertial effects emerge from the circulation of vortex filaments, replacing spacetime curvature with local swirl density and rotational energy. VAM introduces a layered temporal ontology—comprising æther time, proper time, and internal swirl clocks—through which time dilation, redshift, and frame-dragging effects are modeled as consequences of vorticity. Mass is described as localized topological tension, while gravitational attraction arises from a swirl-induced Bernoulli pressure gradient. These mechanisms lead to distinct experimental predictions, particularly in clock behavior and vorticity-induced fields, which are testable via analog experiments in superfluid systems and optical waveguides. We conclude that the æther should not be regarded as an obsolete notion, but as a structured, dynamic substrate—reviving Einstein’s later vision in a mathematically rigorous and empirically testable framework that unifies gravity, quantum structure, and cosmology.
+}
+
+% Keywords
+\keyword{emergent gravity; topological fluid dynamics; analog gravity; Vortex Æther Model; general relativity; vortex fluid; time dilation; Einstein’s æther; structured space}
+
+
+
+% The fields PACS, MSC, and JEL may be left empty or commented out if not applicable
+%\PACS{J0101}
+%\MSC{}
+%\JEL{}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\section{Introduction}\label{sec:introduction}
+	\input{sections/01_Introduction}
+
+
+	\section{Reevaluating Einstein’s Supposed Rejection of the Æther}\label{sec:reevaluating-einsteins-supposed-rejection-of-the-ther}
+	\input{sections/02_Rejection_Æther}
+
+	\section{Multimodal Time: The Ætheric Temporal Ontology}\label{sec:multimodal-time:-the-theric-temporal-ontology}
+	\input{sections/03_MultimodalTime}
+
+	\section{Connection to the Vortex Æther Model (VAM)}\label{sec:connection_to_VAM}
+	\input{sections/04_ConnectionToVAM}
+
+	\section{Historical Continuity and Outlook}\label{sec:historical-continuity-and-outlook}
+	\input{sections/05_ConclusionOutlook}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{6pt} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\authorcontributions{
+		Conceptualization, O.I.; methodology, O.I.; software, O.I.; validation, O.I.; formal analysis, O.I.; investigation, O.I.; resources, O.I.; data curation, O.I.; writing---original draft preparation, O.I.; writing---review and editing, O.I.; visualization, O.I.; supervision, O.I.; project administration, O.I. The author has read and agreed to the published version of the manuscript. The Vortex Æther Model (VAM) has been developed continuously since 2014, with public drafts and early derivations accessible via \href{https://docs.google.com/document/d/1ILtqum7WZuvKa3tFXKdw666gtKORZ4X8WGsonBCLAqg}{Google Docs} and the \href{https://github.com/bg-omar/VAM}{VAM GitHub repository}.
+	}
+
+	\funding{
+		This research received no external funding. The APC was funded by the author.
+	}
+
+	\institutionalreview{Not applicable.}
+
+	\informedconsent{Not applicable.}
+
+	\dataavailability{
+		All data supporting the findings of this study are contained within the article and its cited references. No additional datasets were generated.
+	}
+
+	\acknowledgments{
+		The author wishes to express sincere gratitude to M. Bakker for her steadfast emotional support and intellectual companionship throughout the development of this work. Though not formally trained in physics or mathematics, her persistent engagement with the Vortex Æther Model (VAM) provided a unique and invaluable perspective. Her thoughtful questions and intuitive skepticism toward conventional quantum interpretations served as a continuous reminder of the importance of conceptual clarity. The evolution of this work owes much to her patience, insight, and enduring encouragement.
+
+		The author also acknowledges the assistance of OpenAI’s ChatGPT (GPT-4o, August 2025 release), which was employed to support LaTeX formatting, TikZ diagram refinement, and stylistic editing. All AI-assisted content has been critically reviewed, revised, and approved by the author, who accepts full responsibility for the final manuscript.
+	}
+
+
+	\supplementary{
+		Additional materials and versioned VAM components are hosted at:
+		\url{https://github.com/bg-omar/VAM} (main repository)
+		\url{https://github.com/bg-omar/VAMcore} (simulation library)
+
+		For previous versions or related papers in the VAM series, see:
+		\url{https://zenodo.org/communities/VAM} (Zenodo community)
+		or DOI-linked records from the Zenodo concept DOI: \href{https://doi.org/10.5281/zenodo.1516616699}{10.5281/zenodo.16616699}.
+	}
+
+
+
+	\conflictsofinterest{
+		The author declares no conflicts of interest. The funders had no role in the design of the study; in the collection, analyses, or interpretation of data; in the writing of the manuscript; or in the decision to publish the results.
+	}
+
+	\abbreviations{Abbreviations}{
+		The following abbreviations are used in this manuscript:
+		\\
+
+		\noindent
+		\begin{tabular}{@{}ll}
+			VAM & Vortex Æther Model \\
+			GR & General Relativity \\
+			SR & Special Relativity \\
+			EM & Electromagnetism \\
+			QFT & Quantum Field Theory \\
+			QED & Quantum Electrodynamics \\
+			SM & Standard Model \\
+			BEC & Bose–Einstein Condensate \\
+			MZI & Mach–Zehnder Interferometer \\
+			CMB & Cosmic Microwave Background \\
+			IR & Infrared \\
+			PDF & Probability Density Function \\
+			LHS & Left-Hand Side \\
+			RHS & Right-Hand Side \\
+			DOI & Digital Object Identifier \\
+			GPT & Generative Pre-trained Transformer \\
+			TLA & Three-Letter Acronym \\
+			LD & Linear Dichroism \\
+			MDPI & Multidisciplinary Digital Publishing Institute \\
+		\end{tabular}
+	}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Optional
+\appendixtitles{no} % Leave argument "no" if all appendix headings stay EMPTY (then no dot is printed after "Appendix A"). If the appendix sections contain a heading then change the argument to "yes".
+\appendixstart
+
+	\appendix
+
+	\section*{Appendix I: Helmholtz and the Foundations of Vortex Physics}
+	\addcontentsline{toc}{section}{Appendix I: Helmholtz on Vorticity}
+	\label{appendix:helmholtz}
+	\input{sections/A1_Helmholtz}
+
+
+	\section*{Appendix II: Lord Kelvin and the Knot-Æther Critique}
+	\addcontentsline{toc}{section}{Appendix II: Lord Kelvin}
+	\label{appendix:kelvin}
+	\input{sections/A2_Kelvin}
+
+
+	\section*{Appendix III: James Clerk Maxwell on the Æther and the Vortex Atom Theory}
+	\addcontentsline{toc}{section}{Appendix III: James Clerk Maxwell on the Æther and the Vortex Atom Theory}
+	\label{appendix:maxwell}
+	\input{sections/A3_Maxwell}
+
+	\section*{Appendix IV: Einstein on the Æther — Translated Quotes and VAM Equivalents}
+	\addcontentsline{toc}{section}{Appendix IV: Einstein on the Æther}
+	\label{appendix:einstein}
+	\input{sections/A4_Einstein}
+
+	\section*{Appendix V: VAM Resolution of Einstein’s Final Æther Paradox}
+	\addcontentsline{toc}{section}{Appendix V: VAM and the Final Æther Paradox}
+	\label{appendix:final-aether}
+	\input{sections/A5_VAM}
+
+
+	\section*{Final Reflection: Æther Past and Future}
+	These appendices trace a conceptual lineage—beginning with Maxwell's mechanical æther as a carrier of field stresses, evolving through Kelvin's vision of atoms as knotted vortex rings, and reformulated by Einstein into a geometric substrate underlying spacetime itself. Each step preserved the core intuition: that empty space is not truly empty, but possesses structure, energy, and dynamical influence.
+	The Vortex Æther Model (VAM) completes this lineage by merging the fluid and field paradigms into a unified topological framework. In VAM, the æther is no longer an abstract scaffolding or discarded relic, but a physically real medium: incompressible, inviscid, and threaded with quantized vorticity. Mass arises from rotational energy; gravity from swirl-induced pressure gradients; time from the internal phase of topological knots.
+	Where previous æther models lacked formal consistency or empirical validation, VAM draws on modern tools—fluid dynamics, knot theory, Hamiltonian flows, and high-precision measurement—to revisit the æther hypothesis with scientific rigor and predictive power.
+	Einstein redefined the æther without abandoning it. VAM takes the next step—restoring motion, structure, and causality to the medium beneath all physical law.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\isPreprints{}{% This command is only used for ``preprints''.
+\begin{adjustwidth}{-\extralength}{0cm}
+%} % If the paper is ``preprints'', please uncomment this parenthesis.
+%\printendnotes[custom] % Un-comment to print a list of endnotes
+
+\reftitle{References}
+
+% Please provide either the correct journal abbreviation (e.g. according to the “List of Title Word Abbreviations” http://www.issn.org/services/online-services/access-to-the-ltwa/) or the full name of the journal.
+% Citations and References in Supplementary files are permitted provided that they also appear in the reference list here. 
+
+%=====================================
+% References, variant A: external bibliography
+%=====================================
+\bibliography{references}
+
+% If authors have biography, please use the format below
+%\section*{Short Biography of Authors}
+%\bio
+%{\raisebox{-0.35cm}{\includegraphics[width=3.5cm,height=5.3cm,clip,keepaspectratio]{Definitions/author1.pdf}}}
+%{\textbf{Firstname Lastname} Biography of first author}
+%
+%\bio
+%{\raisebox{-0.35cm}{\includegraphics[width=3.5cm,height=5.3cm,clip,keepaspectratio]{Definitions/author2.jpg}}}
+%{\textbf{Firstname Lastname} Biography of second author}
+
+% For the MDPI journals use author-date citation, please follow the formatting guidelines on http://www.mdpi.com/authors/references
+% To cite two works by the same author: \citeauthor{ref-journal-1a} (\citeyear{ref-journal-1a}, \citeyear{ref-journal-1b}). This produces: Whittaker (1967, 1975)
+% To cite two works by the same author with specific pages: \citeauthor{ref-journal-3a} (\citeyear{ref-journal-3a}, p. 328; \citeyear{ref-journal-3b}, p.475). This produces: Wong (1999, p. 328; 2000, p. 475)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% for journal Sci
+%\reviewreports{\\
+%Reviewer 1 comments and authors’ response\\
+%Reviewer 2 comments and authors’ response\\
+%Reviewer 3 comments and authors’ response
+%}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\PublishersNote{}
+%\isPreprints{}{% This command is only used for ``preprints''.
+\end{adjustwidth}
+%} % If the paper is ``preprints'', please uncomment this parenthesis.
+\end{document}
+

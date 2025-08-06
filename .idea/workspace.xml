@@ -25,91 +25,22 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f2a8139-c825-4497-876b-70e1a130c5c3" name="Changes" comment="Refactor document structure: rename LaTeX files for consistency, update main file path in run configuration, and enhance README with detailed compilation instructions and project overview.">
-      <change afterPath="$PROJECT_DIR$/VAM_6_Knotted_Gauge_Fields/knots_def.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM_8_MASTER_Paper/Masses_Topology.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/classify_particles.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.12a_1202.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.12a_1202z6.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.15331.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.1_1.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.3_1.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.3_1p.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.3_1u.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.4_1.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.4_1d.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.4_1p.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.4_1z.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.5_1.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.5_1p.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.5_1u.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.5_2.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.5_2d.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.5_2r.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.6_1.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.6_2.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.6_2d.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.6_2p.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.6_3d.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.6_3z.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.7_1.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.7_1p.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.7_2.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.7_2d.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.7_2r.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.7_3.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.7_3d.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.7_4.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.7_5.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.7_5d.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.7_6d.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.7_6s.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.7_7d.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.8_1.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.8_10s.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.8_11.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.8_11d.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.8_12d.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.8_12z.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.8_13d.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.8_13p.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.8_14d.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.8_14r.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.8_15.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.8_15d.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.8_15p.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.8_16.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.8_17.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.8_17.short" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.8_18.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.8_18z.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.8_19t.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.8_19u.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.8_1d.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.8_2.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.8_20r.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.8_21d.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.8_21p.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.8_21r.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.8_2d.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.8_3d.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.8_3z.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.8_4d.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.8_5.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.8_6.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.8_6p.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.8_7d.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.8_7s.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.8_8d.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/knot.8_9d.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/ALL/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py_knots/FourierSeriesFromKnotPoints.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="6f2a8139-c825-4497-876b-70e1a130c5c3" name="Changes" comment="Add new Fourier series files for various knots and update data loading in helicity2.py">
+      <change afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/editors1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/editors2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/editors3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/main-O.Iskandarani.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/main.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/main.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_8_MASTER_Paper/MoleculeWeight.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_8_MASTER_Paper/MoleculeWeight.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py_knots/helicity2.py" beforeDir="false" afterPath="$PROJECT_DIR$/py_knots/helicity2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/Cover_Letter_Iskandarani.txt" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/Cover_Letter_Iskandarani.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/O.Iskandarani_Einstein_To_VAM.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/figures/plot_OntologyOfMass.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/figures/plot_OntologyOfMass.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/figures/plot_OntologyTimeWesternScience.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/figures/plot_OntologyTimeWesternScience.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/figures/plot_SimultaneityTheories.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/figures/plot_SimultaneityTheories.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/figures/plot_WaveParticle.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/figures/plot_WaveParticle.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/references.bib" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/references.bib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/sections/01_Introduction.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/sections/01_Introduction.tex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="false" />
@@ -206,6 +137,8 @@
     &quot;BibTeX.VAM_15_Quantum_Gravity bibliography.executor&quot;: &quot;Run&quot;,
     &quot;BibTeX.Warpdrive bibliography.executor&quot;: &quot;Run&quot;,
     &quot;BibTeX.appendix_QuantizationOfVAM bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.main-O.Iskandarani bibliography.executor&quot;: &quot;Run&quot;,
+    &quot;BibTeX.template bibliography.executor&quot;: &quot;Run&quot;,
     &quot;CMake Application.bind.executor&quot;: &quot;Run&quot;,
     &quot;CMake Application.build.executor&quot;: &quot;Run&quot;,
     &quot;CMake Application.vamcore.executor&quot;: &quot;Run&quot;,
@@ -252,8 +185,10 @@
     &quot;LaTeX.VAM_framework.executor&quot;: &quot;Run&quot;,
     &quot;LaTeX.Warpdrive.executor&quot;: &quot;Run&quot;,
     &quot;LaTeX.appendix_QuantizationOfVAM.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.main-O.Iskandarani.executor&quot;: &quot;Run&quot;,
     &quot;LaTeX.master-formula.executor&quot;: &quot;Run&quot;,
     &quot;LaTeX.notebook.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.template.executor&quot;: &quot;Run&quot;,
     &quot;LaTeX.testknot.executor&quot;: &quot;Run&quot;,
     &quot;LaTeX.vam_mass_comparison_colored.executor&quot;: &quot;Run&quot;,
     &quot;LaTeX.vam_mass_dotmarker_postfix.executor&quot;: &quot;Run&quot;,
@@ -322,7 +257,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/workspace/projects/VAM/py_knots/ALL&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/workspace/projects/VAM/VAM_0_Einstein_to_Vortex_Fluid&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -337,8 +272,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\workspace\projects\VAM\py_knots\ALL" />
       <recent name="C:\workspace\projects\VAM\VAM_0_Einstein_to_Vortex_Fluid" />
+      <recent name="C:\workspace\projects\VAM\py_knots\ALL" />
       <recent name="C:\workspace\projects\VAM\VAM_Shorts" />
       <recent name="C:\workspace\projects\VAM\VAM_Shorts\figures" />
       <recent name="C:\workspace\solo_projects\VAM\VAM_Shorts" />
@@ -351,7 +286,19 @@
       <recent name="C:\workspace\projects\VAM\VAM_Experiments" />
     </key>
   </component>
-  <component name="RunManager" selected="BibTeX.VAM-14-Topological_Fluid_Dynamics_Lagrangian bibliography">
+  <component name="RunManager" selected="BibTeX.VAM-16-Quantum_Computing_Blueprint bibliography">
+    <configuration default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler />
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file />
+        <aux-dir />
+        <latex-distribution>PROJECT_SDK</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
     <configuration default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
@@ -376,6 +323,30 @@
         <compiler-arguments />
         <envs />
         <main-file>$PROJECT_DIR$/VAM_16_QuantumComputing/VAM-16-Quantum_Computing_Blueprint.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
+        <latex-distribution>MIKTEX</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration name="main-O.Iskandarani bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler>BIBTEX</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/main-O.Iskandarani.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
+        <latex-distribution>MIKTEX</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration name="template bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler>BIBTEX</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file />
         <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
         <latex-distribution>MIKTEX</latex-distribution>
       </texify-bibtex>
@@ -547,6 +518,8 @@
       <item itemvalue="BibTeX.EXP_Warpdrive" />
       <item itemvalue="BibTeX.VAM-17.1" />
       <item itemvalue="BibTeX.VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm bibliography" />
+      <item itemvalue="BibTeX.main-O.Iskandarani bibliography" />
+      <item itemvalue="BibTeX.template bibliography" />
       <item itemvalue="LaTeX.VAM-17.1_PhotonVortex" />
       <item itemvalue="LaTeX.VAM-17.2_OnTheVortexInterpretationOfKerrGeometryInTheVortexÆtherModel" />
       <item itemvalue="LaTeX.Appendix_X-filesExplanationsFoundationalPhysicsAnomalies" />
@@ -554,26 +527,17 @@
       <item itemvalue="LaTeX.7-Philosophical_Depth_Companion" />
       <item itemvalue="LaTeX.VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="LaTeX.VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm" />
-        <item itemvalue="LaTeX.VAM-17.1_PhotonVortex" />
-        <item itemvalue="LaTeX.VAM-17.2_OnTheVortexInterpretationOfKerrGeometryInTheVortexÆtherModel" />
-        <item itemvalue="LaTeX.Appendix_X-filesExplanationsFoundationalPhysicsAnomalies" />
-        <item itemvalue="LaTeX.7-Philosophical_Depth_Companion" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-PY-251.26927.90" />
-        <option value="bundled-python-sdk-41e8cd69c857-64d779b69b7a-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.26927.90" />
+        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-PY-252.23892.439" />
+        <option value="bundled-python-sdk-b3ae9b5d7125-f0eec537fc84-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.23892.439" />
       </set>
     </attachedChunks>
   </component>
   <component name="TaskManager">
-    <task id="Default" summary="Default task">
+    <task active="true" id="Default" summary="Default task">
       <changelist id="6f2a8139-c825-4497-876b-70e1a130c5c3" name="Changes" comment="" />
       <created>1751631523297</created>
       <option name="number" value="Default" />
@@ -652,6 +616,9 @@
       <workItem from="1753902344916" duration="709000" />
       <workItem from="1753948237388" duration="98000" />
       <workItem from="1753961761838" duration="1661000" />
+      <workItem from="1753974277020" duration="266000" />
+      <workItem from="1754327401426" duration="10743000" />
+      <workItem from="1754497897810" duration="362000" />
     </task>
     <task id="LOCAL-00001" summary="Made MASTER paper, VAM4, VAM12.&#10;Added Knot images">
       <created>1751925083082</created>
@@ -814,7 +781,14 @@
       <option name="project" value="LOCAL" />
       <updated>1753834613290</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Add new Fourier series files for various knots and update data loading in helicity2.py">
+      <created>1753974197798</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1753974197798</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -872,7 +846,8 @@
     <MESSAGE value="Update workspace configuration: rename run configurations for clarity and adjust settings for improved usability" />
     <MESSAGE value="Update workspace configuration: add README file and adjust run configurations for improved clarity and usability" />
     <MESSAGE value="Refactor document structure: rename LaTeX files for consistency, update main file path in run configuration, and enhance README with detailed compilation instructions and project overview." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor document structure: rename LaTeX files for consistency, update main file path in run configuration, and enhance README with detailed compilation instructions and project overview." />
+    <MESSAGE value="Add new Fourier series files for various knots and update data loading in helicity2.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add new Fourier series files for various knots and update data loading in helicity2.py" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">

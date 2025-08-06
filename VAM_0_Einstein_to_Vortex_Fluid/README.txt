@@ -1,26 +1,19 @@
-Title: Revisiting the Æther: From Einstein to the Vortex Fluid Paradigm
+Title: Revisiting the Æther: From Einstein to the Vortex Fluid Paradigm  
 Author: Omar Iskandarani
 
-This submission includes the complete source for the above-titled paper.
+This submission contains the complete source files for the above-titled manuscript.
 
 Contents:
-
-main.tex – Main LaTeX source file
-
-*.bib – BibTeX references
-
-figures/ – All figures used in the paper
+- main.tex — Main LaTeX source file
+- *.bib — BibTeX reference file(s)
+- figures/ — Directory containing all figures (TikZ or PNG)
 
 Compilation Instructions:
-
-Compile using pdflatex (recommended: pdflatex → bibtex → pdflatex ×2)
-
-Requires a standard LaTeX environment with BibTeX support
+- Recommended build sequence: pdflatex → bibtex → pdflatex → pdflatex
+- Requires a standard LaTeX environment with BibTeX support
+- Compatible with pdflatex; no XeLaTeX or LuaLaTeX dependencies
 
 Notes:
-
-All external references are provided with persistent DOIs
-
-Figures are in PNG format or tikzpicture and natively compatible with pdflatex
-
-No proprietary packages are used
+- All references include persistent DOIs where applicable
+- Figures are either embedded TikZ diagrams or PNG files compatible with pdflatex
+- No proprietary LaTeX packages or non-standard libraries are used
