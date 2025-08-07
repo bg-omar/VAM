@@ -56,10 +56,7 @@
 #   💡 A step toward mapping quantum matter to topological vortex geometry.
 ####################################################################################################
 
-import os
-import numpy as np
-import matplotlib.pyplot as plt
-from termcolor import colored
+
 import os
 import numpy as np
 import matplotlib.pyplot as plt
@@ -67,7 +64,8 @@ from termcolor import colored
 from bs4 import BeautifulSoup
 import pandas as pd
 import os
-
+import matplotlib
+matplotlib.use('TkAgg')  # Ensure it uses Tkinter backend
 from sklearn.mixture import GaussianMixture
 from sklearn.decomposition import PCA
 
@@ -92,6 +90,7 @@ def plot_clustered_amu(results):
     plt.title("Clustering of $a_\\mu$ Values (GMM)")
     plt.xlabel("$a_\\mu$")
     plt.ylabel("Frequency")
+    plt.legend()
     plt.tight_layout()
     plt.show()
 # --- Load and Parse Symmetry Table ---
@@ -248,6 +247,7 @@ def plot_amu_histogram(results):
     plt.ylabel("Frequency")
     plt.grid(True)
     plt.tight_layout()
+    plt.legend()
     plt.show()
 
 
@@ -297,6 +297,7 @@ def plot_amu_histogram(results):
     plt.xlabel("$a_\\mu$")
     plt.ylabel("Frequency")
     plt.grid(True)
+    plt.legend()
     plt.tight_layout()
     plt.show()
 
@@ -348,6 +349,7 @@ def plot_amu_histogram(results):
     plt.xlabel("$a_\\mu$")
     plt.ylabel("Frequency")
     plt.grid(True)
+    plt.legend()
     plt.tight_layout()
     plt.show()
 
