@@ -80,6 +80,7 @@ coil_field_filename = f"Unified Rodin Coil Path N={coil_corners} Skip=({skip_for
 plt.tight_layout()
 plt.savefig(coil_field_filename, dpi=150)
 # plt.show()
+###########################################################################
 
 
 # Generate 3-phase coils with 120° offset
@@ -117,6 +118,7 @@ coil_field_filename = f"3-Phase Rodin Coil N={coil_corners} Skip=({skip_forward}
 plt.tight_layout()
 plt.savefig(coil_field_filename, dpi=150)
 # plt.show()
+###########################################################################
 
 layer_spacing = 0.15
 
@@ -202,6 +204,7 @@ coil_field_filename = f"Biot–Savart Field (XY midplane slice) for 3-Phase Coil
 plt.tight_layout()
 plt.savefig(coil_field_filename, dpi=150)
 # plt.show()
+###########################################################################
 
 
 
@@ -236,7 +239,8 @@ ax.set_zlim(*z_range)
 coil_field_filename = f"3D Biot–Savart Field of 3-Phase Double Star Coil.png"
 plt.tight_layout()
 plt.savefig(coil_field_filename, dpi=150)
-plt.show()
+# plt.show()
+###########################################################################
 
 
 import matplotlib.animation as animation
@@ -291,6 +295,7 @@ def update_quiver(t):
 
 ani = animation.FuncAnimation(fig, update_quiver, frames=np.linspace(0, 2*np.pi, 40), interval=150, blit=False)
 # plt.show()
+###########################################################################
 
 
 # Export the animation as a GIF
@@ -350,6 +355,7 @@ plt.tight_layout()
 fieldline_filename = "3phase_field_lines.png"
 plt.savefig(fieldline_filename, dpi=150)
 # plt.show()
+###########################################################################
 
 # Compute æther pressure from magnetic field (Bernoulli-like analogy in VAM)
 # Use: P = P0 - (1/2) * rho_fluid * |B|^2 / mu0
@@ -378,6 +384,7 @@ plt.tight_layout()
 pressure_filename = "3phase_pressure_drop.png"
 plt.savefig(pressure_filename, dpi=150)
 # plt.show()
+###########################################################################
 
 # Apply log scaling to pressure field (add small epsilon to avoid log(0))
 pressure_log = np.log10(pressure + 1e-10)
@@ -395,6 +402,7 @@ plt.tight_layout()
 log_pressure_filename = "3phase_Æther LogScale Pressure Drop Induced by 3-Phase VAM Swirl.png"
 plt.savefig(log_pressure_filename, dpi=150)
 # plt.show()
+###########################################################################
 
 
 
@@ -481,7 +489,8 @@ fig.colorbar(mesh, ax=ax, shrink=0.6, label="Z (Pressure Drop Depth)")
 iso_layers10_filename = "3phase_pressure_isosurface_layers10.png"
 plt.tight_layout()
 plt.savefig(iso_layers10_filename, dpi=150)
-plt.show()
+# plt.show()
+###########################################################################
 
 # Parameters for 1-phase coil
 coil_corners = 32
@@ -560,6 +569,7 @@ coil_field_filename = "1phase_coil_biot_savart.png"
 plt.tight_layout()
 plt.savefig(coil_field_filename, dpi=150)
 # plt.show()
+###########################################################################
 
 
 # Update spacing and recompute everything
@@ -616,6 +626,7 @@ coil_dense_filename = "1phase_coil_biot_savart_dense.png"
 plt.tight_layout()
 plt.savefig(coil_dense_filename, dpi=150)
 # plt.show()
+###########################################################################
 
 
 from matplotlib.colors import Normalize
@@ -655,7 +666,8 @@ ax.legend()
 colored_field_filename = "1phase_coil_biot_savart_colordir_alpha.png"
 plt.tight_layout()
 plt.savefig(colored_field_filename, dpi=150)
-# plt.show()
+plt.show()
+###########################################################################
 
 
 
@@ -693,6 +705,7 @@ corrected_alpha_filename = "1phase_coil_biot_savart_colordir_alpha_corrected.png
 plt.tight_layout()
 plt.savefig(corrected_alpha_filename, dpi=150)
 # plt.show()
+###########################################################################
 
 
 
@@ -736,7 +749,8 @@ ax.legend()
 final_quiver_filename = "1phase_coil_biot_savart_colordir_alpha_final.png"
 plt.tight_layout()
 plt.savefig(final_quiver_filename, dpi=150)
-plt.show()
+# plt.show()
+###########################################################################
 
 # Apply linear alpha scaling without gamma, with min = 0.5 and max = 1.0
 alpha_min = 0.5
@@ -773,6 +787,7 @@ linear_quiver_filename = "1phase_coil_biot_savart_colordir_alpha_linear.png"
 plt.tight_layout()
 plt.savefig(linear_quiver_filename, dpi=150)
 # plt.show()
+###########################################################################
 
 
 
@@ -796,6 +811,7 @@ field_only_filename = "1phase_biot_savart_quiver_only.png"
 plt.tight_layout()
 plt.savefig(field_only_filename, dpi=150)
 # plt.show()
+###########################################################################
 
 
 
@@ -843,6 +859,7 @@ cwccw_filename = "1phase_biot_savart_quiver_cwccw_xy_opacity_z.png"
 plt.tight_layout()
 plt.savefig(cwccw_filename, dpi=150)
 # plt.show()
+###########################################################################
 
 # Redefine views with corrected orientations:
 # - Top View: Z looking down → elev=90, azim=-90
@@ -876,6 +893,7 @@ plt.tight_layout(rect=[0, 0, 1, 0.96])
 corrected_multiview_filename = "1phase_biot_savart_multiview_corrected.png"
 plt.savefig(corrected_multiview_filename, dpi=150)
 # plt.show()
+###########################################################################
 
 print(corrected_multiview_filename)
 
@@ -918,7 +936,8 @@ plt.tight_layout(rect=[0, 0, 1, 0.96])
 
 centered_multiview_filename = "1phase_biot_savart_multiview_centered.png"
 plt.savefig(centered_multiview_filename, dpi=150)
-plt.show()
+# plt.show()
+###########################################################################
 
 # Apply a fixed vertical shift of +0.25 to all Z coordinates to place coil from z = 0.25 to 0.75
 z_shift_fixed = 0.25
@@ -950,6 +969,7 @@ plt.tight_layout(rect=[0, 0, 1, 0.96])
 raised_multiview_filename = "1phase_biot_savart_multiview_centered_fixedshift.png"
 plt.savefig(raised_multiview_filename, dpi=150)
 # plt.show()
+###########################################################################
 
 # Re-declare missing parameters using last known configuration
 coil_corners = 32
@@ -1089,6 +1109,7 @@ plt.tight_layout(rect=[0, 0, 1, 0.96])
 three_phase_multiview_filename = "3phase_biot_savart_multiview_centered_fixedshift.png"
 plt.savefig(three_phase_multiview_filename, dpi=150)
 # plt.show()
+###########################################################################
 
 
 from numpy import gradient, stack
@@ -1166,6 +1187,7 @@ ax.set_axis_off()
 gravity_field_filename = "vam_swirl_gravitational_field_3d.png"
 plt.savefig(gravity_field_filename, dpi=150)
 # plt.show()
+###########################################################################
 
 
 

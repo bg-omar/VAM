@@ -25,22 +25,42 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f2a8139-c825-4497-876b-70e1a130c5c3" name="Changes" comment="Add new Fourier series files for various knots and update data loading in helicity2.py">
+    <list default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" id="6f2a8139-c825-4497-876b-70e1a130c5c3" name="Changes" comment="Add new scripts for pressure deficit and net swirl gravity field visualizations">
+      <change afterPath="$PROJECT_DIR$/VAM_Experiments/VacuumRefractionPhotonScattering.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_Experiments/vambindings.cp311-win_amd64.pyd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_Experiments/vamcore.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/vambindings.cp311-win_amd64.pyd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_Experiments/02_Starship-3phase-27x3points_030557.png" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_Experiments/exports/02_Starship-3phase-27x3points_030557.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_Experiments/02_Starship-3phase-36points_222249.png" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_Experiments/exports/02_Starship-3phase-36points_222249.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_Experiments/8knot.png" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_Experiments/exports/8knot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_Experiments/8knot2.png" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_Experiments/exports/8knot2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_Experiments/Figure 1 Net Swirl Gravity Field.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_Experiments/Figure 1 Net Swirl Gravity Field.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_Experiments/Figure 2 Pressure deficit map.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_Experiments/Figure 2_Pressure Deficit Map Above Coil.png" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_Experiments/exports/Figure 2_Pressure Deficit Map Above Coil.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_Experiments/PressureDropForceField.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/PressureDropForceField.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_Experiments/Warpdrive.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_Experiments/Warpdrive.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_Experiments/bowl.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/bowl.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_Experiments/fieldpressure.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/fieldpressure.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_Experiments/swirltorus3.png" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_Experiments/exports/swirltorus3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coil_boit.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/coil_biot-savart_sim.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quarck streamlines.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/quarck streamlines.py" afterDir="false" />
+    </list>
+    <list id="4afbe360-edfd-4722-ab75-c722c883a8a6" name="DoNotCommit" comment="">
+      <change afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/Definitions/journalnames.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/Definitions/logo-mdpi-eps-converted-to.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/Definitions/logo-mdpi.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/Definitions/logo-orcid.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/Definitions/logo-updates.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/Definitions/mdpi.bst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/Definitions/mdpi.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/Definitions/mdpi_apacite.bst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/Definitions/mdpi_apacite.sty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/Definitions/mdpi_chicago.bst" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/editors1.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/editors2.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/editors3.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/main-O.Iskandarani.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/Cover_Letter_Iskandarani.txt" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/Cover_Letter_Iskandarani.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/O.Iskandarani_Einstein_To_VAM.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/figures/plot_OntologyOfMass.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/figures/plot_OntologyOfMass.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/figures/plot_OntologyTimeWesternScience.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/figures/plot_OntologyTimeWesternScience.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/figures/plot_SimultaneityTheories.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/figures/plot_SimultaneityTheories.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/figures/plot_WaveParticle.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/figures/plot_WaveParticle.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/references.bib" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/references.bib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/sections/01_Introduction.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/sections/01_Introduction.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/template.pdf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="false" />
@@ -57,8 +77,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -99,6 +119,11 @@
   <component name="ProjectId" id="2zPT543xrOdyBDBtIng3qH9d2ET" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
+    <option name="hideEmptyMiddlePackages" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
+    <option name="showLibraryContents" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
@@ -185,6 +210,7 @@
     &quot;LaTeX.VAM_framework.executor&quot;: &quot;Run&quot;,
     &quot;LaTeX.Warpdrive.executor&quot;: &quot;Run&quot;,
     &quot;LaTeX.appendix_QuantizationOfVAM.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.double-starship-gravity.executor&quot;: &quot;Run&quot;,
     &quot;LaTeX.main-O.Iskandarani.executor&quot;: &quot;Run&quot;,
     &quot;LaTeX.master-formula.executor&quot;: &quot;Run&quot;,
     &quot;LaTeX.notebook.executor&quot;: &quot;Run&quot;,
@@ -205,6 +231,8 @@
     &quot;Python.7_4knot.executor&quot;: &quot;Run&quot;,
     &quot;Python.8knot-Trefoil.executor&quot;: &quot;Run&quot;,
     &quot;Python.8knot.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Figure 1 Net Swirl Gravity Field.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Figure 2 Pressure deficit map.executor&quot;: &quot;Run&quot;,
     &quot;Python.FourierSeriesFromKnotPoints.executor&quot;: &quot;Run&quot;,
     &quot;Python.Helicity.executor&quot;: &quot;Run&quot;,
     &quot;Python.HelicityCalculation.executor&quot;: &quot;Run&quot;,
@@ -217,9 +245,11 @@
     &quot;Python.TimeConstruct.executor&quot;: &quot;Run&quot;,
     &quot;Python.all_knots.executor&quot;: &quot;Run&quot;,
     &quot;Python.autoknot.executor&quot;: &quot;Run&quot;,
+    &quot;Python.bowl.executor&quot;: &quot;Run&quot;,
     &quot;Python.bubble.executor&quot;: &quot;Run&quot;,
     &quot;Python.change_bib_to_footnoting.executor&quot;: &quot;Run&quot;,
     &quot;Python.classify_particles.executor&quot;: &quot;Run&quot;,
+    &quot;Python.coil_boit.executor&quot;: &quot;Run&quot;,
     &quot;Python.cropper.executor&quot;: &quot;Run&quot;,
     &quot;Python.dipole.executor&quot;: &quot;Run&quot;,
     &quot;Python.doublestarship.executor&quot;: &quot;Run&quot;,
@@ -245,6 +275,7 @@
     &quot;Python.torus.executor&quot;: &quot;Run&quot;,
     &quot;Python.torusspirals.executor&quot;: &quot;Run&quot;,
     &quot;Python.vam_vs_gr_potential_plot.executor&quot;: &quot;Run&quot;,
+    &quot;Python.vamcore.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
@@ -257,7 +288,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/workspace/projects/VAM/VAM_0_Einstein_to_Vortex_Fluid&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/workspace/projects/VAM/VAM_PYTHON_SIMULATOINS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -272,33 +303,21 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\workspace\projects\VAM\VAM_PYTHON_SIMULATOINS" />
+      <recent name="C:\workspace\projects\VAM\VAM_Experiments" />
       <recent name="C:\workspace\projects\VAM\VAM_0_Einstein_to_Vortex_Fluid" />
       <recent name="C:\workspace\projects\VAM\py_knots\ALL" />
       <recent name="C:\workspace\projects\VAM\VAM_Shorts" />
-      <recent name="C:\workspace\projects\VAM\VAM_Shorts\figures" />
-      <recent name="C:\workspace\solo_projects\VAM\VAM_Shorts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\workspace\projects\VAM\VAM_PYTHON_SIMULATOINS" />
+      <recent name="C:\workspace\projects\VAM\VAM_Experiments\exports" />
       <recent name="C:\workspace\projects\VAM\VAM_0_Einstein_to_Vortex_Fluid\sections" />
       <recent name="C:\workspace\projects\VAM\VAM_0_Einstein_to_Vortex_Fluid\figures" />
       <recent name="C:\workspace\solo_projects\VAM" />
-      <recent name="C:\workspace\solo_projects\VAM\VAM_Experiments" />
-      <recent name="C:\workspace\projects\VAM\VAM_Experiments" />
     </key>
   </component>
-  <component name="RunManager" selected="BibTeX.VAM-16-Quantum_Computing_Blueprint bibliography">
-    <configuration default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-bibtex>
-        <compiler />
-        <compiler-path />
-        <compiler-arguments />
-        <envs />
-        <main-file />
-        <aux-dir />
-        <latex-distribution>PROJECT_SDK</latex-distribution>
-      </texify-bibtex>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="BibTeX.VAM-14-Topological_Fluid_Dynamics_Lagrangian bibliography">
     <configuration default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
@@ -490,6 +509,29 @@
       </texify>
       <method v="2" />
     </configuration>
+    <configuration default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <require-focus>$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$</require-focus>
+        <viewer-command />
+        <compiler-arguments />
+        <envs />
+        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
+        <before-run-command />
+        <main-file />
+        <output-path>{projectDir}/out</output-path>
+        <auxil-path>{projectDir}/auxil</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>MIKTEX</latex-distribution>
+        <has-been-run>false</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="BibTeX.VAM-14-Topological_Fluid_Dynamics_Lagrangian bibliography" />
       <item itemvalue="BibTeX.VAM-Philosophical_Depth_Companion" />
@@ -531,14 +573,14 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-PY-252.23892.439" />
-        <option value="bundled-python-sdk-b3ae9b5d7125-f0eec537fc84-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.23892.439" />
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.23892.409" />
       </set>
     </attachedChunks>
   </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
+    <task active="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" id="Default" summary="Default task">
       <changelist id="6f2a8139-c825-4497-876b-70e1a130c5c3" name="Changes" comment="" />
+      <changelist id="4afbe360-edfd-4722-ab75-c722c883a8a6" name="DoNotCommit" comment="" />
       <created>1751631523297</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -619,6 +661,7 @@
       <workItem from="1753974277020" duration="266000" />
       <workItem from="1754327401426" duration="10743000" />
       <workItem from="1754497897810" duration="362000" />
+      <workItem from="1754547777465" duration="32235000" />
     </task>
     <task id="LOCAL-00001" summary="Made MASTER paper, VAM4, VAM12.&#10;Added Knot images">
       <created>1751925083082</created>
@@ -788,7 +831,23 @@
       <option name="project" value="LOCAL" />
       <updated>1753974197798</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Update references and README: modify citation notes, enhance compilation instructions, and refine temporal ontology descriptions in LaTeX files.">
+      <option name="closed" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
+      <created>1754499000733</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1754499000733</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Add new scripts for pressure deficit and net swirl gravity field visualizations">
+      <option name="closed" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
+      <created>1754566406175</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1754566406175</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -823,6 +882,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Made MASTER paper, VAM4, VAM12.&#10;Added Knot images" />
     <MESSAGE value="Enhance LaTeX documents by adding automatic figure scaling, improving figure layouts, and refining captions for clarity in vortex dynamics illustrations." />
@@ -847,7 +907,9 @@
     <MESSAGE value="Update workspace configuration: add README file and adjust run configurations for improved clarity and usability" />
     <MESSAGE value="Refactor document structure: rename LaTeX files for consistency, update main file path in run configuration, and enhance README with detailed compilation instructions and project overview." />
     <MESSAGE value="Add new Fourier series files for various knots and update data loading in helicity2.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add new Fourier series files for various knots and update data loading in helicity2.py" />
+    <MESSAGE value="Update references and README: modify citation notes, enhance compilation instructions, and refine temporal ontology descriptions in LaTeX files." />
+    <MESSAGE value="Add new scripts for pressure deficit and net swirl gravity field visualizations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add new scripts for pressure deficit and net swirl gravity field visualizations" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
@@ -855,68 +917,77 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/VAM$6_2knot.coverage" NAME="6_2knot Coverage Results" MODIFIED="1752431244452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$knot_6_2.coverage" NAME="knot_6_2 Coverage Results" MODIFIED="1753293382662" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
-    <SUITE FILE_PATH="coverage/VAM$NODES.coverage" NAME="NODES Coverage Results" MODIFIED="1752427455247" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$8knot_Trefoil.coverage" NAME="8knot-Trefoil Coverage Results" MODIFIED="1752424632219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$quarck_streamlines.coverage" NAME="quarck streamlines Coverage Results" MODIFIED="1752596530929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/VAM$neonKnot_6_2.coverage" NAME="neonKnot.6_2 Coverage Results" MODIFIED="1753287930497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
-    <SUITE FILE_PATH="coverage/VAM$TemporalOntology.coverage" NAME="TemporalOntology Coverage Results" MODIFIED="1753193206663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images" />
-    <SUITE FILE_PATH="coverage/VAMCore$bubble.coverage" NAME="bubble Coverage Results" MODIFIED="1752966915606" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$FourierSeriesFromKnotPoints.coverage" NAME="FourierSeriesFromKnotPoints Coverage Results" MODIFIED="1753966368643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
-    <SUITE FILE_PATH="coverage/VAM$torus.coverage" NAME="torus Coverage Results" MODIFIED="1752431773431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
-    <SUITE FILE_PATH="coverage/VAM$MoleculeWeight.coverage" NAME="MoleculeWeight Coverage Results" MODIFIED="1752073629003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM-MASTER Paper" />
-    <SUITE FILE_PATH="coverage/VAM$torusspirals.coverage" NAME="torusspirals Coverage Results" MODIFIED="1752431790353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
-    <SUITE FILE_PATH="coverage/VAMCore$02_Starship_3phase_36points.coverage" NAME="02_Starship-3phase-36points Coverage Results" MODIFIED="1752968703840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAMCore$03_slice_biot.coverage" NAME="03_slice biot Coverage Results" MODIFIED="1752968655991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$knots.coverage" NAME="knots Coverage Results" MODIFIED="1753345605412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
-    <SUITE FILE_PATH="coverage/VAM$dipole.coverage" NAME="dipole Coverage Results" MODIFIED="1751969712280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
-    <SUITE FILE_PATH="coverage/VAM$Rodin_magnetic_fields.coverage" NAME="Rodin_magnetic_fields Coverage Results" MODIFIED="1752427869291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$magneticCircle.coverage" NAME="magneticCircle Coverage Results" MODIFIED="1752426259414" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$reference_cleaning.coverage" NAME="reference_cleaning Coverage Results" MODIFIED="1751967331566" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/VAMCore$doublestarshipteste.coverage" NAME="doublestarshipteste Coverage Results" MODIFIED="1752968462704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$vam_vs_gr_potential_plot.coverage" NAME="vam_vs_gr_potential_plot Coverage Results" MODIFIED="1751903749996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
+    <SUITE FILE_PATH="coverage/VAMCore$knots.coverage" NAME="knots Coverage Results" MODIFIED="1752973335370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
     <SUITE FILE_PATH="coverage/VAMCore$knot_6_2.coverage" NAME="knot_6_2 Coverage Results" MODIFIED="1752971761263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
-    <SUITE FILE_PATH="coverage/VAM$autoknot.coverage" NAME="autoknot Coverage Results" MODIFIED="1753345429330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
-    <SUITE FILE_PATH="coverage/VAM$MagneticCircleRodin.coverage" NAME="MagneticCircleRodin Coverage Results" MODIFIED="1752427883514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$knots_toggle_autoknot.coverage" NAME="knots-toggle-autoknot Coverage Results" MODIFIED="1753902628783" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
-    <SUITE FILE_PATH="coverage/VAM$timediagram.coverage" NAME="timediagram Coverage Results" MODIFIED="1752051334138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - 0 Einsteins Æther" />
-    <SUITE FILE_PATH="coverage/VAM$bubble.coverage" NAME="bubble Coverage Results" MODIFIED="1753295199079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAMCore$NODES.coverage" NAME="NODES Coverage Results" MODIFIED="1752967419859" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAMCore$.coverage" NAME=" Coverage Results" MODIFIED="1752957951546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/VAMCore$cropper.coverage" NAME="cropper Coverage Results" MODIFIED="1752869008603" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/VAMCore$doublestarship.coverage" NAME="doublestarship Coverage Results" MODIFIED="1752968481994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$testknot.coverage" NAME="testknot Coverage Results" MODIFIED="1752608691698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/VAM$trefoil_field_lines.coverage" NAME="trefoil_field_lines Coverage Results" MODIFIED="1752644028053" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAMpyBindings/examples" />
+    <SUITE FILE_PATH="coverage/VAM$Rodin_magnetic_fields.coverage" NAME="Rodin_magnetic_fields Coverage Results" MODIFIED="1752427869291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$all_knots.coverage" NAME="all_knots Coverage Results" MODIFIED="1752435420032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_5_Lagrangian_Gravity_Electromagnetism/images" />
+    <SUITE FILE_PATH="coverage/VAMCore$autoknot.coverage" NAME="autoknot Coverage Results" MODIFIED="1752972268197" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
+    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$bowl.coverage" NAME="bowl Coverage Results" MODIFIED="1754579006549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
+    <SUITE FILE_PATH="coverage/VAMCore$bubble.coverage" NAME="bubble Coverage Results" MODIFIED="1752966915606" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$knots.coverage" NAME="knots Coverage Results" MODIFIED="1753345605412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
+    <SUITE FILE_PATH="coverage/VAMCore$8knot_Trefoil.coverage" NAME="8knot-Trefoil Coverage Results" MODIFIED="1752969413265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$Figure_2_Pressure_deficit_map.coverage" NAME="Figure 2 Pressure deficit map Coverage Results" MODIFIED="1754558002509" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_Experiments" />
     <SUITE FILE_PATH="coverage/VAM$03_magnetic_round_coil.coverage" NAME="03_magnetic round coil Coverage Results" MODIFIED="1752425539443" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
     <SUITE FILE_PATH="coverage/VAM$TimeConstruct.coverage" NAME="TimeConstruct Coverage Results" MODIFIED="1751915068127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - 2 Swirl Clocks/images" />
-    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$HelicityCalculation.coverage" NAME="HelicityCalculation Coverage Results" MODIFIED="1753893654664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
-    <SUITE FILE_PATH="coverage/VAMCore$test.coverage" NAME="test Coverage Results" MODIFIED="1752969406787" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAMCore$swirltorus36_knots.coverage" NAME="swirltorus36 knots Coverage Results" MODIFIED="1752966295911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations" />
-    <SUITE FILE_PATH="coverage/VAMCore$8knot.coverage" NAME="8knot Coverage Results" MODIFIED="1752969741067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
     <SUITE FILE_PATH="coverage/VAM$8knot.coverage" NAME="8knot Coverage Results" MODIFIED="1752424545584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$7_4knot.coverage" NAME="7_4knot Coverage Results" MODIFIED="1752431182408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$magneticCircleArrows.coverage" NAME="magneticCircleArrows Coverage Results" MODIFIED="1752425627820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAMCore$rotating_current_rodin_fields.coverage" NAME="rotating_current_rodin_fields Coverage Results" MODIFIED="1752969037957" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$proton_neutron_weigth.coverage" NAME="proton_neutron_weigth Coverage Results" MODIFIED="1751848726214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM-MASTER Paper" />
-    <SUITE FILE_PATH="coverage/VAM$PressureDropForceField.coverage" NAME="PressureDropForceField Coverage Results" MODIFIED="1753271119280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_Experiments" />
-    <SUITE FILE_PATH="coverage/VAMCore$03_Starship_3phase_36points_18_bidirectional.coverage" NAME="03_Starship-3phase-36points-18 bidirectional Coverage Results" MODIFIED="1752968378418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAMCore$knots.coverage" NAME="knots Coverage Results" MODIFIED="1752973335370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
-    <SUITE FILE_PATH="coverage/VAM$change_bib_to_footnoting.coverage" NAME="change_bib_to_footnoting Coverage Results" MODIFIED="1752345948506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_15_Quantum_Gravity" />
-    <SUITE FILE_PATH="coverage/VAM$all_knots.coverage" NAME="all_knots Coverage Results" MODIFIED="1752435420032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_5_Lagrangian_Gravity_Electromagnetism/images" />
-    <SUITE FILE_PATH="coverage/VAM$6_2_topview.coverage" NAME="6_2_topview Coverage Results" MODIFIED="1751908053943" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
-    <SUITE FILE_PATH="coverage/VAMCore$Rodin_magnetic_fields.coverage" NAME="Rodin_magnetic_fields Coverage Results" MODIFIED="1752967471245" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAMCore$autoknot.coverage" NAME="autoknot Coverage Results" MODIFIED="1752972268197" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
-    <SUITE FILE_PATH="coverage/VAMCore$6274.coverage" NAME="6274 Coverage Results" MODIFIED="1752709477549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_15_Quantum_Gravity" />
-    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$helicity2.coverage" NAME="helicity2 Coverage Results" MODIFIED="1753965564948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
-    <SUITE FILE_PATH="coverage/VAM$Helicity.coverage" NAME="Helicity Coverage Results" MODIFIED="1751904879608" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
-    <SUITE FILE_PATH="coverage/VAM$doublestarship.coverage" NAME="doublestarship Coverage Results" MODIFIED="1753359748818" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAMCore$8knot_Trefoil.coverage" NAME="8knot-Trefoil Coverage Results" MODIFIED="1752969413265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$classify_particles.coverage" NAME="classify_particles Coverage Results" MODIFIED="1753972456513" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots/ALL" />
-    <SUITE FILE_PATH="coverage/VAM$fieldpressure.coverage" NAME="fieldpressure Coverage Results" MODIFIED="1753294530909" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_Experiments" />
+    <SUITE FILE_PATH="coverage/VAM$reference_cleaning.coverage" NAME="reference_cleaning Coverage Results" MODIFIED="1751967331566" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/VAM$rotating_current_rodin_fields.coverage" NAME="rotating_current_rodin_fields Coverage Results" MODIFIED="1752424861440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$vam_vs_gr_potential_plot.coverage" NAME="vam_vs_gr_potential_plot Coverage Results" MODIFIED="1751903749996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
+    <SUITE FILE_PATH="coverage/VAMCore$cropper.coverage" NAME="cropper Coverage Results" MODIFIED="1752869008603" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/VAM$magneticCircle.coverage" NAME="magneticCircle Coverage Results" MODIFIED="1752426259414" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$coil_boit.coverage" NAME="coil_boit Coverage Results" MODIFIED="1754578378642" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/VAMCore$8knot.coverage" NAME="8knot Coverage Results" MODIFIED="1752969741067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$neonKnot_6_2.coverage" NAME="neonKnot.6_2 Coverage Results" MODIFIED="1753287930497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
+    <SUITE FILE_PATH="coverage/VAM$fieldpressure.coverage" NAME="fieldpressure Coverage Results" MODIFIED="1753294530909" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_Experiments" />
+    <SUITE FILE_PATH="coverage/VAMCore$swirltorus36_knots.coverage" NAME="swirltorus36 knots Coverage Results" MODIFIED="1752966295911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations" />
+    <SUITE FILE_PATH="coverage/VAM$knot_6_2.coverage" NAME="knot_6_2 Coverage Results" MODIFIED="1753293382662" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
+    <SUITE FILE_PATH="coverage/VAM$change_bib_to_footnoting.coverage" NAME="change_bib_to_footnoting Coverage Results" MODIFIED="1752345948506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_15_Quantum_Gravity" />
+    <SUITE FILE_PATH="coverage/VAMCore$test.coverage" NAME="test Coverage Results" MODIFIED="1752969406787" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$NODES.coverage" NAME="NODES Coverage Results" MODIFIED="1752427455247" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$torusspirals.coverage" NAME="torusspirals Coverage Results" MODIFIED="1752431790353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
+    <SUITE FILE_PATH="coverage/VAM$MagneticCircleRodin.coverage" NAME="MagneticCircleRodin Coverage Results" MODIFIED="1752427883514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$vamcore.coverage" NAME="vamcore Coverage Results" MODIFIED="1754580797453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_Experiments" />
+    <SUITE FILE_PATH="coverage/VAM$7_4knot.coverage" NAME="7_4knot Coverage Results" MODIFIED="1752431182408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$HelicityCalculation.coverage" NAME="HelicityCalculation Coverage Results" MODIFIED="1753893654664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
     <SUITE FILE_PATH="coverage/VAM$photonAnimation.coverage" NAME="photonAnimation Coverage Results" MODIFIED="1752424817557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM$doublestarshipteste.coverage" NAME="doublestarshipteste Coverage Results" MODIFIED="1753347171332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAMCore$doublestarship.coverage" NAME="doublestarship Coverage Results" MODIFIED="1752968481994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$trefoil_field_lines.coverage" NAME="trefoil_field_lines Coverage Results" MODIFIED="1752644028053" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAMpyBindings/examples" />
+    <SUITE FILE_PATH="coverage/VAM$autoknot.coverage" NAME="autoknot Coverage Results" MODIFIED="1753345429330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
+    <SUITE FILE_PATH="coverage/VAMCore$03_Starship_3phase_36points_18_bidirectional.coverage" NAME="03_Starship-3phase-36points-18 bidirectional Coverage Results" MODIFIED="1752968378418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$torus.coverage" NAME="torus Coverage Results" MODIFIED="1752431773431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
+    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$FourierSeriesFromKnotPoints.coverage" NAME="FourierSeriesFromKnotPoints Coverage Results" MODIFIED="1753966368643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
+    <SUITE FILE_PATH="coverage/VAM$MoleculeWeight.coverage" NAME="MoleculeWeight Coverage Results" MODIFIED="1752073629003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM-MASTER Paper" />
+    <SUITE FILE_PATH="coverage/VAMCore$rotating_current_rodin_fields.coverage" NAME="rotating_current_rodin_fields Coverage Results" MODIFIED="1752969037957" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$TemporalOntology.coverage" NAME="TemporalOntology Coverage Results" MODIFIED="1753193206663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images" />
+    <SUITE FILE_PATH="coverage/VAM$quarck_streamlines.coverage" NAME="quarck streamlines Coverage Results" MODIFIED="1752596530929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/VAM$testknot.coverage" NAME="testknot Coverage Results" MODIFIED="1752608691698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$classify_particles.coverage" NAME="classify_particles Coverage Results" MODIFIED="1753972456513" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots/ALL" />
+    <SUITE FILE_PATH="coverage/VAM$8knot_Trefoil.coverage" NAME="8knot-Trefoil Coverage Results" MODIFIED="1752424632219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
+    <SUITE FILE_PATH="coverage/VAM$timediagram.coverage" NAME="timediagram Coverage Results" MODIFIED="1752051334138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - 0 Einsteins Æther" />
+    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$Figure_1_Net_Swirl_Gravity_Field.coverage" NAME="Figure 1 Net Swirl Gravity Field Coverage Results" MODIFIED="1754566555504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_Experiments" />
+    <SUITE FILE_PATH="coverage/VAM$6_2knot.coverage" NAME="6_2knot Coverage Results" MODIFIED="1752431244452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$helicity2.coverage" NAME="helicity2 Coverage Results" MODIFIED="1753965564948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
     <SUITE FILE_PATH="coverage/VAM$02_Starship_2_inv.coverage" NAME="02_Starship-2 inv Coverage Results" MODIFIED="1752424773159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
+    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$knots_toggle_autoknot.coverage" NAME="knots-toggle-autoknot Coverage Results" MODIFIED="1753902628783" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
+    <SUITE FILE_PATH="coverage/VAM$Helicity.coverage" NAME="Helicity Coverage Results" MODIFIED="1751904879608" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
+    <SUITE FILE_PATH="coverage/VAMCore$doublestarshipteste.coverage" NAME="doublestarshipteste Coverage Results" MODIFIED="1752968462704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$magneticCircleArrows.coverage" NAME="magneticCircleArrows Coverage Results" MODIFIED="1752425627820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$doublestarship.coverage" NAME="doublestarship Coverage Results" MODIFIED="1753359748818" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAMCore$NODES.coverage" NAME="NODES Coverage Results" MODIFIED="1752967419859" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$bubble.coverage" NAME="bubble Coverage Results" MODIFIED="1753295199079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$all_knots.coverage" NAME="all_knots Coverage Results" MODIFIED="1754566583814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images" />
+    <SUITE FILE_PATH="coverage/VAMCore$02_Starship_3phase_36points.coverage" NAME="02_Starship-3phase-36points Coverage Results" MODIFIED="1752968703840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAMCore$.coverage" NAME=" Coverage Results" MODIFIED="1752957951546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$quarck_streamlines.coverage" NAME="quarck streamlines Coverage Results" MODIFIED="1754578300551" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/VAM$PressureDropForceField.coverage" NAME="PressureDropForceField Coverage Results" MODIFIED="1753271119280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_Experiments" />
+    <SUITE FILE_PATH="coverage/VAM$dipole.coverage" NAME="dipole Coverage Results" MODIFIED="1751969712280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
+    <SUITE FILE_PATH="coverage/VAM$proton_neutron_weigth.coverage" NAME="proton_neutron_weigth Coverage Results" MODIFIED="1751848726214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM-MASTER Paper" />
+    <SUITE FILE_PATH="coverage/VAM$6_2_topview.coverage" NAME="6_2_topview Coverage Results" MODIFIED="1751908053943" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
+    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$PressureDropForceField.coverage" NAME="PressureDropForceField Coverage Results" MODIFIED="1754578692198" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_Experiments" />
+    <SUITE FILE_PATH="coverage/VAMCore$6274.coverage" NAME="6274 Coverage Results" MODIFIED="1752709477549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_15_Quantum_Gravity" />
+    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$fieldpressure.coverage" NAME="fieldpressure Coverage Results" MODIFIED="1754578632169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_Experiments" />
+    <SUITE FILE_PATH="coverage/VAMCore$Rodin_magnetic_fields.coverage" NAME="Rodin_magnetic_fields Coverage Results" MODIFIED="1752967471245" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$doublestarshipteste.coverage" NAME="doublestarshipteste Coverage Results" MODIFIED="1753347171332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAMCore$03_slice_biot.coverage" NAME="03_slice biot Coverage Results" MODIFIED="1752968655991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
   </component>
 </project>
