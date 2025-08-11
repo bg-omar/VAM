@@ -17,7 +17,7 @@ def generate_rodin_starship(R=1.0, r=1.0, num_turns=10, num_points=1000):
     phi = (2 + 2/5) * theta
     x = (R + r * np.cos(phi)) * np.cos(theta)
     y = (R + r * np.cos(phi)) * np.sin(theta)
-    z = r * np.sin(phi) * 0.3
+    z = r * np.sin(phi)
     return x, y, z
 
 # --- Biot-Savart for wire loop (numerical) ---
@@ -83,9 +83,9 @@ def compute_dipole_field_from_orientations(X, Y, Z, positions, orientations):
 # --- Initial Parameters (user can edit) ---
 params = {
     "num_magnets": 16,
-    "dipole_ring_radius": 1.5,
-    "rodin_major": 1.2,
-    "rodin_minor": 0.6,
+    "dipole_ring_radius": 0.5,
+    "rodin_major": 1.0,
+    "rodin_minor": 0.9,
     "num_turns": 10
 }
 num_points = 2000

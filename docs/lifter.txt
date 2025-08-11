@@ -1,0 +1,115 @@
+
+ found a video showing clear experiment with the lifter, these are the conclusions:
+setup: 
+
+🔹 1. Oscillator Circuit (Image 1)
+Based on a 74HC14 Schmitt trigger inverter configured as an astable multivibrator (oscillator).
+Generates a square wave signal using:
+A capacitor (100nF),
+A feedback resistor (470k),
+A timing resistor (10k).
+This signal is sent to the IN pin of the IR2104 gate driver.
+
+🔹 2. IR2104-Based Half-Bridge Driver (Image 2)
+The IR2104 drives a pair of IRFP460 N-channel MOSFETs.
+High-side and low-side MOSFETs switch a DC voltage in half-bridge mode.
+Bootstrap capacitor (100µF) is used for high-side gate drive.
+Gate resistors (10Ω) are included to dampen switching transients.
+Powered from a +16V supply via 1N4007 diode.
+
+🔹 3. AC-DC Converter & Bus Capacitor Stage (Image 3)
+A 220V AC input is rectified by a 25A 1000V bridge rectifier.
+Output is filtered by large electrolytic capacitors (470µF, 400V).
+This supplies high-voltage DC (likely around 310V DC) to the half-bridge.
+
+🔹 4. High-Voltage Cockcroft-Walton Multiplier (Image 4)
+A voltage multiplier chain using:
+BY550-1000 diodes
+47µF 350V capacitors
+250 pieces each, suggesting many stages of multiplication.
+Converts the pulsed high-voltage AC from the half-bridge into a very high DC voltage.
+
+🔹 5. HV Output Stage with Load (Image 5)
+Output is 30,000V DC as shown on the voltmeter.
+Includes a 30MΩ bleeder/load resistor.
+Final output of the voltage multiplier chain.
+
+⚡ Final System Summary
+This setup is a DIY high-voltage DC generator (like a Cockcroft–Walton generator) using:
+IR2104 gate driver + IRFP460 half-bridge for high-voltage pulsed DC,
+Cockcroft–Walton voltage multiplier to step up to ~30kV DC,
+Oscillator using 74HC14 for frequency generation.
+
+
+
+Materials:
+rounded balsa stripes,
+aluminum foil,
+thin copper wire
+
+Thrust starts at aprox 15kv
+Time in video discharge Spark: 00:06:57:27 (duration 2 frames)
+Breakdown voltage = 25000V
+it  breaks down at thrust -5 gram 
+@ Time = 00:06:57:29 until 00:06:58:09 The voltage dropt to 8Kv (10 frames at 30fps)
+@ 00:06:58:10 the voltage is at 8Kv while the thrust is still at -6 Grams
+@ 00:06:58:17 The Voltage is rising again and at 10kv and the thrust has stopped dropping to -4 gram
+Next step - polarity reversing
+
+Same breakdown voltage = 25000V
+and same thrust = 6 g
+was registered with reversed polarity
+Next step - increasing gap to 35 mm
+
+With 35 mm gap
+reached voltage = 30000V
+current = between 10 and 15 uA
+maximal thrust = 10 g
+Next step -
+paper shield between electrodes
+
+With paper shield
+thrust is increasing more than twice
+maximal thrust  ~22g 
+reached voltage = 30000V
+current = between 10 and 15 uA
+Next step -
+glass shield between electrodes
+
+With glass shield
+maximal thrust  ~32g 
+reached voltage = 30000V
+current = between 10 and 15 uA
+registered thrust is 20g/1W
+(till corona discharge appears)
+Unwanted corona discharge
+can be seen in darkness
+
+Measurements with glas shield between electrodes
+8kV + 0uA = 0gr
+9kV + 0.1uA = 1gr
+11kV + 0.8uA = 2gr
+12.5kV + 1.1uA = 3gr
+13.5kV + 1.5uA = 4gr
+14.5kV + 1.75uA = 5gr
+15kV + 2uA = 6gr
+16kV + 2.2uA = 7gr
+16.5kV + 2.4uA = 8gr
+17kV + 2.8 uA = 9gr
+18kV + 3uA = 10gr
+18.8kV + 3.5uA = 11gr
+19kV + 3.8uA = 12gr
+19kV + 4uA = 13gr
+20kV + 4uA = 14gr
+20.1kV + 4.1uA = 15gr
+20.3kV + 4.2uA = 16gr
+21kV + 8uA = 17gr (rapid amp rise)
+21.2kV + 8.5uA = 18gr
+22kV + 9.1uA = 19gr
+22.2kV + 9.2uA = 20gr
+
+27.2kV + above 10uA = 30gr
+29kV + above 10uA = 33gr
+
+
+No thrust registered, when paper shield is mounted on lifter

@@ -1,0 +1,621 @@
+%! Author = mr
+%! Date = 8/7/2025
+
+% Preamble
+\documentclass[11pt]{article}
+
+% Packages
+
+\usepackage{amsmath,amssymb,physics}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Document
+\begin{document}
+
+
+
+        \section*{VAM Lagrangian $\mathcal{L}_{\mathrm{VAM}}$ mirroring $\mathcal{L}_{\mathrm{SM}}$}
+
+        We consider an inviscid, incompressible æther ($\nabla\!\cdot\!\vec v = 0$) with absolute time,
+        normalized swirl four–velocity $u^\mu = (1,\vec v/C_e)$, and non–Abelian swirl connection
+        \begin{equation}
+            \mathcal{A}_\mu^a \equiv \frac{\Xi^{a}{}_{i}}{C_e}\,\epsilon_{ijk}\,\partial^j v^k,
+            \quad
+            \mathcal{W}^a_{\mu\nu} = \partial_\mu\mathcal{A}^a_\nu - \partial_\nu\mathcal{A}^a_\mu
+            + g_{\mathrm{sw}} f^{abc} \mathcal{A}^b_\mu \mathcal{A}^c_\nu ,
+        \end{equation}
+        with $a$ labeling internal swirl modes of gauge group $\mathcal{G}_{\mathrm{sw}}$.
+        Density fluctuations are encoded in a real scalar $H$ (\emph{swirl–Higgs}).
+        Knotted quasi–particles are spinor fields $\Psi_K$ labeled by knot class $K$.
+
+        The Lagrangian is organized to parallel the SM gauge–Higgs–fermion–ghost structure:
+        \begin{equation}
+            \mathcal{L}_{\mathrm{VAM}}
+            = \mathcal{L}^{(1)}_{\mathrm{swirl-QCD}}
+            + \mathcal{L}^{(2)}_{\mathrm{swirl-EW}}
+            + \mathcal{L}^{(3)}_{\mathrm{knot-fermions}}
+            + \mathcal{L}^{(4)}_{\mathrm{Yukawa}}
+            + \mathcal{L}^{(5)}_{\mathrm{ghosts}}
+            + \mathcal{L}_{\mathrm{constraints}}.
+        \end{equation}
+
+        \paragraph{(1) Non–Abelian swirl sector.}
+        \begin{equation}
+            \mathcal{L}^{(1)}_{\mathrm{swirl-QCD}}
+            = -\frac{\kappa_\omega}{4}\,\mathcal{W}^a_{\mu\nu}\mathcal{W}^{a\,\mu\nu}
+            + \frac{\lambda_H}{4} H\,\mathcal{W}^a_{\mu\nu}\mathcal{W}^{a\,\mu\nu}
+            + \bar{\Psi}\,\gamma^\mu (iD_\mu)\Psi ,
+        \end{equation}
+        with $D_\mu = \partial_\mu + i g_{\mathrm{sw}}\mathcal{A}_\mu^a T^a$.
+
+        \paragraph{(2) Swirl–EW sector.}
+        In the $SU(2)\times U(1)$ subspace, define
+        \begin{equation}
+            W^\pm_\mu = \frac{1}{\sqrt{2}}(\mathcal{A}^1_\mu \mp i\mathcal{A}^2_\mu),
+            \quad
+            \begin{pmatrix} Z_\mu \\ A_\mu \end{pmatrix}
+            = \begin{pmatrix} \cos\theta_{\mathrm{sw}} & -\sin\theta_{\mathrm{sw}}\\
+            \sin\theta_{\mathrm{sw}} & \phantom{-}\cos\theta_{\mathrm{sw}} \end{pmatrix}
+            \begin{pmatrix} \mathcal{A}^3_\mu \\ \mathcal{B}_\mu \end{pmatrix}.
+        \end{equation}
+        The kinetic and Higgs sectors are
+        \begin{align}
+            \mathcal{L}^{(2)}_{\mathrm{swirl-EW}} &=
+            -\frac{1}{2} | \partial_\mu W_\nu - \partial_\nu W_\mu |^2
+            -\frac14 Z_{\mu\nu} Z^{\mu\nu} - \frac14 A_{\mu\nu}A^{\mu\nu} \nonumber\\
+            &\quad + \frac12 M_W^2 W_\mu^+ W^{-\mu} + \frac12 M_Z^2 Z_\mu Z^\mu
+            + \frac12 (\partial_\mu H)^2 - V(H),
+        \end{align}
+        with
+        \begin{equation}
+            M_W = \frac12 g_{\mathrm{sw}} v_{\mathrm{sw}}, \quad
+            M_Z = \frac{M_W}{\cos\theta_{\mathrm{sw}}}, \quad
+            V(H) = \frac{\lambda}{4}(H^2 - v_{\mathrm{sw}}^2)^2 .
+        \end{equation}
+
+        \paragraph{(3) Knotted fermions.}
+        \begin{equation}
+            \mathcal{L}^{(3)}_{\mathrm{knot-fermions}}
+            = \sum_K \bar{\Psi}_K (i\slashed{D} - m_K)\Psi_K
+            + \sum_K \bar{\Psi}_K\gamma^\mu (g_A Q_A^K A_\mu + g_Z Q_Z^K Z_\mu)\Psi_K
+            + \frac{g_W}{\sqrt{2}} (\bar{\Psi} T^+ \Psi W^+ + \mathrm{h.c.}),
+        \end{equation}
+        where charges $Q_A^K, Q_Z^K, T^\pm$ are topological invariants of the knot class.
+
+        \paragraph{(4) Yukawa–like couplings.}
+        \begin{equation}
+            \mathcal{L}^{(4)}_{\mathrm{Yukawa}}
+            = -\sum_K y_K\, H\, \bar{\Psi}_K\Psi_K + \dots,
+            \quad y_K = \frac{m_K}{v_{\mathrm{sw}}}.
+        \end{equation}
+
+        \paragraph{(5) Ghosts and constraints.}
+        \begin{equation}
+            \mathcal{L}^{(5)}_{\mathrm{ghosts}}
+            = -\frac{1}{2\xi}(\partial^\mu \mathcal{A}^a_\mu)^2 + \bar{c}^a\partial^\mu D_\mu^{ab} c^b,
+            \quad
+            \mathcal{L}_{\mathrm{constraints}}
+            = \lambda\,(\nabla\!\cdot\!\vec v) + \eta\,(u_\mu u^\mu - 1).
+        \end{equation}
+
+        \bigskip
+        Full cubic/quartic interactions, gauge–Higgs couplings, ghost multiplets, and explicit parameter expressions are given in Appendix~A.
+
+
+
+
+
+
+    \section*{VAM Lagrangian \(\mathcal{L}_\text{VAM}\) mirroring \(\mathcal{L}_{SM}\)}
+
+%----------------------------- PRELUDE: FIELDS & CONSTANTS
+    \noindent\textbf{Kinematics and fields.}
+    Let the æther be inviscid, incompressible (\(\nabla\!\cdot\!\vec v=0\)), with absolute time.
+    Introduce the swirl 4-velocity \(u^\mu=(1,\vec v/C_e)\) with \(u_\mu u^\mu=1\), and define the non-Abelian \emph{swirl connection}
+    \[
+        \mathcal{A}_\mu^a \equiv \frac{1}{C_e}\, \Xi^{a}{}_{i}\, \epsilon_{ijk}\,\partial^j v^k,
+        \qquad
+        \mathcal{W}_{\mu\nu}^a=\partial_\mu \mathcal{A}_\nu^a-\partial_\nu \mathcal{A}_\mu^a
+        + g_\text{sw} f^{abc} \mathcal{A}_\mu^b \mathcal{A}_\nu^c,
+    \]
+    where \(a=1,\dots,N_\text{sw}\) indexes internal swirl modes (knot/color space), \(f^{abc}\) are the structure constants of the vortex-gauge group \(\mathcal{G}_\text{sw}\) (typically \(SU(2)\) or \(SU(3)\) in VAM-6), and \(\Xi^{a}{}_{i}\) projects physical vorticity to internal modes.
+    The \emph{swirl-Higgs} \(H\) encodes compressional/density fluctuations \(H\propto \delta\rho_\text{\ae}\).
+    Knotted quasi-particles (fermions) are fields \(\Psi_K\) labelled by vortex-knot type \(K\) (leptons/quarks).
+    Set \(\rho_\text{\ae}^{(\text{fluid})}\) or \(\rho_\text{\ae}^{(\text{mass})}\) per context \cite{Iskandarani2025TimeDilation,Iskandarani2025SwirlClocks}.
+
+    The full VAM Lagrangian:
+    \[
+        \mathcal{L}_\text{VAM}=\mathcal{L}^{(1)}_{\text{swirl-QCD}}
+        +\mathcal{L}^{(2)}_{\text{swirl-EW}}
+        +\mathcal{L}^{(3)}_{\text{knot-fermions}}
+        +\mathcal{L}^{(4)}_{\text{Yukawa-like}}
+        +\mathcal{L}^{(5)}_{\text{gauge-fixing/ghosts}}
+        +\mathcal{L}_\text{constraints}.
+    \]
+
+%----------------------------- (1) GLUON / GAUGE SECTOR
+    \paragraph{(1) QCD-like non-Abelian swirl sector (SM gluon block).}
+    \[
+        \boxed{\ \mathcal{L}^{(1)}_{\text{swirl-QCD}}
+            = -\frac{\kappa_\omega}{4}\, \mathcal{W}^a_{\mu\nu}\mathcal{W}^{a\,\mu\nu}
+            \;+\; \frac{\lambda_H}{4}\, H\, \mathcal{W}^a_{\mu\nu}\mathcal{W}^{a\,\mu\nu}
+            \;+\; \bar{\Psi}\, \gamma^\mu \big(i D_\mu\big)\Psi\ }
+    \]
+    with \(D_\mu=\partial_\mu+i g_\text{sw} \mathcal{A}_\mu^a T^a\).
+    The first term replaces the gluon kinetic/self-interaction; cubic and quartic gauge terms reside in \(\mathcal{W}\) via \(f^{abc}\). The \(H\)-mixing term encodes density-modulated gauge stiffness (vortex-core renormalization) \cite{Iskandarani2025EmergentGR,Iskandarani2025TopLag}.
+    The coupling \(\kappa_\omega\sim \rho_\text{\ae} C_e^2\) sets the swirl field energy scale.
+
+%----------------------------- (2) ELECTROWEAK-LIKE VECTOR & HIGGS
+    \paragraph{(2) Electroweak-like composite vector modes and swirl-Higgs (SM W/Z/A/H block).}
+    Define three orthogonal \emph{composite} vector excitations from \(\mathcal{A}_\mu^a\):
+    \[
+        W_\mu^\pm \equiv \frac{1}{\sqrt{2}}\big(\mathcal{A}_\mu^1 \mp i \mathcal{A}_\mu^2\big),\qquad
+        \begin{pmatrix} Z_\mu \\ A_\mu \end{pmatrix}
+        =\begin{pmatrix} \cos\theta_\text{sw} & -\sin\theta_\text{sw}\\ \sin\theta_\text{sw}& \cos\theta_\text{sw}\end{pmatrix}
+        \begin{pmatrix} \mathcal{A}_\mu^3 \\ \mathcal{B}_\mu \end{pmatrix},
+    \]
+    where \(\mathcal{B}_\mu\) is an Abelian swirl potential (circulation mode), and \(\theta_\text{sw}\) is the \emph{swirl mixing angle} (VAM analogue of \(\theta_W\)) emerging from the background condensate. Then
+    \[
+        \boxed{\ \begin{aligned}
+                     \mathcal{L}^{(2)}_{\text{swirl-EW}}=&
+                     -\tfrac{1}{2}(\partial_\nu W_\mu^+ - \partial_\mu W_\nu^+)(\partial^\nu W^{-\mu}-\partial^\mu W^{-\nu})
+                     -\tfrac{1}{4} Z_{\mu\nu}Z^{\mu\nu}
+                     -\tfrac{1}{4} A_{\mu\nu}A^{\mu\nu}\\
+                     &+\tfrac{1}{2} M_W^2\, W_\mu^+ W^{-\mu}
+                     +\tfrac{1}{2} M_Z^2\, Z_\mu Z^\mu
+                     +\tfrac{1}{2}(\partial_\mu H)(\partial^\mu H)-V(H)\\
+                     &+ \text{(cubic \& quartic self/mixed vector terms fixed by }\mathcal{G}_\text{sw},\theta_\text{sw}).
+        \end{aligned}\ }
+    \]
+    Masses arise from a swirl condensate \(\langle H\rangle=v_\text{sw}\) breaking internal swirl isotropy:
+    \[
+        M_W=\tfrac{1}{2} g_\text{sw} v_\text{sw},\qquad M_Z=\frac{M_W}{\cos\theta_\text{sw}},
+        \qquad V(H)=\frac{\lambda}{4}(H^2-v_\text{sw}^2)^2,
+    \]
+    with \(v_\text{sw}^2 \sim \rho_\text{\ae} C_e^2/\Lambda^2\) determined by core-radius physics \(r_c\) \cite{Iskandarani2025TimeDilation,Iskandarani2025SwirlClocks,Iskandarani2025Master}.
+    The listed SM-like derivative and self-interaction structures map to the non-Abelian form induced by \(\mathcal{W}_{\mu\nu}^a\) and the mixing \(\theta_\text{sw}\).
+
+%----------------------------- (3) FERMIONIC KNOTS AND GAUGE COUPLINGS
+    \paragraph{(3) Knotted fermions and swirl-gauge couplings (SM fermion/gauge block).}
+    For each knot species \(K\in\{\ell,\nu,u,d,\dots\}\),
+    \[
+        \boxed{\ \mathcal{L}^{(3)}_{\text{knot-fermions}}=
+            \sum_{K}\bar{\Psi}_K\!\left(i\gamma^\mu D_\mu - m_K\right)\!\Psi_K
+            +\sum_{K} \bar{\Psi}_K \gamma^\mu\left( g_A Q_A^K A_\mu + g_Z Q_Z^K Z_\mu + g_W W_\mu^\pm T^\pm\right)\Psi_K\ }
+    \]
+    where charges \(Q^K\) are \emph{topological swirl charges} (linking/chirality numbers) determined by the knot class and orientation \cite{Iskandarani2025TopLag,Iskandarani2025KnottedGauge}.
+    The masses \(m_K\) derive from the VAM mass functional (core volume and coherence):
+    \[
+        m_K=\frac{4}{\alpha\varphi}\Big(\tfrac{1}{2}\rho_\text{\ae}^{(\text{energy})} C_e^2\Big)\, V_K \,\xi(n_K)
+        \quad\text{with}\quad \xi(n)=1+\beta \log n,
+    \]
+    as adopted in VAM benchmarking \cite{Iskandarani2025Master,Iskandarani2025Benchmark}.
+
+%----------------------------- (4) YUKAWA-LIKE COUPLINGS TO SWIRL-HIGGS
+    \paragraph{(4) Knot–Higgs (density) couplings (SM Yukawa/Higgs–fermion block).}
+    \[
+        \boxed{\ \mathcal{L}^{(4)}_{\text{Yukawa-like}}=
+            -\sum_{K} y_K\, H\, \bar{\Psi}_K \Psi_K
+            -\sum_{K} \tilde{y}_K \,\phi^0\, \bar{\Psi}_K i\gamma^5 \Psi_K
+            -\sum_{K,K'} \big[ y_{KK'}^\pm\, \phi^\pm\, \bar{\Psi}_K T^\pm \Psi_{K'} + \text{h.c.}\big]\ }
+    \]
+    where \(H\) modulates \(\rho_\text{\ae}\) and thus the local core energy; pseudoscalar \(\phi^0\) and charged \(\phi^\pm\) are the phase (Goldstone-like) components of the density field (they become the longitudinal polarizations of \(Z,W^\pm\) in the condensed phase).
+    Couplings satisfy \(y_K = m_K/v_\text{sw}\) (VAM analogue of SM relation) \cite{Iskandarani2025Master,Iskandarani2025TopLag}.
+
+%----------------------------- (5) GAUGE-FIXING, GHOSTS, AND CONSTRAINTS
+    \paragraph{(5) Gauge fixing, incompressibility, and ghost sector (SM FP-ghost block).}
+    \[
+        \boxed{\ \mathcal{L}^{(5)}_{\text{gauge-fixing/ghosts}}=
+            -\frac{1}{2\xi}\big(\partial^\mu \mathcal{A}_\mu^a\big)^2
+            +\bar{c}^a\,\partial^\mu D_\mu^{ab} c^b
+            \qquad\text{(non-Abelian FP ghosts)}\ }
+    \]
+    and enforce incompressibility and absolute-time constraint by
+    \[
+        \boxed{\ \mathcal{L}_\text{constraints}=\lambda\,(\nabla\!\cdot\!\vec v)\;+\; \eta\,(u_\mu u^\mu-1)\ ,\ }
+    \]
+    with Lagrange multipliers \(\lambda,\eta\) \cite{Iskandarani2025EmergentGR,Iskandarani2025TimeDilation}.
+    In a Clebsch representation \( \vec v=\nabla \theta + \alpha \nabla \beta \), residual gauge symmetries induce additional Abelian ghosts, reproducing the role of the SM’s auxiliary fields \cite{Iskandarani2025TopLag}.
+
+%----------------------------- DIMENSIONAL NORMALIZATION
+    \paragraph{Normalization and dimensions.}
+    Choose
+    \[
+        \kappa_\omega=\rho_\text{\ae}^{(\text{fluid})} C_e^2,\qquad
+        g_\text{sw}=\frac{C_e}{r_c}\,\gamma_\mathcal{G},\qquad
+        v_\text{sw}^2=\chi\,\rho_\text{\ae}^{(\text{energy})}\, C_e^{-2},
+    \]
+    with \(r_c\) the vortex-core scale and \(\gamma_\mathcal{G},\chi\) dimensionless; this makes all kinetic terms \([\mathcal{L}]=\text{energy density}\) and reproduces SM-like relations \(M_W=\tfrac{1}{2}g_\text{sw}v_\text{sw}\), \(M_Z=M_W/\cos\theta_\text{sw}\) in the condensed phase, while keeping VAM’s fluid ontology explicit.
+
+    \bigskip
+    \noindent\textbf{Remarks (one-to-one map to SM blocks).}
+    \begin{itemize}[leftmargin=1.2em]
+        \item \emph{(1)} The three- and four-gauge-boson self-interactions in the SM gluon sector are generated here by the nonlinearity in \(\mathcal{W}^a_{\mu\nu}\) with \(f^{abc}\). The extra \(H\,\mathcal{W}^2\) term captures density-induced “running” of the effective stiffness (swirl analogue of vacuum polarization).
+        \item \emph{(2)} The long list of SM’s \(W/Z/A/H\) derivative/self-couplings descends from the same non-Abelian algebra after mixing by \(\theta_\text{sw}\); the Proca masses appear from \(\langle H\rangle\neq 0\) (broken swirl isotropy).
+        \item \emph{(3)} SM fermionic currents and chiral projectors are replaced by knot charges and chirality (vortex time orientation). Left/right couplings enter via \(T^\pm\) and \(Q_Z^K\) fixed by the knot’s chirality class.
+        \item \emph{(4)} SM Yukawas become geometric: \(y_K=m_K/v_\text{sw}\) with \(m_K\) from the VAM mass functional (core volume, coherence factor \(\xi(n)\)).
+        \item \emph{(5)} Gauge-fixing/ghost terms are retained in the non-Abelian swirl bundle; incompressibility enters as a hard constraint rather than a dynamical equation of state.
+    \end{itemize}
+
+%----------------------------- BIBLIOGRAPHY KEYS
+    \begin{thebibliography}{9}
+        \bibitem{Iskandarani2025TimeDilation}
+        O.~Iskandarani, \emph{Time Dilation in a 3D Superfluid \AE ther Model} (VAM-1), Zenodo (2025).
+
+        \bibitem{Iskandarani2025SwirlClocks}
+        O.~Iskandarani, \emph{Swirl Clocks and Vorticity-Induced Gravity} (VAM-2), Zenodo (2025).
+
+        \bibitem{Iskandarani2025EmergentGR}
+        O.~Iskandarani, \emph{Emergent General Relativity from Structured Swirl Dynamics in VAM} (VAM-4), Zenodo (2025).
+
+        \bibitem{Iskandarani2025Benchmark}
+        O.~Iskandarani, \emph{Benchmarking Vortex \AE ther Model vs General Relativity} (VAM-3), Zenodo (2025).
+
+        \bibitem{Iskandarani2025Master}
+        O.~Iskandarani, \emph{Master Equation for Particle Masses} (VAM-11), Zenodo (2025).
+
+        \bibitem{Iskandarani2025TopLag}
+        O.~Iskandarani, \emph{Topological Fluid Dynamics Lagrangian} (VAM-14), Zenodo (2025).
+
+        \bibitem{Iskandarani2025KnottedGauge}
+        O.~Iskandarani, \emph{Knotted Gauge Fields} (VAM-6), Zenodo (2025).
+    \end{thebibliography}
+
+
+
+
+    \section*{A Fully-Expanded VAM Lagrangian \(\mathcal{L}_\text{VAM}\) Mirroring \(\mathcal{L}_{SM}\)}
+
+% ===========================================================
+% CONSTANTS & SCALES USED THROUGHOUT (pull from constants_dict)
+% ===========================================================
+% Core VAM constants
+    \newcommand{\Ce}{C_e}
+    \newcommand{\rhof}{\rho_\text{\ae}^{(\text{fluid})}}
+    \newcommand{\rhom}{\rho_\text{\ae}^{(\text{mass})}}
+    \newcommand{\rhoe}{\rho_\text{\ae}^{(\text{energy})}}
+
+% Numerically (per user constants_dict and notes):
+%   \Ce \approx 1.09384563\times 10^6\ \text{m s}^{-1}
+%   \rhof = 7.0\times 10^{-7}\ \text{kg m}^{-3}
+%   \rhom = 3.8934358266918687\times 10^{18}\ \text{kg m}^{-3}
+%   \rhoe = 3.49924562\times 10^{35}\ \text{J m}^{-3}
+% Other recurring constants
+    \newcommand{\alphaEM}{\alpha}       % fine-structure
+    \newcommand{\phiG}{\varphi}         % golden mean
+% user notes: \phiG \approx 0.618...,  \alphaEM = e^2/(4\pi\epsilon_0 \hbar c)
+
+% Vortex-core and Planck scales (user-provided or derived)
+    \newcommand{\rc}{r_c}               % vortex core radius
+    \newcommand{\tp}{t_p}               % Planck time
+    \newcommand{\Fmax}{F_{\text{max}}}  % max swirl force scale
+    \newcommand{\CeC}{C_e}              % alias for clarity in some formulas
+    \newcommand{\Ck}{C_\kappa}          % stiffness normalization (dimensionless)
+    \newcommand{\Cg}{C_g}               % group normalization (dimensionless)
+
+% Gravitational-swirl coupling (user-stipulated exact identity to G):
+%   G_\text{swirl} = (C_e c^5 t_p^2)/(2 F_{\max} r_c^2)
+    \newcommand{\Gsw}{G_\text{swirl}}
+    \newcommand{\cspeed}{c}
+
+% ===========================================================
+% KINEMATICAL SETUP & FIELDS
+% ===========================================================
+% Æther kinematics and swirl-gauge bundle
+    \noindent\textbf{Fields and kinematics.}
+    Let the æther be inviscid and incompressible, with velocity field \(\vec v(\vec x,t)\) satisfying \(\nabla\!\cdot\!\vec v=0\).
+    Define a normalized swirl four-velocity \(u^\mu=(1,\vec v/\Ce)\) with constraint \(u_\mu u^\mu=1\).
+    Introduce a non-Abelian swirl connection \(\mathcal{A}_\mu^a\) valued in the Lie algebra of \(\mathcal{G}_\text{sw}\) with structure constants \(f^{abc}\):
+    \begin{align}
+        \mathcal{A}_\mu^a &\equiv \frac{\Xi^{a}{}_i}{\Ce}\,\epsilon_{ijk}\,\partial^j v^k\, \delta^i{}_\mu \quad (\mu=i\in\{1,2,3\}),\qquad \mathcal{A}_0^a \equiv 0,\\
+        \mathcal{W}_{\mu\nu}^a &\equiv \partial_\mu \mathcal{A}_\nu^a - \partial_\nu \mathcal{A}_\mu^a + g_\text{sw} f^{abc}\,\mathcal{A}_\mu^b \mathcal{A}_\nu^c.
+    \end{align}
+    Here \(\Xi^{a}{}_i\) projects physical vorticity into internal swirl modes \(a=1,\dots,N_\text{sw}\).
+    We also include an Abelian circulation potential \(\mathcal{B}_\mu\) (for the mixing to a photon-like mode).
+    Density fluctuations are encoded by a real scalar \(H\) (swirl-Higgs), and its phase modes \(\phi^0,\phi^\pm\) (would-be Goldstones).
+    Knotted quasi-particles (fermions) are spinor fields \(\Psi_{K}\) labeled by knot class \(K\) (leptons, quarks, neutrinos).
+
+% Swirl couplings and normalizations in terms of user constants
+    \noindent\textbf{Couplings and normalizations (expressed in user constants).}
+    \begin{align}
+        \kappa_\omega &\equiv \rhof\, \Ce^2,
+        & [\kappa_\omega] &= \text{J m}^{-3},\\
+        g_\text{sw} &\equiv \frac{\Ce}{\rc}\,\Cg,
+        & [g_\text{sw}]&=\text{s}^{-1},\\
+        v_\text{sw}^2 &\equiv \chi\,\frac{\rhoe}{\Ce^2},
+        & [v_\text{sw}]&=\text{(same units as }H\text{)}.
+    \end{align}
+    \(\Ck,\Cg,\chi\) are dimensionless \emph{fit} factors to be fixed by benchmarks (e.g.\ VAM-3).
+    The swirl mixing angle \(\theta_\text{sw}\) is fixed by the condensate susceptibility and group embedding (see below).
+
+% ===========================================================
+% TOTAL LAGRANGIAN STRUCTURE
+% ===========================================================
+    The complete Lagrangian is:
+    \begin{equation}
+        \boxed{
+            \mathcal{L}_\text{VAM} \;=\;
+            \mathcal{L}^{(1)}_{\text{swirl-QCD}}
+            +\mathcal{L}^{(2)}_{\text{swirl-EW}}
+            +\mathcal{L}^{(3)}_{\text{knot-fermions}}
+            +\mathcal{L}^{(4)}_{\text{Yukawa-like}}
+            +\mathcal{L}^{(5)}_{\text{ghosts/gauge-fix}}
+            +\mathcal{L}_{\text{constraints}}.
+        }
+    \end{equation}
+
+% ===========================================================
+% (1) NON-ABELIAN SWIRL (GLUON ANALOG)
+% ===========================================================
+    \paragraph{(1) Non-Abelian swirl sector (SM block 1).}
+    \begin{align}
+        \boxed{
+            \mathcal{L}^{(1)}_{\text{swirl-QCD}}
+            = -\frac{\kappa_\omega}{4}\,\mathcal{W}^a_{\mu\nu}\mathcal{W}^{a\,\mu\nu}
+            +\frac{\lambda_H}{4}\,H\,\mathcal{W}^a_{\mu\nu}\mathcal{W}^{a\,\mu\nu}
+            +\bar{\Psi}\,\gamma^\mu(iD_\mu)\Psi
+        }
+    \end{align}
+    with \(D_\mu=\partial_\mu+i g_\text{sw}\,\mathcal{A}_\mu^a T^a\) and \(\lambda_H\) a density–stiffness modulation coupling.
+    The cubic and quartic self-interactions reside in \(\mathcal{W}^2\) via \(f^{abc}\).
+
+% ===========================================================
+% (2) SWIRL-EW: W/Z/A/H, EXPLICIT MIXING & INTERACTIONS
+% ===========================================================
+    \paragraph{(2) Swirl-EW sector (SM block 2) with explicit mixing and interactions.}
+    Choose an $SU(2)\times U(1)$ swirl subgroup generated by $(\mathcal{A}_\mu^1,\mathcal{A}_\mu^2,\mathcal{A}_\mu^3)$ and an Abelian \(\mathcal{B}_\mu\).
+    Define
+    \begin{align}
+        W^\pm_\mu &\equiv \frac{1}{\sqrt{2}}\big(\mathcal{A}_\mu^1 \mp i \mathcal{A}_\mu^2\big),\\
+        \begin{pmatrix} Z_\mu \\ A_\mu \end{pmatrix}
+        &\equiv
+        \begin{pmatrix}
+            \cos\theta_\text{sw} & -\sin\theta_\text{sw}\\
+            \sin\theta_\text{sw} & \phantom{-}\cos\theta_\text{sw}
+        \end{pmatrix}
+        \begin{pmatrix}
+            \mathcal{A}_\mu^3 \\ \mathcal{B}_\mu
+        \end{pmatrix}.
+    \end{align}
+    Let $s_\text{sw}\equiv \sin\theta_\text{sw}$, $c_\text{sw}\equiv \cos\theta_\text{sw}$.
+    Kinetic sector:
+    \begin{align}
+        \mathcal{L}^{(2)}_{\text{kin}} \;=\;
+        -\frac{1}{2}(\partial_\nu W_\mu^+ - \partial_\mu W_\nu^+)(\partial^\nu W^{-\mu}-\partial^\mu W^{-\nu})
+        -\frac{1}{4}Z_{\mu\nu}Z^{\mu\nu}
+        -\frac{1}{4}A_{\mu\nu}A^{\mu\nu},
+    \end{align}
+    with field strengths $Z_{\mu\nu}=\partial_\mu Z_\nu-\partial_\nu Z_\mu$, $A_{\mu\nu}=\partial_\mu A_\nu-\partial_\nu A_\mu$.
+
+    Spontaneous swirl-symmetry breaking via \(\langle H\rangle = v_\text{sw}\) gives masses
+    \begin{align}
+        M_W &= \frac{1}{2} g_\text{sw}\, v_\text{sw},
+        &
+        M_Z &= \frac{M_W}{c_\text{sw}},
+        &
+        M_A &= 0.
+    \end{align}
+    The swirl-Higgs potential and kinetic term:
+    \begin{align}
+        \mathcal{L}^{(2)}_{H}&=\frac{1}{2}(\partial_\mu H)(\partial^\mu H) - V(H),\qquad
+        V(H)=\frac{\lambda}{4}\,(H^2 - v_\text{sw}^2)^2,
+    \end{align}
+    with \(\lambda>0\).  The would-be Goldstones \(\phi^0,\phi^\pm\) become the longitudinal modes of \(Z,W^\pm\) in $R_\xi$ gauges.
+
+    \noindent\textbf{Explicit cubic interactions (from non-Abelian structure):}
+    \begin{align}
+        \mathcal{L}^{(2)}_{\text{cubic}}
+        &= i g_\text{sw}\Big[
+            (\partial_\mu W_\nu^+ - \partial_\nu W_\mu^+) W^{-\mu} \mathcal{A}^{3\nu}
+            -(\partial_\mu W_\nu^- - \partial_\nu W_\mu^-) W^{+\mu} \mathcal{A}^{3\nu}
+            \nonumber\\
+            &\qquad
+            +(\partial_\mu \mathcal{A}_\nu^3 - \partial_\nu \mathcal{A}_\mu^3) W^{+\mu} W^{-\nu}
+            \Big] \;+\; \text{mixing into } (Z_\mu, A_\mu)\text{ via } \theta_\text{sw} \\
+        &= i g_\text{sw}\Big\{
+        c_\text{sw}\big[
+            (\partial_\mu W_\nu^+ - \partial_\nu W_\mu^+) W^{-\mu} Z^{\nu}
+            -(\partial_\mu W_\nu^- - \partial_\nu W_\mu^-) W^{+\mu} Z^{\nu}
+            +( \partial_\mu Z_\nu - \partial_\nu Z_\mu) W^{+\mu} W^{-\nu}
+            \big]\nonumber\\
+        &\quad + s_\text{sw}\big[
+            (\partial_\mu W_\nu^+ - \partial_\nu W_\mu^+) W^{-\mu} A^{\nu}
+            -(\partial_\mu W_\nu^- - \partial_\nu W_\mu^-) W^{+\mu} A^{\nu}
+            +( \partial_\mu A_\nu - \partial_\nu A_\mu) W^{+\mu} W^{-\nu}
+            \big]
+        \Big\}. \label{eq:cubic}
+    \end{align}
+
+    \noindent\textbf{Explicit quartic interactions (from \(f^{abc}f^{ade}\) terms):}
+    \begin{align}
+        \mathcal{L}^{(2)}_{\text{quartic}}
+        &= -\frac{g_\text{sw}^2}{2}\Big[
+            W_\mu^+ W^{-\mu} W_\nu^+ W^{-\nu}
+            - W_\mu^+ W_\nu^- W^{+\mu} W^{-\nu}
+            \Big]\nonumber\\
+        &\quad - g_\text{sw}^2 \Big[
+            c_\text{sw}^2 \big( Z_\mu Z^\mu W_\nu^+ W^{-\nu} - Z_\mu W^{+\mu} Z_\nu W^{-\nu} \big)
+            + s_\text{sw}^2 \big( A_\mu A^\mu W_\nu^+ W^{-\nu} - A_\mu W^{+\mu} A_\nu W^{-\nu} \big)\nonumber\\
+            &\qquad\qquad
+            + s_\text{sw} c_\text{sw} \big( Z_\mu A^\mu W_\nu^+ W^{-\nu} - Z_\mu W^{+\mu} A_\nu W^{-\nu} - A_\mu W^{+\mu} Z_\nu W^{-\nu} + A_\mu Z^\mu W_\nu^+ W^{-\nu}\big)
+            \Big]. \label{eq:quartic}
+    \end{align}
+
+    \noindent\textbf{Vector--Higgs interactions (mass-generating and higher):}
+    \begin{align}
+        \mathcal{L}^{(2)}_{\text{VH}}
+        &= g_\text{sw} M_W\, H\, W_\mu^+ W^{-\mu}
+        + \frac{g_\text{sw} M_Z}{2 c_\text{sw}^2}\, H\, Z_\mu Z^\mu
+        \nonumber\\
+        &\quad
+        - \frac{g_\text{sw}^2}{4}\, H^2 \left(2\,W_\mu^+ W^{-\mu} + \frac{1}{c_\text{sw}^2} Z_\mu Z^\mu\right)
+        % Goldstone-gradient terms (\phi^0,\phi^\pm) in R_\xi\ gauges
+        + \text{(Goldstone-gradient terms $\phi^0,\phi^\pm$ in $R_\xi$ gauges)}
+        \label{eq:VH}
+    \end{align}
+
+    All the long SM structures in your block (2) are generated by Eqs.~\eqref{eq:cubic},\eqref{eq:quartic},\eqref{eq:VH} after expanding $s_\text{sw},c_\text{sw}$ and canonical normalizations.
+
+% ===========================================================
+% (3) FERMIONIC KNOTS + GAUGE COUPLINGS
+% ===========================================================
+    \paragraph{(3) Knotted fermions and swirl charges (SM block 3).}
+    For each knot species \(K\in\{\ell, \nu, u, d, \dots\}\), with topological charges \((Q_A^K,Q_Z^K,T^\pm)\) fixed by knot/linking and chirality:
+    \begin{align}
+        \mathcal{L}^{(3)}_{\text{knot-fermions}}
+        &= \sum_K \bar{\Psi}_K \left(i\gamma^\mu \partial_\mu - m_K\right)\Psi_K
+        + \sum_K \bar{\Psi}_K \gamma^\mu \left( g_A Q_A^K A_\mu + g_Z Q_Z^K Z_\mu \right)\Psi_K
+        \nonumber\\
+        &\quad + \frac{g_W}{\sqrt{2}} \left[ \bar{\Psi}_u \gamma^\mu T^+ \Psi_d\, W_\mu^+ + \bar{\Psi}_d \gamma^\mu T^- \Psi_u\, W_\mu^- \right],
+    \end{align}
+    where the physical couplings are
+    \begin{align}
+        g_W &= g_\text{sw},\qquad
+        g_Z = \frac{g_\text{sw}}{c_\text{sw}},\qquad
+        g_A = g_\text{sw}\, s_\text{sw}.
+    \end{align}
+    Masses come from the VAM mass functional adopted in your project:
+    \begin{align}
+        \boxed{
+            m_K \;=\; \frac{4}{\alphaEM\,\phiG}\,
+            \Big(\tfrac{1}{2}\,\rhoe\,\Ce^2\Big)\,
+            V_K \,\xi(n_K),
+            \qquad \xi(n)\equiv 1+\beta\log n,
+        }
+    \end{align}
+    with \(V_K\) the core volume tied to the knot geometry (and \(\rc\)), and \(\beta\) a fitted coherence parameter.
+
+% ===========================================================
+% (4) YUKAWA-LIKE COUPLINGS TO SWIRL-HIGGS
+% ===========================================================
+    \paragraph{(4) Knot--Higgs (density) interactions (SM block 4).}
+    In the broken phase,
+    \begin{align}
+        \mathcal{L}^{(4)}_{\text{Yukawa-like}}
+        &= -\sum_K y_K\, H\, \bar{\Psi}_K \Psi_K
+        -\sum_K \tilde{y}_K\, \phi^0\, \bar{\Psi}_K i\gamma^5 \Psi_K
+        \nonumber\\
+        &\quad - \sum_{K,K'} \left[ y_{KK'}^{(+)}\, \phi^+\, \bar{\Psi}_K T^+ \Psi_{K'}
+                                 + y_{KK'}^{(-)}\, \phi^-\, \bar{\Psi}_K T^- \Psi_{K'}  \right],
+    \end{align}
+    with the \emph{geometric Yukawa} identification
+    \begin{align}
+        \boxed{
+            y_K \;=\; \frac{m_K}{v_\text{sw}} \;=\;
+            \frac{4}{\alphaEM\,\phiG}\,
+            \frac{(\tfrac{1}{2}\rhoe \Ce^2)\, V_K\, \xi(n_K)}{v_\text{sw}}.
+        }
+    \end{align}
+    The $\phi^0,\phi^\pm$ interactions reproduce the axial/charged currents as in SM (your long block 4), now topologically organized.
+
+% ===========================================================
+% (5) GHOSTS, GAUGE-FIXING, CONSTRAINTS (incl. X,Y analogs)
+% ===========================================================
+    \paragraph{(5) Gauge-fixing, FP ghosts, Clebsch ghosts (SM block 5 analog).}
+    \begin{align}
+        \mathcal{L}^{(5)}_{\text{ghosts/gauge-fix}}
+        &= -\frac{1}{2\xi}\,(\partial^\mu \mathcal{A}^a_\mu)^2
+        + \bar{c}^a\, \partial^\mu D_\mu^{ab} c^b
+        + \bar{\tilde c}\,\partial^2 \tilde c \quad \text{(Clebsch-Abelian)},
+    \end{align}
+    where \(D_\mu^{ab}=\partial_\mu\delta^{ab}+g_\text{sw} f^{acb}\mathcal{A}_\mu^c\).
+    The additional $(X^\pm,X^0,Y)$ of your block (5) can be identified with (linear combinations of) non-physical ghost doublets associated to the $SU(2)$ and Abelian Clebsch sectors, with mass parameters tied to the gauge parameter $\xi$ and $M_W,M_Z$ in $R_\xi$ gauges:
+    \begin{align}
+        \mathcal{L}^{(5)}_{X,Y}
+        &= \bar{X}^+(\partial^2-\xi M_W^2)X^+
+        +\bar{X}^-(\partial^2-\xi M_W^2)X^-
+        +\bar{X}^0(\partial^2-\xi M_Z^2)X^0
+        +\bar{Y}\,\partial^2 Y \nonumber\\
+        &\quad + i g_\text{sw}\, c_\text{sw}\,
+        \big[ W^{+\mu}(\partial_\mu \bar{X}^0 X^- - \partial_\mu \bar{X}^+ X^0)
+        + W^{-\mu}(\partial_\mu \bar{X}^- X^0 - \partial_\mu \bar{X}^0 X^+) \big] \nonumber\\
+        &\quad + i g_\text{sw}\, s_\text{sw}\,
+        \big[ W^{+\mu}(\partial_\mu \bar{Y} X^- - \partial_\mu \bar{X}^+ Y)
+        + W^{-\mu}(\partial_\mu \bar{X}^- Y - \partial_\mu \bar{Y} X^+)\big] \nonumber\\
+        &\quad + \dots\quad \text{(further ghost--Goldstone terms per gauge choice)}.
+    \end{align}
+
+    \paragraph{Incompressibility and absolute-time constraints.}
+    \begin{align}
+        \mathcal{L}_{\text{constraints}}
+        = \lambda\,(\nabla\!\cdot\!\vec v)
+        + \eta\, (u_\mu u^\mu - 1),
+    \end{align}
+    with Lagrange multipliers \(\lambda,\eta\).
+
+% ===========================================================
+% PARAMETER RELATIONS IN TERMS OF USER CONSTANTS
+% ===========================================================
+    \paragraph{Parameter summary in your constants (ready to plug numerically).}
+    \begin{align}
+        \kappa_\omega &= \rhof\,\Ce^2,
+        &
+        g_\text{sw} &= \frac{\Ce}{\rc}\,\Cg,
+        &
+        v_\text{sw} &= \sqrt{\chi\,\frac{\rhoe}{\Ce^2}},
+        \\[4pt]
+        M_W &= \frac{1}{2} g_\text{sw} v_\text{sw}
+        = \frac{1}{2}\,\frac{\Ce}{\rc}\,\Cg \,\sqrt{\chi\,\frac{\rhoe}{\Ce^2}}
+        = \frac{\Cg \sqrt{\chi}}{2\rc}\,\sqrt{\rhoe},
+        \\
+        M_Z &= \frac{M_W}{c_\text{sw}},\qquad M_A=0, \qquad
+        m_K = \frac{4}{\alphaEM\,\phiG}\Big(\tfrac{1}{2}\rhoe \Ce^2\Big)V_K\,\xi(n_K),\qquad
+        y_K = \frac{m_K}{v_\text{sw}}.
+    \end{align}
+    Note the particularly transparent expression \(M_W=\tfrac{\Cg \sqrt{\chi}}{2\rc}\sqrt{\rhoe}\) independent of \(C_e\) after substitution.
+
+% ===========================================================
+% LIMIT CHECKS & DIMENSIONAL CONSISTENCY
+% ===========================================================
+    \paragraph{Sanity checks.}
+    \emph{Irrotational limit:} \(\vec\omega\to 0\Rightarrow \mathcal{A}_\mu^a\to 0\), so vectors decouple;
+    \(\mathcal{L}\to \tfrac{1}{2}(\partial H)^2 - V(H) + \sum_K \bar{\Psi}_K(i\slashed{\partial}-m_K)\Psi_K\).\\
+    \emph{Dimensions:} \([\kappa_\omega]=\text{J m}^{-3}\), \([\mathcal{W}] = \text{s}^{-1}\), so \([\kappa_\omega\,\mathcal{W}^2]=\text{J m}^{-3}\).
+    \(g_\text{sw}\) has \([\text{s}^{-1}]\); with $v_\text{sw}$ carrying the scalar-field unit, $M_{W,Z}$ carry energy units (set $c=\hbar=1$ inside the field sector if desired; or keep SI explicitly).
+
+% ===========================================================
+% REFERENCES TO VAM PAPERS (BIBTEX KEYS)
+% ===========================================================
+    \begin{thebibliography}{9}
+
+        \bibitem{Iskandarani2025-VAM0}
+        O.~Iskandarani,
+        \emph{Revisiting the \AE ther: From Einstein to the Vortex Fluid Paradigm} (VAM-0), Zenodo (2025).
+% DOI as in your record
+
+        \bibitem{Iskandarani2025-TimeDilation}
+        O.~Iskandarani,
+        \emph{Time Dilation in a 3D Superfluid \AE ther Model} (VAM-1), Zenodo (2025).
+
+        \bibitem{Iskandarani2025-SwirlClocks}
+        O.~Iskandarani,
+        \emph{Swirl Clocks and Vorticity-Induced Gravity} (VAM-2), Zenodo (2025).
+
+        \bibitem{Iskandarani2025-Benchmark}
+        O.~Iskandarani,
+        \emph{Benchmarking Vortex \AE ther Model vs General Relativity} (VAM-3), Zenodo (2025).
+
+        \bibitem{Iskandarani2025-EmergentGR}
+        O.~Iskandarani,
+        \emph{Emergent General Relativity from Structured Swirl Dynamics in VAM} (VAM-4), Zenodo (2025).
+
+        \bibitem{Iskandarani2025-KnottedGauge}
+        O.~Iskandarani,
+        \emph{Knotted Gauge Fields} (VAM-6), Zenodo (2025).
+
+        \bibitem{Iskandarani2025-MasterMass}
+        O.~Iskandarani,
+        \emph{Master Equation for Particle Masses} (VAM-11), Zenodo (2025).
+
+        \bibitem{Iskandarani2025-TopLag}
+        O.~Iskandarani,
+        \emph{Topological Fluid Dynamics Lagrangian} (VAM-14), Zenodo (2025).
+
+        \bibitem{Iskandarani2025-QuantumGravity}
+        O.~Iskandarani,
+        \emph{Quantum Gravity via Superfluid Vorticity} (VAM-15), Zenodo (2025).
+
+    \end{thebibliography}
+
+\end{document}

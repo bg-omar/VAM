@@ -1,0 +1,190 @@
+%! Author = Omar Iskandarani
+%! Title = Photon as a Topological Vortex Ring: Torsion and the Geometry of Light in the Æther
+%! Date = 25-07-2025
+%! Affiliation = Independent Researcher, Groningen, The Netherlands
+%! License = © 2025 Omar Iskandarani. All rights reserved. This manuscript is made available for academic reading and citation only. No republication, redistribution, or derivative works are permitted without explicit written permission from the author. Contact: info@omariskandarani.com
+%! ORCID = 0009-0006-1686-3961
+%! DOI = 10.5281/zenodo.16419255
+
+% === Metadata ===
+\newcommand{\papertitle}{Experimental Status of Setting-Dependent State Space Models and the Vortex Æther Model}
+\newcommand{\paperdoi}{10.5281/zenodo.16419255}
+
+\documentclass[twocolumn,aps,pre,floatfix,nofootinbib]{revtex4-2}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{physics}
+\usepackage{caption}
+\usepackage{bm}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsfonts, bm}
+\usepackage{mathtools}
+\usetikzlibrary{knots,intersections,decorations.pathreplacing}
+\usetikzlibrary{3d, calc, arrows.meta, positioning}
+\usepackage{pgfmath}
+\usetikzlibrary{decorations.pathmorphing}
+\pgfplotsset{compat=1.18}
+\usepackage{titlesec}
+\usepackage{ulem}
+\usepackage{subcaption}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{subfiles}
+\usepackage{ragged2e}
+
+\begin{document}
+    \title{\papertitle}
+    \author{Omar Iskandarani}
+    \affiliation{Independent Researcher, Groningen, The Netherlands}
+    \thanks{info@omariskandarani.com \\
+            ORCID: \href{https://orcid.org/0009-0006-1686-3961}{0009-0006-1686-3961} \\
+            DOI: \href{https://doi.org/\paperdoi}{\paperdoi}
+    }
+    \date{\today}
+
+    \begin{abstract}
+        \vspace*{-0.5em}
+        \section*{\centering Abstract}
+        \vspace*{-1em}
+The Vortex \AE ther Model (VAM) offers a local framework that can match the quantum violations of Bell inequalities without relying on superluminal signaling. It does so by rejecting the assumption that a single, setting-independent joint probability space underlies all measurement outcomes. Instead, it defines outcome statistics on field states that depend on the chosen settings. This paper reviews the theory behind VAM, places it alongside the two main strategies for avoiding Bell's theorem, and surveys experimental and theoretical results that help test or constrain such models.
+    \end{abstract}
+    \maketitle
+
+\section{Introduction}
+Bell's theorem~\cite{Bell1964,CHSH1969} shows that no local hidden-variable theory can fully reproduce quantum predictions if three assumptions hold:
+locality, measurement independence, and counterfactual definiteness. In Fine's restatement~\cite{Fine1982}, these together imply a single joint probability distribution covering all possible measurement outcomes for all settings.
+
+VAM breaks from this framework. Instead of a single global sample space, it uses families of setting-dependent spaces $(\Omega_{a,b}, \mathcal{F}_{a,b}, P_{a,b})$. Outcomes are deterministic functionals of solutions to an Euler--Bernoulli boundary-value problem, with boundary conditions fixed by the chosen settings. This removes the need for the global construction Fine's theorem depends on, without invoking any faster-than-light effects.
+
+\section{Theoretical Background}
+\subsection{Bell's Single-Space Assumption}
+Standard Bell proofs assume that the counterfactual outcomes $A(a,\lambda)$, $A(a',\lambda)$, $B(b,\lambda)$, and $B(b',\lambda)$ are all defined over the same sample space $\Omega$. This allows inequalities such as the CHSH bound $S \leq 2$. VAM rejects this: for each $(a,b)$, the relevant $\Omega_{a,b}$ can differ, making some joint distributions undefined.
+
+\subsection{Two Paths in VAM}
+\paragraph{Route A: Measurement Dependence.} Locality is preserved, but measurement independence is relaxed so that $\rho(\Lambda|a,b) \neq \rho(\Lambda)$. Here, the setting choices can be weakly correlated with the source variables through shared environmental modes. With suitable biases, deterministic maps can reproduce the quantum correlation $E(a,b) = -\cos 2(a-b)$~\cite{Hall2010,Brans1988}.
+
+\paragraph{Route B: Nonseparability.} The entangled pair is modeled as parts of a single extended physical system (e.g., a knotted filament with conserved helicity), so that
+\[
+P(A,B|a,b,\Lambda) \neq P(A|a,\Lambda)P(B|b,\Lambda)
+\]
+while still avoiding any signaling. Here, the breakdown comes from the system's inherent nonseparability.
+
+\section{Experimental Context}
+Modern ``loophole-free'' Bell tests close the locality and detection loopholes~\cite{Hensen2015,Giustina2015,Shalm2015}, but still assume measurement independence and separability. VAM-style models using either route remain consistent with these results.
+
+\section{Evidence Supporting Viability}
+\subsection{Context-Dependent Models}
+Genovese and Piacentini~\cite{Genovese2025} note that all Bell tests so far assume a single joint probability space. Context-dependent hidden-variable models can still match observed violations without nonlocal signaling.
+
+\subsection{Measurement-Dependence Models}
+Hall~\cite{Hall2016} and Vervoort~\cite{Vervoort2013} give explicit local constructions where partial relaxation of measurement independence reproduces the quantum predictions exactly.
+
+\section{Constraints from Experiments}
+\subsection{Cosmic Bell Tests}
+Experiments using distant quasars to choose measurement settings~\cite{Handsteiner2017} push any possible shared cause billions of years into the past. This limits but does not fully remove the possibility of superdeterministic correlations.
+
+\subsection{Loophole-Free Tests}
+The landmark tests by Hensen, Giustina, and Shalm~\cite{Hensen2015,Giustina2015,Shalm2015} simultaneously closed locality and detection loopholes, matching quantum predictions. However, they still rely on measurement independence and separability.
+
+\section{Nonseparability Tests}
+Aspect~\cite{Aspect1976} suggested experiments aimed directly at nonseparability. Henson~\cite{Henson2013} argued that nonseparability alone is insufficient to bypass Bell's constraints without extra assumptions.
+
+\section{VAM Interpretation}
+In VAM terms, Route A matches models with small correlations between settings and source states. Route B aligns with the idea that both measurement regions interact with one continuous extended system, creating joint constraints without signaling.
+
+\section{Future Work}
+Distinguishing these scenarios could involve:
+\begin{itemize}
+    \item Measuring correlations between setting choices and unrelated environmental variables.
+    \item Rapidly changing boundary conditions to probe for the global responses predicted by some nonseparability models.
+\end{itemize}
+
+\section{Conclusion}
+Modern Bell experiments have ruled out many local hidden-variable theories, but not those with setting-dependent spaces or extended, nonseparable systems. Under present data, VAM remains a logically possible framework.
+
+
+\bibliographystyle{unsrt}
+\begin{thebibliography}{99}
+
+\bibitem{Bell1964}
+Bell, J. S. (1964).
+On the Einstein Podolsky Rosen paradox.
+\textit{Physics}, 1, 195–200.
+
+\bibitem{CHSH1969}
+Clauser, J. F., Horne, M. A., Shimony, A., \& Holt, R. A. (1969).
+Proposed Experiment to Test Local Hidden-Variable Theories.
+\textit{Phys. Rev. Lett.}, 23, 880–884.
+
+\bibitem{Fine1982}
+Fine, A. (1982).
+Hidden Variables, Joint Probability, and the Bell Inequalities.
+\textit{Phys. Rev. Lett.}, 48, 291–295.
+
+\bibitem{Hall2010}
+Hall, M. J. W. (2010).
+Local Deterministic Model of Singlet State Correlations Based on Relaxing Measurement Independence.
+\textit{Phys. Rev. Lett.}, 105, 250404.
+
+\bibitem{Brans1988}
+Brans, C. H. (1988).
+Bell's theorem does not eliminate fully causal hidden variables.
+\textit{Int. J. Theor. Phys.}, 27, 219–226.
+
+\bibitem{Hensen2015}
+Hensen, B., et al. (2015).
+Loophole-free Bell inequality violation using electron spins separated by 1.3 kilometres.
+\textit{Nature}, 526, 682–686.
+
+\bibitem{Giustina2015}
+Giustina, M., et al. (2015).
+Significant-Loophole-Free Test of Bell's Theorem with Entangled Photons.
+\textit{Phys. Rev. Lett.}, 115, 250401.
+
+\bibitem{Shalm2015}
+Shalm, L. K., et al. (2015).
+Strong Loophole-Free Test of Local Realism.
+\textit{Phys. Rev. Lett.}, 115, 250402.
+
+\bibitem{Genovese2025}
+Genovese, M., \& Piacentini, F. (2025).
+Consequences of the single-pair measurement of the Bell parameter.
+\textit{Phys. Rev. A}, 111, 022204.
+
+\bibitem{Hall2016}
+Hall, M. J. W. (2016).
+The significance of measurement independence for Bell inequalities and locality.
+In \textit{The Philosophy of Cosmology} (pp. 189–210).
+Springer.
+
+\bibitem{Vervoort2013}
+Vervoort, L. (2013).
+Bell’s theorem: Two neglected solutions.
+\textit{Foundations of Physics}, 43, 769–791.
+
+\bibitem{Handsteiner2017}
+Handsteiner, J., et al. (2017).
+Cosmic Bell Test: Measurement Settings from Milky Way Stars.
+\textit{Phys. Rev. Lett.}, 118, 060401.
+
+\bibitem{Aspect1976}
+Aspect, A. (1976).
+Proposed experiment to test the nonseparability of quantum mechanics.
+\textit{Phys. Rev. D}, 14, 1944–1951.
+
+\bibitem{Henson2013}
+Henson, J. (2013).
+Non-separability does not relieve the problem of Bell's theorem.
+\textit{Found. Phys.}, 43, 1009–1038.
+
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,5 @@
+knot_id,display_name,type,chiral,sigma,crossing_number,base_offset_b0,Hvortex_X,num_components,sum_abs_linkings,Hvortex_Lk,hyperbolic_volume,volume_baseline_id,volume_baseline_value,Hvortex_Vol,xi,L_knot_m,mass_fluid_kg,mass_energy_kg,notes
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+3_1,Trefoil,torus,yes,+1,3,3,0,1,0,0,0,4_1,2.029883212819307,0,1.0,,,,Non-hyperbolic; use Hvortex_X if desired.
+4_1,Figure-eight,hyperbolic,no,0,4,3,0,1,0,0,2.029883212819307,4_1,2.029883212819307,0,1.0,,,,Amphichiral; serves as volume baseline.
