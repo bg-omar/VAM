@@ -1,0 +1,81 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,bm}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{siunitx}
+\usepackage{hyperref}
+\title{Golden Rapidity and Tangential Velocity in VAM}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Setup}
+Let the golden ratio be
+\begin{equation}
+  \varphi \equiv \frac{1+\sqrt{5}}{2}, \qquad \varphi^2=\varphi+1.
+\end{equation}
+Define the \emph{golden rapidity}
+\begin{equation}
+  \xi_g \;\equiv\; \frac{3}{2}\ln\varphi.
+\end{equation}
+We use the standard hyperbolic functions (definitions in \cite{NISTDLMF}).
+
+\section*{Identity: \(\tanh(\xi_g)=1/\varphi\)}
+Using $\tanh y = \dfrac{e^{2y}-1}{e^{2y}+1}$, substitute $y=\xi_g$ to obtain
+\begin{equation}
+  \tanh(\xi_g) \;=\; \frac{e^{3\ln\varphi}-1}{e^{3\ln\varphi}+1}
+  \;=\; \frac{\varphi^3-1}{\varphi^3+1}.
+\end{equation}
+From $\varphi^2=\varphi+1$ it follows $\varphi^3=\varphi(\varphi+1)=2\varphi+1$. Hence
+\begin{equation}
+  \tanh(\xi_g) \;=\; \frac{(2\varphi+1)-1}{(2\varphi+1)+1}
+  \;=\; \frac{2\varphi}{2(\varphi+1)}
+  \;=\; \frac{\varphi}{\varphi+1}
+  \;=\; \frac{\varphi}{\varphi^2}
+  \;=\; \frac{1}{\varphi}.
+\end{equation}
+Therefore
+\begin{equation}
+  \boxed{\;\tanh\!\big(\tfrac{3}{2}\ln\varphi\big)=\frac{1}{\varphi}\;}
+  \qquad\Longleftrightarrow\qquad
+  \boxed{\;\coth\!\big(\tfrac{3}{2}\ln\varphi\big)=\varphi\; }.
+\end{equation}
+
+\section*{VAM Mapping to Tangential Velocity}
+In a rapidity parametrization, the dimensionless speed is
+\begin{equation}
+  \beta \;\equiv\; \frac{v}{C_e} \;=\; \tanh \xi.
+\end{equation}
+Setting $\xi=\xi_g$ gives the \emph{golden} tangential fraction
+\begin{equation}
+  \beta_g \;=\; \tanh(\xi_g) \;=\; \frac{1}{\varphi},
+\end{equation}
+and thus a characteristic tangential velocity and swirl frequency
+\begin{equation}
+  v_g \;=\; \frac{C_e}{\varphi}, \qquad
+  \Omega_g \;=\; \frac{v_g}{r_c} \;=\; \frac{1}{\varphi}\,\frac{C_e}{r_c}.
+\end{equation}
+Both are dimensionally consistent: $v_g$ has units of \(\si{m/s}\) and $\Omega_g$ of \(\si{s^{-1}}\).
+
+\section*{Numerical Validation (User Constants)}
+Using $C_e=\SI{1093845.63}{m/s}$ and $r_c=\SI{1.40897017e-15}{m}$,
+\begin{align}
+  \varphi &\approx 1.618033988749895,\\
+  \xi_g &= \tfrac{3}{2}\ln\varphi \approx 0.721817737589405,\\
+  \beta_g &= \tanh\xi_g \approx 0.618033988749895 \;=\; \frac{1}{\varphi},\\
+  v_g &= \frac{C_e}{\varphi} \approx \SI{6.760337777855416e5}{m/s},\\
+  \Omega &= \frac{C_e}{r_c} \approx \SI{7.763440655383073e20}{s^{-1}},\\
+  \Omega_g &= \frac{\Omega}{\varphi} \approx \SI{4.798070194669498e20}{s^{-1}}.
+\end{align}
+
+\paragraph{Consistency checks.}
+Since $\beta_g=1/\varphi$, we have $v_g=C_e/\varphi$ and $\Omega_g=\Omega/\varphi$ exactly, up to machine precision in floating-point arithmetic.
+
+\section*{Discussion}
+This construction supplies a natural, dimensionless benchmark ($1/\varphi$) for tangential speeds in VAM. If swirl states quantize in hyperbolic angle $\xi$, the golden rapidity $\xi_g$ defines a preferred scaling layer where tangential velocity and core swirl frequency are reduced by a factor $\varphi$ relative to their maxima, potentially useful for defining stable vortex\hyp{}knot operating points or resonance bands in the spectrum.
+
+\bibliographystyle{unsrt}
+\bibliography{refs}
+\end{document}

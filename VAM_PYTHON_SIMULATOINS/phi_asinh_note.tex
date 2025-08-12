@@ -1,0 +1,46 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, bm}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{hyperref}
+\title{A Hyperbolic Identity for the Golden Ratio}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+
+Let the golden ratio be
+\begin{equation}
+  \varphi \equiv \frac{1+\sqrt{5}}{2}.
+\end{equation}
+Recall the definition of the inverse hyperbolic sine \cite{NISTDLMF}:
+\begin{equation}
+  \operatorname{asinh}(x) = \ln\!\Big(x + \sqrt{x^2 + 1}\Big).
+  \label{eq:asinh_def}
+\end{equation}
+Substituting $x=\tfrac{1}{2}$ into \eqref{eq:asinh_def} gives
+\begin{align}
+  \operatorname{asinh}\!\left(\tfrac{1}{2}\right)
+  &= \ln\!\left(\tfrac{1}{2} + \sqrt{\tfrac{1}{4} + 1}\right) \\
+  &= \ln\!\left(\tfrac{1 + \sqrt{5}}{2}\right) \\
+  &= \ln \varphi.
+\end{align}
+Exponentiating both sides yields the clean identity
+\begin{equation}
+  \boxed{\;\varphi = \exp\!\left(\operatorname{asinh}\!\left(\tfrac{1}{2}\right)\right)\; }.
+\end{equation}
+
+\paragraph{Numerical check.}
+Using double precision,
+\(
+  \varphi \approx 1.618033988749895
+\)
+and
+\(
+  \exp(\operatorname{asinh}(1/2)) \approx 1.618033988749895
+\),
+matching to machine precision.
+
+\bibliographystyle{unsrt}
+\bibliography{refs}
+\end{document}

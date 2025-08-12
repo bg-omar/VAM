@@ -4,7 +4,7 @@
 # and compute Hvortex_X and Hvortex_Vol plus VAM masses using user's constants.
 
 import numpy as np, math, os, pandas as pd
-from caas_jupyter_tools import display_dataframe_to_user
+from caas_jupyter import display_dataframe_to_user
 
 # Files
 files = [
@@ -226,4 +226,3 @@ display_dataframe_to_user("Fourier-series-derived invariants (prototype)", df)
 # Save CSV
 out_path = "exports/fseries_4_1_results.csv"
 df.to_csv(out_path, index=False)
-

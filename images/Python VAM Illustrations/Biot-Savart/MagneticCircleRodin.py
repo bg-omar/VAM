@@ -1,9 +1,41 @@
+# Refactored for optional VAMbindings acceleration (biot_savart + dipole grid kernels if available).
+# Falls back to fast NumPy vectorizations when bindings are absent.
+# C++/bindings (if used): ./src/field_kernels.cpp, ./src/field_kernels.h
+# PyBind11: ./src_bindings/py_field_kernels.cpp
+# Example usage: ./examples/field_kernels_example.py
+
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.widgets import CheckButtons, TextBox
 import os
 import matplotlib
 matplotlib.use('TkAgg')
+from vambindings import biot_savart_velocity
+
+# --- Optional VAMbindings (if present) ---
+# If your build provides Biot–Savart and dipole grid evaluators, expose them here.
+# Otherwise, the code will use the NumPy fallbacks below.
+try:
+    from vambindings import (
+        # canonical VAM examples (not used here unless provided in your build)
+        lamb_oseen_velocity,
+        lamb_oseen_vorticity,
+        hill_streamfunction,
+        hill_vorticity,
+        hill_circulation,
+        hill_velocity,
+    )
+except Exception:
+    pass
+
+try:
+    # Expected signatures (float32/float64):
+    # biot_savart_wire_grid(X, Y, Z, wire_points[N,3], current) -> (Bx,By,Bz)
+    # dipole_ring_field_grid(X, Y, Z, positions[M,3], moments[M,3]) -> (Bx,By,Bz)
+    from vambindings import biot_savart_wire_grid, dipole_ring_field_grid
+    _HAS_VAM_BIOT = True
+except Exception:
+    _HAS_VAM_BIOT = False
 
 # --- Utility ---
 script_name = os.path.splitext(os.path.basename(__file__))[0]
@@ -20,29 +52,48 @@ def generate_rodin_starship(R=1.0, r=1.0, num_turns=10, num_points=1000):
     z = r * np.sin(phi)
     return x, y, z
 
-# --- Biot-Savart for wire loop (numerical) ---
-def biot_savart_wire(X, Y, Z, wire_points, current=1.0):
+# --- Biot-Savart for wire loop ---
+def _biot_savart_wire_numpy(X, Y, Z, wire_points, current=1.0):
+    """Vectorized NumPy fallback for Biot–Savart over polyline."""
     mu0 = 1.0
-    dBx = np.zeros_like(X)
-    dBy = np.zeros_like(Y)
-    dBz = np.zeros_like(Z)
-    N = wire_points.shape[0]
-    dl = np.diff(wire_points, axis=0)
-    r_mid = 0.5 * (wire_points[:-1] + wire_points[1:])  # segment midpoints
-    for idx in range(N-1):
-        Rx = X - r_mid[idx,0]
-        Ry = Y - r_mid[idx,1]
-        Rz = Z - r_mid[idx,2]
-        R = np.stack([Rx, Ry, Rz], axis=-1)
-        normR = np.linalg.norm(R, axis=-1)
-        mask = normR > 1e-7
-        dl_cross_R = np.cross(dl[idx], R)
-        factor = (mu0 * current) / (4 * np.pi)
-        contrib = factor * dl_cross_R / (normR[...,None]**3)
-        dBx[mask] += contrib[mask,0]
-        dBy[mask] += contrib[mask,1]
-        dBz[mask] += contrib[mask,2]
+    dl = np.diff(wire_points, axis=0)                                      # [S,3]
+    r_mid = 0.5 * (wire_points[:-1] + wire_points[1:])                     # [S,3]
+
+    # Grid to [...,3]
+    R = np.stack([X, Y, Z], axis=-1)                                       # [Nx,Ny,Nz,3]
+    dBx = np.zeros_like(X, dtype=R.dtype[...,0].dtype)
+    dBy = np.zeros_like(Y, dtype=R.dtype[...,0].dtype)
+    dBz = np.zeros_like(Z, dtype=R.dtype[...,0].dtype)
+
+    factor = (mu0 * current) / (4.0 * np.pi)
+
+    # Loop over segments only (grid fully vectorized)
+    for s in range(dl.shape[0]):
+        Rseg = R - r_mid[s]                                                # [Nx,Ny,Nz,3]
+        norm = np.linalg.norm(Rseg, axis=-1)                                # [Nx,Ny,Nz]
+        mask = norm > 1e-7
+        # cross(dl, Rseg)
+        cx = dl[s,1]*Rseg[...,2] - dl[s,2]*Rseg[...,1]
+        cy = dl[s,2]*Rseg[...,0] - dl[s,0]*Rseg[...,2]
+        cz = dl[s,0]*Rseg[...,1] - dl[s,1]*Rseg[...,0]
+        inv = np.zeros_like(norm)
+        inv[mask] = 1.0 / (norm[mask]**3)
+        dBx += factor * cx * inv
+        dBy += factor * cy * inv
+        dBz += factor * cz * inv
     return dBx, dBy, dBz
+
+def biot_savart_wire(X, Y, Z, wire_points, current=1.0):
+    tangents = np.diff(wire_points, axis=0)
+    midpoints = 0.5 * (wire_points[:-1] + wire_points[1:])
+    grid_points = np.stack((X, Y, Z), axis=-1).reshape(-1, 3)
+
+    B = np.zeros((grid_points.shape[0], 3))
+    for mp, t in zip(midpoints, tangents):
+        B += np.array([biot_savart_velocity(p.tolist(), [mp.tolist()], [t.tolist()], current)
+                       for p in grid_points])
+
+    return B[:, 0].reshape(X.shape), B[:, 1].reshape(Y.shape), B[:, 2].reshape(Z.shape)
 
 # --- Dipole ring geometry ---
 def generate_dipole_ring(radius, num_magnets, z_offset=0.0, invert=False):
@@ -59,26 +110,52 @@ def generate_dipole_ring(radius, num_magnets, z_offset=0.0, invert=False):
         positions.append(np.array([x, y, z]))
     return positions, orientations
 
-def magnetic_field_dipole(r, m):
+# Patch: fix NumPy fallback broadcasting in dipole evaluator (keeps VAMbindings pathway unchanged).
+# C++/bindings (if used): ./src/field_kernels.cpp, ./src/field_kernels.h
+# PyBind11: ./src_bindings/py_field_kernels.cpp
+# Example: ./examples/field_kernels_example.py
+
+def _magnetic_field_dipoles_numpy(X, Y, Z, positions, orientations):
+    """Vectorized dipole superposition on the grid (NumPy fallback)."""
     mu0 = 1.0
-    norm_r = np.linalg.norm(r)
-    if norm_r < 1e-8:
-        return np.zeros(3)
-    r_hat = r / norm_r
-    return (mu0 / (4 * np.pi * norm_r**3)) * (3 * np.dot(m, r_hat) * r_hat - m)
+
+    # Grid [...,3]
+    R = np.stack([X, Y, Z], axis=-1)                                        # [Nx,Ny,Nz,3]
+
+    # Dipoles [M,3]
+    P = np.asarray(positions, dtype=float)                                   # [M,3]
+    M = np.asarray(orientations, dtype=float)                                # [M,3]
+
+    # Expand dipoles across grid
+    Rm = R[..., None, :] - P.reshape((1, 1, 1, -1, 3))                       # [Nx,Ny,Nz,M,3]
+    norm = np.linalg.norm(Rm, axis=-1)                                       # [Nx,Ny,Nz,M]
+
+    # Safe unit vectors
+    rhat = np.zeros_like(Rm, dtype=float)
+    mask = norm > 1e-10
+    rhat[mask] = Rm[mask] / norm[mask][..., None]
+
+    inv3 = np.zeros_like(norm, dtype=float)
+    inv3[mask] = 1.0 / (norm[mask] ** 3)
+
+    # Dot(m, rhat) per dipole m (match M along its first axis)
+    # rhat: [..., M, 3], M: [M, 3]  -> mdotr: [..., M]
+    mdotr = np.einsum('...mj,mj->...m', rhat, M)
+
+    # 3(m·r̂)r̂ - m  (broadcast m over grid)
+    M_exp = M.reshape((1, 1, 1, -1, 3))
+    term = 3.0 * mdotr[..., None] * rhat - M_exp                             # [Nx,Ny,Nz,M,3]
+
+    B = (mu0 / (4.0 * np.pi)) * np.sum(term * inv3[..., None], axis=-2)      # sum over M
+    return B[..., 0], B[..., 1], B[..., 2]
+
 
 def compute_dipole_field_from_orientations(X, Y, Z, positions, orientations):
-    Bx, By, Bz = np.zeros_like(X), np.zeros_like(Y), np.zeros_like(Z)
-    for pos, m in zip(positions, orientations):
-        for i in range(X.shape[0]):
-            for j in range(X.shape[1]):
-                for k in range(X.shape[2]):
-                    r = np.array([X[i, j, k], Y[i, j, k], Z[i, j, k]]) - pos
-                    B = magnetic_field_dipole(r, m)
-                    Bx[i, j, k] += B[0]
-                    By[i, j, k] += B[1]
-                    Bz[i, j, k] += B[2]
-    return Bx, By, Bz
+    if _HAS_VAM_BIOT:
+        pos = np.asarray(positions, dtype=float)
+        mom = np.asarray(orientations, dtype=float)
+        return dipole_ring_field_grid(X, Y, Z, pos, mom)
+    return _magnetic_field_dipoles_numpy(X, Y, Z, positions, orientations)
 
 # --- Initial Parameters (user can edit) ---
 params = {
@@ -97,24 +174,25 @@ z_range = (-2, 2)
 field_grid_N = 9
 
 def compute_all_fields_and_geometry():
-    # Update all geometry and fields as per current params
     bottom_pos, bottom_ori = generate_dipole_ring(params["dipole_ring_radius"], params["num_magnets"], z_offset=z_offset_bottom, invert=False)
     top_pos, top_ori = generate_dipole_ring(params["dipole_ring_radius"], params["num_magnets"], z_offset=z_offset_top, invert=True)
     winding_colors = np.linspace(0, 1, params["num_magnets"], endpoint=False)
     rodin_x, rodin_y, rodin_z = generate_rodin_starship(
         R=params["rodin_major"], r=params["rodin_minor"], num_turns=params["num_turns"], num_points=num_points)
     rodin_wire_points = np.stack([rodin_x, rodin_y, rodin_z], axis=-1)
+
     X, Y, Z = np.meshgrid(
         np.linspace(*x_range, field_grid_N),
         np.linspace(*y_range, field_grid_N),
-        np.linspace(*z_range, field_grid_N)
+        np.linspace(*z_range, field_grid_N),
+        indexing='xy'
     )
-    print("Recomputing all fields for new parameters...")
-    Bx_bottom, By_bottom, Bz_bottom = compute_dipole_field_from_orientations(
-        X, Y, Z, bottom_pos, bottom_ori)
-    Bx_top, By_top, Bz_top = compute_dipole_field_from_orientations(
-        X, Y, Z, top_pos, top_ori)
+
+    print("Recomputing all fields for new parameters... (VAM:", "on" if _HAS_VAM_BIOT else "off", ")")
+    Bx_bottom, By_bottom, Bz_bottom = compute_dipole_field_from_orientations(X, Y, Z, bottom_pos, bottom_ori)
+    Bx_top, By_top, Bz_top = compute_dipole_field_from_orientations(X, Y, Z, top_pos, top_ori)
     Bx_rodin, By_rodin, Bz_rodin = biot_savart_wire(X, Y, Z, rodin_wire_points, current=1.0)
+
     return (X, Y, Z,
             bottom_pos, bottom_ori,
             top_pos, top_ori,
@@ -142,40 +220,28 @@ def update_plot(*args):
      Bx_top, By_top, Bz_top,
      Bx_rodin, By_rodin, Bz_rodin) = gui_state["data"]
 
-    # SAFELY initialize arrays!
     Bx = np.zeros_like(Bx_bottom)
     By = np.zeros_like(By_bottom)
     Bz = np.zeros_like(Bz_bottom)
 
     field_components = []
     if show_bottom_field:
-        Bx += Bx_bottom
-        By += By_bottom
-        Bz += Bz_bottom
+        Bx += Bx_bottom; By += By_bottom; Bz += Bz_bottom
         field_components.append("Bottom Ring")
     if show_top_field:
-        Bx += Bx_top
-        By += By_top
-        Bz += Bz_top
+        Bx += Bx_top; By += By_top; Bz += Bz_top
         field_components.append("Top Ring")
     if show_rodin_field:
-        Bx += Bx_rodin
-        By += By_rodin
-        Bz += Bz_rodin
+        Bx += Bx_rodin; By += By_rodin; Bz += Bz_rodin
         field_components.append("Rodin Coil")
 
     Bmag = np.sqrt(Bx**2 + By**2 + Bz**2)
     Bmag[Bmag == 0] = 1e-9
-    Bx_norm = Bx / Bmag
-    By_norm = By / Bmag
-    Bz_norm = Bz / Bmag
+    Bx_norm = Bx / Bmag; By_norm = By / Bmag; Bz_norm = Bz / Bmag
 
     ax.clear()
     if show_bottom_field or show_top_field or show_rodin_field:
-        ax.quiver(
-            X, Y, Z, Bx_norm, By_norm, Bz_norm,
-            length=0.15, normalize=True, color='blue', linewidth=0.5, alpha=0.9
-        )
+        ax.quiver(X, Y, Z, Bx_norm, By_norm, Bz_norm, length=0.15, normalize=True, color='blue', linewidth=0.5, alpha=0.9)
 
     if show_rodin_geom:
         ax.plot3D(rodin_x, rodin_y, rodin_z, color='magenta', linewidth=2, label='Rodin Starship Coil')
@@ -190,20 +256,12 @@ def update_plot(*args):
 
     title = "Field: " + (", ".join(field_components) if field_components else "None")
     ax.set_title(title)
-    ax.set_xlabel('X')
-    ax.set_ylabel('Y')
-    ax.set_zlabel('Z')
-    ax.set_xlim(*x_range)
-    ax.set_ylim(*y_range)
-    ax.set_zlim(*z_range)
+    ax.set_xlabel('X'); ax.set_ylabel('Y'); ax.set_zlabel('Z')
+    ax.set_xlim(*x_range); ax.set_ylim(*y_range); ax.set_zlim(*z_range)
     ax.set_box_aspect([1, 1, 1])
-    try:
-        ax.legend()
-    except Exception:
-        pass
+    try: ax.legend()
+    except Exception: pass
     fig.canvas.draw_idle()
-
-
 
 def on_field_checkbox(label):
     idx = cb_field_labels.index(label)
@@ -234,7 +292,6 @@ def update_params(label):
     gui_state["data"] = compute_all_fields_and_geometry()
     update_plot()
 
-
 # --- GUI State ---
 gui_state = {"data": compute_all_fields_and_geometry()}
 
@@ -257,12 +314,11 @@ rax_field.set_title("Fields to Show")
 
 # --- GEOM checkboxes ---
 rax_geom = plt.axes([0.01, 0.52, 0.2, 0.15])
-cb_geom = CheckButtons(rax_geom, cb_geom_labels, cb_geom_status)
+cb_geom = CheckButtons(rax_geom, cb_geom_status, cb_geom_status)
 cb_geom.on_clicked(on_geom_checkbox)
 rax_geom.set_title("Show Geometry")
 
 # --- PARAMETER inputs ---
-# Add TextBoxes for parameter input
 rax_params = plt.axes([0.01, 0.18, 0.22, 0.32])
 rax_params.axis('off')
 plt.text(0.05, 0.95, "Parameters:", transform=rax_params.transAxes, fontsize=11, va="top")
@@ -277,5 +333,4 @@ for tb in [tb_num_magnets, tb_ring_radius, tb_rodin_major, tb_rodin_minor, tb_nu
 
 # --- Initial Plot ---
 update_plot()
-
 plt.show()

@@ -24,7 +24,18 @@ rho_fluid = 7.0e-7             # kg/m^3
 rho_energy = 3.49924562e35     # J/m^3
 c = 299_792_458.0              # m/s
 alpha = 1/137.035999084
-phi = (1+5**0.5)/2
+
+
+phi  = (1 + 5**0.5) / 2
+phi2 = np.exp(np.arcsinh(0.5))   # asinh, not sinh
+
+print(phi, phi2, abs(phi - phi2))
+
+# Fixed-point equation: varphi = coth(1.5 * ln(varphi))
+def varphi_fixed_point(varphi):
+    return 1 / np.tanh(1.5 * np.log(varphi))
+
+
 VOL_BASELINE_VALUE = 2.029883212819307  # Vol(4_1)
 
 # Derived per-meter coefficients (kg/m)
