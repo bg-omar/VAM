@@ -77,7 +77,7 @@ TSIRELSON = 2*sqrt(2)
 
 # ---------------- helpers ----------------
 def check(label, ok, extra=""):
-    print(f"[{'\u2714' if ok else '\u2718'}] {label}" + (f" — {extra}" if extra else ""))
+    print(f"[{'✓' if ok else '✗'}] {label}" + (f" — {extra}" if extra else ""))
 
 def chsh_from_E(E):
     return abs(E[('a','b')] + E[('a','bp')] + E[('ap','b')] - E[('ap','bp')])

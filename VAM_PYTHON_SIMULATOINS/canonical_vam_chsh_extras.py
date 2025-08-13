@@ -19,7 +19,7 @@ OMEGA = C_e / r_c
 
 # ---------------- helpers ----------------
 def check(label, ok, extra=""):
-    print(f"[{'\u2714' if ok else '\u2718'}] {label}" + (f" — {extra}" if extra else ""))
+    print(f"[{'✔' if ok else '✘'}] {label}" + (f" — {extra}" if extra else ""))
 
 def chsh_from_E(E):
     return abs(E[('a','b')] + E[('a','bp')] + E[('ap','b')] - E[('ap','bp')])
@@ -263,6 +263,94 @@ def export_json_csv(outdir, res_phi, res_psi, T_phi, T_psi, mermin, latency):
             for row in res_phi["jitter"]: w.writerow(row)
     print("saved:", outdir)
 
+
+# ---------- (4) KCBS qutrit contextuality ----------
+def run_kcbs(seed=33, mc_shots=200000):
+    """
+    KCBS setup for a qutrit. Five rank-1 projectors P_k with ⟨v_k|v_{k±1}⟩=0.
+    Construction:
+      ω = exp(2πi/5), φ = (1+√5)/2
+      raw vector r_k = [1, ω^k, √φ · ω^{3k}]  (k=0..4)
+      v_k = r_k / ||r_k||
+    This makes ⟨v_k|v_{k+1}⟩ = 0 by design.
+    """
+    rng = np.random.default_rng(seed)
+    omega = np.exp(2j*np.pi/5)
+    phi = (1+np.sqrt(5.0))/2.0
+
+    # build normalized rays |v_k>
+    vecs = []
+    for k in range(5):
+        r = np.array([1.0,
+                      omega**k,
+                      np.sqrt(phi)*(omega**(3*k))], dtype=complex)
+        r = r / np.linalg.norm(r)
+        vecs.append(r)
+
+    # check orthogonality of neighbors
+    ortho = [abs(np.vdot(vecs[k], vecs[(k+1)%5])) for k in range(5)]
+    print("\nKCBS: neighbor |⟨v_k|v_{k+1}⟩| =", [round(x,6) for x in ortho])
+    ok_ortho = max(ortho) < 1e-10
+    print(f"[{'✔' if ok_ortho else '✘'}] KCBS neighbors orthogonal")
+
+    # projectors and operator M = Σ P_k
+    P = [np.outer(v, np.conjugate(v)) for v in vecs]   # |v><v|
+    M = sum(P)
+
+    # max-violating state = top eigenvector of M; max value = sqrt(5)
+    w, U = np.linalg.eigh(M)        # ascending
+    lam_max = float(w[-1])
+    psi = U[:, -1]                  # eigenvector for lam_max (normalized)
+
+    # KCBS sum S = Σ ⟨ψ|P_k|ψ⟩
+    probs = [float(np.real(np.vdot(psi, Pk @ psi))) for Pk in P]
+    S = float(sum(probs))
+
+    print("KCBS probabilities p_k:", [round(p,4) for p in probs])
+    print(f"KCBS S = Σ p_k = {S:.6f}")
+    # classical noncontextual bound = 2, quantum max = √5
+    from math import sqrt
+    S_nc = 2.0
+    S_qm = sqrt(5.0)
+    print(f"[{'✔' if S> S_nc+1e-3 else '✘'}] KCBS violates noncontextual bound 2  (S={S:.4f})")
+    print(f"[{'✔' if abs(S-S_qm)<1e-6 else '✘'}] KCBS reaches √5 = {S_qm:.6f}")
+
+    # Monte Carlo: sample context pairs (k,k+1), enforce joint exclusivity (p11=0)
+    # For each context, joint distribution: p10 = p_k, p01 = p_{k+1}, p00 = 1 - p10 - p01, p11 = 0.
+    # Estimate S_MC from marginals over many samples.
+    cnt = np.zeros(5, dtype=int)
+    N = mc_shots
+    for _ in range(N):
+        k = rng.integers(0,5)
+        p10 = probs[k]
+        p01 = probs[(k+1)%5]
+        p00 = max(0.0, 1.0 - p10 - p01)   # numeric guard; p11=0 by construction
+        u = rng.random()
+        if u < p10:
+            cnt[k] += 1
+        elif u < p10 + p01:
+            cnt[(k+1)%5] += 1
+        # else p00: add nothing
+
+    # Each context sampled equally; recover p_k as frequency when k appears
+    # Under uniform contexts, expected marginal equals probs[k].
+    p_mc = [cnt[k]/N*5.0 for k in range(5)]  # ×5 to undo the 1/5 context choice
+    S_mc = float(sum(p_mc))
+    print("KCBS Monte Carlo p_k:", [round(p,4) for p in p_mc])
+    print(f"KCBS S_MC ≈ {S_mc:.6f}")
+    ok_mc = abs(S_mc - S) < 0.01
+    print(f"[{'✔' if ok_mc else '✘'}] KCBS MC ≈ analytic  (|Δ|={abs(S_mc-S):.4f})")
+
+    return {
+        "vectors": [[complex(v[0]), complex(v[1]), complex(v[2])] for v in vecs],
+        "probs": probs,
+        "S": S,
+        "S_nc": S_nc,
+        "S_qm": S_qm,
+        "S_mc": S_mc
+    }
+
+
 # -------------- CLI --------------
 if __name__ == "__main__":
     p = argparse.ArgumentParser()
@@ -287,6 +375,9 @@ if __name__ == "__main__":
 
     # (7) CZ-latency toy model
     latency = run_latency_chain(n=args.lat_n, max_depth=args.lat_depth, shots=4096, seed=args.seed+5)
+
+    # KCBS
+    kcbs = run_kcbs(seed=args.seed+10, mc_shots=200000)
 
     # (2) exports
     if args.outdir:

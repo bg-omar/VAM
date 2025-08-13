@@ -11,6 +11,10 @@ c = 299792458                   # m/s
 avogadro = 6.02214076e23        # mol⁻¹
 M_e = 9.10938356e-31          # kg (electron mass)
 
+def energy_density_k(k: int) -> float:
+    # 0.5 * rho_core * (C_e/phi^k)^2   [J/m^3]
+    return 0.5 * rho_core * (C_e / (phi**k))**2
+
 
 # Master VAM Mass Formula:
 # Mass = (4 / alpha) * eta * xi * tension * volume_sum * energy_density / c ** 2
@@ -20,13 +24,13 @@ M_e = 9.10938356e-31          # kg (electron mass)
 # tension: Topological tension (dimensionless)
 # volume_sum * energy_density: Total base energy (Joules)
 # / c^2: Convert energy → mass (via E=mc^2)
-def vam_master_mass(n_knots, m_threads, s, V_list):
+def vam_master_mass(n_knots, m_threads, s, V_list, k=0):
     volume_sum = sum(V_list)
-    eta = (1 / m_threads)**(3/1)
-    xi = n_knots**(-1/phi)
-    tension = 1 / phi**s
-    energy_density = 0.5 * rho_core * C_e**2
-    M = (4 / alpha) * eta * xi * tension * volume_sum * energy_density / c**2
+    eta = (1 / m_threads)**3.0             # thread suppression (dimensionless)
+    xi  = n_knots**(-1/phi)                # coherence suppression (dimensionless)
+    tension = phi**(-s)                    # topological tension (dimensionless)
+    En = energy_density_k(k)               # J/m^3
+    M = (4/alpha) * eta * xi * tension * volume_sum * En / c**2
     return M
 
 def vam_electron_mass_helicity(p=2, q=3):
