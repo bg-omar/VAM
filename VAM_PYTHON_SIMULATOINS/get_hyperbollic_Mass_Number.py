@@ -4,14 +4,14 @@
 # and compute Hvortex_X and Hvortex_Vol plus VAM masses using user's constants.
 
 import numpy as np, math, os, pandas as pd
-from caas_jupyter import display_dataframe_to_user
+import IPython.display as display
 
 # Files
 files = [
-    "/mnt/data/knot.4_1.fseries",
-    "/mnt/data/knot.4_1d.fseries",
-    "/mnt/data/knot.4_1p.fseries",
-    "/mnt/data/knot.4_1z.fseries",
+    "./knots/4_1/knot.4_1.fseries",
+    "./knots/4_1/knot.4_1d.fseries",
+    "./knots/4_1/knot.4_1p.fseries",
+    "./knots/4_1/knot.4_1z.fseries",
 ]
 
 # Load helper from previous cell context (redefine if needed)
@@ -221,8 +221,8 @@ for path in files:
     })
 
 df = pd.DataFrame(rows)
-display_dataframe_to_user("Fourier-series-derived invariants (prototype)", df)
+display.display("Fourier-series-derived invariants (prototype)", df)
 
 # Save CSV
-out_path = "exports/fseries_4_1_results.csv"
+out_path = "knots/4_1/fseries_4_1_results.csv"
 df.to_csv(out_path, index=False)
