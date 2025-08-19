@@ -4134,8 +4134,8 @@ bibtex_text = r"""
 """
 
 # Write LaTeX and BibTeX files
-latex_file = Path("/mnt/data/VAM_Quantum_Computing_Blueprint.tex")
-bib_file = Path("/mnt/data/vam_quantum.bib")
+latex_file = Path("./VAM_Quantum_Computing_Blueprint.tex")
+bib_file = Path("./vam_quantum.bib")
 latex_file.write_text(latex_text)
 bib_file.write_text(bibtex_text)
 
@@ -4244,8 +4244,8 @@ bibtex_text_2 = r"""
 """
 
 # Write to files
-latex_file_2 = Path("/mnt/data/Swirl_Bit_Taxonomy.tex")
-bib_file_2 = Path("/mnt/data/swirl_bits.bib")
+latex_file_2 = Path("./Swirl_Bit_Taxonomy.tex")
+bib_file_2 = Path("./swirl_bits.bib")
 latex_file_2.write_text(latex_text_2)
 bib_file_2.write_text(bibtex_text_2)
 
@@ -4357,8 +4357,8 @@ bibtex_text_3 = r"""
 """
 
 # Write to files
-latex_file_3 = Path("/mnt/data/Knot_Logic_Gates.tex")
-bib_file_3 = Path("/mnt/data/knot_logic.bib")
+latex_file_3 = Path("./Knot_Logic_Gates.tex")
+bib_file_3 = Path("./knot_logic.bib")
 latex_file_3.write_text(latex_text_3)
 bib_file_3.write_text(bibtex_text_3)
 
@@ -4472,8 +4472,8 @@ bibtex_text_4 = r"""
 """
 
 # Write to files
-latex_file_4 = Path("/mnt/data/Swirl_Field_QED.tex")
-bib_file_4 = Path("/mnt/data/swirl_qed.bib")
+latex_file_4 = Path("./Swirl_Field_QED.tex")
+bib_file_4 = Path("./swirl_qed.bib")
 latex_file_4.write_text(latex_text_4)
 bib_file_4.write_text(bibtex_text_4)
 

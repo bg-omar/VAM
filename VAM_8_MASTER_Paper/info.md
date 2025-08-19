@@ -375,9 +375,9 @@ def load_fourier_series(filename):
 
 # Load all three series
 paths = {
-    "5_1p": "/mnt/data/knot.5_1p.fseries",
-    "5_1u": "/mnt/data/knot.5_1u.fseries",
-    "7_1":  "/mnt/data/knot.7_1.fseries"
+    "5_1p": "./knot.5_1p.fseries",
+    "5_1u": "./knot.5_1u.fseries",
+    "7_1":  "./knot.7_1.fseries"
 }
 
 fourier_data = {}
@@ -1754,16 +1754,16 @@ a_mu_vam = 0.5 * (H_charge / H_mass - 1)
 print("a_mu^{VAM} =", a_mu_vam)
 """
 
-with open("/mnt/data/vam_muon_anomaly_final.py", "w") as f:
+with open("./vam_muon_anomaly_final.py", "w") as f:
     f.write(final_script)
 
-"/mnt/data/vam_muon_anomaly_final.py"
+"./vam_muon_anomaly_final.py"
 ```
 
 Result
 
 ```
-'/mnt/data/vam\_muon\_anomaly\_final.py'
+'./vam\_muon\_anomaly\_final.py'
 ```
 
 ✅ The full working Python script has been saved:
@@ -1798,9 +1798,9 @@ Analysis errored
 ```python
 # Define paths to all 3 knots provided
 knot_paths = {
-    "5_1p": "/mnt/data/knot.5_1p.fseries",
-    "5_1u": "/mnt/data/knot.5_1u.fseries",
-    "7_1": "/mnt/data/knot.7_1.fseries"
+    "5_1p": "./knot.5_1p.fseries",
+    "5_1u": "./knot.5_1u.fseries",
+    "7_1": "./knot.7_1.fseries"
 }
 
 # Reuse existing constants and grid
@@ -2412,16 +2412,16 @@ for path in paths:
 """
 
 # Save script to file
-with open("/mnt/data/helicity_batch.py", "w") as f:
+with open("./helicity_batch.py", "w") as f:
     f.write(helicity_batch_script)
 
-"/mnt/data/helicity_batch.py"
+"./helicity_batch.py"
 ```
 
 Result
 
 ```
-'/mnt/data/helicity\_batch.py'
+'./helicity\_batch.py'
 ```
 
 ✅ Done! Your complete batch script is ready:
