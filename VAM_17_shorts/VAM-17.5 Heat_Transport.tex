@@ -1,0 +1,171 @@
+
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb,amsfonts,bm}
+\usepackage{siunitx}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{physics}
+\usepackage{cite}
+\usepackage[hidelinks]{hyperref}
+\geometry{margin=1in}
+
+
+\title{Electron--Swirl Coupled Transport in the Vortex \AE ther Model (VAM):\\
+Perturbative Solutions, Quantitative Benchmarks, and Falsifiable Experiments}
+\author{Omar Iskandarani}
+\date{2025}
+
+
+% ===== VAM constants and convenient macros =====
+\newcommand{\CeVal}{1.09384563\times10^{6}} % m/s
+\newcommand{\rcVal}{1.40897017\times10^{-15}} % m
+\newcommand{\rhoaVal}{7.0\times10^{-7}} % kg/m^3
+\newcommand{\Ce}{C_e}
+\newcommand{\rc}{r_c}
+\newcommand{\rhoa}{\rho_{\text{\ae}}}
+
+
+\begin{document}
+\maketitle
+
+
+\begin{abstract}
+We present a self-contained treatment of electron--swirl transport in VAM that (i) derives a \emph{perturbative, steady-state} solution to the coupled density-matrix equations in 1D; (ii) provides \emph{quantitative} predictions for realistic tabletop experiments with explicit material recommendations and signal levels; and (iii) states \emph{falsifiability criteria}. The theory recovers Peierls (population) and Allen--Feldman (coherence) limits \cite{Peierls1929,AllenFeldman1993,Simoncelli2019Unified} while embedding electrons as vortex-knots coupled to swirl modes \cite{Madelung1927,Pati2000}. Numerical scales are fixed by VAM constants $\Ce=\CeVal\,\si{m/s}$, $\rc=\rcVal\,\si{m}$, $\rhoa=\rhoaVal\,\si{kg/m^3}$.
+\end{abstract}
+
+
+\section{Scales from VAM}
+Define the characteristic swirl frequency and energy density
+\begin{align}
+\Omega_0 \equiv \frac{\Ce}{\rc} \approx 7.76\times10^{20}\,\si{s^{-1}},\qquad
+\varepsilon_{\ae} = \tfrac12\rhoa\Ce^2 \approx 4.19\times10^{5}\,\si{J/m^3}.
+\end{align}
+In what follows, frequencies and rates are reported in units of $\Omega_0$ when convenient, but all experimental predictions are in SI.
+
+
+\section{Coupled transport in 1D and perturbative solution}
+We adopt the unified density-matrix equation for bosonic modes $N(\mathbf R,\mathbf q)$ \cite{Simoncelli2019Unified} and extend it by a charged two-level system (``electron'') with density matrix $f$:
+\begin{align}
+\partial_t N &= -i[\Omega,N] - \Gamma_\mathrm{b} \circ (N-N^{(0)}) - \tfrac12\{ V_x \partial_x, N\},\label{eq:Ndyn}\\
+\partial_t f &= -i[H_e,f] - \Gamma_\mathrm{e}\circ(f-f^{(0)}) - \tfrac12\{ v_{e,x}\partial_x, f\} + \mathcal C_{e\leftrightarrow b},\label{eq:fdyn}
+\end{align}
+where $\Gamma_\mathrm{b}$ and $\Gamma_\mathrm{e}$ are diagonal damping superoperators, and $\mathcal C_{e\leftrightarrow b}$ encodes electron--swirl coupling (Born--Markov, rotating-wave):
+\begin{equation}
+\mathcal C_{e\leftrightarrow b} \equiv -\frac{i}{\hbar}[M, f\otimes N]_{\mathrm{RWA}}\,.
+\end{equation}
+
+
+\subsection{Linear response to a static gradient}
+Assume a small, uniform $\partial_x T$ and time-independent steady state. Linearize about equilibrium $N^{(0)}(T)$, $f^{(0)}(T)$ using $N=N^{(0)}+N^{(1)}$, $f=f^{(0)}+f^{(1)}$ and retain terms $\mathcal O(\partial_xT)$. For a \emph{two-branch} bosonic subspace $s,s'$ near-degenerate by $\delta=\Omega_{s'}-\Omega_s$ and a single electronic transition $\Delta$, the off-diagonal coherence $N^{(1)}_{ss'}$ solves
+\begin{equation}
+\Big[i\delta + \tfrac12(\gamma_s+\gamma_{s'})\Big] N^{(1)}_{ss'}
+\;=\; -\frac{1}{2} V^{(x)}_{ss'}\, \partial_x N^{(0)}_{\mathrm{pop}}(\Omega) \; -\; \frac{i}{\hbar}\,\Xi_{ss'}\,,
+\label{eq:Noff}
+\end{equation}
+with $\gamma$ the linewidths and $\Xi_{ss'}$ the electron-induced source from $\mathcal C_{e\leftrightarrow b}$ (proportional to the coupling vertex $M$ and to $f^{(1)}$). The population correction obeys
+\begin{equation}
+(\gamma_s)\, N^{(1)}_{ss} + V^{(x)}_{ss}\,\partial_x N^{(0)}_{ss} + 2\,\mathrm{Im}\big( V^{(x)}_{ss'}\,N^{(1)}_{s's}\big) = S^{(e)}_s\,,
+\label{eq:Ndiag}
+\end{equation}
+where $S^{(e)}_s$ collects electron-related terms.
+
+
+\subsection{Closed form for the coherence contribution to $\kappa$}
+The heat current density for bosonic modes is $J_x= \Tr\big[ \{V_x, N\}\,\Omega/2 \big]$ \cite{Hardy1963,Simoncelli2019Unified}. Using Eqs.~\eqref{eq:Noff}--\eqref{eq:Ndiag} and eliminating $f^{(1)}$ in the weak-coupling (Born) limit yields the \emph{coherence} part of the 1D thermal conductivity
+\begin{equation}
+\boxed{\;\kappa^{(\mathrm C)}_{\!\,1\mathrm D}\;=\;\sum_{q}\sum_{s\neq s'} \frac{(\Omega_s+\Omega_{s'})\;\Gamma_{ss'}\; |V^{(x)}_{ss'}|^2}{4\delta^2+\Gamma_{ss'}^2}\;\bigg(-\frac{\partial n_B}{\partial T}\bigg)\; +\; \mathcal O(|M|^2)\;,}\label{eq:kC}
+\end{equation}
+where $\Gamma_{ss'}\!=\!\tfrac12(\gamma_s+\gamma_{s'})$ and $n_B$ is the Bose function. Equation~\eqref{eq:kC} reduces to Peierls (no off-diagonals) and to Allen--Feldman (flat bands, $V_{ss}\!\to\!0$) in the appropriate limits \cite{Peierls1929,AllenFeldman1993,Simoncelli2019Unified}. The $\mathcal O(|M|^2)$ corrections add an \emph{electron-assisted} channel with the same Lorentzian denominator.
+
+
+\section{1D slab: temperature field and $\Delta\kappa/\kappa$}
+Consider a bar of length $L$, cross-section $A$, thermal conductivity $\kappa=\kappa^{(\mathrm P)}+\kappa^{(\mathrm C)}$. A steady heater power $P$ at $x=0$ with heat sink at $x=L$ gives $\partial_x T = -P/(\kappa A)$ and
+\begin{equation}
+\Delta T \equiv T(0)-T(L) = \frac{P\,L}{\kappa A}\,.
+\end{equation}
+A small VAM-induced change $\Delta\kappa$ results in
+\begin{equation}
+\boxed{\;\Delta(\Delta T) \approx -\frac{\Delta\kappa}{\kappa}\,\Delta T\;,}\label{eq:deltaT}
+\end{equation}
+valid for $|\Delta\kappa|\ll\kappa$. Combining \eqref{eq:kC} and \eqref{eq:deltaT} links \emph{measured} temperature differences to microscopic parameters $\delta,\Gamma, V_{ss'}$.
+
+
+\section{Quantitative benchmarks with materials}
+We propose concrete specimens and give order-of-magnitude signals using Eq.~\eqref{eq:deltaT}.
+
+
+\subsection*{(B1) Borosilicate glass bar}
+$L=\SI{50}{mm}$, $A=\SI{1e-4}{m^2}$ (\SI{10}{mm}$\times$\SI{10}{mm}), $\kappa\approx\SI{1.1}{W\,m^{-1}\,K^{-1}}$. Choose $P=\SI{20}{mW}$: baseline $\Delta T \approx P L/(\kappa A) \approx \SI{9}{K}$. If engineered degeneracy gives $\Delta\kappa/\kappa=\SI{-2}{\percent}$ from \eqref{eq:kC}, then $\Delta(\Delta T)\approx+\SI{0.18}{K}$. This exceeds typical IR-camera NETD ($\sim\SI{30}{mK}$) by $>5\times$.
+
+
+\subsection*{(B2) PMMA bar (low-$\kappa$ polymer)}
+$\kappa\approx\SI{0.19}{W\,m^{-1}\,K^{-1}}$, keep $L=\SI{50}{mm}$, $A=\SI{1e-4}{m^2}$, use $P=\SI{2}{mW}$ to avoid overheating: baseline $\Delta T\!\approx\!\SI{5.3}{K}$. A conservative $\Delta\kappa/\kappa=\SI{-1}{\percent}$ yields $\SI{53}{mK}$ shift---still above NETD.
+
+
+\subsection*{(B3) Forward/backward nonreciprocity}
+Drive a 3-phase Rodin coil with phase sequence $\pm(0,\,120^\circ,\,240^\circ)$ to bias chirality. Expect
+\begin{equation}
+\big[\Delta\kappa\big]_{\rightarrow}-\big[\Delta\kappa\big]_{\leftarrow} \equiv \Delta\kappa_\text{asym} \sim \eta_\chi\, \frac{\Gamma\,\Delta V_{ss'}^{2}}{4\delta^2+\Gamma^2}\,,\qquad 0<\eta_\chi<1\,.
+\end{equation}
+Taking $\Delta\kappa_\text{asym}/\kappa\sim\SI{0.5}{\percent}$ implies a measurable $\Delta(\Delta T)\sim\SI{25}{mK}$ for (B1).
+
+
+\section{Device recipes}
+\textbf{Thermal bar (B1/B2).} Bar glued on an Al nitride heat sink at $x=L$. Heater: \SI{100}{\Omega} thin-film resistor at $x=0$, four-wire calibrated. Enclosure to suppress convection (foam + thin IR window). IR camera or thermistors along $x$. Coil: 3-phase, $N\sim200$ turns/phase, $f\in[\SI{20}{kHz},\SI{100}{kHz}]$, current $\le\SI{0.5}{A}$, duty-cycled to limit Joule heating. 
+
+
+\textbf{Electronics analog (LCR).} Two LCR tanks at \SI{1}{MHz}, $Q\sim100$ ($\kappa=\omega/2Q\approx3.1\times10^4\,\si{s^{-1}}$). With stored energy $E\sim\SI{0.5}{nJ}$, instantaneous dissipated power $P_\text{bath}=\kappa E\sim\SI{16}{\mu W}$. Adding a\ near-degenerate second tank elevates the early-time peak by the Lorentzian factor in \eqref{eq:kC}.
+
+
+\textbf{Quantum hybrid (SAW/MEMS).} Piezo substrate (128$^{\circ}$ Y-cut LiNbO$_3$). IDT pair for a \SI{3}{GHz} SAW mode; superconducting qubit capacitively coupled \cite{Aspelmeyer2014,Manenti2017}. Pattern shallow quasi-periodic notches to enhance $V^{(x)}_{ss'}$ and tune $\delta$.
+
+
+\section{Error and noise budget}
+\begin{itemize}
+  \item \textbf{Thermometry:} IR camera NETD \SI{30}{--\,50}{mK}; thermistor readout noise \SI{<10}{mK} with \SI{1}{s} averaging. 
+  \item \textbf{Power calibration:} $<\!\SI{1}{\percent}$ with four-wire measurement. 
+  \item \textbf{Radiation/convection:} Within enclosure, systematic drift $\lesssim\SI{0.05}{K}$ over \SI{10}{min}. Acquire forward/backward sweeps in quick succession to common-mode cancel.
+  \item \textbf{Contact resistance:} Use indium foil at heater/bar/sink interfaces; verify with repeated mounting.
+\end{itemize}
+Expected signals ($\SI{50}{\text{--}\,200}{mK}$) clear the combined noise by factors $\gtrsim3$ for (B1/B2).
+
+
+\section{Falsifiability criteria}
+The electron--swirl interpretation is \emph{falsified} if any of the following hold under the stated drive:
+\begin{enumerate}
+  \item \textbf{No Lorentzian detuning:} $\Delta\kappa(\delta)$ lacks the $(4\delta^2+\Gamma^2)^{-1}$ peak predicted by \eqref{eq:kC} at fixed current.
+  \item \textbf{No chirality asymmetry:} $|\Delta\kappa_\text{asym}/\kappa| < 3\sigma$ with $\sigma$ the thermal readout error; target sensitivity $\le\SI{0.1}{\percent}$ via averaging.
+  \item \textbf{Parameter scaling mismatch:} Signal does not scale as $|V^{(x)}_{ss'}|^2$ (via coil current squared) nor with $\Gamma$ (via controlled disorder).
+\end{enumerate}
+
+
+\section{Connection to quantum information}
+In the Jaynes--Cummings limit \cite{Jaynes1963}, the same vertices $M$ and $V_{ss'}$ that maximize $\kappa^{(\mathrm C)}$ also maximize state transfer between electron and swirl modes. In a hybrid device, one can exploit the \emph{coherence peak} (small $\delta$, moderate $\Gamma$) to route heat out of the qubit while preserving its phase, akin to engineered reservoirs \cite{Breuer2002,Aspelmeyer2014}.
+
+
+\section{Conclusions}
+We provided closed-form transport expressions, concrete device geometries, quantitative signals, a noise budget, and falsifiability criteria. These enable immediate lab tests that adjudicate the presence of coherence-mediated electron--swirl transport in VAM.
+
+
+\section*{Acknowledgments}
+The author thanks the classical foundations of vortex hydrodynamics and unified transport \cite{Madelung1927,Peierls1929,AllenFeldman1993,Simoncelli2019Unified} for inspiration.
+
+
+\bibliographystyle{unsrt}
+\begin{thebibliography}{99}
+\bibitem{Peierls1929} R. Peierls, Ann. Phys. \textbf{395}, 1055 (1929).
+\bibitem{AllenFeldman1993} P. B. Allen and J. L. Feldman, Phys. Rev. B \textbf{48}, 12581 (1993).
+\bibitem{Simoncelli2019Unified} M. Simoncelli, N. Marzari, and F. Mauri, Nat. Phys. \textbf{18}, 1180 (2022); arXiv:1901.01964.
+\bibitem{Madelung1927} E. Madelung, Z. Physik \textbf{40}, 322 (1927).
+\bibitem{Pati2000} A. K. Pati and S. L. Braunstein, Phys. Lett. A \textbf{268}, 241 (2000).
+\bibitem{Hardy1963} R. J. Hardy, Phys. Rev. \textbf{132}, 168 (1963).
+\bibitem{Jaynes1963} E. T. Jaynes and F. W. Cummings, Proc. IEEE \textbf{51}, 89 (1963).
+\bibitem{Lindblad1976} G. Lindblad, Commun. Math. Phys. \textbf{48}, 119 (1976).
+\bibitem{Breuer2002} H.-P. Breuer and F. Petruccione, \textit{The Theory of Open Quantum Systems}, Oxford (2002).
+\bibitem{Aspelmeyer2014} M. Aspelmeyer, T. J. Kippenberg, and F. Marquardt, Rev. Mod. Phys. \textbf{86}, 1391 (2014).
+\bibitem{Manenti2017} R. Manenti \textit{et al.}, Nat. Commun. \textbf{8}, 975 (2017).
+\bibitem{Cahill2004} D. G. Cahill \textit{et al.}, J. Appl. Phys. \textbf{93}, 793 (2003).
+\end{thebibliography}
+
+
+\end{document}

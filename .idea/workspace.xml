@@ -25,11 +25,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f2a8139-c825-4497-876b-70e1a130c5c3" name="Changes" comment="Refactor file structure: rename multiple files for clarity and consistency; add new 3D knot rendering script and update file paths in hyperbollic mass number calculation script">
-      <change afterPath="$PROJECT_DIR$/vam_constants.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vam_constants.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="6f2a8139-c825-4497-876b-70e1a130c5c3" name="Changes" comment="Update .gitignore: remove specific .idea directory entry and add general .idea/* entry for better IDE configuration management">
+      <change afterPath="$PROJECT_DIR$/VAM_17_shorts/VAM-17.4 Schrodinger.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_17_shorts/VAM-17.5 Heat_Transport.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_17_shorts/vam_hydrogen.bib" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_8_MASTER_Paper/VAM-8.5-Master_Formula.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_8_MASTER_Paper/VAM-8.5-Master_Formula.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/VAM-8.5-Master_Formula.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/VAM-8.5-Master_Formula.pdf" afterDir="false" />
     </list>
     <list id="4afbe360-edfd-4722-ab75-c722c883a8a6" name="DoNotCommit" comment="DoNotCommit" />
     <option name="SHOW_DIALOG" value="false" />
@@ -127,7 +129,9 @@
     "BibTeX.VAM-16-Quantum_Computing_Blueprint bibliography.executor": "Run",
     "BibTeX.VAM-17.1.executor": "Run",
     "BibTeX.VAM-17.2.executor": "Run",
+    "BibTeX.VAM-17.4 Schrodinger bibliography.executor": "Run",
     "BibTeX.VAM-17_OnTheVortexInterpretationOfKerrGeometryInTheVortexÆtherModel bibliography.executor": "Run",
+    "BibTeX.VAM-8.5-Master_Formula bibliography.executor": "Run",
     "BibTeX.VAM-8.5-Master_Formula.executor": "Run",
     "BibTeX.VAM-8.executor": "Run",
     "BibTeX.VAM-9-MilkyWay_as_a_Chiral_Swirl-Knot_Network.executor": "Run",
@@ -182,6 +186,8 @@
     "LaTeX.VAM-17.1_PhotonVortex.executor": "Run",
     "LaTeX.VAM-17.2_OnTheVortexInterpretationOfKerrGeometryInTheVortexÆtherModel.executor": "Run",
     "LaTeX.VAM-17.3_Bells.executor": "Run",
+    "LaTeX.VAM-17.4 Schrodinger.executor": "Run",
+    "LaTeX.VAM-17.5 Heat_Transport.executor": "Run",
     "LaTeX.VAM-17_OnTheVortexInterpretationOfKerrGeometryInTheVortexÆtherModel.executor": "Run",
     "LaTeX.VAM-8-Master_Paper.executor": "Run",
     "LaTeX.VAM-8.5-Master_Formula.executor": "Run",
@@ -336,7 +342,7 @@
       <recent name="C:\workspace\projects\VAM\VAM_PYTHON_SIMULATOINS" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="LaTeX.VAM-17.5 Heat_Transport">
     <configuration name="AntiGravity-DualityEM_lazer_c_e bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" folderName="EXPERIMENTS">
       <texify-bibtex>
         <compiler>BIBTEX</compiler>
@@ -368,6 +374,30 @@
         <compiler-arguments />
         <envs />
         <main-file>$PROJECT_DIR$/VAM_16_QuantumComputing/VAM-16-Quantum_Computing_Blueprint.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
+        <latex-distribution>MIKTEX</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration name="VAM-17.4 Schrodinger bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler>BIBTEX</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/VAM_17_shorts/VAM-17.4 Schrodinger.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
+        <latex-distribution>MIKTEX</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration name="VAM-8.5-Master_Formula bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler>BIBTEX</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/VAM_8_MASTER_Paper/VAM-8.5-Master_Formula.tex</main-file>
         <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
         <latex-distribution>MIKTEX</latex-distribution>
       </texify-bibtex>
@@ -524,29 +554,6 @@
       </texify>
       <method v="2" />
     </configuration>
-    <configuration name="VAM-1-TimeDilationHydrogen" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" folderName="LaTeX" temporary="true">
-      <texify>
-        <compiler>PDFLATEX</compiler>
-        <compiler-path />
-        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
-        <require-focus>true</require-focus>
-        <viewer-command />
-        <compiler-arguments />
-        <envs />
-        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
-        <before-run-command />
-        <main-file>$PROJECT_DIR$/VAM_1_TimeDilation_in_3D/VAM-1-TimeDilationHydrogen.tex</main-file>
-        <output-path>$PROJECT_DIR$/out</output-path>
-        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
-        <compile-twice>false</compile-twice>
-        <output-format>PDF</output-format>
-        <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>true</has-been-run>
-        <bib-run-config>[]</bib-run-config>
-        <makeindex-run-config>[]</makeindex-run-config>
-      </texify>
-      <method v="2" />
-    </configuration>
     <configuration name="VAM-17.3_Bells" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" folderName="LaTeX" temporary="true">
       <texify>
         <compiler>PDFLATEX</compiler>
@@ -559,6 +566,52 @@
         <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
         <before-run-command />
         <main-file>$PROJECT_DIR$/VAM_17_shorts/VAM-17.3_Bells.tex</main-file>
+        <output-path>$PROJECT_DIR$/out</output-path>
+        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>MIKTEX</latex-distribution>
+        <has-been-run>true</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
+    <configuration name="VAM-17.4 Schrodinger" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <require-focus>true</require-focus>
+        <viewer-command />
+        <compiler-arguments />
+        <envs />
+        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
+        <before-run-command />
+        <main-file>$PROJECT_DIR$/VAM_17_shorts/VAM-17.4 Schrodinger.tex</main-file>
+        <output-path>$PROJECT_DIR$/out</output-path>
+        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>MIKTEX</latex-distribution>
+        <has-been-run>true</has-been-run>
+        <bib-run-config>[BibTeX.VAM-17.4 Schrodinger bibliography]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
+    <configuration name="VAM-17.5 Heat_Transport" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <require-focus>true</require-focus>
+        <viewer-command />
+        <compiler-arguments />
+        <envs />
+        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
+        <before-run-command />
+        <main-file>$PROJECT_DIR$/VAM_17_shorts/VAM-17.5 Heat_Transport.tex</main-file>
         <output-path>$PROJECT_DIR$/out</output-path>
         <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
         <compile-twice>false</compile-twice>
@@ -593,6 +646,29 @@
       </texify>
       <method v="2" />
     </configuration>
+    <configuration name="VAM-8.5-Master_Formula" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <require-focus>true</require-focus>
+        <viewer-command />
+        <compiler-arguments />
+        <envs />
+        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
+        <before-run-command />
+        <main-file>$PROJECT_DIR$/VAM_8_MASTER_Paper/VAM-8.5-Master_Formula.tex</main-file>
+        <output-path>$PROJECT_DIR$/out</output-path>
+        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>MIKTEX</latex-distribution>
+        <has-been-run>true</has-been-run>
+        <bib-run-config>[BibTeX.VAM-8.5-Master_Formula bibliography]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
     <configuration name="VAM_Full_Lagrangian" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" folderName="LaTeX">
       <texify>
         <compiler>PDFLATEX</compiler>
@@ -607,6 +683,29 @@
         <main-file>$PROJECT_DIR$/VAM_17_shorts/VAM_Full_Lagrangian.tex</main-file>
         <output-path>$PROJECT_DIR$/out</output-path>
         <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>MIKTEX</latex-distribution>
+        <has-been-run>false</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <require-focus>true</require-focus>
+        <viewer-command />
+        <compiler-arguments />
+        <envs />
+        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
+        <before-run-command />
+        <main-file />
+        <output-path>{projectDir}/out</output-path>
+        <auxil-path>{projectDir}/auxil</auxil-path>
         <compile-twice>false</compile-twice>
         <output-format>PDF</output-format>
         <latex-distribution>MIKTEX</latex-distribution>
@@ -670,6 +769,8 @@
       <item itemvalue="BibTeX.VAM-Philosophical_Depth_Companion" />
       <item itemvalue="BibTeX.golden_rapidity_vam bibliography" />
       <item itemvalue="BibTeX.phi_asinh_note bibliography" />
+      <item itemvalue="BibTeX.VAM-8.5-Master_Formula bibliography" />
+      <item itemvalue="BibTeX.VAM-17.4 Schrodinger bibliography" />
       <item itemvalue="LaTeX.Appendix_X-filesExplanationsFoundationalPhysicsAnomalies" />
       <item itemvalue="LaTeX.6-Core_Foundations_VAM" />
       <item itemvalue="LaTeX.7-Philosophical_Depth_Companion" />
@@ -678,14 +779,18 @@
       <item itemvalue="LaTeX.VAM_Full_Lagrangian" />
       <item itemvalue="LaTeX.AntiGravity-DualityEM_lazer_c_e" />
       <item itemvalue="LaTeX.phi_asinh_note" />
-      <item itemvalue="LaTeX.VAM-1-TimeDilationHydrogen" />
       <item itemvalue="LaTeX.VAM-17.3_Bells" />
+      <item itemvalue="LaTeX.VAM-17.5 Heat_Transport" />
+      <item itemvalue="LaTeX.VAM-17.4 Schrodinger" />
+      <item itemvalue="LaTeX.VAM-8.5-Master_Formula" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="LaTeX.VAM-17.5 Heat_Transport" />
+        <item itemvalue="LaTeX.VAM-17.4 Schrodinger" />
+        <item itemvalue="LaTeX.VAM-8.5-Master_Formula" />
         <item itemvalue="LaTeX.phi_asinh_note" />
         <item itemvalue="LaTeX.VAM-17.3_Bells" />
-        <item itemvalue="LaTeX.VAM-1-TimeDilationHydrogen" />
       </list>
     </recent_temporary>
   </component>
@@ -787,7 +892,11 @@
       <workItem from="1755005225658" duration="79000" />
       <workItem from="1755007287069" duration="1536000" />
       <workItem from="1755011312462" duration="35000" />
-      <workItem from="1755157880522" duration="4627000" />
+      <workItem from="1755157880522" duration="4661000" />
+      <workItem from="1755597949376" duration="1672000" />
+      <workItem from="1755600989259" duration="763000" />
+      <workItem from="1755603041234" duration="300000" />
+      <workItem from="1755606330638" duration="2301000" />
     </task>
     <task id="LOCAL-00001" summary="Made MASTER paper, VAM4, VAM12.&#10;Added Knot images">
       <created>1751925083082</created>
@@ -1001,7 +1110,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755188370748</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Update .gitignore: remove specific .idea directory entry and add general .idea/* entry for better IDE configuration management">
+      <option name="closed" value="true" />
+      <created>1755188750907</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1755188750907</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1038,7 +1155,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Refactor file structure by renaming multiple LaTeX documents and scripts for consistency; update README.txt to include submission details and add new introduction and conclusion sections." />
     <MESSAGE value="Refactor LaTeX documents to improve consistency in notation; update force variables to include proper superscripts for clarity." />
     <MESSAGE value="Update LaTeX documents to reflect new licensing terms; add new package requirements and improve document structure for clarity." />
     <MESSAGE value="Implement script to convert bibliographic citations to footnotes in LaTeX; add new bibliography file and update existing references for improved clarity." />
@@ -1063,7 +1179,8 @@
     <MESSAGE value="Update figure paths in Warpdrive.tex and add new section on vacuum refraction and photon scattering in VacuumRefractionPhotonScattering.tex" />
     <MESSAGE value="Refactor file structure: rename benchmark scripts for clarity; add new quantum processing scripts and documentation files for golden ratio calculations and VAM analysis" />
     <MESSAGE value="Refactor file structure: rename multiple files for clarity and consistency; add new 3D knot rendering script and update file paths in hyperbollic mass number calculation script" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor file structure: rename multiple files for clarity and consistency; add new 3D knot rendering script and update file paths in hyperbollic mass number calculation script" />
+    <MESSAGE value="Update .gitignore: remove specific .idea directory entry and add general .idea/* entry for better IDE configuration management" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update .gitignore: remove specific .idea directory entry and add general .idea/* entry for better IDE configuration management" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
@@ -1087,7 +1204,7 @@
     <SUITE FILE_PATH="coverage/VAMCore$8knot_Trefoil.coverage" NAME="8knot-Trefoil Coverage Results" MODIFIED="1752969413265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
     <SUITE FILE_PATH="coverage/VAM$TimeConstruct.coverage" NAME="TimeConstruct Coverage Results" MODIFIED="1751915068127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - 2 Swirl Clocks/images" />
     <SUITE FILE_PATH="coverage/VAMCore$Rodin_magnetic_fields.coverage" NAME="Rodin_magnetic_fields Coverage Results" MODIFIED="1752967471245" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$3dKnots.coverage" NAME="3dKnots Coverage Results" MODIFIED="1755160387823" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
+    <SUITE FILE_PATH="coverage/VAM$3dKnots.coverage" NAME="3dKnots Coverage Results" MODIFIED="1755599401975" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
     <SUITE FILE_PATH="coverage/VAM$MoleculeWeight.coverage" NAME="MoleculeWeight Coverage Results" MODIFIED="1752073629003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM-MASTER Paper" />
     <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$vamcore2.coverage" NAME="vamcore2 Coverage Results" MODIFIED="1754643446674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_Experiments" />
     <SUITE FILE_PATH="coverage/VAM$vam_qc_chsh.coverage" NAME="vam_qc_chsh Coverage Results" MODIFIED="1754989675880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
@@ -1122,6 +1239,7 @@
     <SUITE FILE_PATH="coverage/VAM$knots.coverage" NAME="knots Coverage Results" MODIFIED="1753345605412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
     <SUITE FILE_PATH="coverage/VAM$Rodin_magnetic_fields.coverage" NAME="Rodin_magnetic_fields Coverage Results" MODIFIED="1752427869291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
     <SUITE FILE_PATH="coverage/VAM$canonical_vam_chsh.coverage" NAME="canonical_vam_chsh Coverage Results" MODIFIED="1754999275924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
+    <SUITE FILE_PATH="coverage/VAM$dl_knots.coverage" NAME="dl_knots Coverage Results" MODIFIED="1755598893649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
     <SUITE FILE_PATH="coverage/VAM$timediagram.coverage" NAME="timediagram Coverage Results" MODIFIED="1752051334138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - 0 Einsteins Æther" />
     <SUITE FILE_PATH="coverage/VAM$proton_neutron_weigth.coverage" NAME="proton_neutron_weigth Coverage Results" MODIFIED="1751848726214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM-MASTER Paper" />
     <SUITE FILE_PATH="coverage/VAMCore$NODES.coverage" NAME="NODES Coverage Results" MODIFIED="1752967419859" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
@@ -1154,8 +1272,9 @@
     <SUITE FILE_PATH="coverage/VAMCore$swirltorus36_knots.coverage" NAME="swirltorus36 knots Coverage Results" MODIFIED="1752966295911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations" />
     <SUITE FILE_PATH="coverage/VAM$7_4knot.coverage" NAME="7_4knot Coverage Results" MODIFIED="1752431182408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
     <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$knot_6_2.coverage" NAME="knot_6_2 Coverage Results" MODIFIED="1754638780691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
+    <SUITE FILE_PATH="coverage/VAM$knots_toggle_autoknot.coverage" NAME="knots-toggle-autoknot Coverage Results" MODIFIED="1755599462614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots" />
     <SUITE FILE_PATH="coverage/VAM$quarck_streamlines.coverage" NAME="quarck streamlines Coverage Results" MODIFIED="1752596530929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/VAM$batch_fseries_vam__1_.coverage" NAME="batch_fseries_vam (1) Coverage Results" MODIFIED="1754987998315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
+    <SUITE FILE_PATH="coverage/VAM$batch_fseries_vam__1_.coverage" NAME="batch_fseries_vam (1) Coverage Results" MODIFIED="1755599583746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
     <SUITE FILE_PATH="coverage/VAM$doublestarshipteste.coverage" NAME="doublestarshipteste Coverage Results" MODIFIED="1754992678515" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
     <SUITE FILE_PATH="coverage/VAM$QuantumProcessing2.coverage" NAME="QuantumProcessing2 Coverage Results" MODIFIED="1754988757142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
     <SUITE FILE_PATH="coverage/VAM$TemporalOntology.coverage" NAME="TemporalOntology Coverage Results" MODIFIED="1753193206663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images" />

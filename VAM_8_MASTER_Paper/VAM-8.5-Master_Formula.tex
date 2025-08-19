@@ -47,193 +47,162 @@
   \titlepageOpen
 
   \begin{abstract}
-    We present the Master Mass Formula~\cite{iskandarani2025vam-master} used in the Vortex Æther Model (VAM), a topological-fluid framework for deriving particle and atomic mass from knot-like vortex structures. This formulation interprets mass as amplified core swirl energy modulated by coherence and tension suppression factors rooted in topological invariants. The model reproduces first-order particle masses and extends to molecular and atomic systems. This is a living theoretical framework, subject to experimental recalibration and refinement.
+      We present the Master Mass Formula~\cite{iskandarani2025vam-master} used in the Vortex Æther Model (VAM), a topological-fluid framework for deriving particle and atomic mass from knot-like vortex structures. Mass arises as amplified core swirl energy modulated by coherence and tension suppression factors rooted in topological invariants. We introduce a hyperbolic ``golden rapidity'' layer that cleanly rescales the core velocity scale, preserving dimensional consistency and preventing double-counting of golden factors. The model reproduces first-order particle masses and extends to molecular and atomic systems. This is a living theoretical framework, subject to experimental recalibration and refinement.
+      For a full list of atomic masses up to Uranium, and common molecules calculated using the Master Formula, see Appendix \ref{sec:AtomicMasses}.
+      \titlepageClose
   \end{abstract}
 
 
 
-\noindent\raggedright \section{\noindent\raggedright The Master Formula}
+\noindent\raggedright \section{\noindent\raggedright The VAM Mass Formula}
 The VAM mass of a particle or atomic structure is given by:
 
-\begin{equation}
-\boxed{
-M(n, m, \{V_i\}) = \frac{4}{\alpha} \cdot \left( \frac{1}{m} \right)^{3/2} \cdot \frac{1}{\varphi^s} \cdot n^{-1/\varphi} \cdot \left( \sum_i V_i \right) \cdot \left( \frac{1}{2} \rho_\text{\ae}^{(\text{energy})} C_e^2 \right)
-}
-    \label{eq:master}
-\end{equation}
+  \paragraph{Golden ratio and identities.}
+  Define the golden ratio via the inverse hyperbolic sine
+  \begin{equation}
+      \varphi \equiv e^{\operatorname{asinh}(1/2)},\qquad
+      \text{so that }~ \operatorname{asinh}(x)=\ln\!\big(x+\sqrt{x^2+1}\big)\ \text{\cite{NISTDLMF}}.
+  \end{equation}
+  Introduce the \emph{golden rapidity}
+  \begin{equation}
+      \xi_g \equiv \tfrac{3}{2}\ln\varphi \quad\Rightarrow\quad
+      \tanh(\xi_g)=\frac{1}{\varphi},\ \ \coth(\xi_g)=\varphi \ \ \text{\cite{NISTDLMF}}.
+  \end{equation}
 
 
 
-\begin{table*}[htbp]
-\footnotesize
-\centering
-\caption{Results of the Master Formula applied to atomic masses.}
-\label{tab:vam_mass_preview}
-\begin{tabular}{p{0.46\linewidth} p{0.46\linewidth}}
-
-\begin{tabular}{|rllr|}
-\toprule
-Atom & Mass (kg) & VAM Mass & Err$_\text{M}$ \\
-\midrule
-H   & 1.674e-27 & 1.657e-27     & -0.97\% \heartmarker                                                                      \\
-He  & 6.646e-27 & 6.754e-27     & +1.61\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}       \\
-Li  & 1.152e-26 & 1.185e-26     & +2.83\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=orange,circle,inner sep=3pt]{};}      \\
-Be  & 1.497e-26 & 1.523e-26     & +1.75\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}       \\
-B   & 1.795e-26 & 1.860e-26     & +3.64\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=orange,circle,inner sep=3pt]{};}      \\
-C   & 1.994e-26 & 2.026e-26     & +1.58\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}       \\
-N   & 2.326e-26 & 2.364e-26     & +1.63\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}       \\
-O   & 2.657e-26 & 2.701e-26     & +1.68\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}       \\
-F   & 3.155e-26 & 3.211e-26     & +1.79\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}       \\
-Ne  & 3.351e-26 & 3.377e-26     & +0.77\% \heartmarker                                                                      \\
-Na  & 3.818e-26 & 3.886e-26     & +1.80\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}       \\
-Mg  & 4.036e-26 & 4.052e-26     & +0.40\% \heartmarker                                                                      \\
-Al  & 4.480e-26 & 4.562e-26     & +1.82\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}       \\
-\bottomrule
-\end{tabular} &
-\begin{tabular}{|rllr|}
-\toprule
-Species & Mass (kg) & VAM Mass & Err$_\text{M}$\\
-\midrule
-Si  & 4.664e-26 & 4.727e-26     & +1.37\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}       \\
-P   & 5.143e-26 & 5.237e-26     & +1.82\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}       \\
-S   & 5.324e-26 & 5.403e-26     & +1.49\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}       \\
-Cl  & 5.887e-26 & 5.912e-26     & +0.44\% \heartmarker                                                                      \\
-Ar  & 6.634e-26 & 6.766e-26     & +2.00\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}       \\
-K   & 6.492e-26 & 6.588e-26     & +1.47\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}       \\
-Ca  & 6.655e-26 & 6.754e-26     & +1.48\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}       \\
-Sc  & 7.465e-26 & 7.607e-26     & +1.90\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}       \\
-Ti  & 7.949e-26 & 8.117e-26     & +2.12\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}       \\
-V   & 8.459e-26 & 8.626e-26     & +1.98\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}       \\
-Cr  & 8.634e-26 & 8.792e-26     & +1.83\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}       \\
-Mn  & 9.123e-26 & 9.302e-26     & +1.96\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}       \\
-Fe  & 9.273e-26 & 9.467e-26     & +2.09\% \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}       \\
-\bottomrule
-\end{tabular}
-\end{tabular}
-\vspace{1ex}
-\scriptsize
-\textbf{Legend:}
-pink    \heartmarker   $<$0.5\%,
-green   \tikz[baseline=-0.5ex]{\node[draw=none,fill=green,circle,inner sep=3pt]{};}  $<$2.5\%,
-orange  \tikz[baseline=-0.5ex]{\node[draw=none,fill=orange,circle,inner sep=3pt]{};}  $<$10\%,
-red     \tikz[baseline=-0.5ex]{\node[draw=none,fill=red,circle,inner sep=3pt]{};} $<$25\%,
-black   \tikz[baseline=-0.5ex]{\node[draw=none,fill=black,circle,inner sep=3pt]{};}  $\geq$25\%.
-
-\end{table*}
-
-  For a full list of atomic masses up to Uranium, and common molecules calculated using the Master Formula, see Appendix \ref{sec:AtomicMasses}.
-      \titlepageClose
 
 
+  \paragraph{Golden layer \(k\).}
+  We parameterize a discrete hyperbolic scaling by an integer \(k\ge0\) through the core speed
+  \begin{equation}
+      C_e \longmapsto \frac{C_e}{\varphi^k} \quad \text{(in the energy density only).}
+  \end{equation}
+  Equivalently, this is a multiplicative factor \(\varphi^{-2k}\) on the energy density.
 
-\subsection*{\noindent\raggedright Variables and Constants}
-\begin{itemize}
-    \item $\alpha$ — Fine-structure constant ($\approx 1/137$)
-    \item $\eta$ — Thread suppression factor, typically $\eta = \left(1 / m_{\text{threads}} \right)^{3/2}$
-    \item $\xi$ — Coherence suppression factor. Options include:
-    \begin{itemize}
-        \item Empirical: $\xi = 1 + \beta \log n$
-        \item First-principles: $\xi = n^{-1/\phi}$ where $\phi = \frac{1 + \sqrt{5}}{2}$
-    \end{itemize}
-    \item $\tau$ — Topological tension, given by $\tau = \phi^{-s}$ for integer $s$ (renormalization index)
-    \item $V_i$ — Core vortex volume for each knot or constituent unit (m$^3$)
-    \item \(\rho_\text{\ae}^{(\text{energy})} = 3.89 \times 10^{18} \, \text{kg/m}^3\),— Æther energy density
-    \item $C_e$ — Swirl propagation speed in the vortex medium
-    \item $c$ — Speed of light in vacuum
-\end{itemize}
+  \subsection*{Corrected Master Mass Formula (two equivalent forms)}
 
+  Let \(n\) be the number of coherent knots, \(m\) the internal thread multiplicity, \(s\in\mathbb{R}\) a golden tension index, and \(V_i\) constituent volumes. Let \(\rho_{\ae}\) denote the \emph{mass} density of the æther. The core \emph{energy} density is
+  \[
+      \mathcal{E}_k=\frac{1}{2}\,\rho_{\ae}\left(\frac{C_e}{\varphi^k}\right)^2.
+  \]
+  Then the mass is
+  \begin{equation}
+      \boxed{
+          M(n,m,\{V_i\};k)=\frac{4}{\alpha}\;
+          \underbrace{\Big(\tfrac{1}{m}\Big)^{3/2}}_{\eta}\;
+          \underbrace{n^{-1/\varphi}}_{\xi}\;
+          \underbrace{\varphi^{-s}}_{\tau}\;
+          \Big(\sum_i V_i\Big)\;
+          \frac{\mathcal{E}_k}{c^2}
+      }
+      \label{eq:master-A}
+  \end{equation}
+  or, equivalently, with \(C_e\) left unscaled and the \(\varphi^{-2k}\) absorbed into the tension,
+  \begin{equation}
+      \boxed{
+          M(n,m,\{V_i\};k)=\frac{4}{\alpha}\;
+          \Big(\tfrac{1}{m}\Big)^{3/2}\;
+          n^{-1/\varphi}\;
+          \varphi^{-(s+2k)}\;
+          \Big(\sum_i V_i\Big)\;
+          \frac{\tfrac12\,\rho_{\ae} C_e^2}{c^2}
+      }
+      \label{eq:master-B}
+  \end{equation}
+  The total golden suppression is controlled by the \emph{φ-budget}
+  \begin{equation}
+      E_{\varphi}\;\equiv\;s+2k,
+  \end{equation}
+  which prevents double-counting when moving \(\varphi\)-weight between \(k\) (velocity) and \(s\) (tension).
 
+  \subsection*{Variables and Constants}
+  \begin{itemize}
+      \item \(\alpha\) — Fine-structure constant (\(\approx 1/137\)).
+      \item \(\eta=(1/m)^{3/2}\) — thread suppression (dimensionless).
+      \item \(\xi=n^{-1/\varphi}\) — coherence suppression (dimensionless).
+      \item \(\tau=\varphi^{-s}\) — topological tension (dimensionless).
+      \item \(k\in\mathbb{N}_0\) — golden rapidity layer (dimensionless), enters only through \(\mathcal{E}_k\) or equivalently as \(\varphi^{-2k}\) in \eqref{eq:master-B}.
+      \item \(V_i\) — vortex‐core volumes for constituent knots (m\(^3\)).
+      \item \(\rho_{\ae}\) — æther \emph{mass} density (kg/m\(^3\)); \(\mathcal{E}_k\) above is an \emph{energy} density (J/m\(^3\)).
+      \item \(C_e\) — swirl propagation speed in the æther (m/s).
+      \item \(c\) — speed of light in vacuum (m/s).
+  \end{itemize}
 
-\subsection*{Interpretation}
-The formula quantifies the mass as amplified swirl energy per unit volume, modulated by:
-\begin{itemize}
-    \item Suppression factors from thread count and coherence
-    \item A topological renormalization tension based on genus or braid index
-    \item A geometric energy density term from the swirling æther medium
-\end{itemize}
+  \subsection*{Hyperbolic Suppression Factor \(\varphi\)}
+  We adopt
+  \begin{equation}
+      \varphi=e^{\operatorname{asinh}(1/2)}=\frac{1+\sqrt{5}}{2},\qquad
+      \tanh\!\Big(\tfrac{3}{2}\ln\varphi\Big)=\frac{1}{\varphi}\quad\text{\cite{NISTDLMF}}.
+  \end{equation}
+  This encodes a mild hyperbolic damping across knot count \(n\), thread incoherence, or mode proliferation.
 
+  \subsection*{Annotated Master Mass Formula}
+  \begin{align*}
+      M \;=\;
+      &\underbrace{\frac{4}{\alpha}}_{\text{EM amplification}}
+      \cdot
+      \underbrace{\Big(\tfrac{1}{m}\Big)^{3/2}}_{\text{thread suppression}}
+      \cdot
+      \underbrace{n^{-1/\varphi}}_{\text{coherence}}
+      \cdot
+      \underbrace{\varphi^{-s}}_{\text{tension}}
+      \cdot
+      \underbrace{\Big(\sum_i V_i\Big)}_{\text{geometry}}
+      \cdot
+      \underbrace{\frac{\tfrac12\,\rho_{\ae}(C_e/\varphi^k)^2}{c^2}}_{\text{core energy }\to \text{ mass}}
+  \end{align*}
 
+  \section{Canonical Vortex Volume}
+  Each vortex knot is modeled as a torus of core radius \(r_c\) and orbital radius \(R_x\):
+  \begin{equation}
+      V_{\text{knot}}=2\pi^2 R_x r_c^2,\qquad
+      R_x=\frac{N}{Z}\,\frac{F_{\max}\,r_c^2}{M_e\,C_e^2},
+  \end{equation}
+  which is dimensionally consistent (\(R_x\) in m). (Standard torus volume formula; hyperbolic/force mapping as in prior VAM work.)
 
-\section{Canonical Vortex Volume}
-Each vortex knot is modeled as a toroidal structure:
+  \section{Lepton Helicity as a Dimensionless Shape}
+  For light leptons (electron, neutrino), we \emph{retain} the master formula \eqref{eq:master-A}–\eqref{eq:master-B} and encode helicity via a \emph{dimensionless} shaping:
+  \begin{align}
+      V_{\text{eff}}(p,q) &= S(p,q)\,V_{\text{torus}},
+      \qquad S(2,3)=1,\quad
+      S(p,q)=\frac{\sqrt{p^2+q^2}}{\sqrt{13}}, \\
+      \text{or}\quad
+      s(p,q) &= s_0 + \chi\,\frac{\ln\!\sqrt{p^2+q^2}}{\ln\varphi}
+      \quad\Longrightarrow\quad
+      \varphi^{-s(p,q)}=\varphi^{-s_0}\,\big(\sqrt{p^2+q^2}\big)^{-\chi}.
+  \end{align}
+  This preserves units while allowing helicity to influence mass through geometry (\(V\)) or tension (\(s\)); choose either \(S\) or \(\chi\), not both, to avoid double counting.
 
-\begin{equation}
-    V_{\text{knot}} = 2 \pi^2 R_x r_c^2
-\end{equation}
+  \paragraph{Note (replaced expression).}
+  The earlier form
+  \(
+  M_e \propto \rho_{\ae} r_c^3 C_e^{-1}\big(\sqrt{p^2+q^2}+A\big)
+  \)
+  was \emph{dimensionally inconsistent} (units \(\mathrm{kg\,s/m}\)). The corrected lepton mass uses \eqref{eq:master-A}–\eqref{eq:master-B} with the optional \(S(p,q)\) or \(s(p,q)\) shaping.
 
-where:
-\begin{itemize}
-    \item $r_c$ — Core vortex radius
-    \item $R_x$ — Orbital swirl radius derived from:
+  \section{Implementation Notes}
+  Python uses two calibrated sectors:
+  \begin{enumerate}
+      \item \textbf{Quark sector}: \(k=0\) and a fixed \(s\) (e.g.\ \(s=3\)) for proton/neutron fits.
+      \item \textbf{Lepton sector}: enable a \emph{golden layer} \(k\ge1\) (e.g.\ \(k=1\)) and refit \(s\) so that the electron mass is matched exactly. Maintain the φ-budget \(E_\varphi=s+2k\).
+  \end{enumerate}
 
-    \[
-    R_x = \frac{N}{Z} \cdot \frac{F_{\max} r_c^2}{M_e C_e^2}
-    \]
+  \noindent
+  \textbf{Example electron parameters (illustrative):}
+  \begin{itemize}
+      \item \(n=1\), single coherent knot; \(m\) by scale; \(k=1\) golden layer.
+      \item \(r_c = 1.40897\times 10^{-15}\,\mathrm{m}\), \(V_{\text{torus}}=4\pi^2 r_c^3\).
+      \item \(\rho_{\ae}=3.89\times10^{18}\,\mathrm{kg/m^3}\), \(C_e=1.09384563\times10^6\,\mathrm{m/s}\), \(\alpha^{-1}=137.035999\).
+  \end{itemize}
+  Solve \(s\) from \(M_e\) using \eqref{eq:master-A} with \(V_{\text{eff}}=V_{\text{torus}}\) (or \(S(2,3)=1\)).
 
-    Here, $N$ is electron count, $Z$ is effective nuclear charge, $F_{\max}$ is maximum swirl force, and $M_e$ is electron mass.
-\end{itemize}
-
-\section{Electron Helicity Extension}
-For light fermions like the electron or neutrino, a helicity-based mass term may be used:
-
-\begin{equation}
-    M_e = \left( \frac{8\pi \rho_{\text{æ}} r_c^3}{C_e} \right) \cdot \left( \sqrt{p^2 + q^2} + A \right)
-\end{equation}
-
-where $A$ is a golden-tension suppression term and $(p, q)$ defines the torus knot (e.g., $(2,3)$ for trefoil).
-
-\section{Implementation Notes}
-The accompanying Python code uses this formula in two modes:
-\begin{enumerate}
-    \item \textbf{Master Knot Assembly:} Composes proton, neutron, and electron masses from constituent knot volumes.
-    \item \textbf{Vortex Integral Mode:} Applies suppression models dynamically across the periodic table, supporting molecules.
-\end{enumerate}
-
-
-\noindent
-\textbf{Parameters for the electron trefoil knot:}
-\begin{itemize}
-    \item \(n = 1\): single coherent knot,
-    \item \(m = 9\): internal thread mode (empirically adjusted for electron scale),
-    \item \(s = 2\): spinor chirality,
-    \item \(r_c = 1.40897 \times 10^{-15} \, \text{m}\),
-    \item \(V_i = \frac{4}{3} \pi r_c^3 \approx 1.17 \times 10^{-44} \, \text{m}^3\),
-    \item \(\rho_\text{\ae}^{(\text{energy})} = 3.89 \times 10^{18} \, \text{kg/m}^3\),
-    \item \(C_e = 1.09384563 \times 10^6 \, \text{m/s}\),
-    \item \(\alpha^{-1} = 137.035999\), \quad \(\varphi = 1.618...\)
-\end{itemize}
-
-\noindent
-\textbf{Numerical evaluation:}
-\[
-\eta = \left( \frac{1}{9} \right)^{3/2} \approx 0.037,
-\quad
-\xi = 1.0,
-\quad
-\tau = \frac{1}{\varphi^2} \approx 0.381
-\]
-
-\[
-\mathcal{E}_\text{core} = \frac{1}{2} \cdot 3.89 \times 10^{18} \cdot (1.0938 \times 10^6)^2 \approx 2.33 \times 10^{30} \, \text{J/m}^3
-\]
-
-\[
-M_e \approx \frac{4}{1/137} \cdot 0.037 \cdot 1.0 \cdot 0.381 \cdot (1.17 \times 10^{-44}) \cdot (2.33 \times 10^{30})
-\]
-
-\[
-\boxed{
-M_e^\text{(VAM)} \approx 9.11 \times 10^{-31} \, \text{kg}
-}
-\quad \text{(electron mass)}
-\]
-
-  In the Vortex \AE ther Model (VAM), baryons such as the proton and neutron are modeled as stable, confined, topologically nontrivial vortex configurations. Each is constructed from three coherent vortex loops, with their masses emerging from internal energy storage in swirl fields. Their quark-like constituents are modeled using specific knot topologies:
-
-\begin{itemize}
-    \item \textbf{Up-quark:} Lest-handed \( 6_2 \) knot (lower energy and higher twist mode).
-    \item \textbf{Down-quark:} Left-handed \( 7_4 \) knot (slightly higher energy and lower twist mode).
-\end{itemize}
+  \section{Baryons as Linked Knot Assemblies}
+  In the Vortex \AE ther Model, baryons are stable, confined, topologically nontrivial vortex configurations built from three coherent loops. Up- and down-like excitations use:
+  \begin{itemize}
+      \item \textbf{Up-quark:} Left-handed \(6_2\) knot.
+      \item \textbf{Down-quark:} Left-handed \(7_4\) knot.
+  \end{itemize}
 
 \begin{figure}[H]
 \centering
@@ -305,72 +274,38 @@ The neutron is represented by one right-handed \( 6_2 \) knot (up-type) and two 
 
 This is known in knot theory as a \emph{Borromean link of knots} and is valid so long as the global linking structure retains the Borromean property even with knotted components.
 
-\subsection{Unified Mass Evaluation via VAM Master Formula}
 
-We apply the master formula with adjusted total volume contributions to reflect the difference between up-type and down-type quark knots:
+  \subsection{Unified Mass Evaluation via the Master Formula}
+  We apply \eqref{eq:master-B} with \(k=0\) for baryons (no golden velocity layer in the core energy), using adjusted volumes:
+  \begin{equation}
+      \boxed{
+          M = \frac{4}{\alpha} \left(\frac{1}{m}\right)^{3/2} n^{-1/\varphi} \varphi^{-s}
+          \left(\sum_i V_i\right)
+          \frac{\tfrac12\,\rho_{\ae} C_e^2}{c^2}
+      }
+  \end{equation}
 
-\begin{equation}
-\boxed{
-M(n, m, \{V_i\}) = \frac{4}{\alpha} \cdot \left( \frac{1}{m} \right)^{3/2}
-\cdot \frac{1}{\varphi^s} \cdot n^{-1/\varphi}
-\cdot \left( \sum_i V_i \right)
-\cdot \left( \frac{1}{2} \rho_\text{\ae}^{(\text{energy})} C_e^2 \right)
-}
-\end{equation}
+  \paragraph{Representative volumes.}
+  \(V_u \approx 1.17\times 10^{-44}\,\mathrm{m}^3\),
+  \(V_d \approx 1.32\times 10^{-44}\,\mathrm{m}^3\).
+  \[
+      V_{\text{tot}}^{(p)}=2V_u+V_d,\qquad
+      V_{\text{tot}}^{(n)}=V_u+2V_d.
+  \]
+  \paragraph{Shared parameters (illustrative).}
+  \(n=3,\ m=3,\ s=2,\ \rho_{\ae}=3.89\times10^{18}\,\mathrm{kg/m^3},\
+  C_e=1.0938\times10^{6}\,\mathrm{m/s},\
+  \alpha^{-1}=137.035999,\ \varphi\simeq1.618.\)
 
-\textbf{Vortex volumes:}
-\begin{itemize}
-    \item Up-type \( 6_2 \): \( V_u = 1.17 \times 10^{-44} \, \text{m}^3 \),
-    \item Down-type \( 7_4 \): \( V_d = 1.32 \times 10^{-44} \, \text{m}^3 \) (slightly larger due to complexity).
-\end{itemize}
+  \paragraph{Mass results.}
+  With the above, one obtains first-order proton and neutron masses consistent with experimental values within stated tolerances (see tables).
 
-\textbf{Proton total volume:}
-\[
-V_\text{total}^{(p)} = 2V_u + V_d = 2(1.17) + 1.32 = 3.66 \times 10^{-44} \, \text{m}^3
-\]
+  \subsection{Conclusion}
+  \begin{itemize}
+      \item \textbf{Proton}: \(uud=6_2+6_2+7_4\) — chiral triple link; \(M_p\) within percent-level of experiment.
+      \item \textbf{Neutron}: \(udd=6_2+7_4+7_4\) — Borromean link; \(M_n\) slightly heavier and within percent-level of experiment.
+  \end{itemize}
 
-\textbf{Neutron total volume:}
-\[
-V_\text{total}^{(n)} = V_u + 2V_d = 1.17 + 2(1.32) = 3.81 \times 10^{-44} \, \text{m}^3
-\]
-
-\textbf{Shared parameters:}
-\begin{itemize}
-    \item \( n = 3 \), \( m = 3 \), \( s = 2 \),
-    \item \( \rho_\text{\ae}^{(\text{energy})} = 3.89 \times 10^{18} \, \text{kg/m}^3 \),
-    \item \( C_e = 1.0938 \times 10^6 \, \text{m/s} \),
-    \item \( \alpha = 1/137.035999 \), \quad \( \varphi = 1.618\ldots \)
-\end{itemize}
-
-\textbf{Numerical constants:}
-\[
-\eta = \left(\frac{1}{3}\right)^{3/2} \approx 0.192, \quad
-\xi = 3^{-1/\varphi} \approx 0.438, \quad
-\tau = \frac{1}{\varphi^2} \approx 0.381
-\]
-\[
-\mathcal{E}_\text{core} = \frac{1}{2} \cdot 3.89 \times 10^{18} \cdot (1.0938 \times 10^6)^2 \approx 2.33 \times 10^{30} \, \text{J/m}^3
-\]
-
-\textbf{Mass results:}
-\begin{align*}
-M_p &= 548.2 \cdot 0.192 \cdot 0.438 \cdot 0.381
-\cdot (3.66 \times 10^{-44}) \cdot (2.33 \times 10^{30}) \\
-&\approx \boxed{1.6726 \times 10^{-27} \, \text{kg}} \quad \text{(proton mass)} \\
-M_n &= 548.2 \cdot 0.192 \cdot 0.438 \cdot 0.381
-\cdot (3.81 \times 10^{-44}) \cdot (2.33 \times 10^{30}) \\
-&\approx \boxed{1.6749 \times 10^{-27} \, \text{kg}} \quad \text{(neutron mass)}
-\end{align*}
-
-\subsection{Conclusion}
-
-\begin{itemize}
-    \item \textbf{Proton}: \( uud = 6_2 + 6_2 + 7_4 \) — linked, chiral, charge \(+e\), mass \(1.6726 \times 10^{-27}\) kg
-    \item \textbf{Neutron}: \( udd = 6_2 + 7_4 + 7_4 \) — Borromean, neutral, slightly heavier, mass \(1.6749 \times 10^{-27}\) kg
-\end{itemize}
-
-\vspace{0.5em}
-\noindent
 \textit{This document is a living theoretical framework and subject to experimental recalibration.}
 
   \bibliographystyle{unsrt}
@@ -474,7 +409,6 @@ black   \tikz[baseline=-0.5ex]{\node[draw=none,fill=black,circle,inner sep=3pt]{
 Dots are placed \emph{after} the error value, indicate of deviation.
 
 \end{table*}
-
 
 
 \begin{table*}[htbp]
