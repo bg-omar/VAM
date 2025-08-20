@@ -1,0 +1,547 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{siunitx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{Impulsive Axisymmetric Forcing in a Rotating Cylinder:\\
+Delayed Surface Response via Inertial Waves and a Fluid-Inspired Kinematic Time Hypothesis}
+
+\author{Omar Iskandarani}
+\date{2025}
+
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\Om}{\Omega}
+\newcommand{\bk}{\boldsymbol{k}}
+\newcommand{\br}{\boldsymbol{r}}
+\newcommand{\ez}{\hat{\boldsymbol{z}}}
+\newcommand{\er}{\hat{\boldsymbol{r}}}
+\newcommand{\etheta}{\hat{\boldsymbol{\theta}}}
+\newcommand{\Ce}{C_e} % for the later interpretation section
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We study the free-surface signature produced when a bottom-mounted, axisymmetric, three-fin rotor in a uniformly rotating water column is impulsively accelerated and stopped. The rotor produces a short-lived hollow-core vortex and axial pumping that launch an axisymmetric inertial-wave packet. A delayed ``push--pull'' response is observed at the free surface $\sim H/c_{g,z}$ later, where $H$ is depth and $c_{g,z}$ is the vertical component of inertial-wave group velocity. Linear theory in a cylinder yields the dispersion $\omega=2\Om k_z/k$ and $c_{g,z}=2\Om\,k_r^2/k^3$ (with $k^2=k_r^2+k_z^2$), predicting a travel time $t_{\mathrm{arr}}\approx H/c_{g,z}$ consistent with centimeter--second scales for typical bench-top parameters. We quantify the sign structure of the two pulses (start/stop) and the coupling to the free surface via hydrostatic balance. Finally, we introduce---\emph{as a proposed microscopic interpretation inspired by fluid analogs}---a kinematic time-rate rule depending on the local swirl speed. This interpretation predicts parity: surface angle/displacement reverses with the second pulse, while any kinematic time-rate shift is even in the swirl speed and does not. The macrodynamics remain standard rotating Euler; the time-rate hypothesis is presented as testable and independent.
+\end{abstract}
+
+\section{Set-up and observation}
+Consider a vertical cylinder of radius $R$ and depth $H$, rotating at rate $\Om$ about the $z$-axis. A bottom DC motor drives a coaxial, three-fin impeller that, for a short burst, produces a hollow-core vortex of radius $a_v\approx \SI{7.5}{mm}$ and axial jetting. After a short delay, a two-lobed ``push--pull'' signal is observed on the free surface (up--down displacement sequence), located above the axis, at height $z=H$.
+
+\section{Linear rotating-wave framework}
+In the bulk, away from boundary layers, small perturbations in a uniformly rotating, incompressible fluid admit \emph{inertial waves} with dispersion relation \cite{Greenspan1968,Batchelor1967,Vallis2017}
+\begin{equation}
+\omega \;=\; 2\Om \frac{k_z}{k}
+\qquad (k=|\bk|=\sqrt{k_r^2+k_z^2}).  \label{eq:disp}
+\end{equation}
+For axisymmetric content ($m=0$) in a cylinder, the dominant radial structure is Bessel-like with discrete $k_r\approx \lambda_{0n}/R$ (appropriate eigenvalues $\lambda_{0n}$ depending on boundary conditions) \cite{Greenspan1968}. The group velocity components follow from $c_{g,i}=\partial\omega/\partial k_i$:
+\begin{equation}
+c_{g,r} \;=\; -\,\frac{2\Om\,k_z k_r}{k^3}, 
+\qquad
+c_{g,z} \;=\; \frac{2\Om\,k_r^2}{k^3}. \label{eq:cg}
+\end{equation}
+Thus the energy of the wave packet propagates along beams whose inclination satisfies $\tan\alpha=|c_{g,r}|/c_{g,z}=k_z/k_r$; equivalently, the beam angle relative to the rotation axis is $90^\circ-\theta$ if $\theta$ is the angle of $\bk$ to $\ez$ \cite{Greenspan1968}.
+
+\paragraph{Arrival time.}
+The observed surface delay is estimated by
+\begin{equation}
+t_{\mathrm{arr}} \;\approx\; \frac{H}{c_{g,z}} 
+\;=\; \frac{H\,k^3}{2\Om\,k_r^2}. \label{eq:tarr}
+\end{equation}
+Taking bench-top values consistent with a prior set-up ($D=2R=\SI{15}{cm}$, $H=\SI{30}{cm}$, $\Om\approx \SI{2}{rad/s}$), the fundamental $m=0$ radial scale satisfies $k_r \sim \lambda/R$ with $\lambda=\mathcal{O}(3\text{--}4)$, while the lowest vertical scale is $k_z\sim \pi/H$. Numerically,
+\[
+R=\SI{0.075}{m},\quad H=\SI{0.30}{m},\quad
+k_r\approx \frac{3.83}{R}\approx \SI{51}{m^{-1}},\quad
+k_z\approx \frac{\pi}{H}\approx \SI{10.5}{m^{-1}},
+\]
+so $k\approx \SI{52.1}{m^{-1}}$ and
+\[
+c_{g,z}\;=\;\frac{2\Om k_r^2}{k^3}\;\approx\;
+\frac{2(\SI{2}{s^{-1}})\,(51)^2}{(52.1)^3}
+\;\approx\; \SI{7.4e-2}{m/s}.
+\]
+Hence
+\[
+t_{\mathrm{arr}}\;\approx\;\frac{0.30}{0.074}\;\approx\;\SI{4.1}{s},
+\]
+a \emph{few seconds}, consistent with the reported delayed surface response. (Scaling: $t_{\mathrm{arr}}\propto \Om^{-1}$ for fixed wavenumbers.)
+
+\section{Impulse sign and the observed ``push--pull''}
+An impulsive \emph{start} of the rotor generates axial upwelling on the axis and a hollow-core swirl that reduces pressure $p'$ within the core (centrifugal balance), producing a \emph{surface depression} above the axis when the wave packet arrives (``pull''). The subsequent impulsive \emph{stop} reverses the sign of the axial pumping and swirl impulse, yielding the opposite surface displacement (``push''). In linear theory, the surface elevation $\eta$ obeys hydrostatic balance $p'(z=0)=\rho g \eta$ for low-frequency motions, so the sign of $\eta$ tracks the sign of the arriving pressure anomaly \cite{Batchelor1967,Vallis2017}. Two time-separated impulses thus map to a \emph{bipolar} free-surface signal.
+
+\section{Relation to vortex rings and jet starting vortices}
+The short burst also sheds a starting vortex (toroidal ring) whose translational speed in a quiescent fluid scales as
+\begin{equation}
+U_{\mathrm{ring}}\;\approx\; \frac{\Gamma}{4\pi R_v}\left[\ln\!\left(\frac{8 R_v}{a_v}\right)-\frac{1}{4}\right],
+\label{eq:ring}
+\end{equation}
+where $\Gamma$ is circulation, $R_v$ the ring radius and $a_v$ its core scale \cite{Saffman1992}. In a rotating environment, the ring interacts with the background vorticity and the inertial-wave field; however, the \emph{delayed-on-axis} free-surface signature is dominated by the axisymmetric inertial-wave packet described above, not by a direct ballistic arrival of a vortex ring from the bottom.
+
+\section{What this \emph{is} and \emph{is not} an analogy to}
+\subsection*{Photon analogy (limited)}
+A sharp, localized impulse producing a propagating packet with a clean parity (push then pull) is \emph{formally} reminiscent of a localized energy-bearing wave packet. However, inertial waves are \emph{anisotropic and dispersive} [Eq.~\eqref{eq:disp}--\eqref{eq:cg}], unlike free photons in vacuum (which are isotropic and non-dispersive). Thus the analogy is qualitative (``localized wave packet with polarity''), not structural.
+
+\subsection*{Gravitational-wave analogy (limited)}
+GR gravitational waves are transverse, quadrupolar, and (in vacuum) nondispersive at leading order. The present axisymmetric inertial-wave response is neither quadrupolar nor nondispersive, and its group velocity depends on wavenumbers and $\Om$. Again, only the idea of a remotely measurable, delayed signal from a compact impulse is shared.
+
+\section{A proposed microscopic interpretation inspired by fluid analogs (VAM)}
+We now introduce an interpretation that \emph{does not alter} the macroscopic rotating-Euler analysis above but adds a kinematic rule for local time-rate tied to swirl speed. Let $u(\br,t)$ be the local swirl speed (e.g. $|u_\theta|$ near the axis). Postulate
+\begin{equation}
+\frac{\dd \tau}{\dd t} \;=\; \sqrt{1-\frac{u^2}{\Ce^2}}, 
+\label{eq:time}
+\end{equation}
+where $\Ce$ is a characteristic speed (treated as a constant of the microscopic theory). Equation \eqref{eq:time} is \emph{formally} analogous to the Lorentz kinematic factor but here is a hypothesis to be experimentally constrained. 
+
+\paragraph{Parity prediction.}
+Two opposite-sign swirl impulses (start/stop) generate opposite-angle free-surface motions, but any cycle-averaged time-rate shift from \eqref{eq:time} scales with $u^2$ and hence does \emph{not} reverse sign. A null measurement at the current sensitivity would bound $\Ce$ from below for such kinematic effects in rotating laboratory flows.
+
+\section{Falsifiable checks}
+\begin{itemize}
+\item \textbf{Travel-time scaling:} Verify $t_{\mathrm{arr}}\propto \Om^{-1}$ by repeating the impulse at several $\Om$ and measuring the delay to the axial surface signal; compare with \eqref{eq:tarr} using $(k_r,k_z)$ inferred from the observed beam angle or from the container's lowest modes \cite{Greenspan1968}.
+\item \textbf{Bipolarity:} Confirm the sign reversal between the start and stop pulses via synchronized surface elevation and bottom torque measurements.
+\item \textbf{Anisotropy:} Off-axis probes should observe beamlike arrivals at angles set by $\tan\alpha=k_z/k_r$; the axis receives the arrival governed by $c_{g,z}$.
+\item \textbf{Time-rate parity (interpretation test):} Instrument two identical, neutrally buoyant ``clock tracers'' at the surface---one above the axis, one far off-axis (reference). Any cycle-averaged phase drift correlated with $u^2$ would bound or detect effects consistent with \eqref{eq:time}.
+\end{itemize}
+
+\section*{Conclusion}
+An impulsive rotor at the bottom of a rotating cylinder launches an axisymmetric inertial-wave packet whose vertical group velocity $c_{g,z}$ predicts a delayed axial surface response of the observed magnitude. The two-lobed ``push--pull'' follows from the sign of the consecutive impulses. These are standard consequences of rotating-wave dynamics. If one adopts a fluid-inspired microscopic kinematic time rule depending on $u^2$, the free-surface polarity reverses while any tiny time-rate effect does not, providing a clear parity-based test without altering the macrodynamics.
+
+\section{Why the Surface ``Push--Pull'' Requires Background Rotation}
+\label{sec:why-rotation}
+
+\paragraph{Observation.}
+A short bottom impulse (rapid start--stop of the three-fin rotor that briefly creates a hollow-core vortex) produces a delayed, bipolar free-surface signal (``push--pull'') only when the cylinder is in solid-body rotation at rate $\Omega$. With the container at rest ($\Omega=0$), no reproducible delayed surface response is observed.
+
+\subsection{Mechanism: Coriolis Restoring Force and Inertial-Wave Beams}
+In a uniformly rotating, homogeneous, incompressible fluid, small perturbations satisfy the linear rotating Euler equations
+\begin{equation}
+\partial_t \boldsymbol{u} + 2\boldsymbol{\Omega}\!\times\!\boldsymbol{u} \;=\; -\nabla \pi,
+\qquad \nabla\!\cdot\!\boldsymbol{u}=0,
+\label{eq:rotEuler}
+\end{equation}
+which admit \emph{inertial waves} with dispersion
+\begin{equation}
+\omega \;=\; 2\Omega\,\frac{k_z}{k},\qquad k=\sqrt{k_r^2+k_z^2}.
+\label{eq:dispersion}
+\end{equation}
+Energy propagates along beams with group velocity
+\begin{equation}
+c_{g,r} = -\,\frac{2\Omega\,k_r k_z}{k^3},\qquad
+c_{g,z} = \frac{2\Omega\,k_r^2}{k^3}.
+\label{eq:group}
+\end{equation}
+Thus a bottom impulse launches an axisymmetric inertial-wave packet whose vertical energy transport reaches the surface after
+\begin{equation}
+t_{\mathrm{arr}} \;\approx\; \frac{H}{c_{g,z}}
+\;=\; \frac{H\,k^3}{2\Omega\,k_r^2}.
+\label{eq:tarr-omega}
+\end{equation}
+Two opposite-sign impulses (start/stop) carry opposite pressure anomalies, giving the observed surface \emph{bipolarity} (``pull'' then ``push''). The free-surface elevation obeys the linear hydrostatic condition
+\begin{equation}
+p'(z=0) + \rho g\,\eta \;=\; 0 \;\;\Rightarrow\;\; \eta \;=\; -\,\frac{p'(0)}{\rho g}.
+\label{eq:hydrostatic}
+\end{equation}
+
+\subsection{Scaling that explains the ``off'' state at $\Omega=0$}
+Equations \eqref{eq:dispersion}--\eqref{eq:group} show that inertial waves \emph{require} a Coriolis restoring force. As $\Omega\to 0$:
+\begin{equation}
+\omega \to 0,\qquad c_{g,z}\propto \Omega \to 0,\qquad t_{\mathrm{arr}}\propto \Omega^{-1}\to \infty.
+\end{equation}
+Concurrently, the pressure perturbation amplitude that couples to the surface scales with $\Omega$. From the horizontal momentum in \eqref{eq:rotEuler}, for $\omega=\mathcal{O}(\Omega)$ one has the geostrophic balance $2\Omega\,\hat{\boldsymbol{z}}\times \boldsymbol{u}_h \sim -\nabla_h \pi$, so dimensionally
+\begin{equation}
+p' \sim \rho\,(2\Omega\,L)\,U \quad \Rightarrow\quad
+\eta \sim \frac{2\Omega\,L}{g}\,U,
+\label{eq:eta-scale}
+\end{equation}
+where $U$ is a characteristic wave velocity and $L$ a lateral mode scale (set by $k_r^{-1}$). Hence \emph{surface amplitude is linear in $\Omega$}; as $\Omega\to 0$ the signal vanishes:
+\[
+\eta(\Omega)\;\propto\;\Omega \;\longrightarrow\; 0.
+\]
+Viscous effects reinforce this: the Ekman number $\mathrm{E}=\nu/(\Omega L^2)$ grows unbounded as $\Omega\to 0$, so any putative wave is overdamped before reaching the surface.
+
+\subsection{Why no analogous delayed signal at rest}
+For $\Omega=0$ the restoring term $2\Omega\times\boldsymbol{u}$ vanishes; there are no inertial waves. A short bottom burst produces (i) a starting vortex ring and near-field jet, which remain confined below, and (ii) only very weak coupling to surface gravity waves because the forcing is deep, axisymmetric, and nearly solenoidal. Any compressional (acoustic) response would arrive \emph{promptly} at $c_{\text{sound}}$ and not as a delayed push--pull packet. Thus the specific, delayed \emph{bipolar} signature is a hallmark of the rotating (inertial-wave) pathway.
+
+\subsection{Testable predictions (dependence on rotation rate)}
+The rotation-controlled scaling gives two clean, falsifiable trends:
+\begin{align}
+&t_{\mathrm{arr}}(\Omega)\;\approx\;\frac{H\,k^3}{2\Omega\,k_r^2}
+\quad\Rightarrow\quad t_{\mathrm{arr}}\propto \Omega^{-1},
+\label{eq:arrive-pred}\\[3pt]
+&\eta_{\max}(\Omega)\;\approx\; \frac{2\Omega\,L}{g}\,U \quad\Rightarrow\quad \eta_{\max}\propto \Omega.
+\label{eq:eta-pred}
+\end{align}
+A log--log plot of $\eta_{\max}$ versus $\Omega$ should approach slope $+1$, while $t_{\mathrm{arr}}$ versus $\Omega$ should approach slope $-1$, up to corrections from viscosity and beam geometry.
+\vspace{-2pt}
+
+\paragraph{Dimensional checks.}
+In \eqref{eq:eta-scale}, $[p']=\mathrm{Pa}$, $[\rho g]=\mathrm{N\,m^{-3}}$, so $[\eta]=\mathrm{m}$. In \eqref{eq:tarr-omega}, $[H/c_{g,z}]=\mathrm{s}$.
+
+\paragraph{Conclusion.}
+The delayed, bipolar surface response is a \emph{rotation-enabled} phenomenon: the Coriolis restoring force both creates a propagating inertial-wave packet and sets its amplitude and speed. Turning off rotation removes the restoring mechanism and the pathway to the surface, explaining the observed ``on'' (rotating) and ``off'' (rest) behavior.
+
+
+\section{Hypothesized Compressional Signaling Branch (Fluid-Inspired, Microscopic)}
+\label{sec:compressional-branch}
+
+\paragraph{Summary.}
+The macroscopic results above are standard rotating-Euler consequences. Here we add a \emph{microscopic, fluid-inspired} hypothesis: besides the transverse, swirl-dominated sector that governs our tank dynamics, there could exist a \emph{compressional} (longitudinal) branch supporting hyperbolic wavefronts with characteristic speed $c_{\mathrm{P}}\gg c$. If such a branch couples---even ultra-weakly---to laboratory stress sources and detectors, it would enable effectively instantaneous signaling over bench-top scales. This section formalizes the hypothesis and gives falsifiable tests. (All non-original hydrodynamic and wave-propagation facts cited where used \cite{LandauFluids,Lighthill78,Brillouin1960,Jackson1999,Abbott2017PRL,Abbott2017ApJL}.)
+
+\subsection{Minimal linear model and governing equation}
+Relax strict incompressibility at the microscopic scale and allow small density/pressure perturbations $(\rho',p')$ with a linear equation of state
+\begin{equation}
+p' = B_*\,\frac{\rho'}{\rho_*},
+\end{equation}
+where $B_*$ is an effective bulk modulus and $\rho_*$ an effective mass density (both constant to leading order). Linearizing the continuity and momentum equations with vorticity neglected in this branch yields the scalar wave equation (e.g. \cite{LandauFluids,Lighthill78})
+\begin{equation}
+\boxed{~\partial_t^2 \rho' - c_{\mathrm{P}}^{\,2}\,\nabla^2 \rho' = 0,
+\qquad c_{\mathrm{P}} \equiv \sqrt{\frac{B_*}{\rho_*}}~.}
+\label{eq:pwave}
+\end{equation}
+Equation \eqref{eq:pwave} is hyperbolic with \emph{front} speed $c_{\mathrm{P}}$. Unlike the inertial waves in \S\ref{sec:linear rotating-wave framework}, \eqref{eq:pwave} is isotropic and nondispersive in the linear, homogeneous limit (closer kinematically to the vacuum EM wave equation \cite{Jackson1999}, but with a different invariant speed).
+
+\paragraph{Field-theoretic sketch (source coupling).}
+Introduce a scalar compression potential $\Phi$ with action
+\begin{equation}
+S_\Phi=\int\!dt\,d^3x\;\frac{1}{2}\Big[\kappa_\Phi^{-1}(\partial_t \Phi)^2
+- \Lambda_\Phi^2(\nabla\Phi)^2\Big]
++\int\!dt\,d^3x\;\varepsilon\,\Phi\,\mathcal{T},
+\end{equation}
+where $\mathcal{T}$ is the (lab) source's isotropic stress trace (e.g., electrostriction, magnetostriction or radiation pressure; \cite{LandauFluids}), $\varepsilon$ is a dimensionless coupling, and $\kappa_\Phi,\Lambda_\Phi$ are positive constants. The Euler–Lagrange equation is
+\begin{equation}
+\partial_t^2 \Phi - C_*^{\,2}\nabla^2 \Phi = \varepsilon\,\kappa_\Phi\,\mathcal{T},
+\qquad C_* \equiv \Lambda_\Phi\sqrt{\kappa_\Phi}.
+\label{eq:Phi}
+\end{equation}
+Identifying $\rho'\propto\partial_t\Phi$ maps $C_*\to c_{\mathrm{P}}$ in \eqref{eq:pwave}. This formalizes a channel whose front speed is $c_{\mathrm{P}}$ and which couples \emph{only} to isotropic stress at $O(\varepsilon)$.
+
+\subsection{Dimensional and numerical checks with supplied parameters}
+Dimensional consistency: $[B_*]=\mathrm{Pa}=\mathrm{J\,m^{-3}}$, $[\rho_*]=\mathrm{kg\,m^{-3}}$, hence $[c_{\mathrm{P}}]=\sqrt{\mathrm{J\,m^{-3}}/\mathrm{kg\,m^{-3}}}=\mathrm{m\,s^{-1}}$.
+
+Using your working values (interpreting the quoted energy density as a stiffness scale),
+\[
+\rho_* = 7.0\times 10^{-7}\ \mathrm{kg\,m^{-3}},\qquad
+B_* \approx 3.49924562\times 10^{35}\ \mathrm{J\,m^{-3}},
+\]
+yields
+\begin{equation}
+c_{\mathrm{P}}=\sqrt{\frac{B_*}{\rho_*}}
+\;=\; 7.0703057319\times 10^{20}\ \mathrm{m\,s^{-1}}.
+\label{eq:cPnumber}
+\end{equation}
+For comparison,
+\[
+\frac{c_{\mathrm{P}}}{c}\approx 2.3584\times 10^{12},\qquad
+\frac{c_{\mathrm{P}}}{C_e}\approx 6.4637\times 10^{14},
+\]
+so a $L=\SI{10}{m}$ baseline has
+\[
+t_{\mathrm{EM}}=L/c \approx 3.34\times 10^{-8}\ \mathrm{s},\qquad
+t_{\mathrm{P}}=L/c_{\mathrm{P}} \approx 1.41\times 10^{-20}\ \mathrm{s}.
+\]
+Thus, at laboratory scales, any genuine $c_{\mathrm{P}}$ signal would be operationally instantaneous.
+
+\subsection{Compatibility with existing bounds}
+Co-arrival of gravitational waves and gamma rays from GW170817 constrains \emph{GW vs. EM} speed differences at the level $|v_{\mathrm{GW}}-c|/c\lesssim 10^{-15}$ \cite{Abbott2017PRL,Abbott2017ApJL}. Those results do not address a distinct, ultra-weakly coupled compressional branch. To avoid conflicts with Lorentz-invariance and vacuum Čerenkov bounds, the coupling $\varepsilon$ must be \emph{tiny} and couple predominantly to isotropic stress (trace), not to conserved EM currents. This makes the channel hard to excite and detect—but not forbidden.
+
+\subsection{Falsifiable experimental protocol (bench-top)}
+\paragraph{Source (trace-only).} Inside nested Faraday and $\mu$-metal shields, drive an electrostrictive or magnetostrictive core with a \emph{step-coded} isotropic stress trace $\mathcal{T}(t)$ at carrier $f_c$ (low enough to suppress RF/acoustic leakage; high enough to maintain linearity). Use a pseudo-random binary sequence (PRBS) for correlation.
+
+\paragraph{Detector (trace-sensitive).} A distant, battery-powered, fiberless station houses a high-$Q$ bulk-modulus resonator monitored by an optical interferometer. Demodulate at $f_c$ and correlate with the PRBS.
+
+\paragraph{Latency test.} With two baselines $L_1<L_2$, measure the earliest correlated arrivals $t_1,t_2$ after bounding all EM/acoustic/mechanical paths $\ge L/c$. A $c_{\mathrm{P}}$ front obeys
+\begin{equation}
+t_i \approx \frac{L_i}{c_{\mathrm{P}}}\quad (i=1,2),\qquad
+\Rightarrow\quad
+t_2-t_1 \approx \frac{L_2-L_1}{c_{\mathrm{P}}}.
+\end{equation}
+Therefore,
+\begin{equation}
+\boxed{~c_{\mathrm{P}} \gtrsim \frac{L_2-L_1}{\,t_2-t_1\,}~}
+\label{eq:cpbound}
+\end{equation}
+sets a \emph{lower bound} on $c_{\mathrm{P}}$. A \emph{null} result at timing resolution $\delta t$ implies $c_{\mathrm{P}} \gtrsim (L_2-L_1)/\delta t$.
+
+\paragraph{Coupling bound.} If no early arrival is observed above noise $\sigma$ after integration time $T$ and detector bandwidth $\Delta f$, then with a calibrated source stress amplitude $||\mathcal{T}||$, one obtains an \emph{upper} bound on $\varepsilon$ from the non-detection of a linearly responding $\Phi$-signal. A rough radiative scaling $P_\Phi \sim \varepsilon^2 P_{\mathrm{drive}}$ gives $\varepsilon \lesssim \sqrt{P_{\mathrm{noise}}/P_{\mathrm{drive}}}$ once instrument noise is referred to the input via the transfer function.
+
+\subsection{Scope and caveats}
+This branch is a \emph{hypothesis} independent of the macrodynamics. It does not alter the inertial-wave physics of the tank, nor does it claim structural equivalence to electromagnetism. The proposal is strictly kinematic: a distinct, longitudinal channel with front speed $c_{\mathrm{P}}$ and ultra-weak coupling to isotropic stress. It is decisively testable with latency-vs-distance scaling and exhaustive leakage controls. A null result provides quantitative bounds via \eqref{eq:cpbound}; a positive result would motivate deeper modeling of the micro equation of state ($B_*,\rho_*$) and source/detector coupling.
+
+
+\section{Replacing the Working Fluid by a VAM-Like Superfluid Medium}
+\label{sec:aether-medium}
+
+\paragraph{Aim.}
+We ask what the tank phenomenology would be if the working medium were not ordinary water but a \emph{hypothetical, inviscid superfluid} endowed with a microscopic swirl scale. Macroscopically we keep the linear rotating–Euler framework; microscopically we allow two branches: (i) a \emph{transverse, inertial-like} branch governed by an \emph{effective} background rotation, and (ii) a \emph{longitudinal, compressional} branch (Sec.~\ref{sec:compressional-branch}). The former controls the delayed surface ``push--pull''; the latter would constitute an essentially instantaneous channel if it couples at all.
+
+\subsection{Transverse inertial-like branch with an effective background rate}
+\label{sec:aether-transverse}
+Let $C_e$ denote a characteristic swirl speed (constant) and $\ell_*$ a coarse-graining length for microscopic swirl. Define the \emph{effective} background rate
+\begin{equation}
+\boxed{\;\Omega_* \equiv \frac{C_e}{\ell_*}\;,}
+\qquad [\Omega_*]=\mathrm{s^{-1}}.
+\end{equation}
+Replacing $\Omega\to\Omega_*$ in the linear rotating–Euler equations leaves the standard inertial-wave dispersion and group velocity \cite{Greenspan1968,Batchelor1967,Vallis2017}:
+\begin{equation}
+\omega \;=\; 2\Omega_*\,\frac{k_z}{k},
+\qquad
+c_{g,z} \;=\; \frac{2\Omega_*\,k_r^2}{k^3}.
+\label{eq:disp-aether}
+\end{equation}
+For the lowest axisymmetric mode in a cylinder ($k_r\!\sim\!\alpha/R$, $k\!\sim\!\beta/R$ with $\alpha,\beta=O(1)$) one finds
+\begin{equation}
+\boxed{\;
+c_{g,z}\;\sim\;2\,\Omega_*\,R
+\;=\; 2\,C_e\,\frac{R}{\ell_*},
+\qquad
+t_{\mathrm{arr}}\;\equiv\;\frac{H}{c_{g,z}}\;\sim\;\frac{H\,\ell_*}{2 C_e R}\;.
+}
+\label{eq:arrive-aether}
+\end{equation}
+\emph{Amplitude scaling.} Geostrophic/hydrostatic balance gives the surface response
+\begin{equation}
+\boxed{\;\eta_{\max}\;\sim\;\frac{2\,\Omega_*\,L}{g}\,U\;\propto\;\Omega_*\;,}
+\label{eq:eta-aether}
+\end{equation}
+with $L\!\sim\!R$ a lateral scale and $U$ a characteristic wave speed \cite{Batchelor1967,Vallis2017}.
+
+\paragraph{Numerical illustrations (tank geometry).}
+Using $R=\SI{7.5}{cm}$, $H=\SI{30}{cm}$, and your $C_e=1.09384563\times 10^{6}\ \mathrm{m\,s^{-1}}$:
+\begin{enumerate}
+\item \textbf{Macroscopic averaging} $\ell_*=R$:
+\[
+\Omega_*=\frac{C_e}{R}\approx 1.46\times 10^{7}\ \mathrm{s^{-1}},\quad
+c_{g,z}\sim 2C_e\approx 2.19\times 10^{6}\ \mathrm{m\,s^{-1}},
+\]
+\[
+t_{\mathrm{arr}}\sim \frac{H}{2C_e}\approx 1.37\times 10^{-7}\ \mathrm{s}.
+\]
+\item \textbf{Microscopic averaging} $\ell_*=r_c=1.40897017\times10^{-15}\ \mathrm{m}$:
+\[
+\Omega_*=\frac{C_e}{r_c}\approx 7.76\times 10^{20}\ \mathrm{s^{-1}},\quad
+c_{g,z}\sim 2C_e\frac{R}{r_c}\approx 1.17\times 10^{20}\ \mathrm{m\,s^{-1}},
+\]
+\[
+t_{\mathrm{arr}}\sim \frac{H\,r_c}{2C_e R}\approx 2.6\times 10^{-21}\ \mathrm{s}.
+\]
+\end{enumerate}
+Hence, if a medium genuinely supplies a Coriolis term at rate $\Omega_*=C_e/\ell_*$, the inertial-like ``push--pull'' becomes \emph{operationally instantaneous} as $\ell_*\!\ll\!R$.
+
+\paragraph{Dimensional checks.}
+In \eqref{eq:arrive-aether}, $[H\,\ell_* /(C_e R)]=\mathrm{s}$. In \eqref{eq:eta-aether}, $[2\Omega_* L U/g]=\mathrm{m}$.
+
+\subsection{Longitudinal compressional branch (microscopic, fluid-inspired)}
+\label{sec:aether-longitudinal}
+Allow small $(\rho',p')$ with $p'=B_*\,\rho'/\rho_*$, where $B_*$ is an effective bulk modulus and $\rho_*$ an effective density. Linearization yields the scalar wave equation \cite{LandauFluids,Lighthill78}
+\begin{equation}
+\boxed{\;\partial_t^2 \rho' - c_{\mathrm{P}}^{\,2}\,\nabla^2 \rho' = 0,\qquad
+c_{\mathrm{P}}=\sqrt{\frac{B_*}{\rho_*}}\;.}
+\label{eq:pwave-aether}
+\end{equation}
+Using your values (interpreting the quoted energy density as a stiffness scale)
+\[
+\rho_* = 7.0\times 10^{-7}\ \mathrm{kg\,m^{-3}},\qquad
+B_* \approx 3.49924562\times 10^{35}\ \mathrm{J\,m^{-3}},
+\]
+gives
+\[
+c_{\mathrm{P}}=\sqrt{\frac{B_*}{\rho_*}}
+= 7.0703057319\times 10^{20}\ \mathrm{m\,s^{-1}},
+\quad
+\frac{c_{\mathrm{P}}}{c}\approx 2.36\times 10^{12}.
+\]
+A $L=\SI{10}{m}$ baseline would have $t_{\mathrm{P}}=L/c_{\mathrm{P}}\approx 1.4\times 10^{-20}\ \mathrm{s}$: effectively instantaneous. Equation \eqref{eq:pwave-aether} is hyperbolic with \emph{front} speed $c_{\mathrm{P}}$ (information speed) \cite{Brillouin1960}.
+
+\subsection{Interpretation and testability}
+\begin{itemize}
+\item The inertial-like branch (\S\ref{sec:aether-transverse}) explains why your surface ``push--pull'' \emph{requires} background rotation in water: with $\Omega_{\text{lab}}\neq 0$ the Coriolis restoring force exists; for a VAM-like medium, a nonzero $\Omega_*=C_e/\ell_*$ would produce the same mechanism \emph{even if the container is mechanically at rest}.
+\item The compressional branch (\S\ref{sec:aether-longitudinal}) would carry essentially instantaneous signals if it couples (even ultra-weakly) to laboratory isotropic stresses; it does not alter the macroscopic inertial-wave analysis.
+\item Both branches are \emph{kinematic hypotheses} for a microscopic medium; neither conflicts with standard EM/GW speed tests provided the coupling to ordinary matter is extremely small \cite{Abbott2017PRL,Abbott2017ApJL}.
+\end{itemize}
+
+\paragraph{Caveats.}
+(1) Substituting $\Omega\to C_e/\ell_*$ in \eqref{eq:disp-aether} \emph{without} a medium that actually supplies such a Coriolis term is not physical; ordinary water responds to $\Omega_{\text{lab}}$, not to $C_e$. (2) At very large $\Omega_*$ or $c_{\mathrm{P}}$, dispersion and dissipation of the true microscopic medium will bound signal speeds; equations above set the \emph{kinematic ceiling}. (3) Any claim of superluminal signaling must rely on \emph{front velocity} and pass exhaustive EM/acoustic leakage controls \cite{Brillouin1960}.
+
+
+\bibliographystyle{unsrt}
+\begin{thebibliography}{9}
+
+\bibitem{Greenspan1968}
+H. P. Greenspan, \emph{The Theory of Rotating Fluids} (Cambridge University Press, 1968).
+
+\bibitem{Batchelor1967}
+G. K. Batchelor, \emph{An Introduction to Fluid Dynamics} (Cambridge University Press, 1967).
+\newblock doi:\href{https://doi.org/10.1017/CBO9780511800955}{10.1017/CBO9780511800955}.
+
+\bibitem{Vallis2017}
+G. K. Vallis, \emph{Atmospheric and Oceanic Fluid Dynamics}, 2nd ed. (Cambridge University Press, 2017).
+\newblock doi:\href{https://doi.org/10.1017/9781107588417}{10.1017/9781107588417}.
+
+\bibitem{Saffman1992}
+P. G. Saffman, \emph{Vortex Dynamics} (Cambridge University Press, 1992).
+
+\end{thebibliography}
+
+% --- BibTeX block for journals that require it (covers all non-original formulas/ideas) ---
+\begin{filecontents*}{\jobname.bib}
+@book{Greenspan1968,
+  author = {H. P. Greenspan},
+  title  = {The Theory of Rotating Fluids},
+  year   = {1968},
+  publisher = {Cambridge University Press}
+}
+@book{Batchelor1967,
+  author = {G. K. Batchelor},
+  title  = {An Introduction to Fluid Dynamics},
+  year   = {1967},
+  publisher = {Cambridge University Press},
+  doi    = {10.1017/CBO9780511800955}
+}
+@book{Vallis2017,
+  author = {Geoffrey K. Vallis},
+  title  = {Atmospheric and Oceanic Fluid Dynamics},
+  edition= {2},
+  year   = {2017},
+  publisher = {Cambridge University Press},
+  doi    = {10.1017/9781107588417}
+}
+@book{Saffman1992,
+  author = {P. G. Saffman},
+  title  = {Vortex Dynamics},
+  year   = {1992},
+  publisher = {Cambridge University Press}
+}
+
+    @book{LandauFluids,
+  author    = {L. D. Landau and E. M. Lifshitz},
+  title     = {Fluid Mechanics},
+  series    = {Course of Theoretical Physics, Vol. 6},
+  publisher = {Pergamon},
+  year      = {1987}
+}
+@book{Lighthill78,
+  author    = {M. J. Lighthill},
+  title     = {Waves in Fluids},
+  publisher = {Cambridge University Press},
+  year      = {1978}
+}
+@book{Brillouin1960,
+  author    = {L. Brillouin},
+  title     = {Wave Propagation and Group Velocity},
+  publisher = {Academic Press},
+  year      = {1960}
+}
+@book{Jackson1999,
+  author    = {J. D. Jackson},
+  title     = {Classical Electrodynamics},
+  edition   = {3},
+  publisher = {Wiley},
+  year      = {1999}
+}
+@article{Abbott2017PRL,
+  author  = {B. P. Abbott et al. (LIGO Scientific Collaboration and Virgo Collaboration)},
+  title   = {GW170817: Observation of Gravitational Waves from a Binary Neutron Star Inspiral},
+  journal = {Physical Review Letters},
+  volume  = {119},
+  pages   = {161101},
+  year    = {2017},
+  doi     = {10.1103/PhysRevLett.119.161101}
+}
+@article{Abbott2017ApJL,
+  author  = {B. P. Abbott et al.},
+  title   = {Gravitational Waves and Gamma-Rays from a Binary Neutron Star Merger},
+  journal = {The Astrophysical Journal Letters},
+  volume  = {848},
+  pages   = {L13},
+  year    = {2017},
+  doi     = {10.3847/2041-8213/aa920c}
+}
+
+    @book{Greenspan1968,
+  author    = {H. P. Greenspan},
+  title     = {The Theory of Rotating Fluids},
+  publisher = {Cambridge University Press},
+  year      = {1968}
+}
+
+@book{Batchelor1967,
+  author    = {G. K. Batchelor},
+  title     = {An Introduction to Fluid Dynamics},
+  publisher = {Cambridge University Press},
+  year      = {1967},
+  doi       = {10.1017/CBO9780511800955}
+}
+
+@book{Vallis2017,
+  author    = {Geoffrey K. Vallis},
+  title     = {Atmospheric and Oceanic Fluid Dynamics},
+  edition   = {2},
+  publisher = {Cambridge University Press},
+  year      = {2017},
+  doi       = {10.1017/9781107588417}
+}
+
+    @book{Greenspan1968,
+  author    = {H. P. Greenspan},
+  title     = {The Theory of Rotating Fluids},
+  publisher = {Cambridge University Press},
+  year      = {1968}
+}
+@book{Batchelor1967,
+  author    = {G. K. Batchelor},
+  title     = {An Introduction to Fluid Dynamics},
+  publisher = {Cambridge University Press},
+  year      = {1967},
+  doi       = {10.1017/CBO9780511800955}
+}
+@book{Vallis2017,
+  author    = {Geoffrey K. Vallis},
+  title     = {Atmospheric and Oceanic Fluid Dynamics},
+  edition   = {2},
+  publisher = {Cambridge University Press},
+  year      = {2017},
+  doi       = {10.1017/9781107588417}
+}
+@book{LandauFluids,
+  author    = {L. D. Landau and E. M. Lifshitz},
+  title     = {Fluid Mechanics},
+  series    = {Course of Theoretical Physics, Vol. 6},
+  publisher = {Pergamon},
+  year      = {1987}
+}
+@book{Lighthill78,
+  author    = {M. J. Lighthill},
+  title     = {Waves in Fluids},
+  publisher = {Cambridge University Press},
+  year      = {1978}
+}
+@book{Brillouin1960,
+  author    = {L. Brillouin},
+  title     = {Wave Propagation and Group Velocity},
+  publisher = {Academic Press},
+  year      = {1960}
+}
+@article{Abbott2017PRL,
+  author  = {B. P. Abbott et al. (LIGO Scientific Collaboration and Virgo Collaboration)},
+  title   = {GW170817: Observation of Gravitational Waves from a Binary Neutron Star Inspiral},
+  journal = {Physical Review Letters},
+  volume  = {119},
+  pages   = {161101},
+  year    = {2017},
+  doi     = {10.1103/PhysRevLett.119.161101}
+}
+@article{Abbott2017ApJL,
+  author  = {B. P. Abbott et al.},
+  title   = {Gravitational Waves and Gamma-Rays from a Binary Neutron Star Merger},
+  journal = {The Astrophysical Journal Letters},
+  volume  = {848},
+  pages   = {L13},
+  year    = {2017},
+  doi     = {10.3847/2041-8213/aa920c}
+}
+
+\end{filecontents*}
+
+\end{document}

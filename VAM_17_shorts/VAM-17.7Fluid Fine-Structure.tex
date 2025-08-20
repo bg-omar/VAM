@@ -1,0 +1,220 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb,amsfonts,bm}
+\usepackage{siunitx}
+\usepackage{geometry}
+\usepackage[hidelinks]{hyperref}
+\geometry{margin=1in}
+
+\title{Reversible Azimuthal Response to Axisymmetric Vertical Forcing in Rapidly Rotating Fluids:\\
+Vorticity Generation, Angle Reversal, and a Fluid Fine-Structure Analogy}
+
+\author{Omar Iskandarani}
+\date{2025}
+
+% ==== Notation shortcuts ====
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\bU}{\boldsymbol{u}}
+\newcommand{\bW}{\boldsymbol{\omega}}
+\newcommand{\bOm}{\boldsymbol{\Omega}}
+\newcommand{\ez}{\hat{\boldsymbol{z}}}
+\newcommand{\er}{\hat{\boldsymbol{r}}}
+\newcommand{\etheta}{\hat{\boldsymbol{\theta}}}
+\newcommand{\grad}{\boldsymbol{\nabla}}
+\newcommand{\curl}{\boldsymbol{\nabla}\!\times}
+\newcommand{\divg}{\boldsymbol{\nabla}\!\cdot}
+\newcommand{\p}{\partial}
+
+% ==== Constants ====
+\newcommand{\Ce}{C_e} % characteristic swirl speed
+\newcommand{\re}{r_e} % classical electron radius
+
+\begin{document}
+    \maketitle
+
+    \begin{abstract}
+
+We investigate how a rapidly rotating, incompressible fluid contained in a cylinder responds when a neutrally buoyant spherical control volume on the axis is forced to move vertically. In the limit of small Rossby and Ekman numbers, linear rotating-fluid theory reduces to a compact vorticity-production law,
+
+        \(
+        \p_t \omega_z = 2\Omega\,\p_z w
+        \),
+
+This relation predicts vertical vorticity of opposite sign above and below the driver, leading to instantaneous tracer rotation in opposite directions. For symmetric up–down strokes, the accumulated angle reverses on the return path, so that the net rotation over a full cycle cancels at leading order.
+
+
+As a speculative extension, we introduce a dimensionless “fluid fine-structure constant” that connects swirl speed to a tracer’s clock-rate rule. Unlike the angle response, this hypothesis predicts a small but non-reversing cycle-averaged proper-time deficit. We present closed-form estimates, dimensional checks, and limiting cases, while stressing that the analogy is offered as a testable conjecture, separate from the rigorous macroscopic results.
+
+
+
+    \end{abstract}
+
+
+    \section{Physical setting and asymptotic regime}
+    A cylinder of radius \(R\) and height \(H\) contains an incompressible fluid of density \(\rho\). The container rotates at constant angular speed \(\Omega\) about \(\ez\). In the rotating frame the base state is at rest; the absolute vorticity is uniform, \(\bW_a^{(0)}=2\bOm\) \cite{Batchelor1967,Greenspan1968}.
+
+    A neutrally buoyant spherical control volume of radius \(a\) is centered on the axis \(r=0\) and is forced vertically with displacement \(Z(t)\). The forcing is axisymmetric and smooth; denote the induced vertical velocity by \(w(r,z,t)\). We work in the regime
+    \[
+        \mathrm{Ro}=\frac{U'}{\Omega L}\ll1,\qquad
+        \mathrm{E}=\frac{\nu}{\Omega L^2}\ll1,
+    \]
+    with perturbation speed \(U'\) and length \(L=\mathcal{O}(a)\), so that linear, inviscid rotating-flow theory applies away from thin boundary layers \cite{Batchelor1967,Greenspan1968,Vallis2017}.
+
+    \section{Governing equations and vorticity production}
+    In the rotating frame the inviscid equations are
+    \begin{align}
+        \p_t \bU + (\bU\!\cdot\!\grad)\bU + 2\bOm\times\bU &= -\grad \Pi,\label{eq:NSrot}\\
+        \divg \bU &= 0.\label{eq:incomp}
+    \end{align}
+    Taking curl of \eqref{eq:NSrot} gives the absolute-vorticity equation \cite{Batchelor1967,Vallis2017}
+    \begin{equation}
+        \p_t \bW = \curl(\bU\times \bW_a),\qquad \bW_a=\bW+2\bOm. \label{eq:vortgen}
+    \end{equation}
+    Linearizing about \(\bW_a^{(0)}=2\bOm\) (neglect quadratic perturbation terms) yields
+    \begin{equation}
+        \p_t \bW \approx 2(\bOm\!\cdot\!\grad)\,\bU. \label{eq:vortlin}
+    \end{equation}
+    Axisymmetry implies that the vertical component obeys
+    \begin{equation}
+        \boxed{\;\p_t \omega_z = 2\Omega\,\p_z w.\;} \label{eq:key}
+    \end{equation}
+    Introduce a vertical displacement field \(\xi(r,z,t)\) with \(w=\p_t\xi\). Integrating \eqref{eq:key} from an unperturbed initial state,
+    \begin{equation}
+        \boxed{\;\omega_z(r,z,t) = 2\Omega\,\p_z \xi(r,z,t).\;} \label{eq:omegaxi}
+    \end{equation}
+    Equation \eqref{eq:omegaxi} is the rotating analogue of vortex-line stretching: regions of column stretching (\(\p_z\xi>0\)) generate cyclonic vorticity, while compression (\(\p_z\xi<0\)) generates anticyclonic vorticity \cite{Proudman1916,Taylor1923}.
+
+    \section{From vertical vorticity to azimuthal velocity}
+    Under axisymmetry the kinematic relation between vertical vorticity and azimuthal velocity is
+    \begin{equation}
+        \omega_z(r,z,t)=\frac{1}{r}\,\p_r\!\big(r\,u_\theta(r,z,t)\big). \label{eq:omegau}
+    \end{equation}
+    Regularity at \(r=0\) (\(u_\theta\sim r\)) gives
+    \begin{equation}
+        \boxed{\;
+        u_\theta(r,z,t)
+            =\frac{1}{r}\int_0^r \omega_z(r',z,t)\,r'\,\dd r'
+            =\frac{2\Omega}{r}\int_0^r \p_z\xi(r',z,t)\,r'\,\dd r'.\;} \label{eq:uth}
+    \end{equation}
+
+    \subsection{A concrete smooth kernel}
+    Let
+    \begin{equation}
+        \xi(r,z,t)=Z(t)\,\psi(r,z),\qquad \psi(r,z)=\exp\!\left(-\frac{r^2+z^2}{a^2}\right).
+    \end{equation}
+    Then \(\p_z\xi = -\dfrac{2Z(t)\,z}{a^2}\,\psi\), and \eqref{eq:uth} yields
+    \begin{equation}
+        \boxed{\;
+        u_\theta(r,z,t)
+            = -\,\frac{2\Omega\,Z(t)\,z}{a^{2}}\,e^{-z^{2}/a^{2}}\,
+            \frac{1-e^{-r^{2}/a^{2}}}{r}.
+            \;} \label{eq:uth_gauss}
+    \end{equation}
+    \emph{Sign structure:} for \(Z(t)>0\) (up-stroke), \(u_\theta\propto -z\), so the azimuthal response is cyclonic below (\(z<0\)) and anticyclonic above (\(z>0\)).
+
+    Near the axis, \(1-e^{-r^{2}/a^{2}}\sim r^2/a^2\), hence \(u_\theta\sim -\dfrac{2\Omega Z(t) z}{a^{4}}\,e^{-z^{2}/a^{2}}\,r\) (regular).
+
+    \section{Angle reversal and reversibility}
+    Define the relative angular rate \(\dot{\theta}_\text{rel}=u_\theta/r\). Over a stroke from \(t_1\) to \(t_2\),
+    \begin{equation}
+        \Delta \theta_\text{rel}(r,z)=\int_{t_1}^{t_2}\frac{u_\theta}{r}\,\dd t.
+    \end{equation}
+    Because \(\dot{\theta}_\text{rel}\) is \emph{linear} in \(Z(t)\), a symmetric up–down cycle with zero mean displacement satisfies
+    \begin{equation}
+        \boxed{\;\Delta \theta_\text{rel}(r,z; \text{one period})=0\quad\text{(to leading order in Ro, E).}\;}
+    \end{equation}
+    This is the expected quasi-static reversibility of linear, rapidly rotating flow (the Taylor–Proudman framework) \cite{Proudman1916,Taylor1923,Greenspan1968}. Deviations arise at higher order from viscosity (Ekman pumping), finite-amplitude advection (steady streaming), or near-resonant inertial waves \cite{Greenspan1968,Vallis2017}.
+
+    % ======================
+    \section{A fluid-inspired kinematic time hypothesis}
+% ======================
+
+    We now explore a speculative analogy, motivated by the parity property of swirl cancellation.
+    The macroscopic fluid equations remain unchanged; the following is presented only as a \emph{dimensionless coupling hypothesis}.
+
+    \subsection{Definition of a fluid fine-structure constant}
+    Introduce a microscopic length scale equal to half the classical electron radius,
+    \[
+        L \equiv \tfrac{1}{2}\re,
+        \qquad
+        \re = \frac{e^2}{4\pi\epsilon_0 m_e c^2} \approx 2.82\times 10^{-15}\,\mathrm{m}.
+    \]
+
+    With vorticity related to swirl velocity by
+    \(\omega = 2u_\theta/\Ce\),
+    we define the \emph{fluid fine-structure constant}
+    \begin{equation}
+        \boxed{\;\alpha_f \equiv \frac{\omega L}{c}
+            = \frac{\re}{c\,\Ce}\,u_\theta.\;}
+    \end{equation}
+    This quantity is dimensionless, and---like the electromagnetic fine-structure constant---it measures the relative strength of a coupling (here, swirl to clock-rate).
+
+    \subsection{Time-rate rule}
+    We propose that the local tracer clock rate is
+    \begin{equation}
+        \boxed{\;
+        \frac{\dd \tau}{\dd t} = \sqrt{1-\alpha_f^2}.
+        \;}
+    \end{equation}
+
+    For $\alpha_f\ll1$, expansion yields
+    \[
+        \frac{\dd \tau}{\dd t} \approx 1 - \tfrac{1}{2}\alpha_f^2 + \mathcal{O}(\alpha_f^4).
+    \]
+    Thus the leading correction is quadratic in $\alpha_f$, so angle reverses on a symmetric stroke but the time deficit does not---a clear falsifiable signature.
+
+    \subsection{Cycle-averaged deficit}
+    For sinusoidal forcing \(Z(t)=Z_0\sin\sigma t\),
+    \[
+        \Delta \tau = -\tfrac{1}{2}\alpha_f^2\,T + \mathcal{O}(\alpha_f^4),
+        \qquad T=\tfrac{2\pi}{\sigma}.
+    \]
+
+    With representative laboratory parameters
+    (\(\Omega\sim2\,\mathrm{rad/s}, a\sim5\,\mathrm{cm}, Z_0\sim2\,\mathrm{mm}\)),
+    we estimate $\alpha_f \sim 10^{-8}$--$10^{-9}$,
+    giving fractional time-rate shifts of order $10^{-16}$ per cycle.
+
+    \section{Discussion and experimental considerations}
+
+    The macroscopic prediction of opposite-sign swirl and cycle reversibility can be demonstrated directly with simple tracer experiments. For instance, dye or ink layers placed at $\pm z_0$ should rotate in opposite directions during a stroke, with the motions canceling once the driver returns. Such a setup offers a clear and even classroom-level illustration of angle cancellation in rotating flows.
+
+    The speculative time-rate analogy points to a different outcome: a cycle-averaged deficit of order $\alpha_f^2$ that does not reverse. Detecting such a subtle effect would require synchronized tracer clocks capable of fractional timing resolution on the order of $10^{-16}$ per cycle—far beyond current experimental capabilities, but in principle measurable. Even a null result would be informative, since it would place bounds on $\alpha_f$ and therefore limit the analogy.
+
+    \section*{Conclusion}
+
+    We have analyzed the azimuthal response of a vertically forced, axisymmetric driver in a rapidly rotating fluid. The theory predicts opposite-sign vertical vorticity above and below the driver, producing tracer motions that cancel over a symmetric cycle. This reversibility is consistent with classical rotating-flow dynamics in the low-Rossby, low-Ekman regime.
+
+    As a complementary exploration, we introduced a dimensionless \emph{fluid fine-structure constant} $\alpha_f$ together with a kinematic time-rate rule. While the resulting prediction—a minuscule but non-reversing time deficit quadratic in $\alpha_f$—remains far below present experimental resolution, it is nonetheless falsifiable in principle. Framed in this way, the analogy connects the present work to the analogue-gravity tradition while keeping a clear distinction between established macroscopic dynamics and speculative microscopic interpretation.
+
+
+% ======================
+    \bibliographystyle{unsrt}
+    \bibliography{17_7_references}
+
+
+
+
+% =======================
+% Appendix: derivation details
+% =======================
+    \clearpage
+    \appendix
+    \section{Details for the Gaussian kernel}
+    With \(\psi=\exp(-(r^2+z^2)/a^2)\),
+    \[
+        \p_z\xi = Z(t)\,\p_z\psi = -\frac{2Z(t)\,z}{a^2} e^{-(r^2+z^2)/a^2}.
+    \]
+    Inserting into \eqref{eq:uth}:
+    \[
+        u_\theta(r,z,t)=\frac{2\Omega}{r}\int_0^r \left(-\frac{2Z(t)\,z}{a^2}e^{-(r'^2+z^2)/a^2}\right) r'\,\dd r'.
+    \]
+    The radial integral evaluates to
+    \[
+        \int_0^r e^{-r'^2/a^2}\,r'\,\dd r'=\frac{a^2}{2}\left(1-e^{-r^2/a^2}\right),
+    \]
+    giving the stated result \eqref{eq:uth_gauss}. The near-axis expansion follows from \(1-e^{-r^2/a^2}\sim r^2/a^2\).
+
+    \section{When reversibility can fail (order estimates)}
+    Let \(\epsilon\sim \mathrm{Ro}\) be a small parameter. Viscous corrections scale as \(\mathcal{O}(\mathrm{E}^{1/2})\) in bulk via Ekman pumping. Quadratic advection \((\bU\!\cdot\!\grad)\bU\) introduces steady streaming at \(\mathcal{O}(\epsilon^2)\), yielding a nonzero mean angle per cycle. Near the inertial band \(|\sigma-2\Omega|\ll 2\Omega\), wave radiation produces phase lags \(\mathcal{O}(\epsilon)\) that also break exact reversal \cite{Greenspan1968}. Operating with \(\sigma\ll 2\Omega\), \(\epsilon\ll1\), and small \(\mathrm{E}\) ensures the leading-order predictions.
+
+\end{document}

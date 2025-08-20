@@ -51,27 +51,61 @@
 \begin{abstract}
             We present the Vortex Æther Model (VAM), a unified physical framework in which mass, gravity, and proper time emerge from topologically structured vorticity within a compressible, inviscid æther. In contrast to curvature-based relativity and Higgs-based mass generation, VAM describes particles as knotted vortex excitations, and gravity as a swirl-induced time deviation field. The theory reproduces classical phenomena such as gravitational redshift, time dilation, and frame-dragging through fluid-dynamic energetics, and calculates particle masses and physical constants from first principles. The Standard Model gauge groups SU(3), SU(2), and U(1) arise naturally from vortex topology and swirl symmetry, while canonical quantization defines a Fock-like Hilbert space over knot eigenstates. We develop a full path-integral formulation over topological sectors of the æther manifold, enabling quantum transitions, knot fusion, and helicity exchange interactions. Benchmarking against general relativity and experimental tests of gravitational time deviation support the model’s viability. VAM offers a physically grounded, falsifiable, and derivational alternative to conventional quantum gravity and field theory models.\\
             \begin{center}
-            VAM Used Knots:\\
-            \( Unknot \):~\includegraphics[height=1.2em]{images/0_1} Photon \\
-            \( Hopf link \):~\includegraphics[height=1.2em]{images/hopf} Massive Boson / Polariton \( Solomon \):~\includegraphics[height=1.2em]{images/solomon} Electron / Positron\\
-            \( Borromean \):~\includegraphics[height=1.2em]{images/borromean} Proton \( Trefoil Knot (3,2) \):~\includegraphics[height=1.2em]{images/3_1} Neutrino \\
-            \( 6_2 \):~\includegraphics[height=1.2em]{images/6_2} Up-Quarck \( 7_4 \):~\includegraphics[height=1.2em]{images/7_4} Down-Quarck  \\
-            \( Figure-8-knot \):~\includegraphics[height=1.2em]{images/4_1} Dark Matter / Energy
-\begin{tikzpicture}[scale=0.1,  line width=0.4pt]
-  \def\nsamples{60}
-  \foreach \i in {1,...,\nsamples} {
-      \pgfmathsetmacro\tprev{(\i - 1) * 2 * pi / \nsamples}
-      \pgfmathsetmacro\tcurr{\i * 2 * pi / \nsamples}
-      \pgfmathsetmacro\xprev{(2 + cos(2 * \tprev r)) * cos(3 * \tprev r)}
-      \pgfmathsetmacro\yprev{(2 + cos(2 * \tprev r)) * sin(3 * \tprev r)}
-      \pgfmathsetmacro\xcurr{(2 + cos(2 * \tcurr r)) * cos(3 * \tcurr r)}
-      \pgfmathsetmacro\ycurr{(2 + cos(2 * \tcurr r)) * sin(3 * \tcurr r)}
-      \draw[black, --] (\xprev,\yprev) -- (\xcurr,\ycurr);
-  }
-\end{tikzpicture}\\
- \( 5_1 \):~\includegraphics[height=1.2em]{images/5_1}
- \( 5_2 \):~\includegraphics[height=1.2em]{images/5_2}
- \( 7_2 \):~\includegraphics[height=1.2em]{images/7_2}
+
+% --- helpers for inline knot icons (keeps them centered in math mode) ---
+                \newcommand{\knicon}[1]{\vcenter{\hbox{\includegraphics[height=1.2em]{#1}}}}
+                \newcommand{\knlab}[2]{\textbf{#1}~(\knicon{#2})}
+
+% ----------------------------- VAM Used Knots -----------------------------
+                VAM Used Knots:\\
+                \[
+                    \begingroup
+                    \footnotesize
+                    \setlength{\jot}{4pt}
+                    \begin{aligned}
+                        \knlab{Unknot}{images/0_1}:&
+                        \ \ \gamma~\text{(photon; massless swirl wave / unknotted ring)}
+                        && \text{[boson = unknotted excitation]; }\cite{VAM5,VAM11-bosons}. \\[4pt]
+
+                        \knlab{Hopf link}{images/hopf}:&
+                        \ \ g~\text{(gluon-like flux / gauge carrier; massless)}
+                        && \text{(not a ``massive polariton''); }\cite{VAM6}. \\[6pt]
+
+                        \knlab{Trefoil}~T(2,3)~{\knicon{images/3_1}}:&
+                        \ \ e^- \quad \text{(mirror }T(3,2)\text{: }e^+\text{)}
+                        && \text{(chiral fermion; spin-$\tfrac12$); }\cite{VAM5,VAM11-leptons}. \\[4pt]
+
+                        \knlab{$6_2$}{images/6_2}:&
+                        \ \ u\text{-type subknot (chiral)}
+                        && \text{fermion (spin-$\tfrac12$); }\cite{VAM5,VAM11-leptons}. \\[4pt]
+
+                        \knlab{$7_4$}{images/7_4}:&
+                        \ \ d\text{-type subknot (chiral)}
+                        && \text{fermion (spin-$\tfrac12$); }\cite{VAM5-quarks}. \\[4pt]
+
+% If you have an image for the fully pairwise-linked triple, put its filename below.
+% Temporarily using a placeholder name; replace `images/triplelink` with your file if different.
+                        \knlab{Triple link (all pairs linked)}{images/aborromean}:&
+                        \ \ p~(uud;\ 6_2,\,6_2,\,7_4)
+                        && \text{(not Borromean); }\cite{VAM5-protneut}. \\[4pt]
+
+                        \knlab{Borromean rings}{images/borromean}:&
+                        \ \ n~(udd;\ 6_2,\,7_4,\,7_4)
+                        && \text{(pairwise $L_k=0$, inseparable triple); }\cite{VAM5-protneut}. \\[4pt]
+
+% Using Solomon image as the visual for a two-component Hopfion-like doublet
+                        \knlab{Hopfion doublet}{images/solomon}:&
+                        \ \ \nu~\text{(neutrino; linked, neutral swirl mode)}
+                        && \text{alt.: near-unknot minimal-tension state; }\cite{VAM5-nu,VAM11-nu}. \\[4pt]
+
+                        \knlab{Figure-eight}{images/4_1}:&
+                        \ \ \text{achiral hyperbolic; \emph{expelled} from chiral swirl fields}
+                        && \text{(DE-like repulsion, \emph{not} DM); }\cite{VAM9}.
+                    \end{aligned}
+                    \endgroup
+                \]
+
+
 \end{center}
 \end{abstract}
 \maketitle

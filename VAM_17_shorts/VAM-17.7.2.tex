@@ -1,0 +1,174 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb,amsfonts,bm}
+\usepackage{siunitx}
+\usepackage{geometry}
+\usepackage[hidelinks]{hyperref}
+\geometry{margin=1in}
+
+\title{Reversible Azimuthal Response to Axisymmetric Vertical Forcing in Rapidly Rotating Fluids:\\
+Vorticity Generation, Angle Reversal, and a Fluid Fine-Structure Analogy}
+
+\author{Omar Iskandarani}
+\date{2025}
+
+% ==== Notation shortcuts ====
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\bU}{\boldsymbol{u}}
+\newcommand{\bW}{\boldsymbol{\omega}}
+\newcommand{\bOm}{\boldsymbol{\Omega}}
+\newcommand{\ez}{\hat{\boldsymbol{z}}}
+\newcommand{\er}{\hat{\boldsymbol{r}}}
+\newcommand{\etheta}{\hat{\boldsymbol{\theta}}}
+\newcommand{\grad}{\boldsymbol{\nabla}}
+\newcommand{\curl}{\boldsymbol{\nabla}\!\times}
+\newcommand{\divg}{\boldsymbol{\nabla}\!\cdot}
+\newcommand{\p}{\partial}
+
+% ==== Constants ====
+\newcommand{\Ce}{C_e} % characteristic swirl speed
+\newcommand{\re}{r_e} % classical electron radius
+
+\begin{document}
+    \maketitle
+
+% =======================
+% Abstract options
+% =======================
+
+% Conservative fluid-dynamics abstract
+    \begin{abstract}
+        We analyze the azimuthal response of a rapidly rotating, incompressible fluid in a cylinder when a neutrally buoyant spherical control volume on the axis is driven vertically with a prescribed displacement. In the low-Rossby, low-Ekman limit, linear rotating-fluid theory yields a simple local vorticity-production law,
+        \(
+        \p_t \omega_z = 2\Omega\,\p_z w
+        \),
+        which implies opposite-sign vertical vorticity above and below the driver and, hence, opposite instantaneous azimuthal rotation of passive tracers. For symmetric strokes, the accumulated angle reverses on the return stroke and the net angle over a period vanishes at leading order. This compact derivation highlights reversibility of swirl generation in the Taylor--Proudman regime, with deviations traceable to viscosity, finite-amplitude effects, or inertial-wave excitation.
+    \end{abstract}
+
+% Physics/analogue abstract
+% \begin{abstract}
+% We analyze the azimuthal response of a rapidly rotating, incompressible fluid in a cylinder when a neutrally buoyant spherical control volume on the axis is driven vertically with a prescribed displacement. In the low-Rossby, low-Ekman limit, linear rotating-fluid theory yields a simple local vorticity-production law,
+% \(
+% \p_t \omega_z = 2\Omega\,\p_z w
+% \),
+% which implies opposite-sign vertical vorticity above and below the driver and, hence, opposite instantaneous azimuthal rotation of passive tracers. For symmetric strokes, the accumulated angle reverses on the return stroke and the net angle over a period vanishes at leading order.
+%
+% As a speculative microscopic analogy, we define a dimensionless ``fluid fine-structure constant'' linking swirl velocity and a tracer clock-rate rule. This predicts a small, non-reversing, cycle-averaged proper-time deficit despite angle cancellation. The analogy is testable, with falsifiable signatures, and situates the result within the analogue-gravity tradition.
+% \end{abstract}
+
+    \section{Physical setting and asymptotic regime}
+    A cylinder of radius \(R\) and height \(H\) contains an incompressible fluid of density \(\rho\). The container rotates at angular speed \(\Omega\) about \(\ez\). In the rotating frame the base state is at rest; the absolute vorticity is uniform, \(\bW_a^{(0)}=2\bOm\) \cite{Batchelor1967,Greenspan1968}.
+
+    A neutrally buoyant spherical control volume of radius \(a\) is centered on the axis and is forced vertically with displacement \(Z(t)\). The induced vertical velocity is denoted \(w(r,z,t)\). We work in the regime
+    \[
+        \mathrm{Ro}=\frac{U'}{\Omega L}\ll1,\qquad
+        \mathrm{E}=\frac{\nu}{\Omega L^2}\ll1,
+    \]
+    so that linear, inviscid rotating-flow theory applies \cite{Batchelor1967,Greenspan1968,Vallis2017}.
+
+    \section{Governing equations and vorticity production}
+    The rotating Euler equations are
+    \begin{align}
+        \p_t \bU + (\bU\!\cdot\!\grad)\bU + 2\bOm\times\bU &= -\grad \Pi, \label{eq:NSrot}\\
+        \divg \bU &= 0. \label{eq:incomp}
+    \end{align}
+    Taking curl yields the vorticity equation \cite{Batchelor1967,Vallis2017}
+    \begin{equation}
+        \p_t \bW = \curl(\bU\times \bW_a),\qquad \bW_a=\bW+2\bOm. \label{eq:vortgen}
+    \end{equation}
+    Linearizing about \(\bW_a^{(0)}=2\bOm\) gives
+    \begin{equation}
+        \p_t \bW \approx 2(\bOm\!\cdot\!\grad)\,\bU. \label{eq:vortlin}
+    \end{equation}
+    Axisymmetry implies
+    \begin{equation}
+        \boxed{\;\p_t \omega_z = 2\Omega\,\p_z w.\;} \label{eq:key}
+    \end{equation}
+    With vertical displacement \(\xi\) (\(w=\p_t\xi\)):
+    \begin{equation}
+        \boxed{\;\omega_z(r,z,t) = 2\Omega\,\p_z \xi(r,z,t).\;} \label{eq:omegaxi}
+    \end{equation}
+
+    \section{From vertical vorticity to azimuthal velocity}
+    Axisymmetric kinematics give
+    \begin{equation}
+        \omega_z(r,z,t)=\frac{1}{r}\,\p_r\!\big(r\,u_\theta(r,z,t)\big). \label{eq:omegau}
+    \end{equation}
+    Regularity at \(r=0\) yields
+    \begin{equation}
+        \boxed{\;
+        u_\theta(r,z,t)
+            =\frac{2\Omega}{r}\int_0^r \p_z\xi(r',z,t)\,r'\,\dd r'.\;} \label{eq:uth}
+    \end{equation}
+
+    \subsection{A Gaussian kernel}
+    Let
+    \(\xi(r,z,t)=Z(t)\,\exp(-(r^2+z^2)/a^2)\).
+    Then
+    \begin{equation}
+        \boxed{\;
+        u_\theta(r,z,t)
+            = -\,\frac{2\Omega\,Z(t)\,z}{a^{2}}\,e^{-z^{2}/a^{2}}\,
+            \frac{1-e^{-r^{2}/a^{2}}}{r}.
+            \;} \label{eq:uth_gauss}
+    \end{equation}
+    Sign: for \(Z(t)>0\), swirl is cyclonic below and anticyclonic above.
+
+    \section{Angle reversal and reversibility}
+    The tracer angular displacement is
+    \[
+        \Delta \theta_\text{rel}(r,z)=\int \frac{u_\theta}{r}\,\dd t.
+    \]
+    Because \(u_\theta\) is linear in \(Z(t)\), a symmetric stroke implies
+    \[
+        \boxed{\;\Delta \theta_\text{rel}=0\quad\text{(to leading order).}\;}
+    \]
+    This reversibility follows from Taylor--Proudman theory \cite{Proudman1916,Taylor1923,Greenspan1968}. Nonzero residuals arise from Ekman pumping, advection, or inertial waves.
+
+    \section{Fluid fine-structure analogy (optional)}
+    We define a microscopic length \(L=\tfrac{1}{2}\re\), with \(\re\) the classical electron radius. With $\omega=2u_\theta/\Ce$, define
+    \begin{equation}
+        \boxed{\;\alpha_f = \frac{\omega L}{c}
+            = \frac{\re}{c\,\Ce}\,u_\theta.\;}
+    \end{equation}
+    We propose a tracer time rule
+    \begin{equation}
+        \frac{\dd \tau}{\dd t} = \sqrt{1-\alpha_f^2}.
+    \end{equation}
+    For $\alpha_f\ll1$,
+    \[
+        \frac{\dd \tau}{\dd t}\approx 1-\tfrac{1}{2}\alpha_f^2.
+    \]
+    Thus angle cancels but the time deficit does not.
+
+    \section{Discussion and outlook}
+    \begin{itemize}
+        \item \textbf{Macroscopic result:} Reversibility of swirl angles is robust in the low-Ro, low-Ekman regime.
+        \item \textbf{Speculative addition:} A fluid fine-structure constant $\alpha_f$ provides a testable clock-rate analogy.
+        \item \textbf{Experimental note:} Ink layers test angle reversal; synchronized tracers could, in principle, bound $\alpha_f^2$.
+        \item \textbf{Outlook:} This situates rotating-fluid kinematics within analogue-gravity programs \cite{Unruh1981,Visser1998,Barcelo2011}.
+    \end{itemize}
+
+    \section*{Conclusion}
+    A vertically forced, axisymmetric driver in a rapidly rotating fluid produces equal-and-opposite swirl above and below, with exact angle cancellation over symmetric cycles. This is the main rigorous contribution. A speculative fine-structure analogy, explicitly isolated, extends the framework into analogue-gravity territory with falsifiable signatures.
+
+    \bibliographystyle{unsrt}
+    \begin{thebibliography}{99}
+        \bibitem{Batchelor1967} G.~K. Batchelor. \emph{An Introduction to Fluid Dynamics}. Cambridge Univ. Press, 1967.
+        \bibitem{Greenspan1968} H.~P. Greenspan. \emph{The Theory of Rotating Fluids}. Cambridge Univ. Press, 1968.
+        \bibitem{Vallis2017} G.~K. Vallis. \emph{Atmospheric and Oceanic Fluid Dynamics}, 2nd ed. Cambridge Univ. Press, 2017.
+        \bibitem{Proudman1916} J.~Proudman. Proc. R. Soc. A \textbf{92}, 408 (1916).
+        \bibitem{Taylor1923} G.~I. Taylor. Proc. R. Soc. A \textbf{104}, 213 (1923).
+        \bibitem{Einstein1905} A.~Einstein. Ann. Physik \textbf{322}, 891 (1905).
+        \bibitem{Unruh1981} W.~G. Unruh. Phys. Rev. Lett. \textbf{46}, 1351 (1981).
+        \bibitem{Visser1998} M.~Visser. Class. Quantum Grav. \textbf{15}, 1767 (1998).
+        \bibitem{Barcelo2011} C.~Barcel\'o, S.~Liberati, M.~Visser. Living Rev. Relativity \textbf{14}, 3 (2011).
+    \end{thebibliography}
+
+    \clearpage
+    \appendix
+    \section{Gaussian kernel derivation}
+    See main text.
+
+    \section{When reversibility can fail}
+    Order estimates: viscosity $\mathcal{O}(E^{1/2})$, quadratic advection $\mathcal{O}(\mathrm{Ro}^2)$, inertial-wave radiation near $\sigma\approx 2\Omega$.
+\end{document}

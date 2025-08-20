@@ -1,0 +1,278 @@
+
+\documentclass[12pt]{article}
+
+\usepackage{amsmath,amssymb,amsfonts,bm}
+
+\usepackage{geometry}
+
+\usepackage{siunitx}
+
+\usepackage[hidelinks]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\geometry{margin=1in}
+
+
+\title{Skyrmionic Photon Emission from Knotted Swirl Sources:\
+
+A Vortex \AE ther Model (VAM) Synthesis and Predictions}
+
+\author{Omar Iskandarani}
+
+\date{2025}
+
+
+\begin{document}
+
+\maketitle
+
+
+\begin{abstract}
+
+Recent demonstrations of \emph{single-photon skyrmions} in spin–orbit–engineered semiconductor microcavities and per-photon conservation of orbital angular momentum (OAM) in nonlinear down-conversion provide a rigorous template for a Vortex \AE ther Model (VAM) theory of photon emission from knotted swirl sources. We (i) map optical skyrmion topology to VAM vortex charge, (ii) define a projection law from normalized vorticity to single-photon Stokes fields, (iii) formulate OAM selection rules for multiphoton channels as a VAM ``radiative vertex,'' and (iv) anchor the emission frequency scale to $C_{e}/r_{c}$ with numerical validation using the user's constants. The resulting framework yields falsifiable predictions: topological spectroscopy of knotted emitters, chirality--helicity control at fixed OAM additivity, robustness of skyrmion number in propagation, and Purcell-tunable topological textures.
+
+\end{abstract}
+
+
+\section{From optical skyrmions to VAM topology}
+
+Optical skyrmions synthesized by superposing Laguerre–Gaussian (LG) cavity modes with opposite circular polarizations carry an integer topological charge (skyrmion number) computed from the local Stokes vector field \cite{Ma2025NanoPhotonSkyrmions,Shen2024NatPhoton,Allen1992OAM}. Denote the normalized Stokes vector by $\hat{\vec S}(\mathbf{k}\textit{\perp})$ across the transverse $k$-plane. The optical skyrmion number is
+
+\begin{equation}
+
+{N}_{\mathrm{sk}}^{(\mathrm{ph})} = \frac{1}{4\pi} \int d^{2}k_\perp \;
+\hat{\vec{S}} \cdot \left( \partial_{k_x} \hat{\vec{S}} \times \partial_{k_y} \hat{\vec{S}} \right) \in \mathbb{Z}
+
+\label{eq:Nsk}
+
+\end{equation}
+
+In VAM, particle-like configurations are knotted vortex tubes of an incompressible, inviscid \ae ther. Let $\boldsymbol{\omega}=\nabla\times \mathbf{v}$ be the vorticity, and $\hat{\boldsymbol{\omega}}=\boldsymbol{\omega}/|\boldsymbol{\omega}|$. We define the \emph{vortex topological charge} on an emitting cross-section $\Sigma$ by
+
+\begin{equation}
+
+H_{\mathrm{vortex}}[\hat{\boldsymbol{\omega}}|\Sigma] \equiv
+\frac{1}{4\pi}\int_{\Sigma}\hat{\boldsymbol{\omega}}\cdot
+\left( \partial_x \hat{\boldsymbol{\omega}} \times \partial_y \hat{\boldsymbol{\omega}} \right) \, dx \, dy
+
+\label{eq:Hvortex}
+
+\end{equation}
+
+\textbf{Conclusion 1 (topological inheritance).} A skyrmionic single-photon emitted by a knotted swirl inherits the integer topology of the emitter:
+
+\begin{equation}
+
+\boxed{N_{\mathrm{sk}}^{(\mathrm{ph})} = H_{\mathrm{vortex}}[\hat{\boldsymbol{\omega}}|\Sigma]}
+\qquad\text{(projection equivalence).}
+
+\label{eq:projection_equivalence}
+
+\end{equation}
+
+This identifies the observed single-photon skyrmions \cite{Ma2025NanoPhotonSkyrmions} with VAM’s topological sector (cf.\ helicity concepts in vortex dynamics \cite{Moffatt1969Helicity}).
+
+
+\section{Projection law: from swirl to Stokes}
+
+Let the (transverse) swirl-aligned polarization source on $\Sigma$ be
+
+\begin{equation}
+
+\mathbf{p}(\mathbf{r}) = p_0(\mathbf{r}) \, \hat{\boldsymbol{\omega}}_\perp(\mathbf{r})
+\end{equation}
+
+where $\hat{\boldsymbol{\omega}}\perp$ is the component orthogonal to the radiation direction. The far-field Jones vector in mode space is given by a projected Huygens–Kirchhoff integral (dimensionally: field amplitude)
+
+\begin{equation}
+
+\mathbf{E}(\mathbf{k}) \propto \int_{\Sigma} d^{2}r \; \mathbf{P}_\perp(\hat{\mathbf{k}}) \, \mathbf{p}(\mathbf{r}) \, e^{-i\mathbf{k}\cdot \mathbf{r}}, \qquad \mathbf{P}_\perp = \mathbf{I} - \hat{\mathbf{k}} \hat{\mathbf{k}}^\top
+\label{eq:HK}
+\end{equation}
+
+Expanding $\mathbf{E}$ in the LG basis $u_{p,\ell}(\mathbf{r})$ \cite{Allen1992OAM}, with circular unit vectors $\hat{e}_\sigma$ ($\sigma=\pm 1$),
+
+\begin{equation}
+A_{p\ell\sigma} = \int_{\Sigma} d^{2}r \;
+\left( \hat{e}_\sigma^* \cdot \mathbf{P}_\perp \hat{\boldsymbol{\omega}}_\perp \right)
+u_{p,\ell}(\mathbf{r}) \, e^{i\Phi(\mathbf{r})}
+\label{eq:modal_overlap}
+\end{equation}
+
+and the Stokes field $S_i(\mathbf{k})=\mathbf{E}^\dagger\sigma_i\mathbf{E}/(\mathbf{E}^\dagger\mathbf{E})$ produces $N_{\mathrm{sk}}^{(\mathrm{ph})}$ via \eqref{eq:Nsk}.
+
+\textbf{Conclusion 2 (LG synthesis in VAM).} The same SAM--OAM mixing (spin--orbit coupling) used to build optical skyrmions in microcavities \cite{Ma2025NanoPhotonSkyrmions,Shen2024NatPhoton} is reproduced by \eqref{eq:modal_overlap}: knotted swirl geometry sets the LG superposition ${A_{p\ell\sigma}}$, hence the emitted photon’s skyrmionic Stokes texture.
+
+\paragraph{Dimensional check.} $\mathbf{P}_\perp$ is dimensionless; $u_{p,\ell}$ is normalized mode amplitude; $e^{-i\mathbf{k}\cdot\mathbf{r}}$ dimensionless; $d^2 r$ gives area. $\mathbf{p}$ carries the source amplitude. Thus $A_{p\ell\sigma}$ has the correct field-amplitude dimension (arbitrary global normalization fixed by radiometry).
+
+\section{VAM radiative vertex: OAM additivity and chirality}
+
+Experiments show per-photon OAM conservation in SPDC: $\ell_p=\ell_s+\ell_i$ via the azimuthal integral and a commuting OAM operator \cite{Kopf2025OAMConservation,Walborn2010SPDCReview}. VAM adopts the same symmetry logic for a knotted source of azimuthal index $\ell_{\rm src}$:
+
+\begin{equation}
+\boxed{\ell_{\rm src} = \sum_{j=1}^{n} \ell_j \quad \text{for an $n$-photon channel}}
+\label{eq:oam_additivity}
+\end{equation}
+
+with no strict conservation law on the radial indices $p_j$ (set by overlap waists and geometry), exactly as in SPDC \cite{Walborn2010SPDCReview}.
+
+\textbf{Conclusion 3 (chirality--helicity rule).} In VAM, ccw (matter) swirl $\Rightarrow \sigma=+1$ photon helicity; cw (antimatter) swirl $\Rightarrow \sigma=-1$. External control that flips swirl chirality flips photon helicity while preserving \eqref{eq:oam_additivity}---mirroring polarity control of single-photon skyrmions in cavities \cite{Ma2025NanoPhotonSkyrmions}.
+
+\section{Frequency and energy scale from VAM constants}
+
+Define the fundamental swirl eigenfrequency
+
+\begin{equation}
+\boxed{\Omega_{0} \equiv \frac{C_{e}}{r_{c}}}, \qquad [\Omega_0] = \mathrm{s^{-1}}
+\label{eq:Omega0}
+\end{equation}
+
+with quantized emission lines $\omega_{m\ell}=\Omega_{0}\chi_{m\ell}$, $E_{m\ell}=\hbar\omega_{m\ell}$, where $\chi_{m\ell}\in(0,1]$ are dimensionless eigenvalues fixed by geometry/cavity overlap.
+
+\paragraph{Numerical validation (user constants).}
+
+\[
+C_{e} = 1.09384563 \times 10^{6}\ \mathrm{m\,s^{-1}},\quad
+r_{c} = 1.40897017 \times 10^{-15}\ \mathrm{m} \Rightarrow
+\Omega_{0} = \frac{C_{e}}{r_{c}} = 7.763440655 \times 10^{20}\ \mathrm{s^{-1}}
+\]
+Hence
+\[
+E_{0} = \hbar\Omega_{0}
+= (1.054571817\times 10^{-34}\ \mathrm{J\,s})\times(7.763440655\times 10^{20}\ \mathrm{s^{-1}})
+=8.18710565\times10^{-14}\ \mathrm{J}
+= 5.109989 \times 10^{5}\ \mathrm{eV} = 0.510999\ \mathrm{MeV}
+\]
+This anchors the fundamental scale; higher modes satisfy $E_{m\ell}=\chi_{m\ell}\times 0.510999\ \mathrm{MeV}$ (e.g.\ $\chi=10^{-2}\Rightarrow 5.11\ \mathrm{keV}$). Units are consistent: $[C_{e}/r_{c}]={\rm s^{-1}}$, $[\hbar\omega]={\rm J}$.
+
+\section{Mapped source classes (examples)}
+
+\begin{itemize}
+\item \textbf{Trefoil ($T(2,3)$)-class}: dominant $\ell \simeq 3$ along axis; single-photon Stokes texture with $N_{\rm sk} = \pm 2$ from the $\mathrm{LG}_{0,\mp 2}^{\sigma\pm} + \mathrm{LG}_{1,0}^{\sigma\mp}$-type superposition (as realized in cavity skyrmions \cite{Ma2025NanoPhotonSkyrmions}); multiphoton channels respect \eqref{eq:oam_additivity}.
+\item \textbf{Higher hyperbolic knots ($5_2$, $7_1$)}: skyrmionium-like textures (multi-ring Stokes structure) accessible by shifting cavity aspect ratios, consistent with observed $k\pi$ optical skyrmionia at higher cavity orders \cite{Ma2025NanoPhotonSkyrmions}.
+\end{itemize}
+
+\section{Falsifiable predictions}
+
+\paragraph{(P1) Topological spectroscopy.} A trefoil-class emitter yields a biphoton OAM correlation matrix concentrated on $\ell_s+\ell_i=\ell_{\rm src}\simeq 3$, with radial-index spread governed by waists/overlaps (no $p$ selection) \cite{Walborn2010SPDCReview,Kopf2025OAMConservation}.
+
+\paragraph{(P2) Chirality--helicity flip at fixed OAM sum.} Reversing swirl chirality flips photon helicity ($\sigma\to-\sigma$) and the sign of the skyrmion polarity in the Stokes texture, while the OAM sum rule \eqref{eq:oam_additivity} remains intact (cavity-polarity flip analog \cite{Ma2025NanoPhotonSkyrmions}).
+
+\paragraph{(P3) Robustness of $N_{\rm sk}^{(\mathrm{ph})}$.} Attenuators, polarizers, and phase shifters perturb intensity/polarization locally but preserve the integer $N_{\rm sk}^{(\mathrm{ph})}$ (topological protection) \cite{Ma2025NanoPhotonSkyrmions}.
+
+\paragraph{(P4) Purcell-tunable topology.} Changing the cavity aspect ratio/defect radius moves the system between single-ring and skyrmionium Stokes textures by reweighting ${A_{p\ell\sigma}}$ via the Purcell-enhanced overlap \cite{Purcell1946,Ma2025NanoPhotonSkyrmions}.
+
+\section{Minimal experimental roadmap}
+
+\begin{enumerate}
+\item \textbf{Source:} a skyrmionic microcavity (or RF/optical metacavity) supporting two near-degenerate LG modes with opposite $\sigma$; drive a knotted swirl (trefoil) near $\omega_{m\ell}$.
+\item \textbf{Readout:} reconstruct single-photon Stokes maps $S_{1,2,3}(x,y)$ and OAM spectra; extract $N_{\rm sk}^{(\mathrm{ph})}$ and verify \eqref{eq:oam_additivity}.
+\item \textbf{Control:} flip swirl chirality (field reversal) and confirm helicity flip with conserved OAM sum; scan cavity aspect ratio to toggle skyrmion $\leftrightarrow$ skyrmionium textures.
+\end{enumerate}
+
+\section{Conclusions}
+
+The two external pillars---single-photon skyrmions in spin--orbit cavities and per-photon OAM conservation---close a consistent loop with VAM: (i) topology of the emitter maps to topology of the photon’s Stokes field; (ii) OAM additivity furnishes a clean radiative selection rule; (iii) the VAM scale $C_{e}/r_{c}$ fixes emission energies with dimensional clarity; (iv) robustness and cavity control provide direct levers for experiments. This synthesis upgrades VAM from static knotted ontology to a predictive, testable photon-emission theory.
+
+\section*{Acknowledgment of non-original elements}
+
+Equations \eqref{eq:Nsk}, \eqref{eq:HK}--\eqref{eq:modal_overlap} rely on standard Stokes/OAM/LG-mode optics and cavity skyrmion constructions \cite{Ma2025NanoPhotonSkyrmions,Allen1992OAM,Shen2024NatPhoton,BornWolf1999,Jackson1999} and on OAM selection results in SPDC \cite{Kopf2025OAMConservation,Walborn2010SPDCReview}. The topological integral form parallels classical vortex-helicity ideas \cite{Moffatt1969Helicity}.
+
+
+\begin{thebibliography}{99}
+
+
+\bibitem{Ma2025NanoPhotonSkyrmions}
+
+Ma, J., Yang, J., Liu, S., Chen, B., Li, X., Song, C., Qiu, G., Zou, K., Hu, X., Yu, Y., \& Liu, J. (2025).
+
+\newblock Nanophotonic Quantum Skyrmions Empowered by Semiconductor Cavity Quantum Electrodynamics.
+
+\newblock \emph{Nature Physics}.
+
+\newblock \href{https://doi.org/10.1038/s41567-025-02973-y}{doi:10.1038/s41567-025-02973-y}.
+
+\bibitem{Shen2024NatPhoton}
+
+Shen, Y., et al. (2024).
+
+\newblock Optical skyrmions and other topological quasiparticles of light.
+
+\newblock \emph{Nature Photonics}, 18, 15–25.
+
+\newblock \href{https://doi.org/10.1038/s41566-023-01356-4}{doi:10.1038/s41566-023-01356-4}.
+
+\bibitem{Allen1992OAM}
+
+Allen, L., Beijersbergen, M. W., Spreeuw, R. J. C., & Woerdman, J. P. (1992).
+
+\newblock Orbital angular momentum of light and the transformation of Laguerre–Gaussian laser modes.
+
+\newblock \emph{Physical Review A}, 45, 8185.
+
+\newblock \href{https://doi.org/10.1103/PhysRevA.45.8185}{doi:10.1103/PhysRevA.45.8185}.
+
+\bibitem{Kopf2025OAMConservation}
+
+Kopf, L., Barros, R., Prabhakar, S., Giese, E., & Fickler, R. (2025).
+
+\newblock Conservation of Angular Momentum on a Single-Photon Level.
+
+\newblock \emph{Physical Review Letters}, 134(20), 203601.
+
+\newblock \href{https://doi.org/10.1103/PhysRevLett.134.203601}{doi:10.1103/PhysRevLett.134.203601}.
+
+\bibitem{Walborn2010SPDCReview}
+
+Walborn, S. P., Monken, C. H., Pádua, S., & Souto Ribeiro, P. H. (2010).
+
+\newblock Spatial correlations in parametric down-conversion.
+
+\newblock \emph{Physics Reports}, 495, 87–139.
+
+\newblock \href{https://doi.org/10.1016/j.physrep.2010.06.003}{doi:10.1016/j.physrep.2010.06.003}.
+
+\bibitem{Moffatt1969Helicity}
+
+Moffatt, H. K. (1969).
+
+\newblock The degree of knottedness of tangled vortex lines.
+
+\newblock \emph{Journal of Fluid Mechanics}, 35, 117–129.
+
+\newblock \href{https://doi.org/10.1017/S0022112069000991}{doi:10.1017/S0022112069000991}.
+
+\bibitem{Purcell1946}
+
+Purcell, E. M. (1946).
+
+\newblock Spontaneous Emission Probabilities at Radio Frequencies.
+
+\newblock \emph{Physical Review}, 69, 681.
+
+\newblock \href{https://doi.org/10.1103/PhysRev.69.681}{doi:10.1103/PhysRev.69.681}.
+
+\bibitem{BornWolf1999}
+
+Born, M., & Wolf, E. (1999).
+
+\newblock \emph{Principles of Optics} (7th ed.).
+
+\newblock Cambridge University Press.
+
+
+\bibitem{Jackson1999}
+
+Jackson, J. D. (1999).
+
+\newblock \emph{Classical Electrodynamics} (3rd ed.).
+
+\newblock Wiley.
+
+
+\end{thebibliography}
+
+
+\end{document}
+
