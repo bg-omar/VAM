@@ -1,263 +1,571 @@
-\section{Swirl-Based Hamiltonian and Time Dilation in VAM}
-\label{sec:swirl_hamiltonian}
+% ================================
+% Swirl–Time VAM block in a single LaTeX box
+% (with built-in BibTeX via filecontents*)
+% ================================
 
-In the Vortex \AE ther Model (VAM), local time evolution is governed not by spacetime curvature, but by the rotational energy density of structured æther flows. Inspired by the works of Helmholtz on vortex motion~\cite{Helmholtz1858}, and informed by Schrödinger's dynamical evolution~\cite{Schrodinger1926}, we formalize the Hamiltonian structure that links swirl to proper time.
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{siunitx}
+\usepackage[hidelinks]{hyperref}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{physics}
+\geometry{margin=1in}
 
-\subsection{Vorticity Energy Density}
+% --- BibTeX block for journals that require it (covers all non-original formulas/ideas) ---
+\newcommand{\papername}{vam-swirl-time}
+\usepackage{filecontents}
+\begin{filecontents*}{\papername.bib}
+    @article{Helmholtz1858,
+    author = {Helmholtz, Hermann},
+    title = {On Integrals of the Hydrodynamical Equations Which Express Vortex Motion},
+    journal = {Journal f{\"u}r die reine und angewandte Mathematik},
+    year = {1858},
+    volume = {55},
+    pages = {25--55},
+    doi = {10.1515/crll.1858.55.25}
+    }
 
-Let the local vorticity field be given by:
-\begin{equation}
-    \vec{\omega}(\vec{x}) = \nabla \times \vec{v}(\vec{x})
-\end{equation}
-The local energy density stored in swirl is then:
-\begin{equation}
-    \mathcal{H}_{\text{swirl}}(\vec{x}) = \frac{1}{2} \rho_\text{\ae} |\vec{\omega}(\vec{x})|^2
-\end{equation}
-where \( \rho_\text{\ae} \) is the æther mass-equivalent density. The total swirl energy of a vortex-bound object is:
-\begin{equation}
-    H_{\text{swirl}} = \int_V \mathcal{H}_{\text{swirl}}(\vec{x}) \, d^3x = \frac{1}{2} \rho_\text{\ae} \int_V |\vec{\omega}(\vec{x})|^2 \, d^3x
-\end{equation}
+    @article{Schrodinger1926,
+    author = {Schr{\"o}dinger, Erwin},
+    title = {An Undulatory Theory of the Mechanics of Atoms and Molecules},
+    journal = {Physical Review},
+    year = {1926},
+    volume = {28},
+    pages = {1049--1070},
+    doi = {10.1103/PhysRev.28.1049}
+    }
 
-\subsection{Proper Time from Vorticity}
+    @book{LambHydro,
+    author = {Lamb, Horace},
+    title = {Hydrodynamics},
+    edition = {6},
+    year = {1932},
+    publisher = {Cambridge University Press}
+    }
 
-The local rate of proper time is governed by the swirl energy density via:
-\begin{equation}
-    dt(\vec{x}) = dt_\infty \sqrt{1 - \frac{|\vec{\omega}(\vec{x})|^2}{C_e^2}}
-\end{equation}
-We define the local dimensionless clock rate field:
-\begin{equation}
-    \tau(\vec{x}) := \sqrt{1 - \frac{|\vec{\omega}(\vec{x})|^2}{C_e^2}} \in [0,1]
-\end{equation}
-such that \( \tau = 1 \) in regions of zero swirl, and \( \tau \to 0 \) as swirl approaches the limiting velocity \( C_e \).
+    @book{Batchelor1967,
+    author = {Batchelor, G. K.},
+    title = {An Introduction to Fluid Dynamics},
+    year = {1967},
+    publisher = {Cambridge University Press}
+    }
 
-\subsection{Hamiltonian Time Evolution}
+    @book{Saffman1992,
+    author = {Saffman, P. G.},
+    title = {Vortex Dynamics},
+    year = {1992},
+    publisher = {Cambridge University Press},
+    doi = {10.1017/CBO9780511624063}
+    }
 
-We now express the effective time evolution of a vortex-bound quantum-like field \( \Psi \) via a swirl-modified Schrödinger equation:
-\begin{equation}
-    \frac{d}{dt(\vec{x})} \Psi(\vec{x}) = \frac{i}{\hbar} \tau(\vec{x}) H_{\text{swirl}} \Psi(\vec{x})
-\end{equation}
-The full knot evolution is governed by the spatial average:
-\begin{equation}
-    \langle \tau \rangle = \frac{1}{V} \int_V \tau(\vec{x}) \, d^3x
-\end{equation}
-yielding the global evolution:
-\begin{equation}
-    \frac{d}{dt_\infty} \Psi = \frac{i}{\hbar} \langle \tau \rangle H_{\text{swirl}} \Psi
-\end{equation}
-This formalism replaces the relativistic geodesic proper time by a fluid-dynamic notion of swirl-delayed evolution.
+    @book{ChorinMarsden1993,
+    author = {Chorin, Alexandre J. and Marsden, Jerrold E.},
+    title = {A Mathematical Introduction to Fluid Mechanics},
+    edition = {3},
+    year = {1993},
+    publisher = {Springer},
+    doi = {10.1007/978-1-4757-2219-8}
+    }
 
-\subsection{Interpretation}
+    @article{Salmon1988,
+    author = {Salmon, Rick},
+    title = {Hamiltonian Fluid Mechanics},
+    journal = {Annual Review of Fluid Mechanics},
+    year = {1988},
+    volume = {20},
+    pages = {225--256},
+    doi = {10.1146/annurev.fl.20.010188.001301}
+    }
 
-The null-vorticity filament at the center of the vortex knot acts as the undilated temporal spine, while the surrounding swirl sheath defines a layered time dilation structure. Time is therefore not globally defined, but emerges from the local energy stored in structured motion of the æther.
+    @article{Morrison1998,
+    author = {Morrison, Philip J.},
+    title = {Hamiltonian Description of the Ideal Fluid},
+    journal = {Reviews of Modern Physics},
+    year = {1998},
+    volume = {70},
+    number = {2},
+    pages = {467--521},
+    doi = {10.1103/RevModPhys.70.467}
+    }
 
-\begin{tcolorbox}[colback=gray!8, colframe=black!30, title=Swirl-Time Coupling in VAM]
-    The internal time evolution of any particle-like vortex is governed by:
+    @book{LandauFM,
+    author = {Landau, L. D. and Lifshitz, E. M.},
+    title = {Fluid Mechanics},
+    series = {Course of Theoretical Physics},
+    volume = {6},
+    year = {1987},
+    publisher = {Pergamon}
+    }
+\end{filecontents*}
+
+% --- Convenience macros (optional) ---
+\newcommand{\Ce}{C_e}
+\newcommand{\rc}{r_c}
+\newcommand{\rhoa}{\rho_{\text{\ae}}^{(\text{mass})}}
+
+\begin{document}
+
+    \begin{tcolorbox}[enhanced, breakable, sharp corners, colback=gray!2, colframe=black!40, title={Swirl-Based Hamiltonian, Time Dilation, and Emergent Geometry in VAM}]
+
+        \section{Swirl-Based Hamiltonian and Time Dilation in VAM}
+        \label{sec:swirl_hamiltonian}
+
+        In the Vortex \AE{}ther Model (VAM), local time evolution is governed by the rotational energy stored in structured æther flows. Building on Helmholtz’s kinematics of vortices~\cite{Helmholtz1858} and treating internal evolution in Schr\"odinger form~\cite{Schrodinger1926}, we formulate a Hamiltonian and Lagrangian that couple swirl to proper time in a dimensionally consistent way.
+
+        \subsection{Velocity–Vorticity Kinematics and Energy}
+        \label{subsec:kin_energy}
+
+        Let the æther velocity be \(\vec{v}(\vec{x},t)\) and \(\vec{\omega}=\nabla\times\vec{v}\). For a mechanically incompressible, inviscid medium, the leading local energy density is the kinetic term
+        \begin{equation}
+            \mathcal{H}_{\text{kin}}(\vec{x})=\frac{1}{2}\,\rhoa\,|\vec{v}(\vec{x})|^{2}.
+        \end{equation}
+        A purely local term \(\propto|\vec{\omega}|^{2}\) by itself does \emph{not} have the units of energy density; the correct local gradient expansion requires a length scale \(\ell_\omega\)~\cite{Saffman1992,ChorinMarsden1993}:
+        \begin{equation}
+            \mathcal{H}_{\text{swirl}}(\vec{x})=\frac{1}{2}\,\rhoa\Big(|\vec{v}|^{2}+\ell_\omega^{2}|\vec{\omega}|^{2}\Big),\qquad
+            \ell_\omega\sim \rc.
+            \label{eq:H_swirl_local}
+        \end{equation}
+        The \(\ell_\omega^2|\vec{\omega}|^2\) term is the leading local surrogate for the nonlocal Biot–Savart energy and encodes a short-distance “swirl tension”. Dimensions: \([\rhoa][v]^2\sim\mathrm{J/m^3}\) and \([\rhoa]\ell_\omega^2[\omega]^2\sim\mathrm{J/m^3}\).
+
+        \paragraph{Axisymmetric profile (used for numerics).}
+        Adopt the radial angular-velocity ansatz
+        \begin{equation}
+            \Omega_{\text{swirl}}(r)=\frac{\Ce}{\rc}\,e^{-r/\rc},
+            \qquad
+            v_\theta(r)=r\,\Omega_{\text{swirl}}(r)=\Ce\Big(\tfrac{r}{\rc}\Big)e^{-r/\rc},
+            \label{eq:omegaswirl_profile}
+        \end{equation}
+        which peaks at \(r=\rc\) with \(v_\theta(\rc)=\Ce/e\). The associated axial vorticity is exactly
+        \begin{equation}
+            \omega_z(r)=\frac{1}{r}\frac{\dd}{\dd r}\big(r\,v_\theta\big)
+            =\frac{\Ce}{\rc}e^{-r/\rc}\Big(2-\tfrac{r}{\rc}\Big).
+            \label{eq:omega_z_exact}
+        \end{equation}
+
+        \subsection{Proper Time from Tangential Swirl}
+        \label{subsec:proper_time}
+
+        The tangential swirl speed sets the local clock rate:
+        \begin{equation}
+            dt(\vec{x})=dt_\infty\,\sqrt{1-\frac{|\vec{v}_\perp(\vec{x})|^{2}}{\Ce^{2}}}
+            =dt_\infty\,\tau(\vec{x}),
+            \qquad
+            \tau(\vec{x}):=\sqrt{1-\frac{|\vec{v}_\perp(\vec{x})|^{2}}{\Ce^{2}}}\in[0,1].
+            \label{eq:time_dilation_velocity}
+        \end{equation}
+        For axisymmetric knots \( \vec{v}_\perp=v_\theta\,\hat{\bm\theta}\). Using \eqref{eq:omegaswirl_profile},
+        \begin{equation}
+            \tau(r)=\sqrt{1-\Big(\tfrac{r}{\rc}\Big)^{2}e^{-2r/\rc}},
+            \qquad
+            \tau(\rc)=\sqrt{1-e^{-2}}\approx 0.929873.
+        \end{equation}
+
+        \subsection{Hamiltonian Time Evolution}
+        \label{subsec:ham_evolution}
+
+        Let \(\Psi\) be a vortex-bound mode. In \emph{local} proper time one has \(i\hbar\,\partial_{t_{\rm loc}}\Psi=H[\vec{v}]\,\Psi\). Since \(dt_{\rm loc}=\tau\,dt_\infty\), the \emph{laboratory} evolution is
+        \begin{equation}
+            i\hbar\,\partial_{t_\infty}\Psi(\vec{x},t_\infty)=\tau(\vec{x})\,H[\vec{v}]\,\Psi(\vec{x},t_\infty).
+            \label{eq:lab_schrodinger}
+        \end{equation}
+        For a single-mode reduction, average \(\tau\) over the knot core:
+        \begin{equation}
+            \langle\tau\rangle:=\frac{1}{V}\int_V \tau(\vec{x})\,\dd^3x,
+            \qquad
+            i\hbar\,\partial_{t_\infty}\Psi=\langle\tau\rangle\,H[\vec{v}]\,\Psi.
+        \end{equation}
+        The energy functional entering \(H\) is \eqref{eq:H_swirl_local}, consistent with Helmholtz vortex kinematics~\cite{Helmholtz1858} and Hamiltonian fluid structure~\cite{Morrison1998,Salmon1988}.
+
+        \paragraph{Dimensional check.}
+        In \eqref{eq:time_dilation_velocity} the argument \(v_\perp^2/\Ce^2\) is dimensionless. In \eqref{eq:H_swirl_local} both terms have units \(\mathrm{J/m^3}\). Equation \eqref{eq:lab_schrodinger} matches standard “redshifted Hamiltonian” forms where the clock factor multiplies \(H\).
+
+        \subsection{Numerical validation (using your constants)}
+        \label{subsec:numerics}
+
+        With \(\Ce=\SI{1.09384563e6}{m/s}\), \(\rc=\SI{1.40897017e-15}{m}\), \(\rhoa=\SI{3.8934358266918687e18}{kg/m^3}\), and \eqref{eq:omegaswirl_profile}–\eqref{eq:omega_z_exact}:
+        \[
+            \begin{aligned}
+                v_\theta(\rc)&=\frac{\Ce}{e}=\SI{4.02403e5}{m/s},\\
+                \tau(\rc)&=\sqrt{1-e^{-2}}=0.9298734950,\\
+                \omega_z(\rc)&=\frac{\Ce}{\rc}e^{-1}\big(2-1\big)=\SI{2.8560102099e20}{s^{-1}},\\
+                \mathcal{H}_{\text{swirl}}(\rc)&=\frac{1}{2}\rhoa\Big[v_\theta(\rc)^2+\rc^2\omega_z(\rc)^2\Big]
+                =\SI{6.3045795546e29}{J/m^3}.
+            \end{aligned}
+        \]
+
+        \begin{table}[h!]
+            \centering
+            \caption{Representative values for \(r/\rc\in\{0,0.25,0.5,1,2,3\}\).}
+            \small
+            \begin{tabular}{@{}cccccc@{}}
+                \toprule
+                \(r/\rc\) & \(r\) (m) & \(v_\theta\) (m/s) & \(\tau\) & \(\omega_z\) (s\(^{-1}\)) & \(\mathcal{H}_{\text{swirl}}\) (J/m\(^3\)) \\
+                \midrule
+                0.00 & \(0\) & \(0\) & \(1.0000000000\) & \(1.5526881311\times10^{21}\) & \(9.3169784018\times10^{30}\) \\
+                0.25 & \(3.5224\times10^{-16}\) & \(2.12972\times10^{5}\) & \(0.9808628007\) & \(1.0580803908\times10^{21}\) & \(4.4148695754\times10^{30}\) \\
+                0.50 & \(7.0449\times10^{-16}\) & \(3.31725\times10^{5}\) & \(0.9529061547\) & \(7.0631471735\times10^{20}\) & \(2.1422030049\times10^{30}\) \\
+                1.00 & \(1.4090\times10^{-15}\) & \(4.02403\times10^{5}\) & \(0.9298734950\) & \(2.8560102099\times10^{20}\) & \(6.3045795546\times10^{29}\) \\
+                2.00 & \(2.8179\times10^{-15}\) & \(2.96072\times10^{5}\) & \(0.9626720337\) & \(0\) & \(1.7064641194\times10^{29}\) \\
+                3.00 & \(4.2269\times10^{-15}\) & \(1.63378\times10^{5}\) & \(0.9887827013\) & \(-3.8651895068\times10^{19}\) & \(5.7736201234\times10^{28}\) \\
+                \bottomrule
+            \end{tabular}
+        \end{table}
+
+        \section{Lagrangian Formulation and Stationary Field Equation}
+        \label{subsec:lagrangian_swirl}
+
+        Adopt the local, time-symmetric Lagrangian density
+        \begin{equation}
+            \mathcal{L}_{\text{swirl}}=\frac{1}{2}\rhoa\,|\vec{v}|^{2}
+            -\frac{1}{2}\rhoa\,\ell_\omega^{2}\,|\nabla\times\vec{v}|^{2},
+            \qquad \ell_\omega\sim \rc,
+            \label{eq:L_swirl}
+        \end{equation}
+        the lowest-order local truncation of the nonlocal vortex energy~\cite{Saffman1992,ChorinMarsden1993}. Varying \(\vec{v}\) yields
+        \begin{equation}
+            \rhoa\,\vec{v}
+            -\rhoa\,\ell_\omega^{2}\,\nabla\times(\nabla\times\vec{v})=0.
+        \end{equation}
+        With incompressibility (\(\nabla\!\cdot\!\vec{v}=0\Rightarrow \nabla\times(\nabla\times\vec{v})=-\nabla^2\vec{v}\)), we obtain the vector Helmholtz equation
+        \begin{equation}
+            \boxed{\;\nabla^{2}\vec{v}+\frac{1}{\ell_\omega^{2}}\,\vec{v}=0\;}
+            \label{eq:Helmholtz_v}
+        \end{equation}
+        whose bound solutions provide discrete swirl shells and a well-defined core radius \(\sim\ell_\omega\). Combined with \eqref{eq:time_dilation_velocity}, this yields the time-dilation profile.
+
+        \paragraph{Dimensional check.}
+        \(\mathcal{L}_{\text{swirl}}\) has units \(\mathrm{J/m^3}\). Equation \eqref{eq:Helmholtz_v} has \(1/\ell_\omega^{2}\) as the wavenumber squared, as required.
+
+        \section{Swirl Stress Tensor (local symmetric form)}
+        \label{sec:swirl_stress_tensor}
+
+        For \eqref{eq:L_swirl}, a symmetric Cauchy stress consistent with spatial invariance~\cite{LandauFM,Morrison1998} is
+        \begin{equation}
+            \sigma_{ij}
+            =\rhoa\,v_i v_j
+            +\rhoa\,\ell_\omega^{2}\Big[\omega_i\omega_j-\tfrac{1}{2}\delta_{ij}|\vec{\omega}|^{2}\Big]
+            -\delta_{ij}\,\frac{1}{2}\rhoa|\vec{v}|^{2},
+            \label{eq:swirl_stress}
+        \end{equation}
+        neglecting pressure (or absorbing it into \(-\delta_{ij}p\)). The first term is inertial flux; the second is “swirl tension”, the analogue of Maxwell’s magnetic stress~\cite{LambHydro,Saffman1992}. The corresponding energy density and flux are
+        \begin{equation}
+            \mathcal{H}_{\text{swirl}}=\frac{1}{2}\rhoa\,|\vec{v}|^{2}
+            +\frac{1}{2}\rhoa\,\ell_\omega^{2}\,|\vec{\omega}|^{2},
+            \qquad
+            \bm{\mathcal{S}}_{\text{energy}}\sim(\mathcal{H}_{\text{swirl}}+p)\,\vec{v}.
+        \end{equation}
+
+        \section{Emergent Spacetime from Æther Vorticity}
+        \label{sec:spacetime_emergence}
+
+        \subsection{Temporal Axis from Null Filament}
+        \label{subsec:null_filament_time}
+
+        Define the \emph{null filament} \(\mathcal{N}\) by \( \vec{\omega}(\vec{x})=0\) and \(\nabla\!\cdot\!\vec{\omega}=0\). Along \(\mathcal{N}\), the tangent 4-vector \(\tau^\mu=\dd x^\mu/\dd s|_{\omega=0}\) is the direction of maximal proper-time flow within the knot.
+
+        \subsection{Spatial Layers from Swirl Shells}
+        \label{subsec:swirl_shells_space}
+
+        Nested isovorticity shells \(\Sigma_\lambda=\{\,\vec{x}\mid |\vec{\omega}(\vec{x})|=\lambda\,\}\) carry clocks
+        \begin{equation}
+            dt(\lambda)=dt_\infty\sqrt{1-\frac{v_\perp(\lambda)^2}{\Ce^2}},
+        \end{equation}
+        with \(v_\perp\) set by \(\Omega_{\text{swirl}}\) or \(\vec{\omega}\) via geometry. A dimensionless spatial correction consistent with isotropy is
+        \begin{equation}
+            g_{ij}(\vec{x})=\delta_{ij}+\frac{\ell_g^{2}}{\Ce^{2}}
+            \Big(\omega_i\omega_j-\tfrac{1}{2}\delta_{ij}|\vec{\omega}|^{2}\Big),\qquad \ell_g\sim \rc,
+            \label{eq:induced_metric}
+        \end{equation}
+        so the emergent line element reads
+        \begin{equation}
+            ds^{2}=-\Big(1-\tfrac{v_\perp^{2}}{\Ce^{2}}\Big)\,dt^{2}
+            +\big(\delta_{ij}+\gamma_{ij}\big)\,dx^{i}dx^{j},\quad
+            \gamma_{ij}=\frac{\ell_g^{2}}{\Ce^{2}}\Big(\omega_i\omega_j-\tfrac{1}{2}\delta_{ij}|\vec{\omega}|^{2}\Big).
+        \end{equation}
+        This is a VAM-internal bookkeeping device; globally, VAM maintains absolute time and Euclidean space.
+
+        \medskip
+        \noindent\textbf{One-line analogy (optional).} A vortex knot is like a spinning rubber band underwater: the faster its skin swirls, the slower its inner clock ticks.
+
+        \medskip
+
+        \noindent\textbf{References.} \
+        \bibliographystyle{unsrt}
+        \bibliography{\papername}
+
+    \end{tcolorbox}
+
+
+    Original version:
+
+
+
+
+    \section{Swirl-Based Hamiltonian and Time Dilation in VAM}
+    \label{sec:swirl_hamiltonian}
+
+    In the Vortex \AE ther Model (VAM), local time evolution is governed not by spacetime curvature, but by the rotational energy density of structured æther flows. Inspired by the works of Helmholtz on vortex motion~\cite{Helmholtz1858}, and informed by Schrödinger's dynamical evolution~\cite{Schrodinger1926}, we formalize the Hamiltonian structure that links swirl to proper time.
+
+    \subsection{Vorticity Energy Density}
+
+    Let the local vorticity field be given by:
+    \begin{equation}
+        \vec{\omega}(\vec{x}) = \nabla \times \vec{v}(\vec{x})
+    \end{equation}
+    The local energy density stored in swirl is then:
+    \begin{equation}
+        \mathcal{H}_{\text{swirl}}(\vec{x}) = \frac{1}{2} \rho_\text{\ae} |\vec{\omega}(\vec{x})|^2
+    \end{equation}
+    where \( \rho_\text{\ae} \) is the æther mass-equivalent density. The total swirl energy of a vortex-bound object is:
+    \begin{equation}
+        H_{\text{swirl}} = \int_V \mathcal{H}_{\text{swirl}}(\vec{x}) \, d^3x = \frac{1}{2} \rho_\text{\ae} \int_V |\vec{\omega}(\vec{x})|^2 \, d^3x
+    \end{equation}
+
+    \subsection{Proper Time from Vorticity}
+
+    The local rate of proper time is governed by the swirl energy density via:
+    \begin{equation}
+        dt(\vec{x}) = dt_\infty \sqrt{1 - \frac{|\vec{\omega}(\vec{x})|^2}{C_e^2}}
+    \end{equation}
+    We define the local dimensionless clock rate field:
+    \begin{equation}
+        \tau(\vec{x}) := \sqrt{1 - \frac{|\vec{\omega}(\vec{x})|^2}{C_e^2}} \in [0,1]
+    \end{equation}
+    such that \( \tau = 1 \) in regions of zero swirl, and \( \tau \to 0 \) as swirl approaches the limiting velocity \( C_e \).
+
+    \subsection{Hamiltonian Time Evolution}
+
+    We now express the effective time evolution of a vortex-bound quantum-like field \( \Psi \) via a swirl-modified Schrödinger equation:
+    \begin{equation}
+        \frac{d}{dt(\vec{x})} \Psi(\vec{x}) = \frac{i}{\hbar} \tau(\vec{x}) H_{\text{swirl}} \Psi(\vec{x})
+    \end{equation}
+    The full knot evolution is governed by the spatial average:
+    \begin{equation}
+        \langle \tau \rangle = \frac{1}{V} \int_V \tau(\vec{x}) \, d^3x
+    \end{equation}
+    yielding the global evolution:
+    \begin{equation}
+        \frac{d}{dt_\infty} \Psi = \frac{i}{\hbar} \langle \tau \rangle H_{\text{swirl}} \Psi
+    \end{equation}
+    This formalism replaces the relativistic geodesic proper time by a fluid-dynamic notion of swirl-delayed evolution.
+
+    \subsection{Interpretation}
+
+    The null-vorticity filament at the center of the vortex knot acts as the undilated temporal spine, while the surrounding swirl sheath defines a layered time dilation structure. Time is therefore not globally defined, but emerges from the local energy stored in structured motion of the æther.
+
+    \begin{tcolorbox}[colback=gray!8, colframe=black!30, title=Swirl-Time Coupling in VAM]
+        The internal time evolution of any particle-like vortex is governed by:
+        \[
+            dt = dt_\infty \sqrt{1 - \frac{|\vec{\omega}|^2}{C_e^2}} \quad \Longleftrightarrow \quad
+            \frac{d\Psi}{dt_\infty} = \frac{i}{\hbar} \langle \tau \rangle H_{\text{swirl}} \Psi
+        \]
+        where the Hamiltonian is sourced purely from æther swirl energy.
+    \end{tcolorbox}
+
+    \bibliographystyle{unsrt}
+    \begin{thebibliography}{99}
+        \bibitem{Helmholtz1858}
+        H. Helmholtz, ``On Integrals of the Hydrodynamical Equations Which Express Vortex Motion,'' \textit{Journal für die reine und angewandte Mathematik}, vol. 55, pp. 25–55, 1858. \url{https://doi.org/10.1515/crll.1858.55.25}
+
+        \bibitem{Schrodinger1926}
+        E. Schrödinger, ``An Undulatory Theory of the Mechanics of Atoms and Molecules,'' \textit{Phys. Rev.}, vol. 28, pp. 1049–1070, 1926. \url{https://doi.org/10.1103/PhysRev.28.1049}
+    \end{thebibliography}
+
+
+    \subsection{Lagrangian Formulation of Time Dilation from Swirl}
+    \label{subsec:lagrangian_swirl}
+
+    To complement the Hamiltonian formalism, we now construct the Lagrangian density \( \mathcal{L}_{\text{swirl}} \) that governs the self-interaction of æther swirl fields and gives rise to the time dilation effect central to VAM.
+
+    \subsubsection*{Field Definitions}
+
+    Let \( \vec{v}(\vec{x}, t) \) be the local swirl velocity field of the æther, and \( \vec{\omega} = \nabla \times \vec{v} \) its associated vorticity. The æther has a fixed mass-equivalent density \( \rho_\text{\ae} \), and the limiting tangential swirl speed is \( C_e \).
+
+    \subsubsection*{Swirl Lagrangian Density}
+
+    We define the time-symmetric Lagrangian density as:
+    \begin{equation}
+        \mathcal{L}_{\text{swirl}} = \frac{1}{2} \rho_\text{\ae} |\vec{v}|^2 - \frac{1}{2} \rho_\text{\ae} \frac{|\nabla \times \vec{v}|^2}{C_e^2}
+    \end{equation}
+    The first term represents bulk kinetic energy in the æther flow, while the second encodes swirl tension — it is this term that controls time dilation via stored vorticity.
+
+    \subsubsection*{Euler–Lagrange Equations}
+
+    We apply the standard Euler–Lagrange field equations for a vector field \( \vec{v} \):
+    \begin{equation}
+        \nabla \cdot \left( \frac{\partial \mathcal{L}}{\partial (\nabla \vec{v})} \right)
+        = \frac{\partial \mathcal{L}}{\partial \vec{v}}
+    \end{equation}
+    Evaluating the derivatives gives:
+    \begin{equation}
+        \rho_\text{\ae} \vec{v} = \frac{\rho_\text{\ae}}{C_e^2} \nabla \times \nabla \times \vec{v}
+    \end{equation}
+    This reduces to the vector Laplacian form:
+    \begin{equation}
+        \boxed{
+            \vec{v} = \frac{1}{C_e^2} \nabla^2 \vec{v}
+        }
+    \end{equation}
+    This partial differential equation governs the stationary configurations of the swirl field and ensures the emergence of discrete knot solutions, each with an associated time dilation profile.
+
+    \subsubsection*{Connection to Time Dilation}
+
+    From the stationary solution \( \vec{v} = \frac{1}{C_e^2} \nabla^2 \vec{v} \), we recover:
+    \begin{equation}
+        \vec{\omega} = \nabla \times \vec{v} \quad \Rightarrow \quad
+        dt(\vec{x}) = dt_\infty \sqrt{1 - \frac{|\vec{\omega}(\vec{x})|^2}{C_e^2}}
+    \end{equation}
+    Thus, the swirl-induced vorticity emerges directly from the action principle and modulates local time flow. The null-vorticity regions (e.g., vortex filaments) serve as the undilated temporal spine, while surrounding swirl shells act as energetic time delay layers.
+
+    \subsubsection*{Interpretation}
+
+    This Lagrangian formalism yields the same time dilation structure as the Hamiltonian formulation, but reveals its variational origin. The result is a self-consistent dynamical picture where time is not a primitive background parameter, but an emergent field coupled to æther vorticity.
+
+    \begin{tcolorbox}[colback=blue!1, colframe=blue!60, title=Euler–Lagrange Summary]
+        The swirl field obeys:
+        \[
+            \vec{v} = \frac{1}{C_e^2} \nabla^2 \vec{v}
+            \quad \Longrightarrow \quad
+            dt = dt_\infty \sqrt{1 - \frac{|\nabla \times \vec{v}|^2}{C_e^2}}
+        \]
+        Time emerges from swirl tension, governed by a variational principle on æther motion.
+    \end{tcolorbox}
+
+
+
+    \subsection{Swirl Stress-Energy Tensor}
+    \label{sec:swirl_stress_tensor}
+
+    To generalize the variational dynamics of the æther swirl field, we construct the stress-energy tensor \( T^{\mu\nu}_{(\text{vortex})} \) associated with the swirl Lagrangian:
+    \begin{equation}
+        \mathcal{L}_{\text{swirl}} = \frac{1}{2} \rho_\text{\ae} |\vec{v}|^2 - \frac{1}{2} \rho_\text{\ae} \frac{|\vec{\omega}|^2}{C_e^2}
+    \end{equation}
+    where \( \vec{\omega} = \nabla \times \vec{v} \) is the local vorticity. This Lagrangian governs the energetics and stability of vortex structures in the æther, and forms the basis for time dilation and inertial effects in the Vortex \AE ther Model (VAM).
+
+    \subsubsection*{Canonical Construction}
+
+    From classical field theory, the stress-energy tensor for a vector field \( v^i(x^\mu) \) is defined as:
+    \begin{equation}
+        T^{\mu\nu} = \frac{\partial \mathcal{L}}{\partial(\partial_\mu v_i)} \, \partial^\nu v_i - \eta^{\mu\nu} \mathcal{L}
+    \end{equation}
+    Assuming stationary flow (i.e., \( \partial_0 \vec{v} \approx 0 \)) and flat Euclidean background \( \eta^{\mu\nu} = \text{diag}(1, -1, -1, -1) \), we evaluate each component.
+
+    \subsubsection*{Tensor Components}
+
+    \paragraph{Energy Density:} The \( T^{00} \) component gives the total energy density stored in swirl motion and tension:
+    \begin{equation}
+        T^{00} = \frac{1}{2} \rho_\text{\ae} \left( |\vec{v}|^2 + \frac{|\vec{\omega}|^2}{C_e^2} \right)
+    \end{equation}
+
+    \paragraph{Momentum Density (Energy Flux):} The \( T^{0i} \) components encode swirl momentum in the \( i \)-direction:
+    \begin{equation}
+        T^{0i} = \rho_\text{\ae} v^i
+    \end{equation}
+
+    \paragraph{Momentum Flux (Swirl Stress):} The spatial components \( T^{ij} \) describe internal momentum exchange via swirl:
+    \begin{equation}
+        T^{ij} = \rho_\text{\ae} \left( v^i v^j - \frac{1}{C_e^2} \omega^i \omega^j \right) - \delta^{ij} \mathcal{L}_{\text{swirl}}
+    \end{equation}
+    This form resembles the Maxwell–Minkowski stress tensor, with the vorticity playing the role of magnetic field tension.
+
+    \subsubsection*{Tensor Summary}
+
+    We summarize the components of the VAM vortex stress-energy tensor as:
+    \begin{equation}
+        \boxed{
+            T^{\mu\nu}_{(\text{vortex})} =
+            \begin{cases}
+                T^{00} = \dfrac{1}{2} \rho_\text{\ae} \left( |\vec{v}|^2 + \dfrac{|\vec{\omega}|^2}{C_e^2} \right) \\[6pt]
+                T^{0i} = \rho_\text{\ae} v^i \\[6pt]
+                T^{ij} = \rho_\text{\ae} \left( v^i v^j - \dfrac{1}{C_e^2} \omega^i \omega^j \right) - \delta^{ij} \mathcal{L}_{\text{swirl}}
+            \end{cases}
+        }
+    \end{equation}
+
+    \subsubsection*{Physical Interpretation}
+
+    \begin{itemize}[leftmargin=1.5em]
+        \item \( T^{00} \): Swirl energy density, source of time dilation.
+        \item \( T^{0i} \): Swirl momentum density, source of inertial frame dragging.
+        \item \( T^{ij} \): Swirl stress flux, responsible for knot stability and æther deformation.
+    \end{itemize}
+
+    This tensor replaces the Einstein tensor \( G^{\mu\nu} \) in general relativity. Rather than interpreting gravity as space-time curvature, we model it as a flux of vorticity and swirl momentum within a mechanical æther medium. Time dilation, inertial mass, and gravitational interaction all follow from the distribution of \( T^{\mu\nu}_{(\text{vortex})} \) within bounded and knotted topological excitations.
+
+
+    \section{Emergent Spacetime from Æther Vorticity}
+    \label{sec:spacetime_emergence}
+
+    We now derive space-time itself as a structured manifestation of æther vorticity. In the Vortex \AE ther Model (VAM), space and time are not fundamental coordinates but emerge from the topological organization of swirl in an incompressible, inviscid æther.
+
+    \subsection{Temporal Axis from Null Filament}
+    \label{subsec:null_filament_time}
+
+    Let a knotted vortex object (e.g. electron, proton) be defined by a localized region of high vorticity \( \vec{\omega} \), embedded in the ambient æther. We define the \textit{null filament} \( \mathcal{N} \subset \mathbb{R}^3 \) as the one-dimensional locus satisfying:
+    \begin{equation}
+        \vec{\omega}(\vec{x}) = 0, \quad \nabla \cdot \vec{\omega} = 0, \quad \vec{x} \in \mathcal{N}
+    \end{equation}
+    This filament is a vortex-invariant line: it neither stores swirl energy nor contributes to time dilation. Therefore, we identify \( \mathcal{N} \) with the local temporal axis — it is the direction of maximal proper time flow inside the knot.
+
+    Let \( \tau^\mu \) be the unit 4-vector tangent to \( \mathcal{N} \). Then:
+    \begin{equation}
+        \boxed{
+            \textbf{Time} \equiv \text{integral flow of null vorticity lines: }
+            \quad \tau^\mu = \frac{dx^\mu}{ds} \Big|_{\omega = 0}
+        }
+    \end{equation}
+
+    \subsection{Spatial Layers from Swirl Shells}
+    \label{subsec:swirl_shells_space}
+
+    The region surrounding \( \mathcal{N} \) forms nested surfaces of constant vorticity magnitude:
     \[
-        dt = dt_\infty \sqrt{1 - \frac{|\vec{\omega}|^2}{C_e^2}} \quad \Longleftrightarrow \quad
-        \frac{d\Psi}{dt_\infty} = \frac{i}{\hbar} \langle \tau \rangle H_{\text{swirl}} \Psi
+        \Sigma_\lambda = \left\{ \vec{x} \in \mathbb{R}^3 \mid |\vec{\omega}(\vec{x})| = \lambda \right\}
     \]
-    where the Hamiltonian is sourced purely from æther swirl energy.
-\end{tcolorbox}
-
-\bibliographystyle{unsrt}
-\begin{thebibliography}{99}
-    \bibitem{Helmholtz1858}
-    H. Helmholtz, ``On Integrals of the Hydrodynamical Equations Which Express Vortex Motion,'' \textit{Journal für die reine und angewandte Mathematik}, vol. 55, pp. 25–55, 1858. \url{https://doi.org/10.1515/crll.1858.55.25}
-
-    \bibitem{Schrodinger1926}
-    E. Schrödinger, ``An Undulatory Theory of the Mechanics of Atoms and Molecules,'' \textit{Phys. Rev.}, vol. 28, pp. 1049–1070, 1926. \url{https://doi.org/10.1103/PhysRev.28.1049}
-\end{thebibliography}
-
-
-\subsection{Lagrangian Formulation of Time Dilation from Swirl}
-\label{subsec:lagrangian_swirl}
-
-To complement the Hamiltonian formalism, we now construct the Lagrangian density \( \mathcal{L}_{\text{swirl}} \) that governs the self-interaction of æther swirl fields and gives rise to the time dilation effect central to VAM.
-
-\subsubsection*{Field Definitions}
-
-Let \( \vec{v}(\vec{x}, t) \) be the local swirl velocity field of the æther, and \( \vec{\omega} = \nabla \times \vec{v} \) its associated vorticity. The æther has a fixed mass-equivalent density \( \rho_\text{\ae} \), and the limiting tangential swirl speed is \( C_e \).
-
-\subsubsection*{Swirl Lagrangian Density}
-
-We define the time-symmetric Lagrangian density as:
-\begin{equation}
-    \mathcal{L}_{\text{swirl}} = \frac{1}{2} \rho_\text{\ae} |\vec{v}|^2 - \frac{1}{2} \rho_\text{\ae} \frac{|\nabla \times \vec{v}|^2}{C_e^2}
-\end{equation}
-The first term represents bulk kinetic energy in the æther flow, while the second encodes swirl tension — it is this term that controls time dilation via stored vorticity.
-
-\subsubsection*{Euler–Lagrange Equations}
-
-We apply the standard Euler–Lagrange field equations for a vector field \( \vec{v} \):
-\begin{equation}
-    \nabla \cdot \left( \frac{\partial \mathcal{L}}{\partial (\nabla \vec{v})} \right)
-    = \frac{\partial \mathcal{L}}{\partial \vec{v}}
-\end{equation}
-Evaluating the derivatives gives:
-\begin{equation}
-    \rho_\text{\ae} \vec{v} = \frac{\rho_\text{\ae}}{C_e^2} \nabla \times \nabla \times \vec{v}
-\end{equation}
-This reduces to the vector Laplacian form:
-\begin{equation}
-    \boxed{
-        \vec{v} = \frac{1}{C_e^2} \nabla^2 \vec{v}
-    }
-\end{equation}
-This partial differential equation governs the stationary configurations of the swirl field and ensures the emergence of discrete knot solutions, each with an associated time dilation profile.
-
-\subsubsection*{Connection to Time Dilation}
-
-From the stationary solution \( \vec{v} = \frac{1}{C_e^2} \nabla^2 \vec{v} \), we recover:
-\begin{equation}
-    \vec{\omega} = \nabla \times \vec{v} \quad \Rightarrow \quad
-    dt(\vec{x}) = dt_\infty \sqrt{1 - \frac{|\vec{\omega}(\vec{x})|^2}{C_e^2}}
-\end{equation}
-Thus, the swirl-induced vorticity emerges directly from the action principle and modulates local time flow. The null-vorticity regions (e.g., vortex filaments) serve as the undilated temporal spine, while surrounding swirl shells act as energetic time delay layers.
-
-\subsubsection*{Interpretation}
-
-This Lagrangian formalism yields the same time dilation structure as the Hamiltonian formulation, but reveals its variational origin. The result is a self-consistent dynamical picture where time is not a primitive background parameter, but an emergent field coupled to æther vorticity.
-
-\begin{tcolorbox}[colback=blue!1, colframe=blue!60, title=Euler–Lagrange Summary]
-    The swirl field obeys:
+    Each shell \( \Sigma_\lambda \) acts as a **swirl-induced dilation layer** — the proper time slows down as:
     \[
-        \vec{v} = \frac{1}{C_e^2} \nabla^2 \vec{v}
-        \quad \Longrightarrow \quad
-        dt = dt_\infty \sqrt{1 - \frac{|\nabla \times \vec{v}|^2}{C_e^2}}
+        dt(\lambda) = dt_\infty \sqrt{1 - \frac{\lambda^2}{C_e^2}}
     \]
-    Time emerges from swirl tension, governed by a variational principle on æther motion.
-\end{tcolorbox}
+    Thus, **spatial distance emerges from radial vorticity gradient**. The gradient of swirl defines local metric deformations:
+    \begin{equation}
+        g_{ij}(\vec{x}) \sim \delta_{ij} \left( 1 + \frac{1}{C_e^2} |\vec{\omega}(\vec{x})|^2 \right)
+    \end{equation}
+
+    \subsection{Induced Metric from Swirl Field}
+    \label{subsec:induced_metric}
+
+    Let \( x^\mu = (t, \vec{x}) \) be global coordinates, and define the **emergent line element** via the swirl-induced dilation field:
+    \[
+        ds^2 = -dt^2 \left( 1 - \frac{|\vec{\omega}(\vec{x})|^2}{C_e^2} \right) + dx^i dx^j \left( \delta_{ij} + \gamma_{ij}(\omega) \right)
+    \]
+    with the swirl correction term:
+    \[
+        \gamma_{ij}(\omega) := \frac{1}{C_e^2} \left( \omega^i \omega^j - \frac{1}{2} \delta_{ij} |\vec{\omega}|^2 \right)
+    \]
+
+    \subsection{Topological Origin of Time and Space}
+    \label{subsec:topological_emergence}
+
+    In this picture:
+    \begin{itemize}[leftmargin=1.5em]
+        \item The **null filament** \( \mathcal{N} \) defines the local time direction \( \tau^\mu \)
+        \item The **nested swirl shells** \( \Sigma_\lambda \) define equitemporal surfaces
+        \item Time dilation arises from the swirl magnitude \( |\vec{\omega}| \)
+        \item Spatial geometry emerges from the gradient of \( \vec{\omega} \) orthogonal to \( \mathcal{N} \)
+    \end{itemize}
+
+    \subsection*{Summary}
+
+    \begin{tcolorbox}[colback=purple!2, colframe=purple!60!black, title=Emergent Space-Time Structure]
+        \begin{align*}
+            \text{Time axis: } & \tau^\mu = \text{tangent to } \omega = 0 \text{ line (null filament)} \\
+            \text{Time dilation: } & dt = dt_\infty \sqrt{1 - \frac{|\vec{\omega}|^2}{C_e^2}} \\
+            \text{Spatial geometry: } & g_{ij} = \delta_{ij} + \frac{1}{C_e^2} \left( \omega^i \omega^j - \frac{1}{2} \delta_{ij} |\vec{\omega}|^2 \right)
+        \end{align*}
+        Swirl defines time. Swirl gradient defines space.
+    \end{tcolorbox}
+\end{document}
 
 
-
-\subsection{Swirl Stress-Energy Tensor}
-\label{sec:swirl_stress_tensor}
-
-To generalize the variational dynamics of the æther swirl field, we construct the stress-energy tensor \( T^{\mu\nu}_{(\text{vortex})} \) associated with the swirl Lagrangian:
-\begin{equation}
-    \mathcal{L}_{\text{swirl}} = \frac{1}{2} \rho_\text{\ae} |\vec{v}|^2 - \frac{1}{2} \rho_\text{\ae} \frac{|\vec{\omega}|^2}{C_e^2}
-\end{equation}
-where \( \vec{\omega} = \nabla \times \vec{v} \) is the local vorticity. This Lagrangian governs the energetics and stability of vortex structures in the æther, and forms the basis for time dilation and inertial effects in the Vortex \AE ther Model (VAM).
-
-\subsubsection*{Canonical Construction}
-
-From classical field theory, the stress-energy tensor for a vector field \( v^i(x^\mu) \) is defined as:
-\begin{equation}
-    T^{\mu\nu} = \frac{\partial \mathcal{L}}{\partial(\partial_\mu v_i)} \, \partial^\nu v_i - \eta^{\mu\nu} \mathcal{L}
-\end{equation}
-Assuming stationary flow (i.e., \( \partial_0 \vec{v} \approx 0 \)) and flat Euclidean background \( \eta^{\mu\nu} = \text{diag}(1, -1, -1, -1) \), we evaluate each component.
-
-\subsubsection*{Tensor Components}
-
-\paragraph{Energy Density:} The \( T^{00} \) component gives the total energy density stored in swirl motion and tension:
-\begin{equation}
-    T^{00} = \frac{1}{2} \rho_\text{\ae} \left( |\vec{v}|^2 + \frac{|\vec{\omega}|^2}{C_e^2} \right)
-\end{equation}
-
-\paragraph{Momentum Density (Energy Flux):} The \( T^{0i} \) components encode swirl momentum in the \( i \)-direction:
-\begin{equation}
-    T^{0i} = \rho_\text{\ae} v^i
-\end{equation}
-
-\paragraph{Momentum Flux (Swirl Stress):} The spatial components \( T^{ij} \) describe internal momentum exchange via swirl:
-\begin{equation}
-    T^{ij} = \rho_\text{\ae} \left( v^i v^j - \frac{1}{C_e^2} \omega^i \omega^j \right) - \delta^{ij} \mathcal{L}_{\text{swirl}}
-\end{equation}
-This form resembles the Maxwell–Minkowski stress tensor, with the vorticity playing the role of magnetic field tension.
-
-\subsubsection*{Tensor Summary}
-
-We summarize the components of the VAM vortex stress-energy tensor as:
-\begin{equation}
-    \boxed{
-        T^{\mu\nu}_{(\text{vortex})} =
-        \begin{cases}
-            T^{00} = \dfrac{1}{2} \rho_\text{\ae} \left( |\vec{v}|^2 + \dfrac{|\vec{\omega}|^2}{C_e^2} \right) \\[6pt]
-            T^{0i} = \rho_\text{\ae} v^i \\[6pt]
-            T^{ij} = \rho_\text{\ae} \left( v^i v^j - \dfrac{1}{C_e^2} \omega^i \omega^j \right) - \delta^{ij} \mathcal{L}_{\text{swirl}}
-        \end{cases}
-    }
-\end{equation}
-
-\subsubsection*{Physical Interpretation}
-
-\begin{itemize}[leftmargin=1.5em]
-    \item \( T^{00} \): Swirl energy density, source of time dilation.
-    \item \( T^{0i} \): Swirl momentum density, source of inertial frame dragging.
-    \item \( T^{ij} \): Swirl stress flux, responsible for knot stability and æther deformation.
-\end{itemize}
-
-This tensor replaces the Einstein tensor \( G^{\mu\nu} \) in general relativity. Rather than interpreting gravity as space-time curvature, we model it as a flux of vorticity and swirl momentum within a mechanical æther medium. Time dilation, inertial mass, and gravitational interaction all follow from the distribution of \( T^{\mu\nu}_{(\text{vortex})} \) within bounded and knotted topological excitations.
-
-
-\section{Emergent Spacetime from Æther Vorticity}
-\label{sec:spacetime_emergence}
-
-We now derive space-time itself as a structured manifestation of æther vorticity. In the Vortex \AE ther Model (VAM), space and time are not fundamental coordinates but emerge from the topological organization of swirl in an incompressible, inviscid æther.
-
-\subsection{Temporal Axis from Null Filament}
-\label{subsec:null_filament_time}
-
-Let a knotted vortex object (e.g. electron, proton) be defined by a localized region of high vorticity \( \vec{\omega} \), embedded in the ambient æther. We define the \textit{null filament} \( \mathcal{N} \subset \mathbb{R}^3 \) as the one-dimensional locus satisfying:
-\begin{equation}
-    \vec{\omega}(\vec{x}) = 0, \quad \nabla \cdot \vec{\omega} = 0, \quad \vec{x} \in \mathcal{N}
-\end{equation}
-This filament is a vortex-invariant line: it neither stores swirl energy nor contributes to time dilation. Therefore, we identify \( \mathcal{N} \) with the local temporal axis — it is the direction of maximal proper time flow inside the knot.
-
-Let \( \tau^\mu \) be the unit 4-vector tangent to \( \mathcal{N} \). Then:
-\begin{equation}
-    \boxed{
-        \textbf{Time} \equiv \text{integral flow of null vorticity lines: }
-        \quad \tau^\mu = \frac{dx^\mu}{ds} \Big|_{\omega = 0}
-    }
-\end{equation}
-
-\subsection{Spatial Layers from Swirl Shells}
-\label{subsec:swirl_shells_space}
-
-The region surrounding \( \mathcal{N} \) forms nested surfaces of constant vorticity magnitude:
-\[
-    \Sigma_\lambda = \left\{ \vec{x} \in \mathbb{R}^3 \mid |\vec{\omega}(\vec{x})| = \lambda \right\}
-\]
-Each shell \( \Sigma_\lambda \) acts as a **swirl-induced dilation layer** — the proper time slows down as:
-\[
-    dt(\lambda) = dt_\infty \sqrt{1 - \frac{\lambda^2}{C_e^2}}
-\]
-Thus, **spatial distance emerges from radial vorticity gradient**. The gradient of swirl defines local metric deformations:
-\begin{equation}
-    g_{ij}(\vec{x}) \sim \delta_{ij} \left( 1 + \frac{1}{C_e^2} |\vec{\omega}(\vec{x})|^2 \right)
-\end{equation}
-
-\subsection{Induced Metric from Swirl Field}
-\label{subsec:induced_metric}
-
-Let \( x^\mu = (t, \vec{x}) \) be global coordinates, and define the **emergent line element** via the swirl-induced dilation field:
-\[
-    ds^2 = -dt^2 \left( 1 - \frac{|\vec{\omega}(\vec{x})|^2}{C_e^2} \right) + dx^i dx^j \left( \delta_{ij} + \gamma_{ij}(\omega) \right)
-\]
-with the swirl correction term:
-\[
-    \gamma_{ij}(\omega) := \frac{1}{C_e^2} \left( \omega^i \omega^j - \frac{1}{2} \delta_{ij} |\vec{\omega}|^2 \right)
-\]
-
-\subsection{Topological Origin of Time and Space}
-\label{subsec:topological_emergence}
-
-In this picture:
-\begin{itemize}[leftmargin=1.5em]
-    \item The **null filament** \( \mathcal{N} \) defines the local time direction \( \tau^\mu \)
-    \item The **nested swirl shells** \( \Sigma_\lambda \) define equitemporal surfaces
-    \item Time dilation arises from the swirl magnitude \( |\vec{\omega}| \)
-    \item Spatial geometry emerges from the gradient of \( \vec{\omega} \) orthogonal to \( \mathcal{N} \)
-\end{itemize}
-
-\subsection*{Summary}
-
-\begin{tcolorbox}[colback=purple!2, colframe=purple!60!black, title=Emergent Space-Time Structure]
-    \begin{align*}
-        \text{Time axis: } & \tau^\mu = \text{tangent to } \omega = 0 \text{ line (null filament)} \\
-        \text{Time dilation: } & dt = dt_\infty \sqrt{1 - \frac{|\vec{\omega}|^2}{C_e^2}} \\
-        \text{Spatial geometry: } & g_{ij} = \delta_{ij} + \frac{1}{C_e^2} \left( \omega^i \omega^j - \frac{1}{2} \delta_{ij} |\vec{\omega}|^2 \right)
-    \end{align*}
-    Swirl defines time. Swirl gradient defines space.
-\end{tcolorbox}
