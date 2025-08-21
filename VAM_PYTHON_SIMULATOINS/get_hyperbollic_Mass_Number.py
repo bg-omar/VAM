@@ -3,7 +3,9 @@
 # estimate min crossing number via multi-direction projections,
 # and compute Hvortex_X and Hvortex_Vol plus VAM masses using user's constants.
 
-import numpy as np, math, os, pandas as pd
+import numpy as np
+import math, os
+import pandas as pd
 import IPython.display as display
 
 # Files
@@ -224,5 +226,5 @@ df = pd.DataFrame(rows)
 display.display("Fourier-series-derived invariants (prototype)", df)
 
 # Save CSV
-out_path = "knots/4_1/fseries_4_1_results.csv"
+out_path = "VAM_Fseries/knots/4_1/fseries_4_1_results.csv"
 df.to_csv(out_path, index=False)

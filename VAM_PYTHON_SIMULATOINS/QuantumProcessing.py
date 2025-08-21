@@ -1,7 +1,7 @@
 from qiskit import QuantumCircuit
 from qiskit_aer import AerSimulator
 
-from VAM_PYTHON_SIMULATOINS.secrets import IBM_TOKEN
+from VAM_PYTHON_SIMULATOINS.my_secrets import IBM_TOKEN
 
 qc = QuantumCircuit(2, 2)
 qc.h(0); qc.cx(0,1); qc.measure([0,1],[0,1])

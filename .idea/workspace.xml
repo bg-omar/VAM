@@ -25,13 +25,415 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f2a8139-c825-4497-876b-70e1a130c5c3" name="Changes" comment="Refactor file structure: rename multiple files for clarity and consistency; add new 3D knot rendering script and update file paths in hyperbollic mass number calculation script">
-      <change afterPath="$PROJECT_DIR$/vam_constants.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vam_constants.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" id="6f2a8139-c825-4497-876b-70e1a130c5c3" name="Changes" comment="Update VAM documents and add new mass formula implementation; enhance metadata and structure">
+      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/Vortex_String_Theory_Mass_Fundamentals.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/fseries.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/fseries_batch_results.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/vam_batch_hypvol_from_fseries.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/vam_hypvol_no_deps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/vambindings.cp311-win_amd64.pyd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/vamcore_batch_hypvol_from_fseries.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/test_imports.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM-20_String_Theory/VAM-20.2.2_String_Theory.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM-20_String_Theory/VAM-20.2.2_String_Theory.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_2_Swirl_Clocks/From_Quantum_Constants_to_Galactic_Swirl.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_7_From_Quantum_Constants_to_Galactic_Swirl/From_Quantum_Constants_to_Galactic_Swirl.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_2_Swirl_Clocks/galaxyRotation.png" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_7_From_Quantum_Constants_to_Galactic_Swirl/galaxyRotation.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_7_From_Quantum_Constants_to_Galactic_Swirl/VAM-7-From_Quantum_Constants_to_Galactic_Swirl.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_7_From_Quantum_Constants_to_Galactic_Swirl/VAM-7-From_Quantum_Constants_to_Galactic_Swirl.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_8_MASTER_Paper/Masses_Topology.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_8_MASTER_Paper/Masses_Topology.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_Experiments/appendix_C_ExperimentalValidationOfVortexCoreTangientalVelocity.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_Experiments/appendix_C_ExperimentalValidationOfVortexCoreTangientalVelocity.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/3dKnots.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/3dKnots.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/QuantumProcessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/QuantumProcessing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_inference_demo/out_plots/g_field_fit.png" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_inference_demo/out_plots/g_field_fit.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_inference_demo/out_plots/summary.json" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_inference_demo/out_plots/summary.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_inference_demo/out_plots/time_dilation_fit.png" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_inference_demo/out_plots/time_dilation_fit.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/get_hyperbollic_Mass_Number.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/get_hyperbollic_Mass_Number.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/12a_1202/knot.12a_1202.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/bigger/12a_1202/knot.12a_1202.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/12a_1202/knot.12a_1202.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/bigger/12a_1202/knot.12a_1202.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/12a_1202/knot.12a_1202.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/bigger/12a_1202/knot.12a_1202.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/12a_1202/knot.12a_1202.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/bigger/12a_1202/knot.12a_1202.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/12a_1202/knot.12a_1202z6.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/bigger/12a_1202/knot.12a_1202z6.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/12a_1202/knot.12a_1202z6.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/bigger/12a_1202/knot.12a_1202z6.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/12a_1202/knot.12a_1202z6.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/bigger/12a_1202/knot.12a_1202z6.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/12a_1202/knot.12a_1202z6.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/bigger/12a_1202/knot.12a_1202z6.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/15331/knot.15331.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/bigger/15331/knot.15331.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/15331/knot.15331.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/bigger/15331/knot.15331.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/15331/knot.15331.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/bigger/15331/knot.15331.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/15331/knot.15331.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/bigger/15331/knot.15331.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/3_1/knot.3_1.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/3_1/knot.3_1.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/3_1/knot.3_1.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/3_1/knot.3_1.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/3_1/knot.3_1.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/3_1/knot.3_1.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/3_1/knot.3_1.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/3_1/knot.3_1.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/3_1/knot.3_1p.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/3_1/knot.3_1p.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/3_1/knot.3_1p.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/3_1/knot.3_1p.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/3_1/knot.3_1p.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/3_1/knot.3_1p.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/3_1/knot.3_1p.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/3_1/knot.3_1p.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/3_1/knot.3_1u.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/3_1/knot.3_1u.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/3_1/knot.3_1u.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/3_1/knot.3_1u.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/3_1/knot.3_1u.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/3_1/knot.3_1u.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/3_1/knot.3_1u.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/3_1/knot.3_1u.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/4_1/knot.4_1.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/4_1/knot.4_1.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/4_1/knot.4_1.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/4_1/knot.4_1.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/4_1/knot.4_1.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/4_1/knot.4_1.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/4_1/knot.4_1.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/4_1/knot.4_1.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/4_1/knot.4_1d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/4_1/knot.4_1d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/4_1/knot.4_1d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/4_1/knot.4_1d.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/4_1/knot.4_1d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/4_1/knot.4_1d.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/4_1/knot.4_1d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/4_1/knot.4_1d.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/4_1/knot.4_1i8.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/4_1/knot.4_1i8.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/4_1/knot.4_1i8.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/4_1/knot.4_1i8.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/4_1/knot.4_1i8.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/4_1/knot.4_1i8.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/4_1/knot.4_1p.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/4_1/knot.4_1p.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/4_1/knot.4_1p.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/4_1/knot.4_1p.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/4_1/knot.4_1p.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/4_1/knot.4_1p.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/4_1/knot.4_1p.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/4_1/knot.4_1p.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/4_1/knot.4_1z.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/4_1/knot.4_1z.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/4_1/knot.4_1z.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/4_1/knot.4_1z.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/4_1/knot.4_1z.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/4_1/knot.4_1z.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/4_1/knot.4_1z.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/4_1/knot.4_1z.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_1/knot.5_1.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_1/knot.5_1.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_1/knot.5_1.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_1/knot.5_1.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_1/knot.5_1.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_1/knot.5_1.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_1/knot.5_1.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_1/knot.5_1.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_1/knot.5_1p.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_1/knot.5_1p.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_1/knot.5_1p.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_1/knot.5_1p.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_1/knot.5_1p.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_1/knot.5_1p.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_1/knot.5_1p.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_1/knot.5_1p.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_1/knot.5_1u.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_1/knot.5_1u.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_1/knot.5_1u.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_1/knot.5_1u.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_1/knot.5_1u.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_1/knot.5_1u.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_1/knot.5_1u.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_1/knot.5_1u.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_2/knot.5_2.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_2/knot.5_2.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_2/knot.5_2.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_2/knot.5_2.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_2/knot.5_2.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_2/knot.5_2.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_2/knot.5_2.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_2/knot.5_2.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_2/knot.5_2d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_2/knot.5_2d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_2/knot.5_2d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_2/knot.5_2d.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_2/knot.5_2d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_2/knot.5_2d.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_2/knot.5_2d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_2/knot.5_2d.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_2/knot.5_2r.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_2/knot.5_2r.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_2/knot.5_2r.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_2/knot.5_2r.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_2/knot.5_2r.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_2/knot.5_2r.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_2/knot.5_2r.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_2/knot.5_2r.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_1/knot.6_1.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_1/knot.6_1.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_1/knot.6_1.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_1/knot.6_1.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_1/knot.6_1.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_1/knot.6_1.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_1/knot.6_1.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_1/knot.6_1.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_2/knot.6_2.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_2/knot.6_2.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_2/knot.6_2.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_2/knot.6_2.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_2/knot.6_2.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_2/knot.6_2.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_2/knot.6_2.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_2/knot.6_2.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_2/knot.6_2d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_2/knot.6_2d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_2/knot.6_2d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_2/knot.6_2d.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_2/knot.6_2d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_2/knot.6_2d.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_2/knot.6_2d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_2/knot.6_2d.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_2/knot.6_2p.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_2/knot.6_2p.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_2/knot.6_2p.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_2/knot.6_2p.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_2/knot.6_2p.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_2/knot.6_2p.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_2/knot.6_2p.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_2/knot.6_2p.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_3/knot.6_3d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_3/knot.6_3d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_3/knot.6_3d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_3/knot.6_3d.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_3/knot.6_3d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_3/knot.6_3d.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_3/knot.6_3d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_3/knot.6_3d.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_3/knot.6_3z.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_3/knot.6_3z.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_3/knot.6_3z.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_3/knot.6_3z.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_3/knot.6_3z.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_3/knot.6_3z.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_3/knot.6_3z.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_3/knot.6_3z.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_1/knot.7_1.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_1/knot.7_1.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_1/knot.7_1.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_1/knot.7_1.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_1/knot.7_1.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_1/knot.7_1.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_1/knot.7_1.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_1/knot.7_1.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_1/knot.7_1p.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_1/knot.7_1p.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_1/knot.7_1p.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_1/knot.7_1p.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_1/knot.7_1p.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_1/knot.7_1p.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_1/knot.7_1p.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_1/knot.7_1p.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_2/knot.7_2.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_2/knot.7_2.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_2/knot.7_2.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_2/knot.7_2.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_2/knot.7_2.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_2/knot.7_2.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_2/knot.7_2.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_2/knot.7_2.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_2/knot.7_2d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_2/knot.7_2d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_2/knot.7_2d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_2/knot.7_2d.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_2/knot.7_2d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_2/knot.7_2d.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_2/knot.7_2d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_2/knot.7_2d.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_2/knot.7_2r.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_2/knot.7_2r.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_2/knot.7_2r.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_2/knot.7_2r.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_2/knot.7_2r.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_2/knot.7_2r.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_2/knot.7_2r.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_2/knot.7_2r.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_3/knot.7_3.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_3/knot.7_3.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_3/knot.7_3.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_3/knot.7_3.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_3/knot.7_3.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_3/knot.7_3.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_3/knot.7_3.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_3/knot.7_3.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_3/knot.7_3d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_3/knot.7_3d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_3/knot.7_3d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_3/knot.7_3d.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_3/knot.7_3d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_3/knot.7_3d.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_3/knot.7_3d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_3/knot.7_3d.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_4/knot.7_4.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_4/knot.7_4.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_4/knot.7_4.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_4/knot.7_4.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_4/knot.7_4.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_4/knot.7_4.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_4/knot.7_4.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_4/knot.7_4.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_5/knot.7_5.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_5/knot.7_5.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_5/knot.7_5.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_5/knot.7_5.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_5/knot.7_5.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_5/knot.7_5.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_5/knot.7_5.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_5/knot.7_5.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_5/knot.7_5d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_5/knot.7_5d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_5/knot.7_5d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_5/knot.7_5d.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_5/knot.7_5d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_5/knot.7_5d.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_5/knot.7_5d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_5/knot.7_5d.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_6/knot.7_6d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_6/knot.7_6d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_6/knot.7_6d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_6/knot.7_6d.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_6/knot.7_6d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_6/knot.7_6d.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_6/knot.7_6d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_6/knot.7_6d.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_6/knot.7_6s.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_6/knot.7_6s.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_6/knot.7_6s.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_6/knot.7_6s.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_6/knot.7_6s.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_6/knot.7_6s.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_6/knot.7_6s.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_6/knot.7_6s.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_7/knot.7_7d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_7/knot.7_7d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_7/knot.7_7d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_7/knot.7_7d.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_7/knot.7_7d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_7/knot.7_7d.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_7/knot.7_7d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_7/knot.7_7d.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_1/knot.8_1.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_1/knot.8_1.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_1/knot.8_1.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_1/knot.8_1.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_1/knot.8_1d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_1/knot.8_1d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_1/knot.8_1d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_1/knot.8_1d.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_1/knot.8_1d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_1/knot.8_1d.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_1/knot.8_1d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_1/knot.8_1d.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_1/knot.8_1p.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_1/knot.8_1p.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_1/knot.8_1p.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_1/knot.8_1p.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_10/knot.8_10s.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_10/knot.8_10s.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_10/knot.8_10s.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_10/knot.8_10s.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_10/knot.8_10s.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_10/knot.8_10s.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_10/knot.8_10s.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_10/knot.8_10s.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_11/knot.8_11.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_11/knot.8_11.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_11/knot.8_11.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_11/knot.8_11.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_11/knot.8_11.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_11/knot.8_11.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_11/knot.8_11d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_11/knot.8_11d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_11/knot.8_11d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_11/knot.8_11d.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_11/knot.8_11d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_11/knot.8_11d.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_11/knot.8_11d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_11/knot.8_11d.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_11/knot.8_11p.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_11/knot.8_11p.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_12/knot.8_12d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_12/knot.8_12d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_12/knot.8_12d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_12/knot.8_12d.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_12/knot.8_12d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_12/knot.8_12d.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_12/knot.8_12d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_12/knot.8_12d.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_12/knot.8_12z.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_12/knot.8_12z.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_12/knot.8_12z.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_12/knot.8_12z.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_12/knot.8_12z.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_12/knot.8_12z.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_12/knot.8_12z.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_12/knot.8_12z.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_13/knot.8_13d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_13/knot.8_13d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_13/knot.8_13d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_13/knot.8_13d.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_13/knot.8_13d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_13/knot.8_13d.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_13/knot.8_13d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_13/knot.8_13d.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_13/knot.8_13p.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_13/knot.8_13p.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_13/knot.8_13p.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_13/knot.8_13p.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_13/knot.8_13p.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_13/knot.8_13p.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_13/knot.8_13p.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_13/knot.8_13p.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_14/knot.8_14d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_14/knot.8_14d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_14/knot.8_14d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_14/knot.8_14d.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_14/knot.8_14d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_14/knot.8_14d.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_14/knot.8_14d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_14/knot.8_14d.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_14/knot.8_14r.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_14/knot.8_14r.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_14/knot.8_14r.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_14/knot.8_14r.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_14/knot.8_14r.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_14/knot.8_14r.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_14/knot.8_14r.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_14/knot.8_14r.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_15/knot.8_15.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_15/knot.8_15.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_15/knot.8_15.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_15/knot.8_15.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_15/knot.8_15.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_15/knot.8_15.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_15/knot.8_15.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_15/knot.8_15.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_15/knot.8_15d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_15/knot.8_15d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_15/knot.8_15d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_15/knot.8_15d.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_15/knot.8_15d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_15/knot.8_15d.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_15/knot.8_15d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_15/knot.8_15d.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_15/knot.8_15p.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_15/knot.8_15p.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_15/knot.8_15p.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_15/knot.8_15p.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_15/knot.8_15p.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_15/knot.8_15p.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_15/knot.8_15p.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_15/knot.8_15p.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_16/knot.8_16.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_16/knot.8_16.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_16/knot.8_16.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_16/knot.8_16.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_16/knot.8_16.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_16/knot.8_16.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_16/knot.8_16.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_16/knot.8_16.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_17/knot.8_17.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_17/knot.8_17.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_17/knot.8_17.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_17/knot.8_17.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_17/knot.8_17.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_17/knot.8_17.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_17/knot.8_17.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_17/knot.8_17.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_18/knot.8_18.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_18/knot.8_18.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_18/knot.8_18.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_18/knot.8_18.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_18/knot.8_18.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_18/knot.8_18.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_18/knot.8_18.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_18/knot.8_18.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_18/knot.8_18z.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_18/knot.8_18z.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_18/knot.8_18z.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_18/knot.8_18z.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_18/knot.8_18z.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_18/knot.8_18z.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_19/knot.8_19t.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_19/knot.8_19t.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_19/knot.8_19t.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_19/knot.8_19t.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_19/knot.8_19t.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_19/knot.8_19t.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_19/knot.8_19t.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_19/knot.8_19t.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_19/knot.8_19u.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_19/knot.8_19u.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_19/knot.8_19u.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_19/knot.8_19u.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_19/knot.8_19u.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_19/knot.8_19u.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_19/knot.8_19u.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_19/knot.8_19u.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_2/knot.8_2.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_2/knot.8_2.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_2/knot.8_2.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_2/knot.8_2.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_2/knot.8_2.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_2/knot.8_2.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_2/knot.8_2.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_2/knot.8_2.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_2/knot.8_2d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_2/knot.8_2d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_2/knot.8_2d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_2/knot.8_2d.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_2/knot.8_2d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_2/knot.8_2d.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_2/knot.8_2d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_2/knot.8_2d.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_20/knot.8_20r.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_20/knot.8_20r.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_20/knot.8_20r.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_20/knot.8_20r.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_20/knot.8_20r.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_20/knot.8_20r.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_20/knot.8_20r.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_20/knot.8_20r.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_21/knot.8_21d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_21/knot.8_21d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_21/knot.8_21d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_21/knot.8_21d.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_21/knot.8_21d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_21/knot.8_21d.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_21/knot.8_21d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_21/knot.8_21d.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_21/knot.8_21p.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_21/knot.8_21p.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_21/knot.8_21p.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_21/knot.8_21p.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_21/knot.8_21p.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_21/knot.8_21p.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_21/knot.8_21p.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_21/knot.8_21p.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_21/knot.8_21r.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_21/knot.8_21r.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_21/knot.8_21r.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_21/knot.8_21r.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_21/knot.8_21r.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_21/knot.8_21r.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_21/knot.8_21r.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_21/knot.8_21r.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_3/knot.8_3.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_3/knot.8_3.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_3/knot.8_3.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_3/knot.8_3.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_3/knot.8_3.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_3/knot.8_3.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_3/knot.8_3.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_3/knot.8_3.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_3/knot.8_3d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_3/knot.8_3d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_3/knot.8_3d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_3/knot.8_3d.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_3/knot.8_3d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_3/knot.8_3d.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_3/knot.8_3d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_3/knot.8_3d.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_3/knot.8_3i8.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_3/knot.8_3i8.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_3/knot.8_3i8.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_3/knot.8_3i8.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_3/knot.8_3i8.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_3/knot.8_3i8.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_3/knot.8_3z.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_3/knot.8_3z.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_3/knot.8_3z.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_3/knot.8_3z.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_3/knot.8_3z.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_3/knot.8_3z.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_3/knot.8_3z.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_3/knot.8_3z.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_4/knot.8_4.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_4/knot.8_4.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_4/knot.8_4.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_4/knot.8_4.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_4/knot.8_4.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_4/knot.8_4.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_4/knot.8_4.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_4/knot.8_4.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_4/knot.8_4d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_4/knot.8_4d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_4/knot.8_4d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_4/knot.8_4d.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_4/knot.8_4d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_4/knot.8_4d.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_4/knot.8_4d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_4/knot.8_4d.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_5/knot.8_5.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_5/knot.8_5.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_5/knot.8_5.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_5/knot.8_5.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_5/knot.8_5.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_5/knot.8_5.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_5/knot.8_5.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_5/knot.8_5.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_6/knot.8_6.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_6/knot.8_6.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_6/knot.8_6.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_6/knot.8_6.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_6/knot.8_6.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_6/knot.8_6.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_6/knot.8_6.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_6/knot.8_6.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_6/knot.8_6p.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_6/knot.8_6p.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_6/knot.8_6p.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_6/knot.8_6p.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_6/knot.8_6p.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_6/knot.8_6p.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_6/knot.8_6p.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_6/knot.8_6p.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_7/knot.8_7d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_7/knot.8_7d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_7/knot.8_7d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_7/knot.8_7d.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_7/knot.8_7d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_7/knot.8_7d.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_7/knot.8_7d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_7/knot.8_7d.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_7/knot.8_7s.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_7/knot.8_7s.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_7/knot.8_7s.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_7/knot.8_7s.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_7/knot.8_7s.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_7/knot.8_7s.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_7/knot.8_7s.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_7/knot.8_7s.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_8/knot.8_8d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_8/knot.8_8d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_8/knot.8_8d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_8/knot.8_8d.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_8/knot.8_8d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_8/knot.8_8d.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_8/knot.8_8d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_8/knot.8_8d.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_9/knot.8_9d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_9/knot.8_9d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_9/knot.8_9d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_9/knot.8_9d.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_9/knot.8_9d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_9/knot.8_9d.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_9/knot.8_9d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_9/knot.8_9d.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_9/knot.8_9i4.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_9/knot.8_9i4.scad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_9/knot.8_9i4.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_9/knot.8_9i4.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_9/knot.8_9i4.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_9/knot.8_9i4.stl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/fseries_batch_results.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/knot_meta_skeleton.csv" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/knot_meta_skeleton.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/meta.csv" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/meta.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/meta_skeleton.csv" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/meta_skeleton.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/classify_particles.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/classify_particles.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.12a_1202.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.12a_1202.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.12a_1202z6.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.12a_1202z6.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.15331.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.15331.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.1_1.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.1_1.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.3_1.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.3_1.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.3_1p.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.3_1p.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.3_1u.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.3_1u.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.4_1.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.4_1.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.4_1d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.4_1d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.4_1p.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.4_1p.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.4_1z.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.4_1z.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.5_1.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.5_1.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.5_1p.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.5_1p.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.5_1u.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.5_1u.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.5_2.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.5_2.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.5_2d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.5_2d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.5_2r.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.5_2r.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.6_1.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.6_1.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.6_2.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.6_2.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.6_2d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.6_2d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.6_2p.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.6_2p.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.6_3d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.6_3d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.6_3z.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.6_3z.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.7_1.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.7_1.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.7_1p.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.7_1p.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.7_2.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.7_2.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.7_2d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.7_2d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.7_2r.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.7_2r.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.7_3.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.7_3.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.7_3d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.7_3d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.7_4.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.7_4.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.7_5.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.7_5.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.7_5d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.7_5d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.7_6d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.7_6d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.7_6s.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.7_6s.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.7_7d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.7_7d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_1.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_1.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_10s.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_10s.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_11.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_11.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_11d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_11d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_12d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_12d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_12z.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_12z.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_13d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_13d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_13p.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_13p.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_14d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_14d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_14r.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_14r.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_15.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_15.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_15d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_15d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_15p.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_15p.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_16.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_16.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_17.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_17.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_17.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_17.short" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_18.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_18.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_18z.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_18z.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_19t.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_19t.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_19u.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_19u.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_1d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_1d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_2.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_2.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_20r.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_20r.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_21d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_21d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_21p.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_21p.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_21r.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_21r.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_2d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_2d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_3d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_3d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_3z.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_3z.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_4d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_4d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_5.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_5.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_6.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_6.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_6p.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_6p.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_7d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_7d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_7s.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_7s.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_8d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_8d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_9d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_9d.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/secrets.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/my_secrets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/vam_fseries_gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/vam_fseries_gui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/VAM-7-From_Quantum_Constants_to_Galactic_Swirl.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/VAM-7-From_Quantum_Constants_to_Galactic_Swirl.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vambindings.cp311-win_amd64.pyd" beforeDir="false" afterPath="$PROJECT_DIR$/vambindings.cp311-win_amd64.pyd" afterDir="false" />
     </list>
-    <list id="4afbe360-edfd-4722-ab75-c722c883a8a6" name="DoNotCommit" comment="DoNotCommit" />
+    <list id="4afbe360-edfd-4722-ab75-c722c883a8a6" name="DoNotCommit" comment="Add new files and refactor existing ones for VAM framework; update README and data paths" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="false" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,6 +445,7 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -90,9 +493,6 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
-    <option name="autoscrollFromSource" value="true" />
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
     <option name="sortKey" value="BY_TIME_DESCENDING" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
@@ -116,8 +516,10 @@
     "BibTeX.PhtonVortex bibliography.executor": "Run",
     "BibTeX.Short_PhotonVortex.executor": "Run",
     "BibTeX.VAM-0-Analogies.executor": "Run",
+    "BibTeX.VAM-0-Analogy.executor": "Run",
     "BibTeX.VAM-0-Einstein_and_the_Æther bibliography.executor": "Run",
     "BibTeX.VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm bibliography.executor": "Run",
+    "BibTeX.VAM-0.executor": "Run",
     "BibTeX.VAM-10-Swirl_Induced_Curvature_as_the_Mechanism_of_Gravitation bibliography.executor": "Run",
     "BibTeX.VAM-11-Master_Equation_for_Particle_Masses.executor": "Run",
     "BibTeX.VAM-12-Fractal_Swirl bibliography.executor": "Run",
@@ -127,7 +529,13 @@
     "BibTeX.VAM-16-Quantum_Computing_Blueprint bibliography.executor": "Run",
     "BibTeX.VAM-17.1.executor": "Run",
     "BibTeX.VAM-17.2.executor": "Run",
+    "BibTeX.VAM-17.2_OnTheVortexInterpretationOfKerrGeometryInTheVortexÆtherModel bibliography.executor": "Run",
+    "BibTeX.VAM-17.4 Schrodinger bibliography.executor": "Run",
+    "BibTeX.VAM-17.7-WaterImitatesTime bibliography.executor": "Run",
+    "BibTeX.VAM-17.7.2 bibliography.executor": "Run",
+    "BibTeX.VAM-17.7Fluid Fine-Structure bibliography.executor": "Run",
     "BibTeX.VAM-17_OnTheVortexInterpretationOfKerrGeometryInTheVortexÆtherModel bibliography.executor": "Run",
+    "BibTeX.VAM-7.executor": "Run",
     "BibTeX.VAM-8.5-Master_Formula.executor": "Run",
     "BibTeX.VAM-8.executor": "Run",
     "BibTeX.VAM-9-MilkyWay_as_a_Chiral_Swirl-Knot_Network.executor": "Run",
@@ -182,7 +590,20 @@
     "LaTeX.VAM-17.1_PhotonVortex.executor": "Run",
     "LaTeX.VAM-17.2_OnTheVortexInterpretationOfKerrGeometryInTheVortexÆtherModel.executor": "Run",
     "LaTeX.VAM-17.3_Bells.executor": "Run",
+    "LaTeX.VAM-17.4 Schrodinger.executor": "Run",
+    "LaTeX.VAM-17.6.executor": "Run",
+    "LaTeX.VAM-17.7-WaterImitatesTime.executor": "Run",
+    "LaTeX.VAM-17.7.2.executor": "Run",
+    "LaTeX.VAM-17.7Fluid Fine-Structure.executor": "Run",
+    "LaTeX.VAM-17.8.executor": "Run",
     "LaTeX.VAM-17_OnTheVortexInterpretationOfKerrGeometryInTheVortexÆtherModel.executor": "Run",
+    "LaTeX.VAM-18.executor": "Run",
+    "LaTeX.VAM-19-Zero_Vorticity_Line.executor": "Run",
+    "LaTeX.VAM-20.0_String_Theory.executor": "Run",
+    "LaTeX.VAM-20.2.2_String_Theory.executor": "Run",
+    "LaTeX.VAM-20_String_Theory (1).executor": "Run",
+    "LaTeX.VAM-20_String_Theory.executor": "Run",
+    "LaTeX.VAM-7-From_Quantum_Constants_to_Galactic_Swirl.executor": "Run",
     "LaTeX.VAM-8-Master_Paper.executor": "Run",
     "LaTeX.VAM-8.5-Master_Formula.executor": "Run",
     "LaTeX.VAM-8_NewNotes.executor": "Run",
@@ -191,6 +612,7 @@
     "LaTeX.VAM_15_Quantum_Gravity_updated.executor": "Run",
     "LaTeX.VAM_Full_Lagrangian.executor": "Run",
     "LaTeX.VAM_framework.executor": "Run",
+    "LaTeX.Vortex_String_Theory_Mass_Fundamentals.executor": "Run",
     "LaTeX.Warpdrive.executor": "Run",
     "LaTeX.appendix_QuantizationOfVAM.executor": "Run",
     "LaTeX.double-starship-gravity.executor": "Run",
@@ -211,7 +633,6 @@
     "Python.03_Starship-3phase-36points-18 bidirectional.executor": "Run",
     "Python.03_magnetic round coil.executor": "Run",
     "Python.03_slice biot.executor": "Run",
-    "Python.3dKnots.executor": "Run",
     "Python.6274.executor": "Run",
     "Python.6_2_topview.executor": "Run",
     "Python.6_2knot.executor": "Run",
@@ -237,6 +658,7 @@
     "Python.Rodin_magnetic_fields.executor": "Run",
     "Python.TemporalOntology.executor": "Run",
     "Python.TimeConstruct.executor": "Run",
+    "Python.VAM-MASS_FORMULA.executor": "Run",
     "Python.all_knots.executor": "Run",
     "Python.autoknot.executor": "Run",
     "Python.batch_fseries_vam (1).executor": "Run",
@@ -244,16 +666,21 @@
     "Python.bowl.executor": "Run",
     "Python.bubble.executor": "Run",
     "Python.canonical_vam_chsh.executor": "Run",
+    "Python.canonical_vam_chsh_extras.executor": "Run",
     "Python.change_bib_to_footnoting.executor": "Run",
     "Python.classify_particles.executor": "Run",
     "Python.coil_biot-savart_sim.executor": "Run",
     "Python.coil_boit.executor": "Run",
+    "Python.compute_Hvortex_and_mass (1).executor": "Run",
     "Python.cropper.executor": "Run",
+    "Python.demo_vam_inference.executor": "Run",
     "Python.dipole.executor": "Run",
     "Python.dl_knots.executor": "Run",
     "Python.doublestarship.executor": "Run",
     "Python.doublestarshipteste.executor": "Run",
     "Python.fieldpressure.executor": "Run",
+    "Python.fseries.executor": "Run",
+    "Python.generate_data.executor": "Run",
     "Python.get_hyperbollic_Mass_Number.executor": "Run",
     "Python.golden_rapidity_demo.executor": "Run",
     "Python.halfmoon_torus.executor": "Run",
@@ -263,13 +690,18 @@
     "Python.knots.executor": "Run",
     "Python.magneticCircle.executor": "Run",
     "Python.magneticCircleArrows.executor": "Run",
+    "Python.main_vam_infer.executor": "Run",
     "Python.neonKnot.6_2.executor": "Run",
+    "Python.pendulum_clockshift.executor": "Run",
+    "Python.pendulum_groningen.executor": "Run",
     "Python.phi_asinh_demo.executor": "Run",
     "Python.photonAnimation.executor": "Run",
     "Python.proton_neutron_weigth.executor": "Run",
     "Python.python -c \"import vambindings; print(vambindings)\".executor": "Run",
+    "Python.python demo.py.executor": "Run",
     "Python.quarck streamlines.executor": "Run",
     "Python.reference_cleaning.executor": "Run",
+    "Python.ring.executor": "Run",
     "Python.rotating_current_rodin_fields.executor": "Run",
     "Python.swirltorus36 knots.executor": "Run",
     "Python.test.executor": "Run",
@@ -277,7 +709,10 @@
     "Python.timediagram.executor": "Run",
     "Python.torus.executor": "Run",
     "Python.torusspirals.executor": "Run",
+    "Python.vam_batch_hypvol_from_fseries.executor": "Run",
     "Python.vam_fseries_gui.executor": "Run",
+    "Python.vam_infer_gui.executor": "Run",
+    "Python.vam_knot_workbench.executor": "Run",
     "Python.vam_qc_chsh.executor": "Run",
     "Python.vam_qc_chsh_both.executor": "Run",
     "Python.vam_qc_chsh_both_checked.executor": "Run",
@@ -286,6 +721,7 @@
     "Python.vam_vs_gr_potential_plot.executor": "Run",
     "Python.vamcore.executor": "Run",
     "Python.vamcore2.executor": "Run",
+    "Python.vamcore_batch_hypvol_from_fseries.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -299,7 +735,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/workspace/solo_projects/VAM/VAM_PYTHON_SIMULATOINS",
+    "last_opened_file_path": "C:/workspace/projects/VAM/VAM_PYTHON_SIMULATOINS/VAM_Fseries",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -314,26 +750,32 @@
 }]]></component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
-      <console-settings module-name="VAM" is-module-sdk="true">
-        <option name="myUseModuleSdk" value="true" />
+      <console-settings module-name="VAM" sdk-home="$PROJECT_DIR$/../VAMcore/.venv/Scripts/python.exe">
+        <option name="sdk">
+          <Sdk />
+        </option>
+        <option name="mySdkHome" value="$PROJECT_DIR$/../VAMcore/.venv/Scripts/python.exe" />
+        <option name="mySdk">
+          <Sdk />
+        </option>
         <option name="myModuleName" value="VAM" />
       </console-settings>
     </option>
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\workspace\solo_projects\VAM\VAM_PYTHON_SIMULATOINS" />
+      <recent name="C:\workspace\projects\VAM\VAM_PYTHON_SIMULATOINS\VAM_Fseries" />
+      <recent name="C:\workspace\projects\VAM\VAM-20_String_Theory" />
       <recent name="C:\workspace\projects\VAM\VAM_PYTHON_SIMULATOINS" />
       <recent name="C:\workspace\projects\VAM\VAM_Experiments" />
       <recent name="C:\workspace\projects\VAM\VAM_0_Einstein_to_Vortex_Fluid" />
-      <recent name="C:\workspace\projects\VAM\py_knots\ALL" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\workspace\solo_projects\VAM\VAM_PYTHON_SIMULATOINS" />
-      <recent name="C:\workspace\projects\VAM\VAM-ONGOING-RESEARCHES" />
-      <recent name="C:\workspace\projects\VAM\out" />
-      <recent name="C:\workspace\projects\VAM\out\older" />
-      <recent name="C:\workspace\projects\VAM\VAM_PYTHON_SIMULATOINS" />
+      <recent name="C:\workspace\projects\VAM\VAM_7_From_Quantum_Constants_to_Galactic_Swirl" />
+      <recent name="C:\workspace\projects\VAM\VAM_PYTHON_SIMULATOINS\VAM_Fseries\knots\bigger" />
+      <recent name="C:\workspace\projects\VAM\VAM_PYTHON_SIMULATOINS\VAM_Fseries\knots" />
+      <recent name="C:\workspace\projects\VAM\VAM_PYTHON_SIMULATOINS\VAM_Fseries\knots\12a_1202\bigger" />
+      <recent name="C:\workspace\projects\VAM\VAM_PYTHON_SIMULATOINS\VAM_Fseries" />
     </key>
   </component>
   <component name="RunManager">
@@ -361,6 +803,18 @@
       </texify-bibtex>
       <method v="2" />
     </configuration>
+    <configuration name="VAM-0-Analogies bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" folderName="VAM-0 / 9">
+      <texify-bibtex>
+        <compiler>BIBTEX</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/VAM_0_Analogies/VAM-0-Analogies.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
+        <latex-distribution>MIKTEX</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
     <configuration name="VAM-16" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" folderName="VAM-10 / 19">
       <texify-bibtex>
         <compiler>BIBTEX</compiler>
@@ -370,6 +824,114 @@
         <main-file>$PROJECT_DIR$/VAM_16_QuantumComputing/VAM-16-Quantum_Computing_Blueprint.tex</main-file>
         <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
         <latex-distribution>MIKTEX</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration name="VAM-17.2_OnTheVortexInterpretationOfKerrGeometryInTheVortexÆtherModel bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" folderName="VAM-10 / 19">
+      <texify-bibtex>
+        <compiler>BIBTEX</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/VAM_17_shorts/VAM-17.2_OnTheVortexInterpretationOfKerrGeometryInTheVortexÆtherModel.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
+        <latex-distribution>MIKTEX</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration name="VAM-17.4 Schrodinger bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" folderName="VAM-10 / 19">
+      <texify-bibtex>
+        <compiler>BIBTEX</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/VAM_17_shorts/VAM-17.4 Schrodinger.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
+        <latex-distribution>MIKTEX</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration name="VAM-17.7-WaterImitatesTime bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" folderName="VAM-10 / 19">
+      <texify-bibtex>
+        <compiler>BIBTEX</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/VAM_17_shorts/VAM-17.7-WaterImitatesTime.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
+        <latex-distribution>MIKTEX</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration name="VAM-17.7Fluid Fine-Structure bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" folderName="VAM-10 / 19">
+      <texify-bibtex>
+        <compiler>BIBTEX</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/VAM_17_shorts/VAM-17.7Fluid Fine-Structure.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
+        <latex-distribution>MIKTEX</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration name="VAM-17.7.2 bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" folderName="VAM-10 / 19">
+      <texify-bibtex>
+        <compiler>BIBTEX</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/VAM_17_shorts/VAM-17.7.2.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
+        <latex-distribution>MIKTEX</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration name="VAM-19-Zero_Vorticity_Line bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" folderName="VAM-10 / 19">
+      <texify-bibtex>
+        <compiler>BIBTEX</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/VAM_19_ZeroVorticityLine/VAM-19-Zero_Vorticity_Line.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
+        <latex-distribution>MIKTEX</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration name="VAM-7-From_Quantum_Constants_to_Galactic_Swirl bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler>BIBTEX</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/VAM_7_From_Quantum_Constants_to_Galactic_Swirl/VAM-7-From_Quantum_Constants_to_Galactic_Swirl.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
+        <latex-distribution>MIKTEX</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration name="Vortex_String_Theory_Mass_Fundamentals bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler>BIBTEX</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/VAM-20_String_Theory/Vortex_String_Theory_Mass_Fundamentals.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
+        <latex-distribution>MIKTEX</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler />
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file />
+        <aux-dir />
+        <latex-distribution>PROJECT_SDK</latex-distribution>
       </texify-bibtex>
       <method v="2" />
     </configuration>
@@ -409,239 +971,12 @@
       </texify-bibtex>
       <method v="2" />
     </configuration>
-    <configuration name="6-Core_Foundations_VAM" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" folderName="LaTeX">
-      <texify>
-        <compiler>PDFLATEX</compiler>
-        <compiler-path />
-        <pdf-viewer>none</pdf-viewer>
-        <require-focus>false</require-focus>
-        <viewer-command />
-        <compiler-arguments />
-        <envs />
-        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
-        <before-run-command />
-        <main-file>$PROJECT_DIR$/VAM - Appendix All/VAM-Core_Foundations.tex</main-file>
-        <output-path>$PROJECT_DIR$/out</output-path>
-        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
-        <compile-twice>false</compile-twice>
-        <output-format>PDF</output-format>
-        <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>false</has-been-run>
-        <bib-run-config>[]</bib-run-config>
-        <makeindex-run-config>[]</makeindex-run-config>
-      </texify>
-      <method v="2" />
-    </configuration>
-    <configuration name="7-Philosophical_Depth_Companion" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" folderName="LaTeX">
-      <texify>
-        <compiler>PDFLATEX</compiler>
-        <compiler-path />
-        <pdf-viewer>none</pdf-viewer>
-        <require-focus>false</require-focus>
-        <viewer-command />
-        <compiler-arguments />
-        <envs />
-        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
-        <before-run-command />
-        <main-file>$PROJECT_DIR$/VAM - Appendix All/VAM-Philosophical_Depth.tex</main-file>
-        <output-path>$PROJECT_DIR$/out</output-path>
-        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
-        <compile-twice>false</compile-twice>
-        <output-format>PDF</output-format>
-        <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>false</has-been-run>
-        <bib-run-config>[]</bib-run-config>
-        <makeindex-run-config>[]</makeindex-run-config>
-      </texify>
-      <method v="2" />
-    </configuration>
-    <configuration name="AntiGravity-DualityEM_lazer_c_e" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" folderName="LaTeX">
-      <texify>
-        <compiler>PDFLATEX</compiler>
-        <compiler-path />
-        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
-        <require-focus>false</require-focus>
-        <viewer-command />
-        <compiler-arguments />
-        <envs />
-        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
-        <before-run-command />
-        <main-file>$PROJECT_DIR$/VAM_Experiments/AntiGravity-DualityEM_lazer_c_e.tex</main-file>
-        <output-path>$PROJECT_DIR$/out</output-path>
-        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
-        <compile-twice>false</compile-twice>
-        <output-format>PDF</output-format>
-        <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>false</has-been-run>
-        <bib-run-config>[BibTeX.AntiGravity-DualityEM_lazer_c_e bibliography]</bib-run-config>
-        <makeindex-run-config>[]</makeindex-run-config>
-      </texify>
-      <method v="2" />
-    </configuration>
-    <configuration name="Appendix_X-filesExplanationsFoundationalPhysicsAnomalies" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" folderName="LaTeX">
-      <texify>
-        <compiler>PDFLATEX</compiler>
-        <compiler-path />
-        <pdf-viewer>none</pdf-viewer>
-        <require-focus>false</require-focus>
-        <viewer-command />
-        <compiler-arguments />
-        <envs />
-        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
-        <before-run-command />
-        <main-file>$PROJECT_DIR$/VAM - Appendix All/Appendix_X-filesExplanationsFoundationalPhysicsAnomalies.tex</main-file>
-        <output-path>$PROJECT_DIR$/out</output-path>
-        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
-        <compile-twice>false</compile-twice>
-        <output-format>PDF</output-format>
-        <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>false</has-been-run>
-        <bib-run-config>[]</bib-run-config>
-        <makeindex-run-config>[]</makeindex-run-config>
-      </texify>
-      <method v="2" />
-    </configuration>
-    <configuration name="VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" folderName="LaTeX">
-      <texify>
-        <compiler>PDFLATEX</compiler>
-        <compiler-path />
-        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
-        <require-focus>false</require-focus>
-        <viewer-command />
-        <compiler-arguments />
-        <envs />
-        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
-        <before-run-command />
-        <main-file>$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/main.tex</main-file>
-        <output-path>$PROJECT_DIR$/out</output-path>
-        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
-        <compile-twice>false</compile-twice>
-        <output-format>PDF</output-format>
-        <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>false</has-been-run>
-        <bib-run-config>[]</bib-run-config>
-        <makeindex-run-config>[]</makeindex-run-config>
-      </texify>
-      <method v="2" />
-    </configuration>
-    <configuration name="VAM-1-TimeDilationHydrogen" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" folderName="LaTeX" temporary="true">
-      <texify>
-        <compiler>PDFLATEX</compiler>
-        <compiler-path />
-        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
-        <require-focus>true</require-focus>
-        <viewer-command />
-        <compiler-arguments />
-        <envs />
-        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
-        <before-run-command />
-        <main-file>$PROJECT_DIR$/VAM_1_TimeDilation_in_3D/VAM-1-TimeDilationHydrogen.tex</main-file>
-        <output-path>$PROJECT_DIR$/out</output-path>
-        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
-        <compile-twice>false</compile-twice>
-        <output-format>PDF</output-format>
-        <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>true</has-been-run>
-        <bib-run-config>[]</bib-run-config>
-        <makeindex-run-config>[]</makeindex-run-config>
-      </texify>
-      <method v="2" />
-    </configuration>
-    <configuration name="VAM-17.3_Bells" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" folderName="LaTeX" temporary="true">
-      <texify>
-        <compiler>PDFLATEX</compiler>
-        <compiler-path />
-        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
-        <require-focus>true</require-focus>
-        <viewer-command />
-        <compiler-arguments />
-        <envs />
-        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
-        <before-run-command />
-        <main-file>$PROJECT_DIR$/VAM_17_shorts/VAM-17.3_Bells.tex</main-file>
-        <output-path>$PROJECT_DIR$/out</output-path>
-        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
-        <compile-twice>false</compile-twice>
-        <output-format>PDF</output-format>
-        <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>true</has-been-run>
-        <bib-run-config>[]</bib-run-config>
-        <makeindex-run-config>[]</makeindex-run-config>
-      </texify>
-      <method v="2" />
-    </configuration>
-    <configuration name="VAM-8-Master_Paper" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" folderName="LaTeX">
-      <texify>
-        <compiler>PDFLATEX</compiler>
-        <compiler-path />
-        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
-        <require-focus>false</require-focus>
-        <viewer-command />
-        <compiler-arguments />
-        <envs />
-        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
-        <before-run-command />
-        <main-file>$PROJECT_DIR$/VAM_8_MASTER_Paper/VAM-8-Master_Paper.tex</main-file>
-        <output-path>$PROJECT_DIR$/out</output-path>
-        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
-        <compile-twice>false</compile-twice>
-        <output-format>PDF</output-format>
-        <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>false</has-been-run>
-        <bib-run-config>[]</bib-run-config>
-        <makeindex-run-config>[]</makeindex-run-config>
-      </texify>
-      <method v="2" />
-    </configuration>
-    <configuration name="VAM_Full_Lagrangian" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" folderName="LaTeX">
-      <texify>
-        <compiler>PDFLATEX</compiler>
-        <compiler-path />
-        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
-        <require-focus>false</require-focus>
-        <viewer-command />
-        <compiler-arguments />
-        <envs />
-        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
-        <before-run-command />
-        <main-file>$PROJECT_DIR$/VAM_17_shorts/VAM_Full_Lagrangian.tex</main-file>
-        <output-path>$PROJECT_DIR$/out</output-path>
-        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
-        <compile-twice>false</compile-twice>
-        <output-format>PDF</output-format>
-        <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>false</has-been-run>
-        <bib-run-config>[]</bib-run-config>
-        <makeindex-run-config>[]</makeindex-run-config>
-      </texify>
-      <method v="2" />
-    </configuration>
-    <configuration name="phi_asinh_note" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" folderName="LaTeX" temporary="true">
-      <texify>
-        <compiler>PDFLATEX</compiler>
-        <compiler-path />
-        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
-        <require-focus>true</require-focus>
-        <viewer-command />
-        <compiler-arguments />
-        <envs />
-        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
-        <before-run-command />
-        <main-file>$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/phi_asinh_note.tex</main-file>
-        <output-path>$PROJECT_DIR$/out</output-path>
-        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
-        <compile-twice>false</compile-twice>
-        <output-format>PDF</output-format>
-        <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>true</has-been-run>
-        <bib-run-config>[BibTeX.phi_asinh_note bibliography]</bib-run-config>
-        <makeindex-run-config>[]</makeindex-run-config>
-      </texify>
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="BibTeX.VAM-0-Analogy" />
+      <item itemvalue="BibTeX.VAM-Core_Foundations_VAM" />
+      <item itemvalue="BibTeX.VAM-Philosophical_Depth_Companion" />
       <item itemvalue="BibTeX.main-O.Iskandarani bibliography" />
+      <item itemvalue="BibTeX.VAM-0-Analogies bibliography" />
+      <item itemvalue="BibTeX.VAM-0-Analogy" />
       <item itemvalue="BibTeX.VAM-0" />
       <item itemvalue="BibTeX.VAM-1" />
       <item itemvalue="BibTeX.VAM-2" />
@@ -662,42 +997,31 @@
       <item itemvalue="BibTeX.VAM-16" />
       <item itemvalue="BibTeX.VAM-17.1" />
       <item itemvalue="BibTeX.VAM-17.2" />
-      <item itemvalue="BibTeX.EXP_lazer_c_e" />
-      <item itemvalue="BibTeX.EXP_Warpdrive" />
+      <item itemvalue="BibTeX.VAM-17.2_OnTheVortexInterpretationOfKerrGeometryInTheVortexÆtherModel bibliography" />
+      <item itemvalue="BibTeX.VAM-17.7.2 bibliography" />
+      <item itemvalue="BibTeX.VAM-17.4 Schrodinger bibliography" />
+      <item itemvalue="BibTeX.VAM-17.7-WaterImitatesTime bibliography" />
+      <item itemvalue="BibTeX.VAM-17.7Fluid Fine-Structure bibliography" />
+      <item itemvalue="BibTeX.VAM-19-Zero_Vorticity_Line bibliography" />
       <item itemvalue="BibTeX.AntiGravity-DualityEM_lazer_c_e bibliography" />
       <item itemvalue="BibTeX.AntiGravity_WarpDrive bibliography" />
-      <item itemvalue="BibTeX.VAM-Core_Foundations_VAM" />
-      <item itemvalue="BibTeX.VAM-Philosophical_Depth_Companion" />
+      <item itemvalue="BibTeX.EXP_lazer_c_e" />
+      <item itemvalue="BibTeX.EXP_Warpdrive" />
       <item itemvalue="BibTeX.golden_rapidity_vam bibliography" />
       <item itemvalue="BibTeX.phi_asinh_note bibliography" />
-      <item itemvalue="LaTeX.Appendix_X-filesExplanationsFoundationalPhysicsAnomalies" />
-      <item itemvalue="LaTeX.6-Core_Foundations_VAM" />
-      <item itemvalue="LaTeX.7-Philosophical_Depth_Companion" />
-      <item itemvalue="LaTeX.VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm" />
-      <item itemvalue="LaTeX.VAM-8-Master_Paper" />
-      <item itemvalue="LaTeX.VAM_Full_Lagrangian" />
-      <item itemvalue="LaTeX.AntiGravity-DualityEM_lazer_c_e" />
-      <item itemvalue="LaTeX.phi_asinh_note" />
-      <item itemvalue="LaTeX.VAM-1-TimeDilationHydrogen" />
-      <item itemvalue="LaTeX.VAM-17.3_Bells" />
+      <item itemvalue="BibTeX.VAM-7-From_Quantum_Constants_to_Galactic_Swirl bibliography" />
+      <item itemvalue="BibTeX.Vortex_String_Theory_Mass_Fundamentals bibliography" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="LaTeX.phi_asinh_note" />
-        <item itemvalue="LaTeX.VAM-17.3_Bells" />
-        <item itemvalue="LaTeX.VAM-1-TimeDilationHydrogen" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-IU-252.23892.409" />
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.23892.409" />
       </set>
     </attachedChunks>
   </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
+    <task active="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" id="Default" summary="Default task">
       <changelist id="6f2a8139-c825-4497-876b-70e1a130c5c3" name="Changes" comment="" />
       <changelist id="4afbe360-edfd-4722-ab75-c722c883a8a6" name="DoNotCommit" comment="" />
       <created>1751631523297</created>
@@ -785,9 +1109,20 @@
       <workItem from="1754993869759" duration="5398000" />
       <workItem from="1755003889558" duration="745000" />
       <workItem from="1755005225658" duration="79000" />
-      <workItem from="1755007287069" duration="1536000" />
-      <workItem from="1755011312462" duration="35000" />
-      <workItem from="1755157880522" duration="4627000" />
+      <workItem from="1755007287069" duration="1412000" />
+      <workItem from="1755016229267" duration="3569000" />
+      <workItem from="1755034977932" duration="403000" />
+      <workItem from="1755090399641" duration="3134000" />
+      <workItem from="1755103577241" duration="2266000" />
+      <workItem from="1755220390364" duration="6581000" />
+      <workItem from="1755228530866" duration="121000" />
+      <workItem from="1755304265208" duration="6034000" />
+      <workItem from="1755618505059" duration="589000" />
+      <workItem from="1755625304966" duration="621000" />
+      <workItem from="1755625957953" duration="3363000" />
+      <workItem from="1755635150479" duration="1134000" />
+      <workItem from="1755659130372" duration="3571000" />
+      <workItem from="1755722958891" duration="7923000" />
     </task>
     <task id="LOCAL-00001" summary="Made MASTER paper, VAM4, VAM12.&#10;Added Knot images">
       <created>1751925083082</created>
@@ -985,23 +1320,35 @@
       <option name="project" value="LOCAL" />
       <updated>1754588826510</updated>
     </task>
-    <task id="LOCAL-00029" summary="Refactor file structure: rename benchmark scripts for clarity; add new quantum processing scripts and documentation files for golden ratio calculations and VAM analysis">
-      <option name="closed" value="true" />
-      <created>1755011217059</created>
+    <task id="LOCAL-00029" summary="Add new files and refactor existing ones for VAM framework; update README and data paths">
+      <created>1755618778491</created>
       <option name="number" value="00029" />
       <option name="presentableId" value="LOCAL-00029" />
       <option name="project" value="LOCAL" />
-      <updated>1755011217059</updated>
+      <updated>1755618778491</updated>
     </task>
-    <task id="LOCAL-00030" summary="Refactor file structure: rename multiple files for clarity and consistency; add new 3D knot rendering script and update file paths in hyperbollic mass number calculation script">
-      <option name="closed" value="true" />
-      <created>1755188370748</created>
+    <task id="LOCAL-00030" summary="Add new files and refactor existing ones for VAM framework; update README and data paths">
+      <created>1755618801211</created>
       <option name="number" value="00030" />
       <option name="presentableId" value="LOCAL-00030" />
       <option name="project" value="LOCAL" />
-      <updated>1755188370748</updated>
+      <updated>1755618801211</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Add new references and documents for VAM framework; enhance existing files with updated metadata and structure">
+      <created>1755697610586</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1755697610586</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Update VAM documents and add new mass formula implementation; enhance metadata and structure">
+      <created>1755761025441</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1755761025441</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1036,11 +1383,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Refactor file structure by renaming multiple LaTeX documents and scripts for consistency; update README.txt to include submission details and add new introduction and conclusion sections." />
-    <MESSAGE value="Refactor LaTeX documents to improve consistency in notation; update force variables to include proper superscripts for clarity." />
-    <MESSAGE value="Update LaTeX documents to reflect new licensing terms; add new package requirements and improve document structure for clarity." />
     <MESSAGE value="Implement script to convert bibliographic citations to footnotes in LaTeX; add new bibliography file and update existing references for improved clarity." />
     <MESSAGE value="Refactor file structure by renaming multiple LaTeX documents and Python scripts for consistency; update paths in LaTeX files and improve magnetic field computation in Python scripts." />
     <MESSAGE value="Add new Python scripts for 6_2 and 7_4 knots; create all_knots.py for various knot visualizations and refactor workspace.xml for improved file structure." />
@@ -1061,9 +1404,12 @@
     <MESSAGE value="Add new scripts for pressure deficit and net swirl gravity field visualizations" />
     <MESSAGE value="Refactor file names for consistency and clarity; update matplotlib backend usage in scripts" />
     <MESSAGE value="Update figure paths in Warpdrive.tex and add new section on vacuum refraction and photon scattering in VacuumRefractionPhotonScattering.tex" />
-    <MESSAGE value="Refactor file structure: rename benchmark scripts for clarity; add new quantum processing scripts and documentation files for golden ratio calculations and VAM analysis" />
-    <MESSAGE value="Refactor file structure: rename multiple files for clarity and consistency; add new 3D knot rendering script and update file paths in hyperbollic mass number calculation script" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor file structure: rename multiple files for clarity and consistency; add new 3D knot rendering script and update file paths in hyperbollic mass number calculation script" />
+    <MESSAGE value="Add new files and refactor existing ones for VAM framework; update README and metadata" />
+    <MESSAGE value="DoNotCommit" />
+    <MESSAGE value="Add new files and refactor existing ones for VAM framework; update README and data paths" />
+    <MESSAGE value="Add new references and documents for VAM framework; enhance existing files with updated metadata and structure" />
+    <MESSAGE value="Update VAM documents and add new mass formula implementation; enhance metadata and structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update VAM documents and add new mass formula implementation; enhance metadata and structure" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
@@ -1071,82 +1417,107 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/VAM$torusspirals.coverage" NAME="torusspirals Coverage Results" MODIFIED="1752431790353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
-    <SUITE FILE_PATH="coverage/VAMCore$6274.coverage" NAME="6274 Coverage Results" MODIFIED="1752709477549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_15_Quantum_Gravity" />
-    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$coil_biot_savart_sim.coverage" NAME="coil_biot-savart_sim Coverage Results" MODIFIED="1754641657056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
-    <SUITE FILE_PATH="coverage/VAM$vam_qc_chsh_v2.coverage" NAME="vam_qc_chsh_v2 Coverage Results" MODIFIED="1754993593689" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
-    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$Figure_1_Net_Swirl_Gravity_Field.coverage" NAME="Figure 1 Net Swirl Gravity Field Coverage Results" MODIFIED="1754566555504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_Experiments" />
-    <SUITE FILE_PATH="coverage/VAM$MagneticCircleRodin.coverage" NAME="MagneticCircleRodin Coverage Results" MODIFIED="1754994970032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$02_Starship_2_inv.coverage" NAME="02_Starship-2 inv Coverage Results" MODIFIED="1752424773159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$HelicityCalculation.coverage" NAME="HelicityCalculation Coverage Results" MODIFIED="1753893654664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
-    <SUITE FILE_PATH="coverage/VAM$knot_6_2.coverage" NAME="knot_6_2 Coverage Results" MODIFIED="1753293382662" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
-    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$classify_particles.coverage" NAME="classify_particles Coverage Results" MODIFIED="1754638244406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots/ALL" />
-    <SUITE FILE_PATH="coverage/VAMCore$test.coverage" NAME="test Coverage Results" MODIFIED="1752969406787" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$knots_toggle_autoknot.coverage" NAME="knots-toggle-autoknot Coverage Results" MODIFIED="1754638509925" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
-    <SUITE FILE_PATH="coverage/VAM$rotating_current_rodin_fields.coverage" NAME="rotating_current_rodin_fields Coverage Results" MODIFIED="1752424861440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAMCore$8knot_Trefoil.coverage" NAME="8knot-Trefoil Coverage Results" MODIFIED="1752969413265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$TimeConstruct.coverage" NAME="TimeConstruct Coverage Results" MODIFIED="1751915068127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - 2 Swirl Clocks/images" />
-    <SUITE FILE_PATH="coverage/VAMCore$Rodin_magnetic_fields.coverage" NAME="Rodin_magnetic_fields Coverage Results" MODIFIED="1752967471245" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$3dKnots.coverage" NAME="3dKnots Coverage Results" MODIFIED="1755160387823" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
-    <SUITE FILE_PATH="coverage/VAM$MoleculeWeight.coverage" NAME="MoleculeWeight Coverage Results" MODIFIED="1752073629003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM-MASTER Paper" />
-    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$vamcore2.coverage" NAME="vamcore2 Coverage Results" MODIFIED="1754643446674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_Experiments" />
-    <SUITE FILE_PATH="coverage/VAM$vam_qc_chsh.coverage" NAME="vam_qc_chsh Coverage Results" MODIFIED="1754989675880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
-    <SUITE FILE_PATH="coverage/VAM$torus.coverage" NAME="torus Coverage Results" MODIFIED="1752431773431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
-    <SUITE FILE_PATH="coverage/VAM$phi_asinh_demo.coverage" NAME="phi_asinh_demo Coverage Results" MODIFIED="1754990600185" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
-    <SUITE FILE_PATH="coverage/VAM$magneticCircleArrows.coverage" NAME="magneticCircleArrows Coverage Results" MODIFIED="1752425627820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$8knot.coverage" NAME="8knot Coverage Results" MODIFIED="1752424545584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$knots.coverage" NAME="knots Coverage Results" MODIFIED="1754642722989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_1_TimeDilation_in_3D/images" />
-    <SUITE FILE_PATH="coverage/VAM$coil_biot_savart_sim.coverage" NAME="coil_biot-savart_sim Coverage Results" MODIFIED="1754988012520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
-    <SUITE FILE_PATH="coverage/VAM$vam_qc_chsh_both.coverage" NAME="vam_qc_chsh_both Coverage Results" MODIFIED="1754996382543" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
-    <SUITE FILE_PATH="coverage/VAMCore$8knot.coverage" NAME="8knot Coverage Results" MODIFIED="1752969741067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$QuantumProcessing3.coverage" NAME="QuantumProcessing3 Coverage Results" MODIFIED="1754988110198" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
-    <SUITE FILE_PATH="coverage/VAM$6_2_topview.coverage" NAME="6_2_topview Coverage Results" MODIFIED="1751908053943" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
-    <SUITE FILE_PATH="coverage/VAMCore$autoknot.coverage" NAME="autoknot Coverage Results" MODIFIED="1752972268197" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
-    <SUITE FILE_PATH="coverage/VAM$Masses_Topology.coverage" NAME="Masses_Topology Coverage Results" MODIFIED="1754994113632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_8_MASTER_Paper" />
-    <SUITE FILE_PATH="coverage/VAM$trefoil_field_lines.coverage" NAME="trefoil_field_lines Coverage Results" MODIFIED="1752644028053" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAMpyBindings/examples" />
-    <SUITE FILE_PATH="coverage/VAMCore$03_Starship_3phase_36points_18_bidirectional.coverage" NAME="03_Starship-3phase-36points-18 bidirectional Coverage Results" MODIFIED="1752968378418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$doublestarship.coverage" NAME="doublestarship Coverage Results" MODIFIED="1754992757169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$vamcore.coverage" NAME="vamcore Coverage Results" MODIFIED="1754580797453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_Experiments" />
-    <SUITE FILE_PATH="coverage/VAM$8knot_Trefoil.coverage" NAME="8knot-Trefoil Coverage Results" MODIFIED="1752424632219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
-    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$all_knots.coverage" NAME="all_knots Coverage Results" MODIFIED="1754566583814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images" />
-    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$FourierSeriesFromKnotPoints.coverage" NAME="FourierSeriesFromKnotPoints Coverage Results" MODIFIED="1753966368643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
-    <SUITE FILE_PATH="coverage/VAM$change_bib_to_footnoting.coverage" NAME="change_bib_to_footnoting Coverage Results" MODIFIED="1752345948506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_15_Quantum_Gravity" />
-    <SUITE FILE_PATH="coverage/VAM$6_2knot.coverage" NAME="6_2knot Coverage Results" MODIFIED="1752431244452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$vam_qc_chsh_v2.coverage" NAME="vam_qc_chsh_v2 Coverage Results" MODIFIED="1755017068208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
+    <SUITE FILE_PATH="coverage/VAM$phi_asinh_demo.coverage" NAME="phi_asinh_demo Coverage Results" MODIFIED="1755035315499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
     <SUITE FILE_PATH="coverage/VAM$vam_fseries_gui.coverage" NAME="vam_fseries_gui Coverage Results" MODIFIED="1754990160191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
-    <SUITE FILE_PATH="coverage/VAMCore$doublestarship.coverage" NAME="doublestarship Coverage Results" MODIFIED="1752968481994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAMCore$.coverage" NAME=" Coverage Results" MODIFIED="1752957951546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/VAM$bubble.coverage" NAME="bubble Coverage Results" MODIFIED="1753295199079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$QuantumProcessing3b.coverage" NAME="QuantumProcessing3b Coverage Results" MODIFIED="1754988298437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
-    <SUITE FILE_PATH="coverage/VAMCore$bubble.coverage" NAME="bubble Coverage Results" MODIFIED="1752966915606" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$bowl.coverage" NAME="bowl Coverage Results" MODIFIED="1754579006549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
-    <SUITE FILE_PATH="coverage/VAM$knots.coverage" NAME="knots Coverage Results" MODIFIED="1753345605412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
-    <SUITE FILE_PATH="coverage/VAM$Rodin_magnetic_fields.coverage" NAME="Rodin_magnetic_fields Coverage Results" MODIFIED="1752427869291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$canonical_vam_chsh.coverage" NAME="canonical_vam_chsh Coverage Results" MODIFIED="1754999275924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
-    <SUITE FILE_PATH="coverage/VAM$timediagram.coverage" NAME="timediagram Coverage Results" MODIFIED="1752051334138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - 0 Einsteins Æther" />
-    <SUITE FILE_PATH="coverage/VAM$proton_neutron_weigth.coverage" NAME="proton_neutron_weigth Coverage Results" MODIFIED="1751848726214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM-MASTER Paper" />
-    <SUITE FILE_PATH="coverage/VAMCore$NODES.coverage" NAME="NODES Coverage Results" MODIFIED="1752967419859" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$QuantumProcessing4.coverage" NAME="QuantumProcessing4 Coverage Results" MODIFIED="1754989315626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
-    <SUITE FILE_PATH="coverage/VAMCore$03_slice_biot.coverage" NAME="03_slice biot Coverage Results" MODIFIED="1752968655991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$Helicity.coverage" NAME="Helicity Coverage Results" MODIFIED="1751904879608" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
-    <SUITE FILE_PATH="coverage/VAMCore$02_Starship_3phase_36points.coverage" NAME="02_Starship-3phase-36points Coverage Results" MODIFIED="1752968703840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAMCore$doublestarshipteste.coverage" NAME="doublestarshipteste Coverage Results" MODIFIED="1752968462704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$PressureDropForceField.coverage" NAME="PressureDropForceField Coverage Results" MODIFIED="1754578692198" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_Experiments" />
-    <SUITE FILE_PATH="coverage/VAM$NODES.coverage" NAME="NODES Coverage Results" MODIFIED="1752427455247" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$vam_vs_gr_potential_plot.coverage" NAME="vam_vs_gr_potential_plot Coverage Results" MODIFIED="1751903749996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
-    <SUITE FILE_PATH="coverage/VAM$neonKnot_6_2.coverage" NAME="neonKnot.6_2 Coverage Results" MODIFIED="1753287930497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
-    <SUITE FILE_PATH="coverage/VAM$golden_rapidity_demo.coverage" NAME="golden_rapidity_demo Coverage Results" MODIFIED="1754992366781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
-    <SUITE FILE_PATH="coverage/VAM$get_hyperbollic_Mass_Number.coverage" NAME="get_hyperbollic_Mass_Number Coverage Results" MODIFIED="1755163526834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
-    <SUITE FILE_PATH="coverage/VAMCore$knots.coverage" NAME="knots Coverage Results" MODIFIED="1752973335370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
-    <SUITE FILE_PATH="coverage/VAM$QuantumProcessing5.coverage" NAME="QuantumProcessing5 Coverage Results" MODIFIED="1754990386957" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
-    <SUITE FILE_PATH="coverage/VAMCore$rotating_current_rodin_fields.coverage" NAME="rotating_current_rodin_fields Coverage Results" MODIFIED="1752969037957" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
-    <SUITE FILE_PATH="coverage/VAM$PressureDropForceField.coverage" NAME="PressureDropForceField Coverage Results" MODIFIED="1753271119280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_Experiments" />
-    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$coil_boit.coverage" NAME="coil_boit Coverage Results" MODIFIED="1754578378642" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/VAM$autoknot.coverage" NAME="autoknot Coverage Results" MODIFIED="1753345429330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
-    <SUITE FILE_PATH="coverage/VAM$all_knots.coverage" NAME="all_knots Coverage Results" MODIFIED="1752435420032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_5_Lagrangian_Gravity_Electromagnetism/images" />
-    <SUITE FILE_PATH="coverage/VAM$testknot.coverage" NAME="testknot Coverage Results" MODIFIED="1752608691698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$fieldpressure.coverage" NAME="fieldpressure Coverage Results" MODIFIED="1754578632169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_Experiments" />
-    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$helicity2.coverage" NAME="helicity2 Coverage Results" MODIFIED="1754638812753" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
     <SUITE FILE_PATH="coverage/VAMCore$knot_6_2.coverage" NAME="knot_6_2 Coverage Results" MODIFIED="1752971761263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
+    <SUITE FILE_PATH="coverage/VAM$pendulum_clockshift.coverage" NAME="pendulum_clockshift Coverage Results" MODIFIED="1755228250852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
+    <SUITE FILE_PATH="coverage/VAMCore$8knot_Trefoil.coverage" NAME="8knot-Trefoil Coverage Results" MODIFIED="1752969413265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAMCore$bubble.coverage" NAME="bubble Coverage Results" MODIFIED="1752966915606" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$vamcore2.coverage" NAME="vamcore2 Coverage Results" MODIFIED="1755016888629" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_Experiments" />
+    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$Figure_2_Pressure_deficit_map.coverage" NAME="Figure 2 Pressure deficit map Coverage Results" MODIFIED="1754558002509" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_Experiments" />
+    <SUITE FILE_PATH="coverage/VAM$QuantumProcessing3b.coverage" NAME="QuantumProcessing3b Coverage Results" MODIFIED="1754988298437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
+    <SUITE FILE_PATH="coverage/VAM$8knot.coverage" NAME="8knot Coverage Results" MODIFIED="1752424545584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
+    <SUITE FILE_PATH="coverage/VAM$reference_cleaning.coverage" NAME="reference_cleaning Coverage Results" MODIFIED="1751967331566" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/VAM$01_streamlinesDiPole.coverage" NAME="01-streamlinesDiPole Coverage Results" MODIFIED="1754992765807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_2_Swirl_Clocks/images" />
+    <SUITE FILE_PATH="coverage/VAMCore$cropper.coverage" NAME="cropper Coverage Results" MODIFIED="1752869008603" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$coil_biot_savart_sim.coverage" NAME="coil_biot-savart_sim Coverage Results" MODIFIED="1754641657056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
+    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$coil_boit.coverage" NAME="coil_boit Coverage Results" MODIFIED="1754578378642" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/VAM$magneticCircle.coverage" NAME="magneticCircle Coverage Results" MODIFIED="1752426259414" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAMCore$8knot.coverage" NAME="8knot Coverage Results" MODIFIED="1752969741067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$neonKnot_6_2.coverage" NAME="neonKnot.6_2 Coverage Results" MODIFIED="1753287930497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
+    <SUITE FILE_PATH="coverage/VAM$vam_qc_chsh_both.coverage" NAME="vam_qc_chsh_both Coverage Results" MODIFIED="1754996382543" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
+    <SUITE FILE_PATH="coverage/VAM$fieldpressure.coverage" NAME="fieldpressure Coverage Results" MODIFIED="1755035047764" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
+    <SUITE FILE_PATH="coverage/VAMCore$swirltorus36_knots.coverage" NAME="swirltorus36 knots Coverage Results" MODIFIED="1752966295911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations" />
+    <SUITE FILE_PATH="coverage/VAM$knot_6_2.coverage" NAME="knot_6_2 Coverage Results" MODIFIED="1753293382662" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
+    <SUITE FILE_PATH="coverage/VAM$MagneticCircleRodin.coverage" NAME="MagneticCircleRodin Coverage Results" MODIFIED="1754994970032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$vamcore.coverage" NAME="vamcore Coverage Results" MODIFIED="1754580797453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_Experiments" />
+    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$HelicityCalculation.coverage" NAME="HelicityCalculation Coverage Results" MODIFIED="1753893654664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
+    <SUITE FILE_PATH="coverage/VAM$vam_qc_chsh_v1.coverage" NAME="vam_qc_chsh_v1 Coverage Results" MODIFIED="1754992238380" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
+    <SUITE FILE_PATH="coverage/VAM$trefoil_field_lines.coverage" NAME="trefoil_field_lines Coverage Results" MODIFIED="1752644028053" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAMpyBindings/examples" />
+    <SUITE FILE_PATH="coverage/VAM$autoknot.coverage" NAME="autoknot Coverage Results" MODIFIED="1753345429330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
+    <SUITE FILE_PATH="coverage/VAMCore$03_Starship_3phase_36points_18_bidirectional.coverage" NAME="03_Starship-3phase-36points-18 bidirectional Coverage Results" MODIFIED="1752968378418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$torus.coverage" NAME="torus Coverage Results" MODIFIED="1752431773431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
+    <SUITE FILE_PATH="coverage/VAM$canonical_vam_chsh_extras.coverage" NAME="canonical_vam_chsh_extras Coverage Results" MODIFIED="1755017688459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
+    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$FourierSeriesFromKnotPoints.coverage" NAME="FourierSeriesFromKnotPoints Coverage Results" MODIFIED="1753966368643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
+    <SUITE FILE_PATH="coverage/VAM$testknot.coverage" NAME="testknot Coverage Results" MODIFIED="1752608691698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/VAM$Masses_Topology.coverage" NAME="Masses_Topology Coverage Results" MODIFIED="1755016562616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_8_MASTER_Paper" />
+    <SUITE FILE_PATH="coverage/VAM$8knot_Trefoil.coverage" NAME="8knot-Trefoil Coverage Results" MODIFIED="1752424632219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
+    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$Figure_1_Net_Swirl_Gravity_Field.coverage" NAME="Figure 1 Net Swirl Gravity Field Coverage Results" MODIFIED="1754566555504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_Experiments" />
+    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$helicity2.coverage" NAME="helicity2 Coverage Results" MODIFIED="1754638812753" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
+    <SUITE FILE_PATH="coverage/VAM$main_vam_infer.coverage" NAME="main_vam_infer Coverage Results" MODIFIED="1755227295223" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_inference_demo" />
+    <SUITE FILE_PATH="coverage/VAM$Helicity.coverage" NAME="Helicity Coverage Results" MODIFIED="1751904879608" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
+    <SUITE FILE_PATH="coverage/VAMCore$doublestarshipteste.coverage" NAME="doublestarshipteste Coverage Results" MODIFIED="1752968462704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$magneticCircleArrows.coverage" NAME="magneticCircleArrows Coverage Results" MODIFIED="1752425627820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$QuantumProcessing4.coverage" NAME="QuantumProcessing4 Coverage Results" MODIFIED="1754989315626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
+    <SUITE FILE_PATH="coverage/VAM$bubble.coverage" NAME="bubble Coverage Results" MODIFIED="1753295199079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$quarck_streamlines.coverage" NAME="quarck streamlines Coverage Results" MODIFIED="1754578300551" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/VAMCore$.coverage" NAME=" Coverage Results" MODIFIED="1752957951546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/VAM$proton_neutron_weigth.coverage" NAME="proton_neutron_weigth Coverage Results" MODIFIED="1751848726214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM-MASTER Paper" />
+    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$PressureDropForceField.coverage" NAME="PressureDropForceField Coverage Results" MODIFIED="1754578692198" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_Experiments" />
+    <SUITE FILE_PATH="coverage/VAMCore$6274.coverage" NAME="6274 Coverage Results" MODIFIED="1752709477549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_15_Quantum_Gravity" />
+    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$fieldpressure.coverage" NAME="fieldpressure Coverage Results" MODIFIED="1754578632169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_Experiments" />
+    <SUITE FILE_PATH="coverage/VAMCore$Rodin_magnetic_fields.coverage" NAME="Rodin_magnetic_fields Coverage Results" MODIFIED="1752967471245" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$knot_6_2.coverage" NAME="knot_6_2 Coverage Results" MODIFIED="1754638780691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
+    <SUITE FILE_PATH="coverage/VAM$VAM_MASS_FORMULA.coverage" NAME="VAM-MASS_FORMULA Coverage Results" MODIFIED="1755735921730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM-20_String_Theory" />
+    <SUITE FILE_PATH="coverage/VAM$pendulum_groningen.coverage" NAME="pendulum_groningen Coverage Results" MODIFIED="1755224989573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
+    <SUITE FILE_PATH="coverage/VAM$vam_vs_gr_potential_plot.coverage" NAME="vam_vs_gr_potential_plot Coverage Results" MODIFIED="1751903749996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
+    <SUITE FILE_PATH="coverage/VAM$coil_biot_savart_sim.coverage" NAME="coil_biot-savart_sim Coverage Results" MODIFIED="1755035040746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
+    <SUITE FILE_PATH="coverage/VAMCore$knots.coverage" NAME="knots Coverage Results" MODIFIED="1752973335370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
+    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$knots.coverage" NAME="knots Coverage Results" MODIFIED="1754642722989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_1_TimeDilation_in_3D/images" />
+    <SUITE FILE_PATH="coverage/VAM$python_demo_py.coverage" NAME="python demo.py Coverage Results" MODIFIED="1755221269114" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_inference_demo" />
+    <SUITE FILE_PATH="coverage/VAM$vam_qc_chsh.coverage" NAME="vam_qc_chsh Coverage Results" MODIFIED="1754989675880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
+    <SUITE FILE_PATH="coverage/VAM$QuantumProcessing.coverage" NAME="QuantumProcessing Coverage Results" MODIFIED="1754987650019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
+    <SUITE FILE_PATH="coverage/VAM$batch_fseries_vam__1_.coverage" NAME="batch_fseries_vam (1) Coverage Results" MODIFIED="1755035299756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
+    <SUITE FILE_PATH="coverage/VAM$compute_Hvortex_and_mass__1_.coverage" NAME="compute_Hvortex_and_mass (1) Coverage Results" MODIFIED="1755035031069" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
+    <SUITE FILE_PATH="coverage/VAM$Rodin_magnetic_fields.coverage" NAME="Rodin_magnetic_fields Coverage Results" MODIFIED="1752427869291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$vam_knot_workbench.coverage" NAME="vam_knot_workbench Coverage Results" MODIFIED="1755107796251" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
+    <SUITE FILE_PATH="coverage/VAM$all_knots.coverage" NAME="all_knots Coverage Results" MODIFIED="1752435420032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_5_Lagrangian_Gravity_Electromagnetism/images" />
+    <SUITE FILE_PATH="coverage/VAMCore$autoknot.coverage" NAME="autoknot Coverage Results" MODIFIED="1752972268197" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
+    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$bowl.coverage" NAME="bowl Coverage Results" MODIFIED="1754579006549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
+    <SUITE FILE_PATH="coverage/VAM$generate_data.coverage" NAME="generate_data Coverage Results" MODIFIED="1755103694110" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM-lab" />
+    <SUITE FILE_PATH="coverage/VAM$knots.coverage" NAME="knots Coverage Results" MODIFIED="1753345605412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
+    <SUITE FILE_PATH="coverage/VAM$TimeConstruct.coverage" NAME="TimeConstruct Coverage Results" MODIFIED="1751915068127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - 2 Swirl Clocks/images" />
+    <SUITE FILE_PATH="coverage/VAM$03_magnetic_round_coil.coverage" NAME="03_magnetic round coil Coverage Results" MODIFIED="1752425539443" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$vamcore2.coverage" NAME="vamcore2 Coverage Results" MODIFIED="1754643446674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_Experiments" />
+    <SUITE FILE_PATH="coverage/VAM$rotating_current_rodin_fields.coverage" NAME="rotating_current_rodin_fields Coverage Results" MODIFIED="1752424861440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
+    <SUITE FILE_PATH="coverage/VAM$QuantumProcessing2.coverage" NAME="QuantumProcessing2 Coverage Results" MODIFIED="1754988757142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
+    <SUITE FILE_PATH="coverage/VAM$change_bib_to_footnoting.coverage" NAME="change_bib_to_footnoting Coverage Results" MODIFIED="1752345948506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_15_Quantum_Gravity" />
+    <SUITE FILE_PATH="coverage/VAMCore$test.coverage" NAME="test Coverage Results" MODIFIED="1752969406787" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$NODES.coverage" NAME="NODES Coverage Results" MODIFIED="1752427455247" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$torusspirals.coverage" NAME="torusspirals Coverage Results" MODIFIED="1752431790353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Diagrams" />
+    <SUITE FILE_PATH="coverage/VAM$golden_rapidity_demo.coverage" NAME="golden_rapidity_demo Coverage Results" MODIFIED="1754992366781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
+    <SUITE FILE_PATH="coverage/VAM$7_4knot.coverage" NAME="7_4knot Coverage Results" MODIFIED="1752431182408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$photonAnimation.coverage" NAME="photonAnimation Coverage Results" MODIFIED="1752424817557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
+    <SUITE FILE_PATH="coverage/VAM$vam_qc_chsh_both_checked.coverage" NAME="vam_qc_chsh_both_checked Coverage Results" MODIFIED="1755017055623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
+    <SUITE FILE_PATH="coverage/VAMCore$doublestarship.coverage" NAME="doublestarship Coverage Results" MODIFIED="1752968481994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAMCore$rotating_current_rodin_fields.coverage" NAME="rotating_current_rodin_fields Coverage Results" MODIFIED="1752969037957" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$MoleculeWeight.coverage" NAME="MoleculeWeight Coverage Results" MODIFIED="1752073629003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM-MASTER Paper" />
+    <SUITE FILE_PATH="coverage/VAM$TemporalOntology.coverage" NAME="TemporalOntology Coverage Results" MODIFIED="1753193206663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images" />
+    <SUITE FILE_PATH="coverage/VAM$quarck_streamlines.coverage" NAME="quarck streamlines Coverage Results" MODIFIED="1755035061105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
+    <SUITE FILE_PATH="coverage/VAM$QuantumProcessing3.coverage" NAME="QuantumProcessing3 Coverage Results" MODIFIED="1754988110198" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
+    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$classify_particles.coverage" NAME="classify_particles Coverage Results" MODIFIED="1754638244406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots/ALL" />
+    <SUITE FILE_PATH="coverage/VAM$timediagram.coverage" NAME="timediagram Coverage Results" MODIFIED="1752051334138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - 0 Einsteins Æther" />
+    <SUITE FILE_PATH="coverage/VAM$6_2knot.coverage" NAME="6_2knot Coverage Results" MODIFIED="1752431244452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$02_Starship_2_inv.coverage" NAME="02_Starship-2 inv Coverage Results" MODIFIED="1752424773159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/good illustrations" />
+    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$knots_toggle_autoknot.coverage" NAME="knots-toggle-autoknot Coverage Results" MODIFIED="1754638509925" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py_knots" />
+    <SUITE FILE_PATH="coverage/VAM$doublestarship.coverage" NAME="doublestarship Coverage Results" MODIFIED="1754992757169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAMCore$NODES.coverage" NAME="NODES Coverage Results" MODIFIED="1752967419859" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM_0_From_Einstein_to_the_Vortex_Fluid_paradigm_pdf$all_knots.coverage" NAME="all_knots Coverage Results" MODIFIED="1754566583814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images" />
+    <SUITE FILE_PATH="coverage/VAMCore$02_Starship_3phase_36points.coverage" NAME="02_Starship-3phase-36points Coverage Results" MODIFIED="1752968703840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations/Biot-Savart" />
+    <SUITE FILE_PATH="coverage/VAM$canonical_vam_chsh.coverage" NAME="canonical_vam_chsh Coverage Results" MODIFIED="1755018057967" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
+    <SUITE FILE_PATH="coverage/VAM$PressureDropForceField.coverage" NAME="PressureDropForceField Coverage Results" MODIFIED="1755035011833" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
+    <SUITE FILE_PATH="coverage/VAM$ring.coverage" NAME="ring Coverage Results" MODIFIED="1755358403789" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/images/Python VAM Illustrations" />
     <SUITE FILE_PATH="coverage/VAM$dipole.coverage" NAME="dipole Coverage Results" MODIFIED="1751969712280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM - Lagrangian Gravity Electromagnetism/images" />
     <SUITE FILE_PATH="coverage/VAM$dl_knots.coverage" NAME="dl_knots Coverage Results" MODIFIED="1755035291134" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS" />
     <SUITE FILE_PATH="coverage/VAM$6274.coverage" NAME="6274 Coverage Results" MODIFIED="1755016785447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VAM_15_Quantum_Gravity" />

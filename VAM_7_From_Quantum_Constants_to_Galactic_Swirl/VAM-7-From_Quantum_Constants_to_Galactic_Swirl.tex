@@ -11,8 +11,6 @@
 \newcommand{\paperdoi}{10.5281/zenodo.15750583}
 
 
-\ifdefined\standalonechapter\else
-% Standalone mode
 \documentclass[12pt]{article}
 \usepackage{amssymb}
 \input{../vamstyle.sty}
@@ -36,12 +34,7 @@
 
 
     \titlepageClose
-    \fi
 
-    \ifdefined\standalonechapter
-    \section{\papertitle}
-    \else
-    \fi
 % ============= Begin of content ============
 
 
@@ -696,17 +689,9 @@ Future directions include:
 This study thus represents a pivotal step in bridging quantum and cosmological domains through topological fluid mechanics, challenging the necessity of dark matter by offering a coherent and predictive alternative.
 
 
-
-
-
-
 % ============== End of content =============
 
-% === Bibliography (only for standalone) ===
-\ifdefined\standalonechapter\else
 \bibliographystyle{unsrt}
 \bibliography{../references}
 \end{document}
-\fi
 
-}

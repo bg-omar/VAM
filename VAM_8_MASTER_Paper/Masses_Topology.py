@@ -63,7 +63,15 @@ knot_data = [
     ("8_9", 3.4657359, True, 8), ("8_10", 3.6638624, True, 8),
 ]
 df_knots = pd.DataFrame(knot_data, columns=["Knot", "Volume", "Chiral", "Crossings"])
-chiral_hyperbolic_knots = df_knots[(df_knots["Volume"] > 0) & (df_knots["Chiral"])]
+
+# Define column names and create DataFrame
+df = pd.DataFrame(knot_data, columns=["Knot", "Volume", "Chiral", "Crossings"])
+
+# Filter chiral hyperbolic knots (Volume > 0) and sort by volume
+chiral_hyperbolic_knots = df[(df["Volume"] > 0)].sort_values(by="Volume")
+
+# Display the filtered DataFrame
+tools.display_dataframe_to_user(name="Chiral Hyperbolic Knots with Topological Volume", dataframe=chiral_hyperbolic_knots)
 
 # ─── Utility Functions ──────────────────────────────────────────
 # Orbital radius per electron in atom
@@ -396,13 +404,3 @@ df_updated = pd.DataFrame({
 tools.display_dataframe_to_user(name="VAM Masses with Electron Helicity Correction", dataframe=df_updated)
 
 
-
-
-# Define column names and create DataFrame
-df = pd.DataFrame(knot_data, columns=["Knot", "Volume", "Chiral", "Crossings"])
-
-# Filter chiral hyperbolic knots (Volume > 0) and sort by volume
-chiral_hyperbolic_knots = df[(df["Volume"] > 0) & (df["Chiral"])].sort_values(by="Volume")
-
-# Display the filtered DataFrame
-tools.display_dataframe_to_user(name="Chiral Hyperbolic Knots with Topological Volume", dataframe=chiral_hyperbolic_knots)
