@@ -13,38 +13,49 @@ avogadro = 6.02214076e23
 
 # ─── Knot Volumes ────────────────────────────────────────────────────────────
 V_torus = 2 * math.pi**2 * (2 * r_c) * r_c**2
-V_u_topo = 2.8281  # knot 6_2
-V_d_topo = 3.1639  # knot 7_4
+V_u_topo = 2.8281
+V_d_topo = 3.1639
 
 # ─── Higgs/Topo Correction ───────────────────────────────────────────────────
 def higgs_topo_factor(knot_complexity, twist=0, link=0, alpha_corr=0.02):
     return 1.0 + alpha_corr * (knot_complexity + twist + link)
 
 # ─── VAM Mass Formula ────────────────────────────────────────────────────────
-def vam_mass_higgs(knot_counts, m_threads=1, s=3, k=0, correction_factor=1.0):
-    V_list = [count * topo_vol * V_torus for topo_vol, count in knot_counts]
-    V_sum = sum(V_list)
-    eta = (1 / m_threads)**3.0
-    xi = len(V_list)**(-1 / phi)
-    tension = phi**(-s)
-    energy_density = 0.5 * rho_core * (C_e / (phi**k))**2
-    M = (4 / alpha) * eta * xi * tension * V_sum * energy_density / c**2
-    return M * correction_factor
+def vam_master_mass(n_knots, m_threads, s, V_list):
+    """
+    Mass = (4 / alpha) * eta * xi * tension * volume_sum * energy_density / c ** 2
+    4/alpha: Electroweak amplification (dimensionless)
+    eta: Thread suppression factor (dimensionless)
+    xi: Coherence suppression (dimensionless)
+    tension: Topological tension (dimensionless)
+    volume_sum * energy_density: Total base energy (Joules)
+    / c^2: Convert energy -> mass (via E=mc^2)
+    """
+    volume_sum = sum(V_list)
+    eta = (1 / m_threads)**(3)
+    xi = n_knots**(-1/phi)
+    tension = 1 / phi**s
+    energy_density = 0.5 * rho_core * C_e**2
+    M = (4 / alpha) * eta * xi * tension * volume_sum * energy_density / c**2
+    return M
 
 # ─── Helicity Electron Mass ──────────────────────────────────────────────────
 def vam_electron_mass_helicity(p=2, q=3):
+    """ Calculate electron mass from helicity-based formula."""
     sqrt_term = math.sqrt(p**2 + q**2)
-    eta = 1.0
-    xi = 1.0
-    tension = 1 / phi
-    V_helical = 4 * math.pi**2 * r_c**3
+    m = 1
+    n = 1
+    s = 1
+    eta = (1 / m) ** 1.5
+    xi = n ** (-1 / phi)
+    tension = 1 / phi ** s
+    V_helical = 4 * math.pi ** 2 * r_c ** 3
     A = eta * xi * tension * V_helical
     factor = 8 * math.pi * rho_core * r_c**3 / C_e
-    return factor * (sqrt_term + A)
-
+    M_e_helicity = factor * (sqrt_term + A)
+    return M_e_helicity
 
 # ─── Atomic and Molecular Definitions ───────────────────────────
-# Format: (Symbol, protons, neutrons, electrons, atomic mass in g/mol)
 atoms_molecules = [
     ("H", 1, 0, 1, 1.00784), ("He", 2, 2, 2, 4.002602), ("Li", 3, 4, 3, 6.94), ("Be", 4, 5, 4, 9.0122),
     ("B", 5, 6, 5, 10.81), ("C", 6, 6, 6, 12.011), ("N", 7, 7, 7, 14.0067), ("O", 8, 8, 8, 15.999),
@@ -77,21 +88,6 @@ atoms_molecules = [
     ("Caffeine", 194, 194, 194, 194.19), ("DNA (avg)", 10000, 10000, 10000, 6500.0)
 ]
 
-
-# ─── Knot Topology Definitions ──────────────────────────────────
-knot_data = [
-    ("3_1", 0.0,       True, 3), ("4_1", 2.02988321, False, 4), ("5_2", 2.8281220, True, 5),
-    ("6_1", 3.1639632, True, 6), ("6_2", 2.8281220, True, 6), ("6_3", 3.1639632, True, 6),
-    ("7_2", 3.1639632, True, 7), ("7_3", 3.4657359, True, 7), ("7_4", 3.1639632, True, 7),
-    ("7_5", 3.6638624, True, 7), ("7_6", 3.6638624, True, 7), ("7_7", 3.4657359, True, 7),
-    ("8_2", 3.6638624, True, 8), ("8_3", 3.4657359, True, 8), ("8_5", 3.6638624, True, 8),
-    ("8_6", 4.0597658, True, 8), ("8_7", 4.0597658, True, 8), ("8_8", 3.6638624, True, 8),
-    ("8_9", 3.4657359, True, 8), ("8_10", 3.6638624, True, 8),
-]
-df_knots = pd.DataFrame(knot_data, columns=["Knot", "Volume", "Chiral", "Crossings"])
-chiral_hyperbolic_knots = df_knots[(df_knots["Volume"] > 0) & (df_knots["Chiral"])]
-
-
 # ─── Emoji Marker ────────────────────────────────────────────────────────────
 def emoji_marker(diff):
     d = abs(diff)
@@ -106,39 +102,50 @@ def emoji_marker(diff):
 
 # ─── Run All Calculations ────────────────────────────────────────────────────
 if __name__ == "__main__":
-    # 1. Electron
-    base_e_mass = vam_electron_mass_helicity()
-    e_corr = higgs_topo_factor(3, twist=1)
-    M_e_pred = base_e_mass * e_corr
+    # 1. Calculate Elementary Particles' Masses
+    M_e_pred_base = vam_electron_mass_helicity()
+    e_corr = higgs_topo_factor(knot_complexity=3, twist=1)
+    M_e_pred = M_e_pred_base * e_corr
+    M_e_actual = M_e
 
-    # 2. Quarks
-    M_up = vam_mass_higgs(knot_counts=[(V_u_topo, 2)])
-    M_down = vam_mass_higgs(knot_counts=[(V_d_topo, 1)])
+    V_u_list = [V_u_topo * V_torus] * 2
+    V_d_list = [V_d_topo * V_torus] * 1
+    M_up = vam_master_mass(n_knots=2, m_threads=1, s=3, V_list=V_u_list)
+    M_down = vam_master_mass(n_knots=1, m_threads=1, s=3, V_list=V_d_list)
 
-    # 3. Proton (uud), Neutron (udd)
-    M_proton = vam_mass_higgs(knot_counts=[(V_u_topo, 2), (V_d_topo, 1)])
-    M_neutron = vam_mass_higgs(knot_counts=[(V_u_topo, 1), (V_d_topo, 2)])
+    V_proton = [V_u_topo * V_torus] * 2 + [V_d_topo * V_torus] * 1
+    M_proton_pred = vam_master_mass(n_knots=3, m_threads=1, s=3, V_list=V_proton)
+    M_proton_actual = 1.67262192369e-27
 
-    # 4. Atom predictions
-    rows = []
+    V_neutron = [V_u_topo * V_torus] * 1 + [V_d_topo * V_torus] * 2
+    M_neutron_pred = vam_master_mass(n_knots=3, m_threads=1, s=3, V_list=V_neutron)
+    M_neutron_actual = 1.67492749804e-27
+
+    # 2. Add elementary particles to a DataFrame
+    elem_rows = [
+        ("Electron", M_e_pred, M_e_actual, emoji_marker(100 * (M_e_pred - M_e_actual) / M_e_actual)),
+        ("Up quark", M_up, "—", "—"),
+        ("Down quark", M_down, "—", "—"),
+        ("Proton", M_proton_pred, M_proton_actual, emoji_marker(100 * (M_proton_pred - M_proton_actual) / M_proton_actual)),
+        ("Neutron", M_neutron_pred, M_neutron_actual, emoji_marker(100 * (M_neutron_pred - M_neutron_actual) / M_neutron_actual)),
+    ]
+    df_elem = pd.DataFrame(elem_rows, columns=["Particle", "Predicted Mass (kg)", "Actual Mass (kg)", "% Error"])
+
+    # 3. Predict Atomic and Molecular Masses based on elementary particle masses
+    atom_rows = []
     for name, p, n, e, gmol in atoms_molecules:
         actual_kg = gmol * 1e-3 / avogadro
-        predicted = p * M_proton + n * M_neutron + e * M_e_pred
+        predicted = p * M_proton_pred + n * M_neutron_pred + e * M_e_pred
         rel_error = 100 * (predicted - actual_kg) / actual_kg
-        rows.append((name, predicted, actual_kg, emoji_marker(rel_error)))
+        atom_rows.append((name, predicted, actual_kg, emoji_marker(rel_error)))
 
-    # 5. Add elementary particles
-    df_elem = pd.DataFrame([
-        ("Electron", M_e_pred, M_e, emoji_marker(100 * (M_e_pred - M_e) / M_e)),
-        ("Up quark", M_up, None, "—"),
-        ("Down quark", M_down, None, "—"),
-        ("Proton", M_proton, 1.67262192369e-27, emoji_marker(100 * (M_proton - 1.67262192369e-27) / 1.67262192369e-27)),
-        ("Neutron", M_neutron, 1.67492749804e-27, emoji_marker(100 * (M_neutron - 1.67492749804e-27) / 1.67492749804e-27)),
-    ], columns=["Particle", "Predicted Mass (kg)", "Actual Mass (kg)", "% Error"])
+    df_atoms = pd.DataFrame(atom_rows, columns=["Particle", "Predicted Mass (kg)", "Actual Mass (kg)", "% Error"])
 
-    df_atoms = pd.DataFrame(rows, columns=["Particle", "Predicted Mass (kg)", "Actual Mass (kg)", "% Error"])
+    # 4. Combine and Display
     df_final = pd.concat([df_elem, df_atoms], ignore_index=True)
-
-    # Display
     pd.set_option("display.float_format", lambda x: f"{x:.4e}" if isinstance(x, float) else str(x))
+
     print(df_final.to_string(index=False))
+
+    # 5. Save to CSV
+    df_final.to_csv("VAM_Mass_Results.csv", index=False)

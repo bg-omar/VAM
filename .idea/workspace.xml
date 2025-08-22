@@ -25,413 +25,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" id="6f2a8139-c825-4497-876b-70e1a130c5c3" name="Changes" comment="Update VAM documents and add new mass formula implementation; enhance metadata and structure">
-      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/Vortex_String_Theory_Mass_Fundamentals.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/fseries.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/fseries_batch_results.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/vam_batch_hypvol_from_fseries.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/vam_hypvol_no_deps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/vambindings.cp311-win_amd64.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/vamcore_batch_hypvol_from_fseries.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/test_imports.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" id="6f2a8139-c825-4497-876b-70e1a130c5c3" name="Changes" comment="Refactor file structure and add new utilities for VAM framework; rename and organize files, introduce new scripts for hyperbolic volume calculations">
+      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/Unified_Lagrangian_for_a_Vortex_String_Theory-v2.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/Unified_Lagrangian_for_a_Vortex_String_Theory-v3.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/Unified_Lagrangian_for_a_Vortex_String_Theory.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-20_String_Theory/VAM-20.2.2_String_Theory.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM-20_String_Theory/VAM-20.2.2_String_Theory.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_2_Swirl_Clocks/From_Quantum_Constants_to_Galactic_Swirl.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_7_From_Quantum_Constants_to_Galactic_Swirl/From_Quantum_Constants_to_Galactic_Swirl.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_2_Swirl_Clocks/galaxyRotation.png" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_7_From_Quantum_Constants_to_Galactic_Swirl/galaxyRotation.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_7_From_Quantum_Constants_to_Galactic_Swirl/VAM-7-From_Quantum_Constants_to_Galactic_Swirl.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_7_From_Quantum_Constants_to_Galactic_Swirl/VAM-7-From_Quantum_Constants_to_Galactic_Swirl.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_8_MASTER_Paper/Masses_Topology.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_8_MASTER_Paper/Masses_Topology.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_Experiments/appendix_C_ExperimentalValidationOfVortexCoreTangientalVelocity.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_Experiments/appendix_C_ExperimentalValidationOfVortexCoreTangientalVelocity.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/3dKnots.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/3dKnots.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/QuantumProcessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/QuantumProcessing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_inference_demo/out_plots/g_field_fit.png" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_inference_demo/out_plots/g_field_fit.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_inference_demo/out_plots/summary.json" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_inference_demo/out_plots/summary.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_inference_demo/out_plots/time_dilation_fit.png" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_inference_demo/out_plots/time_dilation_fit.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/get_hyperbollic_Mass_Number.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/get_hyperbollic_Mass_Number.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/12a_1202/knot.12a_1202.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/bigger/12a_1202/knot.12a_1202.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/12a_1202/knot.12a_1202.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/bigger/12a_1202/knot.12a_1202.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/12a_1202/knot.12a_1202.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/bigger/12a_1202/knot.12a_1202.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/12a_1202/knot.12a_1202.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/bigger/12a_1202/knot.12a_1202.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/12a_1202/knot.12a_1202z6.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/bigger/12a_1202/knot.12a_1202z6.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/12a_1202/knot.12a_1202z6.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/bigger/12a_1202/knot.12a_1202z6.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/12a_1202/knot.12a_1202z6.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/bigger/12a_1202/knot.12a_1202z6.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/12a_1202/knot.12a_1202z6.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/bigger/12a_1202/knot.12a_1202z6.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/15331/knot.15331.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/bigger/15331/knot.15331.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/15331/knot.15331.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/bigger/15331/knot.15331.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/15331/knot.15331.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/bigger/15331/knot.15331.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/15331/knot.15331.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/bigger/15331/knot.15331.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/3_1/knot.3_1.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/3_1/knot.3_1.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/3_1/knot.3_1.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/3_1/knot.3_1.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/3_1/knot.3_1.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/3_1/knot.3_1.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/3_1/knot.3_1.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/3_1/knot.3_1.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/3_1/knot.3_1p.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/3_1/knot.3_1p.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/3_1/knot.3_1p.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/3_1/knot.3_1p.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/3_1/knot.3_1p.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/3_1/knot.3_1p.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/3_1/knot.3_1p.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/3_1/knot.3_1p.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/3_1/knot.3_1u.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/3_1/knot.3_1u.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/3_1/knot.3_1u.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/3_1/knot.3_1u.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/3_1/knot.3_1u.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/3_1/knot.3_1u.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/3_1/knot.3_1u.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/3_1/knot.3_1u.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/4_1/knot.4_1.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/4_1/knot.4_1.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/4_1/knot.4_1.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/4_1/knot.4_1.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/4_1/knot.4_1.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/4_1/knot.4_1.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/4_1/knot.4_1.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/4_1/knot.4_1.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/4_1/knot.4_1d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/4_1/knot.4_1d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/4_1/knot.4_1d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/4_1/knot.4_1d.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/4_1/knot.4_1d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/4_1/knot.4_1d.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/4_1/knot.4_1d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/4_1/knot.4_1d.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/4_1/knot.4_1i8.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/4_1/knot.4_1i8.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/4_1/knot.4_1i8.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/4_1/knot.4_1i8.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/4_1/knot.4_1i8.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/4_1/knot.4_1i8.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/4_1/knot.4_1p.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/4_1/knot.4_1p.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/4_1/knot.4_1p.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/4_1/knot.4_1p.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/4_1/knot.4_1p.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/4_1/knot.4_1p.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/4_1/knot.4_1p.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/4_1/knot.4_1p.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/4_1/knot.4_1z.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/4_1/knot.4_1z.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/4_1/knot.4_1z.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/4_1/knot.4_1z.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/4_1/knot.4_1z.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/4_1/knot.4_1z.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/4_1/knot.4_1z.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/4_1/knot.4_1z.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_1/knot.5_1.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_1/knot.5_1.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_1/knot.5_1.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_1/knot.5_1.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_1/knot.5_1.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_1/knot.5_1.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_1/knot.5_1.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_1/knot.5_1.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_1/knot.5_1p.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_1/knot.5_1p.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_1/knot.5_1p.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_1/knot.5_1p.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_1/knot.5_1p.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_1/knot.5_1p.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_1/knot.5_1p.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_1/knot.5_1p.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_1/knot.5_1u.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_1/knot.5_1u.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_1/knot.5_1u.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_1/knot.5_1u.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_1/knot.5_1u.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_1/knot.5_1u.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_1/knot.5_1u.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_1/knot.5_1u.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_2/knot.5_2.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_2/knot.5_2.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_2/knot.5_2.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_2/knot.5_2.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_2/knot.5_2.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_2/knot.5_2.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_2/knot.5_2.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_2/knot.5_2.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_2/knot.5_2d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_2/knot.5_2d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_2/knot.5_2d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_2/knot.5_2d.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_2/knot.5_2d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_2/knot.5_2d.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_2/knot.5_2d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_2/knot.5_2d.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_2/knot.5_2r.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_2/knot.5_2r.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_2/knot.5_2r.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_2/knot.5_2r.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_2/knot.5_2r.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_2/knot.5_2r.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/5_2/knot.5_2r.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/5_2/knot.5_2r.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_1/knot.6_1.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_1/knot.6_1.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_1/knot.6_1.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_1/knot.6_1.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_1/knot.6_1.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_1/knot.6_1.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_1/knot.6_1.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_1/knot.6_1.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_2/knot.6_2.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_2/knot.6_2.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_2/knot.6_2.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_2/knot.6_2.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_2/knot.6_2.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_2/knot.6_2.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_2/knot.6_2.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_2/knot.6_2.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_2/knot.6_2d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_2/knot.6_2d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_2/knot.6_2d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_2/knot.6_2d.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_2/knot.6_2d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_2/knot.6_2d.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_2/knot.6_2d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_2/knot.6_2d.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_2/knot.6_2p.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_2/knot.6_2p.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_2/knot.6_2p.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_2/knot.6_2p.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_2/knot.6_2p.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_2/knot.6_2p.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_2/knot.6_2p.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_2/knot.6_2p.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_3/knot.6_3d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_3/knot.6_3d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_3/knot.6_3d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_3/knot.6_3d.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_3/knot.6_3d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_3/knot.6_3d.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_3/knot.6_3d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_3/knot.6_3d.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_3/knot.6_3z.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_3/knot.6_3z.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_3/knot.6_3z.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_3/knot.6_3z.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_3/knot.6_3z.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_3/knot.6_3z.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/6_3/knot.6_3z.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/6_3/knot.6_3z.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_1/knot.7_1.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_1/knot.7_1.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_1/knot.7_1.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_1/knot.7_1.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_1/knot.7_1.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_1/knot.7_1.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_1/knot.7_1.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_1/knot.7_1.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_1/knot.7_1p.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_1/knot.7_1p.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_1/knot.7_1p.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_1/knot.7_1p.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_1/knot.7_1p.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_1/knot.7_1p.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_1/knot.7_1p.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_1/knot.7_1p.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_2/knot.7_2.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_2/knot.7_2.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_2/knot.7_2.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_2/knot.7_2.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_2/knot.7_2.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_2/knot.7_2.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_2/knot.7_2.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_2/knot.7_2.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_2/knot.7_2d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_2/knot.7_2d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_2/knot.7_2d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_2/knot.7_2d.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_2/knot.7_2d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_2/knot.7_2d.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_2/knot.7_2d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_2/knot.7_2d.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_2/knot.7_2r.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_2/knot.7_2r.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_2/knot.7_2r.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_2/knot.7_2r.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_2/knot.7_2r.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_2/knot.7_2r.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_2/knot.7_2r.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_2/knot.7_2r.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_3/knot.7_3.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_3/knot.7_3.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_3/knot.7_3.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_3/knot.7_3.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_3/knot.7_3.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_3/knot.7_3.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_3/knot.7_3.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_3/knot.7_3.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_3/knot.7_3d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_3/knot.7_3d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_3/knot.7_3d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_3/knot.7_3d.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_3/knot.7_3d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_3/knot.7_3d.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_3/knot.7_3d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_3/knot.7_3d.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_4/knot.7_4.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_4/knot.7_4.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_4/knot.7_4.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_4/knot.7_4.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_4/knot.7_4.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_4/knot.7_4.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_4/knot.7_4.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_4/knot.7_4.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_5/knot.7_5.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_5/knot.7_5.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_5/knot.7_5.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_5/knot.7_5.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_5/knot.7_5.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_5/knot.7_5.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_5/knot.7_5.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_5/knot.7_5.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_5/knot.7_5d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_5/knot.7_5d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_5/knot.7_5d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_5/knot.7_5d.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_5/knot.7_5d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_5/knot.7_5d.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_5/knot.7_5d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_5/knot.7_5d.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_6/knot.7_6d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_6/knot.7_6d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_6/knot.7_6d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_6/knot.7_6d.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_6/knot.7_6d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_6/knot.7_6d.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_6/knot.7_6d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_6/knot.7_6d.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_6/knot.7_6s.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_6/knot.7_6s.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_6/knot.7_6s.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_6/knot.7_6s.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_6/knot.7_6s.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_6/knot.7_6s.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_6/knot.7_6s.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_6/knot.7_6s.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_7/knot.7_7d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_7/knot.7_7d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_7/knot.7_7d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_7/knot.7_7d.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_7/knot.7_7d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_7/knot.7_7d.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/7_7/knot.7_7d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/7_7/knot.7_7d.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_1/knot.8_1.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_1/knot.8_1.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_1/knot.8_1.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_1/knot.8_1.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_1/knot.8_1d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_1/knot.8_1d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_1/knot.8_1d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_1/knot.8_1d.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_1/knot.8_1d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_1/knot.8_1d.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_1/knot.8_1d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_1/knot.8_1d.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_1/knot.8_1p.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_1/knot.8_1p.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_1/knot.8_1p.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_1/knot.8_1p.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_10/knot.8_10s.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_10/knot.8_10s.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_10/knot.8_10s.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_10/knot.8_10s.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_10/knot.8_10s.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_10/knot.8_10s.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_10/knot.8_10s.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_10/knot.8_10s.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_11/knot.8_11.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_11/knot.8_11.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_11/knot.8_11.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_11/knot.8_11.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_11/knot.8_11.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_11/knot.8_11.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_11/knot.8_11d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_11/knot.8_11d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_11/knot.8_11d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_11/knot.8_11d.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_11/knot.8_11d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_11/knot.8_11d.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_11/knot.8_11d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_11/knot.8_11d.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_11/knot.8_11p.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_11/knot.8_11p.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_12/knot.8_12d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_12/knot.8_12d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_12/knot.8_12d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_12/knot.8_12d.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_12/knot.8_12d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_12/knot.8_12d.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_12/knot.8_12d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_12/knot.8_12d.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_12/knot.8_12z.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_12/knot.8_12z.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_12/knot.8_12z.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_12/knot.8_12z.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_12/knot.8_12z.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_12/knot.8_12z.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_12/knot.8_12z.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_12/knot.8_12z.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_13/knot.8_13d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_13/knot.8_13d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_13/knot.8_13d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_13/knot.8_13d.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_13/knot.8_13d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_13/knot.8_13d.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_13/knot.8_13d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_13/knot.8_13d.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_13/knot.8_13p.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_13/knot.8_13p.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_13/knot.8_13p.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_13/knot.8_13p.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_13/knot.8_13p.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_13/knot.8_13p.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_13/knot.8_13p.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_13/knot.8_13p.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_14/knot.8_14d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_14/knot.8_14d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_14/knot.8_14d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_14/knot.8_14d.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_14/knot.8_14d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_14/knot.8_14d.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_14/knot.8_14d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_14/knot.8_14d.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_14/knot.8_14r.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_14/knot.8_14r.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_14/knot.8_14r.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_14/knot.8_14r.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_14/knot.8_14r.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_14/knot.8_14r.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_14/knot.8_14r.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_14/knot.8_14r.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_15/knot.8_15.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_15/knot.8_15.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_15/knot.8_15.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_15/knot.8_15.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_15/knot.8_15.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_15/knot.8_15.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_15/knot.8_15.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_15/knot.8_15.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_15/knot.8_15d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_15/knot.8_15d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_15/knot.8_15d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_15/knot.8_15d.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_15/knot.8_15d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_15/knot.8_15d.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_15/knot.8_15d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_15/knot.8_15d.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_15/knot.8_15p.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_15/knot.8_15p.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_15/knot.8_15p.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_15/knot.8_15p.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_15/knot.8_15p.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_15/knot.8_15p.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_15/knot.8_15p.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_15/knot.8_15p.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_16/knot.8_16.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_16/knot.8_16.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_16/knot.8_16.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_16/knot.8_16.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_16/knot.8_16.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_16/knot.8_16.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_16/knot.8_16.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_16/knot.8_16.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_17/knot.8_17.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_17/knot.8_17.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_17/knot.8_17.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_17/knot.8_17.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_17/knot.8_17.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_17/knot.8_17.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_17/knot.8_17.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_17/knot.8_17.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_18/knot.8_18.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_18/knot.8_18.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_18/knot.8_18.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_18/knot.8_18.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_18/knot.8_18.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_18/knot.8_18.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_18/knot.8_18.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_18/knot.8_18.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_18/knot.8_18z.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_18/knot.8_18z.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_18/knot.8_18z.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_18/knot.8_18z.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_18/knot.8_18z.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_18/knot.8_18z.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_19/knot.8_19t.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_19/knot.8_19t.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_19/knot.8_19t.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_19/knot.8_19t.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_19/knot.8_19t.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_19/knot.8_19t.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_19/knot.8_19t.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_19/knot.8_19t.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_19/knot.8_19u.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_19/knot.8_19u.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_19/knot.8_19u.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_19/knot.8_19u.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_19/knot.8_19u.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_19/knot.8_19u.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_19/knot.8_19u.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_19/knot.8_19u.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_2/knot.8_2.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_2/knot.8_2.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_2/knot.8_2.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_2/knot.8_2.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_2/knot.8_2.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_2/knot.8_2.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_2/knot.8_2.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_2/knot.8_2.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_2/knot.8_2d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_2/knot.8_2d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_2/knot.8_2d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_2/knot.8_2d.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_2/knot.8_2d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_2/knot.8_2d.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_2/knot.8_2d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_2/knot.8_2d.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_20/knot.8_20r.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_20/knot.8_20r.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_20/knot.8_20r.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_20/knot.8_20r.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_20/knot.8_20r.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_20/knot.8_20r.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_20/knot.8_20r.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_20/knot.8_20r.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_21/knot.8_21d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_21/knot.8_21d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_21/knot.8_21d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_21/knot.8_21d.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_21/knot.8_21d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_21/knot.8_21d.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_21/knot.8_21d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_21/knot.8_21d.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_21/knot.8_21p.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_21/knot.8_21p.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_21/knot.8_21p.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_21/knot.8_21p.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_21/knot.8_21p.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_21/knot.8_21p.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_21/knot.8_21p.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_21/knot.8_21p.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_21/knot.8_21r.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_21/knot.8_21r.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_21/knot.8_21r.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_21/knot.8_21r.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_21/knot.8_21r.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_21/knot.8_21r.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_21/knot.8_21r.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_21/knot.8_21r.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_3/knot.8_3.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_3/knot.8_3.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_3/knot.8_3.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_3/knot.8_3.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_3/knot.8_3.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_3/knot.8_3.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_3/knot.8_3.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_3/knot.8_3.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_3/knot.8_3d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_3/knot.8_3d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_3/knot.8_3d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_3/knot.8_3d.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_3/knot.8_3d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_3/knot.8_3d.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_3/knot.8_3d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_3/knot.8_3d.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_3/knot.8_3i8.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_3/knot.8_3i8.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_3/knot.8_3i8.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_3/knot.8_3i8.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_3/knot.8_3i8.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_3/knot.8_3i8.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_3/knot.8_3z.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_3/knot.8_3z.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_3/knot.8_3z.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_3/knot.8_3z.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_3/knot.8_3z.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_3/knot.8_3z.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_3/knot.8_3z.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_3/knot.8_3z.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_4/knot.8_4.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_4/knot.8_4.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_4/knot.8_4.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_4/knot.8_4.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_4/knot.8_4.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_4/knot.8_4.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_4/knot.8_4.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_4/knot.8_4.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_4/knot.8_4d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_4/knot.8_4d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_4/knot.8_4d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_4/knot.8_4d.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_4/knot.8_4d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_4/knot.8_4d.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_4/knot.8_4d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_4/knot.8_4d.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_5/knot.8_5.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_5/knot.8_5.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_5/knot.8_5.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_5/knot.8_5.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_5/knot.8_5.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_5/knot.8_5.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_5/knot.8_5.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_5/knot.8_5.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_6/knot.8_6.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_6/knot.8_6.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_6/knot.8_6.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_6/knot.8_6.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_6/knot.8_6.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_6/knot.8_6.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_6/knot.8_6.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_6/knot.8_6.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_6/knot.8_6p.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_6/knot.8_6p.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_6/knot.8_6p.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_6/knot.8_6p.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_6/knot.8_6p.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_6/knot.8_6p.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_6/knot.8_6p.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_6/knot.8_6p.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_7/knot.8_7d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_7/knot.8_7d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_7/knot.8_7d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_7/knot.8_7d.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_7/knot.8_7d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_7/knot.8_7d.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_7/knot.8_7d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_7/knot.8_7d.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_7/knot.8_7s.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_7/knot.8_7s.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_7/knot.8_7s.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_7/knot.8_7s.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_7/knot.8_7s.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_7/knot.8_7s.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_7/knot.8_7s.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_7/knot.8_7s.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_8/knot.8_8d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_8/knot.8_8d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_8/knot.8_8d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_8/knot.8_8d.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_8/knot.8_8d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_8/knot.8_8d.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_8/knot.8_8d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_8/knot.8_8d.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_9/knot.8_9d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_9/knot.8_9d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_9/knot.8_9d.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_9/knot.8_9d.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_9/knot.8_9d.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_9/knot.8_9d.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_9/knot.8_9d.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_9/knot.8_9d.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_9/knot.8_9i4.scad" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_9/knot.8_9i4.scad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_9/knot.8_9i4.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_9/knot.8_9i4.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/8_9/knot.8_9i4.stl" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_9/knot.8_9i4.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/fseries_batch_results.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/knot_meta_skeleton.csv" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/knot_meta_skeleton.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/meta.csv" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/meta.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/knots/meta_skeleton.csv" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/meta_skeleton.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/classify_particles.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/classify_particles.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.12a_1202.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.12a_1202.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.12a_1202z6.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.12a_1202z6.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.15331.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.15331.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.1_1.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.1_1.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.3_1.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.3_1.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.3_1p.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.3_1p.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.3_1u.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.3_1u.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.4_1.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.4_1.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.4_1d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.4_1d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.4_1p.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.4_1p.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.4_1z.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.4_1z.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.5_1.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.5_1.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.5_1p.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.5_1p.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.5_1u.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.5_1u.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.5_2.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.5_2.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.5_2d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.5_2d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.5_2r.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.5_2r.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.6_1.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.6_1.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.6_2.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.6_2.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.6_2d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.6_2d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.6_2p.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.6_2p.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.6_3d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.6_3d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.6_3z.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.6_3z.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.7_1.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.7_1.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.7_1p.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.7_1p.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.7_2.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.7_2.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.7_2d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.7_2d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.7_2r.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.7_2r.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.7_3.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.7_3.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.7_3d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.7_3d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.7_4.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.7_4.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.7_5.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.7_5.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.7_5d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.7_5d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.7_6d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.7_6d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.7_6s.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.7_6s.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.7_7d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.7_7d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_1.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_1.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_10s.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_10s.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_11.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_11.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_11d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_11d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_12d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_12d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_12z.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_12z.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_13d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_13d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_13p.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_13p.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_14d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_14d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_14r.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_14r.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_15.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_15.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_15d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_15d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_15p.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_15p.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_16.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_16.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_17.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_17.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_17.short" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_17.short" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_18.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_18.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_18z.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_18z.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_19t.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_19t.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_19u.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_19u.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_1d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_1d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_2.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_2.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_20r.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_20r.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_21d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_21d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_21p.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_21p.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_21r.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_21r.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_2d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_2d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_3d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_3d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_3z.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_3z.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_4d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_4d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_5.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_5.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_6.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_6.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_6p.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_6p.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_7d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_7d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_7s.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_7s.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_8d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_8d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/knot.8_9d.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_9d.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/ALL/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/secrets.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/my_secrets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/vam_fseries_gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/vam_fseries_gui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/VAM-7-From_Quantum_Constants_to_Galactic_Swirl.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/VAM-7-From_Quantum_Constants_to_Galactic_Swirl.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vambindings.cp311-win_amd64.pyd" beforeDir="false" afterPath="$PROJECT_DIR$/vambindings.cp311-win_amd64.pyd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM-20_String_Theory/VAM-MASS_FORMULA.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM-20_String_Theory/VAM-MASS_FORMULA.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/Vortex_String_Theory_Mass_Fundamentals.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/Vortex_String_Theory_Mass_Fundamentals.pdf" afterDir="false" />
     </list>
     <list id="4afbe360-edfd-4722-ab75-c722c883a8a6" name="DoNotCommit" comment="Add new files and refactor existing ones for VAM framework; update README and data paths" />
     <option name="SHOW_DIALOG" value="false" />
@@ -515,6 +115,9 @@
     "BibTeX.PhotonVortex bibliography.executor": "Run",
     "BibTeX.PhtonVortex bibliography.executor": "Run",
     "BibTeX.Short_PhotonVortex.executor": "Run",
+    "BibTeX.Unified_Lagrangian_for_a_Vortex_String_Theory bibliography.executor": "Run",
+    "BibTeX.Unified_Lagrangian_for_a_Vortex_String_Theory-v2 bibliography.executor": "Run",
+    "BibTeX.Unified_Lagrangian_for_a_Vortex_String_Theory-v3 bibliography.executor": "Run",
     "BibTeX.VAM-0-Analogies.executor": "Run",
     "BibTeX.VAM-0-Analogy.executor": "Run",
     "BibTeX.VAM-0-Einstein_and_the_Æther bibliography.executor": "Run",
@@ -577,6 +180,9 @@
     "LaTeX.PhotonVortex.executor": "Run",
     "LaTeX.PhtonVortex.executor": "Run",
     "LaTeX.TimeDilationHydrogen.executor": "Run",
+    "LaTeX.Unified_Lagrangian_for_a_Vortex_String_Theory-v2.executor": "Run",
+    "LaTeX.Unified_Lagrangian_for_a_Vortex_String_Theory-v3.executor": "Run",
+    "LaTeX.Unified_Lagrangian_for_a_Vortex_String_Theory.executor": "Run",
     "LaTeX.VAM-0-Analogies.executor": "Run",
     "LaTeX.VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm.executor": "Run",
     "LaTeX.VAM-00_front_page.executor": "Run",
@@ -735,7 +341,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/workspace/projects/VAM/VAM_PYTHON_SIMULATOINS/VAM_Fseries",
+    "last_opened_file_path": "C:/workspace/projects/VAM/VAM-20_String_Theory",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -764,8 +370,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\workspace\projects\VAM\VAM_PYTHON_SIMULATOINS\VAM_Fseries" />
       <recent name="C:\workspace\projects\VAM\VAM-20_String_Theory" />
+      <recent name="C:\workspace\projects\VAM\VAM_PYTHON_SIMULATOINS\VAM_Fseries" />
       <recent name="C:\workspace\projects\VAM\VAM_PYTHON_SIMULATOINS" />
       <recent name="C:\workspace\projects\VAM\VAM_Experiments" />
       <recent name="C:\workspace\projects\VAM\VAM_0_Einstein_to_Vortex_Fluid" />
@@ -798,6 +404,42 @@
         <compiler-arguments />
         <envs />
         <main-file>$PROJECT_DIR$/VAM_Experiments/AntiGravity_WarpDrive.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
+        <latex-distribution>MIKTEX</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration name="Unified_Lagrangian_for_a_Vortex_String_Theory bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler>BIBER</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/VAM-20_String_Theory/Unified_Lagrangian_for_a_Vortex_String_Theory.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
+        <latex-distribution>MIKTEX</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration name="Unified_Lagrangian_for_a_Vortex_String_Theory-v2 bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler>BIBER</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/VAM-20_String_Theory/Unified_Lagrangian_for_a_Vortex_String_Theory-v2.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
+        <latex-distribution>MIKTEX</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration name="Unified_Lagrangian_for_a_Vortex_String_Theory-v3 bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler>BIBER</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/VAM-20_String_Theory/Unified_Lagrangian_for_a_Vortex_String_Theory-v3.tex</main-file>
         <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
         <latex-distribution>MIKTEX</latex-distribution>
       </texify-bibtex>
@@ -923,18 +565,6 @@
       </texify-bibtex>
       <method v="2" />
     </configuration>
-    <configuration default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-bibtex>
-        <compiler />
-        <compiler-path />
-        <compiler-arguments />
-        <envs />
-        <main-file />
-        <aux-dir />
-        <latex-distribution>PROJECT_SDK</latex-distribution>
-      </texify-bibtex>
-      <method v="2" />
-    </configuration>
     <configuration name="golden_rapidity_vam bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify-bibtex>
         <compiler>BIBTEX</compiler>
@@ -969,6 +599,29 @@
         <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
         <latex-distribution>MIKTEX</latex-distribution>
       </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <require-focus>$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$</require-focus>
+        <viewer-command />
+        <compiler-arguments />
+        <envs />
+        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
+        <before-run-command />
+        <main-file />
+        <output-path>{projectDir}/out</output-path>
+        <auxil-path>{projectDir}/auxil</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>MIKTEX</latex-distribution>
+        <has-been-run>false</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
       <method v="2" />
     </configuration>
     <list>
@@ -1007,6 +660,9 @@
       <item itemvalue="BibTeX.AntiGravity_WarpDrive bibliography" />
       <item itemvalue="BibTeX.EXP_lazer_c_e" />
       <item itemvalue="BibTeX.EXP_Warpdrive" />
+      <item itemvalue="BibTeX.Unified_Lagrangian_for_a_Vortex_String_Theory bibliography" />
+      <item itemvalue="BibTeX.Unified_Lagrangian_for_a_Vortex_String_Theory-v2 bibliography" />
+      <item itemvalue="BibTeX.Unified_Lagrangian_for_a_Vortex_String_Theory-v3 bibliography" />
       <item itemvalue="BibTeX.golden_rapidity_vam bibliography" />
       <item itemvalue="BibTeX.phi_asinh_note bibliography" />
       <item itemvalue="BibTeX.VAM-7-From_Quantum_Constants_to_Galactic_Swirl bibliography" />
@@ -1348,7 +1004,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755761025441</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Refactor file structure and add new utilities for VAM framework; rename and organize files, introduce new scripts for hyperbolic volume calculations">
+      <option name="closed" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
+      <created>1755810306819</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1755810306819</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1383,9 +1047,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Implement script to convert bibliographic citations to footnotes in LaTeX; add new bibliography file and update existing references for improved clarity." />
-    <MESSAGE value="Refactor file structure by renaming multiple LaTeX documents and Python scripts for consistency; update paths in LaTeX files and improve magnetic field computation in Python scripts." />
     <MESSAGE value="Add new Python scripts for 6_2 and 7_4 knots; create all_knots.py for various knot visualizations and refactor workspace.xml for improved file structure." />
     <MESSAGE value="Add VAM front page LaTeX document and refactor workspace.xml for improved project structure" />
     <MESSAGE value="Refactor file structure by renaming ScanCropperAligner.py to NotebookScanCropperAligner.py; update module path in vamBindings.py for Python 3.12 compatibility; add LastTest.log for testing logs; update paths in testknot.py for image saving; add new LaTeX documents and bibliography files for quantum computing research." />
@@ -1409,7 +1072,9 @@
     <MESSAGE value="Add new files and refactor existing ones for VAM framework; update README and data paths" />
     <MESSAGE value="Add new references and documents for VAM framework; enhance existing files with updated metadata and structure" />
     <MESSAGE value="Update VAM documents and add new mass formula implementation; enhance metadata and structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update VAM documents and add new mass formula implementation; enhance metadata and structure" />
+    <MESSAGE value="Started Vortex String Theory" />
+    <MESSAGE value="Refactor file structure and add new utilities for VAM framework; rename and organize files, introduce new scripts for hyperbolic volume calculations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor file structure and add new utilities for VAM framework; rename and organize files, introduce new scripts for hyperbolic volume calculations" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
