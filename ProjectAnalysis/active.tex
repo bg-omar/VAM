@@ -1,0 +1,248 @@
+%======================== VAM_Canon_ACTIVE.tex ========================
+%! Author = Omar Iskandarani
+%! Date   = 2025-08-22
+
+\documentclass[11pt,a4paper]{article}
+
+% Minimal, robust preamble
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{bm}
+\usepackage{siunitx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+\sisetup{per-mode=symbol,detect-all}
+
+\title{\bfseries VAM Canon (active)}
+\author{Prepared for: Omar Iskandarani (Vortex Æther Model, VAM)}
+\date{2025-08-22}
+
+\begin{document}
+    \maketitle
+
+%----------------------------------------------------------------------
+    \section*{0) Versioning}
+    \begin{itemize}
+        \item \textbf{Single source of truth} for core VAM definitions, constants, master equations, and notational conventions.
+        \item Semantic versions: \texttt{vMAJOR.MINOR.PATCH} (e.g., v1.2.0).
+        \item Every paper/derivation should state the Canon version it depends on.
+    \end{itemize}
+
+%----------------------------------------------------------------------
+    \section{Core Postulates (VAM)}
+    \begin{enumerate}
+        \item The universe is a 3D incompressible, inviscid superfluid æther with absolute time and Euclidean space.
+        \item Particles are knotted vortex solitons (closed, possibly linked/knotted filaments) in the æther.
+        \item Gravity is not spacetime curvature but swirl (structured vorticity fields) and pressure gradients; massive motion follows swirl-induced dynamics.
+        \item Local time-rate is set by tangential vortex motion: higher swirl reduces the local clock rate relative to asymptotic time.
+        \item Quantization arises from topological invariants (linking, writhe, twist) and circulation quantization of vortex filaments.
+        \item The æther supports bosonic unknotted excitations (e.g., photon-like), while chiral hyperbolic knots map to quarks; torus knots map to leptons, etc. (taxonomy documented separately).
+    \end{enumerate}
+
+%----------------------------------------------------------------------
+    \section{Canonical Constants and Symbols}
+    All symbols are SI unless stated.
+
+    \subsection{Fundamental (VAM-specific)}
+    \begin{itemize}
+        \item Vortex tangential velocity: $C_e = 1.09384563 \times 10^{6}\ \si{m.s^{-1}}$.
+        \item Vortex-core radius: $r_c = 1.40897017 \times 10^{-15}\ \si{m}$.
+        \item Æther fluid density (``vacuum'' fluid): $\rho_{\text{\ae}}^{(\text{fluid})} = 7.0 \times 10^{-7}\ \si{kg.m^{-3}}$.
+        \item Æther core/mass density: $\rho_{\text{\ae}}^{(\text{mass})} = 3.8934358266918687 \times 10^{18}\ \si{kg.m^{-3}}$.
+        \item Æther energy density: $\rho_{\text{\ae}}^{(\text{energy})} = 3.49924562 \times 10^{35}\ \si{J.m^{-3}}$.
+        \item Maximum Coulomb force (VAM): $F_{\text{\ae}}^{\max} = 29.053507\ \si{N}$.
+        \item Maximum universal force (contextual): $F_{\text{gr}}^{\max} = 3.02563 \times 10^{43}\ \si{N}$.
+        \item Golden ratio: $\varphi = \frac{1+\sqrt{5}}{2} \approx 1.61803398875$.
+    \end{itemize}
+
+    \subsection{Universal}
+    \begin{itemize}
+        \item Speed of light: $c = 299\,792\,458\ \si{m.s^{-1}}$.
+        \item Fine-structure constant: $\alpha \approx 7.2973525643 \times 10^{-3}$.
+        \item Planck time: $t_p \approx 5.391247 \times 10^{-44}\ \si{s}$.
+    \end{itemize}
+
+    \paragraph{Note.} Simulation code must mirror these values exactly.
+
+%----------------------------------------------------------------------
+    \section{Master Equations (boxed, definitive)}
+
+    \subsection{Master Energy and Mass Formula}
+    \[
+        \boxed{\,E_{\text{VAM}}(V) = \frac{4}{\alpha\,\varphi}\left(\tfrac{1}{2}\,\rho_{\text{\ae}}^{(\text{fluid})}\,C_e^{2}\right)V\,}\quad[\si{J}],
+        \qquad
+        \boxed{\,M_{\text{VAM}}(V) = \frac{E_{\text{VAM}}(V)}{c^{2}}\,}\quad[\si{kg}].
+    \]
+    \emph{Per-unit-volume numerics:}
+    $\tfrac{1}{2}\rho C_e^2 \approx 4.1877439\times10^{5}\ \si{J.m^{-3}}$,
+    $\tfrac{4}{\alpha\varphi}\approx 3.3877162\times10^{2}$,
+    so $E/V \approx 1.418688\times10^{8}\ \si{J.m^{-3}}$,
+    $M/V \approx 1.57850\times10^{-9}\ \si{kg.m^{-3}}$.
+
+    \subsection{Swirl Gravitational Coupling}
+    \[
+        \boxed{\,G_{\text{swirl}} = \frac{C_e\,c^{5}\,t_p^{2}}{2\,F_{\text{\ae}}^{\max}\,r_c^{2}}\,},\quad
+        G_{\text{swirl}} \approx 6.674302\times10^{-11}\ \si{m^3.kg^{-1}.s^{-2}}.
+    \]
+
+    \subsection{Local Time-Rate (Swirl Clock)}
+    \[
+        \boxed{\,dt_{\text{local}} = dt_{\infty}\sqrt{1 - \frac{\lVert\bm{\omega}\rVert^{2}\,r_c^{2}}{c^{2}}}\,},\qquad
+        \text{historical (trace): }dt_{\text{local}} = dt_{\infty}\sqrt{1 - \lVert\bm{\omega}\rVert^{2}/c^{2}}.
+    \]
+
+    \subsection{Swirl Angular Frequency Profile}
+    \[
+        \boxed{\,\Omega_{\text{swirl}}(r) = \frac{C_e}{r_c} e^{-r/r_c}\,}\quad\Rightarrow\quad
+        \Omega_{\text{swirl}}(0)=\frac{C_e}{r_c}\approx 7.76344\times10^{20}\ \si{s^{-1}}.
+    \]
+
+    \subsection{Vorticity Potential (Canonical Form)}
+    \[
+        \boxed{\,\Phi(\bm r,\bm\omega) = \frac{C_e^{2}}{2\,F_{\text{\ae}}^{\max}}\,\bm\omega\!\cdot\!\bm r\,}.
+    \]
+    \emph{Dimensional note:} $\rho\,\Phi$ carries energy density.
+
+%----------------------------------------------------------------------
+    \section{Unified VAM Lagrangian (definitive form)}
+    Let $\bm v$ be the æther velocity, $\rho=\rho_{\text{\ae}}^{(\text{fluid})}$ constant (incompressible), $\bm\omega=\nabla\times\bm v$, and $\lambda$ a Lagrange multiplier enforcing incompressibility.
+    \[
+        \boxed{\,\mathcal{L}_{\text{VAM}} =
+            \tfrac{1}{2}\rho\,\lVert\bm v\rVert^{2}
+            - \rho\,\Phi(\bm r,\bm\omega)
+            + \lambda(\nabla\!\cdot\!\bm v)
+            + \eta\!\int\!(\bm v\cdot\bm\omega)\,dV
+            + \mathcal{L}_{\text{couple}}[\Gamma,\mathcal{K}]
+            \,}.
+    \]
+
+%----------------------------------------------------------------------
+    \section{Notation, Ontology, and Glossary}
+    Æther-Time (A-time); Chronos-Time (C-time); Swirl Clock; Knot taxonomy; Chirality (ccw↔matter, cw↔antimatter via swirl–gravity coupling).
+
+%----------------------------------------------------------------------
+    \section{Canonical Checks}
+    Dimensional analysis; limiting behavior; numerical validation; topology↔quantum mapping; cite non-original constructs.
+
+%----------------------------------------------------------------------
+    \section{Persona Prompts}
+    (Reviewer / Theorist / Bridging — unchanged; copy from your current text.)
+
+%----------------------------------------------------------------------
+    \section{Session Kickoff Checklist}
+    (As in your current text.)
+
+%----------------------------------------------------------------------
+    \section{Canon-Ready Citations (skeleton)}
+    \begin{verbatim}
+@article{Helmholtz1858, ...}
+@article{Kelvin1867, ...}
+@article{Moffatt1969, ...}
+@article{Schrodinger1926, ...}
+@article{Unruh1981, ...}
+@article{Visser1998, ...}
+@article{Painleve1921, ...}
+@article{Gullstrand1922, ...}
+@book{Batchelor1967, ...}
+    \end{verbatim}
+
+%----------------------------------------------------------------------
+    \section{Appendix: Canon Tables for Papers}
+    \subsection*{A. Constants Table (paste-ready)}
+    \begin{center}
+        \begin{tabular}{@{}llll@{}}
+            \toprule
+            \textbf{Symbol} & \textbf{Meaning} & \textbf{Value} & \textbf{Unit} \\
+            \midrule
+            $C_e$ & Vortex tangential velocity & $1.09384563\times 10^{6}$ & \si{m.s^{-1}} \\
+            $r_c$ & Vortex-core radius & $1.40897017\times 10^{-15}$ & \si{m} \\
+            $\rho_{\text{\ae}}^{(\text{fluid})}$ & Æther fluid density & $7.0\times 10^{-7}$ & \si{kg.m^{-3}} \\
+            $\rho_{\text{\ae}}^{(\text{mass})}$ & Æther mass density & $3.8934358266918687\times 10^{18}$ & \si{kg.m^{-3}} \\
+            $\rho_{\text{\ae}}^{(\text{energy})}$ & Æther energy density & $3.49924562\times 10^{35}$ & \si{J.m^{-3}} \\
+            $F_{\text{\ae}}^{\max}$ & Max. Coulomb force & $29.053507$ & \si{N} \\
+            $F_{\text{gr}}^{\max}$ & Max. universal force & $3.02563\times 10^{43}$ & \si{N} \\
+            $\alpha$ & Fine-structure & $7.2973525643\times 10^{-3}$ & — \\
+            $\varphi$ & Golden ratio & $1.61803398875$ & — \\
+            $c$ & Speed of light & $299\,792\,458$ & \si{m.s^{-1}} \\
+            $t_p$ & Planck time & $5.391247\times 10^{-44}$ & \si{s} \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+
+    \subsection*{B. Boxed Canon Equations (paste-ready)}
+    \begin{enumerate}
+        \item $E_{\text{VAM}}=\dfrac{4}{\alpha\varphi}\left(\dfrac{1}{2}\rho C_e^2\right)V$
+        \item $M_{\text{VAM}}=E_{\text{VAM}}/c^2$
+        \item $G_{\text{swirl}}=\dfrac{C_e c^5 t_p^2}{2F_{\text{\ae}}^{\max} r_c^2}$
+        \item $dt_{\text{local}}=dt_{\infty}\sqrt{1-\lVert\omega\rVert^{2} r_c^{2}/c^2}$ % corrected
+        \item $\Omega_{\text{swirl}}(r)=\dfrac{C_e}{r_c}e^{-r/r_c}$
+    \end{enumerate}
+
+%----------------------------------------------------------------------
+    \section*{12) v0.2 Delta — Corrections \& Additions (2025-08-22)}
+    \textbf{Dimensional correction to §3.3:} $dt_{\text{local}} = dt_{\infty}\sqrt{1 - |\omega|^2 r_c^2 / c^2} = dt_{\infty}\sqrt{1 - v_t^2/c^2}$ with $v_t:=|\omega|r_c$.
+    \medskip
+
+    \textbf{Tolerances \& aliases:} (unchanged; copy from your current text.)
+
+%----------------------------------------------------------------------
+    \section*{13) v0.3 Draft Delta — Core from VAM 0–4}
+    (Your consolidated items; unchanged.)
+
+%----------------------------------------------------------------------
+    \section*{14) v0.4 Delta — Derived Constants, Galactic Swirl Law, and Baryon Mass Map}
+    \subsection*{14.1 Canon identities}
+    \[
+        \boxed{\alpha = \tfrac{2 C_e}{c}}\quad\Leftrightarrow\quad \boxed{C_e = \tfrac{c\,\alpha}{2}},\qquad
+        \boxed{\alpha_g = \tfrac{C_e^{2} t_p^{2}}{r_c^{2}}},
+    \]
+    \[
+        \boxed{G = \tfrac{\alpha_g c^{3} r_c}{C_e M_e} = \tfrac{C_e c\, (c t_p)^{2}}{r_c M_e}},
+        \quad
+        \boxed{M_e = \tfrac{2 F_{\text{\ae}}^{\max} r_c}{c^{2}}}
+        \quad\Rightarrow\quad
+        \boxed{G \equiv G_{\text{swirl}}}.
+    \]
+    \subsection*{14.2 Galactic Swirl Law}
+    \[
+        \boxed{v(r) = \tfrac{C_{\text{core}}}{\sqrt{1 + (r_c/r)^2}} + C_{\text{tail}}\big(1 - e^{-r/r_c}\big)}.
+    \]
+    \subsection*{14.3 Baryon Mass Relations}
+    \[
+        \boxed{M_p = \varphi^{-2} 3^{-1/\varphi}(2 M_u + M_d)},\qquad
+        \boxed{M_n = \varphi^{-2} 3^{-1/\varphi}(M_u + 2 M_d)}.
+    \]
+    \subsection*{14.4 Added/Derived Constants}
+    $M_e=2 F_{\text{\ae}}^{\max} r_c/c^2$, $\ell_p=c t_p$, $\alpha=2C_e/c$, $\alpha_g=C_e^{2} t_p^{2}/r_c^{2}$.
+
+%----------------------------------------------------------------------
+    \section*{G) v0.5 Selections (ready-to-merge)}
+    \subsection*{G.1 Effective metric / line element (axisymmetric swirl)}
+    \[
+        \boxed{\,ds^2 = -(c^2 - v_\theta(r)^2)\,dt^2 + 2 v_\theta(r) r\, d\theta\, dt + dr^2 + r^2 d\theta^2 + dz^2\,}
+    \]
+    (co-rotating local diagonalization):
+    \[
+        \boxed{\,ds^2 = -c^2\!\left(1 - \tfrac{v_\theta(r)^2}{c^2}\right)\!dt^2 + dr^2 + r^2 d\theta'^2 + dz^2\,}.
+    \]
+    \emph{Analogue/PG background:} Unruh1981; Visser1998; Painleve1921; Gullstrand1922; Batchelor1967.
+
+    \subsection*{G.2 Swirl Hamiltonian density (dimensionally normalized)}
+    \[
+        \boxed{\,\mathcal{H}[\bm v] = \tfrac{1}{2}\rho \lVert \bm v \rVert^2 + \tfrac{1}{2}\rho r_c^2 \lVert \bm\omega \rVert^2 + \tfrac{1}{2}\rho r_c^4 \lVert \nabla \bm\omega \rVert^2 + \lambda (\nabla\!\cdot\! \bm v)\,}.
+    \]
+
+    \subsection*{G.3 Dark-sector law beside $v(r)$}
+    \[
+        \boxed{\,a_{\text{dark}}(r) \equiv \tfrac{1}{\rho}\tfrac{dp_{\text{swirl}}}{dr} = \tfrac{v(r)^2}{r}\,},\qquad
+        \boxed{\,\tfrac{dp_{\text{swirl}}}{dr} = \rho\,\tfrac{v(r)^2}{r}\,}.
+    \]
+
+%----------------------------------------------------------------------
+    \paragraph*{Change Log}
+    v0.1: initial; v0.2: time-rate dimensional fix \& policies; v0.3: core from VAM 0–4; v0.4: derived identities, galactic law, baryon map; v0.5: metric + Hamiltonian + dark-sector law (ready-to-merge).
+\end{document}
+%======================== end VAM_Canon_ACTIVE.tex =================

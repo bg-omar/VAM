@@ -1,0 +1,460 @@
+%======================== vam_canon_v5.tex ========================
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{bm}
+\usepackage{siunitx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{physics}
+\usepackage{microtype}
+
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+\sisetup{separate-uncertainty=true, per-mode=symbol, detect-all}
+
+\newcommand{\aeether}{\text{\ae}} % æ ligature in text mode
+
+\title{\bfseries VAM Canon (v5)}
+\author{Prepared for: Omar Iskandarani (Vortex \aeether{}ther Model, VAM)}
+\date{2025-08-22}
+
+\begin{document}
+    \maketitle
+    \tableofcontents
+
+    \section*{0) Versioning}
+    \addcontentsline{toc}{section}{0) Versioning}
+    \begin{itemize}
+        \item \textbf{Single source of truth} for core VAM definitions, constants, master equations, and notational conventions.
+        \item Semantic versions: \texttt{vMAJOR.MINOR.PATCH} (e.g., v5.0.0).
+        \item Every paper/derivation must state the Canon version it depends on.
+        \item \emph{What’s new in v5}: (i) dimensionally-correct time-rate law; (ii) PG-type effective metric for azimuthal swirl \cite{Unruh1981,Visser1998,Painleve1921,Gullstrand1922}; (iii) swirl Hamiltonian density with Kelvin stiffening; (iv) dark-sector pressure/acceleration law; (v) boxed identities for $\alpha$, $\alpha_g$, and equivalent $G$.
+    \end{itemize}
+
+    \section{Core Postulates (VAM)}
+    \begin{enumerate}
+        \item The universe is a \textbf{3D incompressible, inviscid superfluid \aeether{}ther} with absolute time and Euclidean space.
+        \item \textbf{Particles are knotted vortex solitons} (closed, possibly linked/knotted filaments) in the \aeether{}ther.
+        \item \textbf{Gravity} is not spacetime curvature but \textbf{swirl} (structured vorticity fields) and pressure gradients; massive motion follows swirl-induced dynamics.
+        \item \textbf{Local time-rate} is set by \textbf{tangential vortex motion}: higher swirl reduces the local clock rate relative to asymptotic time.
+        \item \textbf{Quantization} arises from \textbf{topological invariants} (linking, writhe, twist) and circulation quantization of vortex filaments.
+        \item The \aeether{}ther supports \textbf{bosonic unknotted excitations} (photon-like), while chiral hyperbolic knots map to quarks; torus knots map to leptons, etc. (taxonomy documented separately).
+    \end{enumerate}
+
+    \section{Canonical Constants and Symbols}
+    All symbols are SI unless stated. Derived constants are presented by identity with their numerical evaluation.
+    \subsection{Fundamental (VAM-specific)}
+    \begin{itemize}
+        \item Vortex tangential velocity: $C_e = 1.09384563\times 10^{6}\ \si{m.s^{-1}}$.
+        \item Vortex-core radius: $r_c = 1.40897017\times 10^{-15}\ \si{m}$.
+        \item \aeether{}ther fluid density (``vacuum'' fluid): $\rho_{\aeether}^{(\mathrm{fluid})} = 7.0\times 10^{-7}\ \si{kg.m^{-3}}$.
+        \item \aeether{}ther core/mass density: $\rho_{\aeether}^{(\mathrm{mass})} = 3.8934358266918687\times 10^{18}\ \si{kg.m^{-3}}$.
+        \item \aeether{}ther energy density: $\rho_{\aeether}^{(\mathrm{energy})} = 3.49924562\times 10^{35}\ \si{J.m^{-3}}$.
+        \item Maximum Coulomb force (VAM): $F_{\aeether}^{\max} = 29.053507\ \si{N}$.
+        \item Maximum universal force (contextual): $F_{\mathrm{gr}}^{\max} = 3.02563\times 10^{43}\ \si{N}$.
+        \item Golden ratio: $\varphi = \frac{1+\sqrt{5}}{2} \approx 1.61803398875$.
+    \end{itemize}
+    \subsection{Universal}
+    \begin{itemize}
+        \item Speed of light: $c = 299{,}792{,}458\ \si{m.s^{-1}}$.
+        \item Planck time: $t_p = 5.391247\times 10^{-44}\ \si{s}$.
+        \item \textbf{Fine-structure constant (derived):}
+        \[
+            \boxed{\ \alpha = \frac{2C_e}{c}\ } \;=\; 7.2973525643\times 10^{-3}.
+        \]
+    \end{itemize}
+
+    \section{Master Equations (boxed, definitive)}
+    \subsection{Master Energy and Mass Formula}
+    Define the amplified swirl energy for a coherent VAM volume $V$:
+    \[
+        \boxed{\ E_{\mathrm{VAM}}(V) \;=\; \frac{4}{\alpha\,\varphi}\,\left(\tfrac{1}{2}\,\rho_{\aeether}^{(\mathrm{fluid})}\,C_e^{2}\right)\,V\ }\quad [\si{J}]\,.
+    \]
+    Corresponding mass (strict SI mass):
+    \[
+        \boxed{\ M_{\mathrm{VAM}}(V) \;=\; \frac{E_{\mathrm{VAM}}(V)}{c^{2}} \ }\quad [\si{kg}]\,.
+    \]
+    \noindent\textit{Numerical (per unit volume):} $\tfrac{1}{2}\rho_{\aeether}^{(\mathrm{fluid})}C_e^2 \approx 4.1877439\times 10^{5}\ \si{J.m^{-3}}$, $\frac{4}{\alpha\varphi} \approx 3.3877162\times 10^{2}$, so $\frac{E_{\mathrm{VAM}}}{V} \approx 1.418688\times 10^{8}\ \si{J.m^{-3}}$, $\frac{M_{\mathrm{VAM}}}{V} \approx 1.57850\times 10^{-9}\ \si{kg.m^{-3}}$.
+
+    \subsection{Gravitational coupling from swirl}
+    \[
+        \boxed{\ G_{\mathrm{swirl}} \;=\; \frac{C_e\,c^{5}\,t_p^{2}}{2\,F_{\aeether}^{\max}\,r_c^{2}}\ }\quad (F_{\aeether}^{\max}=29.053507\ \si{N})
+    \]
+    \noindent\textit{Numerical:} $G_{\mathrm{swirl}} \approx 6.674302\times 10^{-11}\ \si{m^{3}.kg^{-1}.s^{-2}}$.
+
+    \paragraph{3.2a Derived couplings \& identities.}
+    \[
+        \boxed{\ \alpha = \frac{2 C_e}{c}\ }\,,\qquad \boxed{\ \alpha_g = \frac{C_e^{2} t_p^{2}}{r_c^{2}}\ }\,.
+    \]
+    With $\ell_p\equiv c\,t_p$ and $ \boxed{\,M_e = \tfrac{2 F_{\aeether}^{\max} r_c}{c^{2}}\,}$,
+    \[
+        \boxed{\ G = \frac{\alpha_g c^{3} r_c}{C_e M_e} = \frac{C_e c\, \ell_p^{2}}{r_c M_e}\ }\;\equiv\; G_{\mathrm{swirl}}\,.
+    \]
+
+    \subsection{Local Time-Rate (swirl clock)}
+    \[
+        \boxed{\ dt_{\mathrm{local}} \;=\; dt_{\infty}\,\sqrt{\,1 - \frac{\lVert\bm{\omega}\rVert^{2}\,r_c^{2}}{c^{2}}\,}\ }
+        \;=\; dt_{\infty}\,\sqrt{1-\frac{v_t^2}{c^2}},\qquad v_t:=\lVert\bm{\omega}\rVert\,r_c\,.
+    \]
+    \noindent\emph{Historical (deprecated; kept for traceability):} $dt_{\mathrm{local}} = dt_{\infty}\sqrt{1-\lVert\bm{\omega}\rVert^{2}/c^{2}}$.
+
+    \subsection{Swirl Angular Frequency Profile}
+    \[
+        \boxed{\ \Omega_{\mathrm{swirl}}(r) \;=\; \frac{C_e}{r_c}\,e^{-r/r_c}\ }\quad\Rightarrow\quad \Omega_{\mathrm{swirl}}(0)=\frac{C_e}{r_c}\approx 7.76344\times 10^{20}\ \si{s^{-1}}.
+    \]
+
+    \subsection{Vorticity Potential (canonical form)}
+    \[
+        \boxed{\ \Phi(\bm r,\bm\omega) \;=\; \frac{C_e^{2}}{2\,F_{\aeether}^{\max}}\,\bm\omega\!\cdot\!\bm r\ }\,.
+    \]
+    \noindent\emph{Dimensional remark:} $\rho\,\Phi$ carries energy density units; use consistently in the Lagrangian.
+
+    \subsection{Effective metric / line element (axisymmetric swirl)}
+    Steady, incompressible, azimuthal drift $v_\theta(r)$ in cylindrical $(t,r,\theta,z)$ (PG-type analogue metric) \cite{Unruh1981,Visser1998,Painleve1921,Gullstrand1922}:
+    \[
+        \boxed{\, ds^2 = -(c^2 - v_\theta(r)^2)\,dt^2 \;+\; 2\,v_\theta(r)\,r\,d\theta\,dt \;+\; dr^2 \;+\; r^2 d\theta^2 \;+\; dz^2 \,}
+    \]
+    Co-rotating local diagonalization ($\theta' = \theta - \int v_\theta(r)\,dt/ r$):
+    \[
+        \boxed{\, ds^2 = -\,c^2\Big(1-\tfrac{v_\theta(r)^2}{c^2}\Big)dt^2 \;+\; dr^2 \;+\; r^2 d\theta'^2 \;+\; dz^2 \,}
+    \]
+
+    \subsection{Dark-sector law paired with $v(r)$}
+    Radial Euler balance (steady, no radial flow):
+    \[
+        0 = -\,\frac{1}{\rho}\frac{dp_{\mathrm{swirl}}}{dr} + \frac{v(r)^2}{r}
+        \quad\Rightarrow\quad
+        \boxed{\, a_{\mathrm{dark}}(r) = \frac{1}{\rho}\frac{dp_{\mathrm{swirl}}}{dr} = \frac{v(r)^2}{r} \,}.
+    \]
+    Equivalently as a pressure law paired with the swirl profile:
+    \[
+        \boxed{\, \frac{dp_{\mathrm{swirl}}}{dr} = \rho\,\frac{v(r)^2}{r} \,}
+        \quad\Rightarrow\quad
+        \boxed{\, p_{\mathrm{swirl}}(r) = p_0 + \rho\,v_0^2\,\ln\!\Big(\frac{r}{r_0}\Big) \,}\quad (\text{flat } v\to v_0).
+    \]
+
+    \subsection{Galactic swirl law (disc kinematics)}
+    \[
+        \boxed{\, v(r) = \frac{C_{\mathrm{core}}}{\sqrt{1 + (r_c/r)^2}} + C_{\mathrm{tail}}\,\big(1 - e^{-r/r_c}\big) \,}.
+    \]
+
+    \section{Unified VAM Lagrangian (definitive form)}
+    Let $\bm v$ be the \aeether{}ther velocity, $\rho=\rho_{\aeether}^{(\mathrm{fluid})}$ constant (incompressible), $\bm\omega=\nabla\times\bm v$, and $\lambda$ a Lagrange multiplier enforcing incompressibility.
+    \[
+        \boxed{\, \mathcal{L}_{\mathrm{VAM}} =
+            \underbrace{\tfrac{1}{2}\rho\,\lVert\bm v\rVert^{2}}_{\text{kinetic}}
+            - \underbrace{\rho\,\Phi(\bm r,\bm\omega)}_{\text{swirl potential}}
+            + \underbrace{\lambda(\nabla\!\cdot\!\bm v)}_{\text{incompressibility}}
+            + \underbrace{\eta\,\mathcal{H}[\bm v]}_{\text{helicity/topological term}}
+            + \underbrace{\mathcal{L}_{\mathrm{couple}}[\Gamma,\mathcal{K}]}_{\text{circulation \& knot invariants}} \, }.
+    \]
+    Here $\mathcal{H}[\bm v] = \int (\bm v\cdot\bm\omega)\,dV$ is kinetic helicity (generator of topological constraints; $\eta$ fixes units). Enforce $\nabla\cdot\bm v=0$ and proper boundary terms for closed filaments.
+
+    \subsection*{4.1 Swirl Hamiltonian density (dimensionally normalized)}
+    \addcontentsline{toc}{subsection}{4.1 Swirl Hamiltonian density}
+    Take $\rho=\rho_{\aeether}^{(\mathrm{fluid})}$, $\bm\omega=\nabla\times\bm v$, with $\lambda$ enforcing incompressibility. A quadratic, Kelvin-compatible kernel:
+    \[
+        \boxed{\, \mathcal H[\bm v] \;=\; \tfrac12\,\rho\,\lVert\bm v\rVert^2 \;+\; \tfrac12\,\rho\,\ell_\omega^{2}\,\lVert\bm\omega\rVert^{2} \;+\; \tfrac12\,\rho\,\ell_\omega^{4}\,\lVert\nabla\bm\omega\rVert^{2} \;+\; \lambda\,(\nabla\!\cdot\!\bm v) \,},\quad \ell_\omega:=r_c\,.
+    \]
+    \noindent\textit{Units:} $[\rho\lVert v\rVert^2]=\si{J.m^{-3}}$; since $[\omega]=\si{s^{-1}}$, the coefficients $\rho\,\ell_\omega^{2}$ and $\rho\,\ell_\omega^{4}$ ensure the $|\omega|^{2}$ and $|\nabla\omega|^{2}$ terms are also energy densities.
+
+    \paragraph{Optional minimal matter--swirl coupling.}
+    \[
+        \boxed{\, \mathcal H_\psi \;=\; \tfrac{\hbar^2}{2m}\,\big\lVert(\nabla - i\,\tfrac{m}{\hbar}\,\bm A_{\mathrm{swirl}})\psi\big\rVert^2 + U(|\psi|^2) \,},\quad \bm A_{\mathrm{swirl}}:=\chi\,\bm v.
+    \]
+
+    \section{Appendix: Canon Tables (paste-ready)}
+    \subsection{Constants Table}
+    \begin{center}
+        \begin{tabular}{@{}llll@{}}
+            \toprule
+            \textbf{Symbol} & \textbf{Meaning} & \textbf{Value} & \textbf{Unit} \\
+            \midrule
+            $C_e$ & Vortex tangential velocity & $1.09384563\times 10^{6}$ & $\si{m.s^{-1}}$ \\
+            $r_c$ & Vortex-core radius & $1.40897017\times 10^{-15}$ & $\si{m}$ \\
+            $\rho_{\aeether}^{(\mathrm{fluid})}$  & \aeether{}ther fluid density & $7.0\times 10^{-7}$ & $\si{kg.m^{-3}}$ \\
+            $\rho_{\aeether}^{(\mathrm{mass})}$   & \aeether{}ther mass density & $3.8934358266918687\times 10^{18}$ & $\si{kg.m^{-3}}$ \\
+            $\rho_{\aeether}^{(\mathrm{energy})}$ & \aeether{}ther energy density & $3.49924562\times 10^{35}$ & $\si{J.m^{-3}}$ \\
+            $F_{\aeether}^{\max}$ & Max. Coulomb force & $29.053507$ & $\si{N}$ \\
+            $F_{\mathrm{gr}}^{\max}$ & Max. universal force & $3.02563\times 10^{43}$ & $\si{N}$ \\
+            $\alpha$ & Fine-structure (derived) & $2C_e/c$ ($=7.2973525643\times 10^{-3}$) & --- \\
+            $\varphi$ & Golden ratio & $1.61803398875$ & --- \\
+            $c$ & Speed of light & $299\,792\,458$ & $\si{m.s^{-1}}$ \\
+            $t_p$ & Planck time & $5.391247\times 10^{-44}$ & $\si{s}$ \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+
+    \subsection{Boxed Canon Equations}
+    \begin{enumerate}
+        \item $\boxed{E_{\mathrm{VAM}} = \dfrac{4}{\alpha\varphi}\left(\dfrac{1}{2}\rho C_e^2\right)V}$
+        \item $\boxed{M_{\mathrm{VAM}} = E_{\mathrm{VAM}}/c^2}$
+        \item $\boxed{G_{\mathrm{swirl}} = \dfrac{C_e c^5 t_p^2}{2F_{\aeether}^{\max} r_c^2}}$
+        \item $\boxed{dt_{\mathrm{local}} = dt_{\infty}\sqrt{1-\lVert\omega\rVert^{2} r_c^{2}/c^2}}$
+        \item $\boxed{\Omega_{\mathrm{swirl}}(r) = \dfrac{C_e}{r_c}e^{-r/r_c}}$
+        \item $\boxed{ds^2 = -(c^2 - v_\theta^2)dt^2 + 2 v_\theta r\,d\theta\,dt + dr^2 + r^2 d\theta^2 + dz^2}$
+        \item $\boxed{a_{\mathrm{dark}}(r)=v(r)^2/r}$\quad\emph{equiv.}\quad$\boxed{dp_{\mathrm{swirl}}/dr=\rho\,v(r)^2/r}$
+    \end{enumerate}
+
+    \section*{Change Log}
+    \addcontentsline{toc}{section}{Change Log}
+    \begin{itemize}
+        \item \textbf{v5 (2025-08-22):} Promoted PG-type effective metric, dimensionally normalized swirl Hamiltonian density, and dark-sector pressure/acceleration law. Added derived identities for $\alpha$, $\alpha_g$, and equivalent forms of $G$. Corrected time-rate law. Consolidated galactic swirl profile.
+    \end{itemize}
+
+
+
+%===================== v0.6 Delta — Conclusions from VAM 16–20 =====================
+
+    \section*{v0.6 Delta — Conclusions from VAM 16–20}
+    \label{sec:v06-delta}
+
+    \paragraph{Scope.}
+    We consolidated the main outcomes of VAM-16–20 (Zero-Vorticity Line, photon/EM mapping, Kerr reinterpretation, vortex-string EFT, and Schr\"odinger hydrogen). Below are the boxed identities and consistency results that are ready for canonicalization (with dimensional and numerical checks). Items needing a policy decision are explicitly flagged.
+
+%-------------------------------------------------------------
+    \subsection*{C1) EM coupling emerges from core swirl pressure}
+    \label{subsec:coulomb-from-swirl}
+
+    Define the \emph{swirl Coulomb constant} via the pressure integral over a spherical surface:
+    \[
+        \boxed{ \Lambda \;\equiv\; \int_{S_r^2} p_{\text{swirl}}\,r^2\,d\Omega
+        \;=\; 4\pi\,\rho_{\text{\ae}}^{(\text{mass})}\,C_e^2\,r_c^4 }
+    \]
+    Dimensions: $[\Lambda]=\mathrm{N\,m^2}=\mathrm{J\,m}$ (Coulomb constant units).
+    \emph{Identification:}
+    \[
+        \boxed{ \Lambda \;=\; \frac{e^2}{4\pi\varepsilon_0} } \qquad \text{(EM coupling).}
+    \]
+    \textbf{Numerics (Canon values):} $\Lambda=2.30707733\times10^{-28}\,\mathrm{J\,m}$, matching $e^2/(4\pi\varepsilon_0)$ to $\lesssim10^{-7}$ relative.
+    This promotes a tight constraint among $(\rho_{\text{\ae}}^{(\text{mass})},\,C_e,\,r_c)$ consistent with $\alpha = 2C_e/c$.
+    \textbf{Status:} \emph{Promote} as Canon identity in \S3B and append $\Lambda$ to the constants table.
+
+    \textit{Non-original comparison: Coulomb constant \cite{Jackson1999}.}
+
+%-------------------------------------------------------------
+    \subsection*{C2) Hydrogen Schr\"odinger equation with core softening}
+    \label{subsec:hydrogen-soft-core}
+
+    VAM replaces the Coulomb term by a swirl-induced softened potential
+    \[
+        \boxed{ V_{\text{VAM}}(r) \;=\; -\,\frac{\Lambda}{\sqrt{r^2+r_c^2}}
+        \;\;\xrightarrow{r\gg r_c}\;\; -\frac{\Lambda}{r} }
+    \]
+    and the bound-state equation
+    \[
+        \boxed{ \left[-\frac{\hbar^2}{2\mu}\nabla^2 - \frac{\Lambda}{\sqrt{r^2+r_c^2}}\right]\psi \;=\; E\,\psi }
+    \]
+    recovers the textbook spectrum for $r\gg r_c$.
+    \textbf{Bohr/Rydberg checks (H):}
+    $a_0=\hbar^2/(\mu\Lambda)=5.29177262\times10^{-11}\,\mathrm{m}$,
+    $E_{1}=\mu\Lambda^2/(2\hbar^2)=13.60569\,\mathrm{eV}$.
+    Core softening gives $nS$ shifts $\sim \mathcal{O}\!\big((r_c/a_0)^2\big)\approx 7.1\times10^{-10}$ (H), and
+    $\sim \mathcal{O}(2.4\times10^{-5})$ for muonic H (using $\mu\approx 186\,m_e$),
+    i.e. a ground-state scale $\sim 6\times10^{-2}$\,eV --- a concrete experimental target.
+
+    \textit{Non-original equations: Schr\"odinger hydrogen and Coulomb limit \cite{Schrodinger1926,Jackson1999}.}
+
+%-------------------------------------------------------------
+    \subsection*{C3) Frame-dragging / off-diagonal metric term as circulation}
+    \label{subsec:metric-circulation}
+
+    The PG-type analogue line element already in Canon (\S\,G.1) implies the mixed term
+    \[
+        \boxed{ g_{t\theta}^{\text{(VAM)}} \;=\; v_\theta(r)\,r \;=\; \frac{1}{2\pi}\,\Gamma_{\text{swirl}}(r) }
+    \]
+    with $\Gamma_{\text{swirl}}(r)=\oint v_\theta\,dl$ the azimuthal circulation at radius $r$.
+    This is the precise VAM counterpart of GR's $g_{t\phi}$ frame-dragging structure for axisymmetric rotation, dovetailing with the Kerr reinterpretation draft.\footnote{In BL-like gauges one can factor $c^2$ to yield a dimensionless coefficient; the PG form used in Canon keeps $g_{t\theta}$ in velocity\,$\times$\,length units, matching the analogue-gravity construction.}
+    \textbf{Status:} \emph{Promote} the boxed relation as a corollary to \S\,G.1.
+
+    \textit{Non-original background: analogue/PG metrics and Kerr solution \cite{Painleve1921,Gullstrand1922,Unruh1981,Visser1998,Kerr1963}.}
+
+%-------------------------------------------------------------
+    \subsection*{C4) Hamiltonian/Lagrangian usage: $\rho^{(\text{fluid})}$ vs $\rho^{(\text{mass})}$}
+    \label{subsec:rho-policy}
+
+    Across VAM-16–20 two distinct densities appear:
+    \begin{align*}
+        &\text{Bulk swirl energetics (Canon \S4, G.2):}
+        &&\frac{1}{2}\,\rho_{\text{\ae}}^{(\text{fluid})}\,\lVert \vec v\rVert^2
+        \;+\;\frac{1}{2}\,\rho_{\text{\ae}}^{(\text{fluid})}\,r_c^{2}\lVert \vec\omega\rVert^2
+        \;+\;\cdots \\
+        &\text{EM coupling (\S\,\ref{subsec:coulomb-from-swirl}):}
+        &&\Lambda = 4\pi\,\rho_{\text{\ae}}^{(\text{mass})}\,C_e^2\,r_c^4\,.
+    \end{align*}
+    \textbf{Conclusion (policy):} retain $\rho_{\text{\ae}}^{(\text{fluid})}$ in the \emph{Hamiltonian kernel} for continuum energetics (Canon \S4), and reserve $\rho_{\text{\ae}}^{(\text{mass})}$ for \emph{core/EM coupling} identities (\S\,C1). This resolves the apparent density ``swap'' without changing any numerics.
+
+    \textit{Non-original context: continuum energy density forms \cite{LandauFluids}.}
+
+%-------------------------------------------------------------
+    \subsection*{C5) Time-rate law: confirm $r_c$ factor and note draft variance}
+    \label{subsec:timerate-consistency}
+
+    Some 16–20 drafts reused the historical form $dt_{\text{local}}/dt_\infty=\sqrt{1- \lVert\omega\rVert^2/C_e^2}$.
+    \textbf{Canon-consistent law (dimensionally correct):}
+    \[
+        \boxed{ \frac{dt_{\text{local}}}{dt_\infty} \;=\; \sqrt{\,1- \frac{\lVert\omega\rVert^2\,r_c^2}{c^2}\,}
+        \;=\; \sqrt{\,1- \frac{v_t^2}{c^2}\,},\;\;v_t:=\lVert\omega\rVert r_c }
+    \]
+    \emph{Action:} keep only the $r_c$-normalized law in Canon (\S\,12.1/\S\,3.3); mark the non-normalized variant as deprecated.
+
+%-------------------------------------------------------------
+    \subsection*{C6) ``Zero-vorticity line'' claim: status and correction path}
+    \label{subsec:zero-vort-line}
+
+    With the canonical profile $\Omega_{\text{swirl}}(r)=\tfrac{C_e}{r_c} e^{-r/r_c}$ and $v_\theta=r\Omega$, the axial vorticity is
+    \[
+        \omega_z(r) \;=\; \frac{1}{r}\frac{d}{dr}\!\big(r v_\theta\big) \;=\; 2\Omega(r)+ r\,\Omega'(r)\,,
+    \]
+    so $\omega_z(0)=2\,C_e/r_c\neq 0$.
+    \textbf{Conclusion:} the \emph{``Zero-Vorticity Line''} is \emph{not} satisfied by the current core law.
+    Two consistent options:
+    (i) \emph{reinterpret} the phrase as a \emph{null pressure-gradient axis} (keeping $\omega_z(0)\neq 0$), or
+    (ii) \emph{adopt} a modified core profile with $\Omega(r)\propto r$ as $r\to 0$ to enforce $\omega_z(0)=0$.
+    \emph{Decision required} before promotion.
+
+    \textit{Non-original identities: vorticity in cylindrical coordinates \cite{Batchelor1967}.}
+
+%-------------------------------------------------------------
+    \subsection*{C7) Vortex-string EFT mass functional (candidate form)}
+    \label{subsec:vortex-string-mass}
+
+    The VAM-20 EFT drafts propose a topological mass functional for a knotted core:
+    \[
+        \boxed{ m_{K}^{\text{sol}} \;=\; \mathcal{C}_0 \left(\sum_i V_i\right)\,
+        \rho_{\text{\ae}}^{(\text{fluid})}\,\frac{C_e^2}{c^2}\;
+        \Xi_{K}\!\Big(\mathrm{Tw},\mathrm{Wr},\mathrm{Lk};\,\varphi\Big) }
+    \]
+    where $\sum_i V_i$ is the effective core volume (possibly multi-tube), and $\Xi_K$ is a dimensionless topological factor (\emph{to be calibrated}, e.g.\ to the electron ring).
+    \textbf{Status:} keep as \emph{research} (not yet Canon); compatible with Canon energetics (\S4) once $\mathcal{C}_0$ and $\Xi_K$ are fixed.
+
+%-------------------------------------------------------------
+    \subsection*{Summary of promotions and open items}
+    \begin{itemize}
+        \item \textbf{Promote now:} \S\,C1 ($\Lambda$ identity), \S\,C2 (soft-core hydrogen), \S\,C3 (circulation–$g_{t\theta}$ relation), and \S\,C5 (time-rate with $r_c$).
+        \item \textbf{Append to constants table:} $\Lambda=4\pi\rho_{\text{\ae}}^{(\text{mass})}C_e^2 r_c^4$.
+        \item \textbf{Keep research:} \S\,C6 (zero-vorticity line — needs definition/profile choice), \S\,C7 (vortex-string mass functional calibration).
+    \end{itemize}
+
+%--------------------------- BibTeX additions ---------------------------
+% Add these to your .bib (non-original references cited above)
+    \begin{thebibliography}{9}
+        \bibitem{Jackson1999}
+        J. D. Jackson, \emph{Classical Electrodynamics}, 3rd ed., Wiley, 1999.
+
+        \bibitem{Schrodinger1926}
+        E. Schr\"odinger, ``An Undulatory Theory of the Mechanics of Atoms and Molecules'',
+        \emph{Phys.\ Rev.} \textbf{28}, 1049–1070 (1926). doi:10.1103/PhysRev.28.1049.
+
+        \bibitem{Painleve1921}
+        P. Painlev\'e, ``La m\'ecanique classique et la th\'eorie de la relativit\'e'',
+        \emph{C. R. Acad. Sci. Paris} \textbf{173}, 677–680 (1921).
+
+        \bibitem{Gullstrand1922}
+        A. Gullstrand, ``Allgemeine L\"osung des statischen Eink\"orperproblems in der Einsteinschen Gravitationstheorie'',
+        \emph{Ark. Mat. Astron. Fys.} \textbf{16}, 1–15 (1922).
+
+        \bibitem{Unruh1981}
+        W. G. Unruh, ``Experimental black-hole evaporation?'',
+        \emph{Phys.\ Rev.\ Lett.} \textbf{46}, 1351–1353 (1981). doi:10.1103/PhysRevLett.46.1351.
+
+        \bibitem{Visser1998}
+        M. Visser, ``Acoustic black holes: horizons, ergospheres and Hawking radiation'',
+        \emph{Class.\ Quantum Grav.} \textbf{15}, 1767–1791 (1998). doi:10.1088/0264-9381/15/6/024.
+
+        \bibitem{Kerr1963}
+        R. P. Kerr, ``Gravitational field of a spinning mass as an example of algebraically special metrics'',
+        \emph{Phys.\ Rev.\ Lett.} \textbf{11}, 237–238 (1963). doi:10.1103/PhysRevLett.11.237.
+
+        \bibitem{Batchelor1967}
+        G. K. Batchelor, \emph{An Introduction to Fluid Dynamics}, Cambridge Univ. Press, 1967.
+
+        \bibitem{LandauFluids}
+        L. D. Landau and E. M. Lifshitz, \emph{Fluid Mechanics}, 2nd ed., Pergamon, 1987.
+    \end{thebibliography}
+
+%================== end v0.6 Delta — Conclusions from VAM 16–20 ==================
+
+
+    \bibliographystyle{unsrt}
+    \bibliography{vam_canon_refs}
+\end{document}
+%======================== end vam_canon_v5.tex ====================
+
+
+%======================== vam_canon_refs.bib ======================
+@article{Unruh1981,
+author = {Unruh, W. G.},
+title = {Experimental black-hole evaporation?},
+journal = {Phys. Rev. Lett.},
+year = {1981},
+volume = {46},
+pages = {1351--1353},
+doi = {10.1103/PhysRevLett.46.1351}
+}
+
+@article{Visser1998,
+author = {Visser, Matt},
+title = {Acoustic black holes: horizons, ergospheres and Hawking radiation},
+journal = {Class. Quantum Grav.},
+year = {1998},
+volume = {15},
+number = {6},
+pages = {1767--1791},
+doi = {10.1088/0264-9381/15/6/024}
+}
+
+@article{Painleve1921,
+author = {Painlev{\'e}, Paul},
+title = {La m{\'e}canique classique et la th{\'e}orie de la relativit{\'e}},
+journal = {C. R. Acad. Sci. Paris},
+year = {1921},
+volume = {173},
+pages = {677--680}
+}
+
+@article{Gullstrand1922,
+author = {Gullstrand, Allvar},
+title = {Allgemeine L{\"o}sung des statischen Eink{\"o}rperproblems in der Einsteinschen Gravitationstheorie},
+journal = {Arkiv f{\"o}r Matematik, Astronomi och Fysik},
+year = {1922},
+volume = {16},
+pages = {1--15}
+}
+
+@book{Batchelor1967,
+author = {Batchelor, G. K.},
+title = {An Introduction to Fluid Dynamics},
+publisher = {Cambridge University Press},
+year = {1967}
+}
+
+@article{Helmholtz1858,
+author  = {Helmholtz, H. von},
+title   = {On Integrals of the Hydrodynamical Equations which Express Vortex-motion},
+journal = {Philosophical Magazine},
+year    = {1858}
+}
+
+@article{Kelvin1867,
+author  = {Thomson, W. (Lord Kelvin)},
+title   = {On Vortex Atoms},
+journal = {Proc. Royal Society of Edinburgh},
+year    = {1867}
+}
+
+@article{Moffatt1969,
+author  = {Moffatt, H. K.},
+title   = {The degree of knottedness of tangled vortex lines},
+journal = {Journal of Fluid Mechanics},
+year    = {1969}
+}
+
+@article{Schrodinger1926,
+author  = {Schr{\"o}dinger, E.},
+title   = {An Undulatory Theory of the Mechanics of Atoms and Molecules},
+journal = {Physical Review},
+year    = {1926}
+}
+%======================== end vam_canon_refs.bib ==================

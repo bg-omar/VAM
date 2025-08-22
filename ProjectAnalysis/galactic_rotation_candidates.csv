@@ -1,0 +1,56 @@
+file,equation_tex
+VAM_7_From_Quantum_Constants_to_Galactic_Swirl/VAM-7-From_Quantum_Constants_to_Galactic_Swirl.tex,\omega(r) = \omega_0 \cdot \frac{r}{r^2 + r_c^2} \label{eq:vorticity_profile}
+VAM_7_From_Quantum_Constants_to_Galactic_Swirl/VAM-7-From_Quantum_Constants_to_Galactic_Swirl.tex,v_\varphi(r) = \omega_0 \left( 1 - \frac{r_c}{r} \arctan\left( \frac{r}{r_c} \right) \right) \label{eq:velocity_arctan}
+VAM_7_From_Quantum_Constants_to_Galactic_Swirl/VAM-7-From_Quantum_Constants_to_Galactic_Swirl.tex,\Omega(r) = \Omega_0 \left( 1 - e^{-r/r_c} \right) \label{eq:omega_saturation}
+VAM_7_From_Quantum_Constants_to_Galactic_Swirl/VAM-7-From_Quantum_Constants_to_Galactic_Swirl.tex,\boxed{ v(r) = \frac{C_{\text{core}}}{\sqrt{1 + \left( \frac{r_c}{r} \right)^2}} + C_{\text{tail}} \left(1 - e^{-r/r_c} \right) } \label{eq:full_vam_profile}
+VAM_7_From_Quantum_Constants_to_Galactic_Swirl/VAM-7-From_Quantum_Constants_to_Galactic_Swirl.tex,"v_\varphi(r) &= \frac{1}{r} \int_0^r \omega_0 \cdot \frac{r'}{r'^2 + r_c^2} \cdot r' \, dr' \\ &= \frac{\omega_0}{r} \int_0^r \frac{r'^2}{r'^2 + r_c^2} \, dr'"
+VAM_7_From_Quantum_Constants_to_Galactic_Swirl/VAM-7-From_Quantum_Constants_to_Galactic_Swirl.tex,v_\text{tail}(r) &= r \cdot \Omega(r) \\ &= r \cdot \Omega_0 \left( 1 - e^{-r/r_c} \right) \\ &= C_{\text{tail}} \left( 1 - e^{-r/r_c} \right) \label{eq:tail_velocity}
+VAM_7_From_Quantum_Constants_to_Galactic_Swirl/VAM-7-From_Quantum_Constants_to_Galactic_Swirl.tex,a = \frac{\sqrt{a_N a_0}}{\mu(a/a_0)}
+VAM_7_From_Quantum_Constants_to_Galactic_Swirl/VAM-7-From_Quantum_Constants_to_Galactic_Swirl.tex,v(r) = \underbrace{ \frac{C_{\text{core}}}{\sqrt{1 + (r_c/r)^2}} }_{\text{core}} + \underbrace{ C_{\text{tail}} (1 - e^{-r/r_c}) }_{\text{tail}}
+VAM_7_From_Quantum_Constants_to_Galactic_Swirl/VAM-7-From_Quantum_Constants_to_Galactic_Swirl.tex,v(r) = \frac{C_{\text{core}}}{\sqrt{1 + (r_c/r)^2}} + C_{\text{tail}} (1 - e^{-r/r_c})
+VAM_7_From_Quantum_Constants_to_Galactic_Swirl/VAM-7-From_Quantum_Constants_to_Galactic_Swirl.tex,v(r) \sim C_{\text{core}} \cdot \frac{r}{r_c}
+VAM_7_From_Quantum_Constants_to_Galactic_Swirl/VAM-7-From_Quantum_Constants_to_Galactic_Swirl.tex,v(r) \sim \frac{C_{\text{core}}}{1}
+VAM_7_From_Quantum_Constants_to_Galactic_Swirl/VAM-7-From_Quantum_Constants_to_Galactic_Swirl.tex,C_{\text{core}} = \omega_0 r_c
+VAM_7_From_Quantum_Constants_to_Galactic_Swirl/VAM-7-From_Quantum_Constants_to_Galactic_Swirl.tex,\Omega_0
+VAM_7_From_Quantum_Constants_to_Galactic_Swirl/VAM-7-From_Quantum_Constants_to_Galactic_Swirl.tex,C_{\text{tail}} = \Omega_0 \cdot r
+VAM_7_From_Quantum_Constants_to_Galactic_Swirl/VAM-7-From_Quantum_Constants_to_Galactic_Swirl.tex,v(r) \approx C_{\text{tail}} \cdot \frac{r}{r_c}
+VAM_7_From_Quantum_Constants_to_Galactic_Swirl/VAM-7-From_Quantum_Constants_to_Galactic_Swirl.tex,v(r) \to C_{\text{tail}}
+VAM_7_From_Quantum_Constants_to_Galactic_Swirl/VAM-7-From_Quantum_Constants_to_Galactic_Swirl.tex,v(r) \sim \frac{C_{\text{core}}}{r_c} r
+VAM_7_From_Quantum_Constants_to_Galactic_Swirl/VAM-7-From_Quantum_Constants_to_Galactic_Swirl.tex,v(r) \to C_{\text{core}} + C_{\text{tail}}
+VAM_7_From_Quantum_Constants_to_Galactic_Swirl/VAM-7-From_Quantum_Constants_to_Galactic_Swirl.tex,v(r) = v_{\text{core}}(r) + v_{\text{tail}}(r)
+VAM_7_From_Quantum_Constants_to_Galactic_Swirl/VAM-7-From_Quantum_Constants_to_Galactic_Swirl.tex,"a_0 \approx 1.2 \times 10^{-10} \, \text{m/s}^2"
+VAM_7_From_Quantum_Constants_to_Galactic_Swirl/VAM-7-From_Quantum_Constants_to_Galactic_Swirl.tex,v(r)
+VAM_8_MASTER_Paper/VAM-8-Master_Paper.tex,"\frac{d\tau}{dt} = 1 - \frac{\alpha \, (\vec{v} \cdot \vec{\omega})}{C_e \, \omega_0} \label{eq:vam_time_dilation}"
+VAM_8_MASTER_Paper/VAM-8-Master_Paper.tex,\frac{d\tau}{dt} = 1 - \frac{\alpha \mathcal{H}}{C_e \omega_0}
+VAM_8_MASTER_Paper/VAM-8-Master_Paper.tex,\frac{d\tau}{dt} = 1 - \frac{\alpha}{C_e \omega_0} \vec{v} \cdot \vec{\omega} \label{eq:helicity_dilation}
+VAM_8_MASTER_Paper/VAM-8-Master_Paper.tex,\Delta \phi = \int \frac{\alpha \mathcal{H}}{C_e \omega_0} dt
+VAM_8_MASTER_Paper/VAM-8-Master_Paper.tex,"\frac{d\tau}{dt} \rightarrow 0 \quad \Rightarrow \quad \vec{v} \cdot \vec{\omega} \rightarrow \frac{C_e \, \omega_0}{\alpha}"
+VAM_8_MASTER_Paper/VAM-8-Master_Paper.tex,R_\text{vam} = \left( \frac{2 F_{\text{max}}}{\rho_{\text{\ae}}^{\text{(fluid)}} \omega_0^2} \right)^{1/2}
+VAM_8_MASTER_Paper/VAM-8-Master_Paper.tex,\omega_0
+VAM_8_MASTER_Paper/VAM-8-Master_Paper.tex,r_c \approx a_0
+VAM_6_Knotted_Gauge_Fields/section/01_Introduction.tex,\omega_0
+VAM_6_Knotted_Gauge_Fields/section/03_natural_æther_constants.tex,"\alpha(k^2) = \frac{\alpha_0}{1 - \Pi(k^2)},"
+VAM_6_Knotted_Gauge_Fields/section/03_natural_æther_constants.tex,"\alpha(\vec{x}) = \frac{e^2}{4\pi \varepsilon_0(\vec{x}) \hbar \, c_{\text{eff}}(\vec{x})} = \alpha_0 \cdot f\left( \rho_\text{\ae}(\vec{x}), \, |\vec{\omega}(\vec{x})| \right),"
+VAM_6_Knotted_Gauge_Fields/section/03_natural_æther_constants.tex,\alpha_0
+VAM_6_Knotted_Gauge_Fields/section/10_MassAndInertiaFromVortexCirculation.tex,\boxed{ \hbar_{\text{VAM}} = 2 m_f C_e a_0 }
+VAM_6_Knotted_Gauge_Fields/section/10_MassAndInertiaFromVortexCirculation.tex,"\hbar_{\text{VAM}} = 2 m C_e a_0, \qquad E = m c^2, \qquad \Gamma = \frac{h}{m}."
+VAM_6_Knotted_Gauge_Fields/section/10_MassAndInertiaFromVortexCirculation.tex,"h = 4\pi m_e C_e a_0 \quad \Rightarrow \quad \hbar = 2 m_e C_e a_0,"
+VAM_6_Knotted_Gauge_Fields/section/10_MassAndInertiaFromVortexCirculation.tex,a_0
+VAM_6_Knotted_Gauge_Fields/section/19_SwirlInducedTimeAndInVortexKnots.tex,"\frac{d\tau}{dt} = \frac{\omega_{\text{obs}}}{\omega_0},"
+VAM_6_Knotted_Gauge_Fields/section/19_SwirlInducedTimeAndInVortexKnots.tex,"\omega_{\text{obs}} = \omega_0 \left( 1 - \alpha \cdot \frac{\mathcal{H}}{C_e \cdot \omega_0} \right),"
+VAM_6_Knotted_Gauge_Fields/section/19_SwirlInducedTimeAndInVortexKnots.tex,\boxed{ \frac{d\tau}{dt} = 1 - \alpha \cdot \frac{\vec{v} \cdot \vec{\omega}}{C_e \cdot \omega_0} }
+VAM_6_Knotted_Gauge_Fields/section/19_SwirlInducedTimeAndInVortexKnots.tex,\omega_0
+VAM_6_Knotted_Gauge_Fields/section/20_CorePressureMassAndTime.tex,"R_{\text{eq}} \sim a_0 = \frac{4\pi \varepsilon_0 \hbar^2}{m_e e^2} \approx 5.29 \times 10^{-11} \, \text{m}"
+VAM_6_Knotted_Gauge_Fields/section/22_EntropicSwirlGravity.tex,a < a_0
+VAM_6_Knotted_Gauge_Fields/section/A10_DerivationGravitationalFineStructure.tex,"\alpha_g = \frac{F^{\text{max}}_{\text{\ae}} t_p^2}{a_0 M_e},"
+VAM_6_Knotted_Gauge_Fields/section/A10_DerivationGravitationalFineStructure.tex,a_0
+VAM_6_Knotted_Gauge_Fields/section/A12_MappingStandardModelTermsToVAMAnalogues.tex,a_0
+VAM_6_Knotted_Gauge_Fields/section/A12_MappingStandardModelTermsToVAMAnalogues.tex,R = r = a_0
+VAM_6_Knotted_Gauge_Fields/section/A15_EmergentInertialMassFromKnottedVortexHelicity.tex,"U \sim \frac{1}{2} \rho_\text{\ae}^{(\text{energy})} \, \omega_0^2 \, L r_c^2."
+VAM_6_Knotted_Gauge_Fields/section/A15_EmergentInertialMassFromKnottedVortexHelicity.tex,\Gamma = \oint \vec{v} \cdot d\vec{l} = \omega_0 \cdot \pi r_c^2 \quad \Rightarrow \quad \omega_0 = \frac{\Gamma}{\pi r_c^2}.
+VAM_6_Knotted_Gauge_Fields/section/A15_EmergentInertialMassFromKnottedVortexHelicity.tex,\omega_0
+VAM_6_Knotted_Gauge_Fields/section/A8_DerivationPlancksConstant.tex,"a_0 = \frac{\hbar}{m_e v_e}, \quad \text{with} \quad v_e = \frac{e^2}{4\pi \varepsilon_0 \hbar}"
+VAM_6_Knotted_Gauge_Fields/section/A8_DerivationPlancksConstant.tex,\hbar = m_e a_0 v_e = m_e a_0 \frac{e^2}{4\pi \varepsilon_0 \hbar} \Rightarrow \hbar^2 = \frac{m_e a_0 e^2}{4\pi \varepsilon_0}
+VAM_6_Knotted_Gauge_Fields/section/A8_DerivationPlancksConstant.tex,\boxed{\hbar = 2 m_e C_e a_0}
+VAM_6_Knotted_Gauge_Fields/section/A8_DerivationPlancksConstant.tex,\boxed{\hbar = m_e r_c C_e = 2 m_e C_e a_0}
+VAM_6_Knotted_Gauge_Fields/section/A8_DerivationPlancksConstant.tex,a_0

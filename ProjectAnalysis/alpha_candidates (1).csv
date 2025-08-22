@@ -1,0 +1,71 @@
+file,equation_tex
+VAM_7_From_Quantum_Constants_to_Galactic_Swirl/VAM-7-From_Quantum_Constants_to_Galactic_Swirl.tex,"\rho_{\text{\ae}}^{\text{(fluid)}} = \frac{2 m_e c^2}{\left( \alpha \cdot \frac{m_e c^2}{\hbar} \right)^2 \cdot \left( r_e^3 / 3 \right)} \approx 7 \times 10^{-7} \, \text{kg/m}^3"
+VAM_7_From_Quantum_Constants_to_Galactic_Swirl/VAM-7-From_Quantum_Constants_to_Galactic_Swirl.tex,|\vec{\omega}| = \alpha \cdot \omega_C = \alpha \cdot \frac{m_e c^2}{\hbar}
+VAM_7_From_Quantum_Constants_to_Galactic_Swirl/VAM-7-From_Quantum_Constants_to_Galactic_Swirl.tex,\rho_{\text{\ae}}^{\text{(fluid)}} = \frac{2 m_e c^2}{\left(\alpha \cdot \frac{m_e c^2}{\hbar}\right)^2 r_c^3}
+VAM_7_From_Quantum_Constants_to_Galactic_Swirl/VAM-7-From_Quantum_Constants_to_Galactic_Swirl.tex,"\rho_{\text{\ae}}^{\text{(fluid)}} = \frac{2 m_e c^2}{\left(\alpha \cdot \frac{m_e c^2}{\hbar}\right)^2 \cdot \left(\frac{r_e^3}{3}\right)} \approx 6.97 \times 10^{-7} \, \text{kg/m}^3"
+VAM_8_MASTER_Paper/info.md,M = \frac{1}{\varphi} \cdot \frac{4}{\alpha} \cdot \left( \frac{1}{2} \rho_\text{\ae} C_e^2 V \right)
+VAM_8_MASTER_Paper/info.md,"M(n, m, \{V_i\}) = \underbrace{\frac{4}{\alpha}}_{\text{amplifier}} \cdot \underbrace{\left( \frac{1}{m} \right)^{3/2}}_{\text{knot mass inverse}} \cdot \underbrace{\frac{1}{\varphi^s}}_{\text{coherence decay}} \cdot \underbrace{n^{-1/\varp"
+VAM_8_MASTER_Paper/info.md,"M(n, m, \{V_i\}) = \underbrace{\frac{4}{\alpha}}_{\text{EM amplification}} \cdot \underbrace{\left( \frac{1}{m} \right)^{3/2}}_{\text{knot topology}} \cdot \underbrace{\varphi^{-s}}_{\text{coherence loss}} \cdot \underbrace{n^{-1/\varphi}}_"
+VAM_8_MASTER_Paper/info.md,"M(n, m, \{V_i\}) = \frac{4}{\alpha} \cdot \left( \frac{1}{m} \right)^{3/2} \cdot \varphi^{-s} \cdot n^{-1/\varphi} \cdot \left( \sum_i V_i \right) \cdot \left( \frac{1}{2} \rho_\text{\ae}^{(\text{energy})} C_e^2 \right)"
+VAM_8_MASTER_Paper/info.md,"counterclockwise (CCW) — matter-like Therefore, the negative values you've been seeing **are consistent with anti-muon vortices**. Reversing chirality in your knot (or simply flipping the sign in post-processing) would match the muon anomal"
+VAM_8_MASTER_Paper/info.md,? We can even scan your entire `.fseries` folder and fit best matches 🔍 You: yes please Analyzed ```python import numpy as np # Constants alpha = 1 / 137.035999084 # Fine-structure constant phi = np.exp(np.arcsinh(0.5)) # phi = e^{sinh^{-1}
+VAM_8_MASTER_Paper/info.md,values using this mass function? 💡 Let’s connect mass ↔ anomaly for real! You: yes please make it subatommic scaled Analyzed ```python # Let's apply the vam_mass function to a subatomic-scale knot volume # Typical subatomic volumes range fr
+VAM_8_MASTER_Paper/VAM-8-Master_Paper.tex,M = \left( \frac{4}{\alpha \varphi} \right) \cdot \xi(n) \cdot \left( \frac{1}{2} \rho_{\text{\ae}}^{\text{(mass)}} C_e^2 \sum_i V_i \right) \label{eq:mass_formula_basic}
+VAM_8_MASTER_Paper/VAM-8-Master_Paper.tex,"M_{u,d} = \frac{4}{\alpha \varphi} \cdot \frac{1}{2} \rho_{\text{\ae}}^{\text{(mass)}} C_e^2 \cdot V_{u,d}"
+VAM_8_MASTER_Paper/VAM-8-Master_Paper.tex,"M(n, m, \{V_i\}) = \left( \frac{4}{\alpha} \right) \cdot \left( \frac{1}{m} \right)^{3/2} \cdot \frac{1}{\varphi^s} \cdot n^{-1/\varphi} \cdot \sum_i V_i \cdot \left( \frac{1}{2} \rho_{\text{\ae}}^{\text{(mass)}} C_e^2 \right) \label{eq:mas"
+VAM_8_MASTER_Paper/VAM-8-Master_Paper.tex,"\frac{d\tau}{dt} = 1 - \frac{\alpha \, (\vec{v} \cdot \vec{\omega})}{C_e \, \omega_0} \label{eq:vam_time_dilation}"
+VAM_8_MASTER_Paper/VAM-8-Master_Paper.tex,\frac{d\tau}{dt} = 1 - \frac{\alpha \mathcal{H}}{C_e \omega_0}
+VAM_8_MASTER_Paper/VAM-8-Master_Paper.tex,\alpha = \frac{2C_e}{c} \label{eq:fine_structure_vam}
+VAM_8_MASTER_Paper/VAM-8-Master_Paper.tex,\frac{d\tau}{dt} = 1 - \frac{\alpha}{C_e \omega_0} \vec{v} \cdot \vec{\omega} \label{eq:helicity_dilation}
+VAM_8_MASTER_Paper/VAM-8-Master_Paper.tex,\Delta \phi = \int \frac{\alpha \mathcal{H}}{C_e \omega_0} dt
+VAM_8_MASTER_Paper/VAM-8-Master_Paper.tex,F_\text{Coulomb} = \left( \frac{\alpha}{\varphi} \right) F_0
+VAM_8_MASTER_Paper/VAM-8-Master_Paper.tex,"F_\text{grav} = \alpha_g \cdot F_0, \quad \text{where } \alpha_g = \frac{G m_e^2}{\hbar c} \approx 1.7518 \times 10^{-45} \label{eq:gravitational_scaling}"
+VAM_8_MASTER_Paper/VAM-8-Master_Paper.tex,F_{\text{observable}} = \left\{ \begin{array}{ll} F_0 & \text{(core-confined maximum)} \\ \frac{\alpha}{\varphi} \cdot F_0 & \text{(electromagnetic)} \\ \alpha_g \cdot F_0 & \text{(gravitational)} \end{array} \right.
+VAM_8_MASTER_Paper/VAM-8-Master_Paper.tex,"\frac{d\tau}{dt} \rightarrow 0 \quad \Rightarrow \quad \vec{v} \cdot \vec{\omega} \rightarrow \frac{C_e \, \omega_0}{\alpha}"
+VAM_8_MASTER_Paper/VAM-8-Master_Paper.tex,\omega_{\text{\ae}} = \alpha \cdot \frac{m_e c^2}{\hbar}
+VAM_8_MASTER_Paper/VAM-8-Master_Paper.tex,"\rho_{\text{\ae}}^{\text{(fluid)}} = \frac{2 m_e c^2}{\left( \alpha \cdot \frac{m_e c^2}{\hbar} \right)^2 \cdot \left( \frac{r_e^3}{3} \right)} \approx 7 \times 10^{-7} \, \text{kg/m}^3"
+VAM_8_MASTER_Paper/VAM-8.5-Master_Formula.tex,"\boxed{ M(n,m,\{V_i\};k)=\frac{4}{\alpha}\; \underbrace{\Big(\tfrac{1}{m}\Big)^{3/2}}_{\eta}\; \underbrace{n^{-1/\varphi}}_{\xi}\; \underbrace{\varphi^{-s}}_{\tau}\; \Big(\sum_i V_i\Big)\; \frac{\mathcal{E}_k}{c^2} } \label{eq:master-A}"
+VAM_8_MASTER_Paper/VAM-8.5-Master_Formula.tex,"\boxed{ M(n,m,\{V_i\};k)=\frac{4}{\alpha}\; \Big(\tfrac{1}{m}\Big)^{3/2}\; n^{-1/\varphi}\; \varphi^{-(s+2k)}\; \Big(\sum_i V_i\Big)\; \frac{\tfrac12\,\rho_{\ae} C_e^2}{c^2} } \label{eq:master-B}"
+VAM_8_MASTER_Paper/VAM-8.5-Master_Formula.tex,"\boxed{ M = \frac{4}{\alpha} \left(\frac{1}{m}\right)^{3/2} n^{-1/\varphi} \varphi^{-s} \left(\sum_i V_i\right) \frac{\tfrac12\,\rho_{\ae} C_e^2}{c^2} }"
+VAM_8_MASTER_Paper/VAM-8.5-Master_Formula.tex,M \;=\; &\underbrace{\frac{4}{\alpha}}_{\text{EM amplification}} \cdot \underbrace{\Big(\tfrac{1}{m}\Big)^{3/2}}_{\text{thread suppression}} \cdot \underbrace{n^{-1/\varphi}}_{\text{coherence}} \cdot \underbrace{\varphi^{-s}}_{\text{tension
+VAM_8_MASTER_Paper/VAM-8.5-Master_Formula.tex,"n=3,\ m=3,\ s=2,\ \rho_{\ae}=3.89\times10^{18}\,\mathrm{kg/m^3},\ C_e=1.0938\times10^{6}\,\mathrm{m/s},\ \alpha^{-1}=137.035999,\ \varphi\simeq1.618."
+VAM_8_MASTER_Paper/VAM-8.5-Master_Formula.tex,"M(n, m, \{V_i\}) = \frac{4}{\alpha} \cdot \left( \frac{1}{m} \right)^{3/2} \cdot \frac{1}{\varphi^s} \cdot n^{-1/\varphi} \cdot \left( \sum_i V_i \right) \cdot \left( \frac{1}{2} \rho_\text{\ae}^{(\text{energy})} C_e^2 \right)"
+VAM_8_MASTER_Paper/VAM-8_NewNotes.tex,"M(n, m, \{V_i\}) = \underbrace{\frac{4}{\alpha}}_{\text{EM amplification}} \cdot \underbrace{\left( \frac{1}{m} \right)^{3/2}}_{\text{knot topology}} \cdot \underbrace{\varphi^{-s}}_{\text{coherence loss}} \cdot \underbrace{n^{-1/\varphi}}_"
+VAM_8_MASTER_Paper/appendix/Appendix_Lagrangian_first_principle.tex,M = \frac{4}{\alpha} m^{-3/2} n^{-1/\varphi} \varphi^{-s} \cdot \left( \sum_i V_i \right) \cdot \frac{1}{2} \rho_{\text{\ae}} C_e^2
+VAM_8_MASTER_Paper/sections/A_SM.tex,"M(n, m, \{V_i\}) = \left( \frac{4}{\alpha} \right) \cdot \left( \frac{1}{m} \right)^{3/2} \cdot \frac{1}{\varphi^s} \cdot n^{-1/\varphi} \cdot \sum_{i=1}^{n} V_i \cdot \left( \frac{1}{2} \rho_\text{\ae}^{(\text{mass})} C_e^2 \right), \label"
+VAM_8_MASTER_Paper/sections/A_SM.tex,"(4/\alpha),m^{-3/2},n^{-1/\varphi},\varphi^{-s}"
+VAM_5_Lagrangian_Gravity_Electromagnetism/Appendix/Appendix_Benchmark3.tex,"\boxed{ M(n, m, \{V_i\}) = \frac{4}{\alpha} \cdot \left( \frac{1}{m} \right)^{3/2} \cdot \frac{1}{\varphi^s} \cdot n^{-1/\varphi} \cdot \left( \sum_i V_i \right) \cdot \left( \frac{1}{2} \rho_{\text{\ae}}^{(\text{energy})} C_e^2 \right) }"
+VAM_5_Lagrangian_Gravity_Electromagnetism/Appendix/Appendix_Benchmark4.tex,"\boxed{ M(n, m, \{V_i\}) = \frac{4}{\alpha} \cdot \left( \frac{1}{m} \right)^{3/2} \cdot \frac{1}{\varphi^s} \cdot n^{-1/\varphi} \cdot \left( \sum_i V_i \right) \cdot \left( \frac{1}{2} \rho_\text{\ae}^{(\text{energy})} C_e^2 \right) }"
+VAM_5_Lagrangian_Gravity_Electromagnetism/Appendix/Appendix_Benchmark5.tex,"\boxed{ M(n, m, \{V_i\}) = \frac{4}{\alpha} \cdot \left( \frac{1}{m} \right)^{3/2} \cdot \frac{1}{\varphi^s} \cdot n^{-1/\varphi} \cdot \left( \sum_i V_i \right) \cdot \left( \frac{1}{2} \rho_\text{\ae}^{(\text{energy})} C_e^2 \right) }"
+VAM_5_Lagrangian_Gravity_Electromagnetism/Appendix/Appendix_Benchmark6.tex,"\boxed{ M(n, m, \{V_i\}) = \frac{4}{\alpha} \cdot \left( \frac{1}{m} \right)^{3/2} \cdot \frac{1}{\varphi^s} \cdot n^{-1/\varphi} \cdot \left( \sum_i V_i \right) \cdot \left( \frac{1}{2} \rho_\text{\ae}^{(\text{energy})} C_e^2 \right) }"
+VAM_5_Lagrangian_Gravity_Electromagnetism/Appendix/Appendix_Benchmark7.tex,"\boxed{ M(n, m, \{V_i\}) = \frac{4}{\alpha} \cdot \left( \frac{1}{m} \right)^{3/2} \cdot \frac{1}{\varphi^s} \cdot n^{-1/\varphi} \cdot \left( \sum_i V_i \right) \cdot \left( \frac{1}{2} \rho_\text{\ae}^{(\text{energy})} C_e^2 \right) }"
+VAM_6_Knotted_Gauge_Fields/section/02_motivation.tex,F^{\text{max}}_{\text{\ae}} = \alpha \left(\frac{c^4}{4G}\right) \left(\frac{r_c}{\ell_p}\right)^{-2} \label{eq:FmaxVAMfromGR}
+VAM_6_Knotted_Gauge_Fields/section/02_motivation.tex,"\alpha = \frac{2C_e}{c},"
+VAM_6_Knotted_Gauge_Fields/section/02_motivation.tex,\alpha = \frac{2 C_e}{c}
+VAM_6_Knotted_Gauge_Fields/section/09_TopologicalOriginsOfParticleProperties.tex,\alpha = \frac{q^2}{4\pi \epsilon_0 \hbar c} \quad \Rightarrow \quad \alpha = \frac{2C_e}{c}
+VAM_6_Knotted_Gauge_Fields/section/12_HelicityInterferenceSuppressionTermFromVortexKnotPacking.tex,\boxed{ M = \left( \frac{1}{\varphi} \right) \cdot \left( \frac{4}{\alpha} \right) \cdot \underbrace{\left(1 - \beta \log(n)\right)}_{\text{inter-knot interference}} \cdot \left( \frac{1}{2} \rho_\text{\ae} C_e^2 V \right) }
+VAM_6_Knotted_Gauge_Fields/section/12_HelicityInterferenceSuppressionTermFromVortexKnotPacking.tex,M_2 = \frac{4}{\alpha \varphi} \cdot M_0
+VAM_6_Knotted_Gauge_Fields/section/12_HelicityInterferenceSuppressionTermFromVortexKnotPacking.tex,M_3 = \frac{4}{\alpha \varphi} \cdot M_0 \cdot \xi(n) \cdot \varphi^{-s} \cdot \left( \frac{1}{m} \right)^{3/2}
+VAM_6_Knotted_Gauge_Fields/section/13_DerivationOfBaryons.tex,"\rho_\text{\ae}^{(\text{energy})} &= 3.893 \times 10^{18} \, \text{kg/m}^3 \\ C_e &= 1.0938 \times 10^6 \, \text{m/s} \\ r_c &= 1.40897 \times 10^{-15} \, \text{m} \\ \alpha &= 7.297 \times 10^{-3}, \quad \varphi = 1.618, \quad c = 2.9979 \"
+VAM_6_Knotted_Gauge_Fields/section/13_DerivationOfBaryons.tex,\boxed{ M_{\text{knot}} = \frac{4}{\alpha \varphi} \cdot \left( \frac{1}{2} \rho_\text{\ae}^{(\text{energy})} C_e^2 V_{\text{knot}} \right) }
+VAM_6_Knotted_Gauge_Fields/section/13_DerivationOfBaryons.tex,\boxed{ M_{\text{baryon}} = \frac{1}{\varphi^2} \cdot n^{-1/\varphi} \cdot \sum_{i=1}^{3} \left( \frac{4}{\alpha \varphi} \cdot \frac{1}{2} \rho_\text{\ae}^{(\text{energy})} C_e^2 \cdot \mathcal{V}_i \cdot V_{\text{torus}} \right) }
+VAM_6_Knotted_Gauge_Fields/section/13_DerivationOfBaryons.tex,"M_{u,d} = \frac{4}{\alpha \varphi} \cdot \frac{1}{2} \rho_\text{\ae}^{(\text{energy})} C_e^2 \cdot \mathcal{V}_{u,d} \cdot V_{\text{torus}}"
+VAM_6_Knotted_Gauge_Fields/section/14_General_Mass_Formula.tex,"\boxed{ M(n, m, \{V_i\}) = \frac{4}{\alpha} \cdot \left( \frac{1}{m} \right)^{3/2} \cdot \frac{1}{\varphi^s} \cdot n^{-1/\varphi} \cdot \left( \sum_{i=1}^n V_i \right) \cdot \left( \frac{1}{2} \rho_\text{\ae}^{(\text{energy})} C_e^2 \right)"
+VAM_6_Knotted_Gauge_Fields/section/19_SwirlInducedTimeAndInVortexKnots.tex,"\omega_{\text{obs}} = \omega_0 \left( 1 - \alpha \cdot \frac{\mathcal{H}}{C_e \cdot \omega_0} \right),"
+VAM_6_Knotted_Gauge_Fields/section/19_SwirlInducedTimeAndInVortexKnots.tex,\boxed{ \frac{d\tau}{dt} = 1 - \alpha \cdot \frac{\vec{v} \cdot \vec{\omega}}{C_e \cdot \omega_0} }
+VAM_6_Knotted_Gauge_Fields/section/23_outlookvam_qft.tex,"\alpha_{\text{VAM}}(r) = \frac{\Gamma^2}{8\pi^2 r^2 \rho_{\text{\ae}}^{\text{(mass)}} c^2},"
+VAM_6_Knotted_Gauge_Fields/section/A10_DerivationGravitationalFineStructure.tex,\alpha_g = \frac{2 F^{\text{max}}_{\text{\ae}} C_e t_p^2}{\frac{2 F^{\text{max}}_{\text{\ae}} r_c^2}{C_e}} = \frac{C_e^2 t_p^2}{r_c^2}.
+VAM_6_Knotted_Gauge_Fields/section/A10_DerivationGravitationalFineStructure.tex,"\alpha_g = \frac{C_e^2 L_{\text{Planck}}^2}{r_c^2 c^2},"
+VAM_6_Knotted_Gauge_Fields/section/A10_DerivationGravitationalFineStructure.tex,\alpha_g = \frac{C_e c^2 t_p^2 m_e}{\hbar r_c}.
+VAM_6_Knotted_Gauge_Fields/section/A10_DerivationGravitationalFineStructure.tex,"\alpha_g = \frac{2 F^{\text{max}}_{\text{\ae}} C_e t_p^2}{\hbar},"
+VAM_6_Knotted_Gauge_Fields/section/A10_DerivationGravitationalFineStructure.tex,\boxed{ \alpha_g = \frac{C_e^2 t_p^2}{r_c^2} = \frac{C_e^2 L_{\text{Planck}}^2}{r_c^2 c^2} }
+VAM_6_Knotted_Gauge_Fields/section/A10_DerivationGravitationalFineStructure.tex,\alpha = \frac{C_e^2}{c^2}
+VAM_6_Knotted_Gauge_Fields/section/A16_HyperbolicSuppressionInMassFormula.tex,M = \frac{4}{\alpha \varphi} \cdot \left( \frac{1}{2} \rho_\text{\ae}^{(\text{energy})} C_e^2 V \right)
+VAM_6_Knotted_Gauge_Fields/section/A16_HyperbolicSuppressionInMassFormula.tex,\boxed{ M = \frac{4}{\alpha} \cdot e^{-\sinh^{-1}(0.5)} \cdot \left( \frac{1}{2} \rho_\text{\ae}^{(\text{energy})} C_e^2 V \right) }
+VAM_6_Knotted_Gauge_Fields/section/A4_CalculateElectronHelicity.tex,"M_{\text{helicity}} = \alpha' \cdot \rho_\text{\ae}^{\text{(mass)}} \cdot C_e \cdot r_c^3 \cdot \mathcal{H}_{\text{norm}}(p,q) \tag{2}"
+VAM_6_Knotted_Gauge_Fields/section/A4_CalculateElectronHelicity.tex,\boxed{\alpha' = \frac{8\pi}{C_e}}
+VAM_6_Knotted_Gauge_Fields/section/A6_FineStructureConstant.tex,\alpha = \frac{e^2}{4 \pi \varepsilon_0 \hbar c}.
+VAM_6_Knotted_Gauge_Fields/section/A6_FineStructureConstant.tex,\alpha = \frac{e^2}{8 \pi^2 \varepsilon_0 c} \cdot \frac{1}{\hbar} = \frac{2 C_e}{c}.
+VAM_6_Knotted_Gauge_Fields/section/A6_FineStructureConstant.tex,\boxed{ \alpha = \frac{2 C_e}{c} } \qquad \Leftrightarrow \qquad \boxed{ C_e = \frac{c \alpha}{2} }
+VAM_6_Knotted_Gauge_Fields/section/A8_DerivationPlancksConstant.tex,C_e = \frac{c}{2\alpha}
+VAM_6_Knotted_Gauge_Fields/section/A9_DerivationGravitationalConstant.tex,"G = \frac{\alpha_g c^3 r_c}{C_e M_e}, \quad \text{or} \quad G = \frac{C_e c L_{\text{Planck}}^2}{r_c M_e}"

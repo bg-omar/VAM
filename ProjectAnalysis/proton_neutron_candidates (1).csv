@@ -1,0 +1,20 @@
+file,equation_tex
+VAM_7_From_Quantum_Constants_to_Galactic_Swirl/VAM-7-From_Quantum_Constants_to_Galactic_Swirl.tex,\boxed{ v(r) = \frac{C_{\text{core}}}{\sqrt{1 + \left( \frac{r_c}{r} \right)^2}} + C_{\text{tail}} \left(1 - e^{-r/r_c} \right) } \label{eq:full_vam_profile}
+VAM_8_MASTER_Paper/VAM-8-Master_Paper.tex,\vec{v} = \nabla \Phi \label{eq:velocity_from_potential}
+VAM_8_MASTER_Paper/VAM-8-Master_Paper.tex,"\vec{v}(\vec{x}, t) = \sum_n \left[ \vec{v}_n(\vec{x})\, a_n e^{-i\omega_n S(t)} + \vec{v}_n^*(\vec{x})\, a_n^\dagger e^{i\omega_n S(t)} \right]"
+VAM_8_MASTER_Paper/VAM-8-Master_Paper.tex,M_p &= \frac{1}{\varphi^2} \cdot 3^{-1/\varphi} \cdot (2 M_u + M_d) \\ M_n &= \frac{1}{\varphi^2} \cdot 3^{-1/\varphi} \cdot (M_u + 2 M_d)
+VAM_8_MASTER_Paper/VAM-8-Master_Paper.tex,M \gg M_n
+VAM_8_MASTER_Paper/VAM-8.5-Master_Formula.tex,M_p
+VAM_8_MASTER_Paper/VAM-8.5-Master_Formula.tex,M_n
+VAM_8_MASTER_Paper/sections/A_SM.tex,"M_p &= M_{\text{uud}} = M(n=3, m=1, s=3, V_i = [2\cdot \mathcal{V}_u + 1 \cdot \mathcal{V}_d]\cdot V_{\text{torus}}), \\ M_n &= M_{\text{udd}} = M(n=3, m=1, s=3, V_i = [1\cdot \mathcal{V}_u + 2 \cdot \mathcal{V}_d]\cdot V_{\text{torus}})."
+VAM_8_MASTER_Paper/sections/A_SM.tex,"\boxed{ M_p \approx 1.6737 \times 10^{-27}\, \text{kg} \quad \text{vs.} \quad M_p^{\text{exp}} = 1.6726 \times 10^{-27}\, \text{kg} }"
+VAM_8_MASTER_Paper/sections/A_SM.tex,"\boxed{ M_n \approx 1.6750 \times 10^{-27}\, \text{kg} \quad \text{vs.} \quad M_n^{\text{exp}} = 1.6749 \times 10^{-27}\, \text{kg} }"
+VAM_5_Lagrangian_Gravity_Electromagnetism/Appendix/Appendix_Benchmark5.tex,"M_p &= 548.2 \cdot 0.192 \cdot 0.438 \cdot 0.381 \cdot (3.66 \times 10^{-44}) \cdot (2.33 \times 10^{30}) \\ &\approx \boxed{1.6726 \times 10^{-27} \, \text{kg}} \quad \text{(proton mass)} \\ M_n &= 548.2 \cdot 0.192 \cdot 0.438 \cdot 0.381"
+VAM_5_Lagrangian_Gravity_Electromagnetism/Appendix/Appendix_Benchmark6.tex,M_n \approx \frac{4}{1/137} \cdot 0.192 \cdot 0.438 \cdot 0.381 \cdot (3.51 \times 10^{-44}) \cdot (2.33 \times 10^{30})
+VAM_5_Lagrangian_Gravity_Electromagnetism/Appendix/Appendix_Benchmark6.tex,"\boxed{ M_n^\text{(VAM)} \approx 1.6749 \times 10^{-27} \, \text{kg} } \quad \text{(matches empirical neutron mass to $< 0.01\%$)}"
+VAM_5_Lagrangian_Gravity_Electromagnetism/Appendix/Appendix_Benchmark6.tex,\text{Neutron (Borromean)} \rightarrow \text{Proton (3-linked)} + \text{Electron (trefoil)} + \text{Antineutrino (Hopfion doublet)}
+VAM_6_Knotted_Gauge_Fields/section/05_Emergent_Constants_from_Fluid_Analogs.tex,"\vec{v}(\vec{x}, t) = \sum_n \left[ \vec{v}_n(\vec{x})\, a_n e^{-i\omega_n S(t)} + \vec{v}_n^*(\vec{x})\, a_n^\dagger e^{i\omega_n S(t)} \right],"
+VAM_6_Knotted_Gauge_Fields/section/13_DerivationOfBaryons.tex,"M_p^{\text{bare}} &= 2M_u + M_d = 8.55 \times 10^{-27} \, \text{kg} \\ M_n^{\text{bare}} &= M_u + 2M_d = 8.88 \times 10^{-27} \, \text{kg}"
+VAM_6_Knotted_Gauge_Fields/section/13_DerivationOfBaryons.tex,"\xi(3) &= 0.506, \quad \varphi^{-2} = 0.382 \\ M_p^{\text{final}} &= 1.656 \times 10^{-27} \, \text{kg} \\ M_n^{\text{final}} &= 1.719 \times 10^{-27} \, \text{kg}"
+VAM_6_Knotted_Gauge_Fields/section/13_DerivationOfBaryons.tex,"M_p^{\text{exp}} &= 1.6726 \times 10^{-27} \, \text{kg} \quad \Rightarrow \textbf{99.0\% accurate} \\ M_n^{\text{exp}} &= 1.6749 \times 10^{-27} \, \text{kg} \quad \Rightarrow \textbf{102.7\% accurate}"
+VAM_6_Knotted_Gauge_Fields/section/13_DerivationOfBaryons.tex,\begin{aligned} M_p &= \frac{1}{\varphi^2} \cdot 3^{-1/\varphi} \cdot (2M_u + M_d) \\ M_n &= \frac{1}{\varphi^2} \cdot 3^{-1/\varphi} \cdot (M_u + 2M_d) \end{aligned}

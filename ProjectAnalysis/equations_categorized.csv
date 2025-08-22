@@ -1,0 +1,272 @@
+file,equation_tex,categories
+VAM_0_Einstein_to_Vortex_Fluid/figures/plot_OntologyOfMass.tex,E = mc^2,Energy/Mass
+VAM_0_Einstein_to_Vortex_Fluid/figures/plot_WaveParticle.tex,\lambda = h/p,Lagrangian
+VAM_0_Einstein_to_Vortex_Fluid/sections/04_ConnectionToVAM.tex,G_\text{swirl} = \frac{C_e}{2 F^{\max}_{\text{\ae}}} \cdot \left( \frac{c^5 t_p^2}{r_c^2} \right),G_swirl
+VAM_0_Einstein_to_Vortex_Fluid/sections/A1_Helmholtz.tex,"\frac{d\Gamma}{dt} = 0, \quad \Gamma = \oint_{\mathcal{C}} \vec{v} \cdot d\vec{\ell}",Circulation Γ
+VAM_0_Einstein_to_Vortex_Fluid/sections/A1_Helmholtz.tex,"S(t) = \int \omega(t) \, dt, \quad T_v \sim \Gamma^{-1}",Circulation Γ
+VAM_0_Einstein_to_Vortex_Fluid/sections/A4_Einstein.tex,\frac{d\tau}{dt} = \sqrt{1 - \frac{C_e^2}{c^2} e^{-r/r_c}},Swirl profile
+VAM_0_Einstein_to_Vortex_Fluid/sections/A5_VAM.tex,"\boldsymbol{\omega} = \nabla \times \vec{v}, \qquad \vec{v}(r) = \frac{C_e}{r} e^{-r/r_c} \, \hat{\theta}",Swirl profile
+VAM_0_Einstein_to_Vortex_Fluid/sections/A5_VAM.tex,"\boldsymbol{S}(t) = \int \Omega(r) \, dt = \int \frac{C_e}{r_c} e^{-r/r_c} dt",Swirl profile
+VAM_0_Einstein_to_Vortex_Fluid/sections/A5_VAM.tex,\Gamma,Circulation Γ
+VAM_1_TimeDilation_in_3D/VAM-1-TimeDilationHydrogen.tex,\gamma^{-1}(v),Circulation Γ
+VAM_1_TimeDilation_in_3D/VAM-1-Time_Dilation_in_3D_Superfluid_Æther_Model.tex,R\omega = v_t,Swirl profile
+VAM_1_TimeDilation_in_3D/VAM-1-Time_Dilation_in_3D_Superfluid_Æther_Model.tex,v_t = R\omega,Swirl profile
+VAM_1_TimeDilation_in_3D/Tijddilatatie/1-Tijdsdilatatie_in_3D_Superfluïde_Æther_Model.tex,R\omega = v_t,Swirl profile
+VAM_1_TimeDilation_in_3D/Tijddilatatie/1-Tijdsdilatatie_in_3D_Superfluïde_Æther_Model.tex,v_t = R\omega,Swirl profile
+VAM_1_TimeDilation_in_3D/Tijddilatatie/4_speciale_relativiteit.tex,\gamma = 1/\sqrt{1 - v^2/c^2},Circulation Γ
+VAM_1_TimeDilation_in_3D/Tijddilatatie/4_speciale_relativiteit.tex,\gamma,Circulation Γ
+VAM_1_TimeDilation_in_3D/Tijddilatatie/appendix_A.tex,"\langle d\tau \rangle = \left\langle \sqrt{1 - \frac{v_{\text{rel}, i}^2}{c^2}} \right\rangle dt",Energy/Mass
+VAM_1_TimeDilation_in_3D/TimeDilation/4_special_relativity.tex,\gamma(\vec{x}) = \sqrt{1 - \frac{\Phi(\vec{x})}{\Phi_{\text{max}}}},Circulation Γ
+VAM_1_TimeDilation_in_3D/TimeDilation/4_special_relativity.tex,"d\tau = \gamma(\vec{x})\, d\mathcal{N}",Circulation Γ
+VAM_1_TimeDilation_in_3D/TimeDilation/4_special_relativity.tex,"\text{For weak fields: } \Phi \sim \frac{G M}{r}, \quad \text{For vortex curvature: } \Phi \sim \frac{\Gamma^2}{r^2}",Circulation Γ
+VAM_1_TimeDilation_in_3D/TimeDilation/4_special_relativity.tex,\gamma = 1/\sqrt{1 - v^2/c^2},Circulation Γ
+VAM_1_TimeDilation_in_3D/TimeDilation/4_special_relativity.tex,\gamma,Circulation Γ
+VAM_1_TimeDilation_in_3D/TimeDilation/4_special_relativity.tex,\gamma(\vec{x}),Circulation Γ
+VAM_1_TimeDilation_in_3D/TimeDilation/5_gravitational_time_dilation.tex,\Phi \sim \Gamma^2/r^2,Circulation Γ
+VAM_1_TimeDilation_in_3D/TimeDilation/appendix_A.tex,"\langle d\tau \rangle = \left\langle \sqrt{1 - \frac{v_{\text{rel}, i}^2}{c^2}} \right\rangle dt",Energy/Mass
+VAM_1_TimeDilation_in_3D/TimeDilation/appendix_C.tex,d\tau = \frac{1}{\gamma(\vec{v})} d\mathcal{N},Circulation Γ
+VAM_2_Swirl_Clocks/VAM-2-Swirl_Clocks_and_Vorticity-Induced_Gravity.tex,\beta \Omega^2 \sim \frac{C_e^2}{r_c^2 c^2} e^{-r/r_c},Swirl profile
+VAM_2_Swirl_Clocks/vam_enhanced.tex,\boxed{ \frac{d\tau}{d\mathcal{N}} = \sqrt{1 - \frac{\Gamma^2}{4\pi^2 r^2 c^2}} } \label{eq:gravitational-redshift},Circulation Γ
+VAM_2_Swirl_Clocks/Swirl_Clocks/00_Introduction.tex,\hbar = \sqrt{\frac{2 M_e F^{\text{max}}_{\text{\ae}} r_c^3}{5 \lambda_c C_e}},Lagrangian
+VAM_2_Swirl_Clocks/Swirl_Clocks/00_Introduction.tex,i \hbar \frac{\partial \psi}{\partial t} = -\frac{F^{\text{max}}_{\text{\ae}} r_c^3}{5 \lambda_c C_e}\nabla^2 \psi + V\psi,Lagrangian
+VAM_2_Swirl_Clocks/Swirl_Clocks/00_Introduction.tex,\sqrt{1-\frac{2GM}{rc^2}},Time-rate / dilation
+VAM_2_Swirl_Clocks/Swirl_Clocks/00_Introduction.tex,\sqrt{1-\frac{\Omega^2 r^2}{c^2}},Time-rate / dilation
+VAM_2_Swirl_Clocks/Swirl_Clocks/00_Introduction.tex,\frac{2G\mu I\Omega}{c^2 r^3},Swirl profile
+VAM_2_Swirl_Clocks/Swirl_Clocks/01_Time_Dilation_from_Vortex_Dynamics.tex,\fbox{ \( \frac{d\tau}{d\bar{t}} = e^{-r/r_c} \)} \quad \text{where } \Omega(r) = \frac{C_e}{r_c} e^{-r/r_c},Swirl profile
+VAM_2_Swirl_Clocks/Swirl_Clocks/01_Time_Dilation_from_Vortex_Dynamics.tex,\label{eq:tangential_velocity} v_{\phi}(r) = \frac{\Gamma}{2\pi r} = \frac{\kappa}{r},Circulation Γ
+VAM_2_Swirl_Clocks/Swirl_Clocks/01_Time_Dilation_from_Vortex_Dynamics.tex,"\omega_{\text{obs}}(r) = \Omega(r) = \frac{C_e}{r_c} e^{-r/r_c}, \quad \text{and} \quad \omega_0 = \Omega(0) = \frac{C_e}{r_c}",Swirl profile
+VAM_2_Swirl_Clocks/Swirl_Clocks/01_Time_Dilation_from_Vortex_Dynamics.tex,\frac{d\tau}{d\bar{t}} = e^{-r/r_c},Swirl profile
+VAM_2_Swirl_Clocks/Swirl_Clocks/01_Time_Dilation_from_Vortex_Dynamics.tex,\Omega = \frac{C_e}{r_c},Swirl profile
+VAM_2_Swirl_Clocks/Swirl_Clocks/01_Time_Dilation_from_Vortex_Dynamics.tex,\Omega(r) = \frac{C_e}{r_c} e^{-r/r_c},Swirl profile
+VAM_2_Swirl_Clocks/Swirl_Clocks/01_Time_Dilation_from_Vortex_Dynamics.tex,v_\varphi(r) = C_e e^{-r/r_c},Swirl profile
+VAM_2_Swirl_Clocks/Swirl_Clocks/01_Time_Dilation_from_Vortex_Dynamics.tex,e^{-r/r_c},Swirl profile
+VAM_2_Swirl_Clocks/Swirl_Clocks/01_Time_Dilation_from_Vortex_Dynamics.tex,\Gamma,Circulation Γ
+VAM_2_Swirl_Clocks/Swirl_Clocks/02_entropy.tex,"\Gamma = \oint \vec{v} \cdot d\vec{l} = n \cdot \kappa,",Circulation Γ
+VAM_2_Swirl_Clocks/Swirl_Clocks/02_entropy.tex,"H = \int \vec{v} \cdot \vec{\omega} \, dV,",Helicity / v·ω
+VAM_2_Swirl_Clocks/Swirl_Clocks/02_entropy.tex,"dS = \frac{\delta \Pi_\text{rot}}{\mathcal{T}_\omega},",Swirl profile
+VAM_2_Swirl_Clocks/Swirl_Clocks/02_entropy.tex,"\frac{dS}{dt} = \int_V \frac{\nabla \cdot \vec{J}_\text{vortex}}{T_\omega} \, dV,",Swirl profile; Helicity / v·ω
+VAM_2_Swirl_Clocks/Swirl_Clocks/02_entropy.tex,"\Delta V_\text{knot} = \alpha_\omega V_0 \Delta T_\omega,",Swirl profile
+VAM_2_Swirl_Clocks/Swirl_Clocks/02_entropy.tex,"\alpha_\omega = \frac{1}{r_c} \frac{d r_k}{d T_\omega} \sim \frac{C_e^2}{r_c k_B T_\omega},",Swirl profile
+VAM_2_Swirl_Clocks/Swirl_Clocks/02_entropy.tex,"\oint \frac{\vec{v} \cdot d\vec{\omega}}{\mathcal{T}_\omega} \leq 0,",Swirl profile
+VAM_2_Swirl_Clocks/Swirl_Clocks/02_entropy.tex,"\eta = 1 - \frac{T_C}{T_H},",Lagrangian
+VAM_2_Swirl_Clocks/Swirl_Clocks/02_entropy.tex,"\eta_\text{VAM} = 1 - \frac{\Omega_C^2}{\Omega_H^2},",Lagrangian
+VAM_2_Swirl_Clocks/Swirl_Clocks/02_entropy.tex,\frac{d\tau}{d\bar{t}} = e^{-r/r_c},Swirl profile
+VAM_2_Swirl_Clocks/Swirl_Clocks/02_entropy.tex,T_\omega,Swirl profile
+VAM_2_Swirl_Clocks/Swirl_Clocks/02_entropy.tex,\mathcal{T}_\omega,Swirl profile
+VAM_2_Swirl_Clocks/Swirl_Clocks/02_entropy.tex,\eta_\text{VAM},Lagrangian
+VAM_2_Swirl_Clocks/Swirl_Clocks/03_Time_Modulation_by_Vortex_Knot_Rotation.tex,"H = \int \vec{v} \cdot \vec{\omega} \, d^3x",Helicity / v·ω
+VAM_2_Swirl_Clocks/Swirl_Clocks/04_Proper_Time_for_a_Rotating_Observer_in_Æther_Flow.tex,\boxed{\left( \frac{d\tau}{d\mathcal{N}} \right)^2 = 1 - \frac{1}{c^2}(v_r + r\Omega_k)^2} \label{eq:VAM_proper_time_final},Swirl profile
+VAM_2_Swirl_Clocks/Swirl_Clocks/04_Proper_Time_for_a_Rotating_Observer_in_Æther_Flow.tex,\frac{d\tau}{d\mathcal{N}} = \sqrt{1 - \frac{(v_r + r\Omega_k)^2}{c^2}},Swirl profile
+VAM_2_Swirl_Clocks/Swirl_Clocks/04_Proper_Time_for_a_Rotating_Observer_in_Æther_Flow.tex,v_\varphi = r\Omega_k,Swirl profile
+VAM_2_Swirl_Clocks/Swirl_Clocks/05_Kerr-Like_Time_Adjustment_from_Vorticity_and_Circulation.tex,"\begin{aligned} \frac{2GM}{rc^2} &\rightarrow \frac{\gamma \langle \omega^2 \rangle}{r c^2}, \\ \frac{J^2}{r^3 c^2} &\rightarrow \frac{\kappa^2}{r^3 c^2} \end{aligned} \label{eq:Kerr_replacements}",Circulation Γ
+VAM_2_Swirl_Clocks/Swirl_Clocks/05_Kerr-Like_Time_Adjustment_from_Vorticity_and_Circulation.tex,\boxed{ \frac{d\tau}{d\bar{t}} = \sqrt{1 - \frac{\gamma \langle \omega^2 \rangle}{r c^2} - \frac{\kappa^2}{r^3 c^2}} } \label{eq:Kerr_time_dilation_ae},Circulation Γ
+VAM_2_Swirl_Clocks/Swirl_Clocks/05_Kerr-Like_Time_Adjustment_from_Vorticity_and_Circulation.tex,\boxed{ \frac{d\tau}{d\bar{t}} = \sqrt{1 - \frac{\gamma \langle \omega^2 \rangle}{r c^2} - \frac{\kappa^2}{r^3 c^2}} \cdot \left(1 + \frac{1}{2} \beta I \Omega^2 \right)^{-1} } \label{eq:VAM_combined_time_dilation},Circulation Γ
+VAM_2_Swirl_Clocks/Swirl_Clocks/05_Kerr-Like_Time_Adjustment_from_Vorticity_and_Circulation.tex,\gamma,Circulation Γ
+VAM_2_Swirl_Clocks/Swirl_Clocks/06_Unified_Framework_and_Synthesis_of_Time_Dilation_in_VAM.tex,\boxed{ \frac{d\tau}{d\bar{t}} = \sqrt{1 - \frac{\gamma \langle \omega^2 \rangle}{r c^2} - \frac{\kappa^2}{r^3 c^2}} \cdot \left(1 + \frac{1}{2} \beta I \Omega_k^2 \right)^{-1} } \label{eq:VAM_final_time_dilation},Circulation Γ
+VAM_2_Swirl_Clocks/Swirl_Clocks/06_Unified_Framework_and_Synthesis_of_Time_Dilation_in_VAM.tex,\boxed{ \frac{d\tau}{d\bar{t}} = \sqrt{1 - \frac{\gamma \langle \omega^2 \rangle}{r c^2} - \frac{\kappa^2}{r^3 c^2}} },Circulation Γ
+VAM_2_Swirl_Clocks/Swirl_Clocks/07_Applications_of_VAM_to_quantum_and_nuclear_processes.tex,V_\text{eff}(r) = V_\text{Coulomb}(r) - \Phi_\omega(r),Swirl profile
+VAM_2_Swirl_Clocks/Swirl_Clocks/07_Applications_of_VAM_to_quantum_and_nuclear_processes.tex,"\Phi_\omega(r) = \gamma \int \frac{|\vec{\omega}(r')|^2}{|\vec{r} - \vec{r}'|} \, d^3r', \quad \text{where} \quad \gamma = G \rho_\text{\ae}^2",Swirl profile; Circulation Γ
+VAM_2_Swirl_Clocks/Swirl_Clocks/07_Applications_of_VAM_to_quantum_and_nuclear_processes.tex,"\mathcal{L}_\text{VAM-QED} = \bar{\psi} \left[ i \gamma^\mu \partial_\mu - \gamma^\mu \left( \frac{C_e^2 r_c}{\lambda_c} \right) A_\mu - \left( \frac{8\pi \rho_\text{\ae} r_c^3 \, \text{Lk}}{C_e} \right) \right] \psi - \",Lagrangian; Circulation Γ
+VAM_2_Swirl_Clocks/Swirl_Clocks/07_Applications_of_VAM_to_quantum_and_nuclear_processes.tex,\boxed{ \left( i \gamma^\mu \partial_\mu - \gamma^\mu q_\text{vortex} A_\mu - M_\text{vortex} \right)\psi = 0 },Circulation Γ
+VAM_2_Swirl_Clocks/Swirl_Clocks/07_Applications_of_VAM_to_quantum_and_nuclear_processes.tex,"v_\phi(r) = \frac{\Gamma}{2\pi r}, \quad \text{with} \quad \Gamma = 2\pi r_c C_e",Circulation Γ
+VAM_2_Swirl_Clocks/Swirl_Clocks/07_Applications_of_VAM_to_quantum_and_nuclear_processes.tex,\Rightarrow \Omega_n T_v = 2\pi n \quad \text{(Quantized vortex phase winding)},Circulation Γ
+VAM_2_Swirl_Clocks/Swirl_Clocks/08_VAM_Vortex_Scattering_Framework_Inspired_by_Elastic_Theory.tex,"\mathcal{L}_{ij} \, \delta v_j(\vec{r}) = \delta F_i^\text{vortex}(\vec{r})",Lagrangian
+VAM_2_Swirl_Clocks/Swirl_Clocks/08_VAM_Vortex_Scattering_Framework_Inspired_by_Elastic_Theory.tex,"\mathcal{L}_{ij} \, \mathcal{G}_{jk}(\vec{r}, \vec{r}') = -\delta_{ik} \, \delta(\vec{r} - \vec{r}')",Lagrangian
+VAM_2_Swirl_Clocks/Swirl_Clocks/08_VAM_Vortex_Scattering_Framework_Inspired_by_Elastic_Theory.tex,\vec{S}_\omega = - \mathcal{T} \cdot \vec{v},Swirl profile
+VAM_2_Swirl_Clocks/Swirl_Clocks/08_VAM_Vortex_Scattering_Framework_Inspired_by_Elastic_Theory.tex,\delta\omega,Swirl profile
+VAM_2_Swirl_Clocks/Swirl_Clocks/08_VAM_Vortex_Scattering_Framework_Inspired_by_Elastic_Theory.tex,\mathcal{L}_{ij},Lagrangian
+VAM_2_Swirl_Clocks/Swirl_Clocks/08_VAM_Vortex_Scattering_Framework_Inspired_by_Elastic_Theory.tex,\nabla \cdot \vec{S}_\omega,Swirl profile
+VAM_2_Swirl_Clocks/Swirl_Clocks/090_derevation_swirl.tex,"R_e = \frac{e^2}{4\pi \varepsilon_0 m_e c^2},",Energy/Mass
+VAM_2_Swirl_Clocks/Swirl_Clocks/090_derevation_swirl.tex,C_e = \left( \frac{m_e c^2}{\hbar} \right) \left( \frac{1}{2} \frac{e^2}{4\pi \varepsilon_0 m_e c^2} \right).,Energy/Mass
+VAM_2_Swirl_Clocks/Swirl_Clocks/100_derevation_Gswirl.tex,|\vec{\omega}|^2 \sim \frac{C_e^2}{r_c^2},Swirl profile
+VAM_2_Swirl_Clocks/Swirl_Clocks/100_derevation_Gswirl.tex,G_\text{swirl} = \frac{C_e c^3 l_p^2}{2 F_{\max} r_c^2}.,G_swirl
+VAM_2_Swirl_Clocks/Swirl_Clocks/100_derevation_Gswirl.tex,G_\text{swirl} = \frac{C_e c^5 t_p^2}{2 F_{\max} r_c^2}.,G_swirl
+VAM_2_Swirl_Clocks/Swirl_Clocks/100_derevation_Gswirl.tex,G_\text{swirl} = \frac{C_e c^3 l_p^2}{2 F_{\max} r_c^2},G_swirl
+VAM_2_Swirl_Clocks/Swirl_Clocks/100_derevation_Gswirl.tex,G_\text{swirl} = \frac{C_e c^5 t_p^2}{2 F_{\max} r_c^2},G_swirl
+VAM_2_Swirl_Clocks/Swirl_Clocks/100_derevation_Gswirl.tex,c^5 t_p^2,G_swirl
+VAM_2_Swirl_Clocks/Swirl_Clocks/10_VAMvsGR.tex,G = \frac{C_e c^5 t_p^2}{2 F_{\text{\ae}}^{\text{max}} r_c^2},G_swirl
+VAM_2_Swirl_Clocks/Swirl_Clocks/110_VAM_reformulation_GR.tex,\frac{D\omega}{Dt} = (\omega \cdot \nabla) v - (\nabla \cdot v) \omega.,Swirl profile
+VAM_2_Swirl_Clocks/Swirl_Clocks/110_VAM_reformulation_GR.tex,"\Omega_\text{vortex} = \frac{\Gamma}{2\pi r^2},",Circulation Γ
+VAM_2_Swirl_Clocks/Swirl_Clocks/110_VAM_reformulation_GR.tex,"dt_\text{VAM} = \frac{dt}{\sqrt{1 - \frac{C_e^2}{c^2} e^{-r/r_c} - \frac{\Omega^2}{c^2} e^{-r/r_c}}},",Swirl profile
+VAM_2_Swirl_Clocks/Swirl_Clocks/110_VAM_reformulation_GR.tex,\Gamma = \oint v \cdot dl,Circulation Γ
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_02_Derivation_GravitationalField.tex,"\Phi_v(\vec{r}) = \gamma \int \frac{\|\vec{\omega}(\vec{r}')\|^2}{\|\vec{r} - \vec{r}'\|} \, d^3r',",Circulation Γ
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_02_Derivation_GravitationalField.tex,\gamma,Circulation Γ
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_03_Newtonian_Limits.tex,"\Phi_v(\vec{r}) = \gamma \int \frac{\|\vec{\omega}(\vec{r}')\|^2}{\|\vec{r} - \vec{r}'\|} \, d^3r',",Circulation Γ
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_03_Newtonian_Limits.tex,\frac{d\tau}{dt} = \sqrt{1 - \frac{C_e^2}{c^2} e^{-r/r_c} - \frac{2G_\text{swirl} M_\text{eff}(r)}{rc^2} - \beta \Omega^2},Swirl profile
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_03_Newtonian_Limits.tex,\gamma = G \rho_\text{æ}^2,Circulation Γ
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_03_Newtonian_Limits.tex,e^{-r/r_c} \to 0,Swirl profile
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_04_DynamicsVortexCirculationQuantization.tex,\Gamma = \oint_{\mathcal{C}(t)} \vec{v} \cdot d\vec{l} = \text{const.},Circulation Γ
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_04_DynamicsVortexCirculationQuantization.tex,\Gamma = \oint \vec{v} \cdot d\vec{l} = 2\pi r_c C_e.,Circulation Γ
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_04_DynamicsVortexCirculationQuantization.tex,"\Gamma_n = n \cdot \kappa, \quad n \in \mathbb{Z},",Circulation Γ
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_04_DynamicsVortexCirculationQuantization.tex,\Gamma,Circulation Γ
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_06_ParameterTuningLimitBehavior.tex,G_\text{swirl} = \frac{C_e c^5 t_p^2}{2 F^{\text{max}}_{\text{\ae}} r_c^2}.,G_swirl
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_07_Foundations_Velocity_Fields_and_Energies.tex,"V \;=\; \frac{\Gamma}{4 \pi R} \bigl(\ln \tfrac{8 R}{a} - \beta \bigr),\label{eq:appendix:velocity}",Circulation Γ
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_07_Foundations_Velocity_Fields_and_Energies.tex,"H \;=\; \int_V \mathbf{u} \cdot \boldsymbol{\omega}\, dV,\label{eq:appendix:helicity}",Helicity / v·ω; Lagrangian
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_07_Foundations_Velocity_Fields_and_Energies.tex,\Gamma,Circulation Γ
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_08_Integration_of_Clausius_Heat_Theory.tex,"F^{\text{max}}_{\text{\ae}} = \rho_\text{\ae} C_e^2 \pi r_c^2,\label{eq:critical_force}",G_swirl
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_09_TopologicalCharge.tex,"H_\text{vortex} = \frac{1}{(4\pi)^2} \int_{\mathbb{R}^3} \vec{v} \cdot \vec{\omega} \, d^3x. \label{eq:helicity}",Helicity / v·ω; Lagrangian
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_09_TopologicalCharge.tex,"Q_\text{top} = \frac{L}{(4\pi)^2 \Gamma^2} \int \vec{v} \cdot \vec{\omega} \, d^3x, \label{eq:qtop}",Helicity / v·ω; Circulation Γ
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_09_TopologicalCharge.tex,"\mathcal{L}_\text{top} = \frac{C_e^2}{2} \rho_\text{\ae} \, \vec{v} \cdot \vec{\omega},",Lagrangian
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_09_TopologicalCharge.tex,"\mathcal{E}_\text{VAM} = \int \left[ \frac{1}{2} \rho_\text{\ae} |\vec{v}|^2 + \frac{C_e^2}{2} \rho_\text{\ae} \, \vec{v} \cdot \vec{\omega} + \Phi_\text{swirl} + P(\rho_\text{\ae}) \right] d^3x.",Helicity / v·ω
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_09_TopologicalCharge.tex,"dt = dt_\infty \sqrt{1 - \frac{U_\text{vortex}}{U_\text{max}}}, \quad \text{met} \quad U_\text{vortex} = \frac{1}{2} \rho_\text{\ae} |\vec{\omega}|^2.",Time-rate / dilation
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_09_TopologicalCharge.tex,\Gamma,Circulation Γ
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_10_SplitHelicity.tex,dt = dt_\infty \sqrt{1 - \frac{H_C + H_T}{H_\text{max}}} = dt_\infty \sqrt{1 - \frac{C^2 (\text{Wr} + \text{Tw})}{H_\text{max}}}.,Time-rate / dilation
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_11_VAM_Lagrangian.tex,"\mathcal{L}_\text{VAM}[\psi] = \frac{i\hbar}{2} \left( \psi^\dagger \partial_t \psi - \psi \partial_t \psi^\dagger \right) - \frac{\hbar^2}{2m} |\nabla \psi|^2 - \frac{\alpha}{8} |\nabla \vec{s}|^2,",Lagrangian
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_12_DerivationFineStructureConstant.tex,\Gamma = \oint \vec{v} \cdot d\vec{\ell} = \frac{h}{m_e} = \frac{2\pi \hbar}{m_e}.,Circulation Γ
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_12_DerivationFineStructureConstant.tex,\Gamma = 2\pi r_c C_e.,Circulation Γ
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_12_DerivationFineStructureConstant.tex,R_e = \frac{e^2}{4\pi \varepsilon_0 m_e c^2}.,Energy/Mass
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_12_DerivationFineStructureConstant.tex,C_e = \frac{2\hbar}{m_e} \cdot \frac{4\pi \varepsilon_0 m_e c^2}{e^2} = \frac{8\pi \varepsilon_0 \hbar c^2}{e^2}.,Energy/Mass
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_A_Derivation_TimeDilation.tex,\boxed{ \frac{d\tau}{d\mathcal{N}} = \sqrt{ 1 - \frac{2 G_{\text{hybrid}}(r) M_{\text{hybrid}}(r)}{r c^2} - \frac{C_e^2}{c^2} e^{-r/r_c} - \frac{C_e^2}{r_c^2 c^2} e^{-r/r_c} }} \label{eq:final_vam_td},Swirl profile
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_A_Derivation_TimeDilation.tex,\frac{d\tau}{dt} = \sqrt{ 1 - \frac{C_e^2}{c^2} e^{-r/r_c} - \frac{2 G_\text{swirl} M_\text{eff}(r)}{r c^2} - \beta \Omega^2 },Swirl profile
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_A_Derivation_TimeDilation.tex,\frac{C_e^2}{c^2} e^{-r/r_c},Swirl profile
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_A_Derivation_TimeDilation.tex,G_\text{swirl} = \frac{C_e c^5 t_p^2}{2 F_{\text{max}} r_c^2},G_swirl
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_A_Derivation_TimeDilation.tex,\rho_\text{\ae}(r) = \rho_0 e^{-r / r_c},Swirl profile
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_A_Derivation_TimeDilation.tex,M_\text{eff}^\text{VAM}(r) = 4\pi \rho_0 r_c^3 \left(2 - \left(2 + \frac{r}{r_c} \right) e^{-r/r_c} \right),Swirl profile
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_A_Derivation_TimeDilation.tex,\Omega = \Gamma / (2\pi r^2),Circulation Γ
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_A_Derivation_TimeDilation.tex,\dfrac{C_e c^5 t_p^2}{2 F_{\max} r_c^2},G_swirl
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_A_Derivation_TimeDilation.tex,4\pi \rho_\text{\ae} r_c^3 \left[ 2 - (2 + \frac{r}{r_c}) e^{-r/r_c} \right],Swirl profile
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_A_Derivation_TimeDilation.tex,C_e c^5 t_p^2 / (2 F_{\text{max}} r_c^2),G_swirl
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_A_Derivation_TimeDilation.tex,e^{-r/r_c},Swirl profile
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_B_Derivation_Of_Gswirl.tex,"R_e = \frac{e^2}{4\pi \varepsilon_0 m_e c^2},",Energy/Mass
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_B_Derivation_Of_Gswirl.tex,C_e = \left( \frac{m_e c^2}{\hbar} \right) \left( \frac{1}{2} \frac{e^2}{4\pi \varepsilon_0 m_e c^2} \right).,Energy/Mass
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_B_Derivation_Of_Gswirl.tex,|\vec{\omega}|^2 \sim \frac{C_e^2}{r_c^2},Swirl profile
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_B_Derivation_Of_Gswirl.tex,G_\text{swirl} = \frac{C_e c^3 l_p^2}{2 F_{\max} r_c^2}.,G_swirl
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_B_Derivation_Of_Gswirl.tex,G_\text{swirl} = \frac{C_e c^5 t_p^2}{2 F_{\max} r_c^2}.,G_swirl
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_B_Derivation_Of_Gswirl.tex,G_\text{swirl} = \frac{C_e c^3 l_p^2}{2 F_{\max} r_c^2},G_swirl
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_B_Derivation_Of_Gswirl.tex,G_\text{swirl} = \frac{C_e c^5 t_p^2}{2 F_{\max} r_c^2},G_swirl
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_B_Derivation_Of_Gswirl.tex,\frac{D\omega}{Dt} = (\omega \cdot \nabla) v - (\nabla \cdot v) \omega.,Swirl profile
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_B_Derivation_Of_Gswirl.tex,"\Omega_\text{vortex} = \frac{\Gamma}{2\pi r^2},",Circulation Γ
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_B_Derivation_Of_Gswirl.tex,"dt_\text{VAM} = \frac{dt}{\sqrt{1 - \frac{C_e^2}{c^2} e^{-r/r_c} - \frac{\Omega^2}{c^2} e^{-r/r_c}}},",Swirl profile
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_B_Derivation_Of_Gswirl.tex,c^5 t_p^2,G_swirl
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_B_Derivation_Of_Gswirl.tex,\Gamma = \oint v \cdot dl,Circulation Γ
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_D_ExperimentalValidationOfGravitationalPotential.tex,\Phi(r) = \frac{C_e^3}{2 F_{\text{max}} r_c} \cdot r e^{-r / r_c},Swirl profile
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_D_ExperimentalValidationOfGravitationalPotential.tex,\Delta \Phi \sim \frac{C_e^3}{2 F_{\text{max}} r_c} \Rightarrow \Delta g = -\dv{\Phi}{r} \sim A e^{-r/r_c} \left(1 - \frac{r}{r_c}\right),Swirl profile
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_D_ExperimentalValidationOfGravitationalPotential.tex,\Delta g(r) = -\dv{\Phi}{r} = -\frac{C_e^3}{2 F_{\text{max}} r_c^2} \left(1 - \frac{r}{r_c}\right) e^{-r/r_c},Swirl profile; G_swirl
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_D_ExperimentalValidationOfGravitationalPotential.tex,\Phi(r) \sim \frac{|\vec{\omega}(r)|^2}{2 F_{\text{max}}} \sim \frac{C_e^2}{2 F_{\text{max}}} e^{-2r/r_c},Swirl profile
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_E_TemporalOntology.tex,\frac{d\tau}{d\mathcal{N}} = \gamma^{-1}(\vec{v}) \label{eq:chronos_time},Circulation Γ
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_E_TemporalOntology.tex,\Gamma = 6.6 \times 10^{-8} \text{ m}^2/\text{s},Circulation Γ
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_E_TemporalOntology.tex,\phi(\circlearrowleft) = \lambda\sin(\theta),Lagrangian
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_E_TemporalOntology.tex,\phi(\circlearrowleft) = \lambda \sin(\theta(x)),Lagrangian
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_F_LorentzInvariance.tex,\tau = \mathcal{N} / \gamma(v),Circulation Γ
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_F_LorentzInvariance.tex,L = L_0 / \gamma(v),Circulation Γ
+VAM_2_Swirl_Clocks/Swirl_Clocks/appendix_F_LorentzInvariance.tex,\gamma(v) = \left(1 - v^2/c^2\right)^{-1/2},Circulation Γ
+VAM_2_Swirl_Clocks/WervelKlokken/00_Introductie.tex,\hbar = \sqrt{\frac{2M_e F^{\text{max}}_{\text{\ae}} r_c^3}{5 \lambda_c C_e}},Lagrangian
+VAM_2_Swirl_Clocks/WervelKlokken/00_Introductie.tex,i \hbar \frac{\partial \psi}{\partial t} = -\frac{F^{\text{max}}_{\text{\ae}} r_c^3}{5 \lambda_c C_e}\nabla^2 \psi + V\psi,Lagrangian
+VAM_2_Swirl_Clocks/WervelKlokken/00_Introductie.tex,\sqrt{1-\frac{2GM}{rc^2}},Time-rate / dilation
+VAM_2_Swirl_Clocks/WervelKlokken/00_Introductie.tex,\sqrt{1-\frac{\Omega^2 r^2}{c^2}},Time-rate / dilation
+VAM_2_Swirl_Clocks/WervelKlokken/00_Introductie.tex,\frac{2G\mu I\Omega}{c^2 r^3},Swirl profile
+VAM_2_Swirl_Clocks/WervelKlokken/01_tijdsdilatatie_van_vortex_dynamiek.tex,\label{eq:tangentiele_snelheid} v_{\phi}(r) = \frac{\Gamma}{2\pi r} = \frac{\kappa}{r},Circulation Γ
+VAM_2_Swirl_Clocks/WervelKlokken/01_tijdsdilatatie_van_vortex_dynamiek.tex,\Omega = \frac{C_e}{r_c},Swirl profile
+VAM_2_Swirl_Clocks/WervelKlokken/01_tijdsdilatatie_van_vortex_dynamiek.tex,\Gamma,Circulation Γ
+VAM_2_Swirl_Clocks/WervelKlokken/02_entropie.tex,"\Gamma = \oint \vec{v} \cdot d\vec{l} = n \cdot \kappa,",Circulation Γ
+VAM_2_Swirl_Clocks/WervelKlokken/02_entropie.tex,"H = \int \vec{v} \cdot \vec{\omega} \, dV,",Helicity / v·ω
+VAM_2_Swirl_Clocks/WervelKlokken/02_tijdsmodulatie_door_vortex_knoop_rotatie.tex,"H = \int \vec{v} \cdot \vec{\omega} \, d^3x \label{eq:helicity_rotation}",Helicity / v·ω; Lagrangian
+VAM_2_Swirl_Clocks/WervelKlokken/03_eigen_tijd_voor_een_roterende_waarnemer_in_ether_stroom.tex,\boxed{\left( \frac{d\tau}{dt} \right)^2_\text{\ae} = 1 - \frac{1}{c^2}(v_r + r\Omega_k)^2} \label{eq:VAM_proper_time_final},Swirl profile
+VAM_2_Swirl_Clocks/WervelKlokken/03_eigen_tijd_voor_een_roterende_waarnemer_in_ether_stroom.tex,v_\varphi = r\Omega_k,Swirl profile
+VAM_2_Swirl_Clocks/WervelKlokken/03_eigen_tijd_voor_een_roterende_waarnemer_in_ether_stroom.tex,v_r + r\Omega_k,Swirl profile
+VAM_2_Swirl_Clocks/WervelKlokken/04_kerr-achtige_tijdsaanpassing_van_vorticiteit_en_circulatie.tex,"\begin{aligned} \frac{2GM}{rc^2} &\rightarrow \frac{\gamma \langle \omega^2 \rangle}{rc^2}, \\ \frac{J^2}{r^3c^2} &\rightarrow \frac{\kappa^2}{r^3c^2} \end{aligned} \label{eq:Kerr_replacements}",Circulation Γ
+VAM_2_Swirl_Clocks/WervelKlokken/04_kerr-achtige_tijdsaanpassing_van_vorticiteit_en_circulatie.tex,\boxed{t_\text{adjusted} = \Delta t \cdot \sqrt{1 - \frac{\gamma \langle \omega^2 \rangle}{rc^2} - \frac{\kappa^2}{r^3c^2}}} \label{eq:Kerr_time_dilation_ae},Circulation Γ
+VAM_2_Swirl_Clocks/WervelKlokken/04_kerr-achtige_tijdsaanpassing_van_vorticiteit_en_circulatie.tex,\gamma,Circulation Γ
+VAM_2_Swirl_Clocks/WervelKlokken/05_unified_framework_en_synthese_van_tijdsdilatatie_in_vam.tex,\boxed{\left( \frac{d\tau}{dt} \right)^2 = 1 - \frac{1}{c^2}(v_r + r\Omega_k)^2},Swirl profile
+VAM_2_Swirl_Clocks/WervelKlokken/05_unified_framework_en_synthese_van_tijdsdilatatie_in_vam.tex,\boxed{t_\text{aangepast} = \Delta t \cdot \sqrt{1 - \frac{\gamma \langle \omega^2 \rangle}{rc^2} - \frac{\kappa^2}{r^3c^2}}},Circulation Γ
+VAM_2_Swirl_Clocks/WervelKlokken/06_Toepassing_VAM_Kwantum_Kernprocessen.tex,V_\text{eff}(r) = V_\text{Coulomb}(r) - \Phi_\omega(r),Swirl profile
+VAM_2_Swirl_Clocks/WervelKlokken/06_Toepassing_VAM_Kwantum_Kernprocessen.tex,"\Phi_\omega(r) = \gamma \int \frac{|\vec{\omega}(r')|^2}{|\vec{r} - \vec{r}'|} \, d^3r', \quad \text{met} \quad \gamma = G \rho_\text{\ae}^2",Swirl profile; Circulation Γ
+VAM_2_Swirl_Clocks/WervelKlokken/06_Toepassing_VAM_Kwantum_Kernprocessen.tex,\mathcal{L}_\text{VAM-QED} = \bar{\psi} \left[ i \gamma^\mu \partial_\mu - \gamma^\mu \left( \frac{C_e^2 r_c}{\lambda_c} \right) A_\mu - \left( \frac{8\pi \rho_\text{\ae} r_c^3 Lk}{C_e} \right) \right] \psi - \frac{1}{4},Lagrangian; Circulation Γ
+VAM_2_Swirl_Clocks/WervelKlokken/06_Toepassing_VAM_Kwantum_Kernprocessen.tex,\boxed{ \left( i \gamma^\mu \partial_\mu - \gamma^\mu q_\text{vortex} A_\mu - M_\text{vortex} \right)\psi = 0 },Circulation Γ
+VAM_2_Swirl_Clocks/WervelKlokken/06_Toepassing_VAM_Kwantum_Kernprocessen.tex,\Phi_\omega(r),Swirl profile
+VAM_2_Swirl_Clocks/WervelKlokken/06_Toepassing_VAM_Kwantum_Kernprocessen.tex,\Phi_\omega,Swirl profile
+VAM_2_Swirl_Clocks/WervelKlokken/07_vam_vortex_verstrooiings_raamwerk_geïnspireerd_door_elastische_theorie.tex,"\mathcal{L}_{ij} \, \delta v_j(\vec{r}) = \delta F_i^\text{wervel}(\vec{r})",Lagrangian
+VAM_2_Swirl_Clocks/WervelKlokken/07_vam_vortex_verstrooiings_raamwerk_geïnspireerd_door_elastische_theorie.tex,"\mathcal{L}_{ij} \, \mathcal{G}_{jk}(\vec{r}, \vec{r}') = -\delta_{ik} \, \delta(\vec{r} - \vec{r}')",Lagrangian
+VAM_2_Swirl_Clocks/WervelKlokken/07_vam_vortex_verstrooiings_raamwerk_geïnspireerd_door_elastische_theorie.tex,\vec{S}_\omega = - \mathcal{T} \cdot \vec{v},Swirl profile
+VAM_2_Swirl_Clocks/WervelKlokken/07_vam_vortex_verstrooiings_raamwerk_geïnspireerd_door_elastische_theorie.tex,\delta\omega,Swirl profile
+VAM_2_Swirl_Clocks/WervelKlokken/07_vam_vortex_verstrooiings_raamwerk_geïnspireerd_door_elastische_theorie.tex,\mathcal{L}_{ij},Lagrangian
+VAM_2_Swirl_Clocks/WervelKlokken/07_vam_vortex_verstrooiings_raamwerk_geïnspireerd_door_elastische_theorie.tex,\nabla \cdot \vec{S}_\omega,Swirl profile
+VAM_2_Swirl_Clocks/WervelKlokken/09_VAMvsGR_Overeenkomstige_Voorspellingen.tex,G = \frac{C_e c^5 t_p^2}{2 F^{\text{max}}_{\text{\ae}} r_c^2},G_swirl
+VAM_2_Swirl_Clocks/WervelKlokken/2-Wervelklokken_en_vorticiteit_geïnduceerde_zwaartekracht.tex,\frac{d\tau}{dt} = \sqrt{1 - \frac{C_e^2}{c^2} e^{-r/r_c} - \frac{2G_\text{swirl} M_\text{eff}(r)}{rc^2} - \beta \Omega^2},Swirl profile
+VAM_2_Swirl_Clocks/WervelKlokken/appendix_01_Afleiding_Tijdsdilatie.tex,\frac{d\tau}{dt} = \sqrt{1 - \frac{C_e^2}{c^2} e^{-r/r_c} - \frac{2G_\text{swirl} M_\text{eff}(r)}{r c^2} - \beta \Omega^2},Swirl profile
+VAM_2_Swirl_Clocks/WervelKlokken/appendix_01_Afleiding_Tijdsdilatie.tex,\frac{C_e^2}{c^2} e^{-r/r_c},Swirl profile
+VAM_2_Swirl_Clocks/WervelKlokken/appendix_01_Afleiding_Tijdsdilatie.tex,e^{-r/r_c},Swirl profile
+VAM_2_Swirl_Clocks/WervelKlokken/appendix_02_Afleiding_gravitatieVeld.tex,"\Phi_v(\vec{r}) = \gamma \int \frac{\|\vec{\omega}(\vec{r}')\|^2}{\|\vec{r} - \vec{r}'\|} \, d^3r',",Circulation Γ
+VAM_2_Swirl_Clocks/WervelKlokken/appendix_02_Afleiding_gravitatieVeld.tex,\gamma,Circulation Γ
+VAM_2_Swirl_Clocks/WervelKlokken/appendix_03_Newtonse_Limieten.tex,"\Phi_v(\vec{r}) = \gamma \int \frac{\|\vec{\omega}(\vec{r}')\|^2}{\|\vec{r} - \vec{r}'\|} \, d^3r',",Circulation Γ
+VAM_2_Swirl_Clocks/WervelKlokken/appendix_03_Newtonse_Limieten.tex,\frac{d\tau}{dt} = \sqrt{1 - \frac{C_e^2}{c^2} e^{-r/r_c} - \frac{2G_\text{swirl} M_\text{eff}(r)}{rc^2} - \beta \Omega^2},Swirl profile
+VAM_2_Swirl_Clocks/WervelKlokken/appendix_03_Newtonse_Limieten.tex,\gamma = G \rho_\text{æ}^2,Circulation Γ
+VAM_2_Swirl_Clocks/WervelKlokken/appendix_03_Newtonse_Limieten.tex,e^{-r/r_c} \to 0,Swirl profile
+VAM_2_Swirl_Clocks/WervelKlokken/appendix_04_Dynamica_vortexcirculatie_kwantisatie.tex,\Gamma = \oint_{\mathcal{C}(t)} \vec{v} \cdot d\vec{l} = \text{const.},Circulation Γ
+VAM_2_Swirl_Clocks/WervelKlokken/appendix_04_Dynamica_vortexcirculatie_kwantisatie.tex,\Gamma = \oint \vec{v} \cdot d\vec{l} = 2\pi r_c C_e.,Circulation Γ
+VAM_2_Swirl_Clocks/WervelKlokken/appendix_04_Dynamica_vortexcirculatie_kwantisatie.tex,"\Gamma_n = n \cdot \kappa, \quad n \in \mathbb{Z},",Circulation Γ
+VAM_2_Swirl_Clocks/WervelKlokken/appendix_04_Dynamica_vortexcirculatie_kwantisatie.tex,\Gamma,Circulation Γ
+VAM_2_Swirl_Clocks/WervelKlokken/appendix_06_Parameterafstemming_Limietgedrag.tex,G_\text{swirl} = \frac{C_e c^5 t_p^2}{2 F^{\text{max}}_{\text{\ae}} r_c^2}.,G_swirl
+VAM_2_Swirl_Clocks/WervelKlokken/appendix_07_Foundations_Velocity_Fields_and_Energies.tex,"V \;=\; \frac{\Gamma}{4 \pi R} \bigl(\ln \tfrac{8 R}{a} - \beta \bigr),\label{eq:appendix:velocity}",Circulation Γ
+VAM_2_Swirl_Clocks/WervelKlokken/appendix_07_Foundations_Velocity_Fields_and_Energies.tex,"H \;=\; \int_V \mathbf{u} \cdot \boldsymbol{\omega}\, dV,\label{eq:appendix:helicity}",Helicity / v·ω; Lagrangian
+VAM_2_Swirl_Clocks/WervelKlokken/appendix_07_Foundations_Velocity_Fields_and_Energies.tex,\Gamma,Circulation Γ
+VAM_2_Swirl_Clocks/WervelKlokken/appendix_08_Integration_of_Clausius_Heat_Theory.tex,"F^{\text{max}}_{\text{\ae}} = \rho_\text{\ae} C_e^2 \pi r_c^2,\label{eq:critical_force}",G_swirl
+VAM_2_Swirl_Clocks/WervelKlokken/appendix_09_TopologischeLading.tex,"H_\text{vortex} = \frac{1}{(4\pi)^2} \int_{\mathbb{R}^3} \vec{v} \cdot \vec{\omega} \, d^3x. \label{eq:heliciteit}",Helicity / v·ω
+VAM_2_Swirl_Clocks/WervelKlokken/appendix_09_TopologischeLading.tex,"Q_\text{top} = \frac{L}{(4\pi)^2 \Gamma^2} \int \vec{v} \cdot \vec{\omega} \, d^3x, \label{eq:qtop}",Helicity / v·ω; Circulation Γ
+VAM_2_Swirl_Clocks/WervelKlokken/appendix_09_TopologischeLading.tex,"\mathcal{L}_\text{top} = \frac{C_e^2}{2} \rho_\text{\ae} \, \vec{v} \cdot \vec{\omega},",Lagrangian
+VAM_2_Swirl_Clocks/WervelKlokken/appendix_09_TopologischeLading.tex,"\mathcal{E}_\text{VAM} = \int \left[ \frac{1}{2} \rho_\text{\ae} |\vec{v}|^2 + \frac{C_e^2}{2} \rho_\text{\ae} \, \vec{v} \cdot \vec{\omega} + \Phi_\text{swirl} + P(\rho_\text{\ae}) \right] d^3x.",Helicity / v·ω
+VAM_2_Swirl_Clocks/WervelKlokken/appendix_09_TopologischeLading.tex,"dt = dt_\infty \sqrt{1 - \frac{U_\text{vortex}}{U_\text{max}}}, \quad \text{met} \quad U_\text{vortex} = \frac{1}{2} \rho_\text{\ae} |\vec{\omega}|^2.",Time-rate / dilation
+VAM_2_Swirl_Clocks/WervelKlokken/appendix_09_TopologischeLading.tex,\Gamma,Circulation Γ
+VAM_2_Swirl_Clocks/WervelKlokken/appendix_10_GesplitsteHeliciteit.tex,dt = dt_\infty \sqrt{1 - \frac{H_C + H_T}{H_\text{max}}} = dt_\infty \sqrt{1 - \frac{C^2 (\text{Wr} + \text{Tw})}{H_\text{max}}}.,Time-rate / dilation
+VAM_2_Swirl_Clocks/WervelKlokken/appendix_11_VAM_Lagrangian.tex,"\mathcal{L}_\text{VAM}[\psi] = \frac{i\hbar}{2} \left( \psi^\dagger \partial_t \psi - \psi \partial_t \psi^\dagger \right) - \frac{\hbar^2}{2m} |\nabla \psi|^2 - \frac{\alpha}{8} |\nabla \vec{s}|^2,",Lagrangian
+VAM_2_Swirl_Clocks/WervelKlokken/appendix_12_AfleidingFijnStructuurConstante.tex,\Gamma = \oint \mathbf{v} \cdot d\mathbf{l} = \frac{h}{m_e}.,Circulation Γ
+VAM_2_Swirl_Clocks/WervelKlokken/appendix_12_AfleidingFijnStructuurConstante.tex,\Gamma = 2 \pi r_c C_e.,Circulation Γ
+VAM_2_Swirl_Clocks/WervelKlokken/appendix_12_AfleidingFijnStructuurConstante.tex,R_e = \frac{e^2}{4 \pi \varepsilon_0 m_e c^2}.,Energy/Mass
+VAM_2_Swirl_Clocks/WervelKlokken/appendix_12_AfleidingFijnStructuurConstante.tex,C_e = \frac{h}{\pi m_e} \times \frac{4 \pi \varepsilon_0 m_e c^2}{e^2}.,Energy/Mass
+VAM_2_Swirl_Clocks/WervelKlokken/appendix_12_AfleidingFijnStructuurConstante.tex,C_e = \frac{4 \varepsilon_0 h c^2}{e^2}.,Energy/Mass
+VAM_2_Swirl_Clocks/WervelKlokken/appendix_12_AfleidingFijnStructuurConstante.tex,\Gamma,Circulation Γ
+VAM_3_Benchmarking_Relativity/sections/01_introduction.tex,G_\text{VAM} = \frac{C_e c^5 t_p^2}{2 F_{\max} r_c^2},G_swirl
+VAM_3_Benchmarking_Relativity/sections/02_time_dilation.tex,"\frac{d\tau}{dt} = \sqrt{1 - \frac{2 G_{\text{hybrid}}(r) \, M_{\text{hybrid}}(r)}{r c^2} - \frac{C_e^2}{c^2} e^{-r/r_c} - \frac{\Omega^2}{c^2} e^{-r/r_c}}. \label{eq:hybrid_time_dilation}",Swirl profile
+VAM_3_Benchmarking_Relativity/sections/02_time_dilation.tex,G_{\text{swirl}} = \frac{C_e c^5 t_p^2}{2 F_{\max} r_c^2},G_swirl
+VAM_3_Benchmarking_Relativity/sections/03_velocity_dilation.tex,"\frac{d\tau}{dt} \approx 1 - \frac{3GM}{rc^2} + \frac{2GJ\omega_\text{orb}}{c^4},",Swirl profile
+VAM_3_Benchmarking_Relativity/sections/04_frame_dragging.tex,J = \frac{2}{5}MR^2\Omega,Swirl profile
+VAM_3_Benchmarking_Relativity/sections/05_redshift.tex,GM \sim \gamma \cdot \text{(circulation energy)}.,Circulation Γ
+VAM_3_Benchmarking_Relativity/sections/05_redshift.tex,\gamma,Circulation Γ
+VAM_3_Benchmarking_Relativity/sections/08-gravitational_potential.tex,\gamma,Circulation Γ
+VAM_3_Benchmarking_Relativity/sections/10_VortexDrivenGravityWaves.tex,\gamma = G \rho_a^2,Circulation Γ
+VAM_3_Benchmarking_Relativity/sections/10_VortexDrivenGravityWaves.tex,\gamma,Circulation Γ
+VAM_3_Benchmarking_Relativity/sections/12_SpinDynamics.tex,\vec{\Omega}_\text{VAM-de Sitter} = \frac{\gamma}{2 C_e^2} (\vec{v} \times \nabla \Phi_\omega),Swirl profile; Circulation Γ
+VAM_3_Benchmarking_Relativity/sections/12_SpinDynamics.tex,\Delta\theta_\text{VAM} \approx \frac{\gamma M_{\oplus} v_\text{sat}}{r^2 C_e^2} T_\text{orbit},Circulation Γ
+VAM_3_Benchmarking_Relativity/sections/12_SpinDynamics.tex,\Gamma^\mu_{\nu\rho},Circulation Γ
+VAM_3_Benchmarking_Relativity/sections/12_SpinDynamics.tex,\Phi_\omega \propto |\vec{\omega}|^2,Swirl profile
+VAM_3_Benchmarking_Relativity/sections/12_SpinDynamics.tex,\gamma,Circulation Γ
+VAM_3_Benchmarking_Relativity/sections/13_ISCO_bench.tex,V_{\text{eff}}^{\text{VAM}}(r) = \frac{L^2}{2r^2} - \frac{\kappa^2}{2r^2} - \gamma \left(\frac{d\omega}{dr}\right)^2,Swirl profile; Circulation Γ
+VAM_3_Benchmarking_Relativity/sections/13_ISCO_bench.tex,\omega(r) &= \frac{\kappa}{r^2} \\ \frac{d\omega}{dr} &= -\frac{2\kappa}{r^3},Swirl profile
+VAM_3_Benchmarking_Relativity/sections/13_ISCO_bench.tex,G &= 6.67430 \times 10^{-11}~\text{m}^3~\text{kg}^{-1}~\text{s}^{-2} \\ c &= 2.99792458 \times 10^8~\text{m/s} \\ \kappa &= 1.54 \times 10^{-9}~\text{m}^2/\text{s} \quad \text{(VAM circulation constant)} \\ \gamma &= 1.0,Circulation Γ
+VAM_3_Benchmarking_Relativity/sections/13_ISCO_bench.tex,\gamma (\partial_r \omega)^2,Circulation Γ
+VAM_3_Benchmarking_Relativity/sections/14_resolved_Challenges.tex,G = \frac{C_e c^5 t_p^2}{2 F_{\max} r_c^2},G_swirl
+VAM_3_Benchmarking_Relativity/sections/14_resolved_Challenges.tex,\gamma = G \rho_\text{\ae}^2,Circulation Γ
+VAM_3_Benchmarking_Relativity/sections/14_resolved_Challenges.tex,dt = dt_\infty \sqrt{1 - \beta \frac{|\vec{\omega}|^2}{C_e^2}},Time-rate / dilation
+VAM_3_Benchmarking_Relativity/sections/14_resolved_Challenges.tex,\Phi_\omega \propto |\vec{\omega}|^2,Swirl profile
+VAM_3_Benchmarking_Relativity/sections/14_resolved_Challenges.tex,\gamma = G \rho_a^2,Circulation Γ
+VAM_3_Benchmarking_Relativity/sections/14_resolved_Challenges.tex,\gamma,Circulation Γ
+VAM_3_Benchmarking_Relativity/sections/15_conclusion.tex,E=mc^2,Energy/Mass
+VAM_3_Benchmarking_Relativity/sections/15_conclusion.tex,\frac{4GM\Omega}{5c^2 r},Swirl profile
+VAM_3_Benchmarking_Relativity/sections/Appendix Nuclear Activation via Swirl Resonance in VAM.tex,"Y_{\mathrm{VAM}} = \int_0^\infty \rho_{\mathrm{beam}}(\omega) \cdot \sigma_{\mathrm{knot}}(\omega) \, d\omega",Swirl profile
+VAM_3_Benchmarking_Relativity/sections/Appendix Nuclear Activation via Swirl Resonance in VAM.tex,\sigma_{\mathrm{knot}}(\omega) = \sum_n \frac{B_n \Gamma_n^2}{(\omega - \omega_n)^2 + \Gamma_n^2},Circulation Γ
+VAM_3_Benchmarking_Relativity/sections/Appendix Nuclear Activation via Swirl Resonance in VAM.tex,"^{11}\mathrm{B}(d,n\gamma)^{12}\mathrm{C}",Circulation Γ
+VAM_3_Benchmarking_Relativity/sections/Appendix Nuclear Activation via Swirl Resonance in VAM.tex,\Gamma_n,Circulation Γ
+VAM_3_Benchmarking_Relativity/sections/Appendix_BeamSwirlInteractionSpectrum.tex,"Y_{\mathrm{VAM}} = \int_0^\infty \rho_{\mathrm{beam}}(\omega) \cdot \sigma_{\mathrm{knot}}(\omega) , d\omega",Swirl profile
+VAM_3_Benchmarking_Relativity/sections/Appendix_BeamSwirlInteractionSpectrum.tex,Y_{\text{peak}} \approx \frac{A B_n \Gamma_n \sqrt{2\pi} \Delta \omega}{(\omega_n - \omega_0)^2 + \Gamma_n^2},Circulation Γ
+VAM_3_Benchmarking_Relativity/sections/Appendix_BeamSwirlInteractionSpectrum.tex,"\omega_{\text{res}} = \frac{E_{\gamma}}{\hbar} = \frac{(5.0 \, \text{MeV})(1.602 \times 10^{-13})}{1.055 \times 10^{-34}} \approx 7.6 \times 10^{20} \, \text{rad/s}",Circulation Γ
+VAM_3_Benchmarking_Relativity/sections/Appendix_BeamSwirlInteractionSpectrum.tex,"Y_{\mathrm{VAM}} = \int_0^\infty \rho_{\mathrm{beam}}(\omega) \cdot \sigma_{\mathrm{knot}}(\omega) \, d\omega",Swirl profile
+VAM_3_Benchmarking_Relativity/sections/Appendix_BeamSwirlInteractionSpectrum.tex,"C_e &= 1.09384563 \times 10^6 \, \text{m/s} \\ r_c &= 1.40897017 \times 10^{-15} \, \text{m} \\ \omega_0 &= \frac{C_e}{r_c} \approx 7.763 \times 10^{20} \, \text{rad/s}",Swirl profile
+VAM_3_Benchmarking_Relativity/sections/Appendix_BeamSwirlInteractionSpectrum.tex,"\omega_0 = \frac{C_e}{r_c} \approx 7.763 \times 10^{20} \, \text{rad/s}",Swirl profile
+VAM_3_Benchmarking_Relativity/sections/Appendix_BeamSwirlInteractionSpectrum.tex,\omega_0 = C_e / r_c,Swirl profile
+VAM_3_Benchmarking_Relativity/sections/Appendix_BeamSwirlInteractionSpectrum.tex,\sigma_{\mathrm{knot}}(\omega) = \sum_n \frac{B_n \Gamma_n^2}{(\omega - \omega_n)^2 + \Gamma_n^2},Circulation Γ
+VAM_3_Benchmarking_Relativity/sections/Appendix_BeamSwirlInteractionSpectrum.tex,\omega_0 = \frac{C_e}{r_c},Swirl profile
+VAM_3_Benchmarking_Relativity/sections/Appendix_BeamSwirlInteractionSpectrum.tex,\Gamma_n = 0.1 \times \omega_0,Circulation Γ
+VAM_3_Benchmarking_Relativity/sections/Appendix_BeamSwirlInteractionSpectrum.tex,\Gamma = 0.1 \omega_n,Circulation Γ
+VAM_3_Benchmarking_Relativity/sections/Appendix_BeamSwirlInteractionSpectrum.tex,\Delta\omega = 0.05 \omega_n,Swirl profile
+VAM_3_Benchmarking_Relativity/sections/Appendix_BeamSwirlInteractionSpectrum.tex,\Gamma,Circulation Γ
+VAM_3_Benchmarking_Relativity/sections/Appendix_BeamSwirlInteractionSpectrum.tex,"\Gamma = [0.01, 0.03, 0.1, 0.3] \times \omega_0",Circulation Γ
+VAM_3_Benchmarking_Relativity/sections/Appendix_BeamSwirlInteractionSpectrum.tex,\Gamma / \omega_0 \ll 1,Circulation Γ
+VAM_3_Benchmarking_Relativity/sections/Appendix_NumericalBenchmark.tex,"\Omega_{\text{VAM}} \propto \frac{\Gamma}{r^2}, \quad \text{with} \quad \Gamma = \frac{J}{\rho},",Circulation Γ
+VAM_3_Benchmarking_Relativity/sections/Appendix_NumericalBenchmark.tex,\omega(r) \propto \gamma = \frac{1}{\sqrt{1 - v^2/c^2}},Circulation Γ
+VAM_3_Benchmarking_Relativity/sections/Appendix_VortexÆtherModelsQuantumSpinAnalogs.tex,"\int \vec{v} \cdot \vec{\omega}, dV",Helicity / v·ω
+VAM_4_General_Relativity_from_Structured_Swirl/VAM-4-EmergentGeneralRelativityFromStructuredSwirlDynamicsInVAM.tex,\boxed{ \frac{d\tau}{d\mathcal{N}} = \sqrt{1 - \frac{\Gamma^2}{4\pi^2 r^2 c^2}} } \label{eq:gravitational-redshift},Circulation Γ
+VAM_4_General_Relativity_from_Structured_Swirl/VAM-4-EmergentGeneralRelativityFromStructuredSwirlDynamicsInVAM.tex,"\vec{v}_\theta(r) = \frac{\Gamma}{2\pi r} \hat{\theta}, \quad |\vec{v}_\theta|^2 \sim \frac{1}{r^2}.",Circulation Γ
+VAM_4_General_Relativity_from_Structured_Swirl/VAM-4-EmergentGeneralRelativityFromStructuredSwirlDynamicsInVAM.tex,\tau = \mathcal{N} / \gamma(v),Circulation Γ
+VAM_4_General_Relativity_from_Structured_Swirl/VAM-4-EmergentGeneralRelativityFromStructuredSwirlDynamicsInVAM.tex,L = L_0 / \gamma(v),Circulation Γ
+VAM_4_General_Relativity_from_Structured_Swirl/VAM-4-EmergentGeneralRelativityFromStructuredSwirlDynamicsInVAM.tex,\gamma(v) = \left(1 - v^2/c^2\right)^{-1/2},Circulation Γ
+VAM_4_General_Relativity_from_Structured_Swirl/VAM-4-EmergentGeneralRelativityFromStructuredSwirlDynamicsInVAM.tex,\nabla_{\omega\omega_\mu},Swirl profile

@@ -25,13 +25,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" id="6f2a8139-c825-4497-876b-70e1a130c5c3" name="Changes" comment="Refactor file structure and add new utilities for VAM framework; rename and organize files, introduce new scripts for hyperbolic volume calculations">
-      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/Unified_Lagrangian_for_a_Vortex_String_Theory-v2.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/Unified_Lagrangian_for_a_Vortex_String_Theory-v3.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/Unified_Lagrangian_for_a_Vortex_String_Theory.tex" afterDir="false" />
+    <list default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" id="6f2a8139-c825-4497-876b-70e1a130c5c3" name="Changes" comment="Update VAM mass formula implementation and add new Lagrangian document; enhance mass calculations and introduce new theoretical framework for vortex string theory">
+      <change afterPath="$PROJECT_DIR$/ProjectAnalysis/CANON.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectAnalysis/VAM-Canon-0.1.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectAnalysis/active.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-20_String_Theory/VAM-MASS_FORMULA.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM-20_String_Theory/VAM-MASS_FORMULA.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/Vortex_String_Theory_Mass_Fundamentals.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/Vortex_String_Theory_Mass_Fundamentals.pdf" afterDir="false" />
     </list>
     <list id="4afbe360-edfd-4722-ab75-c722c883a8a6" name="DoNotCommit" comment="Add new files and refactor existing ones for VAM framework; update README and data paths" />
     <option name="SHOW_DIALOG" value="false" />
@@ -214,6 +212,7 @@
     "LaTeX.VAM-8.5-Master_Formula.executor": "Run",
     "LaTeX.VAM-8_NewNotes.executor": "Run",
     "LaTeX.VAM-9-MilkyWay_as_a_Chiral_Swirl-Knot_Network.executor": "Run",
+    "LaTeX.VAM-Canon-0.1.executor": "Run",
     "LaTeX.VAM_15_Quantum_Gravity.executor": "Run",
     "LaTeX.VAM_15_Quantum_Gravity_updated.executor": "Run",
     "LaTeX.VAM_Full_Lagrangian.executor": "Run",
@@ -599,29 +598,6 @@
         <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
         <latex-distribution>MIKTEX</latex-distribution>
       </texify-bibtex>
-      <method v="2" />
-    </configuration>
-    <configuration default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify>
-        <compiler>PDFLATEX</compiler>
-        <compiler-path />
-        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
-        <require-focus>$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$</require-focus>
-        <viewer-command />
-        <compiler-arguments />
-        <envs />
-        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
-        <before-run-command />
-        <main-file />
-        <output-path>{projectDir}/out</output-path>
-        <auxil-path>{projectDir}/auxil</auxil-path>
-        <compile-twice>false</compile-twice>
-        <output-format>PDF</output-format>
-        <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>false</has-been-run>
-        <bib-run-config>[]</bib-run-config>
-        <makeindex-run-config>[]</makeindex-run-config>
-      </texify>
       <method v="2" />
     </configuration>
     <list>
@@ -1012,7 +988,23 @@
       <option name="project" value="LOCAL" />
       <updated>1755810306819</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Update VAM mass formula implementation and add new Lagrangian document; enhance mass calculations and introduce new theoretical framework for vortex string theory">
+      <option name="closed" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
+      <created>1755822442030</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1755822442030</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Update VAM mass formula implementation and add new Lagrangian document; enhance mass calculations and introduce new theoretical framework for vortex string theory">
+      <option name="closed" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
+      <created>1755822488207</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1755822488207</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1049,7 +1041,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Add new Python scripts for 6_2 and 7_4 knots; create all_knots.py for various knot visualizations and refactor workspace.xml for improved file structure." />
     <MESSAGE value="Add VAM front page LaTeX document and refactor workspace.xml for improved project structure" />
     <MESSAGE value="Refactor file structure by renaming ScanCropperAligner.py to NotebookScanCropperAligner.py; update module path in vamBindings.py for Python 3.12 compatibility; add LastTest.log for testing logs; update paths in testknot.py for image saving; add new LaTeX documents and bibliography files for quantum computing research." />
     <MESSAGE value="Add new vorticity dynamics and thermodynamics modules; implement circulation and enstrophy calculations; update bindings and examples for enhanced fluid dynamics analysis" />
@@ -1074,7 +1065,8 @@
     <MESSAGE value="Update VAM documents and add new mass formula implementation; enhance metadata and structure" />
     <MESSAGE value="Started Vortex String Theory" />
     <MESSAGE value="Refactor file structure and add new utilities for VAM framework; rename and organize files, introduce new scripts for hyperbolic volume calculations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor file structure and add new utilities for VAM framework; rename and organize files, introduce new scripts for hyperbolic volume calculations" />
+    <MESSAGE value="Update VAM mass formula implementation and add new Lagrangian document; enhance mass calculations and introduce new theoretical framework for vortex string theory" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update VAM mass formula implementation and add new Lagrangian document; enhance mass calculations and introduce new theoretical framework for vortex string theory" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
