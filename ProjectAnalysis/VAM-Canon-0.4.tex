@@ -1,0 +1,952 @@
+%! Author = mr
+%! Date = 8/22/2025
+
+% Preamble
+\documentclass[11pt, a4paper]{article}
+\input{../vamstyle.sty}
+% Packages
+
+
+% Document
+\begin{document}
+
+
+\chapter*{VAM Canon (v0.4)}
+
+\textit{Prepared for: Omar Iskandarani (Vortex Æther Model, VAM)}
+
+\textit{Date: 2025‑08‑22}
+
+\section{Versioning}
+\begin{itemize}
+    \item This document is the single source of truth for core VAM definitions, constants, master equations, and notational conventions.
+    \item Use semantic versions: vMAJOR.MINOR.PATCH (e.g., v1.2.0).
+    \item Every paper/derivation should state the Canon version it depends on.
+\end{itemize}
+
+
+\section{Core Postulates (VAM)}
+\begin{enumerate}
+    \item The universe is a 3D incompressible, inviscid superfluid æther with absolute time and Euclidean space.
+    \item Particles are knotted vortex solitons (closed, possibly linked/knotted filaments) in the æther.
+    \item Gravity is not spacetime curvature but swirl (structured vorticity fields) and pressure gradients; massive motion follows swirl-induced dynamics.
+    \item Local time-rate is set by tangential vortex motion: higher swirl reduces the local clock rate relative to asymptotic time.
+    \item Quantization arises from topological invariants (linking, writhe, twist) and circulation quantization of vortex filaments.
+    \item The æther supports bosonic unknotted excitations (e.g., photon-like), while chiral hyperbolic knots map to quarks; torus knots map to leptons, etc. (taxonomy documented separately).
+\end{enumerate}
+
+\section{Canonical Constants and Symbols}
+All symbols are dimensionally consistent and, unless stated otherwise, SI.
+
+\subsection{Fundamental (VAM-specific)}
+\begin{itemize}
+    \item Vortex tangential velocity: $C_e = 1.09384563 \times 10^{6}\;\mathrm{m}\,\mathrm{s}^{-1}$
+    \item Vortex-core radius: $r_c = 1.40897017 \times 10^{-15}\;\mathrm{m}$
+    \item Æther fluid density ("vacuum" fluid): $\rho_{\text{\ae}}^{(\text{fluid})} = 7.0 \times 10^{-7}\;\mathrm{kg}\,\mathrm{m}^{-3}$
+    \item Æther core/mass density: $\rho_{\text{\ae}}^{(\text{mass})} = 3.8934358266918687 \times 10^{18}\;\mathrm{kg}\,\mathrm{m}^{-3}$
+    \item Æther energy density: $\rho_{\text{\ae}}^{(\text{energy})} = 3.49924562 \times 10^{35}\;\mathrm{J}\,\mathrm{m}^{-3}$
+    \item Maximum Coulomb force (VAM): $F_{\text{\ae}}^{\max} = 29.053507\;\mathrm{N}$
+    \item Maximum universal force (contextual): $F_{\text{gr}}^{\max} = 3.02563 \times 10^{43}\;\mathrm{N}$
+    \item Golden ratio: $\varphi = \frac{1+\sqrt{5}}{2} \approx 1.61803398875$
+\end{itemize}
+
+\subsection{Universal}
+\begin{itemize}
+    \item Speed of light: $c = 299\,792\,458\;\mathrm{m}\,\mathrm{s}^{-1}$
+    \item Fine-structure constant: $\alpha \approx 7.2973525643 \times 10^{-3}$
+    \item Planck time: $t_p \approx 5.391247 \times 10^{-44}\;\mathrm{s}$
+\end{itemize}
+
+\textbf{Note:} The local Python \texttt{constants\_dict} used in simulations must mirror these values exactly; papers should quote the Canon version.
+
+%========================
+% Canon Governance & Status Taxonomy
+%========================
+    \section*{Canon Governance (Binding)}
+
+    \subsection*{Definitions}
+    \paragraph{Formal System.}
+    Let \(\mathcal{S} = (\mathcal{P},\mathcal{D},\mathcal{R})\) denote the VAM formal system:
+    postulates \(\mathcal{P}\), definitions \(\mathcal{D}\), and admissible inference rules \(\mathcal{R}\)
+    (variational derivation, Noether, dimensional analysis, asymptotic matching, etc.).
+
+    \paragraph{Canonical statement.}
+    A statement \(X\) is \emph{canonical} iff \(X\) is a theorem or identity provable in \(\mathcal{S}\):
+    \[
+        \mathcal{P},\mathcal{D}\ \vdash_{\mathcal{R}}\ X,
+    \]
+    and \(X\) is consistent with all previously accepted canonical items in the current major version.
+
+    \paragraph{Empirical statement.}
+    A statement \(Y\) is \emph{empirical} iff it asserts a measured value, fit, or protocol:
+    \[
+        Y \equiv \text{“observable } \mathcal{O} \text{ has value } \hat{o} \pm \delta o \text{ under procedure } \Pi\text{.”}
+    \]
+    Empirical items calibrate symbols (e.g., \(C_e, r_c, \rho_{\text{\ae}}^{(\cdot)}\)) but are not premises in proofs.
+
+    \subsection*{Status Classes}
+    \begin{itemize}
+        \item \textbf{Axiom / Postulate (Canonical).} Primitive assumptions of VAM (e.g., incompressible, inviscid æther; absolute time; Euclidean space).
+        \item \textbf{Definition (Canonical).} Introduces symbols by construction (e.g., swirl Coulomb constant \(\Lambda\) by surface-pressure integral).
+        \item \textbf{Theorem / Corollary (Canonical).} Proven consequences (e.g., Euler–VAM radial balance; swirl time-scaling).
+        \item \textbf{Constitutive Model (Canonical if derived; otherwise Semi-empirical).} A relation tying fields (e.g., pressure–vorticity law). Canonical when deduced from \(\mathcal{P},\mathcal{D}\); semi-empirical when chosen to match data.
+        \item \textbf{Calibration (Empirical).} Recommended numerical values with uncertainties for canonical symbols.
+        \item \textbf{Research Track (Non-canonical).} Conjectures or alternatives pending proof or axiomatization.
+    \end{itemize}
+
+    \subsection*{Canonicality Tests (all required)}
+    A candidate statement enters the Canon iff it passes:
+    \begin{enumerate}
+        \item \textbf{Derivability:} Shown from \(\mathcal{P},\mathcal{D}\) using \(\mathcal{R}\), with each step explicit.
+        \item \textbf{Dimensional Consistency:} Every term has correct units; limits are well-posed under \(r\!\to\!0\), \(r\!\to\!\infty\), weak/strong swirl.
+        \item \textbf{Symmetry Compliance:} Consistent with VAM symmetries (Galilean + absolute time; foliation; incompressibility).
+        \item \textbf{Recovery Limits:} Reduces to accepted physics in the appropriate limits (e.g., Coulomb/Bohr, Newtonian gravity, linear waves).
+        \item \textbf{Non-Contradiction:} No conflict with existing canonical theorems at the same major version.
+        \item \textbf{Parameter Discipline:} No ad-hoc fit parameters; all symbols are defined and measurable.
+    \end{enumerate}
+
+    \subsection*{Promotion/Demotion Protocol}
+    \begin{itemize}
+        \item \textbf{Promote to Canonical} when a full proof (or definition) and Tests 1–6 are documented; record as “Theorem/Definition,” bump MINOR.
+        \item \textbf{Calibrate (Empirical)} by attaching \(\hat{\theta}\pm\delta\theta\) and procedure \(\Pi\) to a \emph{canonical symbol} (e.g., \(C_e\): value is empirical; symbol and role are canonical).
+        \item \textbf{Demote} if inconsistency is found; publish erratum and bump MAJOR.
+    \end{itemize}
+
+    \subsection*{Examples (from current Canon)}
+    \begin{itemize}
+        \item \(\displaystyle \textit{Canonical (Definition):}\quad \Lambda \equiv \int_{S_r^2} p_{\text{swirl}}\,r^2\,d\Omega.\)
+        \item \(\displaystyle \textit{Canonical (Theorem):}\quad \frac{1}{\rho}\frac{dp_{\text{swirl}}}{dr}=\frac{v(r)^2}{r}\) for steady, azimuthal drift (Euler balance).
+        \item \(\displaystyle \textit{Empirical (Calibration):}\quad C_e=1.09384563\times10^{6}\,\mathrm{m\,s^{-1}}\) with procedure \(f\Delta x\).
+        \item \(\displaystyle \textit{Consistency Check (Not a premise):}\) Hydrogen soft-core reproduces \(a_0,E_1\); this validates choices but remains a check, not an axiom.
+    \end{itemize}
+
+    %! Canonical Scope and Rationale for VAM
+    \section*{What is Canonical in VAM—and Why}
+
+    \subsection*{Governance: What “Canonical” Means}
+    A statement is \emph{canonical} iff it is a \textbf{postulate}, \textbf{definition}, or a \textbf{theorem/corollary} \emph{derived} from the VAM formal system
+    \(\mathcal{S}=(\mathcal{P},\mathcal{D},\mathcal{R})\)
+    (postulates \(\mathcal{P}\), definitions \(\mathcal{D}\), admissible rules \(\mathcal{R}\): variational derivation, Noether, dimensional analysis, asymptotic matching, and standard fluid limits). Canonical items must pass: (i) derivability, (ii) dimensional consistency, (iii) symmetry compliance (absolute time, Euclidean space, incompressible, inviscid), (iv) correct recovery limits (Newtonian, Coulomb/Bohr, linear waves), and (v) non-contradiction within the current major version.
+
+    A statement is \emph{empirical} iff it asserts a measured calibration (\( \hat{\theta}\pm\delta\theta\)) or a lab protocol. Empirical facts set numerical values for \emph{canonical symbols} but are not premises in proofs.
+
+    \subsection*{Canonical Core (from Canon v0.1 + v0.7-Extensions)}
+    \paragraph{[Postulate] Incompressible, inviscid æther with absolute time and Euclidean space.}
+    \(\nabla\!\cdot\!\vb v=0,\ \nu=0.\)
+    This fixes the kinematic arena and legal inference rules (Galilean symmetries and foliation).
+
+    \paragraph{[Definition] Vorticity, circulation, helicity.}
+    \(\bm{\omega}=\nabla\times \vb v,\quad \Gamma=\oint_{\mathcal{C}} \vb v\!\cdot d\vb \ell,\quad h=\vb v\!\cdot\!\bm{\omega},\ H=\int h\,dV.\)
+    These are standard fluid constructs canonized as primary VAM kinematic invariants (units: \([\bm{\omega}]=\mathrm{s}^{-1}\), \([\Gamma]=\mathrm{m^2\,s^{-1}}\)). \cite{Helmholtz1858,Kelvin1869,Moffatt1969,Batchelor1967,LandauLifshitz1987}
+
+    \paragraph{[Theorem] Kelvin/vorticity transport/helicity invariants.}
+    For inviscid, barotropic flow:
+    \[
+        \frac{d\Gamma}{dt}=0,\qquad
+        \pdv{\bm{\omega}}{t}=\nabla\times(\vb v\times\bm{\omega}),\qquad
+        \text{$H$ invariant up to reconnections}.
+    \]
+    \emph{Why canonical?} Directly derivable from Euler equations under \(\nu=0\), \(\nabla\!\cdot\!\vb v=0\); dimensionally consistent; reduce to classical results. \cite{Helmholtz1858,Kelvin1869,Moffatt1969}
+
+    \paragraph{[Definition] Swirl Coulomb constant \(\Lambda\).}
+    \[
+        \boxed{\ \Lambda \equiv \int_{S_r^2} p_{\text{swirl}}(r)\, r^2\, d\Omega\ } \quad\Rightarrow\quad [\Lambda]=\mathrm{J\,m}=\mathrm{N\,m^2}.
+    \]
+    In VAM Canon this evaluates to \( \Lambda=4\pi \rho_{\text{\ae}}^{(\text{mass})} C_e^2 r_c^4\) (symbolic identity).
+    \emph{Why canonical?} It is a definition tied to an integral invariant of the swirl pressure field; dimensionally exact and independent of any dataset.
+
+    \paragraph{[Theorem] Hydrogen soft-core potential and Coulomb recovery.}
+    \[
+        V_{\text{VAM}}(r)=-\frac{\Lambda}{\sqrt{r^2+r_c^2}}
+        \;\xrightarrow{r\gg r_c}\;
+        -\frac{\Lambda}{r},
+    \]
+    yielding Bohr scalings
+    \(a_0=\hbar^2/(\mu\Lambda)\), \(E_n=-\mu\Lambda^2/(2\hbar^2 n^2)\).
+    \emph{Why canonical?} Derived by substituting the canonical \(\Lambda\) into the Schrödinger bound-state problem; reproduces textbook Coulomb in the soft-core limit (recovery test). \cite{Schrodinger1926,Jackson1999}
+
+    \paragraph{[Theorem] Euler–VAM radial balance (dark-sector pressure law).}
+    For steady, purely azimuthal drift \(v(r)\),
+    \[
+        0=-\frac{1}{\rho}\frac{dp_{\text{swirl}}}{dr}+\frac{v(r)^2}{r}
+        \quad\Rightarrow\quad
+        \boxed{\ \frac{1}{\rho}\frac{dp_{\text{swirl}}}{dr}=\frac{v(r)^2}{r}\ }.
+    \]
+    For flat curves \(v\to v_0\): \(p_{\text{swirl}}(r)=p_0+\rho v_0^2 \ln(r/r_0)\).
+    \emph{Why canonical?} Direct consequence of Euler equations with \(\nabla\!\cdot\!\vb v=0\), no ad-hoc parameters; correct units and limits.
+
+    \paragraph{[Definition \(\to\) Corollary] Effective swirl line element (analogue-metric form).}
+    In \((t,r,\theta,z)\) with azimuthal drift \(v_\theta(r)\),
+    \[
+        ds^2=-(c^2-v_\theta^2)\,dt^2+2\,v_\theta r\,d\theta\,dt+dr^2+r^2d\theta^2+dz^2,
+    \]
+    co-rotating to \(ds^2=-c^2(1-v_\theta^2/c^2)dt^2+\cdots\), giving the swirl-clock factor
+    \(\displaystyle \frac{dt_{\text{local}}}{dt_\infty}=\sqrt{1-\frac{v_\theta^2}{c^2}}\).
+    \emph{Why canonical?} Adopted as an \emph{effective} geometry consistent with VAM kinematics and analogue-gravity construction; it is a definition plus corollary that reproduces the time-rate law used in Canon. \cite{Unruh1981,Visser1998,Painleve1921,Gullstrand1922}
+
+    \paragraph{[Definition] Swirl Hamiltonian density (Kelvin-compatible).}
+    \[
+        \mathcal{H}=\tfrac12\rho\,\|\vb v\|^2+\tfrac12\rho\,\ell_\omega^2\|\bm{\omega}\|^2+\tfrac12\rho\,\ell_\omega^4\|\nabla\bm{\omega}\|^2+\lambda(\nabla\!\cdot\!\vb v),\quad \ell_\omega:=r_c.
+    \]
+    \emph{Why canonical?} Constructed by symmetry and dimensional closure (lowest-order rotational invariants) under the incompressibility constraint; reduces to bulk kinetic energy as \(\ell_\omega\!\to\!0\); no ad-hoc fits.
+
+    \subsection*{Empirical Calibrations (not premises, but binding numerically)}
+    \begin{itemize}
+        \item \([{\rm Empirical}]\) \(C_e = 1.09384563\times 10^6\,\mathrm{m\,s^{-1}}\) via metrology \(C_e=f\,\Delta x\).
+        \item \([{\rm Empirical}]\) \(r_c = 1.40897017\times 10^{-15}\,\mathrm{m}\).
+        \item \([{\rm Empirical}]\) \(\rho_{\text{\ae}}^{(\text{mass})} = 3.8934358266918687\times 10^{18}\,\mathrm{kg\,m^{-3}}\).
+    \end{itemize}
+    \emph{Why not canonical?} These are measured values with uncertainties; they \emph{calibrate} canonical symbols (\(C_e,r_c,\rho_{\text{\ae}}^{(\cdot)}\)) used in theorems like \(\Lambda=4\pi\rho_{\text{\ae}}^{(\text{mass})}C_e^2 r_c^4\).
+
+    \subsection*{Non-Canonical (Research Track)}
+    Items explicitly labeled “Research Track (non-canonical yet)”—e.g., blackbody via swirl temperature, QED–VAM minimal coupling ansatz—remain conjectural until a proof/derivation under \(\mathcal{S}\) is documented and Tests (i)–(v) are passed.
+
+    \subsection*{Consistency & Dimension Checks (illustrative)}
+    \[
+        [\Lambda]=[\rho][C_e^2][r_c^4]
+        =\frac{\mathrm{kg}}{\mathrm{m^3}}\cdot\frac{\mathrm{m^2}}{\mathrm{s^2}}\cdot\mathrm{m^4}
+        =\frac{\mathrm{kg\,m^3}}{\mathrm{s^2}}
+        =\mathrm{J\,m}.
+    \]
+    Soft-core Coulomb recovery: \(V_{\text{VAM}}(r)\to -\Lambda/r\) as \(r/r_c\to\infty\), reproducing hydrogenic \(a_0\) and \(E_n\). \cite{Schrodinger1926,Jackson1999}
+
+% --- BibTeX (for non-original ideas used above) ---
+    \begin{filecontents*}{vam-canonical.bib}
+        @article{Helmholtz1858, author={H. von Helmholtz}, title={On Integrals of the Hydrodynamical Equations which Express Vortex-motion}, journal={Philosophical Magazine}, year={1858}}
+        @article{Kelvin1869, author={W. Thomson (Lord Kelvin)}, title={On Vortex Motion}, journal={Trans. Roy. Soc. Edinburgh}, year={1869}}
+        @article{Moffatt1969, author={H. K. Moffatt}, title={The degree of knottedness of tangled vortex lines}, journal={J. Fluid Mech.}, year={1969}}
+        @book{Batchelor1967, author={G. K. Batchelor}, title={An Introduction to Fluid Dynamics}, publisher={Cambridge Univ. Press}, year={1967}}
+        @book{LandauLifshitz1987, author={L. D. Landau and E. M. Lifshitz}, title={Fluid Mechanics (2nd ed.)}, publisher={Pergamon}, year={1987}}
+        @article{Unruh1981, author={W. G. Unruh}, title={Experimental black-hole evaporation?}, journal={Phys. Rev. Lett.}, year={1981}, doi={10.1103/PhysRevLett.46.1351}}
+        @article{Visser1998, author={M. Visser}, title={Acoustic black holes: horizons, ergospheres and Hawking radiation}, journal={Class. Quantum Grav.}, year={1998}, doi={10.1088/0264-9381/15/6/024}}
+        @article{Painleve1921, author={P. Painlev{\'e}}, title={La m{\'e}canique classique et la th{\'e}orie de la relativit{\'e}}, journal={C. R. Acad. Sci. Paris}, year={1921}}
+        @article{Gullstrand1922, author={A. Gullstrand}, title={Allgemeine L{\"o}sung des statischen Eink{\"o}rperproblems in der Einsteinschen Gravitationstheorie}, journal={Ark. Mat. Astron. Fys.}, year={1922}}
+        @article{Schrodinger1926, author={E. Schr{\"o}dinger}, title={An Undulatory Theory of the Mechanics of Atoms and Molecules}, journal={Phys. Rev.}, year={1926}, doi={10.1103/PhysRev.28.1049}}
+        @book{Jackson1999, author={J. D. Jackson}, title={Classical Electrodynamics (3rd ed.)}, publisher={Wiley}, year={1999}}
+    \end{filecontents*}
+    \bibliographystyle{unsrt}
+
+
+%========================================
+% Canon §X: Coarse-Graining 1D Filaments → 3D Æther Density
+%========================================
+\section{Canonical Coarse–Graining of \(\rho_{\text{\ae}}^{(\text{fluid})}\) from a Vortex–Filament Bath}
+\label{sec:canon_rhoae_from_filaments}
+
+\paragraph{Scope.}
+The æther is modeled as an incompressible, inviscid fluid populated by thin vortex filaments (“strings”). This section derives the bulk (volumetric) æther density \(\rho_{\text{\ae}}^{(\text{fluid})}\) from first principles via coarse–graining of line–supported mass and vorticity, relying only on Euler kinematics, Kelvin–Helmholtz vortex invariants, and standard filament measures~\cite{Helmholtz1858,Kelvin1869,Saffman1992}.
+
+\subsection{Axioms and Definitions}
+Let a representative filament carry:
+\begin{align}
+    \text{(D1)}\quad
+    \mu_\ast &\;\equiv\; \rho_{\text{\ae}}^{(\text{core})}\,A_{\text{core}}
+    \;=\; \rho_{\text{\ae}}^{(\text{core})}\,\pi r_c^{\,2}
+    \quad\;[\mathrm{kg/m}], \label{eq:D1} \\[2mm]
+    \text{(D2)}\quad
+    \Gamma_\ast &\;\equiv\; \oint \mathbf{v}\!\cdot\! d\boldsymbol{\ell}
+    \;\simeq\; \kappa_\Gamma\, r_c\, C_e,
+    \qquad \kappa_\Gamma=2\pi \;\; \text{(thin, near–solid–body core)}, \label{eq:D2}
+\end{align}
+where \(\rho_{\text{\ae}}^{(\text{core})}\) is the core mass density, \(r_c\) the core radius, and \(C_e\) the characteristic tangential speed at \(r_c\).
+
+Denote by
+\[
+    \nu \;\equiv\; \frac{N_{\text{fil}}}{A} \quad [\mathrm{m^{-2}}]
+\]
+the areal line density (number of filaments per unit cross–sectional area) within the coarse–graining window. Then:
+\begin{align}
+    \text{(C1)}\quad
+    \rho_{\text{\ae}}^{(\text{fluid})} &= \mu_\ast\,\nu,
+    \label{eq:C1} \\[2mm]
+    \text{(C2)}\quad
+    \langle \boldsymbol{\omega}\rangle &= \Gamma_\ast\,\nu\,\hat{\mathbf{t}}_{\text{avg}}
+    \;\;\Rightarrow\;\; |\langle\omega\rangle|=\Gamma_\ast\,\nu,
+    \label{eq:C2}
+\end{align}
+the latter being the classical counterpart of the Feynman rule for rotating superfluids (mean vorticity equals circulation \(\times\) areal vortex density)~\cite{Feynman1955,Donnelly1991,Saffman1992}.
+
+\subsection{First–Principles Derivation}
+Combining \eqref{eq:C1}–\eqref{eq:C2} gives the canonical coarse–graining map
+\begin{equation}
+    \boxed{\;
+    \rho_{\text{\ae}}^{(\text{fluid})}
+        \;=\; \mu_\ast\,\frac{\langle\omega\rangle}{\Gamma_\ast}
+        \;=\; \frac{\rho_{\text{\ae}}^{(\text{core})}\,\pi r_c^{\,2}}{\kappa_\Gamma r_c C_e}\,\langle\omega\rangle
+        \;=\; \frac{\rho_{\text{\ae}}^{(\text{core})}\,r_c}{2\,C_e}\,\langle\omega\rangle
+        \;}
+    \quad (\kappa_\Gamma=2\pi).
+    \label{eq:rho_from_omega}
+\end{equation}
+For a uniform background solid–body rotation with angular rate \(\Omega\), \(\langle\omega\rangle=2\Omega\), hence
+\begin{equation}
+    \boxed{\;
+    \rho_{\text{\ae}}^{(\text{fluid})}
+        \;=\; \frac{\rho_{\text{\ae}}^{(\text{core})}\,r_c}{C_e}\;\Omega
+        \;}
+    \quad [\mathrm{kg/m^3}].
+    \label{eq:rho_from_Omega}
+\end{equation}
+
+\paragraph{Dimensional check.}
+\([\mu_\ast]=\mathrm{kg/m}\), \([\nu]=\mathrm{m^{-2}}\Rightarrow [\mu_\ast\nu]=\mathrm{kg/m^3}\).
+Also \([\Gamma_\ast]=\mathrm{m^2/s}\), \([\langle\omega\rangle]=\mathrm{s^{-1}}\Rightarrow
+\bigl[\mu_\ast\langle\omega\rangle/\Gamma_\ast\bigr]=\mathrm{kg/m^3}\). ✓
+
+\subsection{Energy and Tension Corollaries}
+The coarse–grained swirl energy density,
+\begin{equation}
+    \boxed{\;
+    u_{\text{swirl}} \;=\; \tfrac12\,\rho_{\text{\ae}}^{(\text{fluid})}\,C_e^2
+    \;}
+    \quad [\mathrm{J/m^3}],
+    \label{eq:energy_density}
+\end{equation}
+follows the standard kinetic form for incompressible flow~\cite{LandauLifshitzFM,Saffman1992}. The filament’s natural tension scale is
+\begin{equation}
+    \boxed{\;
+    T_\ast \;\equiv\; \tfrac12\,\mu_\ast\,C_e^2
+    \;}
+    \quad [\mathrm{N}],
+    \label{eq:string_tension}
+\end{equation}
+mirroring string–like energy \(E\simeq T\,L+\cdots\) without invoking compressibility.
+
+\subsection{Numerical Calibration (VAM Canonical Constants)}
+With
+\[
+    \rho_{\text{\ae}}^{(\text{core})}=3.8934358266918687\times10^{18}\ \mathrm{kg/m^3},\;
+    r_c=1.40897017\times10^{-15}\ \mathrm{m},\;
+    C_e=1.09384563\times10^{6}\ \mathrm{m/s},
+\]
+we obtain
+\begin{align*}
+    \mu_\ast &= \rho_{\text{\ae}}^{(\text{core})}\pi r_c^2
+    = 2.42821138\times10^{-11}\ \mathrm{kg/m},\\
+    \Gamma_\ast &= 2\pi r_c C_e
+    = 9.68361920\times10^{-9}\ \mathrm{m^2/s},\\
+    T_\ast &= \tfrac12\,\mu_\ast C_e^2
+    = 1.45267535\times10^{1}\ \mathrm{N}.
+\end{align*}
+From \eqref{eq:rho_from_Omega},
+\[
+    \rho_{\text{\ae}}^{(\text{fluid})}
+    = \bigl(5.01509060\times10^{-3}\bigr)\,\Omega\quad [\mathrm{kg/m^3}],
+\]
+so the Canon baseline \( \rho_{\text{\ae}}^{(\text{fluid})}\equiv 7.0\times10^{-7}\ \mathrm{kg/m^3}\) is realized at
+\[
+    \boxed{\;
+    \Omega_\ast \;=\; 1.39578735\times10^{-4}\ \mathrm{s^{-1}}
+    \quad (\text{period } 2\pi/\Omega_\ast \approx 12.5\ \mathrm{h})
+    \;}
+\]
+and corresponds to an areal filament density
+\[
+    \nu_\ast \;=\; \frac{2\Omega_\ast}{\Gamma_\ast}
+    \;=\; 2.88278033\times10^{4}\ \mathrm{m^{-2}}.
+\]
+This fixes the coarse–graining scale that ties micro–constants \((\rho_{\text{\ae}}^{(\text{core})}, r_c, C_e)\) to the Canon macroscopic density.
+
+\paragraph{Remarks.}
+(i) The profile factor \(\kappa_\Gamma\) encodes core details; keeping \(\kappa_\Gamma\) explicit simply rescales \(\Omega_\ast\) by \(\mathcal{O}(1)\). (ii) No equation of state is invoked; incompressibility and filament measures suffice. (iii) The analogy to superfluid vortex arrays and EM line–to–bulk conversions is purely structural~\cite{Feynman1955,Donnelly1991,Jackson1999,Saffman1992}.
+
+% --- BibTeX block for non-original results referenced above ---
+\begin{filecontents*}{vam_canon_refs.bib}
+    @article{Helmholtz1858,
+    author  = {H. von Helmholtz},
+    title   = {\"Uber Integrale der hydrodynamischen Gleichungen, welche den Wirbelbewegungen entsprechen},
+    journal = {Journal f{\"u}r die reine und angewandte Mathematik},
+    year    = {1858},
+    volume  = {55},
+    pages   = {25--55}
+    }
+    @article{Kelvin1869,
+    author  = {W. Thomson (Lord Kelvin)},
+    title   = {On vortex motion},
+    journal = {Transactions of the Royal Society of Edinburgh},
+    year    = {1869},
+    volume  = {25},
+    pages   = {217--260}
+    }
+    @book{Saffman1992,
+    author    = {Philip G. Saffman},
+    title     = {Vortex Dynamics},
+    publisher = {Cambridge University Press},
+    year      = {1992},
+    doi       = {10.1017/CBO9780511624063}
+    }
+    @incollection{Feynman1955,
+    author    = {R. P. Feynman},
+    title     = {Application of Quantum Mechanics to Liquid Helium},
+    booktitle = {Progress in Low Temperature Physics},
+    editor    = {C. J. Gorter},
+    volume    = {1},
+    pages     = {17--53},
+    publisher = {North-Holland},
+    year      = {1955}
+    }
+    @book{Donnelly1991,
+    author    = {Russell J. Donnelly},
+    title     = {Quantized Vortices in Helium II},
+    publisher = {Cambridge University Press},
+    year      = {1991}
+    }
+    @book{LandauLifshitzFM,
+    author    = {L. D. Landau and E. M. Lifshitz},
+    title     = {Fluid Mechanics},
+    series    = {Course of Theoretical Physics, Vol. 6},
+    edition   = {2nd},
+    publisher = {Pergamon},
+    year      = {1987}
+    }
+    @book{Jackson1999,
+    author    = {John David Jackson},
+    title     = {Classical Electrodynamics},
+    edition   = {3rd},
+    publisher = {Wiley},
+    year      = {1999}
+    }
+\end{filecontents*}
+
+
+\section{Master Equations (Boxed, Definitive)}
+
+\subsection{Master Energy and Mass Formula}
+
+Define the amplified swirl energy for a coherent VAM volume $V$:
+\begin{equation}
+E_{\text{VAM}}(V) = \frac{4}{\alpha\,\varphi} \left( \frac{1}{2}\,\rho_{\text{\ae}}^{(\text{fluid})}\,C_e^{2} \right) V
+\quad [\text{J}]
+\end{equation}
+
+Corresponding mass (strict SI mass):
+\begin{equation}
+M_{\text{VAM}}(V) = \frac{E_{\text{VAM}}(V)}{c^{2}}
+\quad [\text{kg}]
+\end{equation}
+
+Numerical prefactor (per unit volume):\\
+$\frac{1}{2}\rho_{\text{\ae}}^{(\text{fluid})}C_e^2 \approx 4.1877439\times10^{5}\;\text{J}\,\text{m}^{-3}$,\\
+$\frac{4}{\alpha\varphi} \approx 3.3877162\times10^{2}$.\\
+Thus, $\frac{E_{\text{VAM}}}{V} \approx 1.418688\times10^{8}\;\text{J}\,\text{m}^{-3}$,\\
+$\frac{M_{\text{VAM}}}{V} \approx 1.57850\times10^{-9}\;\text{kg}\,\text{m}^{-3}$.
+
+\textbf{Usage:} In derivations, treat the boxed forms as canonical. If a paper chooses to define mass directly via energy units, state the convention explicitly and reference this section.
+
+\subsection{Swirl Gravitational Coupling}
+
+\begin{equation}
+G_{\text{swirl}} = \frac{C_e\,c^{5}\,t_p^{2}}{2\,F_{\text{\ae}}^{\max}\,r_c^{2}}
+\quad \left( F_{\text{\ae}}^{\max}=29.053507\,\text{N} \right)
+\end{equation}
+
+Numerical evaluation: $G_{\text{swirl}} \approx 6.674302\times10^{-11}\;\text{m}^3\,\text{kg}^{-1}\,\text{s}^{-2}$.
+
+\textit{Canon note:} This fixes which $F_{\max}$ is used (the Coulomb-scale $F_{\text{\ae}}^{\max}$), ensuring exact numerical match to Newton’s $G$.
+
+\paragraph{Summary: invariant--driven, dimensionally–correct master law.}
+We replace the heuristic parameters \((m,n,s)\) in Eq.\,(21) by topological invariants of a torus knot/link \(T(p,q)\) with \(n=\gcd(p,q)\) components:
+\[
+    m \;\equiv\; b(T) \;=\; \min\{|p|,|q|\}\quad\text{(braid index)},\qquad
+    n \;\equiv\; \gcd(p,q),\qquad
+    s \;\equiv\; g(T)\quad\text{(Seifert genus)}.
+\]
+For torus \emph{knots} \((n=1)\), \(g(T)=\frac{(|p|-1)(|q|-1)}{2}\); for torus \emph{links} \((n>1)\), a standard adjustment gives
+\[
+    g(T)\;=\;\frac{(|p|-1)(|q|-1)-(n-1)}{2},
+\]
+which correctly yields \(g=0\) for the Hopf link \(T(2,2)\) \cite{Rolfsen1976Knots,Lickorish1997Knots,Murasugi1996KnotTheory}.
+
+\paragraph{Dimensional correction.}
+The mechanical energy density of swirl is \( \tfrac12 \rho_{\ae} C_e^2 \) (J\,m\(^{-3}\)), so the mass contribution is
+\(
+\big(\tfrac12 \rho_{\ae} C_e^2\big)\times \big(\sum_i V_i\big)/c^2
+\),
+not its inverse; this restores correct SI units (kg) \cite{Batchelor1967Fluid}.
+
+\paragraph{Geometric volume via ropelength.}
+Let each vortex core be a tube of radius \(r_c\). Using ropelength \(\mathcal{L}(T)\) (minimum length of a unit-thickness embedding) as a geometric invariant, the total core volume is
+\[
+    \sum_{i} V_i(T) \;=\; \pi r_c^2 \sum_i \big(\mathcal{L}_i(T)\,r_c\big)
+    \;=\; \pi r_c^3\,\mathcal{L}_{\mathrm{tot}}(T),
+\]
+with \(\mathcal{L}_{\mathrm{tot}}\) the sum across components \cite{CantarellaKusnerSullivan2002Ropelength,Rawdon2003Approximating}.
+
+\paragraph{Invariant master formula.}
+With \(\phi=\tfrac{1+\sqrt{5}}{2}\) and \(\alpha\) the fine–structure constant, the mass assigned to topology \(T\) is
+\[
+    \boxed{
+        M\big(T(p,q)\big)
+        =\left(\frac{4}{\alpha}\right)\,
+        \underbrace{b(T)^{-3/2}}_{\text{mode crowding}}\;
+        \underbrace{\phi^{-\,g(T)}}_{\text{topological tension}}\;
+        \underbrace{n(T)^{-1/\phi}}_{\text{multi\mbox{-}component decoherence}}\;
+        \left(\frac{1}{2}\rho_{\ae} C_e^2\right)\,
+        \frac{\pi r_c^3\,\mathcal{L}_{\mathrm{tot}}(T)}{c^2}.
+    }
+\]
+
+\paragraph{Canonical cases (torus family).}
+\[
+    \begin{array}{l|c|c|c|c}
+        \text{Topology} & T(p,q) & n=\gcd(p,q) & m=b(T)=\min(p,q) & g(T) \\ \hline
+        \text{Unknot (photon)} & T(1,1) & 1 & 1 & 0 \\
+        \text{Trefoil (neutrino)} & T(2,3) & 1 & 2 & 1 \\
+        \text{Hopf link (polariton/$W$-like)} & T(2,2) & 2 & 2 & 0 \\
+        \text{Solomon link }(e^-e^+) & T(4,2) & 2 & 2 & 1 \\
+    \end{array}
+\]
+
+\paragraph{Calibration \& prediction workflow.}
+(1) \emph{Anchor} a single global geometric scale by fitting \(\mathcal{L}_{\mathrm{tot}}\) (or an overall multiplicative factor) to the \(e^-e^+\) Solomon pair mass.
+(2) \emph{Predict} other cases (trefoil neutrino, Hopf polaritonic/\(W\)-like, baryonic 3–component links) \emph{without refitting}, since \((m,n,g)\) and \(\mathcal{L}_{\mathrm{tot}}\) are then fixed by topology.
+
+\paragraph{Implications.}
+This upgrade removes ad–hoc knobs (all suppressions become invariants), restores dimensional correctness, ties the volumetric factor to published geometric data (\emph{ropelength}), and yields an auditable, predictive pipeline for mass assignment across knot/link classes \cite{Rolfsen1976Knots,Lickorish1997Knots,Murasugi1996KnotTheory,CantarellaKusnerSullivan2002Ropelength,Rawdon2003Approximating,Batchelor1967Fluid}.
+
+
+\subsection{Local Time-Rate (Swirl Clock)}
+
+\begin{equation}
+    \boxed{\;
+    \frac{dt_{\text{local}}}{dt_{\infty}}
+        = \sqrt{1 - \frac{\lVert\vec{\omega}\rVert^{2}\,r_c^{2}}{c^{2}}}
+        = \sqrt{1 - \frac{v_t^{2}}{c^{2}}}\,,\qquad
+        v_t := \lVert\vec{\omega}\rVert\, r_c
+        \;}
+\end{equation}
+
+\noindent\textit{Deprecated (traceability only):}
+\begin{equation}
+    \frac{dt_{\text{local}}}{dt_{\infty}} = \sqrt{1 - \frac{\lVert\vec{\omega}\rVert^{2}}{c^{2}}}
+\end{equation}
+
+\subsection{Swirl Angular Frequency Profile}
+
+\begin{equation}
+\Omega_{\text{swirl}}(r) = \frac{C_e}{r_c} e^{-r/r_c}
+\end{equation}
+On-axis core limit: $\Omega_{\text{swirl}}(0)=\frac{C_e}{r_c}\approx 7.76344\times10^{20}\;\text{s}^{-1}$.
+
+\subsection{Vorticity Potential (Canonical Form)}
+
+\begin{equation}
+\Phi(\vec r,\vec\omega) = \frac{C_e^{2}}{2\,F_{\text{\ae}}^{\max}}\,\vec\omega\cdot\vec r
+\end{equation}
+
+\textbf{Dimensional remark:} This potential’s role is canonical within VAM; derivations using it must propagate units consistently within the VAM Lagrangian (Sec.~\ref{sec:lagrangian}).
+
+\section{Unified VAM Lagrangian (Definitive Form)}
+\label{sec:lagrangian}
+
+Let $\vec v$ be the æther velocity, $\rho=\rho_{\text{\ae}}^{(\text{fluid})}$ constant (incompressible), $\vec\omega=\nabla\times\vec v$, and $\lambda$ a Lagrange multiplier enforcing incompressibility (with $p$ reserved for physical pressure if needed).
+
+\begin{equation}
+\mathcal{L}_{\text{VAM}} =
+\underbrace{\frac{1}{2}\rho\,\lVert\vec v\rVert^{2}}_{\text{kinetic}}
+- \underbrace{\rho\,\Phi(\vec r,\vec\omega)}_{\text{swirl potential}}
++ \underbrace{\lambda(\nabla\cdot\vec v)}_{\text{incompressibility}}
++ \underbrace{\eta\,\mathcal{H}[\vec v]}_{\text{helicity/topological term}}
++ \underbrace{\mathcal{L}_{\text{couple}}[\Gamma,\mathcal{K}]}_{\text{circulation \& knot invariants}}
+\end{equation}
+
+\begin{itemize}
+    \item $\mathcal{H}[\vec v] = \int (\vec v\cdot\vec\omega)\,dV$ (kinetic helicity) serves as the generator of topological constraints (coefficient $\eta$ fixes units).
+    \item $\mathcal{L}_{\text{couple}}$ encodes coupling to quantized circulation $\Gamma$ and knot invariants $\mathcal{K}$ (linking, writhe, twist), used to produce particle families.
+    \item When deriving Euler–Lagrange equations, enforce $\nabla\cdot\vec v=0$ and appropriate boundary terms for closed filaments.
+\end{itemize}
+
+\textbf{Canon rule:} Papers must either (i) use this Lagrangian verbatim, or (ii) state a justified variant and show equivalence in the weak/appropriate limit.
+
+\section{Notation, Ontology, and Glossary}
+
+\begin{itemize}
+    \item \textbf{Æther-Time (A-time):} absolute time parameter of the æther flow.
+    \item \textbf{Chronos-Time (C-time):} asymptotic observer time ($dt_{\infty}$).
+    \item \textbf{Swirl Clock:} local clock with rate set by $\lVert\vec\omega\rVert$ per Sec.~3.3.
+    \item \textbf{Knot Taxonomy:} leptons = torus knots; quarks = chiral hyperbolic knots (chirality encodes vortex time); bosons = unknots; neutrinos = linked knots.
+    \item \textbf{Chirality (matter vs antimatter):} ccw $\leftrightarrow$ matter; cw $\leftrightarrow$ antimatter via swirl-gravity coupling.
+\end{itemize}
+
+\section{Canonical Checks (What to Verify in Every Paper)}
+
+\begin{enumerate}
+    \item Dimensional analysis on every new term/equation.
+    \item Limiting behavior: low-swirl $\lVert\omega\rVert\to 0$ recovers classical mechanics/EM limits; large-scale averages reproduce Newtonian gravity with $G_{\text{swirl}}$.
+    \item Numerical validation: provide numerical prefactors using Canon constants; if additional constants appear, they must be added to Sec.~2.
+    \item Topology $\leftrightarrow$ quantum numbers mapping stated explicitly (which invariants, how normalized).
+    \item Citations for any non-original constructs (use BibTeX keys below).
+\end{enumerate}
+
+\section{Persona Prompts}
+
+\subsection*{Reviewer Persona}
+\begin{verbatim}
+You are a peer reviewer for a VAM paper. Use only the definitions and constants in the "VAM Canon (v0.1)". Check dimensional consistency, limiting behavior, and numerical validation. Flag any use of non-canonical constants or equations unless equivalence is proved. Demand explicit mapping from knot invariants (linking, writhe, twist) to claimed quantum numbers.
+\end{verbatim}
+
+\subsection*{Theorist Persona}
+\begin{verbatim}
+You are a theoretical physicist specialized in the Vortex Æther Model (VAM). Base all reasoning on the attached "VAM Canon (v0.1)". Your task: derive the swirl-based Hamiltonian for [TARGET SYSTEM], use Sec. 4 Lagrangian, and verify the time-rate law (Sec. 3.3). Provide boxed equations, dimensional checks, and a short numerical evaluation using the Canon constants.
+\end{verbatim}
+
+\subsection*{Bridging Persona (Compare to GR/SM)}
+\begin{verbatim}
+Work strictly within VAM Canon (v0.1). Compare [TARGET] to its GR/SM counterpart. Identify exact replacements (e.g., curvature → swirl), and show which terms reduce to Newtonian/Maxwellian limits. Include a table of correspondences and any constraints needed for equivalence.
+\end{verbatim}
+
+\section{Session Kickoff Checklist}
+
+\begin{enumerate}
+    \item Start new chat per task; attach this Canon first.
+    \item Paste a persona prompt (Sec.~7).
+    \item Attach only task-relevant papers/sources.
+    \item State any corrections explicitly (they persist in the session).
+    \item At end, record Canon deltas (if any) and bump version.
+\end{enumerate}
+
+\section{Canon-Ready Citations (Skeleton)}
+
+Replace placeholders with your BibTeX keys; ensure each non-original equation/idea cites at least one primary source.
+
+\begin{verbatim}
+@article{Helmholtz1858,
+  author  = {H. von Helmholtz},
+  title   = {On Integrals of the Hydrodynamical Equations which Express Vortex-motion},
+  journal = {Philosophical Magazine},
+  year    = {1858}
+}
+
+@article{Kelvin1867,
+  author  = {W. Thomson (Lord Kelvin)},
+  title   = {On Vortex Atoms},
+  journal = {Proc. Royal Society of Edinburgh},
+  year    = {1867}
+}
+
+@article{Moffatt1969,
+  author  = {H. K. Moffatt},
+  title   = {The degree of knottedness of tangled vortex lines},
+  journal = {Journal of Fluid Mechanics},
+  year    = {1969}
+}
+
+@article{Schrodinger1926,
+  author  = {E. Schr{\"o}dinger},
+  title   = {An Undulatory Theory of the Mechanics of Atoms and Molecules},
+  journal = {Physical Review},
+  year    = {1926}
+}
+\end{verbatim}
+
+\section*{10) Appendix: Canon Tables for Papers}
+
+
+\subsection*{10.2 Boxed Canon Equations (paste-ready)}
+
+\begin{enumerate}
+    \item \textbf{Energy:} \fbox{$E_{\text{VAM}} = \dfrac{4}{\alpha\varphi}\left(\dfrac{1}{2}\rho C_e^2\right)V$}
+    \item \textbf{Mass:} \fbox{$M_{\text{VAM}} = \dfrac{E_{\text{VAM}}}{c^2}$}
+    \item \textbf{$G$ coupling:} \fbox{$G_{\text{swirl}} = \dfrac{C_e c^5 t_p^2}{2F_{\text{\ae}}^{\max} r_c^2}$}
+    \item \textbf{Time-rate (canonical):} \fbox{$\displaystyle \frac{dt_{\text{local}}}{dt_{\infty}} = \sqrt{1-\lVert\omega\rVert^2 r_c^2/c^2} = \sqrt{1-\!v_t^2/c^2},\; v_t:=\lVert\omega\rVert r_c$}
+    \item \textbf{Swirl profile:} \fbox{$\Omega_{\text{swirl}}(r) = \dfrac{C_e}{r_c}e^{-r/r_c}$}
+\end{enumerate}
+
+\section*{11) Change Log}
+
+\begin{itemize}
+    \item \textbf{v0.1 (2025-08-22):} Initial Canon with core postulates, constants, boxed master equations, Lagrangian, persona prompts, and session protocol; numerical prefactors added for Sec.~3.
+\end{itemize}
+
+\section*{12) v0.2 Delta --- Corrections \& Additions (2025-08-22)}
+
+\subsection*{12.1 Dimensional correction to Sec.~3.3 (time-rate law)}
+
+To enforce strict dimensional consistency, the time-rate must couple vorticity to a length scale (canonical choice: the core radius $r_c$) or, equivalently, to the local tangential speed $v_t = |\omega| \cdot r$:
+
+\begin{itemize}
+    \item Canonical (evaluate at $r = r_c$):\\
+    $dt_{\text{local}} = dt_{\infty} \sqrt{1 - (|\omega|^2 r_c^2)/c^2}$\\
+    equivalently $dt_{\text{local}} = dt_{\infty} \sqrt{1 - v_t^2/c^2}$ with $v_t := |\omega| r_c$.
+    \item Using the profile $\Omega_{\text{swirl}}(r) = (C_e/r_c) \exp(-r/r_c)$ (Sec.~3.4), on-axis core limit gives $\Omega_{\text{swirl}}(0) = C_e/r_c$ and thus $dt_{\text{local}}(0) = dt_{\infty} \sqrt{1 - (C_e/c)^2}$.
+\end{itemize}
+
+\textit{Supersedes Sec.~3.3 formula (which lacked a length scale). Use this corrected form in all new derivations; the earlier expression is retained for traceability only.}
+
+\subsection*{12.2 Canon tolerances \& symbol aliases}
+
+\textbf{Numerical tolerances (for constant concordance):}
+\begin{itemize}
+    \item Relative: $\leq 1\times 10^{-6}$ (1 ppm).
+    \item Absolute near zero: $\leq 1\times 10^{-12}$ in SI units.
+\end{itemize}
+
+\textbf{Accepted symbol aliases (normalize to the left-hand form):}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Canon} & \textbf{Accepted aliases} \\
+\hline
+Ce & Ce, C\_e \\
+rc & rc, r\_c \\
+rho\_ae$^{(\text{fluid})}$ & rho\_ae (fluid), rho\_vac, rho\_fluid \\
+rho\_ae$^{(\text{mass})}$ & rho\_ae (mass), rho\_core, rho\_mass \\
+rho\_ae$^{(\text{energy})}$ & rho\_energy, u\_ae (J m$^{-3}$) \\
+F\_ae$^{\max}$ & Fae\_max \\
+F\_gr$^{\max}$ & Fgr\_max \\
+varphi & phi, varphi \\
+\hline
+\end{tabular}
+\caption{Accepted symbol aliases for Canon constants.}
+\end{table}
+
+\textit{Rule: manuscripts must present a single normalized constants table conforming to Sec.~10.1; aliases may appear in prose but equations must use Canon symbols.}
+
+\subsection*{12.3 Validation protocol updates}
+
+\begin{enumerate}
+    \item Dimensional sanity (strict): every term reduces to SI; for Sec.~4 ensure $\rho \Phi$ carries energy density (J\,m$^{-3}$). If an intermediate potential uses non-standard units, introduce a calibration coefficient and state its units.
+    \item Equation normalization: when swirl/time enters, first reduce by $v_t = |\omega| r$ with $r = r_c$ unless a different physically motivated scale is justified.
+    \item Numerical reproduction: provide a short table with substituted Canon constants and results (3--5 s.f.).
+    \item BibTeX policy: any non-original idea/equation/comparison must include a BibTeX entry (add to Sec.~9).
+\end{enumerate}
+
+\subsection*{12.4 Concept index (snapshot from VAM-rank-1 corpus)}
+
+Frequency across the six PDFs analyzed:
+
+\begin{enumerate}
+    \item vortex-knot particles (1839)
+    \item time dilation / swirl clock (1062)
+    \item swirl gravity (964)
+    \item æther densities (860)
+    \item leptons as torus knots (660)
+    \item quarks as hyperbolic knots (647)
+    \item photon as vortex ring (306)
+    \item unified Lagrangian (70)
+    \item Hamiltonian (25)
+    \item Rodin/coil dynamics (1)
+\end{enumerate}
+
+\subsection*{12.5 Simulator I/O stub (render-ready)}
+
+\begin{verbatim}
+{
+  "SceneSpec": {
+    "background": {"rho_fluid": 7.0e-7, "Ce": 1.09384563e6, "rc": 1.40897017e-15},
+    "fields": [ {"type": "swirl", "Omega_profile": "Ce/rc * exp(-r/rc)"} ],
+    "objects": [
+      { "type": "VortexKnot", "knot": "T(2,3)", "circulation": "Gamma0",
+        "core_radius": "rc", "constraints": ["incompressible", "quantized_circulation"] }
+    ]
+  }
+}
+\end{verbatim}
+
+\subsection*{12.6 Change Log entry}
+
+\begin{itemize}
+    \item v0.2 (2025-08-22): Added dimensionally corrected time-rate law using $r_c$ (Sec.~12.1), established tolerances and symbol aliasing (Sec.~12.2), tightened validation protocol (Sec.~12.3), recorded a concept index snapshot from the current corpus (Sec.~12.4), and included a render-ready SceneSpec stub for simulators (Sec.~12.5).
+\end{itemize}
+
+
+%===========================================================
+\section{Canonical Extensions (v0.3 Additions)}
+%===========================================================
+
+\subsection{Swirl Coulomb Constant $\Lambda$ and Hydrogen Soft-Core (Canonical)}
+\label{subsec:canon-lambda}
+\begin{definition}[Swirl Coulomb Constant]
+    \[
+        \boxed{\, \Lambda \;\equiv\; \int_{S_r^2} p_{\text{swirl}}\, r^2\, d\Omega
+        \;=\; 4\pi\,\rho_{\text{\ae}}^{(\text{mass})}\,C_e^2\,r_c^4
+        \;=\; \frac{e^2}{4\pi\varepsilon_0} \,}
+        \qquad [\Lambda]=\mathrm{J\cdot m}=\mathrm{N\,m^2}.
+    \]
+\end{definition}
+\noindent\textit{Dimensional check: }
+$[\rho^{(\text{mass})} C_e^2 r_c^4]=\mathrm{kg\,m^3\,s^{-2}}=\mathrm{J\,m}$ (OK).
+
+\begin{theorem}[Hydrogen Soft-Core \& Coulomb Recovery]
+    \[
+        \boxed{\, V_{\text{VAM}}(r) = -\frac{\Lambda}{\sqrt{r^2+r_c^2}}
+        \;\xrightarrow{\,r\gg r_c\,}\; -\frac{\Lambda}{r} \,}
+    \]
+    In the Schr\"odinger equation, this yields
+    $a_0=\hbar^2/(\mu\Lambda)$ and $E_n=-\mu\Lambda^2/(2\hbar^2 n^2)$,
+    recovering textbook hydrogen with $e^2/(4\pi\varepsilon_0)\to\Lambda$.
+    \cite{Schrodinger1926,Jackson1999}
+\end{theorem}
+
+\subsection{Circulation–Metric Corollary (Frame-Dragging Analogue, Canonical)}
+\label{subsec:canon-metric-circulation}
+In cylindrical $(t,r,\theta,z)$ with azimuthal drift $v_\theta(r)$, the PG-type analogue metric implies
+\[
+    \boxed{\, g^{(\mathrm{VAM})}_{t\theta} \;=\; r\,v_\theta(r) \;=\; \frac{1}{2\pi}\,\Gamma_{\text{swirl}}(r),\qquad
+    \Gamma_{\text{swirl}}(r):=\oint v_\theta\,dl \,}
+\]
+linking the mixed metric term to Kelvin circulation. \cite{Painleve1921,Gullstrand1922,Unruh1981,Visser1998,Kerr1963}
+
+\subsection{Corrected Time-Rate Law (Canonical Consolidation)}
+\label{subsec:canon-time-rate}
+The operative swirl-clock law is
+\[
+    \boxed{\, \frac{dt_{\text{local}}}{dt_\infty} \;=\; \sqrt{\,1-\frac{|\omega|^2 r_c^2}{c^2}\,}
+    \;=\; \sqrt{\,1-\frac{v_t^2}{c^2}\,},\qquad v_t:=|\omega|\,r_c \,}
+\]
+and the non-normalized historical variant is deprecated (retained for traceability only).
+
+\subsection{Swirl Hamiltonian Density (Canonical)}
+\label{subsec:canon-hamiltonian}
+\[
+    \boxed{\, \mathcal{H}[\vec v] \;=\; \tfrac12\,\rho_{\text{\ae}}^{(\text{fluid})}\,\|\vec v\|^2
+    \;+\; \tfrac12\,\rho_{\text{\ae}}^{(\text{fluid})}\,r_c^2\,\|\vec\omega\|^2
+    \;+\; \lambda(\nabla\!\cdot\!\vec v) \,}
+\]
+On-axis with $\omega=\Omega_{\text{swirl}}(0)=C_e/r_c$, the vorticity term reduces to
+$\tfrac12\,\rho_{\text{\ae}}^{(\text{fluid})}\,C_e^2$, matching the bulk swirl energy density. \cite{Batchelor1967,LandauLifshitz1987}
+
+\subsection{Swirl Pressure Law (Euler Corollary, Canonical)}
+\label{subsec:canon-darkpressure}
+For steady, purely azimuthal drift $v(r)$ and no radial flow, radial Euler balance yields
+\[
+    \boxed{\, \frac{1}{\rho_{\text{\ae}}^{(\text{fluid})}}\,\frac{dp_{\text{swirl}}}{dr} \;=\; \frac{v(r)^2}{r} \,}
+\]
+and for an asymptotically flat curve $v(r)\to v_0$,
+\[
+    p_{\text{swirl}}(r) = p_0 + \rho_{\text{\ae}}^{(\text{fluid})} v_0^2 \ln\!\frac{r}{r_0}\,.
+\]
+This identity-level result follows directly from Euler’s equation (no empirical fit). \cite{Batchelor1967,LandauLifshitz1987}
+
+
+\appendix
+
+\section{Canonical Topological and Field-Theoretic Foundations}
+\label{sec:topofields}
+
+This section records standard, external canonical results from knot theory, topology, and field theory. They are not specific to VAM but provide the rigorous mathematical invariants on which the VAM particle–knot mapping builds.
+
+\subsection{Link, Twist, and Writhe (Călugăreanu--White--Fuller)}
+For a closed framed ribbon with centerline \(C\subset\mathbb{R}^3\) and unit tangent \(\mathbf t(s)\), choose a smooth unit framing \(\mathbf u(s)\perp \mathbf t(s)\).
+The \emph{linking number} \(Lk\) between the ribbon edges decomposes as
+\begin{equation}
+    Lk = Tw + Wr, \label{eq:CWF}
+\end{equation}
+where the \emph{twist} and \emph{writhe} are
+\begin{equation}
+    Tw = \frac{1}{2\pi}\int_C (\mathbf u \times \partial_s \mathbf u)\cdot \mathbf t \, ds, \qquad
+    Wr = \frac{1}{4\pi}\int_C\!\!\int_C
+    \frac{(\mathbf r(s)-\mathbf r(s'))\cdot\big(\mathbf t(s)\times \mathbf t(s')\big)}
+    {\lVert \mathbf r(s)-\mathbf r(s')\rVert^3}\, ds\,ds'. \label{eq:TwWrDefs}
+\end{equation}
+Equation~\eqref{eq:CWF} and the definitions \eqref{eq:TwWrDefs} are standard and originate from the works of Călugăreanu, White, and Fuller \cite{Calugareanu1959,White1969,Fuller1971}.
+
+\subsection{Gauss Linking Integral}
+For two disjoint, closed, oriented curves \(C_1,C_2\), their \emph{Gauss linking number} is
+\begin{equation}
+    Lk(C_1,C_2) = \frac{1}{4\pi}\oint_{C_1}\!\!\oint_{C_2}
+    \frac{(\mathbf r_1-\mathbf r_2)\cdot(d\mathbf r_1\times d\mathbf r_2)}
+    {\lVert \mathbf r_1-\mathbf r_2\rVert^3},
+    \label{eq:GaussLk}
+\end{equation}
+a homotopy invariant going back to Gauss and widely used in fluid and plasma topology.
+
+\subsection{Helicity in Ideal Fluids}
+Let \(\mathbf v\) be a smooth velocity field and \(\boldsymbol\omega=\nabla\times \mathbf v\) its vorticity. The \emph{helicity}
+\begin{equation}
+    \mathcal H = \int_{\mathbb{R}^3} \mathbf v\cdot \boldsymbol\omega \; d^3x
+    \label{eq:helicity}
+\end{equation}
+is conserved for inviscid, barotropic flows with suitable boundary conditions. For a collection of thin vortex tubes with fluxes \(\{\Phi_i\}\) and centerlines \(\{C_i\}\),
+\begin{equation}
+    \mathcal H
+    = \sum_{i} \Phi_i^2\big(Tw_i + Wr_i\big)
+    + 2\sum_{i<j} \Phi_i\Phi_j\, Lk(C_i,C_j),
+    \label{eq:thinTubeHelicity}
+\end{equation}
+so that a single slender tube satisfies \(\mathcal H = \Phi^2(Tw+Wr)\) \cite{MoffattRicca1992}.
+
+\subsection{Hopf Invariant}
+For a smooth map \(\mathbf n: S^3\to S^2\) (or \(\mathbf n:\mathbb{R}^3\cup\{\infty\}\to S^2\) via compactification), pull back the area form \(\Omega\) to \(F=\mathbf n^*\Omega\). When \(F=d\mathbf A\) globally, the \emph{Hopf invariant} is
+\begin{equation}
+    H = \frac{1}{(4\pi)^2}\int_{\mathbb{R}^3} \mathbf A\cdot(\nabla\times \mathbf A)\, d^3x,
+    \label{eq:HopfInvariant}
+\end{equation}
+an integer that counts the linking of preimages of points in \(S^2\) \cite{Hopf1931,Whitehead1947}. In physics this functional appears in models of knotted fields and hopfions.
+
+\subsection{Micromagnetic Energy Functional}
+In continuum micromagnetics, with unit magnetization \(\mathbf m(\mathbf x)\), a standard energy functional is
+\begin{equation}
+    E[\mathbf m] = \int_V \Big(
+    A\,\lvert\nabla \mathbf m\rvert^2
+    + D\, \mathbf m\cdot(\nabla\times \mathbf m)
+    - \mu_0\,\mathbf M\cdot \mathbf H_{\rm ext}
+    + \frac{\mu_0}{2}\,\lvert \mathbf H_d\rvert^2
+    + E_{\rm anis}(\mathbf m)
+    \Big)\, dV,
+    \label{eq:micromagnetics}
+\end{equation}
+where \(A\) is the exchange stiffness, \(D\) the Dzyaloshinskii--Moriya coupling, \(\mathbf H_{\rm ext}\) an external field, \(\mathbf H_d\) the demagnetizing field, and \(E_{\rm anis}\) a crystalline anisotropy term \cite{Dzyaloshinskii1958,Moriya1960,Aharoni1996}. These terms are canonical in the theory of chiral magnets and skyrmions/hopfions.
+
+\subsection{Basic Torus-Knot Invariants}
+For the torus knot/link \(T(p,q)\) on a standard torus:
+\begin{equation}
+    \#\text{components} = \gcd(p,q), \qquad
+    g\big(T(p,q)\big) = \frac{(|p|-1)(|q|-1)}{2}\quad\text{when }\gcd(p,q)=1,
+    \label{eq:torusInvariants}
+\end{equation}
+where \(g\) is the Seifert genus; these are classical results in knot theory.
+
+\begin{thebibliography}{99}
+
+    \bibitem{Calugareanu1959}
+    G.~C\u{a}lug\u{a}reanu,
+    \newblock L'int\'egral de Gauss et l'analyse des noeuds tridimensionnels,
+    \newblock \emph{Rev. Math. Pures Appl.} \textbf{4} (1959).
+
+    \bibitem{White1969}
+    J.~H. White,
+    \newblock Self-linking and the {G}auss integral in higher dimensions,
+    \newblock \emph{Am. J. Math.} \textbf{91} (1969).
+
+    \bibitem{Fuller1971}
+    F.~B. Fuller,
+    \newblock The writhing number of a space curve,
+    \newblock \emph{Proc. Natl. Acad. Sci. USA} \textbf{68}, 815--819 (1971).
+
+    \bibitem{MoffattRicca1992}
+    H.~K. Moffatt and R.~L. Ricca,
+    \newblock Helicity and the C\u{a}lug\u{a}reanu invariant,
+    \newblock \emph{Proc. R. Soc. Lond. A} \textbf{439}, 411--429 (1992).
+
+    \bibitem{Hopf1931}
+    H.~Hopf,
+    \newblock \"Uber die {A}bbildungen der dreidimensionalen {S}ph\"are auf die {K}ugelfl\"ache,
+    \newblock \emph{Math. Ann.} \textbf{104}, 637--665 (1931).
+
+    \bibitem{Whitehead1947}
+    J.~H.~C. Whitehead,
+    \newblock An expression of {H}opf's invariant as an integral,
+    \newblock \emph{Proc. Natl. Acad. Sci. USA} \textbf{33}, 117--123 (1947).
+
+    \bibitem{Dzyaloshinskii1958}
+    I.~E. Dzyaloshinskii,
+    \newblock A thermodynamic theory of ``weak'' ferromagnetism of antiferromagnetics,
+    \newblock \emph{J. Phys. Chem. Solids} \textbf{4}, 241--255 (1958).
+
+    \bibitem{Moriya1960}
+    T.~Moriya,
+    \newblock Anisotropic superexchange interaction and weak ferromagnetism,
+    \newblock \emph{Phys. Rev.} \textbf{120}, 91--98 (1960).
+
+    \bibitem{Aharoni1996}
+    A.~Aharoni,
+    \newblock \emph{Introduction to the Theory of Ferromagnetism},
+    \newblock Oxford Univ. Press (1996).
+
+\end{thebibliography}
+
+
+    \end{document}
