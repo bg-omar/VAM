@@ -3,6 +3,7 @@
 
 % Preamble
 \documentclass[11pt, a4paper]{article}
+\usepackage{bm}
 \input{../vamstyle.sty}
 % Packages
 
@@ -210,21 +211,7 @@ All symbols are dimensionally consistent and, unless stated otherwise, SI.
     \]
     Soft-core Coulomb recovery: \(V_{\text{VAM}}(r)\to -\Lambda/r\) as \(r/r_c\to\infty\), reproducing hydrogenic \(a_0\) and \(E_n\). \cite{Schrodinger1926,Jackson1999}
 
-% --- BibTeX (for non-original ideas used above) ---
-    \begin{filecontents*}{vam-canonical.bib}
-        @article{Helmholtz1858, author={H. von Helmholtz}, title={On Integrals of the Hydrodynamical Equations which Express Vortex-motion}, journal={Philosophical Magazine}, year={1858}}
-        @article{Kelvin1869, author={W. Thomson (Lord Kelvin)}, title={On Vortex Motion}, journal={Trans. Roy. Soc. Edinburgh}, year={1869}}
-        @article{Moffatt1969, author={H. K. Moffatt}, title={The degree of knottedness of tangled vortex lines}, journal={J. Fluid Mech.}, year={1969}}
-        @book{Batchelor1967, author={G. K. Batchelor}, title={An Introduction to Fluid Dynamics}, publisher={Cambridge Univ. Press}, year={1967}}
-        @book{LandauLifshitz1987, author={L. D. Landau and E. M. Lifshitz}, title={Fluid Mechanics (2nd ed.)}, publisher={Pergamon}, year={1987}}
-        @article{Unruh1981, author={W. G. Unruh}, title={Experimental black-hole evaporation?}, journal={Phys. Rev. Lett.}, year={1981}, doi={10.1103/PhysRevLett.46.1351}}
-        @article{Visser1998, author={M. Visser}, title={Acoustic black holes: horizons, ergospheres and Hawking radiation}, journal={Class. Quantum Grav.}, year={1998}, doi={10.1088/0264-9381/15/6/024}}
-        @article{Painleve1921, author={P. Painlev{\'e}}, title={La m{\'e}canique classique et la th{\'e}orie de la relativit{\'e}}, journal={C. R. Acad. Sci. Paris}, year={1921}}
-        @article{Gullstrand1922, author={A. Gullstrand}, title={Allgemeine L{\"o}sung des statischen Eink{\"o}rperproblems in der Einsteinschen Gravitationstheorie}, journal={Ark. Mat. Astron. Fys.}, year={1922}}
-        @article{Schrodinger1926, author={E. Schr{\"o}dinger}, title={An Undulatory Theory of the Mechanics of Atoms and Molecules}, journal={Phys. Rev.}, year={1926}, doi={10.1103/PhysRev.28.1049}}
-        @book{Jackson1999, author={J. D. Jackson}, title={Classical Electrodynamics (3rd ed.)}, publisher={Wiley}, year={1999}}
-    \end{filecontents*}
-    \bibliographystyle{unsrt}
+
 
 
 %========================================
@@ -350,63 +337,6 @@ This fixes the coarse–graining scale that ties micro–constants \((\rho_{\tex
 \paragraph{Remarks.}
 (i) The profile factor \(\kappa_\Gamma\) encodes core details; keeping \(\kappa_\Gamma\) explicit simply rescales \(\Omega_\ast\) by \(\mathcal{O}(1)\). (ii) No equation of state is invoked; incompressibility and filament measures suffice. (iii) The analogy to superfluid vortex arrays and EM line–to–bulk conversions is purely structural~\cite{Feynman1955,Donnelly1991,Jackson1999,Saffman1992}.
 
-% --- BibTeX block for non-original results referenced above ---
-\begin{filecontents*}{vam_canon_refs.bib}
-    @article{Helmholtz1858,
-    author  = {H. von Helmholtz},
-    title   = {\"Uber Integrale der hydrodynamischen Gleichungen, welche den Wirbelbewegungen entsprechen},
-    journal = {Journal f{\"u}r die reine und angewandte Mathematik},
-    year    = {1858},
-    volume  = {55},
-    pages   = {25--55}
-    }
-    @article{Kelvin1869,
-    author  = {W. Thomson (Lord Kelvin)},
-    title   = {On vortex motion},
-    journal = {Transactions of the Royal Society of Edinburgh},
-    year    = {1869},
-    volume  = {25},
-    pages   = {217--260}
-    }
-    @book{Saffman1992,
-    author    = {Philip G. Saffman},
-    title     = {Vortex Dynamics},
-    publisher = {Cambridge University Press},
-    year      = {1992},
-    doi       = {10.1017/CBO9780511624063}
-    }
-    @incollection{Feynman1955,
-    author    = {R. P. Feynman},
-    title     = {Application of Quantum Mechanics to Liquid Helium},
-    booktitle = {Progress in Low Temperature Physics},
-    editor    = {C. J. Gorter},
-    volume    = {1},
-    pages     = {17--53},
-    publisher = {North-Holland},
-    year      = {1955}
-    }
-    @book{Donnelly1991,
-    author    = {Russell J. Donnelly},
-    title     = {Quantized Vortices in Helium II},
-    publisher = {Cambridge University Press},
-    year      = {1991}
-    }
-    @book{LandauLifshitzFM,
-    author    = {L. D. Landau and E. M. Lifshitz},
-    title     = {Fluid Mechanics},
-    series    = {Course of Theoretical Physics, Vol. 6},
-    edition   = {2nd},
-    publisher = {Pergamon},
-    year      = {1987}
-    }
-    @book{Jackson1999,
-    author    = {John David Jackson},
-    title     = {Classical Electrodynamics},
-    edition   = {3rd},
-    publisher = {Wiley},
-    year      = {1999}
-    }
-\end{filecontents*}
 
 
 \section{Master Equations (Boxed, Definitive)}
@@ -605,44 +535,11 @@ Work strictly within VAM Canon (v0.1). Compare [TARGET] to its GR/SM counterpart
     \item At end, record Canon deltas (if any) and bump version.
 \end{enumerate}
 
-\section{Canon-Ready Citations (Skeleton)}
 
-Replace placeholders with your BibTeX keys; ensure each non-original equation/idea cites at least one primary source.
-
-\begin{verbatim}
-@article{Helmholtz1858,
-  author  = {H. von Helmholtz},
-  title   = {On Integrals of the Hydrodynamical Equations which Express Vortex-motion},
-  journal = {Philosophical Magazine},
-  year    = {1858}
-}
-
-@article{Kelvin1867,
-  author  = {W. Thomson (Lord Kelvin)},
-  title   = {On Vortex Atoms},
-  journal = {Proc. Royal Society of Edinburgh},
-  year    = {1867}
-}
-
-@article{Moffatt1969,
-  author  = {H. K. Moffatt},
-  title   = {The degree of knottedness of tangled vortex lines},
-  journal = {Journal of Fluid Mechanics},
-  year    = {1969}
-}
-
-@article{Schrodinger1926,
-  author  = {E. Schr{\"o}dinger},
-  title   = {An Undulatory Theory of the Mechanics of Atoms and Molecules},
-  journal = {Physical Review},
-  year    = {1926}
-}
-\end{verbatim}
-
-\section*{10) Appendix: Canon Tables for Papers}
+\section{Appendix: Canon Tables for Papers}
 
 
-\subsection*{10.2 Boxed Canon Equations (paste-ready)}
+\subsection*{Boxed Canon Equations (paste-ready)}
 
 \begin{enumerate}
     \item \textbf{Energy:} \fbox{$E_{\text{VAM}} = \dfrac{4}{\alpha\varphi}\left(\dfrac{1}{2}\rho C_e^2\right)V$}
@@ -652,15 +549,15 @@ Replace placeholders with your BibTeX keys; ensure each non-original equation/id
     \item \textbf{Swirl profile:} \fbox{$\Omega_{\text{swirl}}(r) = \dfrac{C_e}{r_c}e^{-r/r_c}$}
 \end{enumerate}
 
-\section*{11) Change Log}
+\section{ Change Log}
 
 \begin{itemize}
     \item \textbf{v0.1 (2025-08-22):} Initial Canon with core postulates, constants, boxed master equations, Lagrangian, persona prompts, and session protocol; numerical prefactors added for Sec.~3.
 \end{itemize}
 
-\section*{12) v0.2 Delta --- Corrections \& Additions (2025-08-22)}
+\section{v0.2 Delta --- Corrections \& Additions (2025-08-22)}
 
-\subsection*{12.1 Dimensional correction to Sec.~3.3 (time-rate law)}
+\subsection*{ Dimensional correction to Sec.~3.3 (time-rate law)}
 
 To enforce strict dimensional consistency, the time-rate must couple vorticity to a length scale (canonical choice: the core radius $r_c$) or, equivalently, to the local tangential speed $v_t = |\omega| \cdot r$:
 
@@ -673,7 +570,7 @@ To enforce strict dimensional consistency, the time-rate must couple vorticity t
 
 \textit{Supersedes Sec.~3.3 formula (which lacked a length scale). Use this corrected form in all new derivations; the earlier expression is retained for traceability only.}
 
-\subsection*{12.2 Canon tolerances \& symbol aliases}
+\subsection*{ Canon tolerances \& symbol aliases}
 
 \textbf{Numerical tolerances (for constant concordance):}
 \begin{itemize}
@@ -704,7 +601,7 @@ varphi & phi, varphi \\
 
 \textit{Rule: manuscripts must present a single normalized constants table conforming to Sec.~10.1; aliases may appear in prose but equations must use Canon symbols.}
 
-\subsection*{12.3 Validation protocol updates}
+\subsection*{ Validation protocol updates}
 
 \begin{enumerate}
     \item Dimensional sanity (strict): every term reduces to SI; for Sec.~4 ensure $\rho \Phi$ carries energy density (J\,m$^{-3}$). If an intermediate potential uses non-standard units, introduce a calibration coefficient and state its units.
@@ -713,7 +610,7 @@ varphi & phi, varphi \\
     \item BibTeX policy: any non-original idea/equation/comparison must include a BibTeX entry (add to Sec.~9).
 \end{enumerate}
 
-\subsection*{12.4 Concept index (snapshot from VAM-rank-1 corpus)}
+\subsection*{Concept index (snapshot from VAM-rank-1 corpus)}
 
 Frequency across the six PDFs analyzed:
 
@@ -730,7 +627,7 @@ Frequency across the six PDFs analyzed:
     \item Rodin/coil dynamics (1)
 \end{enumerate}
 
-\subsection*{12.5 Simulator I/O stub (render-ready)}
+\subsection*{ Simulator I/O stub (render-ready)}
 
 \begin{verbatim}
 {
@@ -745,7 +642,7 @@ Frequency across the six PDFs analyzed:
 }
 \end{verbatim}
 
-\subsection*{12.6 Change Log entry}
+\subsection*{ Change Log entry}
 
 \begin{itemize}
     \item v0.2 (2025-08-22): Added dimensionally corrected time-rate law using $r_c$ (Sec.~12.1), established tolerances and symbol aliasing (Sec.~12.2), tightened validation protocol (Sec.~12.3), recorded a concept index snapshot from the current corpus (Sec.~12.4), and included a render-ready SceneSpec stub for simulators (Sec.~12.5).
@@ -899,54 +796,9 @@ For the torus knot/link \(T(p,q)\) on a standard torus:
 \end{equation}
 where \(g\) is the Seifert genus; these are classical results in knot theory.
 
-\begin{thebibliography}{99}
 
-    \bibitem{Calugareanu1959}
-    G.~C\u{a}lug\u{a}reanu,
-    \newblock L'int\'egral de Gauss et l'analyse des noeuds tridimensionnels,
-    \newblock \emph{Rev. Math. Pures Appl.} \textbf{4} (1959).
-
-    \bibitem{White1969}
-    J.~H. White,
-    \newblock Self-linking and the {G}auss integral in higher dimensions,
-    \newblock \emph{Am. J. Math.} \textbf{91} (1969).
-
-    \bibitem{Fuller1971}
-    F.~B. Fuller,
-    \newblock The writhing number of a space curve,
-    \newblock \emph{Proc. Natl. Acad. Sci. USA} \textbf{68}, 815--819 (1971).
-
-    \bibitem{MoffattRicca1992}
-    H.~K. Moffatt and R.~L. Ricca,
-    \newblock Helicity and the C\u{a}lug\u{a}reanu invariant,
-    \newblock \emph{Proc. R. Soc. Lond. A} \textbf{439}, 411--429 (1992).
-
-    \bibitem{Hopf1931}
-    H.~Hopf,
-    \newblock \"Uber die {A}bbildungen der dreidimensionalen {S}ph\"are auf die {K}ugelfl\"ache,
-    \newblock \emph{Math. Ann.} \textbf{104}, 637--665 (1931).
-
-    \bibitem{Whitehead1947}
-    J.~H.~C. Whitehead,
-    \newblock An expression of {H}opf's invariant as an integral,
-    \newblock \emph{Proc. Natl. Acad. Sci. USA} \textbf{33}, 117--123 (1947).
-
-    \bibitem{Dzyaloshinskii1958}
-    I.~E. Dzyaloshinskii,
-    \newblock A thermodynamic theory of ``weak'' ferromagnetism of antiferromagnetics,
-    \newblock \emph{J. Phys. Chem. Solids} \textbf{4}, 241--255 (1958).
-
-    \bibitem{Moriya1960}
-    T.~Moriya,
-    \newblock Anisotropic superexchange interaction and weak ferromagnetism,
-    \newblock \emph{Phys. Rev.} \textbf{120}, 91--98 (1960).
-
-    \bibitem{Aharoni1996}
-    A.~Aharoni,
-    \newblock \emph{Introduction to the Theory of Ferromagnetism},
-    \newblock Oxford Univ. Press (1996).
-
-\end{thebibliography}
-
+\nocite{*}
+\bibliographystyle{unsrt}
+\bibliography{vam_canon_refs}
 
     \end{document}

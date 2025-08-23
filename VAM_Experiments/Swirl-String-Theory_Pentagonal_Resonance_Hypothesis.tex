@@ -1,0 +1,117 @@
+%========================================
+% Pentagonal Resonance Hypothesis (SST • Research Track)
+%========================================
+\section*{Appendix F: Pentagonal Resonance Hypothesis (SST • Research Track)}
+\addcontentsline{toc}{section}{Appendix F: Pentagonal Resonance Hypothesis (SST • Research Track)}
+\label{sec:pentagonal-resonance}
+
+% --- safe macros (only define if absent) ---
+\providecommand{\swirlarrow}{\!\!\scriptsize\boldsymbol{\circlearrowleft}}
+\providecommand{\vswirl}{\mathbf{v}_{\swirlarrow}}
+\providecommand{\xig}{\operatorname{asinh}\!\left(\tfrac{1}{2}\right)}  % golden hyperbolic base, so e^{\xig}=\varphi
+\providecommand{\phig}{\exp(\xig)}                                      % equals \varphi numerically
+\providecommand{\xigold}{\tfrac{3}{2}\,\xig}                            % golden rapidity
+\providecommand{\Ce}{C_e}                                               % swirl-speed scale (Appendix B)
+\providecommand{\rc}{r_c}                                               % core radius (Appendix B)
+
+% --- theorem-like environments (requires amsthm in preamble) ---
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{law}{Law}
+\newtheorem{definition}{Definition}
+\newtheorem{corollary}{Corollary}
+
+\begin{hypothesis}[Pentagonal Resonance]
+    A photon is absorbed by an electron when the photon's \emph{transient pentagonal swirl mode}
+    geometrically and dynamically resonates with a \emph{pentagonal face mode}
+    of the electron's \(I_h\)-symmetric shell field. This symmetry match enables energy and swirl transfer sufficient for absorption.
+\end{hypothesis}
+
+\subsection*{Kinematic and geometric setup}
+\begin{definition}[Pentagonal swirl mode of a photon]
+    Model the local photon swirl on an annular cross–section by an azimuthal Fourier decomposition
+    \[
+        r(\theta,t)=R_0+\sum_{m\ge 0} a_m(t)\cos\!\big(m\theta-\omega_m t+\varphi_m\big),
+        \qquad m\in\mathbb{Z}_{\ge 0}.
+    \]
+    The \emph{pentagonal} mode is \(m=5\) with instantaneous amplitude \(a_5\) and frequency \(\omega_5\).
+    Transient polygonization of vortex rings near boundaries (including \(m=5\)) is documented in high-fidelity studies \cite{orlandi1993vortex}.
+\end{definition}
+
+\begin{definition}[Electron shell field with pentagonal face projectors]
+    Let \(\{\mathbf{n}_f\}_{f=1}^{12}\) be the unit normals of the dodecahedral faces.
+    Define a face projector \(P_f^{(5)}\) that localizes the electron's surface response to the \(f\)-th pentagonal face
+    and picks out its 5-fold tangential subspace (e.g., via an \(I_h\)-invariant spherical-harmonic construction).
+    Denote the corresponding face mode velocity by \(\vswirl^{(e)}_f(\mathbf{x},t)\).
+\end{definition}
+
+\begin{law}[Resonance conditions (necessary)]
+    Absorption is allowed only if the following hold simultaneously:
+    \begin{align}
+        \textbf{(S1) Symmetry:}&\quad m=5 \ \ \text{(or, more generally, } m\equiv 0 \!\!\!\pmod{5}\text{)}. \label{eq:S1}\\
+        \textbf{(S2) Frequency match:}&\quad
+        \big|\omega_5-\Omega_f\big| \le \epsilon_\omega\,\Omega_f, \quad 0<\epsilon_\omega\ll 1, \label{eq:S2}
+    \end{align}
+    where \(\Omega_f\) is the natural pentagonal face frequency. In SST a canonical ``golden layer'' frequency is normalized by the hyperbolic scale
+    \[
+        \Omega_g \;=\; e^{-\xig}\frac{\Ce}{\rc} \;=\; \phig^{-1}\,\frac{\Ce}{\rc},
+        \qquad \text{and often } \Omega_f\approx \Omega_g.
+    \]
+    \begin{equation}
+        \textbf{(S3) Orientation:}\qquad
+        \max_{f}\ \mathbf{\hat k}\cdot\mathbf{n}_f \ \ge\ \cos\theta_{\rm tol}, \quad 0<\theta_{\rm tol}\ll 1,
+        \label{eq:S3}
+    \end{equation}
+    with \(\mathbf{\hat k}\) the photon incidence direction. \hfill\qed
+\end{law}
+
+\subsection*{Coupling functional and resonance score}
+Let \(\vswirl^{(\gamma,5)}(\mathbf{x},t)\) be the photon's \(m{=}5\) swirl field at the electron boundary
+and \(\vswirl^{(e)}_f(\mathbf{x},t)\) the \(f\)-face response projected by \(P_f^{(5)}\).
+Define the overlap (transition) amplitude
+\begin{equation}
+    \mathcal{M}_5(\omega_5,\mathbf{\hat k})
+    \;=\;
+    \sum_{f=1}^{12}
+    \int_{S_f}
+    \Big(\vswirl^{(\gamma,5)}\cdot \vswirl^{(e)}_f\Big)\,
+    \chi_f(\mathbf{\hat k})\, dS,
+    \qquad
+    \chi_f(\mathbf{\hat k}) := \Theta\!\big(\mathbf{\hat k}\cdot\mathbf{n}_f - \cos\theta_{\rm tol}\big),
+    \label{eq:M5}
+\end{equation}
+where \(S_f\) is the \(f\)-th pentagonal face patch and \(\Theta\) a Heaviside gate implementing \eqref{eq:S3}.
+A dimensionless \emph{resonance score} is
+\begin{equation}
+    \mathcal{Q}_5
+    \;=\;
+    \frac{\big|\mathcal{M}_5\big|^2}{\Big(\sum_f \int_{S_f}\!\|\vswirl^{(\gamma,5)}\|^2 dS\Big)
+    \Big(\sum_f \int_{S_f}\!\|\vswirl^{(e)}_f\|^2 dS\Big)}
+    \cdot
+    \exp\!\left[-\frac{(\omega_5-\Omega_f)^2}{2\Delta^2}\right],
+    \label{eq:Q5}
+\end{equation}
+with \(\Delta/\Omega_f=\mathcal{O}(\epsilon_\omega)\) the linewidth. Absorption is triggered when \(\mathcal{Q}_5\ge \mathcal{Q}_{\rm thr}\).
+
+\subsection*{Golden layer and selection rule}
+Using the \emph{golden rapidity} scale \(\xi_g=\xigold\) with \(\tanh\xi_g=\phig^{-1}\),
+the photon's pentagonal swirl speed at resonance is
+\[
+    \|\vswirl\|_g=\Ce\,\tanh\xi_g=\Ce\,\phig^{-1},\qquad
+    \Omega_g=\frac{\|\vswirl\|_g}{\rc}=\phig^{-1}\frac{\Ce}{\rc}.
+\]
+This implements a hyperbolic-first use of the golden constant; the algebraic value \((1+\sqrt5)/2\) is an echo of this construction.
+
+\subsection*{Predictions (falsifiable signatures)}
+\begin{itemize}
+    \item \textbf{12-lobe angular map:} absorption probability is maximal when \(\mathbf{\hat k}\) aligns with any \(\mathbf{n}_f\),
+    producing a 12-peak pattern over the sphere (dodecahedral symmetry).
+    \item \textbf{Pentagonal mode selectivity:} near-resonant absorption is suppressed for \(m\not\equiv 0\ (\mathrm{mod}\ 5)\).
+    \item \textbf{Golden detuning:} resonance linewidth centered at \(\Omega_g\) (within \(\epsilon_\omega\)) if the face mode is tuned to the golden layer.
+    \item \textbf{Amplitude scaling:} \(\mathcal{Q}_5\propto a_5^2\) in the weak-coupling limit (linear response).
+\end{itemize}
+
+\subsection*{Status and provenance}
+This appendix is \emph{Research Track (non-canonical)} pending derivation from the SST Lagrangian
+and experimental or ab-initio validation.
+Transient pentagonal polygonization of vortex rings impacting walls (an analogue for the \(m{=}5\) channel)
+is consistent with simulations \cite{orlandi1993vortex}; here it serves as mechanical inspiration rather than direct evidence for electronic structure.

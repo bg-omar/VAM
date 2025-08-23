@@ -1,0 +1,223 @@
+\section{Emergent Mass from Soliton Energy}
+\label{sec:mass-functional}
+
+For a static, stable knotted swirl configuration \(K\), the rest energy \(E_K\) defines the solitonic mass.
+Working in natural units \(\hbar=c=1\),
+\begin{equation}
+ m_K^{(\mathrm{sol})} = E_K .
+\end{equation}
+
+Guided by semiclassical analyses of knotted solitons \cite{Faddeev1997} and swirl energetics, we employ a \emph{topological mass functional}
+\begin{equation}
+ \boxed{ \; m_K^{(\mathrm{sol})} = \mathcal{M}_0 \,\Xi_K(m,n,s,k;\,\varphi) \; }
+ \label{eq:mass-functional}
+\end{equation}
+where \(\mathcal{M}_0\) sets the universal energy scale and \(\Xi_K\) is a dimensionless topological factor.
+
+\paragraph{Core scale.}
+Introduce the \emph{core swirl velocity} \(\vswirl\) (Appendix~\ref{sec:core_swirl_velocity}). We take
+\begin{equation}
+ \boxed{ \; \mathcal{M}_0 \equiv C_0 \left(\sum_i V_i\right)\,\rhof\,\vswirl^{\,2} \; }
+ \label{eq:M0}
+\end{equation}
+with
+(i) \( \sum_i V_i \): total effective core volume of the knot (tube model),
+(ii) \( \rhof \): base energy density of the medium (Appendix~\ref{sec:calibration_rho0}),
+(iii) \(C_0\): dimensionless normalization capturing geometric/logarithmic slenderness and finite-core effects.
+
+\paragraph{Topological factor.}
+\(\Xi_K\) encodes geometric/dynamical properties of the knot:
+\[
+ \Xi_K = \Xi_K(m,n,s,k;\,\varphi), \qquad
+ m=\text{strand multiplicity},\; n=\text{knot/link index},\;
+\]
+\[
+ s=\text{coherence/tension index},\;
+    k=\text{layer index}.
+\]
+A concrete ansatz used below is
+\begin{equation}
+    \Xi_K(m,n,s,k;\,\varphi) = \frac{\mathcal{T}_K(m,n,s)}{\varphi^{\,2k}},
+    \label{eq:Xi-ansatz}
+\end{equation}
+where \(\mathcal{T}_K\) is a dimensionless tangle measure (e.g., normalized ropelength or writhe), and \(\varphi\) enters through canonical geometry of the core (Sec.~\ref{sec:golden_layer}).
+
+\subsection{Heuristic derivation of the mass functional}
+
+\paragraph{(1) Core energy from swirl string dynamics.}
+For an incompressible medium, the energy per unit length of a slender swirl string scales as
+\(
+\tfrac{dE}{d\ell} \sim \tfrac{1}{2}\rhof\,\Gamma^2 \ln (R/r_c)
+\).
+With \(\Gamma \sim \vswirl r_c\) and total arclength \(\ell_K\),
+\begin{equation}
+    E_K^{\mathrm{core}} \sim \rhof\,\vswirl^{\,2}\,\ell_K \ln\!\left(\frac{R}{r_c}\right).
+\end{equation}
+
+\paragraph{(2) Volume correction (tube model).}
+Treat each strand as a tube of radius \(r_c\):
+\(
+V_K=\sum_i \pi r_c^2 \ell_i
+\Rightarrow
+E_K^{\mathrm{bulk}} \sim \rhof\,\vswirl^{\,2}\,V_K
+\),
+which dominates for compact, tightly wound knots.
+See Appendix~\ref{sec:knot-particle-mapping} for the explicit knot$\to$particle dictionary.
+
+\paragraph{(3) Topological suppression via coherence.}
+To encode knot geometry and internal alignment, introduce \(\Xi_K\) as in \eqref{eq:Xi-ansatz}; the \(\varphi^{-2k}\) factor models discrete coherence layers within the core (Sec.~\ref{sec:golden_layer}), while \(\mathcal{T}_K\) captures shape-dependent tangle energy.
+
+\paragraph{(4) Combined result.}
+Collecting pieces yields \eqref{eq:mass-functional} with \(\mathcal{M}_0\) given by \eqref{eq:M0}.
+
+\paragraph{Dimensional check.}
+In \(\hbar=c=1\), \([\rhof]=4\), \([V]=(-3)\), \([\vswirl]=0\) \(\Rightarrow\) \([\mathcal{M}_0]=1\) (mass), as required. \(\Xi_K\) is dimensionless by construction.
+
+\subsection{Calibration and comparison}
+
+Fix \(\mathcal{M}_0\) on a single reference (electron) to set the overall scale:
+\begin{equation}
+    C_0
+    = \frac{m_e}{\big(\sum_i V_i\big)_e \,\rhof \,\vswirl^{\,2}}\,
+    \frac{1}{\Xi_{K_e}} .
+    \label{eq:calibration}
+\end{equation}
+After \eqref{eq:calibration}, predictions are parameter-free:
+\[
+m_K^{(\mathrm{sol})}/m_{K'}^{(\mathrm{sol})}
+= \Xi_K/\Xi_{K'}
+\].
+Uncertainties propagate via
+\begin{equation}
+\delta m_K^2 \simeq m_K^2\big[
+    (\delta\rhof/\rhof)^2
+    + (2\,\delta\vswirl/\vswirl)^2
+    + (\delta V/V)^2
+    + (\delta\Xi_K/\Xi_K)^2
+    \big].
+\end{equation}
+Comparisons use experimental values \cite{PDG2024}; medium/self-interaction corrections can be layered as perturbations to \(\rhof\) or to \(\mathcal{T}_K\).
+
+
+%===========================================================
+\subsection{Golden Layer: Hyperbolic Canonical Definition}
+\label{sec:golden_layer}
+%===========================================================
+
+% --- Notation firewall (safe if already defined elsewhere) ---
+\providecommand{\rc}{r_c}
+\providecommand{\vswirl}{\mathbf{v}_{\mathrm{swirl}}}
+
+\paragraph*{Policy (hyperbolic-first).}
+The golden constant is \emph{defined} hyperbolically. We set
+\[
+    \xi_\varphi \;\equiv\; \operatorname{asinh}\!\left(\tfrac{1}{2}\right),
+    \qquad
+    \varphi \;\equiv\; \exp(\xi_\varphi),
+\]
+and only later note the algebraic echo \(\varphi=(1+\sqrt5)/2\) as a corollary (not as a definition).
+
+\paragraph*{Golden rapidity.}
+Define the golden rapidity
+\[
+    \xi_g \;\equiv\; \tfrac{3}{2}\,\xi_\varphi.
+\]
+Using \(\tanh y=\dfrac{e^{2y}-1}{e^{2y}+1}\) (standard hyperbolic identity, see \cite{NISTDLMF}),
+\[
+    \tanh(\xi_g) \;=\; \frac{e^{3\xi_\varphi}-1}{e^{3\xi_\varphi}+1}
+    \;=\; \frac{\varphi^3-1}{\varphi^3+1}.
+\]
+From \(\varphi=\exp(\xi_\varphi)\) and the algebraic consequence \(\varphi^2=\varphi+1\) (derived after the hyperbolic definition), we get \(\varphi^3=2\varphi+1\), hence
+\[
+    \tanh(\xi_g) \;=\; \frac{(2\varphi+1)-1}{(2\varphi+1)+1}
+    =\frac{2\varphi}{2(\varphi+1)}=\frac{\varphi}{\varphi^2}=\frac{1}{\varphi}.
+\]
+Therefore
+\[
+    \boxed{\ \tanh\!\big(\tfrac{3}{2}\,\xi_\varphi\big)=\tanh(\xi_g)=\varphi^{-1}\ },
+\]
+
+    \text{equivalently }\ \coth(\xi_g)=\varphi.
+
+\paragraph*{VAM mapping (canonical scales).}
+Rapidity parametrizes the swirl speed as
+\[
+    \beta \;\equiv\; \frac{\|\vswirl\|}{\vswirl} \;=\; \tanh\xi.
+\]
+At the Golden Layer \(\xi=\xi_g\),
+\[
+    \beta_g \;=\; \frac{1}{\varphi},\qquad
+    v_g \;\equiv\; \|\vswirl\|_g \;=\; \frac{\vswirl}{\varphi},\qquad
+    \Omega_g \;=\; \frac{v_g}{\rc} \;=\; \frac{1}{\varphi}\,\frac{\vswirl}{\rc}.
+\]
+\emph{Dimensional check:} \([\beta_g]=1\), \([v_g]=\mathrm{m/s}\), \([\Omega_g]=\mathrm{s}^{-1}\).
+
+\paragraph*{Algebraic echo (post-hoc).}
+From the standard definition \(\operatorname{asinh}x=\ln(x+\sqrt{x^2+1})\) \cite{NISTDLMF},
+\[
+    \xi_\varphi=\operatorname{asinh}\!\left(\tfrac{1}{2}\right)
+    =\ln\!\left(\tfrac{1}{2}+\sqrt{\tfrac{1}{4}+1}\right)
+    =\ln\!\left(\tfrac{1+\sqrt5}{2}\right),
+\]
+so \(\varphi=\exp(\xi_\varphi)=(1+\sqrt5)/2\). This \emph{confirms} (rather than defines) the familiar algebraic form.
+
+\paragraph*{Numerical evaluation (Canon constants).}
+With \(\vswirl=\SI{1.09384563e6}{m/s}\) and \(\rc=\SI{1.40897017e-15}{m}\),
+\[
+    \varphi \approx 1.618033988749895,\quad
+    \xi_g=\tfrac{3}{2}\ln\varphi \approx 0.721817737589405,
+\]
+\[
+    \beta_g=\tanh\xi_g=\varphi^{-1}\approx 0.618033988749895,
+    v_g=\frac{\vswirl}{\varphi}\approx \SI{6.760337778e5}{m/s},\qquad
+\]
+\[
+    \Omega=\frac{\vswirl}{\rc}\approx \SI{7.763440655e20}{s^{-1}},\qquad
+    \Omega_g=\frac{\Omega}{\varphi}\approx \SI{4.798070195e20}{s^{-1}}.
+\]
+
+
+
+
+\paragraph*{On the \(3/2\) exponent.}
+The \(\tfrac{3}{2}\) multiplier in \(\xi_g=\tfrac{3}{2}\xig\) mirrors common spectral/dispersion scalings
+(quantum level spacings, Kelvin-wave cascades), and will be used to label “golden layers” in SST.
+
+\subsection{Pentagonal resonance hypothesis}
+% --- “Five” and pentagon transient (context hook) ---
+\paragraph*{Remark (pentagon transient).}
+When an unknotting filament strikes a boundary, a short-lived five-vertex symmetry (pentagon-like)
+is empirically observed; in SST we treat this as a \emph{transient morphometric feature} of the
+filament’s curvature–torsion flow rather than as a defining identity for \(\phi\).
+Motivated by simulations of swirl string-ring impacts \cite{orlandi1993vortex}, we hypothesize:
+
+\begin{quote}
+    \textbf{Pentagonal Resonance Hypothesis.}
+    A photon is absorbed by an electron when its transient pentagonal swirl mode geometrically resonates with a pentagonal face of the dodecahedral electron shell. This topological match enables energy and swirl transfer.
+\end{quote}
+
+\subsection{Canonical role}
+The Golden Layer functions as:
+(i) a \emph{quantization anchor} for swirl rapidity (\(\xi=\xi_g\));
+(ii) a \emph{resonance mechanism} in electron–photon coupling via dodecahedral symmetry;
+(iii) a \emph{bridge} between continuous swirl dynamics and discrete spectroscopic structure.
+
+% --- Integrated: EFT derivation of alpha C + beta L and golden-layer ---
+\subsection{Field-Theoretic Derivation of \texorpdfstring{$\alpha C+\beta L$}{alpha C + beta L} and \texorpdfstring{$\varphi^{-2k}$}{phi^{-2k}}}
+\paragraph*{Length term.}
+For a slender tube of radius \(r_c\) and circulation \(\Gamma\), the line tension is
+\(\tau\simeq \frac{\rhof\Gamma^2}{4\pi}\ln\!\frac{R}{r_c}+\kappa_H r_c^2\langle\omega^2\rangle\), so \(E_{\rm line}\simeq \tau\,\ell_K\),
+and with \(L(K)=\ell_K/r_c\) this yields a contribution \(\propto \beta\,L(K)\).
+
+\paragraph*{Crossing term.}
+Nonlocal Biot--Savart interactions between tube segments near contact (\(\sim r_c\)) discretize to counts proportional to the minimal crossing number \(C(K)\), giving
+the term \(\propto \alpha\,C(K)\). A Skyrme/Hopf quartic term enforces the stability bound \(E\ge \kappa\,|Q_H|^{3/4}\).
+
+\paragraph*{Golden-layer suppression.}
+A weak pentagonal core deformation induces discrete scale invariance in radial modes with ratio \(\lambda_\star=\varphi\).
+Since energy scales with amplitude squared, this yields the multiplicative factor \(\varphi^{-2k}\) for the \(k\)-th layer.
+Altogether (with your normalization),
+\begin{equation}
+\Xi_K \;=\; \frac{\alpha\,C(K)+\beta\,L(K)}{T_{01}}\;\varphi^{-2k_K},\qquad m_K = M_0\,\Xi_K.
+\end{equation}
+% --- End Integrated block ---

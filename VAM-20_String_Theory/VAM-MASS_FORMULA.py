@@ -1,6 +1,32 @@
 import math
 import pandas as pd
 
+import math
+
+phi = (1 + math.sqrt(5)) / 2
+m_e = 0.510998950e6  # eV (natural units);
+
+def xi_normalized(C, L, k, alpha, beta, L0):
+    """ Xi_K = [(alpha*C + beta*L) / (beta*L0)] * phi^(-2k) """
+    return ((alpha*C + beta*L) / (beta*L0)) * (phi ** (-2 * k))
+
+def solve_alpha_from_mu(L0, L3, beta, k3, m_mu_over_m_e=206.7682830):
+    # alpha = (beta/3) * [ (m_mu/m_e)*L0*phi^(2k3) - L3 ]
+    return (beta / 3.0) * ((m_mu_over_m_e * L0 * (phi ** (2 * k3))) - L3)
+
+# --- Example: calibrate on e, μ; then predict τ once you supply L5,k5 ---
+# fill these with your numbers (or just keep the common trefoil/unknot values you’ve been using)
+L0 = 7.64
+L3 = 16.4
+beta = 0.1
+k3 = 0
+
+alpha = solve_alpha_from_mu(L0, L3, beta, k3)
+Xi_e = 1.0                     # by construction
+Xi_mu = xi_normalized(3, L3, k3, alpha, beta, L0)
+
+
+
 # ─── Constants ───────────────────────────────────────────────────────────────
 phi = (1 + math.sqrt(5)) / 2
 alpha = 7.2973525643e-3

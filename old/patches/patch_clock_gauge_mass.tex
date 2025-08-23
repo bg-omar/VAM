@@ -1,0 +1,87 @@
+% === PATCH: Feedback Implementation (Clock Field, Gauge Emergence, Dictionary, Mass Functional, Erratum) ===
+\clearpage
+\section*{Addendum: Dynamics of the Clock Foliation and Constraints}
+Let \(u_\mu \equiv \ \partial_\mu T/\sqrt{-g^{\alpha\beta}\partial_\alpha T\partial_\beta T}\) with \(u_\mu u^\mu=-1\). We add the æther/khronon sector
+\begin{align}
+\mathcal L_{T} \;=\; \frac{M_u^{2}}{2}\Big[&c_1(\nabla_\mu u_\nu)(\nabla^\mu u^\nu)+c_2(\nabla_\mu u^\mu)^2+c_3(\nabla_\mu u_\nu)(\nabla^\nu u^\mu)\\
+&+c_4\,u^\mu u^\nu (\nabla_\mu u_\alpha)(\nabla_\nu u^\alpha)\Big]
+\;+\;\lambda\,(u_\mu u^\mu+1).\nonumber
+\end{align}
+It is invariant under monotone reparametrizations \(T\!\mapsto f(T)\) and enforces Frobenius integrability since \(u\propto\nabla T\).
+A cosmological origin is modeled by a shift--symmetric condensate \(T(x)=\mu t+\pi(x)\) with \(X=g^{\mu\nu}\partial_\mu T\partial_\nu T<0\) and
+\(\mathcal L_{\rm khr}(X)=M_\star^4\,P(X/M_\star^4)\). In unitary gauge this reduces to the above \(\mathcal L_T\).
+
+\paragraph{Observational constraints.}
+Tensor--mode speed \(c_T^2=1/(1-c_{13})\) with \(c_{13}\!=\!c_1+c_3\). GW170817/GRB170817A enforces \(|c_T/c-1|\!\lesssim\!10^{-15}\Rightarrow c_{13}\!\simeq\!0\).
+Preferred--frame PPN parameters \(\alpha_1(c_i),\alpha_2(c_i)\) are constrained by pulsars/Solar System, and the absence of gravitational
+\v{C}erenkov losses requires \(c_T\ge 1\). Non-gravitational LIV coefficients are summarized in the SME Data Tables.
+We adopt the baseline fit \(c_{13}=0\) and quote bounds on \((c_1,c_2,c_4)\) in the parameter table below.
+
+\begin{table}[h]
+\centering
+\caption{New parameters and constraints (baseline).}
+\begin{tabular}{lcc}
+\hline
+Parameter & Meaning & Baseline / Constraint \\
+\hline
+\(c_{13}=c_1+c_3\) & controls \(c_T\) & set to 0 (GW170817) \\
+\(c_1,c_2,c_4\) & æther couplings & bounded by PPN \(\alpha_1,\alpha_2\) \\
+\(M_u\) & æther scale & free EFT scale \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+\section*{Addendum: Emergent Swirl Gauge Group and SM Mapping}
+Let \(O(x)\in SO(3)\) map a reference triad into the local swirl triad, \(W_\mu=(\partial_\mu O)O^{-1}\in\mathfrak{so}(3)\).
+Introduce three flavor directors \(O^{(a)}(x)\in SO(3)\) (one per mesoscale swirl family) with a common overall rotation factored out.
+The resulting redundancy closes at coarse grain to the minimal compact Lie algebra
+\(\mathfrak g_{\rm sw}\simeq \mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1)\).
+Elastic frame-gradient energies generate a Yang--Mills term and a Chern--Pontryagin density under RG.
+
+\paragraph{Selection criteria.}
+Require (i) a \(\mathbb Z_3\) center (for three color sectors), (ii) a chiral rank-1 factor, and (iii) nontrivial \(\pi_3\) (texture stability).
+Up to discrete quotients this singles out \(SU(3)\times SU(2)\times U(1)\).
+Define a homomorphism \(\pi:G_{\rm sw}\to G_{\rm SM}\) fixed by the invariant tuple
+\(\,t(K)=(L_K\bmod 3,\,S_K\bmod 2,\,\chi_K)\), assigning representations leafwise.
+
+\clearpage
+\section*{Addendum: Knot\(\to\)Particle Dictionary --- Variational Selection}
+Given quantum numbers fixed by \(t(K)\), select \(K\) by minimizing
+\begin{equation}
+\mathcal E_{\rm eff}[K]=\alpha\,C(K)+\beta\,L(K)+\gamma\,\mathcal H(K),\qquad \alpha,\beta,\gamma>0,
+\end{equation}
+subject to foliation-compatible ropelength constraints and stability (Hopf) bounds. The swirl-helicity asymmetry classifier (SST) then
+resolves near-degeneracies.
+
+\clearpage
+\section*{Addendum: Mass Functional from the EFT}
+\paragraph{Length term.}
+For a slender tube of radius \(r_c\) and circulation \(\Gamma\), the line tension is
+\(\tau\simeq \frac{\rho_0\Gamma^2}{4\pi}\ln\!\frac{R}{r_c}+\kappa_H r_c^2\langle\omega^2\rangle\), so \(E_{\rm line}\simeq \tau\,\ell_K\),
+and with \(L(K)=\ell_K/r_c\) this yields a contribution \(\propto \beta\,L(K)\).
+
+\paragraph{Crossing term.}
+Nonlocal Biot--Savart interactions between tube segments near contact (\(\sim r_c\)) discretize to counts proportional to the minimal crossing number \(C(K)\), giving
+the term \(\propto \alpha\,C(K)\). A Skyrme/Hopf quartic term enforces the stability bound \(E\ge \kappa\,|Q_H|^{3/4}\).
+
+\paragraph{Golden-layer suppression.}
+A weak pentagonal core deformation induces discrete scale invariance in radial modes with ratio \(\lambda_\star=\varphi\).
+Since energy scales with amplitude squared, this yields the multiplicative factor \(\varphi^{-2k}\) for the \(k\)-th layer.
+Altogether (with your normalization),
+\begin{equation}
+\Xi_K \;=\; \frac{\alpha\,C(K)+\beta\,L(K)}{T_{01}}\;\varphi^{-2k_K},\qquad m_K = M_0\,\Xi_K.
+\end{equation}
+
+\clearpage
+\section*{Erratum and Changelog (v0.1.1)}
+Correct the coarse--graining relation to
+\begin{equation}
+\rho_{\text{\ae}}^{(\text{fluid})} \;=\; K\,\Omega,\qquad
+K=\frac{\rho_{\text{\ae}}^{(\text{mass})}\,r_c}{v_s}.
+\end{equation}
+With Canon constants this gives \(\Omega^\ast=1.39578735\times10^{-4}\,\mathrm{s^{-1}}\) and a period \(T^\ast\simeq 12.50\,\mathrm{h}\).
+We set \(c_{13}=0\) (GW170817 bound) as baseline in the new parameter table.
+% Force-include bibliography entries from the patch:
+\nocite{JacobsonMattingly2004,Jacobson2008,BlasPujolasSibiryakov2010,SMEDataTables2025,Abbott2017GW170817,MooreNelson2001,BarceloLiberatiVisser2011,Nakahara2003,MerminHo1976,Wen2002,Fradkin2013,VakulenkoKapitanskii1979,GladikowskiHellmund1997,Thurston1997,Sornette1998}
+% === END PATCH ===

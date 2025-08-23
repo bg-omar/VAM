@@ -1,0 +1,60 @@
+%========================================================================================
+% APPENDIX B: Derivation of the Core Swirl Velocity \vswirl
+%========================================================================================
+\section*{Appendix B: Derivation of the Core Swirl Velocity}
+\addcontentsline{toc}{section}{Appendix B: Derivation of the Core Swirl Velocity}
+\label{sec:core_swirl_velocity}
+
+\paragraph{Referenced in Main Text.}
+This parameter enters the energy scale
+\[
+ \mathcal{M}_0 = C_0 \Big(\sum_i V_i\Big)\,\rhof\,\frac{\vswirl^{\,2}}{c^2},
+\]
+where we interpret \(\vswirl\) as the tangential speed at the swirl–core boundary.
+
+\subsection*{B.1 Geometric axiom: minimal core radius}
+We set the core radius by the classical electron radius
+\[
+ r_e \equiv \frac{e^2}{4\pi \varepsilon_0 m_e c^2} \approx 2.8179403\times10^{-15}\ \mathrm{m},
+\]
+and adopt the modeling choice
+\[
+ r_c \equiv \tfrac12 r_e \approx 1.4089702\times10^{-15}\ \mathrm{m},
+\]
+motivated by swirl string–tube stability and used consistently throughout the VAM/SST fits.
+
+\subsection*{B.2 Dynamical axiom: Compton synchronization}
+Let the intrinsic rotation of the elementary swirl be locked to the electron’s Compton (angular) frequency
+\[
+ \omega_c \equiv \frac{m_e c^2}{\hbar} \approx 7.76344\times10^{20}\ \mathrm{rad\,s^{-1}} .
+\]
+This identifies the boundary angular velocity with \(\omega_{\text{core}}=\omega_c\).
+
+\subsection*{B.3 Result and numerical evaluation}
+The core tangential speed is then
+\[
+ \boxed{\ \vswirl \;=\; r_c\,\omega_c\ } .
+\]
+With the values above,
+\[
+ \vswirl
+ = (1.4089702\times10^{-15}\ \mathrm{m})\,(7.76344\times10^{20}\ \mathrm{rad\,s^{-1}})
+    \approx \boxed{1.0938\times10^{6}\ \mathrm{m\,s^{-1}}}\,,
+\]
+comfortably subluminal (\(\vswirl\ll c\)).
+
+\paragraph{Dimensional check.}
+\([r_c]=\mathrm{m}\), \([\omega_c]=\mathrm{s^{-1}}\Rightarrow [\vswirl]=\mathrm{m\,s^{-1}}\).
+
+\paragraph{Consistency check with the Golden Layer.}
+Using \(\varphi=\tfrac{1+\sqrt5}{2}\), the golden-layer kinematics in Sec.~\ref{sec:golden_layer} give
+\[
+    v_g=\frac{\vswirl}{\varphi}\approx \frac{1.0938\times10^6}{1.618}\ \mathrm{m\,s^{-1}}
+    \approx 6.76\times10^5\ \mathrm{m\,s^{-1}},
+\]
+matching the Canon numerics quoted there.
+
+\subsection*{B.4 Remarks and scope}
+(i) The choice \(\omega_{\text{core}}=\omega_c\) is a model axiom that ties the swirl’s intrinsic rotation to the rest-energy scale \(E=\hbar\omega\); it yields a single canonical \(\vswirl\) used across fits.
+(ii) Alternative lockings (e.g., to a multiple of \(\omega_c\) or to a knot-dependent layer index) amount to \(\vswirl}\!\to\! \lambda\,\vswirl\) and can be absorbed into the dimensionless factors of the mass functional; we therefore keep \(\lambda=1\) as the canonical choice.
+(iii) The numerical value here is the same constant employed in Appendix~\ref{sec:calibration_rho0} and in the simulation code (variable \texttt{C\_e}).

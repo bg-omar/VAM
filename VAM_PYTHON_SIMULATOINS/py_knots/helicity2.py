@@ -13,7 +13,7 @@ def load_fourier_series_clean(filename):
             if len(parts) == 6:
                 data.append([float(x) for x in parts])
             if len(parts) != 6:
-                print(f"[WARN] Skipped malformed line: {line.strip()}")
+                continue  # instead of print warn
 
     data = np.array(data)
     return data[:, 0], data[:, 1], data[:, 2], data[:, 3], data[:, 4], data[:, 5]
@@ -87,8 +87,10 @@ for i, (label, file) in enumerate(knot_files.items(), 1):
     v_sub = extract_interior_field(velocity, grid_shape, interior)
     w_sub = extract_interior_field(vorticity, grid_shape, interior)
 
-    H_charge = np.sum(np.einsum('ij,ij->i', v_sub, w_sub))
-    H_mass = np.sum(np.linalg.norm(w_sub, axis=1)**2 * r_sq)
+    Nvox = w_sub.shape[0]  # number of interior voxels
+    H_charge = np.sum(np.einsum('ij,ij->i', v_sub, w_sub)) / Nvox
+    H_mass   = np.sum(np.linalg.norm(w_sub, axis=1)**2 * r_sq) / Nvox
+
     a_mu = 0.5 * (H_charge / H_mass - 1)
     results[label] = {"H_charge": H_charge, "H_mass": H_mass, "a_mu": a_mu}
     print(f"{label}:\n  H_charge = {H_charge:.6f}\n  H_mass = {H_mass:.6f}\n  H_ratio = {H_charge/H_mass:.6f} → a_mu^VAM = {a_mu:.8f}")
@@ -98,3 +100,48 @@ for i, (label, file) in enumerate(knot_files.items(), 1):
 # === Print Results ===
 for k, v in results.items():
     print(f"\n{k}:\n  H_charge = {v['H_charge']:.6f}\n  H_mass = {v['H_mass']:.6f}\n  a_mu^VAM = {v['a_mu']:.8f}")
+
+# === Export summary (CSV + LaTeX) ============================================
+import pandas as pd
+
+rows = []
+for label, v in results.items():
+    R = v["H_charge"] / v["H_mass"]
+    rows.append({
+        "knot": label.replace("knot.", "").replace(".fseries", ""),
+        "H_charge": v["H_charge"],
+        "H_mass": v["H_mass"],
+        "R = Hc/Hm": R,
+        "a_mu^VAM": v["a_mu"]
+    })
+
+df = pd.DataFrame(rows).sort_values("a_mu^VAM")
+df.to_csv("VAM_helicity_summary.csv", index=False)
+
+# emit a compact LaTeX longtable (booktabs)
+def to_longtable(df, fname="VAM_helicity_summary.tex", max_rows=40):
+    cols = ["knot", "R = Hc/Hm", "a_mu^VAM"]
+    sub = df.loc[:, cols].head(max_rows)
+    lines = []
+    lines.append(r"\begin{center}")
+    lines.append(r"\begin{longtable}{lrr}")
+    lines.append(r"\caption{VAM helicity summary for selected knots.}\\")
+    lines.append(r"\toprule")
+    lines.append(r"Knot & $R_K$ & $a_\mu^{\mathrm{VAM}}$ \\")
+    lines.append(r"\midrule")
+    lines.append(r"\endfirsthead")
+    lines.append(r"\toprule")
+    lines.append(r"Knot & $R_K$ & $a_\mu^{\mathrm{VAM}}$ \\")
+    lines.append(r"\midrule")
+    lines.append(r"\endhead")
+    lines.append(r"\bottomrule")
+    lines.append(r"\endfoot")
+    for _, r in sub.iterrows():
+        lines.append(f"{r['knot']} & {r['R = Hc/Hm']:.6f} & {r['a_mu^VAM']:.8f} \\\\")
+    lines.append(r"\end{longtable}")
+    lines.append(r"\end{center}")
+    with open(fname, "w") as f:
+        f.write("\n".join(lines))
+
+to_longtable(df)
+print("Wrote VAM_helicity_summary.csv and VAM_helicity_summary.tex")

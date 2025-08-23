@@ -1,0 +1,225 @@
+%! Author = Omar Iskandarani
+%! Title = Swirl-String Theory as an Emergent Relativistic Effective Field Theory with Preferred Foliation
+%! Date = Aug 22, 2025
+%! Affiliation = Independent Researcher, Groningen, The Netherlands
+%! License = © 2025 Omar Iskandarani. All rights reserved. This manuscript is made available for academic reading and citation only. No republication, redistribution, or derivative works are permitted without explicit written permission from the author. Contact: info@omariskandarani.com
+%! ORCID = 0009-0006-1686-3961
+%! DOI = 10.5281/zenodo.16923312
+
+\newcommand{\papertitle}{Swirl-String Theory as an Emergent Relativistic Effective Field Theory with Preferred Foliation}
+
+%========================================================================================
+% PACKAGES AND DOCUMENT CONFIGURATION
+%========================================================================================
+\documentclass[preprint,titlepage]{revtex4-2}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{physics}
+\usepackage{fancyhdr}
+
+\usepackage{bm}
+
+\usepackage{tikz}
+\usetikzlibrary{knots,intersections,decorations.pathreplacing}
+\usetikzlibrary{3d, calc, arrows.meta, positioning}
+\usetikzlibrary{decorations.pathmorphing}
+
+\usepackage{pgfmath}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18} % or version you have
+
+\usepackage{lmodern}
+
+\usepackage{mathtools}
+\usepackage{ulem}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{siunitx}
+
+% === House Notation Macros (mainstream field-theory style) ===
+% Effective densities
+\newcommand{\rhof}{\rho_{\!f}}      % effective fluid density
+\newcommand{\rhoE}{\rho_{\!E}}      % swirl energy density
+\newcommand{\rhom}{\rho_{\!m}}      % mass-equivalent density = \rhoE/c^2
+\newcommand{\rhocore}{\rho_{\mathrm{core}}} % core density parameter (material/core)
+
+\newcommand{\swirlarrow}{\!\!\scriptsize\boldsymbol{\circlearrowleft}}
+\newcommand{\vswirl}{\mathbf{v}_{\swirlarrow}}
+\newcommand{\vnorm}{\lVert \mathbf{v} \rVert} % generic speed magnitude
+
+% Tensor field strength (3-form) and 2-form potential
+% (Already mainstream: H = dB, H_{mu nu rho} = \partial_{[mu} B_{nu rho]})
+% Keep existing notation; define a convenience macro if desired:
+\newcommand{\dB}{\,\mathrm{d}B} % optional use in forms notation
+% === End Notation Macros ===
+
+\newcommand{\xig}{\operatorname{asinh}\!\left(\tfrac{1}{2}\right)} % base hyperbolic scale
+\newcommand{\phig}{\exp(\xig)} % golden from hyperbolic
+\newcommand{\phialg}{\bigl(1+\sqrt{5}\bigr)/2} % algebraic echo (use sparingly)
+\newcommand{\xigold}{\tfrac{3}{2}\,\xig} % "golden rapidity" scale
+
+% --- Display helpers (optional) ---
+\newcommand{\GoldenDeclare}{%
+ \textbf{Golden (hyperbolic)}:\ \(\ln\phi=\xig\), hence \(\phi=\phig\).
+ \ \emph{(Equivalently, \(\phi=\phialg\); this algebraic form is derivative.)}%
+}
+
+% --- Canonical identity (hyperbolic-only proof, algebraic as corollary) ---
+\newtheorem{identity}{Identity}
+
+%========================================================================================
+% DOCUMENT START
+%========================================================================================
+\begin{document}
+
+%========================================================================================
+% TITLE PAGE
+%========================================================================================
+    \title{\papertitle}
+
+    \author{Omar Iskandarani}
+    \email{info@omariskandarani.com}
+    \affiliation{Independent Researcher, Groningen, The Netherlands}
+    \thanks{
+        ORCID: \url{https://orcid.org/0009-0006-1686-3961}\\
+        DOI: \url{https://doi.org/10.5281/zenodo.16923312}\\
+    }
+
+    \date{\today}
+
+    \vspace{1em}
+
+    \begin{abstract}
+        \textbf{Swirl-String Theory (SST)} is an effective field theory in which matter and interactions arise from knotted swirl strings embedded in a condensed vacuum with a preferred foliation. Relativistic symmetry emerges in the subspace orthogonal to a clock field \(T(x)\): we enforce \(u_\mu \parallel \partial_\mu T\), \(u_\mu u^\mu=-1\), and use the projector \(h_{\mu\nu}=g_{\mu\nu}+u_\mu u_\nu\) to define dynamics on the leaves.
+
+        The action couples a two-form \(B_{\mu\nu}\) with field strength \(H_{\mu\nu\rho}=\partial_{[\mu}B_{\nu\rho]}\) to a non-Abelian swirl gauge sector with connection \(\mathcal{W}_\mu\) and curvature \(\mathcal{W}_{\mu\nu}\). Covariant constraints maintain alignment with \(T(x)\). A topological term \(\mathcal{W}_{\mu\nu}\tilde{\mathcal{W}}^{\mu\nu}\) enforces helicity quantization and stabilizes knotted configurations.
+
+        Masses enter through a calibrated functional fixed by condensate scales and knot invariants; at leading order we fit the constants on \((e^-,p,n)\) and predict the remaining fermion rest masses without introducing free Yukawa parameters. The construction makes explicit contact with analogue-gravity and topological-soliton frameworks \cite{Barcelo2011,Faddeev1997,Volovik2003,Kleckner2013} via the \(H=dB\) sector and helicity-based stability.
+
+    \end{abstract}
+    \maketitle
+
+    \newpage
+
+%========================================================================================
+%   INTRODUCTION
+%========================================================================================
+    \input{sections/01_Intro}
+
+%========================================================================================
+%   FIELDS AND GEOMETRY
+%========================================================================================
+    \input{sections/02_foundational_fields_and_geometry}
+
+%========================================================================================
+%   EFFECTIVE ACTION (CONSISTENT, COVARIANT)
+%========================================================================================
+    \input{sections/03_Effective_Action}
+
+%========================================================================================
+%   EMERGENT MASS FROM SOLITON ENERGY
+%========================================================================================
+    \input{sections/04_Emergent_Mass_from_Soliton_Energy}
+
+%========================================================================================
+%   GAUGE STRUCTURE AND CHARGES
+%========================================================================================
+    \input{sections/05_Gauge_Structure_and_Charge_Assignment}
+
+%========================================================================================
+%   TOPOLOGY AND STABILITY
+%========================================================================================
+    \input{sections/06_Topological_Conservation_and_Stability}
+
+%========================================================================================
+%   CONCLUSION
+%========================================================================================
+    \section{Conclusion}
+
+    This work formulated a consistent, covariant effective field theory (EFT) for a swirl string–string ontology of matter and interactions in a condensed vacuum with a preferred foliation. The action \eqref{eq:EFT} employs bona fide topological densities and separates condensate–amplitude dynamics from emergent swirl–gauge structure, avoiding nonrelativistic insertions. Rest masses enter as soliton energies through the topological functional \eqref{eq:mass-functional} with a single vacuum scale \(\mathcal{M}_0\) and a dimensionless knot factor \(\Xi_K\).
+
+    On the canonical side, a swirl–helicity classifier was implemented on foliation leaves \(\Sigma_t\) using
+    \[
+        a_{\rm SST}(K)=\tfrac12\!\left(\frac{H_c}{H_m}-1\right),\qquad
+        H_c=\sum_{\Omega}\mathbf v\!\cdot\!\boldsymbol\omega,\quad
+        H_m=\sum_{\Omega}\|\boldsymbol\omega\|^2 r^2,
+    \]
+    with Biot–Savart velocity \(\mathbf v\), vorticity \(\boldsymbol\omega=\nabla\times\mathbf v\), and an interior mask \(\Omega\). A convergence sweep \((32^3,48^3,64^3)\) with spacings \((0.10,0.08,0.06)\) established numerical stability; amphichiral controls \((1_1,4_1{\rm z},6_3{\rm z},12a_{1202}{\rm z6})\) pinned \(a_{\rm SST}\approx-0.5\), validating the estimator as a symmetry detector. Within this protocol, the assignments
+    \[
+        u \leftrightarrow 6_2:\ a_{64}=-0.49025,\quad
+        d \leftrightarrow 7_4:\ a_{64}=-0.52299
+    \]
+    emerged as the canonical up/down baselines: \(6_2\) lies in a near–amphichiral band while \(7_4\) exhibits a robust chiral deviation.
+
+    For hadronic mass scaling, the hyperbolic volume of the knot complement was adopted as a canonical, parameter–free topological multiplier,
+    \(\mathcal{V}_K=\Vol_{\!\mathbb{H}}(K)\), entering the core volume \(V_{\rm core}(K)=4\pi^2 r_c^3\,\mathcal{V}_K\).
+    The values \(\mathcal{V}_{6_2}=2.8281\) and \(\mathcal{V}_{7_4}=3.1639\) anchor the \(u/d\) constituents in nucleons and, together with the calibrated \(\rhof\) and \(\vswirl\), set the overall hadronic scale via \(\sum_i V_{\rm core}(K_i)\).
+    In the leptonic sector, masses are captured by the normalized knot factor \(\Xi_K\) (chirality–blind), with \((e,\mu)\) fixing \((\alpha,\beta)\) and higher families following once \(L_K\) and layer indices are specified.
+
+    Outliers in the raw helicity sweep (notably extreme values from geometrically degenerate embeddings) were traced to scale and centering artefacts in \(H_c/H_m\). A canonical harness—centroid normalization, finite–core Biot–Savart kernel, radial regularization in \(H_m\), and arc–length reparameterization—returns these cases to the physical band and preserves the amphichiral pins.
+
+    Altogether, the EFT framework, the helicity–based canonical evidence, and the hyperbolic–volume multiplier yield a coherent SST canon: (i) a covariant action with emergent gauge fields, (ii) a principled classifier selecting \(6_2\) and \(7_4\) for \((u,d)\), and (iii) a topologically grounded mass scaling for hadrons and leptons. These ingredients position the theory for quantitative confrontation with data and systematic extensions to the full spectrum and interaction phenomenology \cite{Barcelo2011,Volovik2003,Faddeev1997,Arnold1998}.
+
+%========================================================================================
+%   DISCUSSION AND OUTLOOK
+%========================================================================================
+    \section{Discussion and Outlook}
+
+    The present formulation integrates a covariant EFT for swirl–strings with a canonical evidence pipeline: a helicity-based classifier on foliation leaves \(\Sigma_t\), topological control via amphichiral pins, and a hyperbolic-volume multiplier for hadronic scaling. Several directions are natural next steps.
+
+    \paragraph{Theory.}
+    (i) Establish Noether identities and conservation laws for helicity transport in the full action \eqref{eq:EFT}, including the role of the Pontryagin density \(\mathcal{W}\tilde{\mathcal{W}}\).
+    (ii) Relate the solitonic energy functional \eqref{eq:mass-functional} to Faddeev–Skyrme–type terms and clarify when Hopf charge bounds control the spectrum.
+    (iii) Prove foliation–gauge independence of \(a_{\rm SST}\) under admissible leaf deformations and boundary conditions.
+    (iv) Extend the emergent swirl–gauge construction to include matter couplings beyond minimal \(D_\mu\), and classify allowed anomaly inflow terms.
+
+    \paragraph{Computation.}
+    (i) Finalize the “canonical harness’’: centroid/RMS normalization, finite-core Biot–Savart kernel, radial regularization in \(H_m\), and arc-length reparameterization.
+    (ii) Implement on-the-fly \(\Vol_{\!\mathbb{H}}(K)\) via ideal triangulations of \(S^3\!\setminus\!K\), with caching to ensure reproducibility; pretabulated values remain acceptable for non-hyperbolic knots (zero volume).
+    (iii) Provide a validated C++/PyBind11 backend for Fourier evaluation, Biot–Savart on grids, and curl, with GPU/FMM acceleration for large sweeps.
+    (iv) Add automated convergence reports over \((32^3,48^3,64^3)\) and adaptive refinement near geometric singularities.
+
+    \paragraph{Phenomenology.}
+    (i) Fix the leptonic normalization \(\Xi_K\) by the \((e,\mu)\) pair and predict \(\tau\) once \(L_{5_1}\) and \(k_{5_1}\) are supplied or canonically inferred; document the \(L_K\) extraction from \texttt{.fseries} (Sec.~\ref{sec:knot-particle-mapping}).
+    (ii) Use \(\mathcal{V}_{6_2}\) and \(\mathcal{V}_{7_4}\) to anchor nucleon scaling and extend to light baryons (\(uds,\,uus,\,dds\)) with explicit uncertainty from the helicity sweep and from \(\rhof,\vswirl\).
+    (iii) Report isotope mass systematics in the toy aggregator (Appendix~E), separating binding-energy systematics from constituent scaling.
+    (iv) Publish falsifiable tables: \(\{a_{\rm SST},\sigma\}\) per knot, \(\Vol_{\!\mathbb{H}}(K)\), \(\Xi_K\), and predicted mass ratios.
+
+    \paragraph{Validation.}
+    (i) Stress-test amphichiral controls and mirror pairs across embeddings to confirm \(a_{\rm SST}\rightarrow -0.5\) within error.
+    (ii) Quantify sensitivity to grid spacing, interior masks, and kernel radius; include ablation studies of each harness component.
+    (iii) Cross-check \(\Vol_{\!\mathbb{H}}(K)\) with independent triangulations to certify topological invariance at the numerical level.
+
+    \paragraph{Data and reproducibility.}
+    Release the Fourier \texttt{.fseries} set, sweep scripts, harness configuration, and derived CSVs (helicity summaries, topological multipliers, mass tables). Provide deterministic seeds and versioned binaries for the bindings.
+
+    \paragraph{Outlook.}
+    The combination of (a) a covariant action with genuine topological densities, (b) a symmetry-sensitive helicity index with convergence control, and (c) a parameter-free hyperbolic multiplier establishes a testable SST canon. With the computational harness completed and \(\Xi_K\) fixed on \((e,\mu)\), the immediate milestones are: (1) an on-the-fly hyperbolic-volume pipeline, (2) publication-quality \((u,d)\) nucleon fits with uncertainty budgets, and (3) a \(\tau\) prediction tied to a documented \(L_{5_1},k_{5_1}\) choice. These steps open a systematic path to the light-hadron spectrum and to targeted experimental signatures of swirl–gauge mediation.
+
+%========================================================================================
+%   BIBLIOGRAPHY
+%========================================================================================
+    \bibliographystyle{unsrt}
+    \bibliography{references}
+
+%========================================================================================
+%   APPENDIX
+%========================================================================================
+    \appendix
+    \input{sections/A1_Calibration_Vacuum_Energy_Density}
+    \input{sections/A2_Derivation_of_the_Core_Swirl_Velocity}
+    \input{sections/A3_Emergent_Gauge_Fields_from_Vortex_Coarse_Graining}
+    \input{sections/A4_Knot_Particle_Mapping}
+    \input{sections/A5_Canonical_Evidence_and_Validation}
+
+
+\end{document}
+

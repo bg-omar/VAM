@@ -25,33 +25,65 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f2a8139-c825-4497-876b-70e1a130c5c3" name="Changes" comment="Add VAM hydrogen and heat transport documents; introduce Master Mass Formula with golden rapidity layer and revised mass evaluation">
-      <change afterPath="$PROJECT_DIR$/ProjectAnalysis/VAM-Canon-0.3.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectAnalysis/VAM-Canon-0.4.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectAnalysis/VAM-Emperic-0.1.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/Unified-v4_Lagrangian_for_a_Vortex_String_Theory.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM_15_Quantum_Gravity/VAM-15-QED_Appendix_CirculationQuantizationVAM_PhaseSchrödinger.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" id="6f2a8139-c825-4497-876b-70e1a130c5c3" name="Changes" comment="Add new VAM Canon extensions; include foundational identities, swirl Hamiltonian, dark-sector pressure law, and experimental protocols">
+      <change afterPath="$PROJECT_DIR$/ProjectAnalysis/vam_canon_refs.bib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/CANON_Swirl_String_Theory.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/Swirl-String-Theory_Lagrangian.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/Swirl_String_TheoryCanon_Pipeline.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/canon_swirl_string_theory.bib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/references.bib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/sections/01_Intro.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/sections/02_foundational_fields_and_geometry.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/sections/03_Effective_Action.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/sections/04_Emergent_Mass_from_Soliton_Energy.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/sections/05_Gauge_Structure_and_Charge_Assignment.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/sections/06_Topological_Conservation_and_Stability.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/sections/A1_Calibration_Vacuum_Energy_Density.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/sections/A2_Derivation_of_the_Core_Swirl_Velocity.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/sections/A3_Emergent_Gauge_Fields_from_Vortex_Coarse_Graining.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/sections/A4_Knot_Particle_Mapping.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/sections/A5_Canonical_Evidence_and_Validation.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_Experiments/Swirl-String-Theory_Pentagonal_Resonance_Hypothesis.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/HelicityCalculationVAMcore.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/canon_evidence.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/canon_evidence_swirl_strings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/fseries/knot.8_17.fseries" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/hyperbolic_volume_from_fseries.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/knot.8_17.fseries" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/vambindings.cp311-win_amd64.pyd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/Unified-v4_Lagrangian_for_a_Vortex_String_Theory.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/sst_lint.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectAnalysis/VAM-Canon-0.1.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-ONGOING-RESEARCHES/BlackBody_fromWein_toNewEM.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-ONGOING-RESEARCHES/QED_VAM_RESEARCH_NOTES.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-ONGOING-RESEARCHES/Torus Knot Theory in VAM Key Insights Applied.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-ONGOING-RESEARCHES/length_dilation.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-ONGOING-RESEARCHES/linktoknot.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/VAM-Canon-0.1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/VAM-Canon-0.1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/equations/VAM_-_1_TimeDilation.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/equations/VAM_-_3_Benchmarking_Relativity.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/equations/VAM_-_4_StandardModel-Lagrangian_VAM.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/equations/VAM_-_5_Periodic_Table.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/equations/VAM_-_6_Core_Foundations_VAM.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/equations/VAM_-_7_Philosophical_Depth_Companion.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/equations/VAM_-_8_FTL_gravitation_LERN.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/equations/VAM_-_Appendix_All.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/equations/extracted_equations.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectAnalysis/VAM-Canon-0.4.tex" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAnalysis/VAM-Canon-0.4.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM-16-20.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM-20_String_Theory/Unified-v4_Lagrangian_for_a_Vortex_String_Theory.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM-20_String_Theory/Unified_Lagrangian_for_a_Vortex_String_Theory-v2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/old/Unified_Lagrangian_for_a_Vortex_String_Theory-v2.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM-20_String_Theory/Unified_Lagrangian_for_a_Vortex_String_Theory-v3.tex" beforeDir="false" afterPath="$PROJECT_DIR$/old/Unified_Lagrangian_for_a_Vortex_String_Theory-v3.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM-20_String_Theory/Unified_Lagrangian_for_a_Vortex_String_Theory.tex" beforeDir="false" afterPath="$PROJECT_DIR$/old/Unified_Lagrangian_for_a_Vortex_String_Theory.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM-20_String_Theory/VAM-20.0_String_Theory.tex" beforeDir="false" afterPath="$PROJECT_DIR$/old/VAM-20.0_String_Theory.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM-20_String_Theory/VAM-20.2.2_String_Theory.tex" beforeDir="false" afterPath="$PROJECT_DIR$/old/VAM-20.2.2_String_Theory.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM-20_String_Theory/VAM-20_String_Theory (1).tex" beforeDir="false" afterPath="$PROJECT_DIR$/old/VAM-20_String_Theory (1).tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM-20_String_Theory/VAM-MASS_FORMULA.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM-20_String_Theory/VAM-MASS_FORMULA.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM-20_String_Theory/Vortex_String_Theory_Mass_Fundamentals.tex" beforeDir="false" afterPath="$PROJECT_DIR$/old/Vortex_String_Theory_Mass_Fundamentals.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_0-4_Einstein_to_Vortex_Fluid.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_5-8_From_Quantum_Constants_to_Galactic_Swirl.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_9-15_spacetime_dark_and_Quantum_Gravity.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_17/knot.8_17.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_17/knot.8_17.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/hypvol_results.csv" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/hypvol_results.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/golden_rapidity_vam.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/golden_rapidity_vam.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_17.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_17.fseries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/FourierSeriesFromKnotPoints.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/FourierSeriesFromKnotPoints.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/HelicityCalculation.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/HelicityCalculation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/helicity2.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/helicity2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/knot.8_17.short" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/Unified-v4_Lagrangian_for_a_Vortex_String_Theory.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/Unified-v4_Lagrangian_for_a_Vortex_String_Theory.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/VAM-00_front_page.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/VAM-00_front_page.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/VAM-Canon-0.4.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/VAM-Canon-0.4.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/golden_rapidity_vam.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/golden_rapidity_vam.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vambindings.cp311-win_amd64.pyd" beforeDir="false" afterPath="$PROJECT_DIR$/vambindings.cp311-win_amd64.pyd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vamstyle.sty" beforeDir="false" afterPath="$PROJECT_DIR$/vamstyle.sty" afterDir="false" />
     </list>
-    <list id="4afbe360-edfd-4722-ab75-c722c883a8a6" name="DoNotCommit" comment="DoNotCommit" />
+    <list id="4afbe360-edfd-4722-ab75-c722c883a8a6" name="DoNotCommit" comment="Add new files and refactor existing ones for VAM framework; update README and data paths" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="false" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,6 +95,7 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -99,6 +132,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/anaconda3/envs/VAM/Lib/encodings/cp1252.py" root0="SKIP_INSPECTION" />
     <setting file="file://$USER_HOME$/anaconda3/envs/VAM/Lib/site-packages/numpy/_core/fromnumeric.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectColorInfo">{
@@ -110,10 +144,9 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
-    <option name="autoscrollFromSource" value="true" />
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-    <option name="sortKey" value="BY_TIME_DESCENDING" />
+    <option name="autoscrollFromSource" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
+    <option name="hideEmptyMiddlePackages" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
+    <option name="showLibraryContents" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
@@ -125,6 +158,7 @@
     "BibTeX.AntiGravity-DualityEM_lazer_c_e bibliography.executor": "Run",
     "BibTeX.AntiGravity_WarpDrive bibliography.executor": "Run",
     "BibTeX.Appendix_WarpDrive bibliography.executor": "Run",
+    "BibTeX.CANON_Swirl_String_Theory bibliography.executor": "Run",
     "BibTeX.EMlagrangian.executor": "Run",
     "BibTeX.EXPERIMENTAL PROPOSITION_lazer_c_e bibliography.executor": "Run",
     "BibTeX.LagrangianGravityElectromagnetism bibliography.executor": "Run",
@@ -135,6 +169,8 @@
     "BibTeX.PhotonVortex bibliography.executor": "Run",
     "BibTeX.PhtonVortex bibliography.executor": "Run",
     "BibTeX.Short_PhotonVortex.executor": "Run",
+    "BibTeX.Swirl-String-Theory_Lagrangian bibliography.executor": "Run",
+    "BibTeX.Unified-v4_Lagrangian_for_a_Vortex_String_Theory bibliography.executor": "Run",
     "BibTeX.VAM-0-Analogies.executor": "Run",
     "BibTeX.VAM-0-Einstein_and_the_Æther bibliography.executor": "Run",
     "BibTeX.VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm bibliography.executor": "Run",
@@ -153,6 +189,7 @@
     "BibTeX.VAM-8.5-Master_Formula.executor": "Run",
     "BibTeX.VAM-8.executor": "Run",
     "BibTeX.VAM-9-MilkyWay_as_a_Chiral_Swirl-Knot_Network.executor": "Run",
+    "BibTeX.VAM-Canon-0.4 bibliography.executor": "Run",
     "BibTeX.VAM-Philosophical_Depth_Companion.executor": "Run",
     "BibTeX.VAM_15_Quantum_Gravity bibliography.executor": "Run",
     "BibTeX.Warpdrive bibliography.executor": "Run",
@@ -179,6 +216,7 @@
     "LaTeX.Appendix_PhotonAsDipole.executor": "Run",
     "LaTeX.Appendix_WarpDrive.executor": "Run",
     "LaTeX.Appendix_X-filesExplanationsFoundationalPhysicsAnomalies.executor": "Run",
+    "LaTeX.CANON_Swirl_String_Theory.executor": "Run",
     "LaTeX.EXPERIMENTAL PROPOSITION_lazer_c_e.executor": "Run",
     "LaTeX.Knot_Logic_Gates.executor": "Run",
     "LaTeX.Knot_Taxonomy.executor": "Run",
@@ -190,6 +228,7 @@
     "LaTeX.ONLINE-From_Quantum_Constants_to_Galactic_Swirl.executor": "Run",
     "LaTeX.PhotonVortex.executor": "Run",
     "LaTeX.PhtonVortex.executor": "Run",
+    "LaTeX.Swirl-String-Theory_Lagrangian.executor": "Run",
     "LaTeX.TimeDilationHydrogen.executor": "Run",
     "LaTeX.Unified-v4_Lagrangian_for_a_Vortex_String_Theory.executor": "Run",
     "LaTeX.VAM-0-Analogies.executor": "Run",
@@ -251,6 +290,7 @@
     "Python.FourierSeriesFromKnotPoints.executor": "Run",
     "Python.Helicity.executor": "Run",
     "Python.HelicityCalculation.executor": "Run",
+    "Python.HelicityCalculationVAMcore.executor": "Run",
     "Python.MagneticCircleRodin.executor": "Run",
     "Python.Masses_Topology.executor": "Run",
     "Python.MoleculeWeight.executor": "Run",
@@ -263,14 +303,18 @@
     "Python.QuantumProcessing4.executor": "Run",
     "Python.QuantumProcessing5.executor": "Run",
     "Python.Rodin_magnetic_fields.executor": "Run",
+    "Python.Swirl_String_TheoryCanon_Pipeline.executor": "Run",
     "Python.TemporalOntology.executor": "Run",
     "Python.TimeConstruct.executor": "Run",
+    "Python.VAM-MASS_FORMULA.executor": "Run",
     "Python.all_knots.executor": "Run",
     "Python.autoknot.executor": "Run",
     "Python.batch_fseries_vam (1).executor": "Run",
     "Python.batch_fseries_vam.executor": "Run",
     "Python.bowl.executor": "Run",
     "Python.bubble.executor": "Run",
+    "Python.canon_evidence.executor": "Run",
+    "Python.canon_evidence_swirl_strings.executor": "Run",
     "Python.canonical_vam_chsh.executor": "Run",
     "Python.change_bib_to_footnoting.executor": "Run",
     "Python.classify_particles.executor": "Run",
@@ -282,6 +326,7 @@
     "Python.doublestarship.executor": "Run",
     "Python.doublestarshipteste.executor": "Run",
     "Python.fieldpressure.executor": "Run",
+    "Python.fseries.executor": "Run",
     "Python.get_hyperbollic_Mass_Number.executor": "Run",
     "Python.golden_rapidity_demo.executor": "Run",
     "Python.halfmoon_torus.executor": "Run",
@@ -306,6 +351,7 @@
     "Python.torus.executor": "Run",
     "Python.torusspirals.executor": "Run",
     "Python.vam_fseries_gui.executor": "Run",
+    "Python.vam_lab_gui.executor": "Run",
     "Python.vam_qc_chsh.executor": "Run",
     "Python.vam_qc_chsh_both.executor": "Run",
     "Python.vam_qc_chsh_both_checked.executor": "Run",
@@ -314,6 +360,7 @@
     "Python.vam_vs_gr_potential_plot.executor": "Run",
     "Python.vamcore.executor": "Run",
     "Python.vamcore2.executor": "Run",
+    "Python.vamcore_batch_hypvol_from_fseries.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -327,7 +374,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/workspace/solo_projects/VAM/VAM-20_String_Theory",
+    "last_opened_file_path": "C:/workspace/projects/VAM/VAM-20_String_Theory",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -336,35 +383,35 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.47126436",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "TexifyConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
-      <console-settings module-name="VAM" is-module-sdk="true">
-        <option name="myUseModuleSdk" value="true" />
+      <console-settings module-name="VAM" is-module-sdk="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$">
+        <option name="myUseModuleSdk" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
         <option name="myModuleName" value="VAM" />
       </console-settings>
     </option>
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\workspace\solo_projects\VAM\VAM-20_String_Theory" />
-      <recent name="C:\workspace\solo_projects\VAM\VAM_15_Quantum_Gravity" />
-      <recent name="C:\workspace\solo_projects\VAM\VAM_PYTHON_SIMULATOINS" />
-      <recent name="C:\workspace\projects\VAM\VAM_PYTHON_SIMULATOINS" />
-      <recent name="C:\workspace\projects\VAM\VAM_Experiments" />
+      <recent name="C:\workspace\projects\VAM\VAM-20_String_Theory" />
+      <recent name="C:\workspace\projects\VAM\VAM_PYTHON_SIMULATOINS\VAM_Fseries\knots\8_17" />
+      <recent name="C:\workspace\projects\VAM\VAM_PYTHON_SIMULATOINS\py_knots\Classify_Particles" />
+      <recent name="C:\workspace\projects\VAM\VAM_PYTHON_SIMULATOINS\py_knots\fseries" />
+      <recent name="C:\workspace\projects\VAM\VAM_PYTHON_SIMULATOINS\py_knots" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\workspace\solo_projects\VAM\VAM_PYTHON_SIMULATOINS" />
-      <recent name="C:\workspace\projects\VAM\VAM-ONGOING-RESEARCHES" />
-      <recent name="C:\workspace\projects\VAM\out" />
-      <recent name="C:\workspace\projects\VAM\out\older" />
-      <recent name="C:\workspace\projects\VAM\VAM_PYTHON_SIMULATOINS" />
+      <recent name="C:\workspace\projects\VAM" />
+      <recent name="C:\workspace\projects\VAM\VAM-20_String_Theory\old" />
+      <recent name="C:\workspace\projects\VAM\VAM_Experiments" />
+      <recent name="C:\workspace\projects\VAM\VAM-20_String_Theory" />
+      <recent name="C:\workspace\projects\VAM\VAM-20_String_Theory\sections" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="LaTeX.Swirl-String-Theory_Lagrangian">
     <configuration name="AntiGravity-DualityEM_lazer_c_e bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" folderName="EXPERIMENTS">
       <texify-bibtex>
         <compiler>BIBTEX</compiler>
@@ -389,13 +436,37 @@
       </texify-bibtex>
       <method v="2" />
     </configuration>
-    <configuration name="Unified-v4_Lagrangian_for_a_Vortex_String_Theory bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+    <configuration name="CANON_Swirl_String_Theory bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify-bibtex>
-        <compiler>BIBER</compiler>
+        <compiler>BIBTEX</compiler>
         <compiler-path />
         <compiler-arguments />
         <envs />
-        <main-file>$PROJECT_DIR$/VAM-20_String_Theory/Unified-v4_Lagrangian_for_a_Vortex_String_Theory.tex</main-file>
+        <main-file>$PROJECT_DIR$/VAM-20_String_Theory/CANON_Swirl_String_Theory.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
+        <latex-distribution>MIKTEX</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration name="Swirl-String-Theory_Lagrangian bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler>BIBTEX</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/VAM-20_String_Theory/Swirl-String-Theory_Lagrangian.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
+        <latex-distribution>MIKTEX</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration name="Unified-v4_Lagrangian_for_a_Vortex_String_Theory bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler>BIBTEX</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/old/Unified-v4_Lagrangian_for_a_Vortex_String_Theory.tex</main-file>
         <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
         <latex-distribution>MIKTEX</latex-distribution>
       </texify-bibtex>
@@ -413,31 +484,7 @@
       </texify-bibtex>
       <method v="2" />
     </configuration>
-    <configuration name="VAM-17.4 Schrodinger bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-bibtex>
-        <compiler>BIBTEX</compiler>
-        <compiler-path />
-        <compiler-arguments />
-        <envs />
-        <main-file>$PROJECT_DIR$/VAM_17_shorts/VAM-17.4 Schrodinger.tex</main-file>
-        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
-        <latex-distribution>MIKTEX</latex-distribution>
-      </texify-bibtex>
-      <method v="2" />
-    </configuration>
-    <configuration name="VAM-8.5-Master_Formula bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-bibtex>
-        <compiler>BIBTEX</compiler>
-        <compiler-path />
-        <compiler-arguments />
-        <envs />
-        <main-file>$PROJECT_DIR$/VAM_8_MASTER_Paper/VAM-8.5-Master_Formula.tex</main-file>
-        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
-        <latex-distribution>MIKTEX</latex-distribution>
-      </texify-bibtex>
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+    <configuration default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify-bibtex>
         <compiler />
         <compiler-path />
@@ -446,18 +493,6 @@
         <main-file />
         <aux-dir />
         <latex-distribution>PROJECT_SDK</latex-distribution>
-      </texify-bibtex>
-      <method v="2" />
-    </configuration>
-    <configuration name="golden_rapidity_vam bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-bibtex>
-        <compiler>BIBTEX</compiler>
-        <compiler-path />
-        <compiler-arguments />
-        <envs />
-        <main-file>$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/golden_rapidity_vam.tex</main-file>
-        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
-        <latex-distribution>MIKTEX</latex-distribution>
       </texify-bibtex>
       <method v="2" />
     </configuration>
@@ -473,289 +508,93 @@
       </texify-bibtex>
       <method v="2" />
     </configuration>
-    <configuration name="phi_asinh_note bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-bibtex>
-        <compiler>BIBTEX</compiler>
-        <compiler-path />
-        <compiler-arguments />
-        <envs />
-        <main-file>$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/phi_asinh_note.tex</main-file>
-        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
-        <latex-distribution>MIKTEX</latex-distribution>
-      </texify-bibtex>
-      <method v="2" />
-    </configuration>
-    <configuration name="6-Core_Foundations_VAM" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" folderName="LaTeX">
-      <texify>
-        <compiler>PDFLATEX</compiler>
-        <compiler-path />
-        <pdf-viewer>none</pdf-viewer>
-        <require-focus>false</require-focus>
-        <viewer-command />
-        <compiler-arguments />
-        <envs />
-        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
-        <before-run-command />
-        <main-file>$PROJECT_DIR$/VAM - Appendix All/VAM-Core_Foundations.tex</main-file>
-        <output-path>$PROJECT_DIR$/out</output-path>
-        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
-        <compile-twice>false</compile-twice>
-        <output-format>PDF</output-format>
-        <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>false</has-been-run>
-        <bib-run-config>[]</bib-run-config>
-        <makeindex-run-config>[]</makeindex-run-config>
-      </texify>
-      <method v="2" />
-    </configuration>
-    <configuration name="7-Philosophical_Depth_Companion" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" folderName="LaTeX">
-      <texify>
-        <compiler>PDFLATEX</compiler>
-        <compiler-path />
-        <pdf-viewer>none</pdf-viewer>
-        <require-focus>false</require-focus>
-        <viewer-command />
-        <compiler-arguments />
-        <envs />
-        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
-        <before-run-command />
-        <main-file>$PROJECT_DIR$/VAM - Appendix All/VAM-Philosophical_Depth.tex</main-file>
-        <output-path>$PROJECT_DIR$/out</output-path>
-        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
-        <compile-twice>false</compile-twice>
-        <output-format>PDF</output-format>
-        <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>false</has-been-run>
-        <bib-run-config>[]</bib-run-config>
-        <makeindex-run-config>[]</makeindex-run-config>
-      </texify>
-      <method v="2" />
-    </configuration>
-    <configuration name="AntiGravity-DualityEM_lazer_c_e" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" folderName="LaTeX">
+    <configuration name="CANON_Swirl_String_Theory" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$">
       <texify>
         <compiler>PDFLATEX</compiler>
         <compiler-path />
         <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
-        <require-focus>false</require-focus>
+        <require-focus>$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$</require-focus>
         <viewer-command />
         <compiler-arguments />
         <envs />
         <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
         <before-run-command />
-        <main-file>$PROJECT_DIR$/VAM_Experiments/AntiGravity-DualityEM_lazer_c_e.tex</main-file>
+        <main-file>$PROJECT_DIR$/VAM-20_String_Theory/CANON_Swirl_String_Theory.tex</main-file>
         <output-path>$PROJECT_DIR$/out</output-path>
         <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
         <compile-twice>false</compile-twice>
         <output-format>PDF</output-format>
         <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>false</has-been-run>
-        <bib-run-config>[BibTeX.AntiGravity-DualityEM_lazer_c_e bibliography]</bib-run-config>
+        <has-been-run>$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$</has-been-run>
+        <bib-run-config>[BibTeX.CANON_Swirl_String_Theory bibliography]</bib-run-config>
         <makeindex-run-config>[]</makeindex-run-config>
       </texify>
       <method v="2" />
     </configuration>
-    <configuration name="Appendix_X-filesExplanationsFoundationalPhysicsAnomalies" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" folderName="LaTeX">
-      <texify>
-        <compiler>PDFLATEX</compiler>
-        <compiler-path />
-        <pdf-viewer>none</pdf-viewer>
-        <require-focus>false</require-focus>
-        <viewer-command />
-        <compiler-arguments />
-        <envs />
-        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
-        <before-run-command />
-        <main-file>$PROJECT_DIR$/VAM - Appendix All/Appendix_X-filesExplanationsFoundationalPhysicsAnomalies.tex</main-file>
-        <output-path>$PROJECT_DIR$/out</output-path>
-        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
-        <compile-twice>false</compile-twice>
-        <output-format>PDF</output-format>
-        <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>false</has-been-run>
-        <bib-run-config>[]</bib-run-config>
-        <makeindex-run-config>[]</makeindex-run-config>
-      </texify>
-      <method v="2" />
-    </configuration>
-    <configuration name="VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" folderName="LaTeX">
+    <configuration name="Swirl-String-Theory_Lagrangian" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$">
       <texify>
         <compiler>PDFLATEX</compiler>
         <compiler-path />
         <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
-        <require-focus>false</require-focus>
+        <require-focus>$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$</require-focus>
         <viewer-command />
         <compiler-arguments />
         <envs />
         <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
         <before-run-command />
-        <main-file>$PROJECT_DIR$/VAM_0_Einstein_to_Vortex_Fluid/main.tex</main-file>
+        <main-file>$PROJECT_DIR$/VAM-20_String_Theory/Swirl-String-Theory_Lagrangian.tex</main-file>
         <output-path>$PROJECT_DIR$/out</output-path>
         <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
         <compile-twice>false</compile-twice>
         <output-format>PDF</output-format>
         <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>false</has-been-run>
-        <bib-run-config>[]</bib-run-config>
+        <has-been-run>$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$</has-been-run>
+        <bib-run-config>[BibTeX.Swirl-String-Theory_Lagrangian bibliography]</bib-run-config>
         <makeindex-run-config>[]</makeindex-run-config>
       </texify>
       <method v="2" />
     </configuration>
-    <configuration name="VAM-15-QED_Appendix_CirculationQuantizationVAM_PhaseSchrödinger" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+    <configuration name="Unified-v4_Lagrangian_for_a_Vortex_String_Theory" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$">
       <texify>
         <compiler>PDFLATEX</compiler>
         <compiler-path />
         <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
-        <require-focus>true</require-focus>
+        <require-focus>$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$</require-focus>
         <viewer-command />
         <compiler-arguments />
         <envs />
         <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
         <before-run-command />
-        <main-file>$PROJECT_DIR$/VAM_15_Quantum_Gravity/VAM-15-QED_Appendix_CirculationQuantizationVAM_PhaseSchrödinger.tex</main-file>
+        <main-file>$PROJECT_DIR$/old/Unified-v4_Lagrangian_for_a_Vortex_String_Theory.tex</main-file>
         <output-path>$PROJECT_DIR$/out</output-path>
         <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
         <compile-twice>false</compile-twice>
         <output-format>PDF</output-format>
         <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>true</has-been-run>
-        <bib-run-config>[]</bib-run-config>
+        <has-been-run>$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$</has-been-run>
+        <bib-run-config>[BibTeX.Unified-v4_Lagrangian_for_a_Vortex_String_Theory bibliography]</bib-run-config>
         <makeindex-run-config>[]</makeindex-run-config>
       </texify>
       <method v="2" />
     </configuration>
-    <configuration name="VAM-17.4 Schrodinger" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+    <configuration name="VAM-00_front_page" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$">
       <texify>
         <compiler>PDFLATEX</compiler>
         <compiler-path />
         <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
-        <require-focus>true</require-focus>
+        <require-focus>$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$</require-focus>
         <viewer-command />
         <compiler-arguments />
         <envs />
         <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
         <before-run-command />
-        <main-file>$PROJECT_DIR$/VAM_17_shorts/VAM-17.4 Schrodinger.tex</main-file>
+        <main-file>$PROJECT_DIR$/VAM_0_Analogies/VAM-00_front_page.tex</main-file>
         <output-path>$PROJECT_DIR$/out</output-path>
         <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
         <compile-twice>false</compile-twice>
         <output-format>PDF</output-format>
         <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>true</has-been-run>
-        <bib-run-config>[BibTeX.VAM-17.4 Schrodinger bibliography]</bib-run-config>
-        <makeindex-run-config>[]</makeindex-run-config>
-      </texify>
-      <method v="2" />
-    </configuration>
-    <configuration name="VAM-17.5 Heat_Transport" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
-      <texify>
-        <compiler>PDFLATEX</compiler>
-        <compiler-path />
-        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
-        <require-focus>true</require-focus>
-        <viewer-command />
-        <compiler-arguments />
-        <envs />
-        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
-        <before-run-command />
-        <main-file>$PROJECT_DIR$/VAM_17_shorts/VAM-17.5 Heat_Transport.tex</main-file>
-        <output-path>$PROJECT_DIR$/out</output-path>
-        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
-        <compile-twice>false</compile-twice>
-        <output-format>PDF</output-format>
-        <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>true</has-been-run>
-        <bib-run-config>[]</bib-run-config>
-        <makeindex-run-config>[]</makeindex-run-config>
-      </texify>
-      <method v="2" />
-    </configuration>
-    <configuration name="VAM-8-Master_Paper" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" folderName="LaTeX">
-      <texify>
-        <compiler>PDFLATEX</compiler>
-        <compiler-path />
-        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
-        <require-focus>false</require-focus>
-        <viewer-command />
-        <compiler-arguments />
-        <envs />
-        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
-        <before-run-command />
-        <main-file>$PROJECT_DIR$/VAM_8_MASTER_Paper/VAM-8-Master_Paper.tex</main-file>
-        <output-path>$PROJECT_DIR$/out</output-path>
-        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
-        <compile-twice>false</compile-twice>
-        <output-format>PDF</output-format>
-        <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>false</has-been-run>
-        <bib-run-config>[]</bib-run-config>
-        <makeindex-run-config>[]</makeindex-run-config>
-      </texify>
-      <method v="2" />
-    </configuration>
-    <configuration name="VAM-8.5-Master_Formula" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
-      <texify>
-        <compiler>PDFLATEX</compiler>
-        <compiler-path />
-        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
-        <require-focus>true</require-focus>
-        <viewer-command />
-        <compiler-arguments />
-        <envs />
-        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
-        <before-run-command />
-        <main-file>$PROJECT_DIR$/VAM_8_MASTER_Paper/VAM-8.5-Master_Formula.tex</main-file>
-        <output-path>$PROJECT_DIR$/out</output-path>
-        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
-        <compile-twice>false</compile-twice>
-        <output-format>PDF</output-format>
-        <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>true</has-been-run>
-        <bib-run-config>[BibTeX.VAM-8.5-Master_Formula bibliography]</bib-run-config>
-        <makeindex-run-config>[]</makeindex-run-config>
-      </texify>
-      <method v="2" />
-    </configuration>
-    <configuration name="VAM-Canon-0.1" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
-      <texify>
-        <compiler>PDFLATEX</compiler>
-        <compiler-path />
-        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
-        <require-focus>true</require-focus>
-        <viewer-command />
-        <compiler-arguments />
-        <envs />
-        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
-        <before-run-command />
-        <main-file>$PROJECT_DIR$/ProjectAnalysis/VAM-Canon-0.4.tex</main-file>
-        <output-path>$PROJECT_DIR$/out</output-path>
-        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
-        <compile-twice>false</compile-twice>
-        <output-format>PDF</output-format>
-        <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>true</has-been-run>
-        <bib-run-config>[]</bib-run-config>
-        <makeindex-run-config>[]</makeindex-run-config>
-      </texify>
-      <method v="2" />
-    </configuration>
-    <configuration name="VAM_Full_Lagrangian" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" folderName="LaTeX">
-      <texify>
-        <compiler>PDFLATEX</compiler>
-        <compiler-path />
-        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
-        <require-focus>false</require-focus>
-        <viewer-command />
-        <compiler-arguments />
-        <envs />
-        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
-        <before-run-command />
-        <main-file>$PROJECT_DIR$/VAM_17_shorts/VAM_Full_Lagrangian.tex</main-file>
-        <output-path>$PROJECT_DIR$/out</output-path>
-        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
-        <compile-twice>false</compile-twice>
-        <output-format>PDF</output-format>
-        <latex-distribution>MIKTEX</latex-distribution>
-        <has-been-run>false</has-been-run>
+        <has-been-run>$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$</has-been-run>
         <bib-run-config>[]</bib-run-config>
         <makeindex-run-config>[]</makeindex-run-config>
       </texify>
@@ -790,43 +629,32 @@
       <item itemvalue="BibTeX.AntiGravity_WarpDrive bibliography" />
       <item itemvalue="BibTeX.VAM-Core_Foundations_VAM" />
       <item itemvalue="BibTeX.VAM-Philosophical_Depth_Companion" />
-      <item itemvalue="BibTeX.golden_rapidity_vam bibliography" />
-      <item itemvalue="BibTeX.phi_asinh_note bibliography" />
-      <item itemvalue="BibTeX.VAM-8.5-Master_Formula bibliography" />
-      <item itemvalue="BibTeX.VAM-17.4 Schrodinger bibliography" />
+      <item itemvalue="BibTeX.CANON_Swirl_String_Theory bibliography" />
+      <item itemvalue="BibTeX.Swirl-String-Theory_Lagrangian bibliography" />
       <item itemvalue="BibTeX.Unified-v4_Lagrangian_for_a_Vortex_String_Theory bibliography" />
-      <item itemvalue="LaTeX.Appendix_X-filesExplanationsFoundationalPhysicsAnomalies" />
-      <item itemvalue="LaTeX.6-Core_Foundations_VAM" />
-      <item itemvalue="LaTeX.7-Philosophical_Depth_Companion" />
-      <item itemvalue="LaTeX.VAM-0-From_Einstein_to_the_Vortex_Fluid_paradigm" />
-      <item itemvalue="LaTeX.VAM-8-Master_Paper" />
-      <item itemvalue="LaTeX.VAM_Full_Lagrangian" />
-      <item itemvalue="LaTeX.AntiGravity-DualityEM_lazer_c_e" />
-      <item itemvalue="LaTeX.VAM-15-QED_Appendix_CirculationQuantizationVAM_PhaseSchrödinger" />
-      <item itemvalue="LaTeX.VAM-Canon-0.1" />
-      <item itemvalue="LaTeX.VAM-17.5 Heat_Transport" />
-      <item itemvalue="LaTeX.VAM-17.4 Schrodinger" />
-      <item itemvalue="LaTeX.VAM-8.5-Master_Formula" />
+      <item itemvalue="LaTeX.CANON_Swirl_String_Theory" />
+      <item itemvalue="LaTeX.Swirl-String-Theory_Lagrangian" />
+      <item itemvalue="LaTeX.Unified-v4_Lagrangian_for_a_Vortex_String_Theory" />
+      <item itemvalue="LaTeX.VAM-00_front_page" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="LaTeX.VAM-15-QED_Appendix_CirculationQuantizationVAM_PhaseSchrödinger" />
-        <item itemvalue="LaTeX.VAM-Canon-0.1" />
-        <item itemvalue="LaTeX.VAM-8.5-Master_Formula" />
-        <item itemvalue="LaTeX.VAM-17.5 Heat_Transport" />
-        <item itemvalue="LaTeX.VAM-17.4 Schrodinger" />
+        <item itemvalue="LaTeX.Swirl-String-Theory_Lagrangian" />
+        <item itemvalue="LaTeX.CANON_Swirl_String_Theory" />
+        <item itemvalue="LaTeX.VAM-00_front_page" />
+        <item itemvalue="LaTeX.Unified-v4_Lagrangian_for_a_Vortex_String_Theory" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-IU-252.23892.409" />
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.23892.409" />
       </set>
     </attachedChunks>
   </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
+    <task active="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" id="Default" summary="Default task">
       <changelist id="6f2a8139-c825-4497-876b-70e1a130c5c3" name="Changes" comment="" />
       <changelist id="4afbe360-edfd-4722-ab75-c722c883a8a6" name="DoNotCommit" comment="" />
       <created>1751631523297</created>
@@ -1124,7 +952,7 @@
       <updated>1754588826510</updated>
     </task>
     <task id="LOCAL-00029" summary="Refactor file structure: rename benchmark scripts for clarity; add new quantum processing scripts and documentation files for golden ratio calculations and VAM analysis">
-      <option name="closed" value="true" />
+      <option name="closed" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
       <created>1755011217059</created>
       <option name="number" value="00029" />
       <option name="presentableId" value="LOCAL-00029" />
@@ -1132,7 +960,7 @@
       <updated>1755011217059</updated>
     </task>
     <task id="LOCAL-00030" summary="Refactor file structure: rename multiple files for clarity and consistency; add new 3D knot rendering script and update file paths in hyperbollic mass number calculation script">
-      <option name="closed" value="true" />
+      <option name="closed" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
       <created>1755188370748</created>
       <option name="number" value="00030" />
       <option name="presentableId" value="LOCAL-00030" />
@@ -1140,7 +968,7 @@
       <updated>1755188370748</updated>
     </task>
     <task id="LOCAL-00031" summary="Update .gitignore: remove specific .idea directory entry and add general .idea/* entry for better IDE configuration management">
-      <option name="closed" value="true" />
+      <option name="closed" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
       <created>1755188750907</created>
       <option name="number" value="00031" />
       <option name="presentableId" value="LOCAL-00031" />
@@ -1148,14 +976,22 @@
       <updated>1755188750907</updated>
     </task>
     <task id="LOCAL-00032" summary="Add VAM hydrogen and heat transport documents; introduce Master Mass Formula with golden rapidity layer and revised mass evaluation">
-      <option name="closed" value="true" />
+      <option name="closed" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
       <created>1755616506733</created>
       <option name="number" value="00032" />
       <option name="presentableId" value="LOCAL-00032" />
       <option name="project" value="LOCAL" />
       <updated>1755616506733</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00037" summary="Add new VAM Canon extensions; include foundational identities, swirl Hamiltonian, dark-sector pressure law, and experimental protocols">
+      <option name="closed" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
+      <created>1755837653213</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1755837653213</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1217,6 +1053,16 @@
     <MESSAGE value="Refactor file structure: rename multiple files for clarity and consistency; add new 3D knot rendering script and update file paths in hyperbollic mass number calculation script" />
     <MESSAGE value="Update .gitignore: remove specific .idea directory entry and add general .idea/* entry for better IDE configuration management" />
     <MESSAGE value="Add VAM hydrogen and heat transport documents; introduce Master Mass Formula with golden rapidity layer and revised mass evaluation" />
+    <MESSAGE value="Add new files and refactor existing ones for VAM framework; update README and metadata" />
+    <MESSAGE value="DoNotCommit" />
+    <MESSAGE value="Add new files and refactor existing ones for VAM framework; update README and data paths" />
+    <MESSAGE value="Add new references and documents for VAM framework; enhance existing files with updated metadata and structure" />
+    <MESSAGE value="Update VAM documents and add new mass formula implementation; enhance metadata and structure" />
+    <MESSAGE value="Started Vortex String Theory" />
+    <MESSAGE value="Refactor file structure and add new utilities for VAM framework; rename and organize files, introduce new scripts for hyperbolic volume calculations" />
+    <MESSAGE value="Update VAM mass formula implementation and add new Lagrangian document; enhance mass calculations and introduce new theoretical framework for vortex string theory" />
+    <MESSAGE value="Add new CSV files for VAM framework; include claims, contradictions, constants, equations, and galactic rotation candidates" />
+    <MESSAGE value="Add new VAM Canon extensions; include foundational identities, swirl Hamiltonian, dark-sector pressure law, and experimental protocols" />
     <option name="LAST_COMMIT_MESSAGE" value="Add VAM hydrogen and heat transport documents; introduce Master Mass Formula with golden rapidity layer and revised mass evaluation" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>

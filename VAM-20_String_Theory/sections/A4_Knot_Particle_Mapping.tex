@@ -1,0 +1,103 @@
+%===============================================================================
+% APPENDIX D: Knot–Particle Mapping and Mass Functional Calibration
+%===============================================================================
+\section*{Appendix D: Knot–Particle Mapping and Mass Functional Calibration}
+\addcontentsline{toc}{section}{Appendix D: Knot–Particle Mapping and Mass Functional Calibration}
+\label{sec:knot-particle-mapping}
+
+\subsection*{D.1 Topological Energy Factor \texorpdfstring{\(\Xi_K\)}{XiK}}
+From Eq.~\eqref{eq:mass-functional},
+\(m_K^{(\mathrm{sol})}=\mathcal{M}_0\,\Xi_K\),
+with a \emph{dimensionless, normalized} topological factor
+\begin{equation}
+ \Xi_K \;\equiv\; \frac{\mathcal{T}_K}{\mathcal{T}_{0_1}}\;\varphi^{-2k_K},
+ \qquad \mathcal{T}_K \;\equiv\; \alpha\,C(K) + \beta\,L(K).
+ \label{eq:Xi-normalized}
+\end{equation}
+Here \(C(K)\) is crossing number, \(L(K)\) a dimensionless ropelength-like tangle measure, and \(\varphi^{-2k_K}\) implements Golden-Layer suppression for layer index \(k_K\) (Sec.~\ref{sec:golden_layer}). This normalization fixes
+\(\Xi_{0_1}=1\) for the electron when \(k_{0_1}=0\), so \(\mathcal{M}_0=m_e\) in natural units (\(\hbar=c=1\)).
+
+\paragraph{Constraints.}
+Take \(\alpha,\beta>0\) so that \(\mathcal{T}_K\) increases with either complexity measure.
+Chiral partners share \(C,L\) but differ by chirality label in the gauge map; \(\Xi_K\) is chirality-blind.
+
+\subsection*{D.2 Minimal particle assignments (lepton example)}
+A concrete lepton triplet scaffold consistent with the gauge-map in the main text is:
+\begin{center}
+ \begin{tabular}{lll}
+ \toprule
+ Particle & Knot \(K\) & Notes \\
+ \midrule
+        \(e^-\)  & Unknot \(0_1\) & Baseline; set \(k_{0_1}=0\), \(\Xi_{0_1}=1\) \\
+        \(\mu^-\) & Trefoil \(3_1\) & First nontrivial chiral knot; \(k_{3_1}\in\mathbb{Z}\) \\
+        \(\tau^-\) & Cinquefoil \(5_1\) & Higher chiral torus knot; \(k_{5_1}\in\mathbb{Z}\) \\
+        \bottomrule
+    \end{tabular}
+\end{center}
+(Quarks and composites can be added analogously; the gauge-charge map uses separate integer invariants and does not alter \(\Xi_K\).)
+
+\subsection*{D.3 Two-point calibration (\texorpdfstring{\(\alpha,\beta\)}{alpha,beta}) on \texorpdfstring{\(e,\mu\)}{e,mu}}
+Let the adopted (dimensionless) tangle values be
+\(L(0_1)=L_0\) and \(L(3_1)=L_3\).
+From \eqref{eq:Xi-normalized} with \(k_{0_1}=0\),
+\[
+    \Xi_{0_1}=\frac{\beta L_0}{\beta L_0}=1,
+    \quad\Rightarrow\quad \mathcal{M}_0=m_e.
+\]
+For the muon,
+\[
+    \frac{m_\mu}{m_e}
+    = \Xi_{3_1}
+    = \frac{\alpha\,C(3_1)+\beta\,L_3}{\beta L_0}\;\varphi^{-2k_{3_1}}
+    = \frac{3\alpha+\beta L_3}{\beta L_0}\;\varphi^{-2k_{3_1}}.
+\]
+Solving for \(\alpha\) in terms of a chosen \(\beta\) and layer \(k_{3_1}\):
+\begin{equation}
+    \alpha
+    \;=\; \frac{\beta}{3}\Bigg[\frac{m_\mu}{m_e}\,L_0\,\varphi^{2k_{3_1}} - L_3\Bigg].
+    \label{eq:alpha-solution}
+\end{equation}
+
+\paragraph{Numerical example (provisional \(L\) values).}
+With \(L_0=7.64\), \(L_3=16.4\), \(k_{3_1}=0\) and \(\beta=0.1\),
+and \(m_\mu/m_e\simeq 206.768\),
+one finds \(\alpha \approx 52.14\).
+This replaces the earlier \(\alpha=1\) guess and reproduces the muon mass by construction.
+Alternatively, part of \(\alpha\) may be absorbed into Golden-Layer physics by taking \(k_{3_1}=1\) and re-evaluating \eqref{eq:alpha-solution}.
+
+\subsection*{D.4 One-shot prediction: \texorpdfstring{\(\tau\)}{tau}}
+Given \(\alpha,\beta\) from D.3 and a choice of layer \(k_{5_1}\),
+\[
+    \frac{m_\tau}{m_e}
+    = \Xi_{5_1}
+    = \frac{5\alpha+\beta L_5}{\beta L_0}\;\varphi^{-2k_{5_1}}.
+\]
+Here \(L_5\equiv L(5_1)\) is the dimensionless tangle measure for the cinquefoil.
+This provides a falsifiable prediction once \(L_5\) and \(k_{5_1}\) are fixed by the core-geometry model or simulation.
+
+\subsection*{D.5 Consistency checks}
+\begin{itemize}
+    \item \textbf{Dimensionality.} \(\Xi_K\) is dimensionless; \(\mathcal{M}_0\) carries mass (fixed to \(m_e\)), so \(m_K\) has correct units.
+    \item \textbf{Normalization.} \(\Xi_{0_1}=1\) by definition, avoiding arbitrary \(\mathcal{M}_0\) rescaling.
+    \item \textbf{Monotonicity.} Increasing \(C\) or \(L\) raises \(\mathcal{T}_K\); increasing \(k\) lowers \(\Xi_K\) by \(\varphi^{-2}\) per layer, consistent with the Golden-Layer logic.
+    \item \textbf{Chirality.} Mass is invariant under mirror for a fixed \(K\); chirality enters only in the gauge-charge map (main text).
+\end{itemize}
+
+% --- Integrated: Variational selection principle ---
+\subsection{Variational Selection Principle}
+Given quantum numbers fixed by \(t(K)\), select \(K\) by minimizing
+\begin{equation}
+\mathcal E_{\rm eff}[K]=\alpha\,C(K)+\beta\,L(K)+\gamma\,\mathcal H(K),\qquad \alpha,\beta,\gamma>0,
+\end{equation}
+subject to foliation-compatible ropelength constraints and stability (Hopf) bounds. The swirl-helicity asymmetry classifier (SST) resolves near-degeneracies.
+% --- End Integrated block ---
+
+
+% --- Integrated: Homomorphism to the Standard Model ---
+\subsection{Homomorphism to the Standard Model}
+Define a surjective homomorphism \(\pi:G_{\rm sw}\to G_{\rm SM}\) fixed by the invariant tuple
+\begin{equation}
+t(K)=(L_K\bmod 3,\; S_K\bmod 2,\; \chi_K),
+\end{equation}
+assigning representations leafwise. The \(\mathbb Z_3\) grading encodes net linking modulo 3 along foliation leaves; \(\chi_K\) fixes the chiral embedding of doublets vs.\ singlets.
+% --- End Integrated block ---

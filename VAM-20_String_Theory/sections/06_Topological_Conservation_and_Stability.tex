@@ -1,0 +1,61 @@
+%========================================================================================
+% TOPOLOGY AND STABILITY
+%========================================================================================
+\section{Topological Conservation and Stability}
+
+Knotted configurations are stabilized by conserved topological charges carried by the swirl gauge sector and by the vorticity/flux sector of the medium. We collect the relevant invariants and their conservation laws.
+
+\paragraph{Gauge-sector Pontryagin charge and Chern--Simons number.}
+With curvature \(\mathcal{W}_{\mu\nu}^a\) and dual \(\tilde{\mathcal{W}}^{a\mu\nu} \equiv \tfrac12 \varepsilon^{\mu\nu\rho\sigma}\mathcal{W}^a_{\rho\sigma}\),
+the 4D Pontryagin index is
+\begin{equation}
+ Q_{\!sw} \;\equiv\; \frac{1}{32\pi^2} \int_{M_4} \! d^4x\; \mathop{\mathrm{tr}}\!\big(\mathcal{W}_{\mu\nu}\tilde{\mathcal{W}}^{\mu\nu}\big) \;\in\; \mathbb{Z},
+ \label{eq:Qsw}
+\end{equation}
+for finite-action configurations. On a spatial leaf \(\Sigma_t\) the associated Chern--Simons number
+\begin{equation}
+ N_{\!CS}(t) \;\equiv\; \frac{1}{8\pi^2} \int_{\Sigma_t} \mathop{\mathrm{tr}}\!\Big(\mathcal{W}\wedge d\mathcal{W} + \frac{2i}{3} g_{\!sw}\,\mathcal{W}\wedge\mathcal{W}\wedge\mathcal{W}\Big),
+\end{equation}
+satisfies \(\dot N_{\!CS}=\tfrac{1}{32\pi^2}\!\int_{\Sigma_t}\! d^3x\;\mathop{\mathrm{tr}}(\mathcal{W}_{\mu\nu}\tilde{\mathcal{W}}^{\mu\nu})\).
+Equivalently,
+\(\partial_\mu K^\mu=\tfrac12\,\mathop{\mathrm{tr}}(\mathcal{W}_{\mu\nu}\tilde{\mathcal{W}}^{\mu\nu})\)
+with Chern--Simons current
+\begin{equation}
+ K^\mu \;=\; \frac{1}{8\pi^2}\,\varepsilon^{\mu\nu\rho\sigma}\,\mathop{\mathrm{tr}}\!\Big(\mathcal{W}_\nu\partial_\rho\mathcal{W}_\sigma + \tfrac{2i}{3} g_{\!sw}\,\mathcal{W}_\nu\mathcal{W}_\rho\mathcal{W}_\sigma\Big).
+\end{equation}
+Thus the \(\theta\)-term in \eqref{eq:EFT} counts changes of \(N_{\!CS}\) and enforces integer-quantized helicity in the swirl sector.
+
+\paragraph{Vorticity helicity on spatial leaves.}
+On a leaf orthogonal to \(u_\mu\) with projector \(h_{\mu\nu}\), let \(\mathbf{v}\) be the coarse-grained swirl velocity and \(\boldsymbol{\omega}\equiv\nabla\times\mathbf{v}\) its vorticity. The (relative) kinetic helicity
+\begin{equation}
+ \mathcal{H}_{\!v} \;\equiv\; \int_{\Sigma_t} d^3x\; \mathbf{v}\cdot\boldsymbol{\omega}
+\end{equation}
+is conserved in the ideal limit and measures the signed linking of swirl string lines \cite{Moffatt1969,Arnold1998}.
+For isolated tubes of circulations \(\{\Gamma_i\}\),
+\begin{equation}
+ \mathcal{H}_{\!v} \;=\; \sum_{i\neq j} \Gamma_i\Gamma_j\,\mathrm{Lk}(i,j)\;+\;\sum_i \Gamma_i^2\,[\,\mathrm{Tw}(i)+\mathrm{Wr}(i)\,],
+ \label{eq:calug}
+\end{equation}
+with the Călugăreanu--White decomposition \(\mathrm{Lk}=\mathrm{Tw}+\mathrm{Wr}\) relating pairwise linking, twist, and writhe. In our numerics we monitor the dimensionless anomaly proxy
+\begin{equation}
+    a_\mu^{\mathrm{VAM}} \;\equiv\; \tfrac12\!\left(\frac{\sum_{\Omega}\mathbf{v}\!\cdot\!\boldsymbol{\omega}}{\sum_{\Omega}\|\boldsymbol{\omega}\|^2}-1\right),
+\end{equation}
+which clusters near \(-\tfrac12\) for amphichiral geometries and deviates for chiral families (see Helicity Results).
+
+\paragraph{Two-form flux and string charge.}
+With \(H_{\mu\nu\rho}\equiv\partial_{[\mu}B_{\nu\rho]}\) and \(B\mapsto B+d\Lambda\),
+worldsheets \(\Sigma\) of swirl strings couple via \(\int_\Sigma B\).
+Fluxes of \(H\) through any closed 2-surface \(S\subset\Sigma_t\) are quantized,
+\begin{equation}
+    \Phi_H[S] \;\equiv\; \int_S H \;=\; 2\pi\,n,\qquad n\in\mathbb{Z},
+\end{equation}
+so each string carries an integer Kalb--Ramond charge. The Bianchi identity \(dH=0\) forbids local creation/annihilation of net flux: strings may only end on boundaries/defects or annihilate in charge-neutral pairs.
+
+\paragraph{Stability mechanism and selection rules.}
+The conserved integers \(\{Q_{\!sw},\,\Phi_H,\,\mathrm{Lk},\,\mathrm{Tw},\,\mathrm{Wr}\}\) obstruct relaxation to the trivial vacuum. In particular:
+\begin{enumerate}
+    \item \textit{Gauge-helicity conservation:} changes \(\Delta Q_{\!sw}\in\mathbb{Z}\) require nonzero \(\int \mathop{\mathrm{tr}}(\mathcal{W}\tilde{\mathcal{W}})\), i.e., tunneling/instanton-like events or explicit symmetry-breaking sources.
+    \item \textit{Flux conservation:} \(\sum \Phi_H\) on any closed 2-cycle is invariant; reconnection moves flux between strands but preserves the integer total.
+    \item \textit{Vorticity selection rules:} by \eqref{eq:calug}, reconnection events change \(\mathrm{Lk}\) by \(\pm1\) while compensating \(\mathrm{Tw}\) or \(\mathrm{Wr}\), leaving \(\mathcal{H}_{\!v}\) invariant in the ideal limit.
+\end{enumerate}
+Energetically, the effective action penalizes curvature and field gradients, yielding metastable knotted minima at fixed charges. In practice we find amphichiral baselines near \(a_\mu^{\mathrm{VAM}}\!\approx\!-0.5\) and increasingly stable chiral configurations as \(|\mathrm{Wr}|\) grows (cf.\ Sec.~\ref{sec:mass-functional} for how these invariants enter \(m_K^{(\mathrm{sol})}\) through \(\Xi_K\)).
