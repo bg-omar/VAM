@@ -1,14 +1,14 @@
 %========================================================================================
 % APPENDIX A: Vacuum Energy Density Calibration ρ₀
 %========================================================================================
-\section*{Appendix A: Vacuum Energy Density Calibration \texorpdfstring{\(\boldsymbol{\rhof}\)}{rho0}}
+\section*{Appendix A: Vacuum Energy Density Calibration \texorpdfstring{\(\boldsymbol{\rhoF}\)}{rho0}}
 \addcontentsline{toc}{section}{Appendix A: Vacuum Energy Density Calibration rho0}
 \label{sec:calibration_rho0}
 
 \paragraph{Referenced in Main Text.}
 See Section~\ref{sec:mass-functional}, where the energy scale
 \[
- \mathcal{M}_0 = C_0 \Big(\sum_i V_i\Big)\,\rhof\,\frac{\vswirl^{\,2}}{c^2}
+ \mathcal{M}_0 = C_0 \Big(\sum_i V_i\Big)\,\rhoF\,\frac{\vswirl^{\,2}}{c^2}
 \]
 controls the soliton masses.
 
@@ -16,14 +16,14 @@ controls the soliton masses.
 In the VAM calculator,
 \[
  M \;=\; \frac{4}{\alpha_{\!fs}}\;\eta\;\xi\;\text{tension}\;\Big(\sum_i V_i\Big)\,
- \frac{\tfrac12\,\rhof\,\vswirl^{\,2}}{c^2}\,,
+ \frac{\tfrac12\,\rhoF\,\vswirl^{\,2}}{c^2}\,,
 \]
 with dimensionless factors:
 \(\eta\) (thread suppression), \(\xi=n_{\rm knots}^{-1/\varphi}\) (coherence), and \(\text{tension}=\varphi^{-s}\) (Golden-layer index \(s\)).
-Solving for \(\rhof\) gives
+Solving for \(\rhoF\) gives
 \begin{equation}
  \boxed{\;
- \rhof \;=\; \frac{M\,c^2\,\alpha_{\!fs}}
+ \rhoF \;=\; \frac{M\,c^2\,\alpha_{\!fs}}
  {2\,\eta\,\xi\,\text{tension}\;\Big(\sum_i V_i\Big)\,\vswirl^{\,2}}\; } \,.
  \label{eq:rho0-solve}
 \end{equation}
@@ -65,23 +65,23 @@ anchored to the proton rest mass \(M_p=1.67262192369\times10^{-27}\,\mathrm{kg}\
 \paragraph{Result.}
 Insertion into \eqref{eq:rho0-solve} yields
 \[
-    \rhof \;\approx\; 3.93\times 10^{18}\ \mathrm{kg/m^3}.
+    \rhoF \;\approx\; 3.93\times 10^{18}\ \mathrm{kg/m^3}.
 \]
 The canonical rounded value is
 \[
-    \boxed{ \rhof = 3.8934\times 10^{18}\ \mathrm{kg/m^3} }\,,
+    \boxed{ \rhoF = 3.8934\times 10^{18}\ \mathrm{kg/m^3} }\,,
 \]
 consistent with the value used in the simulations.
 
 \paragraph{Dimensional check.}
-\([\rhof]=\mathrm{kg\,m^{-3}}\).
+\([\rhoF]=\mathrm{kg\,m^{-3}}\).
 In \eqref{eq:rho0-solve} the numerator \(M c^2\alpha_{\!fs}\) has units of energy; the denominator
 \(\sim (\sum V_i)\,\vswirl^{2}\) has units of energy per density, so the ratio is a density.
 
 \subsection*{A.2 Sensitivity (first-order)}
 From \eqref{eq:rho0-solve},
 \[
-    \frac{\delta\rhof}{\rhof}
+    \frac{\delta\rhoF}{\rhoF}
     = \frac{\delta M}{M}
     - \frac{\delta\eta}{\eta}
     - \frac{\delta\xi}{\xi}
@@ -89,7 +89,7 @@ From \eqref{eq:rho0-solve},
     - \frac{\delta(\sum V_i)}{\sum V_i}
     - 2\,\frac{\delta \vswirl}{\vswirl}.
 \]
-Thus a \(+10\%\) change in \(\vswirl\) lowers \(\rhof\) by \(20\%\); a \(+10\%\) change in the composite volume \(\sum V_i\) lowers \(\rhof\) by \(10\%\); changes in \(\xi\) or tension enter linearly.
+Thus a \(+10\%\) change in \(\vswirl\) lowers \(\rhoF\) by \(20\%\); a \(+10\%\) change in the composite volume \(\sum V_i\) lowers \(\rhoF\) by \(10\%\); changes in \(\xi\) or tension enter linearly.
 
 \subsection*{A.3 Quick cross-check (neutron vs.\ proton)}
 With \(\eta,\xi,\) and tension identical for \(p\) and \(n\) (both have \(n_{\rm knots}=3\)),
@@ -99,4 +99,4 @@ the neutron-to-proton ratio is controlled by the core volume:
     \;=\; \frac{2.8281 + 2\cdot 3.1639}{2\cdot 2.8281 + 3.1639}
     \;\approx\; 1.038.
 \]
-This tube-volume model predicts \(M_n \approx 1.038\,M_p\), within a few percent of the observed ratio, and is consistent with using the proton as the \(\rhof\) anchor.
+This tube-volume model predicts \(M_n \approx 1.038\,M_p\), within a few percent of the observed ratio, and is consistent with using the proton as the \(\rhoF\) anchor.

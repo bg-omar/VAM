@@ -174,4 +174,4 @@ if __name__ == "__main__":
     print(df_final.to_string(index=False))
 
     # 5. Save to CSV
-    df_final.to_csv("VAM_Mass_Results.csv", index=False)
+    df_final.to_csv("VAM_Mass_Formula_Results.csv", index=False)

@@ -356,7 +356,7 @@ def plot_amu_histogram(results):
 
 # --- Runner ---
 if __name__ == "__main__":
-    all_results = analyze_all_fseries(".")
+    all_results = analyze_all_fseries("")
     plot_amu_histogram(all_results)
     # --- After computing all_results ---
     # Parse symmetry metadata table
@@ -380,5 +380,5 @@ if __name__ == "__main__":
         print(f"Symmetries: {symm}")
         print()
 
-    all_results = analyze_vam_knots('.', symmetry_html='list.html')
+    all_results = analyze_vam_knots('', symmetry_html='list.html')
     plot_amu_histogram(all_results)

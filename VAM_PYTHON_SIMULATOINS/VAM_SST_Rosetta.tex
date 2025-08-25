@@ -18,6 +18,7 @@
 \ifdefined\standalonechapter\else
 % Standalone mode
 \documentclass[11pt]{article}
+\usepackage{amssymb}
 \input{../vamstyle.sty}
 \input{../vam_appendix_setup.sty}
 
@@ -48,7 +49,7 @@
 \newcommand{\rhoE}{\rho_{\!E}}                           % swirl energy density /c^2? (we define clearly below)
 \newcommand{\rhoM}{\rho_{\!m}}                           % mass-equivalent density
 \newcommand{\rhoC}{\rho_{\mathrm{core}}} % core/material density
-\newcommand{\rs}{r_s}                                    % string core radius (swirl string radius)
+\newcommand{\rs}{r_e}                                    % string core radius (swirl string radius)
 \newcommand{\FmaxEM}{F_{\mathrm{EM}}^{\max}}             % EM-like maximal force scale
 \newcommand{\FmaxG}{F_{\mathrm{G}}^{\max}}               % G-like maximal force scale
 \newcommand{\Lam}{\Lambda}                               % Swirl Coulomb constant
@@ -64,13 +65,13 @@
 	\begin{abstract}
 		\noindent
 		This note provides a rigorous nomenclature concordance between the legacy VAM presentation and the Swirl--String Theory (SST) house style. It establishes a one-to-one mapping of symbols and terminology while preserving the underlying kinematics, operators, and calibrated constants. In particular, it fixes the canonical SST equalities
-		\[
-			\rhoE=\tfrac12\,\rhoF\,\vnorm^{2},\qquad
-			\rhoM=\rhoE/c^{2},\qquad
-			K=\frac{\rhoC\, r_c}{\vswirl},\quad
-			\rhoF=K\,\Omega,
-		\]
-		and records that all published numerical values for $\vswirl$, $r_c$, $\rhoC$, the background density, and the sectoral force bounds carry over unchanged. The document includes compact translation tables (fields/kinematics/operators; densities/velocities/coarse--graining; global scales) and a minimal macro layer (\verb|\rhoF|, \verb|\rhoE|, \verb|\rhoM|, \verb|\rhoC|, \verb|\vswirl|, \verb|\vnorm|) to prevent notation drift in large projects. Legacy wording is restricted to historical citations; narrative prose adopts the neutral SST vocabulary (e.g., \emph{foliation}, \emph{swirl string}) without altering the mathematics. Compatibility is ensured both for standalone use (title page + metadata) and for modular inclusion (\verb|\providecommand| guards and no additional package requirements). The result is a drop-in “translation guide’’ that guarantees dimensional consistency, unambiguous symbol usage, and reproducible cross-referencing across manuscripts that span the VAM$\to$SST transition.
+        \[
+          \rhoE=\tfrac12\,\rhoF\,\vnorm^{2},\qquad
+          \rhoM=\rhoE/c^{2},\qquad
+          K=\frac{\rhoC\, r_c}{\vscore},\quad
+          \rhoF=K\,\Omega,
+        \]
+		and records that all published numerical values for $\vscore$, $r_c$, $\rhoC$, the background density, and the sectoral force bounds carry over unchanged. The document includes compact translation tables (fields/kinematics/operators; densities/velocities/coarse--graining; global scales) and a minimal macro layer (\verb|\rhoF|, \verb|\rhoE|, \verb|\rhoM|, \verb|\rhoC|, \verb|\vswirl|, \verb|\vnorm|) to prevent notation drift in large projects. Legacy wording is restricted to historical citations; narrative prose adopts the neutral SST vocabulary (e.g., \emph{foliation}, \emph{swirl string}) without altering the mathematics. Compatibility is ensured both for standalone use (title page + metadata) and for modular inclusion (\verb|\providecommand| guards and no additional package requirements). The result is a drop-in “translation guide’’ that guarantees dimensional consistency, unambiguous symbol usage, and reproducible cross-referencing across manuscripts that span the VAM$\to$SST transition.
 
 
 	\end{abstract}
@@ -116,19 +117,17 @@
 		We distinguish absolute parameter time $\mathcal{N}$ (preferred foliation label), external observer time $\tau$, and internal clocks carried by swirl strings: a phase accumulator $S(t)$ and a loop “proper time’’ $T_{\!s}$. These appear in the field equations and separate global synchronization from local rotational dynamics.
 
 			\begin{center}
-				\begin{tcolorbox}[colback=gray!10,colframe=black,width=0.9\textwidth,sharp corners=southwest,boxrule=0.5pt,
-					title=\textbf{Table: Time modes in SST},fonttitle=\bfseries]
-					\renewcommand{\arraystretch}{1.20}
-					\begin{tabularx}{@{}lll@{}}
+				\scriptsize
+				\begin{tabular}{lll}
 						$\mathcal{N}$ & Absolute time (foliation) & Global causal parameter \\
 						$\nu_0$       & Now-point                 & Localized synchronization label \\
 						$\tau$        & External/chronos time     & Measured time of external observer \\
 						$S(t)$        & Swirl clock               & Internal phase memory along a string \\
 						$T_{\!s}$     & String proper time        & Loop-duration functional \\
 						$\mathbb{K}$  & Kairos event              & Topological/phase transition moment \\
-					\end{tabularx}
-				\end{tcolorbox}
+                \end{tabular}
 			\end{center}
+
 
 
 	\subsection*{Fields, kinematics, operators (mapping)}
@@ -151,6 +150,7 @@
 
 	\subsection*{Densities, velocities, coarse–graining (mapping)}
 		\begin{center}
+            \scriptsize
 			\begin{tabular}{lllll}
 				\hline
 				\textbf{VAM (legacy)} & \textbf{SST (macro)} & \textbf{Meaning} & \textbf{Units} & \textbf{Overlap} \\
@@ -158,11 +158,8 @@
 				$\rho_0,\ \rho_{\text{\ae}}^{\text{(fluid)}}$,\ $\rho_{\text{\ae}}^{\text{(vacuum)}}$ & $\rhoF$,\ $\rhoF^{\mathrm{bg}}$ or $\rhoF^{(0)}$ & effective fluid density & $\mathrm{kg\,m^{-3}}$ & Yes \\
 				$\rho_{\text{\ae}}^{\text{(core)}}$,\ 	$\rho_{\text{\ae}}^{\text{(mass)}}$  & $\rhoC$ & core/material density & $\mathrm{kg\,m^{-3}}$ & Yes \\
 				$\rho_{\text{\ae}}^{\text{(energy)}}$ & $\rhoE$ \text{ (or } $\rhoC c^2$\text{)} & energy density & $\mathrm{J\,m^{-3}}$ & Yes \\
-				$\rho_E$ & $\rhoE$ & $\tfrac12\,\rhoF\,\vnorm^2$ & $\mathrm{J\,m^{-3}}$ & Yes \\
-				$\rho_m$ & $\rhoM$ & $\rhoE/c^2$ & $\mathrm{kg\,m^{-3}}$ & Yes \\
-				$C_e$ (tangential) & $\vscore$ & characteristic swirl speed ($=\|\vswirl\|$ at $r=r_c$) & $\mathrm{m\,s^{-1}}$ & Yes \\
-				$r_c$ & $r_c$ & core radius & $\mathrm{m}$ & Yes \\
-				$K=\dfrac{\rho_{\ae}^{(\text{mass})} r_c}{C_e}$ & $K=\dfrac{\rhoC r_c}{\vscore}$ & coarse–graining coefficient & $\mathrm{kg\,m^{-3}\,s}$ & Yes \\
+                $C_e$ (tangential) & $\vscore$ & characteristic swirl speed ($=\|\vswirl\|$ at $r=\rs$) & $\mathrm{m\,s^{-1}}$ & Yes \\
+                $K=\dfrac{\rho_{\ae}^{(\text{mass})} r_c}{C_e}$ & $K=\dfrac{\rhoC r_c}{\vscore}$ & coarse–graining coefficient & $\mathrm{kg\,m^{-3}\,s}$ & Yes \\
 				$\Omega$ & $\Omega$ & leaf angular rate & $\mathrm{s^{-1}}$ & Yes \\
 				\hline
 			\end{tabular}
@@ -205,8 +202,8 @@
 			\rhoE\ (\text{energy density}),\quad
 			\rhoM\ (\text{mass-equivalent}),\quad
 			\rhoC\ (\text{core density}),\quad
-			\vswirl\ (\text{swirl speed}),\quad
-			\vnorm=\lVert\mathbf{v}\rVert .
+            \vswirl\ (\text{swirl velocity vector}),\quad
+            \vnorm=\lVert\vswirl\rVert\ (\text{speed magnitude at a point}) .
 		\]
 
 	\subsection*{Prose guardrails (rebrand policy)}
@@ -280,7 +277,7 @@
 			\end{cases}
 			\qquad \Gamma=2\pi\Omega_{\text{core}}\,r_c^{2}.
 		\]
-		Continuity at $r=r_c$ gives $v_\phi(r_c)=\Omega_{\text{core}}\,r_c\equiv \vswirl$, hence
+		Continuity at $r=r_c$ gives $v_\phi(r_c)=\Omega_{\text{core}}\,r_c\equiv \vscore$, hence
 		\[
 			\Omega_{\text{core}}=\frac{\vscore}{r_c}\approx \frac{1.09384563\times 10^{6}}{1.40897017\times 10^{-15}}
 			\approx 7.763\times 10^{20}\ \mathrm{s^{-1}}.
@@ -298,7 +295,7 @@
 
 % === Bibliography (only for standalone) ===
 	\ifdefined\standalonechapter\else
-	\bibliographystyle{unsrt}
-	\bibliography{canon_swirl_string_theory}
+%	\bibliographystyle{unsrt}
+%	\bibliography{canon_swirl_string_theory}
 \end{document}
 \fi
