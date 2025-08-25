@@ -25,63 +25,15 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" id="6f2a8139-c825-4497-876b-70e1a130c5c3" name="Changes" comment="Add new VAM Canon extensions; include foundational identities, swirl Hamiltonian, dark-sector pressure law, and experimental protocols">
-      <change afterPath="$PROJECT_DIR$/ProjectAnalysis/vam_canon_refs.bib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/CANON_Swirl_String_Theory.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/Swirl-String-Theory_Lagrangian.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/Swirl_String_TheoryCanon_Pipeline.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/canon_swirl_string_theory.bib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/references.bib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/sections/01_Intro.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/sections/02_foundational_fields_and_geometry.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/sections/03_Effective_Action.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/sections/04_Emergent_Mass_from_Soliton_Energy.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/sections/05_Gauge_Structure_and_Charge_Assignment.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/sections/06_Topological_Conservation_and_Stability.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/sections/A1_Calibration_Vacuum_Energy_Density.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/sections/A2_Derivation_of_the_Core_Swirl_Velocity.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/sections/A3_Emergent_Gauge_Fields_from_Vortex_Coarse_Graining.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/sections/A4_Knot_Particle_Mapping.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/sections/A5_Canonical_Evidence_and_Validation.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM_Experiments/Swirl-String-Theory_Pentagonal_Resonance_Hypothesis.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/HelicityCalculationVAMcore.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/canon_evidence.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/canon_evidence_swirl_strings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/fseries/knot.8_17.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/hyperbolic_volume_from_fseries.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/knot.8_17.fseries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/vambindings.cp311-win_amd64.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/old/Unified-v4_Lagrangian_for_a_Vortex_String_Theory.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/sst_lint.py" afterDir="false" />
+    <list default="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" id="6f2a8139-c825-4497-876b-70e1a130c5c3" name="Changes" comment="Add new files and update existing documents for VAM framework; include helicity calculations, mass summaries, and gauge structure details">
+      <change afterPath="$PROJECT_DIR$/VAM-20_String_Theory/VAM_SST_Rosetta.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/VAM_SST_Rosetta.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectAnalysis/VAM-Canon-0.4.tex" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAnalysis/VAM-Canon-0.4.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-16-20.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-20_String_Theory/Unified-v4_Lagrangian_for_a_Vortex_String_Theory.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-20_String_Theory/Unified_Lagrangian_for_a_Vortex_String_Theory-v2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/old/Unified_Lagrangian_for_a_Vortex_String_Theory-v2.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-20_String_Theory/Unified_Lagrangian_for_a_Vortex_String_Theory-v3.tex" beforeDir="false" afterPath="$PROJECT_DIR$/old/Unified_Lagrangian_for_a_Vortex_String_Theory-v3.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-20_String_Theory/Unified_Lagrangian_for_a_Vortex_String_Theory.tex" beforeDir="false" afterPath="$PROJECT_DIR$/old/Unified_Lagrangian_for_a_Vortex_String_Theory.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-20_String_Theory/VAM-20.0_String_Theory.tex" beforeDir="false" afterPath="$PROJECT_DIR$/old/VAM-20.0_String_Theory.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-20_String_Theory/VAM-20.2.2_String_Theory.tex" beforeDir="false" afterPath="$PROJECT_DIR$/old/VAM-20.2.2_String_Theory.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-20_String_Theory/VAM-20_String_Theory (1).tex" beforeDir="false" afterPath="$PROJECT_DIR$/old/VAM-20_String_Theory (1).tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-20_String_Theory/VAM-MASS_FORMULA.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM-20_String_Theory/VAM-MASS_FORMULA.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM-20_String_Theory/Vortex_String_Theory_Mass_Fundamentals.tex" beforeDir="false" afterPath="$PROJECT_DIR$/old/Vortex_String_Theory_Mass_Fundamentals.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_0-4_Einstein_to_Vortex_Fluid.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_5-8_From_Quantum_Constants_to_Galactic_Swirl.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_9-15_spacetime_dark_and_Quantum_Gravity.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_17/knot.8_17.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/8_17/knot.8_17.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/hypvol_results.csv" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/VAM_Fseries/knots/hypvol_results.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/golden_rapidity_vam.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/golden_rapidity_vam.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_17.fseries" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/Classify_Particles/knot.8_17.fseries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/FourierSeriesFromKnotPoints.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/FourierSeriesFromKnotPoints.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/HelicityCalculation.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/HelicityCalculation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/helicity2.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/helicity2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/knot.8_17.short" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/Unified-v4_Lagrangian_for_a_Vortex_String_Theory.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/Unified-v4_Lagrangian_for_a_Vortex_String_Theory.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/VAM-00_front_page.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/VAM-00_front_page.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/VAM-Canon-0.4.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/VAM-Canon-0.4.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/golden_rapidity_vam.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/golden_rapidity_vam.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vambindings.cp311-win_amd64.pyd" beforeDir="false" afterPath="$PROJECT_DIR$/vambindings.cp311-win_amd64.pyd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vamstyle.sty" beforeDir="false" afterPath="$PROJECT_DIR$/vamstyle.sty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM-20_String_Theory/CANON_Swirl_String_Theory.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM-20_String_Theory/CANON_Swirl_String_Theory.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM-20_String_Theory/Swirl-String-Theory_Lagrangian.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM-20_String_Theory/Swirl-String-Theory_Lagrangian.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_2_Swirl_Clocks/Swirl_Clocks/01_Time_Dilation_from_Vortex_Dynamics.tex" beforeDir="false" afterPath="$PROJECT_DIR$/VAM_2_Swirl_Clocks/Swirl_Clocks/01_Time_Dilation_from_Vortex_Dynamics.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAM_PYTHON_SIMULATOINS/py_knots/knots_for_particles.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/CANON_Swirl_String_Theory.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/CANON_Swirl_String_Theory.pdf" afterDir="false" />
     </list>
     <list id="4afbe360-edfd-4722-ab75-c722c883a8a6" name="DoNotCommit" comment="Add new files and refactor existing ones for VAM framework; update README and data paths" />
     <option name="SHOW_DIALOG" value="false" />
@@ -125,6 +77,9 @@
     &quot;assignee&quot;: &quot;bg-omar&quot;
   }
 }</component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="5084bcf3-5a0e-429a-a5e3-5e2af455e386" />
+  </component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/bg-omar/VAM.git&quot;,
@@ -192,6 +147,7 @@
     "BibTeX.VAM-Canon-0.4 bibliography.executor": "Run",
     "BibTeX.VAM-Philosophical_Depth_Companion.executor": "Run",
     "BibTeX.VAM_15_Quantum_Gravity bibliography.executor": "Run",
+    "BibTeX.VAM_SST_Rosetta bibliography.executor": "Run",
     "BibTeX.Warpdrive bibliography.executor": "Run",
     "BibTeX.appendix_QuantizationOfVAM bibliography.executor": "Run",
     "BibTeX.main-O.Iskandarani bibliography.executor": "Run",
@@ -257,6 +213,7 @@
     "LaTeX.VAM_15_Quantum_Gravity.executor": "Run",
     "LaTeX.VAM_15_Quantum_Gravity_updated.executor": "Run",
     "LaTeX.VAM_Full_Lagrangian.executor": "Run",
+    "LaTeX.VAM_SST_Rosetta.executor": "Run",
     "LaTeX.VAM_framework.executor": "Run",
     "LaTeX.Warpdrive.executor": "Run",
     "LaTeX.appendix_QuantizationOfVAM.executor": "Run",
@@ -404,14 +361,14 @@
       <recent name="C:\workspace\projects\VAM\VAM_PYTHON_SIMULATOINS\py_knots" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\workspace\projects\VAM\VAM-20_String_Theory" />
+      <recent name="C:\workspace\projects\VAM\VAM-20_String_Theory\sections\appendix" />
       <recent name="C:\workspace\projects\VAM" />
       <recent name="C:\workspace\projects\VAM\VAM-20_String_Theory\old" />
       <recent name="C:\workspace\projects\VAM\VAM_Experiments" />
-      <recent name="C:\workspace\projects\VAM\VAM-20_String_Theory" />
-      <recent name="C:\workspace\projects\VAM\VAM-20_String_Theory\sections" />
     </key>
   </component>
-  <component name="RunManager" selected="LaTeX.Swirl-String-Theory_Lagrangian">
+  <component name="RunManager" selected="LaTeX.VAM_SST_Rosetta">
     <configuration name="AntiGravity-DualityEM_lazer_c_e bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" folderName="EXPERIMENTS">
       <texify-bibtex>
         <compiler>BIBTEX</compiler>
@@ -479,6 +436,18 @@
         <compiler-arguments />
         <envs />
         <main-file>$PROJECT_DIR$/VAM_16_QuantumComputing/VAM-16-Quantum_Computing_Blueprint.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
+        <latex-distribution>MIKTEX</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration name="VAM_SST_Rosetta bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler>BIBTEX</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/VAM-20_String_Theory/VAM_SST_Rosetta.tex</main-file>
         <aux-dir>$PROJECT_DIR$/auxil</aux-dir>
         <latex-distribution>MIKTEX</latex-distribution>
       </texify-bibtex>
@@ -600,6 +569,29 @@
       </texify>
       <method v="2" />
     </configuration>
+    <configuration name="VAM_SST_Rosetta" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <require-focus>$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$</require-focus>
+        <viewer-command />
+        <compiler-arguments />
+        <envs />
+        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
+        <before-run-command />
+        <main-file>$PROJECT_DIR$/VAM-20_String_Theory/VAM_SST_Rosetta.tex</main-file>
+        <output-path>$PROJECT_DIR$/out</output-path>
+        <auxil-path>$PROJECT_DIR$/auxil</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>MIKTEX</latex-distribution>
+        <has-been-run>$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$</has-been-run>
+        <bib-run-config>[BibTeX.VAM_SST_Rosetta bibliography]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="BibTeX.VAM-0-Analogy" />
       <item itemvalue="BibTeX.main-O.Iskandarani bibliography" />
@@ -632,6 +624,8 @@
       <item itemvalue="BibTeX.CANON_Swirl_String_Theory bibliography" />
       <item itemvalue="BibTeX.Swirl-String-Theory_Lagrangian bibliography" />
       <item itemvalue="BibTeX.Unified-v4_Lagrangian_for_a_Vortex_String_Theory bibliography" />
+      <item itemvalue="BibTeX.VAM_SST_Rosetta bibliography" />
+      <item itemvalue="LaTeX.VAM_SST_Rosetta" />
       <item itemvalue="LaTeX.CANON_Swirl_String_Theory" />
       <item itemvalue="LaTeX.Swirl-String-Theory_Lagrangian" />
       <item itemvalue="LaTeX.Unified-v4_Lagrangian_for_a_Vortex_String_Theory" />
@@ -639,8 +633,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="LaTeX.Swirl-String-Theory_Lagrangian" />
+        <item itemvalue="LaTeX.VAM_SST_Rosetta" />
         <item itemvalue="LaTeX.CANON_Swirl_String_Theory" />
+        <item itemvalue="LaTeX.Swirl-String-Theory_Lagrangian" />
         <item itemvalue="LaTeX.VAM-00_front_page" />
         <item itemvalue="LaTeX.Unified-v4_Lagrangian_for_a_Vortex_String_Theory" />
       </list>
@@ -991,7 +986,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755837653213</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Add new files and update existing documents for VAM framework; include helicity calculations, mass summaries, and gauge structure details">
+      <option name="closed" value="$GIT_TEST_DEBUG_UNSAFE_DIRECTORIES$" />
+      <created>1755987662202</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1755987662202</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1028,7 +1031,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Update LaTeX documents to reflect new licensing terms; add new package requirements and improve document structure for clarity." />
     <MESSAGE value="Implement script to convert bibliographic citations to footnotes in LaTeX; add new bibliography file and update existing references for improved clarity." />
     <MESSAGE value="Refactor file structure by renaming multiple LaTeX documents and Python scripts for consistency; update paths in LaTeX files and improve magnetic field computation in Python scripts." />
     <MESSAGE value="Add new Python scripts for 6_2 and 7_4 knots; create all_knots.py for various knot visualizations and refactor workspace.xml for improved file structure." />
@@ -1063,7 +1065,8 @@
     <MESSAGE value="Update VAM mass formula implementation and add new Lagrangian document; enhance mass calculations and introduce new theoretical framework for vortex string theory" />
     <MESSAGE value="Add new CSV files for VAM framework; include claims, contradictions, constants, equations, and galactic rotation candidates" />
     <MESSAGE value="Add new VAM Canon extensions; include foundational identities, swirl Hamiltonian, dark-sector pressure law, and experimental protocols" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add VAM hydrogen and heat transport documents; introduce Master Mass Formula with golden rapidity layer and revised mass evaluation" />
+    <MESSAGE value="Add new files and update existing documents for VAM framework; include helicity calculations, mass summaries, and gauge structure details" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add new files and update existing documents for VAM framework; include helicity calculations, mass summaries, and gauge structure details" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
