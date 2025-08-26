@@ -6,7 +6,7 @@
 %! ORCID = 0009-0006-1686-3961
 %! DOI = 10.5281/zenodo.16934536
 
-\newcommand{\canonversion}{\textbf{v0.3.0}} % Semantic versioning: vMAJOR.MINOR.PATCH
+\newcommand{\canonversion}{\textbf{v0.3.1}} % Semantic versioning: vMAJOR.MINOR.PATCH
 \newcommand{\papertitle}{Swirl String Theory (SST) Canon \canonversion}
 \newcommand{\paperdoi}{10.5281/zenodo.16934536}
 
@@ -31,12 +31,12 @@
 \newcommand{\SwirlClock}{S_t^{\swirlarrow}}
 \newcommand{\SwirlClockcw}{S_t^{\swirlarrowcw}}
 \newcommand{\omegas}{\boldsymbol{\omega}_{\swirlarrow}}  % swirl vorticity
-\newcommand{\vscore}{v_s}                                % shorthand: |v_swirl| at r=rs
+\newcommand{\vscore}{v_{\swirlarrow}}                    % shorthand: |v_swirl| at r=r_c
 \newcommand{\vnorm}{\lVert \vswirl \rVert}               % swirl speed magnitude
 \newcommand{\rhof}{\rho_{\!f}}                           % effective fluid density
 \newcommand{\rhoE}{\rho_{\!E}}                           % swirl energy density /c^2? (we define clearly below)
 \newcommand{\rhom}{\rho_{\!m}}                           % mass-equivalent density
-\newcommand{\rs}{r_s}                                    % string core radius (swirl string radius)
+\newcommand{\rc}{r_c}                                    % string core radius (swirl string radius)
 \newcommand{\FEMmax}{F_{\mathrm{EM}}^{\max}}             % EM-like maximal force scale
 \newcommand{\FGmax}{F_{\mathrm{G}}^{\max}}               % G-like maximal force scale
 \newcommand{\Lam}{\Lambda}                               % Swirl Coulomb constant
@@ -180,20 +180,20 @@
 %===============================================================
 %  Chronos–Kelvin Invariant (Canonical)
 %===============================================================
-    \section*{Chronos–Kelvin Invariant (Canonical)}
+    \section{Chronos–Kelvin Invariant (Canonical)}
     \addcontentsline{toc}{section}{Chronos–Kelvin Invariant (Canonical)}
     \label{sec:chronos_kelvin}
 
     \paragraph{Setting.}
     Consider a thin, material swirl loop (nearly solid–body core) of instantaneous material radius
     $R(t_{\ae})$ convected by an incompressible, inviscid medium. Let $\omega:=\|\boldsymbol{\omega}\|$ denote the
-    vorticity magnitude on the loop and $r_s$ the canonical string radius. The local Swirl Clock is
+    vorticity magnitude on the loop and $r_c$ the canonical string radius. The local Swirl Clock is
     \begin{equation}
         S_t \;\equiv\; \frac{dt_{\text{local}}}{dt_\infty}
         \;=\;
         \sqrt{\,1-\frac{v_t^{\,2}}{c^2}\,}
         \;=\;
-        \sqrt{\,1-\frac{\omega^2 r_s^2}{c^2}\,},\qquad v_t:=\omega r_s .
+        \sqrt{\,1-\frac{\omega^2 r_c^2}{c^2}\,},\qquad v_t:=\omega r_c .
         \label{eq:SwirlClock-def}
     \end{equation}
     Material derivatives are taken with respect to absolute Æther-Time:
@@ -209,7 +209,7 @@
             \quad\Longleftrightarrow\quad
             \boxed{\;
             \frac{D}{Dt_{\ae}}\!\left(
-                                    \frac{c}{r_s}\,R^2 \sqrt{1-S_t^2}
+                                    \frac{c}{r_c}\,R^2 \sqrt{1-S_t^2}
             \right)=0
             \;}
             \label{eq:CK}
@@ -221,11 +221,11 @@
     $\displaystyle \frac{D}{Dt_{\ae}}\Gamma=0$ with $\Gamma=\oint \mathbf{v}\cdot d\boldsymbol{\ell}$ \cite{Helmholtz1858,Kelvin1869,Batchelor1967}.
     For a nearly solid–body core, $\Gamma=2\pi R\, v_t=2\pi R^2 \omega$; hence
     $\displaystyle \frac{D}{Dt_{\ae}}(R^2\omega)=0$.
-    Using \eqref{eq:SwirlClock-def}, $R^2\omega=\tfrac{c}{r_s} R^2\sqrt{1-S_t^2}$, which yields \eqref{eq:CK}. \qed
+    Using \eqref{eq:SwirlClock-def}, $R^2\omega=\tfrac{c}{r_c} R^2\sqrt{1-S_t^2}$, which yields \eqref{eq:CK}. \qed
 
     \paragraph{Dimensional consistency.}
     $[R^2\omega]=\text{m}^2\text{s}^{-1}$; and
-    $\big[\tfrac{c}{r_s}R^2\sqrt{1-S_t^2}\big]=\text{s}^{-1}\cdot\text{m}^2=\text{m}^2\text{s}^{-1}$.
+    $\big[\tfrac{c}{r_c}R^2\sqrt{1-S_t^2}\big]=\text{s}^{-1}\cdot\text{m}^2=\text{m}^2\text{s}^{-1}$.
 
     \paragraph{Clock–radius transport law (corollary).}
     From $R^2\omega=\text{const}$ and \eqref{eq:SwirlClock-def},
@@ -254,19 +254,33 @@
     Kelvin/Helmholtz invariants hold.
 
     \paragraph{Limits.}
-    Weak-swirl ($\omega r_s\!\ll\!c$): $S_t\simeq 1-\tfrac{1}{2}(\omega r_s/c)^2$ and \eqref{eq:CK} reduces to the
+    Weak-swirl ($\omega r_c\!\ll\!c$): $S_t\simeq 1-\tfrac{1}{2}(\omega r_c/c)^2$ and \eqref{eq:CK} reduces to the
     classical $R^2\omega=\text{const}$. Core on-axis limit: $v_t\to\vswirl$ gives
     $S_t\to \sqrt{1-(\vswirl/c)^2}$, keeping \eqref{eq:CK} valid.
 
+%================================================
+% Foundational Identities
+%================================================
+\section{Foundational Identities}
+\label{sec:foundational-identities}
+    Let $\vb v$ be the swirl velocity ($\nabla\cdot \vb v=0$), $\bm{\omega}=\nabla\times \vb v$. For inviscid, barotropic flow \cite{Helmholtz1858,Kelvin1869,Batchelor1967,LandauLifshitz1987}:
+    \begin{align}
+    \textbf{Kelvin circulation:} & \quad \frac{d\Gamma}{dt}=0,\quad \Gamma=\oint_{\mathcal{C}(t)} \vb v\cdot d\vb \ell. \tag{F1} \label{eq:kelvin} \\
+    \textbf{Vorticity transport:} & \quad \pdv{\bm{\omega}}{t} = \nabla\times(\vb v\times \bm{\omega}). \tag{F2} \label{eq:vorticity-transport}\\
+    \textbf{Helicity:} & \quad h=\vb v\cdot \bm{\omega},\quad H=\int h, dV\ \text{(invariant up to reconnections)}.~\cite{Moffatt1969} \tag{F3}\label{eq:helicity}
+    \end{align}
+    These underpin knotted swirl string stability and reconnection energetics in SST.
+
 
 %================================================
-    \section{Canonical Constants and Symbols}
+% Canonical Constants and Symbols
 %================================================
-
+\section{Canonical Constants and Symbols}
+\label{sec:canonical_constants}
     \subsection*{Primary SST constants (SI unless noted)}
     \begin{itemize}
-        \item Swirl speed scale (core): $\vnorm = \num{1.09384563e6}\ \si{m.s^{-1}}$ (evaluate at $r=\rs$).
-        \item String (core) radius: $\rs = \num{1.40897017e-15}\ \si{m}$.
+        \item Swirl speed scale (core): $\vnorm = \num{1.09384563e6}\ \si{m.s^{-1}}$ (evaluate at $r=\rc$).
+        \item String (core) radius: $\rc = \num{1.40897017e-15}\ \si{m}$.
         \item Effective fluid density: $\rhof = \num{7.0e-7}\ \si{kg.m^{-3}}$.
         \item Mass-equivalent density: $\rhom = \num{3.8934358266918687e18}\ \si{kg.m^{-3}}$. % used in \Lambda
         \item EM-like maximal force: $\FEMmax = \num{2.9053507e1}\ \si{N}$.
@@ -295,7 +309,7 @@
 %================================================
 % Canon Governance & Status Taxonomy
 %================================================
-    \section*{Canon Governance (Binding)}
+    \section{Canon Governance (Binding)}
 
     \subsection*{Definitions}
     \paragraph{Formal System.}
@@ -315,7 +329,7 @@
     \[
         Y \equiv \text{“observable } \mathcal{O} \text{ has value } \hat{o} \pm \delta o \text{ under procedure } \Pi\text{.”}
     \]
-    Empirical items calibrate symbols (e.g., $\vscore$, $\rs$, $\rhof$) but are not premises in proofs.
+    Empirical items calibrate symbols (e.g., $\vscore$, $\rc$, $\rhof$) but are not premises in proofs.
 
     \subsection*{Status Classes}
     \begin{itemize}
@@ -346,7 +360,7 @@
     \end{itemize}
 
     %! Canonical Scope and Rationale for SST
-    \section*{What is Canonical in SST—and Why}
+    \section{What is Canonical in SST—and Why}
 
     \paragraph{[Postulate] Incompressible, inviscid medium with absolute time and Euclidean space.}
     \(\nabla\!\cdot\!\vswirl=0,\ \nu=0.\)
@@ -368,12 +382,12 @@
     \[
         \boxed{\ \Lambda \equiv \int_{S_r^2} p_{\text{swirl}}(r)\, r^2\, d\Omega\ } \quad\Rightarrow\quad [\Lambda]=\mathrm{J\,m}=\mathrm{N\,m^2}.
     \]
-    In SST Canon this evaluates symbolically to \( \Lambda=4\pi \rhom\, \vscore^{\,2}\, \rs^4\).
+    In SST Canon this evaluates symbolically to \( \Lambda=4\pi \rhom\, \vscore^{\,2}\, \rc^4\).
 
     \paragraph{[Theorem] Hydrogen soft-core potential and Coulomb recovery.}
     \[
-        V_{\text{SST}}(r)=-\frac{\Lambda}{\sqrt{r^2+\rs^2}}
-        \;\xrightarrow{r\gg \rs}\;
+        V_{\text{SST}}(r)=-\frac{\Lambda}{\sqrt{r^2+\rc^2}}
+        \;\xrightarrow{r\gg \rc}\;
         -\frac{\Lambda}{r},
     \]
     yielding Bohr scalings
@@ -398,13 +412,13 @@
 
     \paragraph{[Definition] SST Hamiltonian density (Kelvin-compatible).}
     \[
-        \mathcal{H}_{\text{SST}}=\tfrac12\rhof\,\|\vswirl\|^2+\tfrac12\rhof\,\rs^2\|\omegas\|^2+\lambda(\nabla\!\cdot\!\vswirl).
+        \mathcal{H}_{\text{SST}}=\tfrac12\rhof\,\|\vswirl\|^2+\tfrac12\rhof\,\rc^2\|\omegas\|^2+\lambda(\nabla\!\cdot\!\vswirl).
     \]
 
     \subsection*{Empirical Calibrations (not premises, but binding numerically)}
     \begin{itemize}
         \item \([{\rm Empirical}]\) \(\vscore = 1.09384563\times 10^6\,\mathrm{m\,s^{-1}}\).
-        \item \([{\rm Empirical}]\) \(\rs = 1.40897017\times 10^{-15}\,\mathrm{m}\).
+        \item \([{\rm Empirical}]\) \(\rc = 1.40897017\times 10^{-15}\,\mathrm{m}\).
         \item \([{\rm Empirical}]\) \(\rhom = 3.8934358266918687\times 10^{18}\,\mathrm{kg\,m^{-3}}\).
     \end{itemize}
 
@@ -413,12 +427,12 @@
 
     \subsection*{Consistency \& Dimension Checks (illustrative)}
     \[
-        [\Lambda]=[\rhom][\vscore^2][\rs^4]
+        [\Lambda]=[\rhom][\vscore^2][\rc^4]
         =\frac{\mathrm{kg}}{\mathrm{m^3}}\cdot\frac{\mathrm{m^2}}{\mathrm{s^2}}\cdot\mathrm{m^4}
         =\frac{\mathrm{kg\,m^3}}{\mathrm{s^2}}
         =\mathrm{J\,m}.
     \]
-    Soft-core Coulomb recovery: \(V_{\text{SST}}(r)\to -\Lambda/r\) as \(r/\rs\to\infty\).
+    Soft-core Coulomb recovery: \(V_{\text{SST}}(r)\to -\Lambda/r\) as \(r/\rc\to\infty\).
 
 
 
@@ -435,11 +449,11 @@
     A representative string carries:
     \begin{align}
         \text{(D1)}\quad
-        \mu_\ast &\;\equiv\; \rhom\,\pi \rs^{\,2}
+        \mu_\ast &\;\equiv\; \rhom\,\pi \rc^{\,2}
         \quad\;[\mathrm{kg/m}], \\[2mm]
         \text{(D2)}\quad
         \Gamma_\ast &\;\equiv\; \oint \vswirl\!\cdot\! d\boldsymbol{\ell}
-        \;\simeq\; \kappa_\Gamma\, \rs\, \vscore,
+        \;\simeq\; \kappa_\Gamma\, \rc\, \vscore,
         \qquad \kappa_\Gamma=2\pi \;\; \text{(near–solid–body core)}.
     \end{align}
     Let
@@ -461,8 +475,8 @@
         \boxed{\;
         \rhof
         \;=\; \mu_\ast\,\frac{\langle\omega_s\rangle}{\Gamma_\ast}
-        \;=\; \frac{\rhom\,\pi \rs^{\,2}}{\kappa_\Gamma \rs \vscore}\,\langle\omega_s\rangle
-        \;=\; \frac{\rhom\,\rs}{2\,\vscore}\,\langle\omega_s\rangle
+        \;=\; \frac{\rhom\,\pi \rc^{\,2}}{\kappa_\Gamma \rc \vscore}\,\langle\omega_s\rangle
+        \;=\; \frac{\rhom\,\rc}{2\,\vscore}\,\langle\omega_s\rangle
         \;}
         \quad (\kappa_\Gamma=2\pi).
         \label{eq:rhof_from_omega}
@@ -471,7 +485,7 @@
     \begin{equation}
         \boxed{\;
         \rhof
-        \;=\; \frac{\rhom\,\rs}{\vscore}\;\Omega
+        \;=\; \frac{\rhom\,\rc}{\vscore}\;\Omega
         \;}
         \quad [\mathrm{kg/m^3}].
         \label{eq:rhof_from_Omega}
@@ -487,12 +501,12 @@
     With
     \(
     \rhom=3.8934358266918687\times10^{18}\ \mathrm{kg/m^3},\
-    \rs=1.40897017\times10^{-15}\ \mathrm{m},\
+    \rc=1.40897017\times10^{-15}\ \mathrm{m},\
     \vscore=1.09384563\times10^{6}\ \mathrm{m/s}
     \),
     one finds
     \[
-        \Gamma_\ast = 2\pi \rs \vscore
+        \Gamma_\ast = 2\pi \rc \vscore
         = 9.68361920\times10^{-9}\ \mathrm{m^2/s},\quad
         T_\ast = 1.45267535\times10^{1}\ \mathrm{N}.
     \]
@@ -526,12 +540,12 @@
 
     \subsection{Swirl–Gravity Coupling}
     \[
-        \boxed{\ G_{\text{string}} = \frac{\vscore\ c^{5}\ t_p^{2}}{2\,F_{\text{EM}}^{\max}\ \rs^{2}} \ }
+        \boxed{\ G_{\text{string}} = \frac{\vscore\ c^{5}\ t_p^{2}}{2\,F_{\text{EM}}^{\max}\ \rc^{2}} \ }
     \]
     Numerically \( \approx 6.674302\times10^{-11}\ \mathrm{m^3\,kg^{-1}\,s^{-2}}\) with the Canon constants.
 
     \subsection{Topology–Driven Mass Law (invariant form)}
-    Let \(T(p,q)\) be a torus knot/link, \(n=\gcd(p,q)\) components, braid index \(b(T)=\min(|p|,|q|)\), Seifert genus \(g(T)\) (with standard link adjustment). Using ropelength \(\mathcal{L}_{\rm tot}(T)\) and string core radius \(\rs\):
+    Let \(T(p,q)\) be a torus knot/link, \(n=\gcd(p,q)\) components, braid index \(b(T)=\min(|p|,|q|)\), Seifert genus \(g(T)\) (with standard link adjustment). Using ropelength \(\mathcal{L}_{\rm tot}(T)\) and string core radius \(\rc\):
     \[
         \boxed{
             M\big(T(p,q)\big)
@@ -540,24 +554,25 @@
             \varphi^{-\,g(T)}\,
             n^{-1/\varphi}\,
             \left(\frac{1}{2}\rhof \vscore^2\right)\,
-            \frac{\pi \rs^3\,\mathcal{L}_{\mathrm{tot}}(T)}{c^2}.
+            \frac{\pi \rc^3\,\mathcal{L}_{\mathrm{tot}}(T)}{c^2}.
         }
     \]
     Dimensionality follows from the factor \(\tfrac12\rhof \vscore^2\) (J\,m\(^{-3}\)) times a volume.
 
     \subsection{Swirl Clocks (Local Time-Rate)}
+        \label{sec:swirl_clocks}
     \[
         \boxed{\ \frac{dt_{\text{local}}}{dt_{\infty}}
-            = \sqrt{1 - \frac{\lVert\omegas\rVert^{2}\,\rs^{2}}{c^{2}}}
-            = \sqrt{1 - \frac{\lVert\vswirl\rVert^{2}}{c^{2}}}\ \ (r=\rs)\ }.
+            = \sqrt{1 - \frac{\lVert\omegas\rVert^{2}\,\rc^{2}}{c^{2}}}
+            = \sqrt{1 - \frac{\lVert\vswirl\rVert^{2}}{c^{2}}}\ \ (r=\rc)\ }.
     \]
     \emph{Historical (deprecated) variant without a length scale is retained only for traceability.}
 
     \subsection{Swirl Angular Frequency Profile}
     \[
-        \boxed{\ \Omega_{\text{swirl}}(r) = \frac{\vscore}{\rs}\, e^{-r/\rs}\ },
+        \boxed{\ \Omega_{\text{swirl}}(r) = \frac{\vscore}{\rc}\, e^{-r/\rc}\ },
         \qquad
-        \Omega_{\text{swirl}}(0)=\frac{\vscore}{\rs}.
+        \Omega_{\text{swirl}}(0)=\frac{\vscore}{\rc}.
     \]
 
     \subsection{Vorticity Potential (Canonical Form)}
@@ -604,7 +619,7 @@
     \begin{enumerate}
         \item Dimensional analysis on every new term/equation.
         \item Limits: low-swirl \(\lVert\omegas\rVert\!\to\!0\) recovers classical mechanics/EM; large-scale averages reproduce Newtonian gravity with \(G_{\text{string}}\).
-        \item Numerics: provide prefactors using Canon constants; add any new constants to Sec.~2.
+        \item Numerics: provide prefactors using Canon constants; add any new constants to Sec.~\ref{sec:canonical_constants}.
         \item Explicit topology \(\leftrightarrow\) quantum mapping (which invariants, normalization).
         \item Cite any non-original constructs (BibTeX keys).
     \end{enumerate}
@@ -613,30 +628,29 @@
 % Personas (unchanged logic, SST names)
 %================================================
     \section{Persona Prompts}
+        \label{sec:personas}
 
     \subsection*{Reviewer Persona}
 		\scriptsize
-    \begin{verbatim}
-You are a peer reviewer for an SST paper. Use only the definitions and constants in the "SST Canon (v1.0)".
-Check dimensional consistency, limiting behavior, and numerical validation. Flag any use of non-canonical
-constants or equations unless equivalence is proved. Demand explicit mapping from knot invariants (linking,
-writhe, twist) to claimed quantum numbers.
-    \end{verbatim}
+    You are a peer reviewer for an SST paper. Use only the definitions and constants in the "SST Canon (\canonversion)".
+        Check dimensional consistency, limiting behavior, and numerical validation. Flag any use of non-canonical
+        constants or equations unless equivalence is proved. Demand explicit mapping from knot invariants (linking,
+        writhe, twist) to claimed quantum numbers.
 
     \subsection*{Theorist Persona}
-    \begin{verbatim}
-You are a theoretical physicist specialized in Swirl String Theory (SST). Base all reasoning on the attached
-"SST Canon (v1.0)". Your task: derive the swirl-based Hamiltonian for [TARGET SYSTEM], use Sec. 4 Lagrangian,
-and verify the Swirl Clock law (Sec. 3). Provide boxed equations, dimensional checks, and a short numerical
-evaluation using the Canon constants.
-    \end{verbatim}
+
+        You are a theoretical physicist specialized in Swirl String Theory (SST). Base all reasoning on the attached
+        "SST Canon (\canonversion)". Your task: derive the swirl-based Hamiltonian for [TARGET SYSTEM], use Sec.~\ref{sec:lagrangian},
+        and verify the Swirl Clock law (Sec. \ref{sec:swirl_clocks}). Provide boxed equations, dimensional checks, and a short numerical
+        evaluation using the Canon constants.
+
 
     \subsection*{Bridging Persona (Compare to GR/SM)}
-    \begin{verbatim}
-Work strictly within SST Canon (v1.0). Compare [TARGET] to its GR/SM counterpart. Identify exact replacements
-(e.g., curvature → swirl), and show which terms reduce to Newtonian/Maxwellian limits. Include a correspondence
-table and any constraints needed for equivalence.
-    \end{verbatim}
+
+        Work strictly within SST Canon (\canonversion). Compare [TARGET] to its GR/SM counterpart. Identify exact replacements
+        (e.g., curvature → swirl), and show which terms reduce to Newtonian/Maxwellian limits. Include a correspondence
+        table and any constraints needed for equivalence.
+
 
 %================================================
 % Session Kickoff Checklist
@@ -645,7 +659,7 @@ table and any constraints needed for equivalence.
     \section{Session Kickoff Checklist}
     \begin{enumerate}
         \item Start new chat per task; attach this Canon first.
-        \item Paste a persona prompt (Sec.~7).
+        \item Paste a persona prompt (Sec.~\ref{sec:personas}).
         \item Attach only task-relevant papers/sources.
         \item State any corrections explicitly (they persist in the session).
         \item At end, record Canon deltas (if any) and bump version.
@@ -656,24 +670,60 @@ table and any constraints needed for equivalence.
 %================================================
 % Appendix: Boxed Canon Equations (paste-ready)
 %================================================
-    \section*{Appendix: Boxed Canon Equations (paste-ready)}
+    \section{Appendix: Boxed Canon Equations (paste-ready)}
     \begin{enumerate}
         \item \textbf{Energy:} \fbox{$E_{\text{SST}} = \dfrac{4}{\alpha\varphi}\left(\dfrac{1}{2}\rhof \vscore^2\right)V$}
         \item \textbf{Mass:} \fbox{$M_{\text{SST}} = \dfrac{E_{\text{SST}}}{c^2}$}
-        \item \textbf{$G$ coupling:} \fbox{$G_{\text{string}} = \dfrac{\vscore\, c^5 t_p^2}{2F_{\text{EM}}^{\max} \rs^2}$}
-        \item \textbf{Swirl Clock:} \fbox{$\dfrac{dt_{\text{local}}}{dt_{\infty}}=\sqrt{1-\lVert\omegas\rVert^2 \rs^2/c^2}=\sqrt{1-\lVert\vswirl\rVert^2/c^2}$}
-        \item \textbf{Swirl profile:} \fbox{$\Omega_{\text{swirl}}(r) = \dfrac{\vscore}{\rs}e^{-r/\rs}$}
+        \item \textbf{$G$ coupling:} \fbox{$G_{\text{string}} = \dfrac{\vscore\, c^5 t_p^2}{2F_{\text{EM}}^{\max} \rc^2}$}
+        \item \textbf{Swirl Clock:} \fbox{$\dfrac{dt_{\text{local}}}{dt_{\infty}}=\sqrt{1-\lVert\omegas\rVert^2 \rc^2/c^2}=\sqrt{1-\lVert\vswirl\rVert^2/c^2}$}
+        \item \textbf{Swirl profile:} \fbox{$\Omega_{\text{swirl}}(r) = \dfrac{\vscore}{\rc}e^{-r/\rc}$}
     \end{enumerate}
 
+%================================================
+% Swirl Hamiltonian Density (Canonical Form)
+%================================================
+        \section{Swirl Hamiltonian Density (Canonical Form)}
+        \label{sec:hamiltonian}
+        With the effective fluid density \(\rhof\), the swirl vorticity \(\omegas=\nabla\times \vswirl\), and a Lagrange multiplier \(\lambda\) to enforce incompressibility, a Kelvin-compatible, dimensionally normalized Hamiltonian density is given by:
+        \begin{equation}
+            \mathcal{H}_{\text{SST}}[\vswirl] = \frac{1}{2}\rhof\,\|\vswirl\|^2 + \frac{1}{2}\rhof\,\rc^2\,\|\omegas\|^2 + \frac{1}{2}\rhof\,\rc^4\,\|\nabla \omegas\|^2 + \lambda (\nabla\cdot \vswirl).
+            \label{eq:Hamiltonian_SST}
+        \end{equation}
+        All terms carry units of energy density (J·m\(^{-3}\)). The first two terms represent the kinetic and rotational energy of the swirl, while the third term, proportional to the gradient of vorticity, corresponds to the energy associated with the curvature or "stiffness" of the swirl filaments. In the limit where the core radius \(\rc\to 0\) or for spatially uniform vorticity, this expression reduces to the simpler forms.
+
+%================================================
+% Swirl Pressure Law (Euler Corollary)
+%================================================
+        \section{Swirl Pressure Law (Euler Corollary)}
+        \label{sec:darkpressure}
+        For a steady, purely azimuthal drift velocity $v_\theta(r)$ with no radial flow, the radial component of the Euler momentum equation for an inviscid fluid provides a direct relationship for the swirl pressure gradient:
+        \begin{equation}
+            \frac{1}{\rhof}\frac{dp_{\text{swirl}}}{dr} = \frac{v_\theta(r)^2}{r}.
+            \label{eq:swirl_pressure_law}
+        \end{equation}
+        This is a canonical theorem derived directly from first principles. For a system exhibiting an asymptotically flat rotation curve where $v_\theta(r) \to v_0$ for large $r$, the pressure profile is found by integration:
+        \begin{equation}
+            p_{\text{swirl}}(r) = p_0 + \rhof v_0^2 \ln\left(\frac{r}{r_0}\right).
+        \end{equation}
+        Here, $p_0$ is the pressure at a reference radius $r_0$. The resulting outward-rising pressure creates an inward-pointing force ($-\nabla p_{\text{swirl}}$), providing the centripetal acceleration required to maintain the flat rotation curve.
 
 
 %================================================
-% Change Log
+% Experimental Protocols
 %================================================
-    \section*{Change Log}
-    \begin{itemize}
-        \item \textbf{v1.0 (2025-08-22):} VAM$\rightarrow$SST translation; introduced \vswirl, \omegas, \rs, effective densities \(\rhof,\rhoE,\rhom\); renamed force cutoffs to \(F_{\text{EM}}^{\max}, F_{\text{G}}^{\max}\); adopted Swirl Clocks terminology; updated all boxed equations and Hamiltonian.
-    \end{itemize}
+\section{Experimental Protocols (Canon-ready)}
+    \label{sec:experiments}
+
+\subsection*{Universality of $\vswirl = f\,\Delta x$ (metrology across platforms)}
+    From \texttt{ExperimentalValidationOfVortexCoreTangientalVelocity.tex}: measure a natural frequency $f$ and a spatial step $\Delta x$ from standing/propagating modes; verify
+        \begin{equation}
+            \boxed{\ \vswirl = f\,\Delta x \approx \num{1.09384563e6}\ \si{m/s}\ } \tag{X1}
+        \end{equation}
+        Platforms: magnet/electret domains, laser interferometry on coil-bound modes, and acoustic analogues. Require ppm-level agreement; report mean and standard deviation across platforms.
+
+\subsection*{Swirl gravitational potential}
+From \texttt{ExperimentalValidationOfGravitationalPotential.tex}: infer $p_{\text{swirl}}(r)$ from centripetal balance (\S\ref{sec:darkpressure}) and compare predicted forces with measured thrust or buoyancy anomalies in shielded high-voltage/coil experiments (geometry: starship/Rodin coils). Ensure dimensional consistency and calibrate only via Canon constants.
+
 
     \nocite{*}
     \bibliographystyle{unsrt}
