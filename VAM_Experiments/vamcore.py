@@ -38,7 +38,7 @@ def generate_alternating_skip_sequence(corners, step_even, step_odd, radius=1.0,
     return sequence, positions
 
 # Example configuration
-coil_corners = 32
+coil_corners = 40
 skip_forward = 11
 skip_backward = -9
 num_layers = 10

@@ -77,7 +77,7 @@ rodin_x, rodin_y, rodin_z = generate_rodin_starship(
     num_turns=10,
     num_points=2000
 )
-ax.plot3D(rodin_x, rodin_y, rodin_z, color='magenta', linewidth=2, label='Rodin Starship Coil')
+
 
 # --- Dipole rings ---
 bottom_pos, bottom_ori = generate_dipole_ring(dipole_ring_radius, num_magnets, 0.75, invert=False)
@@ -112,7 +112,7 @@ Bx_norm, By_norm, Bz_norm = Bx / magnitude, By / magnitude, Bz / magnitude
 fig = plt.figure(figsize=(10, 8))
 ax = fig.add_subplot(111, projection='3d')
 ax.quiver(X, Y, Z, Bx_norm, By_norm, Bz_norm, length=0.15, normalize=True, color='blue', linewidth=0.25)
-
+ax.plot3D(rodin_x, rodin_y, rodin_z, color='magenta', linewidth=2, label='Rodin Starship Coil')
 # Draw dipole arrows for both rings, always shown for context
 for pos, ori, c in zip(bottom_pos, bottom_ori, winding_colors):
     start = pos - ori * 0.3

@@ -6,7 +6,7 @@ import matplotlib
 matplotlib.use('TkAgg')
 
 coil_configs = [
-    (32, 11, -9), (34, 11, 7), (30, 11, 3), (32, 13, 9),
+    (40, 11, -9), (34, 11, 7), (30, 11, 3), (32, 13, 9),
     (28, 11, 7), (28, 11, -9), (34, 15, -13), (80, 33, -27),
 ]
 preset_labels = [f"N={c[0]}, +{c[1]}, {c[2]}" for c in coil_configs]

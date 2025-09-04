@@ -16,7 +16,7 @@ from __future__ import annotations
 
 import numpy as np
 from typing import Tuple, List
-import numpy as np
+
 from typing import Tuple, List
 import matplotlib
 matplotlib.use('TkAgg')
@@ -28,6 +28,19 @@ from vambindings import (
     compute_kinetic_energy, # KE(V, rho)
     VortexKnotSystem        # existing example object
 )
+# vam_rodin_core.py
+# VAMcore-ready Python layer for Rodin-coil/field workflows.
+# References existing VAMbindings and defines class APIs to be backed by C++/PyBind11.
+# Proposed C++/binding files:
+#   ./src/segment_builder.cpp|.h            ./src_bindings/py_segment_builder.cpp
+#   ./src/biot_savart_grid.cpp|.h           ./src_bindings/py_biot_savart_grid.cpp
+#   ./src/three_phase_coil.cpp|.h           ./src_bindings/py_three_phase_coil.cpp
+#   ./src/streamline.cpp|.h                 ./src_bindings/py_streamline.cpp
+#   ./src/swirl_curvature.cpp|.h            ./src_bindings/py_swirl_curvature.cpp
+#   ./src/swirl_gravity.cpp|.h              ./src_bindings/py_swirl_gravity.cpp
+
+from mpl_toolkits.mplot3d import Axes3D  # noqa: F401
+
 
 
 # -----------------------
@@ -265,16 +278,6 @@ def example_three_phase_segments(corners=32, s_even=11, s_odd=-9, layers=10, dz=
     return assembler.assemble(angles)
 
 
-# vam_rodin_core.py
-# VAMcore-ready Python layer for Rodin-coil/field workflows.
-# References existing VAMbindings and defines class APIs to be backed by C++/PyBind11.
-# Proposed C++/binding files:
-#   ./src/segment_builder.cpp|.h            ./src_bindings/py_segment_builder.cpp
-#   ./src/biot_savart_grid.cpp|.h           ./src_bindings/py_biot_savart_grid.cpp
-#   ./src/three_phase_coil.cpp|.h           ./src_bindings/py_three_phase_coil.cpp
-#   ./src/streamline.cpp|.h                 ./src_bindings/py_streamline.cpp
-#   ./src/swirl_curvature.cpp|.h            ./src_bindings/py_swirl_curvature.cpp
-#   ./src/swirl_gravity.cpp|.h              ./src_bindings/py_swirl_gravity.cpp
 
 
 # ---------- Geometry helpers (Python) ----------
@@ -568,17 +571,6 @@ def example_trefoil_field(nvec: int = 9, L: float = 5.0, gamma: float = 1.0) -> 
 # Reproduce your original pipeline using the VAMcore-friendly wrappers.
 # Heavy math goes through vambindings now (C++); plotting/IO stays Python.
 
-import numpy as np
-import matplotlib
-matplotlib.use('TkAgg')
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D  # noqa: F401
-
-from vambindings import (
-    VortexKnotSystem,
-    compute_kinetic_energy,   # already C++
-    biot_savart_velocity      # used inside evaluator fallback until batch C++ exists
-)
 
 
 # ---------------------------

@@ -16,7 +16,7 @@ from scipy.integrate import solve_ivp
 
 
 # Configuration from the first preset: (32, 11, -9)
-coil_corners = 32
+coil_corners = 40
 skip_forward = 11
 skip_backward = -9
 num_layers = 1
@@ -45,6 +45,45 @@ def generate_alternating_skip_sequence(corners, step_even, step_odd, radius=1.0,
 
 angles = np.linspace(0, 2*np.pi, coil_corners, endpoint=False) - np.pi/2
 seq, positions = generate_alternating_skip_sequence(coil_corners, skip_forward, skip_backward)
+
+
+###########################################################################
+# Generate 3-phase SawShape coils with 120° offset
+colors = ['purple', 'blue', 'green']
+phase_offsets = [0, 2*np.pi/3, 4*np.pi/3]
+
+fig = plt.figure(figsize=(10, 8))
+ax = fig.add_subplot(111, projection='3d')
+
+for idx, offset in enumerate(phase_offsets):
+    seq, _ = generate_alternating_skip_sequence(coil_corners, skip_forward, skip_backward, angle_offset=offset)
+
+    xs, ys, zs = [], [], []
+    for i in range(len(seq)):
+        angle_idx = (seq[i] - 1) % coil_corners
+        angle = angles[angle_idx] + offset
+        x = np.cos(angle)
+        y = np.sin(angle)
+        z = i * (layer_spacing / (len(seq)-1))
+        xs.append(x)
+        ys.append(y)
+        zs.append(z)
+
+    ax.plot(xs, ys, zs, color=colors[idx], lw=2, label=f"Phase {idx + 1}")
+
+ax.set_title(f"3-Phase SawShape Coil\nN={coil_corners}, Skip=({skip_forward}, {skip_backward})")
+ax.set_xlim(-1.5, 1.5)
+ax.set_ylim(-1.5, 1.5)
+ax.set_zlim(0, 1)
+ax.set_xlabel("X")
+ax.set_ylabel("Y")
+ax.set_zlabel("Z")
+ax.legend()
+coil_field_filename = f"3-Phase SawShape Coil N={coil_corners} Skip=({skip_forward} {skip_backward}).png"
+plt.tight_layout()
+plt.savefig(coil_field_filename, dpi=150)
+plt.show()
+###########################################################################
 
 
 fig = plt.figure(figsize=(10, 8))
@@ -83,42 +122,6 @@ plt.savefig(coil_field_filename, dpi=150)
 ###########################################################################
 
 
-# Generate 3-phase coils with 120° offset
-colors = ['purple', 'blue', 'green']
-phase_offsets = [0, 2*np.pi/3, 4*np.pi/3]
-
-fig = plt.figure(figsize=(10, 8))
-ax = fig.add_subplot(111, projection='3d')
-
-for idx, offset in enumerate(phase_offsets):
-    seq, _ = generate_alternating_skip_sequence(coil_corners, skip_forward, skip_backward, angle_offset=offset)
-
-    xs, ys, zs = [], [], []
-    for i in range(len(seq)):
-        angle_idx = (seq[i] - 1) % coil_corners
-        angle = angles[angle_idx] + offset
-        x = np.cos(angle)
-        y = np.sin(angle)
-        z = i * (layer_spacing / (len(seq)-1))
-        xs.append(x)
-        ys.append(y)
-        zs.append(z)
-
-    ax.plot(xs, ys, zs, color=colors[idx], lw=2, label=f"Phase {idx + 1}")
-
-ax.set_title(f"3-Phase Rodin Coil\nN={coil_corners}, Skip=({skip_forward}, {skip_backward})")
-ax.set_xlim(-1.5, 1.5)
-ax.set_ylim(-1.5, 1.5)
-ax.set_zlim(0, 1)
-ax.set_xlabel("X")
-ax.set_ylabel("Y")
-ax.set_zlabel("Z")
-ax.legend()
-coil_field_filename = f"3-Phase Rodin Coil N={coil_corners} Skip=({skip_forward} {skip_backward}).png"
-plt.tight_layout()
-plt.savefig(coil_field_filename, dpi=150)
-# plt.show()
-###########################################################################
 
 layer_spacing = 0.15
 
