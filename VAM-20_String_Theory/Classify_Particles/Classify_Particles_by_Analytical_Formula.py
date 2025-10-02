@@ -6,7 +6,8 @@
 # This script evaluates helicity-based topological signatures of knots using their Fourier-mode
 # representation in 3D space. These properties emerge from the Vortex Atom Model (VAM), which maps
 # closed-loop knotted field lines to particle identities in the Standard Model.
-# All the knots are represented as Fourier series in a .fseries file format, containing coefficients. The source for the knots is https://david.fremlin.de/knots/index.htm
+# All the knots are represented as Fourier series in a .fseries file format, containing coefficients.
+# The public source for the .fseries knots is https://david.fremlin.de/knots/index.htm
 #
 # === 🔬 Physical Quantities Measured ===
 #

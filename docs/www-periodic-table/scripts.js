@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+
     // Draw up the table
     $('.element').each(function(){
         $(this).html('<span class="atomic-number">'+$(this).data('number')+'</span><h3>'+$(this).data('symbol')+'</h3><span class="name">'+$(this).data('name')+'</span><span class="mass">'+$(this).data('mass')+'</span>');
@@ -42,7 +43,7 @@ $(document).ready(function(){
         console.log(that.data('symbol'));
     });
 
-
+console.log("%c 1 --> Line: 46||scripts.js\n : ","color:#f0f;", );
 
 
 });

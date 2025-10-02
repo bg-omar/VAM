@@ -44,7 +44,7 @@ Define the swirl energy density
     u = (1/2) ρ v_swirl^2.                                                                               (Eq. 0)
 
 The SST mass mapping can be written compactly as
-    M = (4/α) · φ^{-1} · (u · V) / c^2,                                                                  (Eq. 1)
+    M = (4/α) · (u · V) / c^2,                                                                  (Eq. 1)
 i.e.
     M = (4/α) · (1/φ) · [ (1/2) ρ v_swirl^2 · V ] / c^2.                                                 (Eq. 1′)
 
@@ -113,6 +113,13 @@ References (BibTeX)
   year       = {2025},
   doi        = {10.5281/zenodo.15849355}
 }
+@book{Ahlfors1979,
+  author = {Ahlfors, Lars V.},
+  title = {Complex Analysis},
+  edition = {3rd},
+  publisher = {McGraw--Hill},
+  year = {1979}
+}
 @article{Einstein1905,
   author    = {Albert Einstein},
   title     = {Ist die Trägheit eines Körpers von seinem Energieinhalt abhängig?},
@@ -162,7 +169,8 @@ alpha_fs: float = 7.2973525643e-3
 c: float = 299_792_458.0
 v_swirl: float = 1.093_845_63e6
 r_c: float = 1.408_970_17e-15
-rho_core: float = 3.8934358266918687e18
+rho_core: float = 3.8934358266918687e18  # legacy scale (do not use in invariant kernel)
+rho_f:    float = 7.0e-7                 # free-æther density (Canon)  [kg/m^3]
 avogadro: float = 6.022_140_76e23
 
 # Physical reference masses (CODATA 2018)
@@ -172,6 +180,41 @@ M_tau_actual: float = 3.167_54e-27       # Tau
 M_p_actual: float = 1.672_621_923_69e-27   # Proton
 M_n_actual: float = 1.674_927_498_04e-27   # Neutron
 
+# --- NEW: physical constants if not already present
+import numpy as np
+h = 6.62607015e-34  # Planck (J·s)
+
+# --- NEW: circulation quantization and composites
+def circulation_quantum(rc: float, v_core: float) -> float:
+    """
+    Quantum of circulation (SST): κ = 2π rc v_core   [m^2/s]
+    """
+    return 2.0*np.pi*rc*v_core
+
+def composite_circulation(n_quarks: int, kappa: float) -> float:
+    """
+    Kelvin additivity for a composite tube (e.g. baryon): Γ = n_quarks * κ
+    """
+    return n_quarks * kappa
+
+def combined_circulation(*gammas: float) -> float:
+    """
+    Sum circulations along a shared central line: Γ_total = Σ Γ_i
+    """
+    return float(np.sum(gammas))
+
+def swirl_from_circulation(Gamma: float, r_eff: float) -> float:
+    """
+    Tangential swirl from circulation: v_theta = Γ / (2π r_eff)
+    """
+    return Gamma / (2.0*np.pi*r_eff)
+
+def swirl_clock_factor(v_theta: float, c: float) -> float:
+    """
+    Swirl-Clock time dilation: dτ/dt = sqrt(1 - (v_theta/c)^2)
+    """
+    beta2 = (v_theta/c)**2
+    return float(np.sqrt(max(0.0, 1.0 - beta2)))
 
 # ──────────────────────────────────────────────────────────────────────────────
 # Config
@@ -200,7 +243,21 @@ class KnotTopology:
 # Invariant Master Formula
 # ──────────────────────────────────────────────────────────────────────────────
 def master_mass_invariant(topo: KnotTopology) -> float:
-    u = 0.5 * rho_core * v_swirl * v_swirl
+    # --- EXISTING (velocity-based) path (unchanged):
+    v_swirl_local = v_swirl  # default global value
+    kappa = None
+    Gamma = None
+
+    if getattr(topo, "use_circulation", False):
+        rc = getattr(topo, "r_c", r_c)           # fallback to global r_c if absent
+        v_core = getattr(topo, "v_core", v_swirl)    # fallback to v_swirl
+        kappa = circulation_quantum(rc, v_core)
+        n_quarks = int(getattr(topo, "n_quarks", 1))
+        Gamma = composite_circulation(n_quarks, kappa)
+        r_eff = rc * float(getattr(topo, "r_eff_factor", 1.0))
+        v_swirl_local = swirl_from_circulation(Gamma, r_eff)
+    # energy density (canon): u = 0.5 * rho_f * v_swirl^2
+    u = 0.5 * rho_f * v_swirl_local * v_swirl_local
     amplification = 4.0 / alpha_fs
     braid_suppression = topo.b ** -1.5
     genus_suppression = phi ** -topo.g
@@ -213,6 +270,14 @@ def master_mass_invariant(topo: KnotTopology) -> float:
             component_suppression *
             (u * volume) / (c * c)
     )
+    # --- NEW: (optional) record diagnostics for analysis tables
+    topo._diag = getattr(topo, "_diag", {})
+    topo._diag.update({
+        "kappa[m2/s]": float(kappa) if kappa is not None else None,
+        "Gamma[m2/s]": float(Gamma) if Gamma is not None else None,
+        "v_swirl[m/s]": float(v_swirl_local),
+        "swirl_clock": swirl_clock_factor(v_swirl_local, c),
+    })
     return total_mass
 
 
@@ -221,7 +286,7 @@ def master_mass_invariant(topo: KnotTopology) -> float:
 # ──────────────────────────────────────────────────────────────────────────────
 def solve_for_L_tot(mass_actual: float, topo_base: KnotTopology) -> float:
     """Generic function to solve for L_tot given a known mass and base topology."""
-    u = 0.5 * rho_core * v_swirl ** 2
+    u = 0.5 * rho_f * v_swirl ** 2
     prefactor = (
             (4.0 / alpha_fs) *
             (topo_base.b ** -1.5) *
@@ -235,7 +300,7 @@ def solve_for_L_tot(mass_actual: float, topo_base: KnotTopology) -> float:
 
 
 def baryon_prefactor(b: int, g: int, n: int) -> float:
-    u = 0.5 * rho_core * v_swirl * v_swirl
+    u = 0.5 * rho_f * v_swirl * v_swirl
     return (4.0/alpha_fs) * (b ** -1.5) * (phi ** -g) * (n ** (-1.0/phi)) * (u * math.pi * (r_c**3)) / (c*c)
 
 
