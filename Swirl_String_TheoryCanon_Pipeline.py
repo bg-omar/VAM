@@ -19,8 +19,8 @@ NA       = 6.02214076e23
 # ── Knot “volumes” for hadrons (tube model) ──────────────────────────────────
 # V_torus = 4π^2 r_c^3  (your algebraic form 2π^2 (2r_c) r_c^2 is identical)
 V_torus  = 4 * math.pi**2 * r_c**3
-# V_u_topo = 2.8281   # for 6_2
-# V_d_topo = 3.1639   # for 7_4
+# V_u_topo = 2.8281   # for 5_2
+# V_d_topo = 3.1639   # for 6_1
 # --- Hyperbolic volume of knot complements -----------------------------------
 # Priority: use SnapPy if present; otherwise use a small built-in table.
 # Note: torus/satellite knots have volume 0 by definition.
@@ -37,7 +37,7 @@ HYP_VOL_TABLE = {
     "4_1": 2.02988,   # figure-eight
     "5_2": 2.82812,
     "6_1": 3.16396,   # stevedore
-    "6_2": 2.82812,   # common assignment in small-knot tables
+    "5_2": 2.82812,   # common assignment in small-knot tables
     "6_3": 3.16396,
     "7_4": 3.16396,   # used in your runs
     # non-hyperbolic (torus): volumes are 0.0
@@ -65,7 +65,7 @@ def hyperbolic_volume_for(name):
 
     if HAVE_SNAPPY:
         # SnapPy naming: small knots usually accessible via spherogram link names
-        # e.g. '6_2', '7_4'. If that fails, try 'K6_2' etc.
+        # e.g. '5_2', '6_1'. If that fails, try 'K5_2' etc.
         try:
             L = snappy.Link(name)
         except Exception:
@@ -88,8 +88,8 @@ def hyperbolic_volume_for(name):
 
     # Last resort: 0.0 (unknown); better to log and fill later
     return 0.0
-V_u_topo = hyperbolic_volume_for("6_2")  # ≈ 2.82812
-V_d_topo = hyperbolic_volume_for("7_4")  # ≈ 3.16396
+V_u_topo = hyperbolic_volume_for("5_2")  # ≈ 2.82812
+V_d_topo = hyperbolic_volume_for("6_1")  # ≈ 3.16396
 
 V_u = V_u_topo * V_torus
 V_d = V_d_topo * V_torus
@@ -143,7 +143,7 @@ def L_from_fseries(path_K, path_unknot, L0=7.64, N=4000):
 # ---- genus map (extend as needed); fallback ≈ floor((C-1)/2) ----
 GENUS_HINT = {
     "3_1": 1, "5_1": 2, "5_2": 1,
-    "6_1": 1, "6_2": 1, "6_3": 1,
+    "6_1": 1, "5_2": 1, "6_3": 1,
     "7_1": 3, "7_2": 2, "7_3": 2, "7_4": 2, "7_5": 1, "7_6": 2, "7_7": 2,
     # add more as needed
 }

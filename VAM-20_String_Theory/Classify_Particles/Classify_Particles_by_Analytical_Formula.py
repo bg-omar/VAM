@@ -69,7 +69,7 @@ from termcolor import colored
 
 # Define canonical knots and their particle assignments. This is the primary classification method.
 #
-# NOTE on Quark Assignments (Justification for 6_2 and 7_4):
+# NOTE on Quark Assignments (Justification for 5_2 and 6_1):
 # The assignment of specific knots to quarks is not arbitrary but the result of a systematic
 # search based on three criteria derived from the SST Canon:
 #
@@ -80,7 +80,7 @@ from termcolor import colored
 #    calculating a_mu on 32³, 48³, and 64³ grids and ensuring the stability proxy
 #    sigma = |a_mu(64) - a_mu(48)| was below a small threshold.
 #
-# 3. Correct a_mu Value & Mass Hierarchy: From the pool of stable candidates, 6_2 and 7_4
+# 3. Correct a_mu Value & Mass Hierarchy: From the pool of stable candidates, 5_2 and 6_1
 #    were selected because their converged a_mu values fell within the correct numerical
 #    bands, and their intrinsic geometric properties (e.g., hyperbolic volume) are
 #    consistent with the observed mass hierarchy (m_d > m_u).
@@ -89,8 +89,8 @@ CANONICAL_KNOTS = {
     "3_1": ("Electron", "cyan"),
     "5_1": ("Muon", "yellow"),
     "7_1": ("Tau", "magenta"),
-    "6_2": ("Up Quark", "blue"),
-    "7_4": ("Down Quark", "red"),
+    "5_2": ("Up Quark", "blue"),
+    "6_1": ("Down Quark", "red"),
     "4_1": ("Achiral / Dark Sector", "grey"),
     # Add other specific, known assignments here
 }

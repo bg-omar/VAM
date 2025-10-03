@@ -154,11 +154,11 @@ def render_knot(P, out_png, title):
     plt.close(fig)
 
 # --- Discover files ---
-base = Path("VAM_Fseries/knots/6_2/")
+base = Path("VAM_Fseries/knots/5_2/")
 candidates = [
-    base / "knot.6_2.fseries",
-    base / "knot.6_2d.fseries",
-    base / "knot.6_2p.fseries",
+    base / "knot.5_2.fseries",
+    base / "knot.5_2d.fseries",
+    base / "knot.5_2p.fseries",
     ]
 existing = [p for p in candidates if p.exists()]
 

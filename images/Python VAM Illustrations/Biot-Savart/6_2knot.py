@@ -7,7 +7,7 @@ matplotlib.use('TkAgg')
 
 t = np.linspace(0, 2 * np.pi, 900)
 
-# Standard parametric equations for 6_2 knot
+# Standard parametric equations for 5_2 knot
 x = (2 + np.cos(3 * t)) * np.cos(2 * t)
 y = (2 + np.cos(3 * t)) * np.sin(2 * t)
 z = np.sin(6 * t) + 0.3 * np.sin(3 * t)

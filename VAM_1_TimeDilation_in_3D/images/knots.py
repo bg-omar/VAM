@@ -66,9 +66,9 @@ plt.show()
 
 
 # Function to generate a simple trefoil-like knot from Fourier series-like equations
-def knot_7_4(num_points=500, scale=1.0):
+def knot_6_1(num_points=500, scale=1.0):
     t = np.linspace(0, 2*np.pi, num_points)
-    # Simplified parametric approximation of a complex knot (stylized, not exact 7_4)
+    # Simplified parametric approximation of a complex knot (stylized, not exact 6_1)
     x = scale * (np.sin(2*t) + 2*np.sin(3*t))
     y = scale * (np.cos(2*t) - 2*np.cos(3*t))
     z = scale * (-np.sin(4*t))
@@ -79,7 +79,7 @@ fig = plt.figure(figsize=(14, 6))
 
 # SR case - uniform flow
 ax1 = fig.add_subplot(121, projection='3d')
-x, y, z = knot_7_4()
+x, y, z = knot_6_1()
 ax1.plot(x, y, z, color='red', lw=2)
 ax1.set_title("7₄ Knot (Down Quark) in Uniform Æther Flow (SR)", fontsize=12)
 ax1.quiver(-4, -4, -1, 8, 0, 0, color='lightblue', alpha=0.5, length=8, normalize=False)
@@ -109,8 +109,8 @@ plt.show()
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Function to generate a stylized 7_4-like knot curve
-def knot_7_4(num_points=500, scale=1.0):
+# Function to generate a stylized 6_1-like knot curve
+def knot_6_1(num_points=500, scale=1.0):
     t = np.linspace(0, 2*np.pi, num_points)
     x = scale * (np.sin(2*t) + 2*np.sin(3*t))
     y = scale * (np.cos(2*t) - 2*np.cos(3*t))
@@ -122,7 +122,7 @@ fig = plt.figure(figsize=(14, 6))
 
 # SR case - uniform flow
 ax1 = fig.add_subplot(121, projection='3d')
-x, y, z = knot_7_4()
+x, y, z = knot_6_1()
 ax1.plot(x, y, z, color='red', lw=2)
 ax1.set_title("7₄ Knot (Down Quark) in Uniform Æther Flow (SR)", fontsize=12)
 
@@ -149,8 +149,8 @@ plt.tight_layout()
 plt.show()
 
 
-# Let's define functions for the 6_4 (up quark) and 3_1 (electron) knots
-def knot_6_4(num_points=500, scale=1.0):
+# Let's define functions for the 5_2 (up quark) and 3_1 (electron) knots
+def knot_5_2(num_points=500, scale=1.0):
     t = np.linspace(0, 2*np.pi, num_points)
     x = scale * (np.sin(3*t) + np.sin(5*t))
     y = scale * (np.cos(3*t) - np.cos(5*t))
@@ -193,8 +193,8 @@ def plot_knot_with_flows(knot_func, knot_name, color='red'):
     plt.tight_layout()
     plt.show()
 
-# Plot for 6_4 (up quark)
-plot_knot_with_flows(knot_6_4, "6₄ Knot (Up Quark)", color='orange')
+# Plot for 5_2 (up quark)
+plot_knot_with_flows(knot_5_2, "6₄ Knot (Up Quark)", color='orange')
 
 # Plot for 3_1 (electron)
 plot_knot_with_flows(knot_3_1, "3₁ Knot (Electron)", color='blue')

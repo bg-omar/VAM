@@ -270,14 +270,14 @@ for name, p, n, e, gmol in atoms_molecules:
 
     # Create proton and neutron examples
     V_torus = 2 * math.pi ** 2 * (2 * r_c) * r_c ** 2
-    V_u_topo = 2.8281  # knot 6_2
-    V_d_topo = 3.1639  # knot 7_4
+    V_u_topo = 2.8281  # knot 5_2
+    V_d_topo = 3.1639  # knot 6_1
 
-    # Proton: uud → 2x6_2 + 1x7_4
+    # Proton: uud → 2x5_2 + 1x6_1
     V_proton = [V_u_topo * V_torus, V_u_topo * V_torus, V_d_topo * V_torus]
     M_proton = vam_master_mass(n_knots=3, m_threads=1, s=3, V_list=V_proton)
 
-    # Neutron: udd → 1x6_2 + 2x7_4
+    # Neutron: udd → 1x5_2 + 2x6_1
     V_neutron = [V_u_topo * V_torus, V_d_topo * V_torus, V_d_topo * V_torus]
     M_neutron = vam_master_mass(n_knots=3, m_threads=1, s=3, V_list=V_neutron)
 
@@ -370,14 +370,14 @@ tools.display_dataframe_to_user(
 
 # Create proton and neutron examples
 V_torus = 2 * math.pi**2 * (2 * r_c) * r_c**2
-V_u_topo = 2.8281  # knot 6_2
-V_d_topo = 3.1639  # knot 7_4
+V_u_topo = 2.8281  # knot 5_2
+V_d_topo = 3.1639  # knot 6_1
 
-# Proton: uud → 2x6_2 + 1x7_4
+# Proton: uud → 2x5_2 + 1x6_1
 V_proton = [V_u_topo * V_torus, V_u_topo * V_torus, V_d_topo * V_torus]
 M_proton = vam_master_mass(n_knots=3, m_threads=1, s=3, V_list=V_proton)
 
-# Neutron: udd → 1x6_2 + 2x7_4
+# Neutron: udd → 1x5_2 + 2x6_1
 V_neutron = [V_u_topo * V_torus, V_d_topo * V_torus, V_d_topo * V_torus]
 M_neutron = vam_master_mass(n_knots=3, m_threads=1, s=3, V_list=V_neutron)
 

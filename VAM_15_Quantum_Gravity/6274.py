@@ -22,13 +22,13 @@ x, y, z = coords['x'], coords['y'], coords['z']
 def plot_knot(ax, x, y, z, label, color):
     ax.plot3D(x, y, z, label=label, color=color, linewidth=2)
 
-# Parametrize the 6_2 and 7_4 knots using Fourier-type approximations
+# Parametrize the 5_2 and 6_1 knots using Fourier-type approximations
 # These are not exact mathematical forms but give a representative shape
 
-# Let's generate more accurate versions of 6_2 and 7_4 knots using `pytknotid` and `knot3d`
+# Let's generate more accurate versions of 5_2 and 6_1 knots using `pytknotid` and `knot3d`
 # However, since we don't have those specific packages in this environment,
 # we'll use standard torus knot approximations and label accordingly.
-# We'll use parametric models inspired by known embeddings of 6_2 and 7_4
+# We'll use parametric models inspired by known embeddings of 5_2 and 6_1
 
 def generate_knot_6_2(t):
     # 6_2 knot: known parametric embedding from literature

@@ -79,7 +79,7 @@ def pd_from_polyline(x,y,z):
     return crossings, n, P, Z
 
 # 3) Ask SnapPy/Spherogram to do the hard part if available; else fallback table
-HYP_VOL_TABLE = {"6_2": 2.82812, "7_4": 3.16396, "4_1": 2.02988, "6_3": 3.16396,
+HYP_VOL_TABLE = {"5_2": 2.82812, "6_1": 3.16396, "4_1": 2.02988, "6_3": 3.16396,
                  "5_2": 2.82812, "3_1": 0.0, "5_1": 0.0, "7_1": 0.0}
 
 def hyperbolic_volume_from_fseries(path, N=3000):

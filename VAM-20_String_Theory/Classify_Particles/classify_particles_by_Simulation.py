@@ -307,9 +307,9 @@ def classify_vam_by_amu(a_mu, fname):
         return "Electron (Lepton)", 'cyan'
     elif '4_1' in fname:
         return "Dark Sector / Photon", 'yellow'
-    elif '6_2' in fname:
+    elif '5_2' in fname:
         return "Up Quark", 'blue'
-    elif '7_4' in fname:
+    elif '6_1' in fname:
         return "Down Quark", 'red'
     elif abs(a_mu) < 0.05:
         return "Dark Sector (Achiral)", 'green'
