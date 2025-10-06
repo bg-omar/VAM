@@ -7,36 +7,36 @@
 %! DOI = 10.5281/zenodo.15684873
 
 % === Metadata ===
-%\newcommand{\appendixtitle}{\textbf{Testing Universality of the Proposed Tangential Vortex-Core Velocity \\ \( C_e = f \cdot \Delta x \): A Cross-Platform Precision Metrology Study}}
-%\newcommand{\paperdoi}{10.5281/zenodo.15684873}
-%
-%
-%\ifdefined\standalonechapter\else
-%% Standalone mode
-%\documentclass[11pt]{article}
-%\usepackage{siunitx}
-%\usepackage{textcomp}
-%\AtBeginDocument{\RenewCommandCopy\qty\SI}
-%\input{../vamstyle.sty}
-%\input{../vam_appendix_setup.sty}
-%\begin{document}
-%
-%    % === Title page ===
-%    \titlepageOpen
-%
-%    \begin{abstract}
-%        A recent theoretical claim suggests the existence of a universal tangential vortex-core velocity \( C_e \approx 1.0938 \times 10^6 \, \text{m/s} \), derived from the product of mechanical resonance frequency and displacement amplitude, \( C_e = f \cdot \Delta x \). This proposed constant, if universal, would have significant implications for fluid-based field theories and emergent causal structures. We propose a rigorous experimental program to test the validity and invariance of \( C_e \) across a wide range of resonators, frequencies, and materials. Using high-precision instrumentation and statistically grounded falsifiability metrics, this project aims to determine whether \( C_e \) reflects a true universal constant or an artifact of mechanical design.
-%
-%        %        This appendix presents a falsifiable experimental validation of the Vortex \AE{}ther Model (VAM), in which gravitational and temporal phenomena arise from angular momentum stored in knotted vortex structures embedded in a superfluid-like \ae{}ther. A central prediction of VAM is the existence of a universal tangential velocity $C_e$ at the boundary of such structures, expressible as the product $C_e = f \cdot \Delta x$ of resonance frequency $f$ and displacement amplitude $\Delta x$. We analyze five independent experiments using Pd-based surface acoustic wave (SAW), Lamb wave, and film bulk acoustic resonator (FBAR) devices spanning frequencies from 100\,MHz to 2.5\,GHz and amplitudes from 2.5\,nm to 11\,nm. In each case, we find convergence to $C_e \approx 1.09384563 \times 10^6$\,m/s, validating a key axiom of VAM. We provide a reproducible protocol suitable for university laboratories, emphasizing that deviation from this relation beyond 5\% would empirically falsify the VAM's time dilation mechanism. This represents a rare instance of a quantum-scale gravitational prediction subject to immediate experimental test.
-%    \end{abstract}
-%
-%    \titlepageClose
-%    \fi
-%
-%    \ifdefined\standalonechapter
-%    \section{\appendixtitle}
-%    \else
-%    \fi
+\newcommand{\appendixtitle}{\textbf{Testing Universality of the Proposed Tangential Vortex-Core Velocity \\ \( C_e = f \cdot \Delta x \): A Cross-Platform Precision Metrology Study}}
+\newcommand{\paperdoi}{10.5281/zenodo.15684873}
+
+
+\ifdefined\standalonechapter\else
+% Standalone mode
+\documentclass[11pt]{article}
+\usepackage{siunitx}
+\usepackage{textcomp}
+\AtBeginDocument{\RenewCommandCopy\qty\SI}
+\input{../vamstyle.sty}
+\input{../docs/Template/vam_appendix_setup.sty}
+\begin{document}
+
+    % === Title page ===
+    \titlepageOpen
+
+    \begin{abstract}
+        A recent theoretical claim suggests the existence of a universal tangential vortex-core velocity \( C_e \approx 1.0938 \times 10^6 \, \text{m/s} \), derived from the product of mechanical resonance frequency and displacement amplitude, \( C_e = f \cdot \Delta x \). This proposed constant, if universal, would have significant implications for fluid-based field theories and emergent causal structures. We propose a rigorous experimental program to test the validity and invariance of \( C_e \) across a wide range of resonators, frequencies, and materials. Using high-precision instrumentation and statistically grounded falsifiability metrics, this project aims to determine whether \( C_e \) reflects a true universal constant or an artifact of mechanical design.
+
+        %        This appendix presents a falsifiable experimental validation of the Vortex \AE{}ther Model (VAM), in which gravitational and temporal phenomena arise from angular momentum stored in knotted vortex structures embedded in a superfluid-like \ae{}ther. A central prediction of VAM is the existence of a universal tangential velocity $C_e$ at the boundary of such structures, expressible as the product $C_e = f \cdot \Delta x$ of resonance frequency $f$ and displacement amplitude $\Delta x$. We analyze five independent experiments using Pd-based surface acoustic wave (SAW), Lamb wave, and film bulk acoustic resonator (FBAR) devices spanning frequencies from 100\,MHz to 2.5\,GHz and amplitudes from 2.5\,nm to 11\,nm. In each case, we find convergence to $C_e \approx 1.09384563 \times 10^6$\,m/s, validating a key axiom of VAM. We provide a reproducible protocol suitable for university laboratories, emphasizing that deviation from this relation beyond 5\% would empirically falsify the VAM's time dilation mechanism. This represents a rare instance of a quantum-scale gravitational prediction subject to immediate experimental test.
+    \end{abstract}
+
+    \titlepageClose
+    \fi
+
+    \ifdefined\standalonechapter
+    \section{\appendixtitle}
+    \else
+    \fi
 % ============= Begin of content ============
     \section{\textbf{Testing Universality of the Proposed Tangential Vortex-Core Velocity}}
         \section*{Specific Aims}
@@ -272,6 +272,6 @@ Total Project Budget: \~\$89,200 USD
 % === Bibliography (only for standalone) ===
 \ifdefined\standalonechapter\else
 \bibliographystyle{unsrt}
-\bibliography{../../references}
+\bibliography{../references}
 \end{document}
 \fi
