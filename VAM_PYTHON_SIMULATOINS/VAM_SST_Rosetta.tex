@@ -291,7 +291,129 @@
 			\end{cases}
 		\]
 		The earlier ansatz $d\tau/d\bar t=e^{-r/r_c}$ can be used only as a phenomenological fit; it does not follow from the SR-like form unless one imposes a special $v_\phi(r)$ inconsistent with Rankine.
-% ============== End of content =============
+
+\section{Patch Plan for Canonical SST Reformulation}\label{sec:patchplan}
+\paragraph{Purpose.} Provide an auditable, low–risk, idempotent procedure to migrate legacy VAM manuscripts to the canonical SST nomenclature and density/energetics layer fixed above, without altering derivational content or numerical values.
+
+\paragraph{Scope.} Applies to all \texttt{.tex}, \texttt{.sty}, and lightweight markdown notes containing: legacy density labels (\verb|\rho_\text{\ae}^{(fluid)}| etc.), swirl speed symbols (\verb|C_e|), force scale bounds, time terminology, and prose usages (``vortex'', ``\ae{}ther'') outside quotations. Excludes: historical quotations, bibliographic entries, figure file names, and already canonicalized sections marked with \verb|% SST-CANON|.
+
+\subsection*{A. Canonical Macro Injection Layer}
+Insert (once per project preamble if not already present) the guarded macro block below. If this file is included, skip; otherwise add just the minimal layer (do \emph{not} duplicate style packages):
+\begin{verbatim}
+% ---- SST Canonical Layer (inject if absent) ----
+\providecommand{\vswirl}{\mathbf{v}_{\swirlarrow}}
+\providecommand{\vscore}{v_s}
+\providecommand{\rhoF}{\rho_{\!f}}
+\providecommand{\rhoE}{\rho_{\!E}}
+\providecommand{\rhoM}{\rho_{\!m}}
+\providecommand{\rhoC}{\rho_{\mathrm{core}}}
+\end{verbatim}
+Idempotency: use \verb|\providecommand| to avoid redefinition warnings.
+
+\subsection*{B. Symbol / Term Replacement Rules}
+Order matters (apply top→bottom). Use word boundaries / math mode guards to avoid false positives.
+\begin{center}\small
+\begin{tabular}{lll}
+\hline
+Legacy & Canonical SST & Notes \\
+\hline
+\verb|\rho_\text{\ae}^{(fluid)}| & \verb|\rhoF| & Effective fluid density \\
+\verb|\rho_\text{\ae}^{(mass)}| & \verb|\rhoC| & Core/material (not \rhoM) \\
+\verb|\rho_\text{\ae}^{(energy)}| & \verb|\rhoE| & Energy density (retain factors) \\
+\verb|C_e| & \verb|\vscore| & Characteristic swirl speed \\
+\verb|F_\text{\ae}^{\text{max}}| & \verb|\FmaxEM| & Coulomb-sector bound \\
+\verb|F_{gr}^{max}| & \verb|\FmaxG| & Universal/gravitational bound \\
+``vortex string'' & ``swirl string'' & Prose only \\
+``vortex'' (generic) & ``swirl'' or ``swirl string'' & Except inside quotes/cites \\
+``\ae ther'' / ``aether'' & (omit / use ``foliation medium'') & Unless historical \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection*{C. Regex / Sed Style (Illustrative)}
+Windows PowerShell example (escape carefully):
+\begin{verbatim}
+# 1. Guard quoted contexts first (temporary placeholders)
+(Get-ChildItem -Recurse -Include *.tex) | ForEach-Object {
+  $t = Get-Content $_.FullName -Raw
+  # Example: Skip lines containing '% NO-PATCH'
+  $t = ($t -split "`n") | ForEach-Object {
+    if ($_ -match '% NO-PATCH') { $_ } else { $_ }
+  } | Set-Content -Encoding UTF8 $_.FullName
+}
+# 2. Core symbolic replacements (math mode preserved)
+(gc file.tex) -replace '\\rho_\\text{\\ae}\^\\{\\(fluid\\)\\}','\\rhoF' |
+  %{ $_ -replace 'C_e','v_s' } | sc file.tex
+\end{verbatim}
+Prefer a Python script (below) for richer context filtering.
+
+\subsection*{D. Automated Patch Script (Python Stub)}
+\begin{verbatim}
+import re, pathlib
+ROOT = pathlib.Path('.')
+RULES = [
+  (r'\\rho_\\text{\\ae}\^\\{\\(fluid\\)\\}', r'\\rhoF'),
+  (r'\\rho_\\text{\\ae}\^\\{\\(mass\\)\\}', r'\\rhoC'),
+  (r'\\rho_\\text{\\ae}\^\\{\\(energy\\)\\}', r'\\rhoE'),
+  (r'\bC_e\b', r'v_s'),
+  (r'F_\\text{\\ae}\^\\{\\text{max}\\}', r'\\FmaxEM'),
+]
+SKIP_LINE = re.compile(r'% NO-PATCH')
+for tex in ROOT.rglob('*.tex'):
+    txt = tex.read_text(encoding='utf-8')
+    out_lines = []
+    for line in txt.splitlines():
+        if SKIP_LINE.search(line):
+            out_lines.append(line); continue
+        # skip bibliography entries
+        if line.lstrip().startswith('\\bibitem'):
+            out_lines.append(line); continue
+        new = line
+        for pat, rep in RULES:
+            new = re.sub(pat, rep, new)
+        out_lines.append(new)
+    new_txt = '\n'.join(out_lines)
+    if new_txt != txt:
+        tex.write_text(new_txt, encoding='utf-8')
+        print('Patched', tex)
+\end{verbatim}
+Add manual review stage before committing changes.
+
+\subsection*{E. Validation Checklist}
+\begin{enumerate}
+  \item Compile each patched top-level \texttt{.tex} (check for undefined control sequences).\label{val:compile}
+  \item Confirm numerical constants (\vscore, $r_c$, \rhoC, \FmaxEM, \FmaxG) unchanged by diffing PDFs or grepping values.
+  \item Search for residual legacy tokens: \verb|grep -R "rho_\\text{\\ae}"|.
+  \item Run cross-document macro collision check (duplicate definitions)---ensure only \verb|\providecommand| forms present besides this file.
+  \item Update changelog / commit with message: \emph{SST patchplan phase N applied (ruleset version X.Y)}.
+\end{enumerate}
+
+\subsection*{F. Risk Mitigations}
+\begin{itemize}
+  \item Idempotent replacements: rules chosen so a second run is a no-op.
+  \item Scoped skips: lines with \verb|% NO-PATCH|, bibliography, verbatim/code blocks.
+  \item Manual hold list: files in \texttt{VAM\_Experiments/} flagged for ongoing derivations (retain experimental wording until finalized).
+\end{itemize}
+
+\subsection*{G. Deferred / Manual Items}
+Items requiring conceptual rather than lexical migration: deep rephrasings of historical narrative, figure annotations embedded in graphics, variable names in external simulation code (leave until code macro layer added), any occurrence inside archived PDF extracts.
+
+\subsection*{H. Patchplan Versioning}
+Declare a semantic version for the rules (start at \verb|patchplan v1.0.0|). Increment patch for regex refinement, minor for new canonical terms, major if canonical identities (Eq. set in Abstract) change.
+
+\paragraph{Summary Table (Quick Audit).}
+\begin{center}\small
+\begin{tabular}{lll}
+Stage & Status token & Artifact \\
+Inject macros & \verb|SST-MACROS| & Preamble diff \\
+Apply substitutions & \verb|SST-PATCHED| & Git commit hash \\
+Validation (Step \ref{val:compile}) & \verb|SST-BUILD| & Log summary \\
+Residual scan clean & \verb|SST-CLEAN| & Grep report \\
+Release tag & \verb|SST-VERSION| & Tag (e.g., sst-migrate-1.0.0) \\
+\end{tabular}
+\end{center}
+
+\paragraph{Closing Note.} When this section appears, the document is considered \emph{patchplan-aware}. Future contributors should update this section rather than reintroduce ad-hoc replacements.
 
 % === Bibliography (only for standalone) ===
 	\ifdefined\standalonechapter\else
