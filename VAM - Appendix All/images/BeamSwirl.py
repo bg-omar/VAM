@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Constants (from VAM)
+# Constants (from SST)
 Ce = 1.09384563e6       # m/s (vortex core tangential velocity)
 rc = 1.40897017e-15     # m (vortex core radius)
 omega_0 = Ce / rc       # beam central angular frequency
@@ -45,11 +45,11 @@ plt.plot(omega, knot, label=r'$\sigma_{\mathrm{knot}}(\omega)$', linestyle=':')
 plt.plot(omega, yield_curve, label=r'$Y_{\mathrm{VAM}}(\omega)$', linewidth=2)
 plt.xlabel('Angular Frequency $\omega$ (rad/s)')
 plt.ylabel('Amplitude (a.u.)')
-plt.title('Swirl Resonance Fusion Yield in VAM')
+plt.title('Swirl Resonance Fusion Yield in SST')
 plt.legend()
 plt.grid(True)
 plt.tight_layout()
-plt.savefig("vam_swirl_yield_plot.png")
+plt.savefig("sst_swirl_yield_plot.png")
 plt.show()
 
 
@@ -95,13 +95,13 @@ for tau in taus:
 plt.figure(figsize=(12, 8))
 for tau, F_t, S_t in responses:
     plt.plot(t * 1e15, S_t, label=f'Pulse τ = {tau*1e15:.1f} fs')
-plt.title('Time-Domain Vortex Response $S(t)$ for Varying Pulse Widths')
+plt.title('Time-Domain Swirl Response $S(t)$ for Varying Pulse Widths')
 plt.xlabel('Time (fs)')
 plt.ylabel('Response Amplitude (a.u.)')
 plt.grid(True)
 plt.legend()
 plt.tight_layout()
-plt.savefig('vam_time_response_plot.png')
+plt.savefig('sst_time_response_plot.png')
 
 
 
@@ -113,11 +113,11 @@ zoom_range = (t > -5e-15) & (t < 5e-15)
 plt.figure(figsize=(10, 4))
 for tau, F_t, S_t in responses:
     plt.plot(t[zoom_range] * 1e16, S_t[zoom_range], label=f'τ = {tau*1e15:.1f} fs')
-plt.title('Zoomed-In Vortex Response $S(t)$ (|t| < 5 fs)')
+plt.title('Zoomed-In Swirl Response $S(t)$ (|t| < 5 fs)')
 plt.xlabel('Time (fs)')
 plt.ylabel('Response Amplitude (a.u.)')
 plt.grid(True)
 plt.legend()
 plt.tight_layout()
-plt.savefig('vam_time_response_zoom_plot.png')
+plt.savefig('sst_time_response_zoom_plot.png')
 plt.show()
