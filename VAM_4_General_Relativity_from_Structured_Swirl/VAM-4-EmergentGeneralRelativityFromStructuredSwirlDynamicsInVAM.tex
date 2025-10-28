@@ -23,8 +23,8 @@
 \usepackage{hyperref}
 \usetikzlibrary{arrows.meta, positioning, shapes.multipart}
 \usepackage{amsthm}
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage{bm}
@@ -181,11 +181,11 @@
 
     \subsection*{Lemmas}
 
-    \begin{lemma*}[Emergent Time Dilation]
+    \begin{lemma}[Emergent Time Dilation]
         For a vortex with rigid swirl speed \( v = |\vec{\omega}| r \), the time dilation obeys equation ~\eqref{eq:tau-dilation}. This mirrors the Lorentz factor from special relativity.
-    \end{lemma*}
+    \end{lemma}
 
-    \begin{lemma*}[Length Contraction from Swirl Pressure]
+    \begin{lemma}[Length Contraction from Swirl Pressure]
         Front-back asymmetry in translating vortices yields phase compression:
         \begin{equation}
             \boxed{
@@ -194,9 +194,9 @@
             \label{eq:lorentz-length-contraction}
         \end{equation}
         This mirrors the Lorentz contraction in special relativity, where \( L_0 \) is the proper length.
-    \end{lemma*}
+    \end{lemma}
 
-    \begin{lemma*}[Invariant Interval from Swirl Metric]
+    \begin{lemma}[Invariant Interval from Swirl Metric]
         Let:
         \begin{equation}
             \boxed{
@@ -208,13 +208,13 @@
         \[
             ds^2 \to c^2 d\tau^2 - dr^2.
         \]
-    \end{lemma*}
+    \end{lemma}
 
 % -------------------------------------------------
 
     \subsection*{Theorem (Lorentz Recovery Theorem)}
 
-    \begin{theorem*}[Lorentz Recovery Theorem]
+    \begin{theorem}[Lorentz Recovery Theorem]
         Let a vortex structure propagate through the æther with tangential swirl velocity \( |\vec{v}_\theta| \ll c \). Then the Vortex Æther Model (VAM) reproduces all first-order Lorentz-invariant observables of special relativity:
 
         \begin{itemize}
@@ -242,7 +242,7 @@
         reduces to the Minkowski form in the low-vorticity limit.
 
         Hence, VAM is kinematically Lorentz-compatible in its inertial, low-swirl regime.
-    \end{theorem*}
+    \end{theorem}
 
 % -------------------------------------------------
 
