@@ -50,63 +50,106 @@
 % ==================== Abstract ====================
 \begin{abstract}
             We present the Vortex Æther Model (VAM), a unified physical framework in which mass, gravity, and proper time emerge from topologically structured vorticity within a compressible, inviscid æther. In contrast to curvature-based relativity and Higgs-based mass generation, VAM describes particles as knotted vortex excitations, and gravity as a swirl-induced time deviation field. The theory reproduces classical phenomena such as gravitational redshift, time dilation, and frame-dragging through fluid-dynamic energetics, and calculates particle masses and physical constants from first principles. The Standard Model gauge groups SU(3), SU(2), and U(1) arise naturally from vortex topology and swirl symmetry, while canonical quantization defines a Fock-like Hilbert space over knot eigenstates. We develop a full path-integral formulation over topological sectors of the æther manifold, enabling quantum transitions, knot fusion, and helicity exchange interactions. Benchmarking against general relativity and experimental tests of gravitational time deviation support the model’s viability. VAM offers a physically grounded, falsifiable, and derivational alternative to conventional quantum gravity and field theory models.\\
-            \begin{center}
-
-% --- helpers for inline knot icons (keeps them centered in math mode) ---
-                \newcommand{\knicon}[1]{\vcenter{\hbox{\includegraphics[height=1.2em]{#1}}}}
-                \newcommand{\knlab}[2]{\textbf{#1}~(\knicon{#2})}
-
-% ----------------------------- VAM Used Knots -----------------------------
-                VAM Used Knots:\\
-                \[
-                    \begingroup
-                    \footnotesize
-                    \setlength{\jot}{4pt}
-                    \begin{aligned}
-                        \knlab{Unknot}{images/0_1}:&
-                        \ \ \gamma~\text{(photon; massless swirl wave / unknotted ring)}
-                        && \text{[boson = unknotted excitation]; }\cite{VAM5,VAM11-bosons}. \\[4pt]
-
-                        \knlab{Hopf link}{images/hopf}:&
-                        \ \ g~\text{(gluon-like flux / gauge carrier; massless)}
-                        && \text{(not a ``massive polariton''); }\cite{VAM6}. \\[6pt]
-
-                        \knlab{Trefoil}~T(2,3)~{\knicon{images/3_1}}:&
-                        \ \ e^- \quad \text{(mirror }T(3,2)\text{: }e^+\text{)}
-                        && \text{(chiral fermion; spin-$\tfrac12$); }\cite{VAM5,VAM11-leptons}. \\[4pt]
-
-                        \knlab{$5_2$}{images/5_2}:&
-                        \ \ u\text{-type subknot (chiral)}
-                        && \text{fermion (spin-$\tfrac12$); }\cite{VAM5,VAM11-leptons}. \\[4pt]
-
-                        \knlab{$6_1$}{images/6_1}:&
-                        \ \ d\text{-type subknot (chiral)}
-                        && \text{fermion (spin-$\tfrac12$); }\cite{VAM5-quarks}. \\[4pt]
-
-% If you have an image for the fully pairwise-linked triple, put its filename below.
-% Temporarily using a placeholder name; replace `images/triplelink` with your file if different.
-                        \knlab{Triple link (all pairs linked)}{images/aborromean}:&
-                        \ \ p~(uud;\ 5_2,\,5_2,\,6_1)
-                        && \text{(not Borromean); }\cite{VAM5-protneut}. \\[4pt]
-
-                        \knlab{Borromean rings}{images/borromean}:&
-                        \ \ n~(udd;\ 5_2,\,6_1,\,6_1)
-                        && \text{(pairwise $L_k=0$, inseparable triple); }\cite{VAM5-protneut}. \\[4pt]
-
-% Using Solomon image as the visual for a two-component Hopfion-like doublet
-                        \knlab{Hopfion doublet}{images/solomon}:&
-                        \ \ \nu~\text{(neutrino; linked, neutral swirl mode)}
-                        && \text{alt.: near-unknot minimal-tension state; }\cite{VAM5-nu,VAM11-nu}. \\[4pt]
-
-                        \knlab{Figure-eight}{images/4_1}:&
-                        \ \ \text{achiral hyperbolic; \emph{expelled} from chiral swirl fields}
-                        && \text{(DE-like repulsion, \emph{not} DM); }\cite{VAM9}.
-                    \end{aligned}
-                    \endgroup
-                \]
 
 
-\end{center}
+            \section{Composite Baryon Tubes}
+                Inside baryons, three quark knots (e.g., $5_2$, $5_2$, $6_1$; see Figs.~\ref{fig:5-2} and \ref{fig:6-1}) meet at a Y-shaped junction, forming a single composite swirl tube (Fig.~\ref{fig:three-knot-gallery}).
+
+                \begin{figure}[htbp]
+                    \centering
+                    \subfloat[Top view of 3 quark knots\label{fig:baryon}]{
+                        \includegraphics[width=0.3\linewidth]{figures/sst_three_knot_180_speed_stagnation}}
+                    \subfloat[3D view of 3 quark knots\label{fig:baryon3d1}]{
+                        \includegraphics[width=0.3\linewidth]{figures/sst_three_knot_3d_streamlines_colored_ULTRALIGHT}}
+                    \subfloat[Composite tube\label{fig:baryon_composite_tube}]{
+
+                        \begin{tikzpicture}[scale=0.5, line cap=round, line join=round]
+
+                            \tikzset{
+                                axisline/.style={draw=black!70, line width=0.6pt},
+                                tube/.style={draw, line width=2.2pt, rounded corners=2pt},
+                                vline/.style={draw, line width=1.2pt},
+                                labelbox/.style={fill=white, draw=black!20, rounded corners=2pt, inner sep=3pt}
+                            }
+
+                            \draw[axisline, ->] (0,-5.2) -- (0,4.2) node[left] {$z$};
+                            \draw[axisline, ->] (-4.2,0) -- (4.2,0) node[below right] {$x$};
+                            \fill (0,0) circle (2pt);
+
+
+                            % ---------- Three incoming quark tubes (from -z, merging to z-axis) ----------
+                            \draw[tube, blue!70]
+                            (-1.8,-5.0) .. controls + (0,2.1) and +(-0.6,-0.3) .. (-0.8,-1.2);
+                            \draw[tube, green!70!black]
+                            (0.0,-5.0) .. controls + (0,2.3) and +(-0.2,-0.3) .. (0.0,-1.2);
+                            \draw[tube, red!70]
+                            (1.8,-5.0) .. controls + (0,2.1) and +(0.6,-0.3) .. (0.8,-1.2);
+
+                            % ---------- Y-junction region into the central tube ----------
+                            \draw[tube, gray!35] (-0.8,-1.2) -- (-0.25,-0.6);
+                            \draw[tube, gray!35] ( 0.0,-1.2) -- ( 0.0,-0.6);
+                            \draw[tube, gray!35] ( 0.8,-1.2) -- ( 0.25,-0.6);
+
+                            % ---------- Composite tube along +z on the central axis ----------
+                            \draw[tube, black!80]
+                            (0.0,-0.6) .. controls +(0,0.9) and +(0,-0.9) .. (0.0,3.8);
+
+                            % ---------- Swirl/flow direction tick marks ----------
+                            % Incoming (upwards along +z)
+                            \foreach \x/\z in {-1.5/-4.2, -1.2/-3.2, -1.0/-2.2}{
+                                \draw[vline, blue!70] (\x,\z) -- ++(0,0.6);
+                            }
+                            \foreach \x/\z in {0.0/-4.4, 0.0/-3.4, 0.0/-2.4}{
+                                \draw[vline, green!70!black] (\x,\z) -- ++(0,0.6);
+                            }
+                            \foreach \x/\z in {1.5/-4.2, 1.2/-3.2, 1.0/-2.2}{
+                                \draw[vline, red!70] (\x,\z) -- ++(0,0.6);
+                            }
+                            % Composite (upwards along +z)
+                            \foreach \z in {-0.2, 0.8, 1.8, 2.8}{
+                                \draw[vline, black!80] (0.0,\z) -- ++(0,0.8);
+                            }
+
+                            % ---------- Labels ----------
+                            \node[below right] at (0,0) {\small central axis};
+                            \node[align=left, labelbox, anchor=west] at (-3.9,-4.6) {Three quark tubes\\[-2pt]
+                            \(\Gamma_1=\Gamma_2=\Gamma_3=\kappa\)};
+                            \node[align=left, labelbox, anchor=west] at (0.2,2.8) {Composite tube on \(z\)-axis\\[-2pt]
+                            \(\Gamma_{\text{baryon}}=3\kappa\)\\[-2pt]
+                            \(v_{\theta,\mathrm{eff}}=3\,v_c\)};
+                            \node[align=left, labelbox, anchor=east] at (-1,-0.2) { \(\ \Gamma=\sum_i \Gamma_i\)};
+                        \end{tikzpicture}
+                    }
+                    \caption{Baryon core as a \emph{composite swirl tube}. Three quark tubes (bottom) join via a Y-junction into a single tube along $+z$. Circulation adds linearly, $\Gamma_\text{baryon}=3\kappa$, hence $v_\theta , \textrm{eff}=\Gamma_\text{baryon}/(2\pi r_\text{eff})$ with $r_\text{eff}\approx r_c$ to leading order.}
+                    \label{fig:three-knot-gallery}
+                \end{figure}
+
+                Each quark knot $i$ has circulation $\Gamma_i = \kappa$ around the central axis (Fig.~\ref{fig:baryon_composite_tube}).
+                By Kelvin’s theorem (linearity of circulation),
+                \begin{equation}
+                    \Gamma_{\mathrm{baryon}}=\Gamma_1+\Gamma_2+\Gamma_3=3\kappa.
+                \end{equation}
+                Since $\Gamma=2\pi r\,v_\theta$,
+                \begin{equation}
+                    \boxed{\;
+                    v_{\theta,\mathrm{eff}}=\frac{\Gamma_{\mathrm{baryon}}}{2\pi\,r_{\mathrm{eff}}}
+                        =\frac{3\kappa}{2\pi\,r_{\mathrm{eff}}}\,,
+                        \;}\label{eq:baryon-vtheta}
+                \end{equation}
+                with $r_{\mathrm{eff}}$ the effective core radius of the merged tube. In the thin-core, near-Rankine limit $r_{\mathrm{eff}}\approx r_c$ to leading order (so that $v_{\theta,\mathrm{eff}}\approx 3 v_c$ holds as a first-order estimate), while the deeper pressure well is set by the increased $\Gamma$.
+
+                \paragraph{Swirl Clock scaling.}
+                    The Swirl Clock relation becomes
+                    \begin{equation}
+                        dt_{\mathrm{local}} = dt_\infty \sqrt{1 - \frac{(3 v_c)^2}{c^2}},\label{eq:baryon-swirl-clock}
+                    \end{equation}
+                    predicting a more pronounced local time dilation, consistent with the larger rest mass of baryons relative to single quark knots.
+
+                    \emph{Analogy (for intuition).} Three equal water whirls feed one outlet: the hole may widen slightly, but the combined spin deepens the whirl and speeds the rim roughly threefold.
+
+
+
+
 \end{abstract}
 \maketitle
 

@@ -21,7 +21,7 @@
   \usepackage{tikz}
   \usetikzlibrary{arrows.meta, positioning}
   \usepackage{booktabs}
-  \usepackage{caption}
+
   \usepackage{array, tabularx}
   \usepackage{listings}
   \usepackage{bookmark}
@@ -37,10 +37,136 @@
             .. controls (2,0.5) and (1,1) .. (0,0);
 }
 
+% ====== minimal packages ======
+\usepackage{amsfonts}
+\usepackage{bm}
+
+\usepackage{microtype}
+\usepackage{tcolorbox}
+
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+
+% ==== Packages ====
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\usepackage[utf8]{inputenc}
+\usepackage[caption=false]{subfig}
+
+% ===== Gauge sector macros =====
+\renewcommand{\Tr}{\mathrm{Tr}}
+\newcommand{\ii}{\mathrm{i}}
+\newcommand{\GsA}{G^a_{\mu\nu}}
+\newcommand{\WsI}{W^i_{\mu\nu}}
+\newcommand{\Bmn}{B_{\mu\nu}}
+
+% ===============================
+% Macros (canonicalized)
+% ===============================
+
+% swirl arrows (context-aware)
+\newcommand{\swirlarrow}{%
+    \mathchoice{\mkern-2mu\scriptstyle\boldsymbol{\circlearrowleft}}%
+    {\mkern-2mu\scriptstyle\boldsymbol{\circlearrowleft}}%
+    {\mkern-2mu\scriptscriptstyle\boldsymbol{\circlearrowleft}}%
+    {\mkern-2mu\scriptscriptstyle\boldsymbol{\circlearrowleft}}%
+}
+\newcommand{\swirlarrowcw}{%
+    \mathchoice{\mkern-2mu\scriptstyle\boldsymbol{\circlearrowright}}%
+    {\mkern-2mu\scriptstyle\boldsymbol{\circlearrowright}}%
+    {\mkern-2mu\scriptscriptstyle\boldsymbol{\circlearrowright}}%
+    {\mkern-2mu\scriptscriptstyle\boldsymbol{\circlearrowright}}%
+}
+
+% Canonical symbols
+\newcommand{\vswirl}{\mathbf{v}_{\swirlarrow}}
+\newcommand{\vswirlcw}{\mathbf{v}_{\swirlarrowcw}}
+\newcommand{\SwirlClock}{S_{(t)}^{\swirlarrow}}
+\newcommand{\SwirlClockcw}{S_{(t)}^{\swirlarrowcw}}
+\newcommand{\omegas}{\boldsymbol{\omega}_{\swirlarrow}}  % swirl vorticity
+\newcommand{\vscore}{v_{\swirlarrow}}                    % shorthand: |v_swirl| at r=r_c
+\newcommand{\vnorm}{\lVert \vswirl \rVert}               % swirl speed magnitude
+\newcommand{\rhof}{\rho_{\!f}}                           % effective fluid density
+\newcommand{\rhoE}{\rho_{\!E}}                           % swirl energy density
+\newcommand{\rhom}{\rho_{\!m}}                           % mass-equivalent density
+\newcommand{\rhocore}{\rho_{\mathrm{core}}}
+\newcommand{\rc}{r_c}                                    % string core radius (swirl string radius)
+\newcommand{\FmaxEM}{F_{\mathrm{EM}}^{\max}}             % EM-like maximal force scale
+\newcommand{\FmaxG}{F_{\mathrm{G}}^{\max}}               % G-like maximal force scale
+\newcommand{\Lam}{\Lambda}                               % Swirl Coulomb constant
+\newcommand{\Om}{\Omega_{\swirlarrow}}                   % swirl angular frequency profile
+\newcommand{\alpg}{\alpha_g}                             % gravitational fine-structure analogue
+% --- Minimal macro prelude (safe, local) ---
+\providecommand{\rc}{r_c}
+\newcommand{\omegaVec}{\boldsymbol{\omega}}
+\newcommand{\rhoF}{\rho_{\!f}}     % effective fluid density
+\newcommand{\rhoM}{\rho_{\!m}}     % mass-equivalent density
+\newcommand{\OmegaCore}{\Omega_{\mathrm{core}}}
+\newcommand{\bg}{\mathrm{bg}}
+\newcommand{\core}{\mathrm{core}}
+\newcommand{\GammaC}{\Gamma_C}
+
+% ===============================
+% Policy: the golden constant is only allowed via hyperbolic functions.
+\newcommand{\xig}{\operatorname{asinh}\!\left(\tfrac{1}{2}\right)}
+\newcommand{\phig}{\exp(\xig)}
+\newcommand{\phialg}{\bigl(1+\sqrt{5}\bigr)/2}
+\newcommand{\xigold}{\tfrac{3}{2}\,\xig}
+\newcommand{\GoldenDeclare}{%
+    \textbf{Golden (hyperbolic)}:\ \(\ln\phi=\xig\), hence \(\phi=\phig\).
+    \ \emph{(Equivalently, \(\phi=\phialg\); the algebraic form is derivative.)}%
+}
+
+\usepackage{geometry}
+\geometry{margin=1in}
+
+
+\usetikzlibrary{calc,arrows.meta,decorations.markings,decorations.pathmorphing,
+    decorations.pathreplacing,intersections,knots,hobby,shapes.geometric}
+% If you actually need spath3, load it as a package (comment out if not installed):
+% \usepackage{spath3}
+
+
+% A tiny style for loop arrows
+\tikzset{
+    looparrow/.style={-{Stealth[length=2.5mm,width=1.8mm]},thick},
+    knotline/.style={ultra thick, blue!70},
+    testloopON/.style={thick, draw=green!60!black},
+    testloopOFF/.style={thick, draw=red!70},
+    axes/.style={very thick, black},
+}
+
+\AtBeginDocument{\RenewCommandCopy\qty\SI}
+
+% Styling helpers
+\tikzset{
+    axisline/.style={very thick, black},
+    corecircle/.style={thick, dashed, gray},
+    knotline/.style={ultra thick, blue!65},
+    swirlarrow/.style={-{Stealth[length=3mm,width=2mm]}, thick},
+    vline/.style={-{Stealth[length=3mm,width=2mm]}, thick, teal!70!black},
+    tube/.style={line width=6pt, line cap=round},
+    ghost/.style={opacity=0.25},
+    labelbox/.style={fill=white, inner sep=2pt, rounded corners=2pt},
+}
+
+
+% ------- Shared styles  -------
+\tikzset{
+    knot diagram/every strand/.append style={
+        line cap=round,
+        line join=round,
+        ultra thick,
+        red
+    },
+    every knot/.style={line cap=round,line join=round,very thick},
+    strand/.style={line cap=round,line join=round,line width=3pt,draw=black},
+    over/.style={preaction={draw=white,line width=6.5pt}},
+}
 
 \newcommand{\dotmarker}[1]{\tikz[baseline]{\node[fill=#1,circle,inner sep=1.5pt]{};}}
 
-  \input{../../SwirlStringTheory/template/vam_appendix_setup}
+  \input{../../Swirl-String-Theory/template/SST_appendix_setup.sty}
   \begin{document}
 
   % === Title page ===
@@ -224,21 +350,14 @@ The VAM mass of a particle or atomic structure is given by:
 \centering
 \begin{minipage}{0.25\textwidth}
     \centering
-             \includegraphics[width=\textwidth]{images/knot_5_2_topview.png}
+             \includegraphics[width=\textwidth]{images/3quarcks}
 \end{minipage}
 \hspace{1em}
 \begin{minipage}{0.25\textwidth}
     \centering
-            \includegraphics[width=\textwidth]{images/knot_6_1_topview.png}
+            \includegraphics[width=\textwidth]{images/3quarcks3d}
 \end{minipage}
-     \caption{Top-down visualizations of the parametric vortex knots from which up- and down-type VAM excitations are constructed.}
-\end{figure}
-
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.6\textwidth]{images/knots_5_2_and_6_1_3D}
-    \caption{3D perspective views of the vortex knots \(5_2\) and \(6_1\), showing their spatial structure and chirality. These configurations correspond to up- and down-type quark analogs in the Vortex \AE ther Model.}
+     \caption{Top-down visualizations and 3D perspective views of the vortex knots \(5_2\) and \(6_1\), showing their spatial structure and chirality. These configurations correspond to up- and down-type quark analogs in VAM/SST.}
 \end{figure}
 
 
@@ -273,7 +392,6 @@ The neutron is represented by one right-handed \( 5_2 \) knot (up-type) and two 
 \end{itemize}
 
 This is known in knot theory as a \emph{Borromean link of knots} and is valid so long as the global linking structure retains the Borromean property even with knotted components.
-
 
   \subsection{Unified Mass Evaluation via the Master Formula}
   We apply \eqref{eq:master-B} with \(k=0\) for baryons (no golden velocity layer in the core energy), using adjusted volumes:
