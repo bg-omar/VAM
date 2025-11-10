@@ -25,7 +25,6 @@
   \usepackage{array, tabularx}
   \usepackage{listings}
   \usepackage{bookmark}
-  \usepackage{newtxtext,newtxmath}
   \usepackage[scaled=0.95]{inconsolata}
   \usepackage{mathrsfs}
   \newcommand{\heartmarker}{
@@ -166,22 +165,47 @@
 
 \newcommand{\dotmarker}[1]{\tikz[baseline]{\node[fill=#1,circle,inner sep=1.5pt]{};}}
 
-  \input{../../Swirl-String-Theory/template/SST_appendix_setup.sty}
+  \input{../../SwirlStringTheory/template/SST_appendix_setup.sty}
   \begin{document}
 
   % === Title page ===
   \titlepageOpen
 
   \begin{abstract}
-      We present the Master Mass Formula~\cite{iskandarani2025vam-master} used in the Vortex Æther Model (VAM), a topological-fluid framework for deriving particle and atomic mass from knot-like vortex structures. Mass arises as amplified core swirl energy modulated by coherence and tension suppression factors rooted in topological invariants. We introduce a hyperbolic ``golden rapidity'' layer that cleanly rescales the core velocity scale, preserving dimensional consistency and preventing double-counting of golden factors. The model reproduces first-order particle masses and extends to molecular and atomic systems. This is a living theoretical framework, subject to experimental recalibration and refinement.
+      We present the Master Mass Formula~\cite{iskandarani2025vam-master} used in Swirl String Theory also known as the Vortex Æther Model (VAM), a topological-fluid framework for deriving particle and atomic mass from knot-like vortex structures. Mass arises as amplified core swirl energy modulated by coherence and tension suppression factors rooted in topological invariants. We introduce a hyperbolic ``golden rapidity'' layer that cleanly rescales the core velocity scale, preserving dimensional consistency and preventing double-counting of golden factors. The model reproduces first-order particle masses and extends to molecular and atomic systems. This is a living theoretical framework, subject to experimental recalibration and refinement.
       For a full list of atomic masses up to Uranium, and common molecules calculated using the Master Formula, see Appendix \ref{sec:AtomicMasses}.
+
+      \section{Chiral Swirling Knots and Central Holes}
+          Consider a chiral knot $K$ embedded in $\mathbb{R}^3$, such as Fig.~\ref{fig:knot-gallery}:
+
+          \begin{figure}[htbp]
+              \centering
+              \subfloat[$3_1$ (trefoil)\label{fig:3-1}]{
+                  \includegraphics[width=0.22\linewidth]{figures/3_1}}
+              \hfill
+              \subfloat[$5_1$ (cinquefoil)\label{fig:5-1}]{
+                  \includegraphics[width=0.22\linewidth]{figures/5_1}}
+              \hfill
+              \subfloat[$5_2$ (cinquefoil twist)\label{fig:5-2}]{
+                  \includegraphics[width=0.22\linewidth]{figures/5_2}}
+              \hfill
+              \subfloat[$6_1$ (stevedore)\label{fig:6-1}]{
+                  \includegraphics[width=0.22\linewidth]{figures/6_1}}
+              \caption{Canonical knot gallery.}
+              \label{fig:knot-gallery}
+          \end{figure}
+
+          Each knot can be parametrized on a torus with major radius $R$ and minor radius $r$.
+          The core tube of radius $r_c$ supports a tangential swirl velocity $\vswirl$, defining the \emph{Swirl Clock} $\SwirlClock$.
+
+          A key structural feature is a \emph{central hole} threaded by a straight axis (taken as the $z$-axis), along which the analytic swirl potential is singular.
       \titlepageClose
   \end{abstract}
 
 
 
-\noindent\raggedright \section{\noindent\raggedright The VAM Mass Formula}
-The VAM mass of a particle or atomic structure is given by:
+\noindent\raggedright \section{\noindent\raggedright The SST Mass Formula}
+The SST mass of a particle or atomic structure is given by:
 
   \paragraph{Golden ratio and identities.}
   Define the golden ratio via the inverse hyperbolic sine
