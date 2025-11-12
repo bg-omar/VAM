@@ -17,11 +17,11 @@ y = r * np.sin(theta)
 
 # Time layer labels and fractions
 time_labels = [
-    (1.45 / 1.5, "Kairos Moment ($\\mathbb{K}$)"),  # end of spiral
-    (1.2 / 1.5, "Vortex Proper Time ($T_v$)"),
-    (0.95 / 1.5, "Swirl Clock ($S^\\circlearrowleft_\\text{(t)}$)"),
-    (0.65 / 1.5, "Chronos-Time ($\\tau$)"),
-    (0.45 / 1.5, "Now-Point ($\\nu_0$)"),
+    (1.45 / 1.5, r"Topological Time ($\mathbb{K}$)"),
+    (1.20 / 1.5, r"Circulation Duration ($T_v$)"),
+    (0.95 / 1.5, r"Swirl Clock ($S^{\circlearrowleft}_{(t)}$)"),
+    (0.65 / 1.5, r"Proper Time ($\tau$)"),
+    (0.45 / 1.5, r"Now-Point ($\nu_0$)"),
 ]
 
 fig = plt.figure(figsize=(8, 6))
@@ -120,4 +120,3 @@ plt.tight_layout()
 filename = f"{script_name}KairosMoment.png"
 plt.savefig(filename, dpi=150)  # Save image with high resolution
 plt.show()
-
