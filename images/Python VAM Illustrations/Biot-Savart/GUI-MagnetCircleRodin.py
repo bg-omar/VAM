@@ -10,13 +10,13 @@ from matplotlib.widgets import CheckButtons, TextBox
 import os
 import matplotlib
 matplotlib.use('TkAgg')
-from vambindings import biot_savart_velocity
+from sstbindings import biot_savart_velocity
 
 # --- Optional VAMbindings (if present) ---
 # If your build provides Biot–Savart and dipole grid evaluators, expose them here.
 # Otherwise, the code will use the NumPy fallbacks below.
 try:
-    from vambindings import (
+    from sstbindings import (
         # canonical VAM examples (not used here unless provided in your build)
         lamb_oseen_velocity,
         lamb_oseen_vorticity,
@@ -32,7 +32,7 @@ try:
     # Expected signatures (float32/float64):
     # biot_savart_wire_grid(X, Y, Z, wire_points[N,3], current) -> (Bx,By,Bz)
     # dipole_ring_field_grid(X, Y, Z, positions[M,3], moments[M,3]) -> (Bx,By,Bz)
-    from vambindings import biot_savart_wire_grid, dipole_ring_field_grid
+    from sstbindings import biot_savart_wire_grid, dipole_ring_field_grid
     _HAS_VAM_BIOT = True
 except Exception:
     _HAS_VAM_BIOT = False

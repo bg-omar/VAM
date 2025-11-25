@@ -2,7 +2,7 @@
 # -----------------------------------------------------------------------------
 # vam_batch_hypvol_from_fseries.py  (VAMbindings-ready)
 #
-# Optional VAM C++ accelerations (if present in vambindings):
+# Optional VAM C++ accelerations (if present in sstbindings):
 #   • hyperbolic_volume_from_pd(...)  -> ./src/hyperbolic_volume.cpp
 #       C++ binding: ./src_bindings/py_hyperbolic_volume.cpp
 #       Example:     ./examples/hyperbolic_volume_example.py
@@ -31,13 +31,13 @@ except Exception:
 _VAM_PD = None
 _VAM_HYPVOL = None
 try:
-    from vambindings import hyperbolic_volume_from_pd as _VAM_HYPVOL  # optional
+    from sstbindings import hyperbolic_volume_from_pd as _VAM_HYPVOL  # optional
 except Exception:
     _VAM_HYPVOL = None
 
 try:
     # If your build exposes a faster PD extractor:
-    from vambindings import pd_from_curve as _VAM_PD  # optional
+    from sstbindings import pd_from_curve as _VAM_PD  # optional
 except Exception:
     _VAM_PD = None
 
@@ -55,7 +55,7 @@ if _VAM_HYPVOL is None:
     try:
         from vam_hypvol_no_deps import hyperbolic_volume_from_pd as _PY_HYPVOL
     except ImportError:
-        print("ERROR: Place vam_hypvol_no_deps.py next to this script or provide vambindings.hyperbolic_volume_from_pd.", file=sys.stderr)
+        print("ERROR: Place vam_hypvol_no_deps.py next to this script or provide sstbindings.hyperbolic_volume_from_pd.", file=sys.stderr)
         sys.exit(1)
 else:
     _PY_HYPVOL = None

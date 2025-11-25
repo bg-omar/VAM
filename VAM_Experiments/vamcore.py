@@ -1,5 +1,5 @@
 # VAM-based Rodin Coil and Field Visualization Script
-# Uses C++/PyBind11 accelerated routines from vambindings.cp311-win_amd64.pyd
+# Uses C++/PyBind11 accelerated routines from sstbindings.cp311-win_amd64.pyd
 
 import numpy as np
 import matplotlib
@@ -11,7 +11,7 @@ from matplotlib.cm import ScalarMappable
 from skimage import measure
 from scipy.integrate import solve_ivp
 
-from vambindings import (
+from sstbindings import (
     biot_savart_velocity,
     compute_kinetic_energy,
     VortexKnotSystem
@@ -86,7 +86,7 @@ def vam_biot_savart_field(grid_points, wire_positions, wire_tangents, gamma=1.0)
     wire_tangents: (M,3) ndarray — tangent vectors at filament points
     Returns: (N,3) ndarray of velocity at each grid point
     """
-    # vambindings: biot_savart_velocity(r, positions, tangents, Gamma=1.0)
+    # sstbindings: biot_savart_velocity(r, positions, tangents, Gamma=1.0)
     # Here, r is a single 3-vector, positions and tangents are (M,3) lists
     # Vectorized over grid points (Python loop over grid, C++ for kernel)
     V = np.array([biot_savart_velocity(pt.tolist(), wire_positions.tolist(), wire_tangents.tolist(), gamma)

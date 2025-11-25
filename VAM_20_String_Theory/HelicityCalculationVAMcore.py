@@ -11,7 +11,7 @@ import pandas as pd
 
 # --- VAMCORE bindings (with safe fallbacks if module is missing) ---
 try:
-    from vambindings import fourier_knot_eval, biot_savart_velocity_grid, curl3d_central
+    from sstbindings import fourier_knot_eval, biot_savart_velocity_grid, curl3d_central
     HAVE_VAM = True
 except Exception:
     HAVE_VAM = False

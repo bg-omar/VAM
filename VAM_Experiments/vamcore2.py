@@ -1,9 +1,9 @@
 # VAMcore refactor stubs for Rodin coil + fields
 # Uses existing VAMbindings where available; isolates heavy kernels as C++/PyBind11 class candidates.
 # Existing bindings referenced:
-#   - vambindings.biot_savart_velocity
-#   - vambindings.compute_kinetic_energy
-#   - vambindings.VortexKnotSystem
+#   - sstbindings.biot_savart_velocity
+#   - sstbindings.compute_kinetic_energy
+#   - sstbindings.VortexKnotSystem
 #
 # New C++ classes to add (proposed → file layout):
 #   1) BiotSavartGridEvaluator         → ./src/biot_savart_grid.cpp|.h, ./src_bindings/py_biot_savart_grid.cpp
@@ -22,8 +22,8 @@ import matplotlib
 matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 
-# Minimal import block; extend if more bindings exist in vambindings.cp311-*.pyd
-from vambindings import (
+# Minimal import block; extend if more bindings exist in sstbindings.cp311-*.pyd
+from sstbindings import (
     biot_savart_velocity,   # scalar point evaluation along poly-segment filament(s)
     compute_kinetic_energy, # KE(V, rho)
     VortexKnotSystem        # existing example object
@@ -116,7 +116,7 @@ class SegmentTangentBuilder:
 
 class BiotSavartGridEvaluator:
     """
-    Python wrapper that calls existing scalar vambindings.biot_savart_velocity
+    Python wrapper that calls existing scalar sstbindings.biot_savart_velocity
     per grid point. Replace with a batch C++ kernel that accepts:
         evaluate(grid: (N,3), seg_p0: (M,3), seg_t: (M,3), gamma: float) -> (N,3)
     """
@@ -253,7 +253,7 @@ def field_on_grid_from_segments(
 
 
 def kinetic_energy_from_field(V: np.ndarray, rho: float) -> float:
-    """V is (N,3) flattened; delegates to vambindings.compute_kinetic_energy."""
+    """V is (N,3) flattened; delegates to sstbindings.compute_kinetic_energy."""
     return compute_kinetic_energy(V.tolist(), rho)
 
 
@@ -366,7 +366,7 @@ class SegmentTangentBuilder:
 class BiotSavartGridEvaluator:
     """
     Evaluate induced velocity at many points from filament segments.
-    Python fallback loops over grid points calling vambindings.biot_savart_velocity.
+    Python fallback loops over grid points calling sstbindings.biot_savart_velocity.
 
     C++ target signature:
       evaluate(grid[N,3], seg_p0[M,3], seg_t[M,3], gamma: float=1.0) -> vel[N,3]
@@ -569,7 +569,7 @@ def example_trefoil_field(nvec: int = 9, L: float = 5.0, gamma: float = 1.0) -> 
 
 # run_rodin_vam.py
 # Reproduce your original pipeline using the VAMcore-friendly wrappers.
-# Heavy math goes through vambindings now (C++); plotting/IO stays Python.
+# Heavy math goes through sstbindings now (C++); plotting/IO stays Python.
 
 
 
