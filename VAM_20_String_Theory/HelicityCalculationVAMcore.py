@@ -1,20 +1,23 @@
 #!/usr/bin/env python3
-# Refactor: use VAMcore PyBind11 bindings for Fourier eval, Biot–Savart, and curl
+# Refactor: use SSTcore PyBind11 bindings for Fourier eval, Biot–Savart, and curl
 # Bindings used:
 #   fourier_knot_eval(a_x,b_x,a_y,b_y,a_z,b_z, s)     ← ./src_bindings/py_fourier_knot.cpp
 #   biot_savart_velocity_grid(polyline[N,3], grid[G,3]) ← ./src_bindings/py_biot_savart.cpp
 #   curl3d_central(vel[Nx,Ny,Nz,3], spacing)           ← ./src_bindings/py_field_ops.cpp
+# For the usages of .fseries in the Canon papers, see the source of the files https://david.fremlin.de/knots/index.htm.
+# % lines a_x(j) b_x(j) a_y(j) b_y(j) a_z(j) b_z(j)
+# % corresponding to x(s) = sum a_x(j)cos(js)+b_x(j)sin(js) etc
 
 import os, glob, re
 import numpy as np
 import pandas as pd
 
-# --- VAMCORE bindings (with safe fallbacks if module is missing) ---
+# --- SSTCORE bindings (with safe fallbacks if module is missing) ---
 try:
     from sstbindings import fourier_knot_eval, biot_savart_velocity_grid, curl3d_central
-    HAVE_VAM = True
+    HAVE_SST = True
 except Exception:
-    HAVE_VAM = False
+    HAVE_SST = False
 
 # ---------------------------
 # Parsing .fseries (unchanged)
@@ -46,10 +49,10 @@ def parse_fseries_multi(filename):
     return knots
 
 # ---------------------------
-# Fourier evaluation (VAM)
+# Fourier evaluation (SST)
 # ---------------------------
 def eval_fourier_block(coeffs, s):
-    if HAVE_VAM:
+    if HAVE_SST:
         x, y, z = fourier_knot_eval(
             coeffs['a_x'], coeffs['b_x'],
             coeffs['a_y'], coeffs['b_y'],
@@ -67,10 +70,10 @@ def eval_fourier_block(coeffs, s):
         series(coeffs['a_z'], coeffs['b_z'])
 
 # ---------------------------
-# Biot–Savart on arbitrary points (VAM)
+# Biot–Savart on arbitrary points (SST)
 # ---------------------------
 def compute_biot_savart_velocity(x, y, z, grid_points):
-    if HAVE_VAM:
+    if HAVE_SST:
         poly = np.stack([x,y,z], axis=1).astype(float)
         return biot_savart_velocity_grid(poly, grid_points.astype(float))
     # fallback: midpoint rule
@@ -86,10 +89,10 @@ def compute_biot_savart_velocity(x, y, z, grid_points):
     return velocity * (1.0 / (4.0*np.pi))
 
 # ---------------------------
-# Curl on grid (VAM)
+# Curl on grid (SST)
 # ---------------------------
 def compute_vorticity_full_grid(velocity, shape, spacing):
-    if HAVE_VAM:
+    if HAVE_SST:
         vel3 = velocity.reshape(*shape, 3).astype(float)
         curl3 = curl3d_central(vel3, float(spacing))
         return np.asarray(curl3).reshape(-1, 3)
@@ -163,7 +166,7 @@ if __name__ == "__main__":
             a_mu, Hc, Hm = compute_a_mu_for_file(path, G, S, I)
             print(f"{os.path.basename(path)}:  a_mu({G}) = {a_mu:.8f}   [Hc={Hc:.3e}, Hm={Hm:.3e}]")
 
-    print("\n=== VAM Muon Anomaly via Helicity ===")
+    print("\n=== SST Muon Anomaly via Helicity ===")
     rows = []
     for path in paths:
         blocks = parse_fseries_multi(path)
@@ -178,7 +181,7 @@ if __name__ == "__main__":
         Hc = np.einsum('ij,ij->', v_sub, w_sub)
         Hm = np.sum(np.linalg.norm(w_sub, axis=1)**2 * r_sq)
         a_mu = 0.5 * (Hc / Hm - 1.0)
-        print(f"{os.path.basename(path)}:  a_mu^VAM = {a_mu:.8f}  [Hc={Hc:.2f}, Hm={Hm:.2f}]")
+        print(f"{os.path.basename(path)}:  a_mu^SST = {a_mu:.8f}  [Hc={Hc:.2f}, Hm={Hm:.2f}]")
         rows.append({"file": os.path.basename(path).replace("knot.","").replace(".fseries",""),
                      "base": base_id(path), "a_mu": a_mu, "Hc": Hc, "Hm": Hm})
 
@@ -187,5 +190,5 @@ if __name__ == "__main__":
     g = df.groupby("base")["a_mu"].agg(["mean","std","count"]).reset_index()
     g["is_amphi"] = g["base"].isin(AMPHI)
     g["flag"] = np.where(g["is_amphi"] & (np.abs(g["mean"] + 0.5) > 0.02), "WARN(amphi≠−0.5)", "")
-    g.to_csv("VAM_helicity_by_base.csv", index=False)
-    print("Wrote VAM_helicity_by_base.csv")
+    g.to_csv("SST_helicity_by_base.csv", index=False)
+    print("Wrote SST_helicity_by_base.csv")
