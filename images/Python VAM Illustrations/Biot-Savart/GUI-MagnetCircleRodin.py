@@ -10,7 +10,7 @@ from matplotlib.widgets import CheckButtons, TextBox
 import os
 import matplotlib
 matplotlib.use('TkAgg')
-from sstbindings import biot_savart_velocity
+
 
 # --- Optional VAMbindings (if present) ---
 # If your build provides Biot–Savart and dipole grid evaluators, expose them here.
