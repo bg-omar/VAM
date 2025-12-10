@@ -3,6 +3,116 @@ matplotlib.use('TkAgg')  # Ensure it uses Tkinter backend
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D  # noqa: F401
+
+# ==========================
+# Geometry parameters
+# ==========================
+# (5,12) torus knot on a torus with golden-ratio aspect
+p, q = 5, 12                      # torus knot type
+phi = (1 + np.sqrt(5)) / 2       # golden ratio
+
+R = 0.75                          # major radius of torus (arbitrary units)
+r = R / phi                       # minor radius (golden aspect)
+
+# Parameter range for the knot
+num_steps = 4000
+t = np.linspace(0, 2 * np.pi, num_steps)
+
+
+def torus_knot_5_12(t, cell_phase=0.0, mirror=False):
+    """
+    (5,12) torus knot with per-cell phase offset.
+
+    cell_phase in [0,1) means: fraction of ONE toroidal sector (2π/q).
+    So:
+      cell_phase=0     => starts at n
+      cell_phase=1/3   => starts at n + 1/3 of the sector
+      cell_phase=2/3   => starts at n + 2/3 of the sector
+    """
+    # convert per-cell phase into a t-shift
+    dt = cell_phase * (2 * np.pi / q)
+    tp = t + dt
+
+    theta = p * tp        # toroidal angle
+    phi_t = q * tp        # poloidal angle
+
+    x = (R + r * np.cos(phi_t)) * np.cos(theta)
+    y = (R + r * np.cos(phi_t)) * np.sin(theta)
+    z = r * np.sin(phi_t)
+
+    if mirror:
+        z = -z  # CCW / mirrored coil
+
+    return x, y, z
+
+
+# ==========================
+# Build 3-phase CW + 3-phase CCW
+# ==========================
+
+# three phases inside each of the q=12 toroidal slots
+cell_phases = [0.0, 1.0 / 3.0, 2.0 / 3.0]
+
+# colors for visualization
+colors_cw = ['crimson', 'darkorange', 'gold']
+colors_ccw = ['royalblue', 'navy', 'teal']
+
+fig = plt.figure(figsize=(10, 10))
+ax = fig.add_subplot(111, projection='3d')
+
+# --- 3-phase CW (normal) ---
+for cp, col in zip(cell_phases, colors_cw):
+    x, y, z = torus_knot_5_12(t, cell_phase=cp, mirror=False)
+    ax.plot(x, y, z, color=col, linewidth=2, label=f'CW phase {cp:.2f}')
+
+# --- 3-phase CCW (mirrored) ---
+for cp, col in zip(cell_phases, colors_ccw):
+    x, y, z = torus_knot_5_12(t, cell_phase=cp, mirror=True)
+    ax.plot(x, y, z, color=col, linestyle='--', linewidth=2,
+            label=f'CCW phase {cp:.2f}')
+
+# ==========================
+# Optional: torus wireframe for context
+# ==========================
+theta_grid = np.linspace(0, 2 * np.pi, 80)
+phi_grid = np.linspace(0, 2 * np.pi, 40)
+Theta, Phi = np.meshgrid(theta_grid, phi_grid)
+
+X_torus = (R + r * np.cos(Phi)) * np.cos(Theta)
+Y_torus = (R + r * np.cos(Phi)) * np.sin(Theta)
+Z_torus = r * np.sin(Phi)
+
+ax.plot_wireframe(X_torus, Y_torus, Z_torus,
+                  color='gray', alpha=0.15, linewidth=0.5)
+
+# ==========================
+# Plot cosmetics
+# ==========================
+ax.set_xlabel('X')
+ax.set_ylabel('Y')
+ax.set_zlabel('Z')
+ax.set_title('(5,12) Starship Coil\n3-phase CW + 3-phase CCW (per-cell phases 0, 1/3, 2/3)')
+
+# Equal aspect ratio
+max_range = np.array([X_torus.max()-X_torus.min(),
+                      Y_torus.max()-Y_torus.min(),
+                      Z_torus.max()-Z_torus.min()]).max() / 2.0
+
+mid_x = (X_torus.max()+X_torus.min()) * 0.5
+mid_y = (Y_torus.max()+Y_torus.min()) * 0.5
+mid_z = (Z_torus.max()+Z_torus.min()) * 0.5
+
+ax.set_xlim(mid_x - max_range, mid_x + max_range)
+ax.set_ylim(mid_y - max_range, mid_y + max_range)
+ax.set_zlim(mid_z - max_range, mid_z + max_range)
+ax.set_box_aspect([1, 1, 1])
+
+ax.legend(loc='upper left', fontsize=8)
+plt.tight_layout()
+plt.show()
 
 num_turns=10
 num_points=1000
@@ -54,7 +164,7 @@ def generate_rodin_coil(R, r, num_turns=12, num_points=1000):
     x, y, z -- Coordinates of the Rodin coil winding
     """
     theta = np.linspace(0, num_turns * 2 * np.pi, num_points)
-    phi = (2 + 2/5) * theta  # Adjusted winding ratio for Rodin pattern
+    phi =  12 *np.linspace(0, num_turns * 2 * np.pi, num_points)
 
     # Compute Rodin coil path
     x = (R + r * np.cos(phi)) * np.cos(theta)
@@ -63,7 +173,7 @@ def generate_rodin_coil(R, r, num_turns=12, num_points=1000):
     return x, y, z
 
 # Function to generate 3-phase shifted windings
-def generate_rodin_3phase(R, r, num_turns=10, num_points=1000):
+def generate_rodin_3phase(R, r, num_turns=12, num_points=1000):
     """
     Generate 3-phase interwoven Rodin coil windings.
 
@@ -165,7 +275,10 @@ ax = fig.add_subplot(111, projection='3d')
 
 # Function to plot the Rodin coil and its variations
 def plot_rodin_coil():
-    R, r = 1.618, 1  # Set torus major and minor radii
+    phi = (1 + np.sqrt(5)) / 2       # golden ratio
+
+    R = 0.75                          # major radius of torus (arbitrary units)
+    r = R / phi                       # minor radius (golden aspect)
     colors1 = ['crimson', 'darkred', 'gold']
     colors2 = ['dodgerblue', 'navy', 'darkorange']
 
@@ -188,8 +301,8 @@ def plot_rodin_coil():
     # ax.plot_surface(X_horn, Y_horn, Z_horn, rstride=5, cstride=5, color='red', alpha=0.10, edgecolor='k')
 
     # Plot toroidal frame
-    theta = np.linspace(0, 2 * np.pi, 100)
-    phi = np.linspace(0, 2 * np.pi, 100)
+    theta = 5* np.linspace(0, 2 * np.pi, 100)
+    phi = 12* np.linspace(0, 2 * np.pi, 100)
     theta, phi = np.meshgrid(theta, phi)
 
     X = (R + r * np.cos(phi)) * np.cos(theta)
